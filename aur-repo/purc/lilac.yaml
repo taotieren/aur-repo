@@ -13,6 +13,5 @@ post_build_script: |
 update_on:
   - source: github
     github: HVML/PurC
-#    use_latest_release: true
-   # use_max_tag: true
-   prefix: ver-
+    use_max_tag: true
+    prefix: ver-
