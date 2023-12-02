@@ -14,4 +14,7 @@ update_on:
   - source: github
     github: HVML/PurC
 #    use_latest_release: true
-    use_max_tag: true
+   use_max_tag: true
+   prefix: [Vv][Ee][Rr]-
+  - source: manual
+    manual: 1
