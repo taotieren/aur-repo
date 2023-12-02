@@ -1,0 +1,105 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: http://example.com/product.schema.json
+title: lilac.yaml
+description: Descriptive configuration data for lilac packaging
+type: object
+properties:
+  build_prefix:
+    description: The prefix of build command to be used. E.g. extra-x86_64, multilib or archlinuxcn-x86_64.
+    type: string
+    default: "extra-$(uname -m)"
+    enum:
+      - extra-x86_64
+      - archlinuxcn-x86_64
+      - multilib
+      - multilib-archlinuxcn
+      - extra-aarch64
+  pre_build:
+    description: Name of function to be used as the pre_build function.
+    type: string
+  post_build:
+    description: Name of function to be used as the post_build function.
+    type: string
+  post_build_always:
+    description: Name of function to be used as the post_build_always function.
+    type: string
+  pre_build_script:
+    description: Body of the pre_build function. lilac2.api functions are available.
+    type: string
+  post_build_script:
+    description: Body of the post_build function. lilac2.api functions are available.
+    type: string
+  post_build_always_script:
+    description: Body of the post_build_always function. lilac2.api functions are available.
+    type: string
+  time_limit_hours:
+    description: Time limit in hours. The build will be aborted if it doesn't finish in time. Default is one hour.
+    type: number
+  repo_depends:
+    description: Packages in the repo to be built and installed before building the current package.
+    type: array
+    items:
+      anyOf:
+        - type: string
+          description: Package (directory) name
+        - type: object
+          description: Package base (directory) as key and package name as value
+          minProperties: 1
+          maxProperties: 1
+          additionalProperties:
+            type: string
+  update_on:
+    description: Configure how nvchecker should check for updates / rebuilds? The first should check for updates and others for rebuilds.
+    type: array
+    items:
+      anyOf:
+        - type: object
+          description: nvchecker configuration section
+          properties:
+            source:
+              type: string
+              description: nvchecker source name
+          required:
+            - source
+        - type: object
+          description: use an alias for nvchecker configuration section
+          properties:
+            alias:
+              type: string
+              description: alias name
+          required:
+            - alias
+    minItems: 1
+  maintainers:
+    description: List of maintainers for receiving email notifications
+    type: array
+    items:
+      anyOf:
+        - type: object
+          description: GitHub username with a public email address
+          properties:
+            github:
+              type: string
+          required:
+            - github
+        - type: object
+          description: GitHub username and an email address in the form "Name <user@host>". The GitHub public email does not matter.
+          properties:
+            github:
+              type: string
+            email:
+              type: string
+          required:
+            - github
+            - email
+    minItems: 0
+  staging:
+    description: Whether to stage the package in a "staging" subdirectory
+    type: boolean
+    default: false
+  managed:
+    description: Whether the package should be built by lilac or not
+    type: boolean
+    default: true
+required:
+  - maintainers
