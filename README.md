@@ -20,6 +20,6 @@ Server = https://aur-repo.taotieren.com/$arch
 Add and trust my GPG key in pacman keyring:
 
 ```bash
-sudo pacman-key --recv-keys 3E3A49135BA70C555D4B049A488888CB99B5E95B
-sudo pacman-key --lsign-key 3E3A49135BA70C555D4B049A488888CB99B5E95B
+sudo pacman-key --recv-keys FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
+sudo pacman-key --lsign-key FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 ```
