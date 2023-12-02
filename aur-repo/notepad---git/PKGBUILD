@@ -9,7 +9,7 @@ url="https://gitee.com/cxasm/notepad--"
 license=('GPL3')
 provides=(${pkgname%-git} notepadplugin)
 conflicts=(${pkgname%-git})
-local _qt=qt5
+_qt=qt5
 depends=($_qt-base
     $_qt-xmlpatterns
     qscintilla-$_qt)
