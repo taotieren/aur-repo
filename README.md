@@ -18,7 +18,7 @@ Add the following lines to `/etc/pacman.conf`:
 Server = http://home.taotieren.com:12380/$arch
 
 # Only IPv6
-Server = http://aur-repo.taotieren.com/$arch
+Server = http://aur-repo.taotieren.com:12380/$arch
 ```
 
 Add and trust my GPG key in pacman keyring:
