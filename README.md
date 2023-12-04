@@ -14,7 +14,10 @@ Add the following lines to `/etc/pacman.conf`:
 
 ```ini
 [aur-repo]
+# Only IPv4
 Server = http://home.taotieren.com:12380/$arch
+
+# Only IPv6
 Server = http://aur-repo.taotieren.com/$arch
 ```
 
