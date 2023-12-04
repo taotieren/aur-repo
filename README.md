@@ -14,7 +14,8 @@ Add the following lines to `/etc/pacman.conf`:
 
 ```ini
 [aur-repo]
-Server = https://aur-repo.taotieren.com/$arch
+Server = http://home.taotieren.com:12380/$arch
+Server = http://aur-repo.taotieren.com/$arch
 ```
 
 Add and trust my GPG key in pacman keyring:
