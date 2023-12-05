@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Segger JTAGLoadExe
+Comment=Segger JTAGLoadExe for Linux
+Exec=/usr/bin/JTAGLoadExe
+Icon=JLink
+Terminal=false
+StartupNotify=false
+Categories=Development

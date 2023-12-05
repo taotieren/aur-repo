@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: aur_pre_build(maintainers='AlexisPolti')
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: aur
+    github: jlink-software-and-documentation

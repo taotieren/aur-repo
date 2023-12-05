@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Segger JLinkSWOViewerExe
+Comment=Segger JLinkSWOViewerExe for Linux
+Exec=/usr/bin/JLinkSWOViewerExe
+Icon=JLink
+Terminal=false
+StartupNotify=false
+Categories=Development
+Name[fr_FR]=JLinkSWOViewerExe.desktop

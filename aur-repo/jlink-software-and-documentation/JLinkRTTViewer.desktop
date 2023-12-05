@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Segger JLinkRTTViewer
+Comment=Segger RTT Viewer for Linux
+Exec=/usr/bin/JLinkRTTViewerExe
+Icon=JLink
+Terminal=false
+StartupNotify=false
+Categories=Development
