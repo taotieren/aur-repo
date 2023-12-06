@@ -1,0 +1,17 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: aur_pre_build(maintainers='pzl')
+
+post_build_script: aur_post_build
+
+repo_depends:
+  - jlink-software-and-documentation
+  - jlink-systemview
+  - ozone
+
+update_on:
+  - source: aur
+    github: jlink
