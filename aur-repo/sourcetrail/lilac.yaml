@@ -8,5 +8,10 @@ pre_build_script: aur_pre_build(maintainers='Javier Tiá')
 post_build_script: aur_post_build
 
 update_on:
+  - sourec: github
+    github: petermost/Sourcetrail
+    use_max_tag: true
+    prefix: v
+
   - source: aur
     aur: sourcetrail

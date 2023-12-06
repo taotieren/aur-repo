@@ -8,10 +8,10 @@ pre_build_script: aur_pre_build(maintainers='zxp19821005')
 post_build_script: aur_post_build
 
 update_on:
-  - source: aur
-    aur: zyplayer-bin
-
   - sourec: github
     github: Hiram-Wong/ZyPlayer
     use_max_tag: true
     prefix: v
+
+  - source: aur
+    aur: zyplayer-bin
