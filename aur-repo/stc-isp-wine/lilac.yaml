@@ -12,5 +12,5 @@ post_build_script: |
 
 update_on:
   - source: regex
-    url: 'http://www.stcmcudata.com/STCISP/?'
+    url: 'http://www.stcmcudata.com'
     regex: 'stc-isp-15xx-v(\d+.\d+\w).zip'
