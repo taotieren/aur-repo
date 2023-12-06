@@ -13,5 +13,6 @@ post_build_script: |
 update_on:
   - source: github
     github: gaozhangmin/aliyunpan
-    use_max_tag: true
+    use_latest_release: true
+    # use_max_tag: true
     prefix: v
