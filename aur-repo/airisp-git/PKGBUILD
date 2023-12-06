@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=airisp-git
-pkgver=1.2.7.0.r8.g95a8154
+pkgver=1.2.8.0.r1.geebb818
 pkgrel=1
 epoch=
 pkgdesc="An ISP tool for Air MCU"
