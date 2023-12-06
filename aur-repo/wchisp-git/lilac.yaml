@@ -16,4 +16,4 @@ update_on:
     # use_latest_release: true
     # prefix: nightly
     use_max_tag: true
-    prefix: v
+    prefix: nightly
