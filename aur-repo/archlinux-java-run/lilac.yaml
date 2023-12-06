@@ -3,13 +3,10 @@ maintainers:
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers='laserk3000')
+pre_build_script: aur_pre_build(maintainers='Michael Lass')
 
 post_build_script: aur_post_build
 
-repo_depends:
-  - archlinux-java-run
-
 update_on:
   - source: aur
-    github: stm32cubemx
+    github: archlinux-java-run

@@ -13,7 +13,7 @@ conflicts=(${pkgname})
 replaces=(aliyunpan-liupan1890
     aliyunpan-odomu)
 depends=()
-makedepends=()
+makedepends=(libarchive)
 backup=()
 options=(!strip)
 install=
