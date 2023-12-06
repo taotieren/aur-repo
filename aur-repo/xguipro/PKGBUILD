@@ -3,7 +3,7 @@
 pkgbase=xguipro
 pkgname=(xguipro-gtk3)
 pkgver=0.8.4
-pkgrel=2
+pkgrel=3
 pkgdesc="xGUI (the X Graphics User Interface) Pro is a modern, cross-platform, and advanced HVML renderer which is based on tailored WebKit."
 arch=(x86_64
     aarch64
