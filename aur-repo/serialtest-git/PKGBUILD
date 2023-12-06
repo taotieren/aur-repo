@@ -3,7 +3,7 @@
 
 _pkgname=SerialTest
 pkgname=serialtest-git
-pkgver=0.3.3.r0.g5799817
+pkgver=0.3.3.r1.g10fc7a8
 pkgrel=1
 pkgdesc="A cross-platform test tool for serial port, Bluetooth, TCP and UDP."
 arch=('any')
