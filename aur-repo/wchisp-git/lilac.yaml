@@ -13,7 +13,7 @@ post_build_script: |
 update_on:
   - source: github
     github: ch32-rs/wchisp
-    use_latest_release: true
-    prefix: nightly
+    # use_latest_release: true
+    # prefix: nightly
     use_max_tag: true
     prefix: v
