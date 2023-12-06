@@ -12,4 +12,4 @@ repo_depends:
 
 update_on:
   - source: aur
-    github: ozone
+    aur: ozone

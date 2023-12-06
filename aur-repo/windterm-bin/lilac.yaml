@@ -3,15 +3,16 @@ maintainers:
 
 build_prefix: extra-x86_64
 
-pre_build_script: aur_pre_build(maintainers='zxp19821005')
+pre_build_script: aur_pre_build(maintainers='sakura1943')
 
 post_build_script: aur_post_build
 
 update_on:
   - source: aur
-    aur: zyplayer-bin
+    aur: windterm-bin
 
   - sourec: github
-    github: Hiram-Wong/ZyPlayer
+    github: kingToolbox/WindTerm
     use_max_tag: true
     prefix: v
+

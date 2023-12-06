@@ -9,4 +9,4 @@ post_build_script: aur_post_build
 
 update_on:
   - source: aur
-    github: sourcetrail
+    aur: sourcetrail

@@ -9,4 +9,4 @@ post_build_script: aur_post_build
 
 update_on:
   - source: aur
-    github: jlink-software-and-documentation
+    aur: jlink-software-and-documentation
