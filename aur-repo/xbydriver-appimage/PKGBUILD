@@ -2,7 +2,7 @@
 
 pkgbase=xbydriver-appimage
 pkgname=(xbydriver-{bin,appimage})
-pkgver=3.12.1
+pkgver=3.12.2
 pkgrel=1
 pkgdesc="阿里云盘小白羊版 v3 修复版"
 arch=('x86_64' 'aarch64')
