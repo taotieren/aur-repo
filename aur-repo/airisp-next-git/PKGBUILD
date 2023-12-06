@@ -2,7 +2,7 @@
 
 pkgname=airisp-next-git
 pkgver=r3.0340f17
-pkgrel=2
+pkgrel=3
 pkgdesc="An ISP tool for Air MCU (Rust)"
 arch=('any')
 url="https://github.com/Air-duino/AirISP-next"
