@@ -1,0 +1,44 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgname=openeit-git
+_name=${pkgname%-git}
+pkgver=1.01
+pkgrel=1
+epoch=
+pkgdesc="Python based dashboard for real-time Electrical Impedance Tomography including image reconstruction using Back Projection, Graz Consensus and Gauss Newton methods"
+arch=('any')
+url="https://github.com/OpenEIT/OpenEIT"
+license=(CC-4.0)
+groups=()
+depends=(python)
+#  python-imageio python-matplotlib python-numpy python-pyserial python-scikit-image python-scipy python-six python-pydash python-plotly python-future )
+makedepends=(git python-build python-installer python-wheel)
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=("${_name}::git+${url}.git")
+noextract=()
+sha256sums=('SKIP')
+#validpgpkeys=()
+
+pkgver() {
+    cd "${srcdir}/${_name}"
+    git describe --always --tags | sed 's/^v//' | sed 's|-|.|g'
+}
+
+build() {
+    cd "${srcdir}/${_name}"
+    pip install -r requirements.txt
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "${srcdir}/${_name}"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+}
