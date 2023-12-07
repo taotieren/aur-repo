@@ -1,6 +1,8 @@
 maintainers:
   - github: taotieren
 
+build_prefix: arclinuxcn-$(uname -m)
+
 pre_build_script: aur_pre_build(maintainers='laserk3000')
 
 post_build: aur_post_build
