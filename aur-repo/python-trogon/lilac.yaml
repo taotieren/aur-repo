@@ -3,17 +3,16 @@ maintainers:
 
 build_prefix: extra-x86_64
 
-pre_build: vcs_update
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
 
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
 repo_depends:
-  - python-trogon
+  - python-textual
 
 update_on:
-  - source: git
-    git: https://gitee.com/tinylab/tinyget.git
-    branch: master
-    use_commit: true
+  - source: pypi
+    pypi: trogon

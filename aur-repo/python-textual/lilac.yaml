@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['jose1711', 'carlosal1015'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: pypi
+    pypi: textual
+
+  - source: aur
+    aur: python-textual
