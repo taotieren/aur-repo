@@ -4,7 +4,7 @@
 pkgname=edrawproject-cn
 _pkgname=EdrawProj-3
 pkgver=3.0.2
-pkgrel=0
+pkgrel=1
 arch=('x86_64')
 options=(!strip)
 conflicts=("edrawproject")
