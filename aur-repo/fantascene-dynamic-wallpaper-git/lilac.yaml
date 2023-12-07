@@ -11,4 +11,4 @@ post_build_script: |
 
 update_on:
   - source: github
-    github: fantascene-dynamic-wallpaper
+    github: dependon/fantascene-dynamic-wallpaper
