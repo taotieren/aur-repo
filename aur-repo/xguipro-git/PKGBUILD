@@ -49,10 +49,10 @@ makedepends=(
 
 # # xguipro-gtk3
     gtk3
-    libsoup
+#     libsoup
 # # xguipro-gtk4
-#             gtk4
-#             libsoup3
+#    gtk4
+    libsoup3
             )
 optdepends=('webkit2gtk-hvml: to support two HVML-specific attributes hvml-handle and hvml-events. This tailored WebKit engine provides support for two ports: GTK+ and HybridOS (MiniGUI). ')
 backup=()
@@ -125,7 +125,7 @@ package_xguipro-gtk3-git() {
 #         -DENABLE_GAMEPAD=OFF \
 #         -DENABLE_INTROSPECTION=OFF \
 #         -DUSE_GTK4=OFF \
-#         -DUSE_SOUP2=ON \
+#         -DUSE_SOUP2=OFF \
 #         -DUSE_WPE_RENDERER=OFF \
 #         -DUSE_LCMS=OFF \
 #         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -140,7 +140,7 @@ package_xguipro-gtk3-git() {
         -DENABLE_GAMEPAD=OFF \
         -DENABLE_INTROSPECTION=OFF \
         -DUSE_GTK4=OFF \
-        -DUSE_SOUP2=ON \
+        -DUSE_SOUP2=OFF \
         -DUSE_WPE_RENDERER=OFF \
         -DUSE_LCMS=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
