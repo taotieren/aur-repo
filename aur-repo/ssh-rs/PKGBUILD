@@ -1,0 +1,35 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgname=ssh-rs
+pkgver=0.1.1
+pkgrel=1
+pkgdesc="In addition to encryption library, pure RUST implementation of SSH-2.0 client protocol"
+arch=('any')
+url="https://github.com/1148118271/ssh-rs"
+license=('Apache-2.0')
+provides=(${pkgname})
+conflicts=(${pkgname} ${pkgname}-git)
+#replaces=(${pkgname})
+depends=('cargo')
+makedepends=('make' 'git' 'cmake' 'gcc' 'rust')
+backup=()
+options=('!strip')
+#install=${pkgname}.install
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('eeaa823f2888ecacab250bbe999bb17b001b578035af0252a58aa711c6e41af8')
+build() {
+# build crm
+    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cargo build --frozen --release --all-features
+}
+
+# check() {
+#     cd "${srcdir}/${pkgname}-${pkgver}/"
+#     cargo test  --frozen --release --all-features
+# }
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}/"
+    export RUSTUP_TOOLCHAIN=stable
+    cargo install --no-track --frozen --all-features --root "$pkgdir/usr/" --path .
+}
