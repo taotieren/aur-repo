@@ -2,7 +2,7 @@
 
 pkgbase=smiley-sans
 pkgname=({ttf,otf,woff2}-$pkgbase)
-pkgver=1.0.0
+pkgver=1.1.1
 pkgrel=1
 url="https://github.com/atelier-anchor/smiley-sans"
 depends=('fontconfig')
@@ -13,8 +13,8 @@ source=(
     "LICENSE::https://raw.githubusercontent.com/atelier-anchor/smiley-sans/main/LICENSE"
 )
 
-sha256sums=('8293c9b9fd44c9ee6b3fab696862445059e4d98b341a148d4544f91d01363fc1'
-            '8a4a31fcdfea95babd556fc86e14bace5dd07754c06a5713680077de4eb2022e')
+sha256sums=('17c30d067b90ef6fb259caaf66e4339e30d70d5f197485da8f305c040d41413f'
+            '3242b36c2023dbdaa8d8f9dfa49517dc7286b3fabd6464c9404facf798a8fd3c')
 
 package_ttf-smiley-sans() {
     pkgdesc="得意黑 Smiley Sans for ttf"
