@@ -9,10 +9,9 @@ pre_build_script: aur_pre_build(maintainers='xiota')
 post_build: aur_post_build
 
 update_on:
-  - sourec: github
+  - source: github
     github: petermost/Sourcetrail
     use_max_tag: true
-    prefix: v
 
   - source: aur
     aur: sourcetrail

@@ -6,7 +6,7 @@ pre_build_script: aur_pre_build(maintainers='sakura1943')
 post_build: aur_post_build
 
 update_on:
-  - sourec: github
+  - source: github
     github: kingToolbox/WindTerm
     use_max_tag: true
     prefix: v

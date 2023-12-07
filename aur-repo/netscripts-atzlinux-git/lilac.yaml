@@ -10,7 +10,7 @@ post_build_script: |
   update_aur_repo()
 
 update_on:
-  - source: github
-    github: cloud-fs/cloud-fs.github.io
-    use_max_tag: true
-    prefix: v
+  - source: git
+    git: https://gitee.com/atzlinux/netscripts-atzlinux.git
+    branch: master
+    use_commit: true
