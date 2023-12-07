@@ -13,7 +13,6 @@ repo_depends:
   - bwidget
   - tclx
   - tkimg
-  -
   - python-yapps2
 
 update_on:
