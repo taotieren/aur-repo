@@ -13,4 +13,4 @@ update_on:
   - source: git
     git: https://gitee.com/atzlinux/netscripts-atzlinux.git
     branch: master
-    use_commit: true
+
