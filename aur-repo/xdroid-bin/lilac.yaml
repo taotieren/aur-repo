@@ -1,16 +1,10 @@
 maintainers:
   - github: taotieren
 
-build_prefix: multilib
+pre_build_script: aur_pre_build(maintainers=['taotieren', 'little_sheepycn'])
 
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+post_build: aur_post_build
 
 update_on:
-  - source: regex
-    url: 'https://www.linzhuotech.com/Product/download'
-    regex: 'xDroidInstall-x86_64-v(\d+.\d+.\d+-\w).run.tar.gz'
+  - source: aur
+    aur: xdroid-bin
