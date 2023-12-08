@@ -10,9 +10,10 @@ license=('unknow')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
-depends=(go)
+depends=()
 optdepends=()
-makedepends=(git)
+makedepends=(git
+    go)
 backup=(etc/go-aliddns/config.yaml)
 options=('!strip')
 #install=${pkgname}.install
