@@ -9,5 +9,9 @@ repo_depends:
   - python-tree-sitter-languages-bin
 
 update_on:
+  - source: github
+    github: Textualize/textual
+    use_latest_release: true
   - source: aur
     aur: python-textual
+  - alias: python
