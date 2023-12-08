@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['zhullyb', 'sukanka', 'lilac'])
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: regex
+    url: "https://page.dingtalk.com/wow/z/dingtalk/simple/ddhomedownload#/"
+    regex: 'com.alibabainc.dingtalk_(\d+.\d+.\d+.\d+)_adm64.deb'
+
+  - source: aur
+    aur: dingtalk-bin
