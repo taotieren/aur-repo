@@ -6,11 +6,11 @@ pre_build_script: aur_pre_build(maintainers=['jose1711', 'carlosal1015'])
 post_build: aur_post_build
 
 repo_depends:
-  - python-tree-sitter-languages-bin
+  - python-tree-sitter
 
 update_on:
   - source: pypi
-    pypi: textual
+    pypi: tree-sitter-languages
 
   - source: aur
-    aur: python-textual
+    aur: python-tree-sitter-languages-bin

@@ -10,7 +10,7 @@ repo_depends:
 
 update_on:
   - source: pypi
-    pypi: textual
+    pypi: tree-sitter
 
   - source: aur
-    aur: python-textual
+    aur: python-tree-sitter
