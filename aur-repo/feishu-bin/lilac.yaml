@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['AstroProfundis', 'strrl', 'xuanwo'])
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: regex
+    url: "https://www.feishu.cn/download"
+    regex: 'Feishu-linux_x64-(\d+.\d+.\d+).deb'
+
+  - source: aur
+    aur: feishu-bin
