@@ -56,9 +56,10 @@ makedepends=(bison
     libpsl
     libxml2
     libxslt
-    libsoup
+    libsoup3
     icu
 #     mariadb
+    mysql-clients
     openssl
     sqlite
     systemd

@@ -58,6 +58,7 @@ makedepends=(bison
     libsoup
     icu
 #     mariadb
+    mysql-clients
     openssl
     sqlite
     systemd
