@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: aur_pre_build(maintainers='bitfehle')
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: github
+    github: flashrom/flashrom
+
+  - source: aur
+    aur: flashrom
