@@ -1,0 +1,19 @@
+# Colored makepkg-like functions
+
+note() {
+    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
+}
+
+all_off="$(tput sgr0)"
+bold="${all_off}$(tput bold)"
+blue="${bold}$(tput setaf 4)"
+yellow="${bold}$(tput setaf 3)"
+
+post_install() {
+    note "要传递给 electron 的自定义参数应该写在: ~/.config/qq-electron-flags.conf"
+    note "如果要在 QQ 中下载文件，请先在「设置」->「存储管理」中把下载文件夹更改为系统的“下载”/“Downloads”文件夹。"
+}
+
+post_upgrade() {
+    post_install
+}
