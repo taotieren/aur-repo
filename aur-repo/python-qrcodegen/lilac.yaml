@@ -11,4 +11,3 @@ post_build_script: |
 update_on:
   - source: pypi
     pypi: qrcodegen
-  - alias: python
