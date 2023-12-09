@@ -3,7 +3,7 @@
 pkgname=python-kibom
 _name=${pkgname#python-}
 pkgver=1.9.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Bill of Materials generation tool for KiCad EDA"
 arch=('any')
