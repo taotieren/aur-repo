@@ -58,7 +58,7 @@ makedepends=(bison
     libsoup
     icu
 #     mariadb
-    # mysql
+    mysql-clients
     openssl
     sqlite
     systemd
@@ -91,6 +91,7 @@ build() {
 #     cmake -DCMAKE_BUILD_TYPE=None \
 #         -DPORT=Linux \
 #         -DENABLE_CHINESE_NAMES=ON \
+#         -DUSE_SOUP2=OFF \
 #         -DCMAKE_INSTALL_PREFIX=/usr \
 #         -DCMAKE_INSTALL_LIBDIR=lib \
 #         -DCMAKE_INSTALL_LIBEXECDIR=lib \
@@ -101,6 +102,7 @@ build() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DPORT=Linux \
         -DENABLE_CHINESE_NAMES=ON \
+        -DUSE_SOUP2=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
