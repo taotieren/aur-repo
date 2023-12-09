@@ -11,7 +11,7 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - mysql-clients
+  - mysql
 
 update_on:
   - source: github
