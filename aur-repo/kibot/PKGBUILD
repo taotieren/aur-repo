@@ -19,13 +19,14 @@ depends=(
     rar
     kicad
     kicost
+    kidiff
     pandoc
     pcbdraw
     python
     python-kiauto
     python-kibom
     python-colorama
-    python-kidiff
+    # python-kidiff
     python-lark-parser
     python-lxml
     python-kikit
