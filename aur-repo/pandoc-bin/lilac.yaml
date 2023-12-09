@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['gustawho'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: github
+    github: jgm/pandoc
+    use_max_tag: true
+  - source: aur
+    aur: pandoc-bin

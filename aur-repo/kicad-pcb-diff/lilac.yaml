@@ -12,7 +12,7 @@ post_build_script: |
 
 update_on:
   - source: github
-    github: rust-embedded/svdtools
+    github: INTI-CMNB/KiDiff
     use_max_tag: true
     prefix: v
   - alias: python

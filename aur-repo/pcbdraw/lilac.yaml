@@ -1,0 +1,17 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['mrrb'])
+
+post_build: aur_post_build
+
+repo_depends:
+  - python-svgpathtools
+
+update_on:
+  - source: github
+    github: yaqwsx/PcbDraw
+    use_max_tag: true
+  - source: aur
+    aur: pcbdraw
+  - alias: python

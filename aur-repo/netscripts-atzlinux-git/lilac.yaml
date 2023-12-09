@@ -1,8 +1,6 @@
 maintainers:
   - github: taotieren
 
-build_prefix: extra-x86_64
-
 pre_build: vcs_update
 
 post_build_script: |
@@ -13,4 +11,3 @@ update_on:
   - source: git
     git: https://gitee.com/atzlinux/netscripts-atzlinux.git
     branch: master
-
