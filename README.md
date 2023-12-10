@@ -18,7 +18,7 @@ Add the following lines to `/etc/pacman.conf`:
 Server = http://home.taotieren.com:12380/$arch
 
 # Only IPv6
-Server = https://aur-repo.taotieren.com/$arch
+Server = https://aur-repo.taotieren.com:3443/$arch
 Server = http://aur-repo.taotieren.com:12380/$arch
 ```
 
