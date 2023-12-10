@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['yjun', 'Kevin_Liu'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: regex
+    url: "https://www.vofa.plus/downloads/"
+    regex: 'vofa+-(\d+.\d+.\d)-1-x86_64.pkg.tar.zst'
+  - source: aur
+    aur: vofa+
+  - source: manual
+    manual: 1
