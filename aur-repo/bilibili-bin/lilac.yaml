@@ -1,0 +1,17 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: aur_pre_build(maintainers=['bilibili_xiaok', 'little_sheepycn', 'wxt1221', 'whitels'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: github
+    github: msojocs/bilibili-linux
+    use_max_tag: true
+    prefix: v
+
+  - source: aur
+    aur: bilibili-bin
