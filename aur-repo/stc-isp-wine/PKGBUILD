@@ -3,7 +3,7 @@
 pkgbase=stc-isp-wine
 pkgname=(stc-isp{,-tiny}-wine)
 pkgver=6.92H
-pkgrel=2
+pkgrel=3
 arch=('x86_64')
 url="http://www.stcmcudata.com"
 license=('unknow')
