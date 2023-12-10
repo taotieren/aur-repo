@@ -17,3 +17,5 @@ update_on:
   - source: regex
     url: "https://www.i4.cn/pro_pc.html"
     regex: 'i4tools_v(\d+.\d+.\d+).deb'
+  - source: manual
+    manual: 1

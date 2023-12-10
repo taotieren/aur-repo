@@ -14,3 +14,5 @@ update_on:
   - source: regex
     url: "https://www.jlc.com/portal/appDownloadsWithConfig.html"
     regex: 'JLCPcAssit-linux-x64-(\d+.\d+.\d+).zip'
+  - source: manual
+    manual: 1

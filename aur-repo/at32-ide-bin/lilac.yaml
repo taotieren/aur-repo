@@ -14,3 +14,5 @@ update_on:
   - source: regex
     url: "https://www.arterytek.com/cn/support/index.jsp"
     regex: 'AT32_IDE_V(\d+.\d+.\d+)_Linux-x86_64.zip'
+  - source: manual
+    manual: 1
