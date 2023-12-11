@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['BenTheTechGuy'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: github
+    github: bkerler/mtkclient
+    use_max_tag: true
+  - source: aur
+    aur: mtkclient
