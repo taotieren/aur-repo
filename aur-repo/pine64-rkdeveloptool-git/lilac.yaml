@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['dcreager'])
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: gitlab
+    github: pine64-org/quartz-bsp/rkdeveloptool
+
+  - source: aur
+    aur: pine64-rkdeveloptool-git
