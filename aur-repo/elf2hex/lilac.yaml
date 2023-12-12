@@ -15,3 +15,4 @@ update_on:
     github: sifive/elf2hex
     use_max_tag: true
     prefix: v
+  - alias: python
