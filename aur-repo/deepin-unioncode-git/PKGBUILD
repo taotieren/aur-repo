@@ -69,7 +69,8 @@ build() {
     cd "${srcdir}/${pkgname}"
 
 # See：https://wiki.archlinux.org/title/CMake_package_guidelines
-    cmake -DCMAKE_BUILD_TYPE=None \
+    # cmake -DCMAKE_BUILD_TYPE=None \
+    cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_CXX_COMPILER=clang++ \
         -DCMAKE_C_COMPILER=clang \
