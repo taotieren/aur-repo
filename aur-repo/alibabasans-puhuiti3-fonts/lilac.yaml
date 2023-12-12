@@ -8,3 +8,5 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: alibabasans-puhuiti3-fonts
+  - source: manual
+    manual: 1
