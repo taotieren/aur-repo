@@ -3,7 +3,7 @@ pkgname=ymake-git
 pkgver=r01.f965d54
 pkgrel=1
 pkgdesc="ymake"
-arch=('x86_64')
+arch=('any')
 url="https://github.com/evilbinary/ymake"
 license=('MIT')
 provides=(${pkgname%-git})
@@ -16,18 +16,18 @@ source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
 pkgver() {
-    cd "${srcdir}/${_name}"
+    cd "${srcdir}/${pkgname}"
     git describe --always --tags | sed 's/^v//' | sed 's|-|.|g'
 }
 
 build() {
-    cd "${srcdir}/${_name}"
+    cd "${srcdir}/${pkgname}"
     # pip install -r requirements.txt
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${_name}"
+    cd "${srcdir}/${pkgname}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
 

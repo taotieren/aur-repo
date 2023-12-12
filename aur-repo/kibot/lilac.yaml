@@ -16,7 +16,7 @@ repo_depends:
   - pcbdraw
   - python-kiauto
   - python-kibom
-  - kicad-pcb-diff
+  - kidiff
   - python-qrcodegen
   - rar
 
