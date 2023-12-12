@@ -49,6 +49,7 @@ makedepends=(
     qt5-script
     openssl
     systemd
+    syntax-highlighting5
     pkgconf
     python
     zstd
