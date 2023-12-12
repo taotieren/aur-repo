@@ -10,3 +10,4 @@ update_on:
     github: bkerler/mtkclient
   - source: aur
     aur: mtkclient-git
+  - alias: python

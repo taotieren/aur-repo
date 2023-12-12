@@ -8,6 +8,6 @@ post_build: aur_post_build
 update_on:
   - source: pypi
     pypi: tree-sitter
-
   - source: aur
     aur: python-tree-sitter
+  - alias: python

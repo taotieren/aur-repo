@@ -16,3 +16,4 @@ repo_depends:
 update_on:
   - source: pypi
     pypi: trogon
+  - alias: python

@@ -12,3 +12,4 @@ post_build_script: |
 update_on:
   - source: github
     github: evilbinary/ymake
+  - alias: python

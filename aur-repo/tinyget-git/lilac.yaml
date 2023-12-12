@@ -17,3 +17,4 @@ update_on:
     git: https://gitee.com/tinylab/tinyget.git
     branch: master
     use_commit: true
+  - alias: python

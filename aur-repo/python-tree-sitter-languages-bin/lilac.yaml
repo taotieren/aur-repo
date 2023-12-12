@@ -11,6 +11,6 @@ repo_depends:
 update_on:
   - source: pypi
     pypi: tree-sitter-languages
-
   - source: aur
     aur: python-tree-sitter-languages-bin
+  - alias: python

@@ -12,3 +12,4 @@ post_build_script: |
 update_on:
   - source: github
     github: OpenEIT/OpenEIT
+  - alias: python
