@@ -1,18 +1,12 @@
 maintainers:
   - github: taotieren
 
-build_prefix: multilib
+pre_build_script: aur_pre_build(maintainers=['taotieren'])
 
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+post_build: aur_post_build
 
 update_on:
-  - source: regex
-    url: "https://www.arterytek.com/cn/support/index.jsp"
-    regex: 'AT32_Work_Bench_Linux-x86_64_V(\d+.\d+.\d+).zip'
+  - source: aur
+    aur: at32-work-bench-bin
   - source: manual
     manual: 1
