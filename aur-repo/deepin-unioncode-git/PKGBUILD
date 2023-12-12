@@ -30,6 +30,7 @@ makedepends=(
     capstone
     clang
     dbus
+    dtkgui
     doxygen
     hiredis
     llvm
