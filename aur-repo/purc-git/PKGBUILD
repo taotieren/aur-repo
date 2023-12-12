@@ -2,8 +2,8 @@
 
 pkgbase=purc-git
 pkgname=purc-git
-pkgver=0.9.17.r0.g5bb09c538
-pkgrel=4
+pkgver=0.9.18.r2.g9759a6772
+pkgrel=1
 pkgdesc="The prime HVML interpreter for C/C++ Language."
 arch=(x86_64
     aarch64
@@ -31,7 +31,9 @@ replaces=(domruler
     purc-fetcher)
 depends=(glib2
     glibc)
-makedepends=(bison
+makedepends=(
+    avahi
+    bison
     cmake
 #     cython
     flex
@@ -55,10 +57,9 @@ makedepends=(bison
     libpsl
     libxml2
     libxslt
-    libsoup
+    libsoup3
     icu
-#     mariadb-clients
-#     mysql-clients
+#     mariadb
     openssl
     sqlite
     systemd
@@ -91,7 +92,6 @@ build() {
 #     cmake -DCMAKE_BUILD_TYPE=None \
 #         -DPORT=Linux \
 #         -DENABLE_CHINESE_NAMES=ON \
-#         -DUSE_SOUP2=OFF \
 #         -DCMAKE_INSTALL_PREFIX=/usr \
 #         -DCMAKE_INSTALL_LIBDIR=lib \
 #         -DCMAKE_INSTALL_LIBEXECDIR=lib \
@@ -102,7 +102,6 @@ build() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DPORT=Linux \
         -DENABLE_CHINESE_NAMES=ON \
-        -DUSE_SOUP2=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
