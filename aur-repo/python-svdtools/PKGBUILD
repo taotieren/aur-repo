@@ -6,6 +6,10 @@ pkgver=0.3.4
 pkgrel=1
 epoch=
 pkgdesc="Python package to handle vendor-supplied, often buggy SVD files."
+arch=(any
+  x86_64
+  aarch64
+  riscv64)
 url="https://github.com/rust-embedded/svdtools"
 license=('MIT', 'Apache-2.0')
 groups=()
@@ -33,7 +37,7 @@ package_python-svdtools() {
       python-braceexpand
       python-flit
       python-isort)
-      arch=('any')
+    arch=('any')
 
     cd "${srcdir}/${pkgbase#python-}-${pkgver}"
     python -m build --wheel --no-isolation
