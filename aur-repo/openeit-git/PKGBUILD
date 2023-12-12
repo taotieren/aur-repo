@@ -12,7 +12,11 @@ license=(CC-4.0)
 groups=()
 depends=(python)
 #  python-imageio python-matplotlib python-numpy python-pyserial python-scikit-image python-scipy python-six python-pydash python-plotly python-future )
-makedepends=(git python-build python-installer python-wheel)
+makedepends=(git 
+    python-build
+    python-installer 
+    python-wheel 
+    python-pip)
 checkdepends=()
 optdepends=()
 provides=()
