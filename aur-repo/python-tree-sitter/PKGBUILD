@@ -1,6 +1,6 @@
 pkgname=python-tree-sitter
 pkgver=0.20.4
-pkgrel=5
+pkgrel=6
 pkgdesc='Python bindings to the tree-sitter parsing library'
 arch=('any')
 url='https://github.com/tree-sitter/py-tree-sitter'
