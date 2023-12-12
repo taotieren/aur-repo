@@ -6,16 +6,18 @@ pkgver=0.3.4
 pkgrel=1
 epoch=
 pkgdesc="Python package to handle vendor-supplied, often buggy SVD files."
-arch=(any
-  x86_64
-  aarch64
-  riscv64)
+arch=(any)
 url="https://github.com/rust-embedded/svdtools"
 license=('MIT', 'Apache-2.0')
 groups=()
 makedepends=(python-build
       python-installer
       python-wheel
+      python-black
+      python-braceexpand
+      python-flit
+      python-isort
+      cargo
       rust)
 optdepends=('svd2rust: Generate Rust register maps (`struct`s) from SVD files')
 provides=()

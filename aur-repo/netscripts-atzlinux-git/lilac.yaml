@@ -12,4 +12,3 @@ update_on:
     git: https://gitee.com/atzlinux/netscripts-atzlinux.git
     branch: atzlinux/latest
     use_commit: true
-    prefix: atzlinux/

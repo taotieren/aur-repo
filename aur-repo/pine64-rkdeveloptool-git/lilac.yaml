@@ -9,7 +9,5 @@ repo_depends:
   - cmake
 
 update_on:
-  - source: gitlab
-    github: pine64-org/quartz-bsp/rkdeveloptool
   - source: aur
     aur: pine64-rkdeveloptool-git

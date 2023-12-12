@@ -16,7 +16,8 @@ makedepends=(git
     python-build
     python-installer 
     python-wheel 
-    python-pip)
+    python-pip
+    python-xyz)
 checkdepends=()
 optdepends=()
 provides=()
