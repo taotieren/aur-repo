@@ -11,7 +11,7 @@ url="https://www.vofa.plus/"
 license=('unknown')
 provides=("${_pkgname}")
 options=('!strip')
-source=("${pkgname}-${pkgver}.pkg.tar.zst::https://gutega.gitee.io/vofa_plus_resources/downloads/${pkgname}-${pkgver}-1-${CARCH}.pkg.tar.zst")
+source=("${pkgname}-${pkgver}.pkg.tar.zst::https://je00.github.io/downloads/${pkgname}-${pkgver}-1-${CARCH}.pkg.tar.zst")
 sha256sums=('83b43cd3b8b72725e11c8433e88dea4246e0f39070215705904b17ddc30149ed')
 
 package() {

@@ -13,6 +13,6 @@ post_build_script: |
 update_on:
   - source: github
     github: sifive/openocdcfg-generator
-    use_max_tag: true
+    use_latest_tag: true
     prefix: v
   - alias: python

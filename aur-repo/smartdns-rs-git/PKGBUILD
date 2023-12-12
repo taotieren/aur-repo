@@ -15,7 +15,7 @@ depends=(cargo
 makedepends=(git
             rust)
 backup=()
-options=('!strip')
+options=('!strip' '!lto')
 install=
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')

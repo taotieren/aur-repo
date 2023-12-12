@@ -7,6 +7,7 @@ post_build: aur_post_build
 
 repo_depends:
   - jlink-software-and-documentation
+  - libx11
 
 update_on:
   - source: aur
