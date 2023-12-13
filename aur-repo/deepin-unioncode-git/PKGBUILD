@@ -2,7 +2,7 @@
 
 pkgbase=deepin-unioncode-git
 pkgname=deepin-unioncode-git
-pkgver=1.1.19.r19.gfaa30c15
+pkgver=1.2.3.r3.g7ac9d0c2
 pkgrel=1
 pkgdesc="IDE authored by deepin"
 arch=(x86_64
