@@ -12,7 +12,8 @@ provides=(${pkgname})
 conflicts=(${pkgname}  ${pkgname}-git)
 #replaces=(${pkgname})
 depends=(poppler)
-makedepends=('qt5-tools')
+makedepends=(qt5-tools
+    poppler-qt5)
 backup=()
 options=('!strip')
 # install=${pkgname}.install

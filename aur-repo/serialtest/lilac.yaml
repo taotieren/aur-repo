@@ -13,5 +13,4 @@ post_build_script: |
 update_on:
   - source: github
     github: wh201906/SerialTest
-    use_max_tag: true
-    prefix: V
+    use_latest_release: true
