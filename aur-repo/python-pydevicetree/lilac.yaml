@@ -1,8 +1,6 @@
 maintainers:
   - github: taotieren
 
-build_prefix: extra-x86_64
-
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 
@@ -10,12 +8,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
-repo_depends:
-  - python-pydevicetree
-
 update_on:
-  - source: github
-    github: sifive/openocdcfg-generator
-    use_latest_release: true
-    prefix: v
+  - source: pypi
+    pypi: pydevicetree
   - alias: python
