@@ -30,11 +30,11 @@ sha256sums=('910ff471da29151ba77ad0866b78affaa3570e273cab9c134d8571672d7975f2')
 #validpgpkeys=()
 
 build() {
-    cd "${srcdir}/${_name}}-${pkgver}"
+    cd "${srcdir}/${_name}-${pkgver}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${_name}}-${pkgver}"
+    cd "${srcdir}/${_name}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
