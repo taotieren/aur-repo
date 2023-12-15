@@ -16,7 +16,7 @@ makedepends=(git
     python-build
     python-installer 
     python-wheel 
-    python-pip
+    python-pipx
     python-xyzservices)
 checkdepends=()
 optdepends=()
@@ -39,7 +39,8 @@ pkgver() {
 
 build() {
     cd "${srcdir}/${_name}"
-    pip install -r requirements.txt
+    pipx install xyz
+    pipx install -r requirements.txt
     python -m build --wheel --no-isolation
 }
 

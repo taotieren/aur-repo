@@ -1,6 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-pydevicetree
+_name=${pkgname#python-}
 pkgver=0.0.12
 pkgrel=1
 epoch=
@@ -23,17 +24,17 @@ backup=()
 options=('!strip')
 install=
 changelog=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${_name}-${pkgver}.zip::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.zip")
 noextract=()
 sha256sums=('910ff471da29151ba77ad0866b78affaa3570e273cab9c134d8571672d7975f2')
 #validpgpkeys=()
 
 build() {
-    cd "${srcdir}/${pkgname#python-}-${pkgver}"
+    cd "${srcdir}/${_name}}-${pkgver}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${pkgname#python-}-${pkgver}"
+    cd "${srcdir}/${_name}}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
