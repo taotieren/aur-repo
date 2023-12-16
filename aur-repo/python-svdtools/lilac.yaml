@@ -16,6 +16,6 @@ repo_depends:
 update_on:
   - source: github
     github: rust-embedded/svdtools
-    use_latest_tag: true
+    use_max_tag: true
     prefix: v
   - alias: python
