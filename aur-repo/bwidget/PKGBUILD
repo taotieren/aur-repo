@@ -5,7 +5,7 @@
 
 pkgname=bwidget
 pkgver=1.9.16
-pkgrel=8
+pkgrel=9
 pkgdesc="A suite of megawidgets for Tk"
 arch=('any')
 url="https://wiki.tcl.tk/2251"
