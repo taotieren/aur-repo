@@ -9,10 +9,11 @@ license=('GPL2')
 url="http://linuxcnc.org"
 depends=(bc
     bwidget
+    glibc
     gtk3
     libxaw
-    pango
     python
+    python-gobject
     python-pillow
     python-yapps2
     tkimg
