@@ -3,7 +3,7 @@
 pkgbase=smiley-sans
 pkgname=({ttf,otf,woff2}-$pkgbase)
 pkgver=1.1.1
-pkgrel=3
+pkgrel=4
 url="https://github.com/atelier-anchor/smiley-sans"
 depends=('fontconfig')
 license=("OFL-1.1")
