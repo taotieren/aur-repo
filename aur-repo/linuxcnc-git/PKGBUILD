@@ -9,6 +9,7 @@ license=('GPL2')
 url="http://linuxcnc.org"
 depends=('bc'
     'bwidget'
+    'gtk3'
     'libxaw'
     'python-pillow'
     'python-yapps2'
