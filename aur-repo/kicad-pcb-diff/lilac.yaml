@@ -13,5 +13,5 @@ post_build_script: |
 update_on:
   - source: github
     github: INTI-CMNB/KiDiff
-    use_latest_release: true
+    use_latest_tag: true
   - alias: python
