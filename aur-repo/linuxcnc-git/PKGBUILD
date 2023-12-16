@@ -8,10 +8,16 @@ arch=('i686' 'x86_64')
 license=('GPL2')
 url="http://linuxcnc.org"
 depends=(bc
+    boost
     bwidget
     glibc
+    glu
     gtk3
+    libgpiod
     libxaw
+    readline
+    procps-ng
+    psmisc
     python
     python-gobject
     python-pillow
@@ -20,11 +26,12 @@ depends=(bc
 #    python-gtkglext
     tclx
     xorg-server
-    boost
-    procps-ng
-    psmisc)
+)
 makedepends=(intltool
-    git)
+    gettext
+    git
+    texinfo
+    man-db)
 provides=('linuxcnc')
 conflicts=('linuxcnc' 'linuxcnc-bin')
 options=('!strip')
