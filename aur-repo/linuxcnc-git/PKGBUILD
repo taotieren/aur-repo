@@ -7,22 +7,23 @@ pkgdesc="Controls CNC machines. It can drive milling machines, lathes, 3d printe
 arch=('i686' 'x86_64')
 license=('GPL2')
 url="http://linuxcnc.org"
-depends=('bc'
-    'bwidget'
-    'gtk3'
-    'libxaw'
-    'python-pillow'
-    'python-yapps2'
-    'tkimg'
-#    'python-gtkglext'
-    'tclx'
-    'xorg-server'
-    'boost'
-    'procps-ng'
-    'psmisc')
-makedepends=('intltool'
-    'git'
-    'python')
+depends=(bc
+    bwidget
+    gtk3
+    libxaw
+    pango
+    python
+    python-pillow
+    python-yapps2
+    tkimg
+#    python-gtkglext
+    tclx
+    xorg-server
+    boost
+    procps-ng
+    psmisc)
+makedepends=(intltool
+    git)
 provides=('linuxcnc')
 conflicts=('linuxcnc' 'linuxcnc-bin')
 options=('!strip')

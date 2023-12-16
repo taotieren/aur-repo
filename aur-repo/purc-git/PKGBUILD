@@ -60,6 +60,7 @@ makedepends=(
     libsoup3
     icu
 #     mariadb
+    libmariadbclient
     openssl
     sqlite
     systemd

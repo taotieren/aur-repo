@@ -62,6 +62,7 @@ makedepends=(
     icu
 #     mariadb
     # mysql
+    libmariadbclient
     openssl
     sqlite
     systemd
