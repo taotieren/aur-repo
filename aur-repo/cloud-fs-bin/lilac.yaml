@@ -13,3 +13,4 @@ update_on:
   - source: github
     github: cloud-fs/cloud-fs.github.io
     use_latest_release: true
+    prefix: v
