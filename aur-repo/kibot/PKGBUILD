@@ -18,15 +18,14 @@ depends=(
     openscad
     rar
     kicad
+    kicad-pcb-diff
     kicost
-    kidiff
     pandoc
     pcbdraw
     python
     python-kiauto
     python-kibom
     python-colorama
-    # python-kidiff
     python-lark-parser
     python-lxml
     python-kikit
