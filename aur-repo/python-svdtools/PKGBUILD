@@ -16,7 +16,9 @@ makedepends=(python-build
       python-black
       python-braceexpand
       python-flit
+      python-lxml
       python-isort
+      python-pyaml
       cargo
       rust)
 optdepends=('svd2rust: Generate Rust register maps (`struct`s) from SVD files')
@@ -38,7 +40,9 @@ package_python-svdtools() {
       python-black
       python-braceexpand
       python-flit
-      python-isort)
+      python-lxml
+      python-isort
+      python-pyaml)
     arch=('any')
 
     cd "${srcdir}/${pkgbase#python-}-${pkgver}"
