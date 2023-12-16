@@ -27,10 +27,13 @@ depends=(bc
     tclx
     xorg-server
 )
-makedepends=(intltool
+makedepends=(
+    asciidoc
     gettext
     git
-    texinfo
+    # texinfo
+    intltool
+    python-sphinx
     man-db)
 provides=('linuxcnc')
 conflicts=('linuxcnc' 'linuxcnc-bin')
