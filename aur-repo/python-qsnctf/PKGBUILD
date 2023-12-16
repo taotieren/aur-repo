@@ -11,16 +11,16 @@ url="https://pypi.org/project/qsnctf"
 license=('MIT')
 groups=()
 depends=(python
-        python-pyexecjs2
-        python-pybase62
-        python-base58
-        python-requests
-        python-bs4
-        python-urllib3
-        python-rarfile)
+    python-pyexecjs2
+    python-pybase62
+    python-base58
+    python-requests
+    python-bs4
+    python-urllib3
+    python-rarfile)
 makedepends=(python-build
-            python-installer
-            python-wheel)
+    python-installer
+    python-wheel)
 checkdepends=()
 optdepends=()
 provides=(qsnctf qsnctf-python)

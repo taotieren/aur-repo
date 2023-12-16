@@ -13,5 +13,5 @@ repo_depends:
 
 update_on:
   - source: pypi
-    pypi: qsnctf
+    pypi: PyExecJS2
   - alias: python
