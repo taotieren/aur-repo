@@ -3,7 +3,7 @@
 pkgname=python-qrcodegen
 _name=${pkgname#python-}
 pkgver=1.8.0
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="High quality QR Code generator library for Python"
 arch=('any')
