@@ -3,7 +3,7 @@
 pkgname='python-braceexpand'
 _pkgname=${pkgname#python-}
 pkgver=0.1.7
-pkgrel=3
+pkgrel=4
 pkgdesc="Bash-style brace expansion"
 arch=('any')
 depends=()
