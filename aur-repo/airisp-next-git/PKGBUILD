@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=airisp-next-git
-pkgver=r3.0340f17
-pkgrel=9
+pkgver=r33.692e331
+pkgrel=1
 pkgdesc="An ISP tool for Air MCU (Rust)"
 arch=(x86_64
     aarch64
