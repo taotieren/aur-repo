@@ -3,7 +3,7 @@
 pkgbase=xbydriver-appimage
 pkgname=(xbydriver-{bin,appimage})
 pkgver=3.12.3
-pkgrel=6
+pkgrel=7
 pkgdesc="阿里云盘小白羊版 v3 修复版"
 arch=('x86_64' 'aarch64')
 url="https://github.com/gaozhangmin/aliyunpan"
