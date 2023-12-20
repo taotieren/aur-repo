@@ -1,14 +1,18 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-fontmath-git
-pkgver=0.9.3.r2.g777dd88
+pkgname=python-skia-pathops-git
+pkgver=0.7.4.r4.g2e7c322
 pkgrel=1
-pkgdesc='A collection of objects that implement fast font, glyph, etc. math.'
-url='https://github.com/robotools/fontMath'
-license=('MIT')
+pkgdesc='Python bindings for the Skia librarys Path Ops'
+url='https://github.com/fonttools/skia-pathops'
+license=('BSD')
 arch=(any)
-depends=(python-fonttools)
-checkdepends=(python-pytest)
+depends=(cython
+         python)
+checkdepends=(python-pytest
+             python-coverage
+             python-pytest-xdist
+             python-pytest-randomly)
 makedepends=(python-{build,installer}
               python-setuptools-scm
               python-wheel
@@ -20,7 +24,7 @@ sha256sums=('SKIP')
 
 pkgver() {
     cd "$pkgname"
-    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare()
@@ -35,7 +39,7 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=Lib pytest Lib/fontMath/test
+    PYTHONPATH=Lib pytest tests
 }
 
 package() {

@@ -1,17 +1,18 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-fontmath-git
-pkgver=0.9.3.r2.g777dd88
+pkgname=python-openstep-plist-git
+pkgver=0.3.0.post1.r0.gfe887b0
 pkgrel=1
-pkgdesc='A collection of objects that implement fast font, glyph, etc. math.'
-url='https://github.com/robotools/fontMath'
+pkgdesc='OpenStep plist parser and writer written in Cython'
+url='https://github.com/fonttools/openstep-plist'
 license=('MIT')
 arch=(any)
-depends=(python-fonttools)
+depends=(python)
 checkdepends=(python-pytest)
 makedepends=(python-{build,installer}
               python-setuptools-scm
               python-wheel
+              cython
               git)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
@@ -20,7 +21,7 @@ sha256sums=('SKIP')
 
 pkgver() {
     cd "$pkgname"
-    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare()
@@ -35,7 +36,7 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=Lib pytest Lib/fontMath/test
+    python setup.py test
 }
 
 package() {

@@ -1,18 +1,21 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-fontmath-git
-pkgver=0.9.3.r2.g777dd88
+pkgname=python-booleanoperations-git
+pkgver=0.9.0.r3.g25f7091
 pkgrel=1
-pkgdesc='A collection of objects that implement fast font, glyph, etc. math.'
-url='https://github.com/robotools/fontMath'
+pkgdesc='Boolean operations on paths'
+url='https://github.com/typemytype/booleanOperations'
 license=('MIT')
 arch=(any)
-depends=(python-fonttools)
-checkdepends=(python-pytest)
-makedepends=(python-{build,installer}
-              python-setuptools-scm
-              python-wheel
-              git)
+_pydeps=(pyclipper
+         fonttools)
+depends=(python
+         "${_pydeps[@]/#/python-}")
+checkdepends=(python-defcon
+              python-fontpens
+              python-pytest)
+makedepends=(python-setuptools-scm
+             git)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")
@@ -35,7 +38,7 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=Lib pytest Lib/fontMath/test
+    PYTHONPATH=Lib pytest tests
 }
 
 package() {

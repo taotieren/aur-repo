@@ -1,10 +1,10 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-fontmath-git
-pkgver=0.9.3.r2.g777dd88
+pkgname=python-ttfautohint-py-git
+pkgver=0.5.1.r0.gfe1dd22
 pkgrel=1
-pkgdesc='A collection of objects that implement fast font, glyph, etc. math.'
-url='https://github.com/robotools/fontMath'
+pkgdesc='Python wrapper for ttfautohint, a free auto-hinter for TrueType fonts'
+url='https://github.com/fonttools/ttfautohint-py'
 license=('MIT')
 arch=(any)
 depends=(python-fonttools)
@@ -13,6 +13,7 @@ makedepends=(python-{build,installer}
               python-setuptools-scm
               python-wheel
               git)
+checkdepends=(python-pytest)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")
@@ -20,7 +21,7 @@ sha256sums=('SKIP')
 
 pkgver() {
     cd "$pkgname"
-    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+    git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare()
@@ -35,7 +36,7 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=Lib pytest Lib/fontMath/test
+    PYTHONPATH=Lib pytest tests
 }
 
 package() {
