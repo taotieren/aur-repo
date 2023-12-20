@@ -36,9 +36,13 @@ pkgver() {
     git describe --always --tags | sed 's/^v//' | sed 's|-|.|g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${_name}"
-    pipx install xyz
     pipx install -r requirements.txt
     python -m build --wheel --no-isolation
 }
