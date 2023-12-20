@@ -3,7 +3,7 @@
 pkgbase=hbdinetd-git
 pkgname=hbdinetd-git
 pkgver=r118.e7b1f42
-pkgrel=3
+pkgrel=4
 pkgdesc="The daemon managing network interfaces for HybridOS."
 arch=(x86_64
     aarch64
