@@ -3,7 +3,7 @@
 pkgbase=deepin-unioncode-git
 pkgname=deepin-unioncode-git
 pkgver=1.2.8.r0.gaf3ed9fe
-pkgrel=2
+pkgrel=3
 pkgdesc="IDE authored by deepin"
 arch=(x86_64
     aarch64
