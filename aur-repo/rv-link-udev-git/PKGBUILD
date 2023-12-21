@@ -23,6 +23,11 @@ pkgver() {
     git describe --long --tags | sed 's/^v//g' | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname%-git}" clean -dfx
+}
+
 package() {
     install -Dm0644 "${srcdir}/${pkgname%-git}/drivers/udev/rules.d/99-rvlink-jtag.rules" "${pkgdir}/usr/lib/udev/rules.d/99-rvlink-jtag.rules"
 }

@@ -31,14 +31,19 @@ pkgver(){
 	cd "${srcdir}/${pkgbase}"
 	echo $(git describe --tags | sed s/v//).$(git rev-parse --short HEAD)
 }
+
 prepare(){
+    git -C "${srcdir}/${pkgbase}" clean -dfx
+
 	cd "${srcdir}/${pkgbase}"
 	npm install
 }
+
 build(){
 	cd "${srcdir}/${pkgbase}"
 	npm run pack:dir
 }
+
 package_lx-music-desktop-git(){
 	_arch=$(node -e "os=require('os'); console.log(os.arch());")-
 	if [ ${_arch}==x64- ]
@@ -58,6 +63,7 @@ package_lx-music-desktop-git(){
 	# Enable it when supports url sheme on Linux
 	install -Dm644 "${srcdir}/lxmusic-url.desktop" "${pkgdir}/usr/share/applications/lxmusic-url.desktop"
 }
+
 package_lx-music-desktop-electron-git(){
 	depends+=("${_electron}")
 	conflicts+=("lx-music-desktop-electron")

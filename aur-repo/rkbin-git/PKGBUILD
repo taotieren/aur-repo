@@ -32,6 +32,11 @@ pkgver() {
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 package() {
 
     install -dm0755 "${pkgdir}/opt/rockchip/"

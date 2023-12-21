@@ -26,6 +26,11 @@ pkgver() {
     git describe --tags | sed 's/^v//;s/-/./g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname%-git}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${pkgname%-git}"
     export CGO_CPPFLAGS="${CPPFLAGS}"

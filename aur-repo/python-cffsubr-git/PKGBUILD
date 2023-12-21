@@ -8,7 +8,7 @@ url='https://github.com/adobe-type-tools/cffsubr'
 license=('Apache')
 arch=(any)
 depends=(python
-         python-fonttools)
+    python-fonttools)
 makedepends=(python-setuptools-git-ls-files
     python-setuptools-scm
     python-{build,installer,wheel}
@@ -36,7 +36,10 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=src pytest tests
+    # PYTHONPATH=src pytest tests
+    local _pyver=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
+	export PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-$_pyver"
+	pytest tests
 }
 
 package() {

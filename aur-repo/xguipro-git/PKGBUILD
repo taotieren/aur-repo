@@ -67,7 +67,8 @@ pkgver() {
 }
 
 prepare() {
-
+    git -C "${srcdir}/${pkgname}" clean -dfx
+    
     install -Dm644 /dev/stdin ${srcdir}/xguipro.csh <<EOF
 if (! \$?WEBKIT_WEBEXT_DIR ) then
     set WEBKIT_WEBEXT_DIR=/usr/lib/xguipro/

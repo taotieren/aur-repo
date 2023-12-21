@@ -21,6 +21,11 @@ pkgver() {
     git describe --long --tags | sed 's/V//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${pkgname}/src"
     qmake -makefile -o Makefile "CONFIG+=release"

@@ -34,6 +34,11 @@ pkgver() {
     fi
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 package_sunxi-livesuite-git() {
     pkgdesc="LiveSuit is a tool to flash Images to the NAND of Allwinner devices."
     depends=('sunxi-livesuite-dkms-git' 'libpng12')

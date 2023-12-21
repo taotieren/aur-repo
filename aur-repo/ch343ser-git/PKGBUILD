@@ -24,6 +24,11 @@ pkgver() {
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgbase}" clean -dfx
+}
+
 package() {
     cd "$srcdir/${pkgbase}/driver"
     rm -rf Makefile

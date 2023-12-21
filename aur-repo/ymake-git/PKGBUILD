@@ -20,6 +20,11 @@ pkgver() {
     git describe --always --tags | sed 's/^v//' | sed 's|-|.|g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${pkgname}"
     # pip install -r requirements.txt

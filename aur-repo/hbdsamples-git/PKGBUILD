@@ -30,6 +30,12 @@ pkgver() {
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgbase%-git}" clean -dfx
+}
+
+
 package_hbdsamples-git() {
     depends=(hbdsamples-{instrument,smart-panel,smartbox}-git)
 }

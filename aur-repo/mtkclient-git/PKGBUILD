@@ -24,6 +24,8 @@ pkgver() {
 }
 
 prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+
 	cd mtkclient
 
 	# Prevent LICENSE and README.md from being installed directly into /usr.

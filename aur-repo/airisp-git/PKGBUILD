@@ -27,6 +27,11 @@ pkgver(){
     git describe --long --tags | sed 's/^[vV]//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
 # DOTNET_CLI_TELEMETRY_OPTOUT=1
 

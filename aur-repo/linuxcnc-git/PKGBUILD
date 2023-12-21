@@ -57,6 +57,8 @@ pkgver() {
 }
 
 prepare() {
+  git -C "${srcdir}/${pkgname}" clean -dfx
+  
   cd "${srcdir}/${pkgname}/src"
   echo "export TCLLIBPATH=$TCLLIBPATH:/usr/lib/tcltk/linuxcnc" > ${pkgname}.sh
   find . -iname fixpaths.py -o -iname checkglade -o \

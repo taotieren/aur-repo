@@ -26,6 +26,11 @@ pkgver() {
     git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/g' | sed -r 's/-([0-9,a-g,A-G]{7}.*)//' | sed 's/-/./g'
 }
 
+prepare()
+{
+    git -C "${srcdir}/${pkgname%-git}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${pkgname%-git}"
     make CROSS_COMPILE="" PLATFORM=x64-sandbox

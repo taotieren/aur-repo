@@ -31,6 +31,8 @@ pkgver() {
 }
 
 prepare() {
+    git -C "${srcdir}/${pkgbase}" clean -dfx
+
     cd "${srcdir}/${pkgbase}/"
 
     git submodule update --init --recursive

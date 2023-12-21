@@ -45,10 +45,12 @@ pkgver() {
     git describe --long --tags |  sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/uuu_//g' | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-# prepare() {
+prepare()
+{
+    git -C "${srcdir}/${pkgbase%-git}" clean -dfx
 #     cd "${srcdir}/${pkgbase%-git}"
 #     git submodule update --init --recursive
-# }
+}
 
 build() {
     cd "${srcdir}/${pkgbase%-git}"
