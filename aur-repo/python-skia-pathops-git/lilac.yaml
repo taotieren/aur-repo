@@ -12,6 +12,7 @@ post_build_script: |
 
 repo_depends:
   - python-braceexpand-git
+  - python-setuptools-git-ls-files-git
 
 update_on:
   - source: github

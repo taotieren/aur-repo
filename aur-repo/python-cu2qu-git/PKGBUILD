@@ -14,7 +14,7 @@ depends=(python
          "${_pydeps[@]/#/python-}")
 makedepends=(cython
     git
-    python-{build,installer}
+    python-{build,installer,wheel}
     python-setuptools-scm)
 checkdepends=(python-coverage
     python-pytest-runner)

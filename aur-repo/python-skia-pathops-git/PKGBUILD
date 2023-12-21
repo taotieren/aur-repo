@@ -8,15 +8,16 @@ url='https://github.com/fonttools/skia-pathops'
 license=('BSD')
 arch=(any)
 depends=(cython
-         python)
+    python)
 checkdepends=(python-pytest
-             python-coverage
-             python-pytest-xdist
-             python-pytest-randomly)
+    python-coverage
+    python-pytest-xdist
+    python-pytest-randomly)
 makedepends=(python-{build,installer}
-              python-setuptools-scm
-              python-wheel
-              git)
+    python-setuptools-scm
+    python-setuptools-git-ls-files-git
+    python-wheel
+    git)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")
