@@ -7,7 +7,7 @@ post_build: aur_post_build
 
 update_on:
   - source: regex
-    url: "https://pc.115.com"
+    url: "https://pc.115.com/index.html"
     regex: '115pc_(\d+.\d+.\d+.\d+).deb'
   - source: aur
     github: 115pc
