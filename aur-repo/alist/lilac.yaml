@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='crab2313')
+
+post_build: aur_post_build
+
+update_on:
+  - source: github
+    github: alist-org/alist
+    use_max_tag: true
+    prefix: v
+  - source: aur
+    github: alist
