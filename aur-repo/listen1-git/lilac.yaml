@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='xihale')
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: github
+    github: listen1/listen1_desktop
+  - source: aur
+    aur: listen1-git
