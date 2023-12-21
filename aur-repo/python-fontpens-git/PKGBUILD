@@ -8,11 +8,12 @@ url='https://github.com/robotools/fontpens'
 license=('BSD')
 arch=(any)
 depends=(python
-         python-fonttools)
+    python-fonttools)
 checkdepends=(python-fontparts
-              python-pytest)
-makedepends=(python-setuptools-scm
-             git)
+    python-pytest)
+makedepends=(python-{build,installer,wheel}
+    python-setuptools-scm
+    git)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")

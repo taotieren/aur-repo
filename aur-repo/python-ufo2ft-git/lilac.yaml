@@ -11,10 +11,10 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - python-cffsubr
-  - python-compreffor
-  - python-cu2qu
-  - python-skia-pathops
+  - python-cffsubr-git
+  - python-compreffor-git
+  - python-cu2qu-git
+  - python-skia-pathops-git
 
 update_on:
   - source: github

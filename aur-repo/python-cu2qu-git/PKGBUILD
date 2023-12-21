@@ -13,11 +13,11 @@ _pydeps=(defcon
 depends=(python
          "${_pydeps[@]/#/python-}")
 makedepends=(cython
-             python-{build,installer}
-             python-setuptools-scm)
-checkdepends=(git
-              python-coverage
-              python-pytest-runner)
+    git
+    python-{build,installer}
+    python-setuptools-scm)
+checkdepends=(python-coverage
+    python-pytest-runner)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")

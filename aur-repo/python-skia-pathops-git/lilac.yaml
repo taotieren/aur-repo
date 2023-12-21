@@ -11,7 +11,7 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - python-braceexpand
+  - python-braceexpand-git
 
 update_on:
   - source: github

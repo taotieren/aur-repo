@@ -8,13 +8,13 @@ url='https://github.com/googlefonts/compreffor'
 license=('Apache-2.0')
 arch=(any)
 depends=(python
-         python-fonttools)
+    python-fonttools)
 checkdepends=(python-pytest)
 makedepends=(cython
-              python-setuptools-git-ls-files
-              python-setuptools-scm
-              python-wheel
-              git)
+    python-setuptools-git-ls-files
+    python-setuptools-scm
+    python-{build,installer,wheel}
+    git)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")

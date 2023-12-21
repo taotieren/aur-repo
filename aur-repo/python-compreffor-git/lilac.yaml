@@ -11,7 +11,7 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - python-setuptools-git-ls-files
+  - python-setuptools-git-ls-files-git
 
 update_on:
   - source: github

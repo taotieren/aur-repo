@@ -11,11 +11,11 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - python-openstep-plist
-  - python-ufo2ft
-  - python-ufonormalizer
-  - python-xmldiff
-  - python-ufonormalizer
+  - python-openstep-plist-git
+  - python-ufo2ft-git
+  - python-ufonormalizer-git
+  - python-xmldiff-git
+  - python-ufonormalizer-git
 
 update_on:
   - source: github
