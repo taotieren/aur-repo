@@ -23,7 +23,7 @@ makedepends=(asciidoctor
             sqlite
             zeromq)
 backup=()
-options=('!strip')
+options=('!strip' '!lto')
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')
 
