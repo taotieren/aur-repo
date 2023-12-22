@@ -21,14 +21,15 @@ options=('!strip')
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')
 
-pkgver() {
-    cd "${srcdir}/${pkgname%-git}"
-    git describe --tags | sed 's/^v//;s/-/./g'
-}
-
 prepare()
 {
     git -C "${srcdir}/${pkgname%-git}" clean -dfx
+    git tag --delete nightly
+}
+
+pkgver() {
+    cd "${srcdir}/${pkgname%-git}"
+    git describe --tags | sed 's/^v//;s/-/./g'
 }
 
 build() {
