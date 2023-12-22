@@ -10,13 +10,23 @@ arch=('any')
 url="https://github.com/OpenEIT/OpenEIT"
 license=(CC-4.0)
 groups=()
-depends=(python)
-#  python-imageio python-matplotlib python-numpy python-pyserial python-scikit-image python-scipy python-six python-pydash python-plotly python-future )
+depends=(python
+    python-imageio 
+    python-matplotlib 
+    python-numpy 
+    python-pyserial 
+    python-scikit-image 
+    python-scipy 
+    python-six 
+    python-pydash 
+    python-plotly 
+    python-future)
 makedepends=(git 
     python-build
     python-installer 
     python-wheel 
-    python-pipx)
+    # python-pip
+    )
 checkdepends=()
 optdepends=()
 provides=()
@@ -43,7 +53,7 @@ prepare()
 
 build() {
     cd "${srcdir}/${_name}"
-    pipx install -r requirements.txt
+    # pip install -r requirements.txt
     python -m build --wheel --no-isolation
 }
 
