@@ -9,6 +9,12 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
+repo_depends:
+  - python-imageio
+  - python-scikit-image
+  - python-pydash
+  - python-plotly
+
 update_on:
   - source: github
     github: OpenEIT/OpenEIT

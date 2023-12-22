@@ -1,0 +1,17 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='Universebenzene')
+
+post_build: aur_post_build
+
+repo_depends:
+  - python-tifffile
+  - python-imread
+  - python-pywavelets
+  - python-simpleitk
+
+update_on:
+  - source: aur
+    aur: python-scikit-image
+  - alias: python
