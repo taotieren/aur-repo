@@ -2,7 +2,7 @@
 
 pkgname=yjson-git
 pkgver=r73.a38e605
-pkgrel=12
+pkgrel=13
 pkgdesc="YJson"
 arch=('x86_64')
 url="https://github.com/yjmthu/YJson"
