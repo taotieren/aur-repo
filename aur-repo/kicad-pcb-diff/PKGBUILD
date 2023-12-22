@@ -22,7 +22,7 @@ makedepends=(python-{build,installer}
              python-wheel)
 optdepends=("kiauto-git: KiCad automation scripts.")
 provides=('kidiff' 'kicad-diff' 'kicad-pcb-diff' 'python-kidiff')
-conflicts=()
+conflicts=('kidiff' 'kicad-diff' 'kicad-pcb-diff' 'python-kidiff')
 replaces=()
 backup=()
 options=('!strip')
