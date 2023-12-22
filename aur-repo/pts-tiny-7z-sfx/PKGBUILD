@@ -28,10 +28,10 @@ sha256sums=('9bc7be2f54e0ef789825ac520e3d4a5c53cd208e4c362a915ef4644cb928e9f1')
 #validpgpkeys=()
 
 build(){
-    cd "${srcdir}/${pkgname}-${pkgver/_/-}"
+    cd "${srcdir}"/${pkgname}-${pkgver/_/-}
     make
 }
 
 package() {
-    install -Dm0755 "${srcdir}/${pkgname}-${pkgver/_/-}/tiny7zx.dynamic" "${pkgdir}/usr/bin/tiny7zx"
+    install -Dm0755 "${srcdir}"/${pkgname}-${pkgver/_/-}/tiny7zx.dynamic "${pkgdir}"/usr/bin/tiny7zx
 }

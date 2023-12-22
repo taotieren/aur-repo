@@ -40,7 +40,7 @@ build() {
 
 check() {
     cd "$pkgname"
-    PYTHONPATH=tests pytest
+    python -m unittest discover
 }
 
 package() {

@@ -35,6 +35,7 @@ prepare()
 
 build() {
     cd "$pkgname"
+    git submodule update --init --recursive
     python -m build -wn
 }
 
