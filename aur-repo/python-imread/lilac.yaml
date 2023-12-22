@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['carlosal1015', 'AutoUpdateBot'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: aur
+    aur: python-imread
+  - alias: python

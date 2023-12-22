@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['hottea', 'lilac'])
+
+post_build: aur_post_build
+
+repo_depends:
+  - brunsli
+  - charls
+  - lerc
+  - lzfse
+  - python-imread
+
+update_on:
+  - source: aur
+    aur: python-imagecodecs
+  - alias: python

@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='m-pilia')
+
+post_build: aur_post_build
+
+repo_depends:
+  - simpleitk
+
+update_on:
+  - source: aur
+    aur: python-simpleitk
+  - alias: python
