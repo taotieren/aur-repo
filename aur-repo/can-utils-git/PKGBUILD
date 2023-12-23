@@ -18,7 +18,8 @@ depends=(glibc)
 makedepends=(git
     cmake
     ninja)
-optdepends=("can-isotp-dkms: Kernel modules for isotp")
+optdepends=("can-doc: Linux-CAN / SocketCAN documentation"
+    "can-isotp-dkms: Kernel modules for isotp")
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
