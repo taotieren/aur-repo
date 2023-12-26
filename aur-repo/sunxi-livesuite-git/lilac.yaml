@@ -9,9 +9,6 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
-repo_depends:
-  - sunxi-livesuite-dkms-git
-
 update_on:
   - source: github
     github: linux-sunxi/sunxi-livesuite

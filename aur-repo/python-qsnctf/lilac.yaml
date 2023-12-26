@@ -13,7 +13,6 @@ repo_depends:
   - python-pybase62
   - python-base58
   - python-bs4
-  - python-sympy
   - python-rarfile
 
 update_on:
