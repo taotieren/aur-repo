@@ -7,7 +7,7 @@
 pkgname=rar
 pkgver=6.24.0
 __pkgver=624
-pkgrel=7
+pkgrel=8
 pkgdesc="A command-line port of the rar compression utility"
 url="https://www.rarlab.com"
 arch=('i686' 'x86_64')
