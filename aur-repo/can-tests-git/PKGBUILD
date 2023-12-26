@@ -3,7 +3,7 @@
 pkgbase=can-tests-git
 pkgname=can-tests-git
 pkgver=2023.05.0.r5.g3258274
-pkgrel=2
+pkgrel=3
 groups=()
 pkgdesc="Linux-CAN / SocketCAN testing applications"
 arch=(x86_64
