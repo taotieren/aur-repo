@@ -12,7 +12,8 @@ arch=(aarch64
 url="https://github.com/Keidan/hex2bin"
 license=('GPL3')
 replaces=('hex2bin')
-depends=()
+depends=(glibc
+    gcc-libs)
 makedepends=(git
 	cmake
 	ninja)
