@@ -3,7 +3,7 @@
 pkgbase=ttf-lxgw-marker-gothic
 pkgname=($pkgbase)
 pkgver=0.200
-pkgrel=8
+pkgrel=9
 arch=(any)
 url='https://github.com/lxgw/LxgwMarkerGothic'
 license=("custom:SIL OFL")
