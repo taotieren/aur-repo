@@ -5,7 +5,7 @@
 
 pkgname=archlinux-java-run
 pkgver=10
-pkgrel=13
+pkgrel=14
 pkgdesc="Java Application Launcher for Arch Linux"
 arch=(any)
 url="https://github.com/michaellass/archlinux-java-run"
