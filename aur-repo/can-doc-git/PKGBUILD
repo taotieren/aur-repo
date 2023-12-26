@@ -3,7 +3,7 @@
 pkgbase=can-doc-git
 pkgname=can-doc-git
 pkgver=r9.9f10695
-pkgrel=3
+pkgrel=4
 groups=()
 pkgdesc="Linux-CAN / SocketCAN documentation"
 arch=(any)
