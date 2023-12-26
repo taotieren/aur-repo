@@ -4,7 +4,7 @@
 
 pkgname=hex2bin-git
 pkgver=1.9.r2.g34c263d
-pkgrel=1
+pkgrel=2
 pkgdesc="Hex to binary converter."
 arch=(aarch64
 	riscv64
