@@ -2,7 +2,7 @@
 
 pkgname=python-cffsubr-git
 pkgver=0.2.9.post1.r0.g5999ae5
-pkgrel=2
+pkgrel=3
 pkgdesc='Standalone CFF subroutinizer based on AFDKO tx'
 url='https://github.com/adobe-type-tools/cffsubr'
 license=('Apache')
