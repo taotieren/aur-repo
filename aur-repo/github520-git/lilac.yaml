@@ -1,14 +1,10 @@
 maintainers:
   - github: taotieren
 
-build_prefix: extra-x86_64
+pre_build_script: aur_pre_build(maintainers='taotieren')
 
-pre_build: vcs_update
-
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+post_build: aur_post_build
 
 update_on:
-  - source: github
-    github: 521xueweihan/GitHub520
+  - source: aur
+    aur: github520-git
