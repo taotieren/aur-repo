@@ -13,9 +13,8 @@ post_build_script: |
 repo_depends:
   - python-openstep-plist-git
   - python-ufo2ft-git
-  - python-ufonormalizer-git
+  - python-ufonormalizer
   - python-xmldiff-git
-  - python-ufonormalizer-git
 
 update_on:
   - source: github
