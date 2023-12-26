@@ -9,7 +9,7 @@
 _pkgname=sourcetrail
 pkgname="$_pkgname${_pkgtype:+-$_pkgtype}"
 pkgver=2023.11
-pkgrel=11
+pkgrel=12
 pkgdesc='Interactive source explorer for C/C++ and Java'
 url='https://github.com/petermost/Sourcetrail'
 license=('GPL3')
