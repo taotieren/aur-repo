@@ -3,8 +3,8 @@
 # Contributor: Sasasu <lizhaolong0123@gmail.com>
 
 pkgname=hex2bin-git
-pkgver=1.9.r2.g34c263d
-pkgrel=2
+pkgver=1.10.r0.g1027fbc
+pkgrel=1
 pkgdesc="Hex to binary converter."
 arch=(aarch64
 	riscv64
