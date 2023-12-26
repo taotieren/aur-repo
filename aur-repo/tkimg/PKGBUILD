@@ -6,7 +6,7 @@
 pkgname=tkimg
 _pkgname=Img
 pkgver=1.4.16
-pkgrel=8
+pkgrel=9
 pkgdesc='Provides the handling of several image formats beyond the standard formats in Tk'
 url='https://wiki.tcl-lang.org/page/Img'
 arch=('x86_64')
