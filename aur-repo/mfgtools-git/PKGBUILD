@@ -90,5 +90,5 @@ package_mfgtools-doc-git() {
     echo "</revhistory>" >> UUU-docinfo.xml
     a2x -L -a docinfo UUU
 
-    install -Dm0644 "${srcdir}/${pkgname%-git}/UUU.pdf" -t "${pkgdir}/usr/doc/${pkgname%-git}/"
+    install -Dm0644 "${srcdir}/${pkgname%-git}/UUU.pdf" -t "${pkgdir}/usr/share/doc/${pkgname%-git}/"
 }
