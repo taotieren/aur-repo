@@ -1,14 +1,11 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers='m-pilia')
+pre_build_script: aur_pre_build(maintainers='tfmoraes')
 
 post_build: aur_post_build
 
-repo_depends:
-  - insight-toolkit
-
 update_on:
   - source: aur
-    aur: simpleitk
+    aur: gdcm
   - alias: python
