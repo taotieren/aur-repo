@@ -36,7 +36,7 @@ pkgver() {
 
 prepare()
 {
-    git -C "${srcdir}/${pkgname}" clean -dfx
+    git -C "${srcdir}/${pkgbase%-git}" clean -dfx
 }
 
 package_sunxi-livesuite-git() {
