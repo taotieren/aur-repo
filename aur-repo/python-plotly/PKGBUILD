@@ -3,7 +3,7 @@
 
 pkgname=python-plotly
 pkgver=5.18.0
-pkgrel=3
+pkgrel=4
 pkgdesc="An open-source, interactive graphing library"
 arch=('x86_64')
 url="https://github.com/plotly/plotly.py"
