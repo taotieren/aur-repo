@@ -2,7 +2,7 @@
 
 pkgname=bookget-git
 pkgver=23.1227.3.g9c75fa4
-pkgrel=1
+pkgrel=2
 pkgdesc="bookget 数字图书馆下载工具，目前支持约50+个数字图书馆。"
 arch=(x86_64
     aarch64
