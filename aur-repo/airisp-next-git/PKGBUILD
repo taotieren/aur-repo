@@ -2,7 +2,7 @@
 
 pkgname=airisp-next-git
 pkgver=r41.760d231
-pkgrel=4
+pkgrel=5
 pkgdesc="An ISP tool for Air MCU (Rust)"
 arch=(x86_64
     aarch64
