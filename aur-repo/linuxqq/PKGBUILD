@@ -3,7 +3,7 @@
 
 pkgname=linuxqq
 pkgver=3.2.3_20139
-pkgrel=2
+pkgrel=3
 epoch=2
 pkgdesc='New Linux QQ based on Electron'
 arch=('x86_64' 'aarch64' 'loong64')
