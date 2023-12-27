@@ -1,12 +1,17 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['anatolik', 'abougouffa'])
+# pre_build_script: aur_pre_build(maintainers=['anatolik', 'abougouffa'])
 
-post_build_script: aur_post_build
+# post_build_script: aur_post_build
+
+pre_build: vcs_update
+
+post_build_script: |
+  git_pkgbuild_commit()
 
 update_on:
   - source: github
     github: DreamSourceLab/DSView
-  - source: aur
-    aur: dsview-git
+  # - source: aur
+  #   aur: dsview-git
