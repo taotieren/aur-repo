@@ -20,7 +20,8 @@ replaces=()
 depends=(
     glib2
     glibc
-    )
+    dtkgui
+    dtkwidget)
 makedepends=(
     argtable
     cmake
@@ -30,8 +31,6 @@ makedepends=(
     capstone
     clang
     dbus
-    dtkgui
-    dtkwidget
     doxygen
     hiredis
     llvm
