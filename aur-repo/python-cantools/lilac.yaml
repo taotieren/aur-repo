@@ -1,0 +1,16 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='Maik93')
+
+post_build: aur_post_build
+
+repo_depends:
+  - python-bitstruct
+  - python-diskcache
+  - python-textparser
+
+update_on:
+  - source: aur
+    aur: python-cantools
+  - alias: python
