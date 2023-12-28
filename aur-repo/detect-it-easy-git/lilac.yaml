@@ -8,5 +8,5 @@ post_build: aur_post_build
 update_on:
   - source: github
     github: horsicq/Detect-It-Easy
-  - source: aur
-    aur: detect-it-easy-git
+  # - source: aur
+  #   aur: detect-it-easy-git
