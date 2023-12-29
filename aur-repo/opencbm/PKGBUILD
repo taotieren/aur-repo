@@ -6,7 +6,7 @@
 #
 pkgname=opencbm
 pkgver=0.4.99.104
-pkgrel=1
+pkgrel=2
 epoch=
 _pkgname=OpenCBM
 _pkgver=${pkgver}
