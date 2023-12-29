@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='chungy')
+
+post_build: aur_post_build
+
+update_on:
+  - source: github
+    github: cc65/cc65
+  - source: aur
+    github: cc65-git

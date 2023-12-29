@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='thierer')
+
+post_build: aur_post_build
+
+repo_depends:
+  - opencbm
+
+update_on:
+  - source: github
+    github: OpenCBM/nibtools
+  - source: aur
+    github: nibtools-git
