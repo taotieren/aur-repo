@@ -1,7 +1,7 @@
 # Maintainer: Mike Swanson <mikeonthecomputer@gmail.com>
 
 pkgname=cc65-git
-pkgver=2.19.r1292.7297d2c8b
+pkgver=2.19.r1295.4343eebe6
 pkgrel=1
 pkgdesc='C compiler for 6502 family microprocessors'
 arch=('i686' 'x86_64')
