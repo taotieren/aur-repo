@@ -8,7 +8,7 @@
 pkgname=bilibili-bin
 _pkgname=bilibili
 pkgver=1.13.0_2
-pkgrel=1
+pkgrel=2
 epoch=4
 pkgdesc='哔哩哔哩官方客户端linux移植版。Bilibili official desktop client'
 license=('MIT')
