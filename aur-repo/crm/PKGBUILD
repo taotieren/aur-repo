@@ -2,7 +2,7 @@
 
 pkgname=crm
 pkgver=0.2.1
-pkgrel=5
+pkgrel=6
 pkgdesc="crm (Cargo registry manager)"
 arch=(x86_64
     aarch64
