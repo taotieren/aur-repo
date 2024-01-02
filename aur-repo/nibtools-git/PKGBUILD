@@ -3,7 +3,7 @@
 pkgname=nibtools-git
 _pkgname=nibtools
 pkgver=r674.3bd39c2
-pkgrel=1
+pkgrel=2
 pkgdesc="Commodore 1541/1571 disk image nibbler"
 arch=('i686' 'x86_64')
 url="https://c64preservation.com/dp.php?pg=nibtools"
