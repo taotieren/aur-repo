@@ -33,5 +33,6 @@ build(){
 }
 
 package() {
-    install -Dm0755 "${srcdir}"/${pkgname}-${pkgver/_/-}/tiny7zx.dynamic "${pkgdir}"/usr/bin/tiny7zx
+    cd "${srcdir}"/${pkgname}-${pkgver/_/-}
+    install -Dm0755 tiny7zx.dynamic "${pkgdir}"/usr/bin/tiny7zx
 }
