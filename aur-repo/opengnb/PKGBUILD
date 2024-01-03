@@ -21,7 +21,7 @@ makedepends=(sed
 backup=()
 options=('!strip')
 install=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v(ver)?${pkgver}.tar.gz")
 sha256sums=('a68817d63dcf3e15166b52389e5bc46affcf18f910932dd8dd8eb7247eb47b9a')
 
 prepare() {
