@@ -28,7 +28,10 @@ source=("${pkgname%-git}::git+${url}.git"
     "nng::git+https://github.com/nanomq/NanoNNG.git"
     "l8w8jwt::git+https://github.com/GlitchedPolygons/l8w8jwt.git"
     "nftp-codec::git+https://github.com/nanomq/nftp-codec.git")
-sha256sums=('SKIP')
+sha256sums=('SKIP'
+    'SKIP'
+    'SKIP'
+    'SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgbase%-git}/"
