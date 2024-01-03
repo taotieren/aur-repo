@@ -1,4 +1,4 @@
-# Contributor: taotieren <admin@taotieren.com>
+# Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=opengnb-git
 pkgver=1.4.5.a
@@ -27,7 +27,7 @@ sha256sums=('SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
-    git describe --tags --always | sed 's/^v//' | sed 's|-|.|g'
+    git describe --tags --always | sed 's/^v\{0,1\}ver\{0,1\}//' | sed 's|-|.|g'
 }
 
 prepare() {
