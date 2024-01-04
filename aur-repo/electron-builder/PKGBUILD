@@ -2,7 +2,7 @@
 
 pkgname=electron-builder
 pkgver=23.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A complete solution to package and build a ready for distribution Electron app with “auto update” support out of the box"
 arch=(any)
 url="https://www.electron.build/"
