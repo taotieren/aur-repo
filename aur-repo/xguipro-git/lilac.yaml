@@ -12,6 +12,7 @@ post_build_script: |
 
 repo_depends:
   - purc-git
+  - webkit2gtk-3.0-hvml
 
 update_on:
   - source: github
