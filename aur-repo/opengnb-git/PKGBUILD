@@ -34,10 +34,11 @@ prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 
     cd "${srcdir}/${pkgname}"
-    sed -i 's|-I./libs|-I./libs -I/usr/include|g'  Makefile.linux
-    sed -i 's|-I./libs/miniupnpc/|-I/usr/include/miniupnpc|g'  Makefile.linux
-    sed -i 's|-I./libs/libnatpmp | |g'  Makefile.linux
-    sed -i 's|-I./libs/zlib | |g'  Makefile.linux
+    sed -i  -e 's|-I./libs|-I./libs -I/usr/include|g' \
+        -e 's|-I./libs/miniupnpc/|-I/usr/include/miniupnpc|g' \
+        -e 's|-I./libs/libnatpmp | |g' \
+        -e 's|-I./libs/zlib | |g'  Makefile.linux
+    sed -i -e 's|sbin|bin|g' scripts/opengnb\@.service
 }
 
 build() {
@@ -49,6 +50,7 @@ package() {
     cd "${srcdir}/${pkgname}"
     make -f Makefile.linux install
 
+    install -dm0755 "${pkgdir}/etc/opengnb"
     install -Dm0755  bin/* -t "${pkgdir}/usr/bin/"
     install -Dm0644  scripts/${pkgname%-git}@.service -t "${pkgdir}/usr/lib/systemd/system/"
     install -Dm0644  examples/node_config_example/*.conf -t "${pkgdir}/usr/share/${pkgname%-git}/node_config_example/"
