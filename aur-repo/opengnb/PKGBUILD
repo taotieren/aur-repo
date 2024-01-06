@@ -12,7 +12,7 @@ license=('GPLv3')
 provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
-depends=()
+depends=(glibc)
 optdepends=()
 makedepends=(sed
     libnatpmp

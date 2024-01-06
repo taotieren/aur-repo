@@ -12,7 +12,7 @@ license=('GPLv3')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=()
+depends=(glibc)
 optdepends=()
 makedepends=(git
     sed
