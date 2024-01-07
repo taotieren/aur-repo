@@ -67,7 +67,7 @@ package_icesugar-git() {
         icesugar-icesprog
         icestorm
         nextpnr
-        nextpnr-ice40
+        nextpnr-ice40-nightly
         riscv64-linux-gnu-gcc
         yosys)
 }
