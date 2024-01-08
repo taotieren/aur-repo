@@ -5,6 +5,11 @@ build_prefix: extra-x86_64
 
 pre_build: vcs_update
 
+repo_depends:
+  - icestorm-nightly
+  - nextpnr-ice40-nightly
+  - nextpnr-git
+
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -12,3 +17,8 @@ post_build_script: |
 update_on:
   - source: github
     github: wuxx/icesugar
+  - source: github
+    github: wuxx/icesugar-nano
+  - source: github
+    github: wuxx/icesugar-pro
+
