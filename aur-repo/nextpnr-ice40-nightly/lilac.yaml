@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='lethalbit')
+
+post_build: aur_post_build
+
+repo_depends:
+  - icestorm-nightly
+
+update_on:
+  - source: github
+    github: YosysHQ/nextpnr
+  - source: aur
+    aur: nextpnr-ice40-nightly
