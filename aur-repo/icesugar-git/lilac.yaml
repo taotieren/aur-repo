@@ -8,7 +8,7 @@ pre_build: vcs_update
 repo_depends:
   - icestorm-nightly
   - nextpnr-ice40-nightly
-  - nextpnr-git
+  - yosys-nightly
 
 post_build_script: |
   git_pkgbuild_commit()

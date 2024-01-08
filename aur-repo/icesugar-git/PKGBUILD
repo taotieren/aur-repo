@@ -86,11 +86,13 @@ package_icesugar-git() {
         icesugar-icesprog
 #         icestorm
         icestorm-nightly
-        nextpnr
+#         nextpnr
         nextpnr-ice40-nightly
         riscv64-linux-gnu-gcc
         sbt
-        yosys)
+#         yosys
+        yosys-nightly
+        )
 }
 
 package_icesugar-demo-git() {
@@ -150,11 +152,12 @@ package_icesugar-nano-git() {
         icesugar-nano-doc
 #         icestorm
         icestorm-nightly
-        nextpnr
+#         nextpnr
         nextpnr-ice40-nightly
         riscv64-linux-gnu-gcc
         sbt
-        yosys)
+#         yosys
+        yosys-nightly)
 }
 
 package_icesugar-nano-demo-git() {
@@ -193,11 +196,12 @@ package_icesugar-pro-git() {
         icesugar-pro-doc
 #         icestorm
         icestorm-nightly
-        nextpnr
+#         nextpnr
         nextpnr-ice40-nightly
         riscv64-linux-gnu-gcc
         sbt
-        yosys)
+#         yosys
+        yosys-nightly)
 }
 
 package_icesugar-pro-demo-git() {
