@@ -5,12 +5,8 @@ pre_build_script: aur_pre_build(maintainers='lethalbit')
 
 post_build: aur_post_build
 
-repo_depends:
-  - icestorm-nightly
-  - yosys-nightly
-
 update_on:
   - source: github
-    github: YosysHQ/nextpnr
+    github: YosysHQ/yosys
   - source: aur
-    aur: nextpnr-ice40-nightly
+    aur: yosys-nightly
