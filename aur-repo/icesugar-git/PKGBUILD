@@ -226,7 +226,7 @@ package_icesugar-dapprog-git() {
     depends=(openocd)
     arch=(aarch64 x86_64)
 
-    cd "${srcdir}/${pkgbase/git/pro}/tools"
+    cd "${srcdir}/${pkgbase/git/pro}"
     install -dm0755 "${pkgdir}/usr/share/${pkgbase/git/pro}"
     cp -rva tools   "${pkgdir}/usr/share/${pkgbase/git/pro}/"
     install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/dapprog" <<EOF
