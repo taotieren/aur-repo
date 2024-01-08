@@ -138,7 +138,7 @@ package_icesugar-icesprog-git() {
     install -Dm0755 icesprog -t "${pkgdir}/usr/bin"
     install -Dm0644 README.md -t "${pkgdir}/usr/share/${pkgbase%-git}/icesprog"
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgbase%-git}"
-    install -Dm0644 60-icesugar.rules "${pkgdir}/usr/lib/udev/rules.d/"
+    install -Dm0644 60-icesugar.rules -t "${pkgdir}/usr/lib/udev/rules.d/"
 }
 
 package_icesugar-nano-git() {
