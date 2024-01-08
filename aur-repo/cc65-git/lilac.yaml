@@ -9,4 +9,4 @@ update_on:
   - source: github
     github: cc65/cc65
   - source: aur
-    github: cc65-git
+    aur: cc65-git

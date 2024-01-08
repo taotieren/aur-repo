@@ -5,6 +5,9 @@ pre_build_script: aur_pre_build(maintainers='mikesd')
 
 post_build: aur_post_build
 
+repo_depends:
+  - icestorm-git
+
 update_on:
   - source: github
     github: cseed/arachne-pnr
