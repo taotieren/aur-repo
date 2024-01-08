@@ -2,7 +2,7 @@
 
 pkgname=cc65-git
 pkgver=2.19.r1300.29801a2fd
-pkgrel=2
+pkgrel=3
 pkgdesc='C compiler for 6502 family microprocessors'
 arch=('i686' 'x86_64')
 makedepends=('git')
