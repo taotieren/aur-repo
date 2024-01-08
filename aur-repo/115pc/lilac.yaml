@@ -7,4 +7,4 @@ post_build: aur_post_build
 
 update_on:
   - source: aur
-    github: 115pc
+    aur: 115pc
