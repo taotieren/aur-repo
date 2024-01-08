@@ -138,7 +138,7 @@ package_icesugar-icesprog-git() {
     install -Dm0755 icesprog -t "${pkgdir}/usr/bin"
     install -Dm0644 README.md -t "${pkgdir}/usr/share/${pkgbase%-git}/icesprog"
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgbase%-git}"
-    install -Dm0644 /dev/stdin "${pkgdir}//usr/lib/udev/rules.d/60-icesugar.rules" <<EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/60-icesugar.rules" <<EOF
 # Copy this file to /etc/udev/rules.d/
 # If rules fail to reload automatically, you can refresh udev rules
 # with the command "sudo udevadm control --reload"
