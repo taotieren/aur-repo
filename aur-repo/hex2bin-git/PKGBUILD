@@ -32,6 +32,7 @@ pkgver() {
 build() {
 	cd "$srcdir/$pkgname"
     cmake -DDISTRIBUTION==release \
+        -DCMAKE_BUILD_TYPE=release \
         -DDEFSTART=0 \
         -DDEFLIMIT=0 \
         -B build \
