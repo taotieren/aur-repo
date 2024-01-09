@@ -9,7 +9,5 @@ repo_depends:
   - yosys-nightly
 
 update_on:
-  - source: github
-    github: YosysHQ/nextpnr
   - source: aur
     aur: nextpnr-generic-nightly

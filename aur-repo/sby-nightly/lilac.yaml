@@ -9,7 +9,5 @@ repo_depends:
   - yosys-nightly
 
 update_on:
-  - source: github
-    github: YosysHQ/sby
   - source: aur
     aur: sby-nightly

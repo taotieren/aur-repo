@@ -6,7 +6,5 @@ pre_build_script: aur_pre_build(maintainers='lethalbit')
 post_build: aur_post_build
 
 update_on:
-  - source: github
-    github: gatecat/prjoxide
   - source: aur
     aur: prjoxide-nightly
