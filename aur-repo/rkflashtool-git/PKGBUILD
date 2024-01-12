@@ -3,7 +3,7 @@
 pkgbase=rkflashtool-git
 pkgname=rkflashtool-git
 pkgver=r210.5bc3cbf
-pkgrel=11
+pkgrel=12
 pkgdesc="Tools for flashing Rockchip devices"
 arch=(x86_64
     aarch64
