@@ -2,7 +2,7 @@
 
 pkgname=socketcan-rs-git
 pkgver=3.3.0.r10.g7851a50
-pkgrel=2
+pkgrel=3
 pkgdesc="Linux SocketCAN access in Rust"
 arch=(aarch64
     riscv64
