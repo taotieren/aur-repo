@@ -3,7 +3,7 @@
 pkgbase=hvml-fpm-git
 pkgname=hvml-fpm-git
 pkgver=r22.f030336
-pkgrel=3
+pkgrel=4
 pkgdesc="The HVML FastCGI Process Manager: an HVML FastCGI implementation."
 arch=(x86_64
     aarch64
