@@ -2,7 +2,7 @@
 
 pkgname=vnt-git
 pkgver=1.2.8.2.r7.ge64e172
-pkgrel=1
+pkgrel=2
 pkgdesc="A virtual network tool (or VPN),简便高效的异地组网、内网穿透工具"
 arch=(x86_64
     aarch64
