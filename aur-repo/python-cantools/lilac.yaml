@@ -11,6 +11,8 @@ repo_depends:
   - python-textparser
 
 update_on:
+  - source: github
+    github: eerimoq/cantools
   - source: aur
     aur: python-cantools
   - alias: python
