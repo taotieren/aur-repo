@@ -2,7 +2,7 @@
 
 pkgname=airisp-git
 pkgver=1.2.8.0.r1.geebb818
-pkgrel=16
+pkgrel=17
 epoch=
 pkgdesc="An ISP tool for Air MCU"
 arch=("x86_64" "aarch64")
