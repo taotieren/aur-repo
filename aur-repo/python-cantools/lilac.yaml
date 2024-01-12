@@ -12,7 +12,7 @@ repo_depends:
 
 update_on:
   - source: github
-    github: eerimoq/cantools
+    github: cantools/cantools
   - source: aur
     aur: python-cantools
   - alias: python
