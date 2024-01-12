@@ -2,7 +2,7 @@
 
 pkgname=crm-git
 pkgver=0.2.1.r3.g10e818c
-pkgrel=14
+pkgrel=15
 pkgdesc="crm (Cargo registry manager)"
 arch=(x86_64
     aarch64
