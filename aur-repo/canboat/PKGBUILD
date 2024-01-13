@@ -9,7 +9,7 @@ arch=(aarch64
     riscv64
     x86_64)
 url="https://github.com/canboat/canboat"
-license=('MIT')
+license=('Apache2.0')
 groups=()
 depends=(glibc)
 # makedepends=(help2man)
