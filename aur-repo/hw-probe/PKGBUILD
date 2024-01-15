@@ -2,7 +2,7 @@
 
 pkgname=hw-probe
 pkgver=1.6.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Tool to probe for hardware, check its operability and upload result to the Linux hardware DB: http://linux-hardware.org"
 arch=('any')
 url="https://github.com/linuxhw/hw-probe"
