@@ -2,7 +2,7 @@
 
 pkgname=probe-rs-git
 pkgver=0.22.0.r23.gbf27a722
-pkgrel=1
+pkgrel=2
 pkgdesc="A debugging toolset and library for debugging embedded ARM and RISC-V targets on a separate host"
 arch=(x86_64
     aarch64
