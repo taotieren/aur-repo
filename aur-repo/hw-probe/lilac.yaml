@@ -5,6 +5,9 @@ pre_build_script: aur_pre_build(maintainers=['1ace', 'Martchus'])
 
 post_build: aur_post_build
 
+repo_depends:
+  - edid-decode-git
+
 update_on:
   - source: aur
     aur: hw-probe
