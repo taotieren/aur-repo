@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-cffsubr-git
-pkgver=0.2.9.post1.r0.g5999ae5
-pkgrel=6
+pkgver=0.2.9.post1.r2.g2a3b91f
+pkgrel=1
 pkgdesc='Standalone CFF subroutinizer based on AFDKO tx'
 url='https://github.com/adobe-type-tools/cffsubr'
 license=('Apache')
