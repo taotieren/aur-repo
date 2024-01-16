@@ -46,7 +46,7 @@ prepare()
 }
 
 build() {
-    arch-meson ${pkgname} build
+    arch-meson ${pkgname} build -Dabi=deprecated,stable,testing
     ninja -C build
 }
 
