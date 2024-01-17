@@ -5,7 +5,7 @@ pkgname=(ocrs-git
     libocrs-git
     chrome-extension-ocrs-git)
 pkgver=0.3.1.r11.g4686460
-pkgrel=1
+pkgrel=2
 pkgdesc="A modern OCR engine (extracts text from images), written in Rust"
 arch=(x86_64
     aarch64
