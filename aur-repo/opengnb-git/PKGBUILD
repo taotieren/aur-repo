@@ -8,7 +8,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/gnbdev/opengnb"
-license=('GPLv3')
+license=('GPL-3.0-or-later')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
@@ -56,5 +56,4 @@ package() {
     install -Dm0644  examples/node_config_example/*.conf -t "${pkgdir}/usr/share/${pkgname}/node_config_example/"
     install -Dm0644  examples/node_config_example/scripts/* -t "${pkgdir}/usr/share/${pkgname}/node_config_example/scripts/"
     install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}/docs/"
-    install -Dm0644 "${srcdir}/${pkgname}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
