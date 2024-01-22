@@ -39,7 +39,7 @@ makedepends=(
     pkgconf
     mold)
 backup=()
-options=('!strip' '!lto')
+options=('!lto')
 install=
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
