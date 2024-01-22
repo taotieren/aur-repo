@@ -8,24 +8,31 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/Air-duino/AirISP-next"
-license=('unknow')
+license=('custom')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(cargo
+depends=(
+    cairo
+    gcc-libs
+    gdk-pixbuf2
+    glibc
+    glib2
     gtk3
-    hidapi
+    libsoup
+    pango
+    systemd-libs
     hicolor-icon-theme
-    libayatana-appindicator
-    librsvg
     libusb
-    openssl
-    webkit2gtk
-    systemd)
+    webkit2gtk)
 makedepends=(
+    cargo
     cargo-tauri
     gendesk
     git
+    hidapi
+    libayatana-appindicator
+    librsvg
     rust
     npm
     pnpm
