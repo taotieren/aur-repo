@@ -9,7 +9,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/dependon/fantascene-dynamic-wallpaper"
-license=('GPLv3')
+license=('GPL-3.0-only')
 provides=(${pkgname})
 conflicts=(${pkgname} ${pkgname%-git})
 depends=(mpv

@@ -17,7 +17,7 @@ optdepends=()
 makedepends=(git
     go)
 backup=(etc/go-aliddns/config.yaml)
-options=('!strip')
+options=()
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')

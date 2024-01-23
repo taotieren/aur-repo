@@ -5,7 +5,7 @@ pkgver=2.9.1.r1329.g92df5135de
 pkgrel=1
 pkgdesc="Controls CNC machines. It can drive milling machines, lathes, 3d printers, laser cutters, plasma cutters, robot arms, hexapods, and more (formerly EMC2)"
 arch=('i686' 'x86_64')
-license=('GPL2')
+license=('GPL-2.0-only')
 url="http://linuxcnc.org"
 depends=(bc
     boost

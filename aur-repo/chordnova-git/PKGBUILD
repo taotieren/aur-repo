@@ -22,7 +22,7 @@ makedepends=(git
     cmake
     ninja)
 backup=()
-options=('!strip')
+options=()
 install=
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')

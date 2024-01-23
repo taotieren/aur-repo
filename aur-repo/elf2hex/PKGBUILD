@@ -9,7 +9,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/sifive/elf2hex"
-license=('Apache' 'MIT')
+license=('Apache-2.0' 'MIT')
 groups=()
 depends=('bash')
 makedepends=('autoconf' 'automake' 'python')
@@ -19,7 +19,7 @@ provides=()
 conflicts=()
 replaces=()
 backup=()
-options=('!strip')
+options=()
 install=
 changelog=
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")

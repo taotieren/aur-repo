@@ -20,7 +20,7 @@ makedepends=(
     dotnet-host
     dotnet-sdk)
 backup=()
-options=('!strip')
+options=()
 install=
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')

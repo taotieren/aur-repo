@@ -22,7 +22,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/wuxx/icesugar"
-license=('GPL')
+license=('GPL-2.0-or-later')
 groups=()
 depends=(
     gcc-libs

@@ -8,7 +8,7 @@ pkgrel=5
 pkgdesc='GUI programe for supporting various instruments from DreamSourceLab, including logic analyzer, oscilloscope, etc.'
 arch=(i686 x86_64)
 url='http://www.dreamsourcelab.com/'
-license=(GPL3)
+license=(GPL-3.0-only)
 # Upstream added VCS dependency to libsigrokdecode :/
 depends=(boost-libs
     qt5-base

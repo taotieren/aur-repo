@@ -23,7 +23,7 @@ makedepends=(asciidoctor
     sqlite
     zeromq)
 backup=()
-options=('!strip' '!lto')
+options=('!lto')
 source=("${pkgname%-git}::git+${url}.git"
     "nng::git+https://github.com/nanomq/NanoNNG.git"
     "l8w8jwt::git+https://github.com/GlitchedPolygons/l8w8jwt.git"

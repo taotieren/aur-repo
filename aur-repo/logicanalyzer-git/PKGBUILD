@@ -8,14 +8,14 @@ epoch=
 pkgdesc="24 channel, 100Msps logic analyzer hardware and software "
 arch=("x86_64" "aarch64")
 url="https://github.com/gusmanb/logicanalyzer"
-license=('GLP-3.0')
+license=('GPL-3.0-only')
 replaces=()
 depends=()
 makedepends=(git
     dotnet-sdk
     ttf-dejavu)
 backup=()
-options=('!strip')
+options=()
 install=
 source=("${pkgbase}::git+${url}.git")
 sha256sums=('SKIP')

@@ -8,7 +8,7 @@ epoch=
 pkgdesc="uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools."
 arch=('x86_64' 'aarch64')
 url="https://github.com/nxp-imx/mfgtools"
-license=('BSD')
+license=('BSD-3-Clause')
 groups=()
 depends=(bzip2
     zlib
@@ -28,7 +28,7 @@ checkdepends=()
 optdepends=()
 replaces=()
 backup=()
-options=('!strip')
+options=()
 install=
 changelog=
 source=("${pkgbase%-git}::git+${url}.git"

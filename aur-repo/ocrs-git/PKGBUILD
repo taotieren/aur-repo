@@ -11,7 +11,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/robertknight/ocrs"
-license=('MIT' 'Apache' 'BSD')
+license=('MIT' 'Apache-2.0')
 # provides=(${pkgname%-git})
 # conflicts=(${pkgname%-git})
 replaces=()

@@ -9,7 +9,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/pts/pts-tiny-7z-sfx"
-license=('GPL v2')
+license=('GPL-2.0-only')
 groups=()
 depends=(glibc)
 makedepends=(libarchive)
@@ -19,7 +19,7 @@ provides=()
 conflicts=()
 replaces=()
 backup=()
-options=('!strip')
+options=()
 install=
 changelog=
 source=("${pkgname}-${pkgver/_/-}.tar.gz::${url}/archive/refs/tags/v${pkgver/_/+}.tar.gz")

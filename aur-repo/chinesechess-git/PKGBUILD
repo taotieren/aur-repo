@@ -8,7 +8,7 @@ pkgdesc="Cross-platform and online battle platform game based on Qt: Chinese Che
 arch=(aarch64
 	riscv64
 	x86_64)
-license=('GPL3')
+license=('GPL-3.0-only')
 _qt=qt5
 depends=(
   hicolor-icon-theme

@@ -7,7 +7,7 @@ pkgdesc="Open source can bus analyzer software - with support for CANable / CANa
 arch=(aarch64
 	riscv64
 	x86_64)
-license=('GPL')
+license=('GPL-2.0-only')
 depends=(
   libnl
   qt5-charts

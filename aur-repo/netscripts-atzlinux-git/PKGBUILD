@@ -11,8 +11,8 @@ makedepends=()
 optdepends=()
 conflicts=()
 url="https://www.atzlinux.com"
-license=('GPLv3')
-options=(!strip)
+license=('GPL-3.0-only')
+options=()
 install=${pkgname}.install
 source=("git+https://gitee.com/atzlinux/netscripts-atzlinux.git"
     "${pkgname}.install")

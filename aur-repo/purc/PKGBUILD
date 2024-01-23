@@ -12,7 +12,7 @@ arch=(x86_64
     powerpc
     powerpc64le)
 url="https://github.com/HVML/PurC"
-license=('LGPL-3.0')
+license=('LGPL-3.0-only')
 groups=(hvml
     hybridos2)
 provides=(${pkgname}
@@ -77,7 +77,7 @@ optdepends=('python-numpy: Scientific tools for Python'
     'xguipro: xGUI (the X Graphics User Interface) Pro is a modern, cross-platform, and advanced HVML renderer which is based on tailored WebKit.')
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/ver-${pkgver}.tar.gz")
 sha256sums=('2a7a9cf8e7161f4da1ee453b59f110b276eb01082b84fa5fb0031ced668de13b')
-options=('!strip')
+options=()
 
 build() {
     cd "${srcdir}/PurC-ver-${pkgver}/"
