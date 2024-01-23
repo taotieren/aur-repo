@@ -3,7 +3,7 @@
 pkgbase=un-lock-git
 pkgname=un-lock-git
 pkgver=1.4.7.r0.ge4bd8ff
-pkgrel=1
+pkgrel=2
 pkgdesc="un-lock developed to retrieve encryptData(token) for Xiaomi devices for unlocking bootloader"
 arch=(any)
 url="https://github.com/offici5l/un-lock"
