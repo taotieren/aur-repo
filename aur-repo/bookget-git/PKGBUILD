@@ -8,7 +8,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/deweizhu/bookget"
-license=('GPL-3.0')
+license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})

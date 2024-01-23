@@ -9,16 +9,17 @@ arch=(aarch64
     riscv64
     x86_64)
 url="https://github.com/canboat/canboat"
-license=('MIT')
+license=('Apache-2.0')
 groups=()
-depends=(glibc
-    libftdi
+depends=(bash
+    glibc
     perl
     php
     ksh)
 makedepends=(
 #     help2man
     git
+    libftdi
     libxml2
     libxslt
     python3
@@ -29,7 +30,7 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 backup=()
-options=('!strip')
+options=()
 install=
 changelog=
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
@@ -38,6 +39,7 @@ sha256sums=('b095726ec4d7225ff10d13bbf2c9df68b6f82067128892f50a9ca845a55882b2')
 #validpgpkeys=()
 
 build() {
+    export LDFLAGS="-z relro -z now -z shstk"
     cd "${srcdir}/${pkgname}-${pkgver}"
     make generated
 #     make
