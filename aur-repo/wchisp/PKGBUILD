@@ -2,7 +2,7 @@
 
 pkgname=wchisp
 pkgver=0.2.2
-pkgrel=11
+pkgrel=12
 pkgdesc="WCH ISP Tool in Rust"
 arch=(x86_64
     aarch64
