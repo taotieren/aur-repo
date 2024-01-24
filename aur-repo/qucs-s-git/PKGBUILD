@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=qucs-s-git
-pkgver=2.1.0.r136.gd3d80a00
-pkgrel=2
+pkgver=2.1.0.r140.g00ad40e2
+pkgrel=1
 epoch=
 pkgdesc="Qucs-S provides GUI for different circuit simulation kernels. "
 arch=('x86_64')
