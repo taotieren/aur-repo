@@ -3,10 +3,10 @@
 pkgbase=wch-bleuart
 pkgname=($pkgbase wch-bleuart-app wch-ble-lib wch-bleuart-guide)
 pkgver=1.2
-pkgrel=8
+pkgrel=9
 arch=('x86_64')
 url='http://www.mounriver.com/'
-license=('GPL-2.0-only' 'GPL-3.0-only' 'Custom')
+license=('GPL2' 'GPL3' 'Custom')
 provides=()
 conflicts=()
 depends=('bash')
