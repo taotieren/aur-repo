@@ -6,7 +6,7 @@ pkgrel=2
 pkgdesc="A cross platform local DNS server (Dnsmasq like) written in rust to obtain the fastest website IP for the best Internet experience, supports DoT, DoH. 一个用 Rust 编写的跨平台本地DNS服务器，获取最快的网站IP，获得最佳上网体验，支持DoH，DoT。"
 arch=('any')
 url="https://github.com/mokeyish/smartdns-rs"
-license=('MIT' 'Apache-2.0' 'GPL-3.0')
+license=('MIT' 'Apache-2.0' 'GPL-3.0-only')
 provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
@@ -15,7 +15,7 @@ depends=(cargo
 makedepends=(git
             rust)
 backup=()
-options=('!strip' '!lto')
+options=('!lto')
 install=
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')

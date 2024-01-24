@@ -12,14 +12,13 @@ license=(Apache-2.0)
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(cargo
-    systemd
+depends=(systemd
     procps-ng)
 makedepends=(git
-    rust)
+    cargo)
 optdepends=('iptables: Linux kernel packet control tool (using legacy interface)')
 backup=()
-options=('!strip' '!lto')
+options=('!lto')
 install=
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')

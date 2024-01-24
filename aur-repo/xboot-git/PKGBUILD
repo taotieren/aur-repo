@@ -16,7 +16,7 @@ depends=(sdl2
     libdrm)
 makedepends=(git)
 backup=()
-options=('!strip')
+options=()
 #install=${pkgname}.install
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')

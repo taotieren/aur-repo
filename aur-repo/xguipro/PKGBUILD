@@ -12,7 +12,7 @@ arch=(x86_64
     powerpc
     powerpc64le)
 url="https://github.com/HVML/xGUI-Pro"
-license=('LGPL-3.0')
+license=('LGPL-3.0-only')
 groups=(hvml
     hybridos2)
 provides=(${pkgbase}  'xGUI-Pro' 'run-xguipro')
@@ -55,7 +55,7 @@ makedepends=(
             )
 optdepends=('webkit2gtk-hvml: to support two HVML-specific attributes hvml-handle and hvml-events. This tailored WebKit engine provides support for two ports: GTK+ and HybridOS (MiniGUI).')
 backup=()
-options=('!strip')
+options=()
 install=
 source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/ver-${pkgver}.tar.gz"
 #         "001-fix.patch::https://github.com/HVML/xGUI-Pro/commit/a6e4022fa599e5e98d92d8d2feb56fe689e16f1a.patch"

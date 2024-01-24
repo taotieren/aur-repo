@@ -8,7 +8,7 @@ arch=(aarch64
     riscv64
     x86_64)
 url="https://github.com/mytechnotalent/turbo-attack"
-license=('Apache')
+license=('Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
@@ -19,7 +19,7 @@ makedepends=(git
     go)
 checkdepends=()
 backup=()
-options=('!strip')
+options=()
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')

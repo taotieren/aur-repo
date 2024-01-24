@@ -7,7 +7,7 @@ pkgver=1.2.3
 pkgrel=11
 pkgdesc="Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. Great alternative to TeamViewer and AnyDesk!"
 url="https://github.com/rustdesk/rustdesk"
-license=('GPL3')
+license=('AGPL-3.0-only')
 arch=('x86_64')
 provides=("${pkgname%-bin}")
 conflicts=("${pkgname%-bin}")
@@ -28,7 +28,7 @@ optdepends=(
     'libappindicator-gtk3: tray icon'
     'libayatana-appindicator: tray icon'
 )
-options=('!strip')
+options=()
 source=("${pkgbase%-bin}-${pkgver}-$CARCH.pkg.tar.zst::$url/releases/download/${pkgver}/rustdesk-${pkgver}-0-$CARCH.pkg.tar.zst")
 sha256sums=('SKIP')
 
