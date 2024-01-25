@@ -27,7 +27,7 @@ set -u
 _pkgname='rustdesk'
 pkgname="${_pkgname}"
 pkgname+="-git"
-pkgver=1.2.4.r876.g9f40a0b49
+pkgver=1.2.4.r878.g0d8e3dc24
 pkgrel=1
 pkgdesc='Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. Great alternative to TeamViewer and AnyDesk!'
 arch=('x86_64')
