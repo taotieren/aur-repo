@@ -2,8 +2,8 @@
 
 pkgbase=bcu-git
 pkgname=bcu-git
-pkgver=1.1.75.r2.g9becd27
-pkgrel=5
+pkgver=1.1.75.r3.g9e546da
+pkgrel=1
 epoch=
 pkgdesc="bcu (Board Control Utilities)"
 arch=('x86_64' 'aarch64')
