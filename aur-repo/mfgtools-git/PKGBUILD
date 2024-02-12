@@ -2,7 +2,7 @@
 
 pkgbase=mfgtools-git
 pkgname=(mfgtools{,-doc}-git)
-pkgver=1.5.165.r0.g7347a80
+pkgver=1.5.165.r3.g9fbad5e
 pkgrel=1
 epoch=
 pkgdesc="uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools."
