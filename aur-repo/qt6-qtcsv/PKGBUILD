@@ -2,7 +2,7 @@
 
 pkgname=qt6-qtcsv
 pkgver=1.7
-pkgrel=0
+pkgrel=1
 pkgdesc="Library for reading and writing csv-files in Qt."
 arch=(aarch64
     riscv64
