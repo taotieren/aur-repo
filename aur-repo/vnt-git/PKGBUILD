@@ -12,8 +12,9 @@ license=(Apache-2.0)
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(systemd
-    procps-ng)
+depends=(
+    gcc-libs
+    glibc)
 makedepends=(git
     cargo)
 optdepends=('iptables: Linux kernel packet control tool (using legacy interface)')
