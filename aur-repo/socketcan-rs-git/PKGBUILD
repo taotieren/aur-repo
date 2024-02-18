@@ -12,8 +12,11 @@ license=('MIT')
 provides=(${pkgname%-git} rcan)
 conflicts=(${pkgname%-git} rcan)
 replaces=()
-depends=(cargo)
-makedepends=(git
+depends=(gcc-libs
+    glibc)
+makedepends=(
+    cargo
+    git
     mold)
 checkdepends=()
 backup=()
