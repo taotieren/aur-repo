@@ -1,6 +1,6 @@
 pkgname=pandoc-bin
 pkgver=3.1.11.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Pandoc - executable only, without 750MB Haskell depends/makedepends"
 url="https://pandoc.org"
 license=("GPL2")
