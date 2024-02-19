@@ -11,6 +11,18 @@ arch=(x86_64)
 depends=(pciutils)
 optdepends=("python: me_cleaner support")
 makedepends=(git)
+provides=(
+  'cbfstool'
+  'cbmem'
+  'ectool'
+  'ifdtool'
+  'intelmetool'
+  'intelp2m'
+  'inteltool'
+  'intelvbttool'
+  'nvramtool'
+  'superiotool'
+)
 source=(git+https://review.coreboot.org/coreboot.git
         git+https://review.coreboot.org/blobs.git
         git+https://review.coreboot.org/nvidia-cbootimage.git

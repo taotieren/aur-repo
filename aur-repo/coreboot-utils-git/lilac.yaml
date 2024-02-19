@@ -1,10 +1,23 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['anatolik', 'mytbk'])
+# pre_build_script: aur_pre_build(maintainers=['anatolik', 'mytbk'])
+#
+# post_build: aur_post_build
+#
+# update_on:
+#   - source: aur
+#     github: coreboot-utils-git
 
-post_build: aur_post_build
+build_prefix: extra-x86_64
+
+pre_build: vcs_update
+
+post_build_script: |
+  git_pkgbuild_commit()
 
 update_on:
-  - source: aur
-    github: coreboot-utils-git
+  - source: git
+    git: https://review.coreboot.org/coreboot.git
+    branch: master
+    use_commit: true
