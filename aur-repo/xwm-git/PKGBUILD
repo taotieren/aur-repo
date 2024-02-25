@@ -2,7 +2,7 @@
 
 pkgbase=xwm-git
 pkgname=xwm-git
-pkgver=1.0.0beta1.r18.g4d45ae1
+pkgver=1.0.0beta1.r29.gb9dc441
 pkgrel=1
 pkgdesc="XWM (X light Window Manager) XWM is a light-weight window manager forked from jwm for the X11 Window System."
 arch=(
@@ -70,12 +70,13 @@ build() {
         --enable-nls \
         --prefix=/usr \
         --sysconfdir=/etc
+
     make
+    make update-po
+    make update-gmo
 }
 
 package() {
     cd "${srcdir}/${pkgname}"
     make DESTDIR="$pkgdir" install
-    install -Dm0644 data/${pkgname%-git}.desktop -t ${pkgdir}/usr/share/applications/
-    install -Dm0755 data/autostart -t ${pkgdir}/etc/xdg/xwm/
 }
