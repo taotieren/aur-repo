@@ -71,9 +71,9 @@ build() {
         --prefix=/usr \
         --sysconfdir=/etc
 
-    make
     make update-po
     make update-gmo
+    make
 }
 
 package() {
