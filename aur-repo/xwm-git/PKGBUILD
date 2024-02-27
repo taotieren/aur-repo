@@ -36,7 +36,10 @@ makedepends=(
     coreutils
     gettext
     git
-    sed)
+    icu
+    m4
+    sed
+    pkgconf)
 checkdepends=()
 optdepends=(
     'gnome-terminal: The GNOME Terminal Emulator'
@@ -61,10 +64,10 @@ prepare()
 }
 
 build() {
-    export AUTOMAKE=true
     cd "${srcdir}/${pkgname}"
 
     autoupdate
+    sed -i 's/0.19/0.20/g' configure.ac
     ./autogen.sh
     ./configure \
         --enable-nls \
