@@ -36,7 +36,6 @@ makedepends=(
     coreutils
     gettext
     git
-    icu
     m4
     sed
     pkgconf)
