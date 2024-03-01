@@ -2,7 +2,7 @@
 
 pkgname=proj2cmake-git
 pkgver=r19.22a7e6b
-pkgrel=1
+pkgrel=2
 pkgdesc="Convert an entire Visual Studio solution and all contained projects to CMake."
 arch=('x86_64'
     'aarch64'
