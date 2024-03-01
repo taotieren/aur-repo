@@ -12,8 +12,14 @@ license=('GPL-2.0-only')
 provides=(${pkgname})
 conflicts=(${pkgname}-git)
 replaces=()
-depends=('cargo')
-makedepends=('git' 'rust')
+depends=(
+    gcc-libs
+    glibc
+    libusb
+    systemd-libs)
+makedepends=(
+    cargo
+    rust)
 backup=()
 options=('!lto')
 install=
