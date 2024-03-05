@@ -2,7 +2,7 @@
 
 pkgname=kicad-allegro
 pkgver=r9.4968f13
-pkgrel=1
+pkgrel=2
 pkgdesc="Converter from Allegro to KiCad, and Allegro extract viewer "
 arch=('aarch64'
     'riscv64'
