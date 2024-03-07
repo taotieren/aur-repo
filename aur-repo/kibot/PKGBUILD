@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=kibot
-pkgver=1.6.4
-pkgrel=0
+pkgver=1.6.4.r3.ge86f6c5
+pkgrel=1
 epoch=
 pkgdesc="KiCad automation utility"
 arch=('any')
@@ -40,7 +40,11 @@ depends=(
     python-yaml
     xorg-server-xvfb
     )
-makedepends=("python-setuptools")
+makedepends=('python-build'
+    'python-installer'
+    'python-setuptools'
+    'python-wheel'
+    'git')
 checkdepends=(python-pytest)
 optdepends=('kicad-interactivehtmlbom: Interactive HTML BOM generation plugin for KiCad'
     'kicad-library: KiCad symbol, footprint and template libraries'
@@ -52,12 +56,31 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git")
 noextract=()
-sha256sums=('694bd371db6535ce3181f076082573aab3ca74d0e8b9f96acd427d9fa8611059')
+sha256sums=('SKIP')
 #validpgpkeys=()
 
+pkgver() {
+    cd "${srcdir}/${pkgname}"
+    ( set -o pipefail
+        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    )
+}
+
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
+build() {
+    cd "${srcdir}/${pkgname}"
+    python -m build --wheel --no-isolation
+}
+
 package() {
-    cd "${srcdir}/KiBot-${pkgver}"
-    python setup.py install --no-compile --root="$pkgdir"
+    cd "${srcdir}/${pkgname}"
+    # python setup.py install --no-compile --root="$pkgdir"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
 }
