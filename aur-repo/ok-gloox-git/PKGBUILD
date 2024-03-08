@@ -8,7 +8,7 @@ arch=(x86_64
     aarch64
     riscv64)
 pkgdesc="OkStar - OkGloox 对Gloox的拓展，上游主页：https://camaya.net/gloox"
-_url="https://gitee.com/okstar-org"
+_url="https://github.com/okstar-org"
 url="${_url}/ok-gloox"
 groups=()
 provides=(${pkgname%-git})

@@ -10,7 +10,5 @@ post_build_script: |
   update_aur_repo()
 
 update_on:
-  - source: git
-    git: https://gitee.com/okstar-org/ok-gloox.git
-    branch: main
-    use_commit: true
+  - source: github
+    github: okstar-org/ok-gloox
