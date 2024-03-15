@@ -1,0 +1,10 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='7ji')
+
+post_build_script: aur_post_build
+
+update_on:
+  - source: aur
+    aur: wechat-universal-bwrap
