@@ -23,4 +23,6 @@ repo_depends:
 update_on:
   - source: github
     github: INTI-CMNB/KiBot
+    use_latest_release: true
+    prefix: v
   - alias: python
