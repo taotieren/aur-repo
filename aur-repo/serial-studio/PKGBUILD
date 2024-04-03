@@ -53,7 +53,6 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "$srcdir/${pkgname}"
-    git checkout -b v$pkgver v$pkgver
     git submodule init
     git config submodule.libs/QSimpleUpdater.url "$srcdir/QSimpleUpdater"
     git config submodule.libs/qtcsv.url "$srcdir/qtcsv"
