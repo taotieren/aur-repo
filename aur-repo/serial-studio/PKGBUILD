@@ -2,8 +2,8 @@
 
 pkgname=serial-studio
 _pkgname=Serial-Studio
-pkgver=2.0.0
-pkgrel=0
+pkgver=continuous.r0.gd4f7fbc
+pkgrel=1
 pkgdesc="Multi-purpose serial data visualization & processing program"
 arch=('x86_64'
     'aarch64'
