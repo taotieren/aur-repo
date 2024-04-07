@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=kibot
-pkgver=1.6.4.r3.ge86f6c5
+pkgver=1.6.5
 pkgrel=1
 epoch=
 pkgdesc="KiCad automation utility"
@@ -56,31 +56,18 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}::git+${url}.git")
+source=("KiBot-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 noextract=()
-sha256sums=('SKIP')
+sha256sums=('acc6dab74d446bf5bb7444a9fef34cb31ea231a92ef5f3aa6c17b3ded38ace89')
 #validpgpkeys=()
 
-pkgver() {
-    cd "${srcdir}/${pkgname}"
-    ( set -o pipefail
-        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
-    )
-}
-
-prepare()
-{
-    git -C "${srcdir}/${pkgname}" clean -dfx
-}
-
 build() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/KiBot-${pkgver}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/KiBot-${pkgver}"
     # python setup.py install --no-compile --root="$pkgdir"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
