@@ -23,15 +23,11 @@ makedepends=(git
 backup=()
 options=()
 install=
-source=("${pkgname}::git+https://gitee.com/taotieren/${_pkgname}.git"
-#     "${pkgname}::git+https://gitee.com/gxchip/${_pkgname}.git"
-)
+source=("${pkgname}::git+https://gitee.com/gxchip/${_pkgname}.git")
 sha256sums=('SKIP')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    git checkout archlinux
 }
 
 pkgver() {
