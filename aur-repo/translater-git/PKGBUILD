@@ -2,7 +2,7 @@
 
 pkgname=translater-git
 pkgver=0.6.2.r1.gb3ea816
-pkgrel=1
+pkgrel=2
 pkgdesc="command line translate tools, Use headless firefox internally, support Linux/Mac for now."
 arch=(x86_64
     aarch64
