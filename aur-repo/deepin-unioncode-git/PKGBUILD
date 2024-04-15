@@ -68,7 +68,7 @@ checkdepends=()
 optdepends=()
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
-options=()
+options=('!strip')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
