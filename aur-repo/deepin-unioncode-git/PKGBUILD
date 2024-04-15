@@ -2,7 +2,7 @@
 
 pkgbase=deepin-unioncode-git
 pkgname=deepin-unioncode-git
-pkgver=1.2.9.r17.g4c04ccfd
+pkgver=1.2.9.r90.g24d1ace1
 pkgrel=1
 pkgdesc="IDE authored by deepin"
 arch=(x86_64
@@ -47,6 +47,7 @@ makedepends=(
     lxqt-build-tools
     qt5-tools
     qt5-script
+    qt5-webengine
     openssl
     systemd
     syntax-highlighting5
