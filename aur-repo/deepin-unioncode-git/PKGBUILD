@@ -84,7 +84,7 @@ prepare()
 }
 
 build() {
-    export LDFLAGS="-Wl,--no-as-needed"
+    export LDFLAGS="-Wl,-z,relro,-z,now -Wl,-z,shstk -Wl,--no-as-needed"
     cd "${srcdir}/${pkgname}"
 
 # See：https://wiki.archlinux.org/title/CMake_package_guidelines
