@@ -1,5 +1,0 @@
-[python-plotly]
-source = "github"
-github = "plotly/plotly.py"
-prefix = "v"
-use_latest_release = true
