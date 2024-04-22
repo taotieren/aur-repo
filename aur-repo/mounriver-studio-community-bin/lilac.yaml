@@ -13,4 +13,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: "http://www.mounriver.com/download"
-    regex: 'MounRiver_Studio_Community_Linux_x64_V(\d+).tar.xz'
+    regex: 'MounRiver_Studio_Community_Linux_x64_V(\d+)'
