@@ -2,7 +2,7 @@
 
 pkgbase=mounriver-studio-community-bin
 pkgname=(${pkgbase})
-pkgver=160
+pkgver=170
 pkgrel=1
 arch=('x86_64')
 url='http://www.mounriver.com/'
@@ -20,7 +20,7 @@ optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     'ch343ser-dkms: USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch9103/ch9104, etc (dkms).'
     'wchisp: WCH ISP Tool in Rust')
 source=("${pkgbase}-${pkgver}.tar.xz::http://file.mounriver.com/upgrade/MounRiver_Studio_Community_Linux_x64_V${pkgver}.tar.xz")
-sha256sums=('ea0c0a896dbfdcb5db5f013a91aa6ad800ad3d622b24f296251a43f0e7b8d172')
+sha256sums=('e1c5a2b61e21f4b9a696a37f95aaeb6ccc97b276b88a691400cf9da4d621efb0')
 options=('!strip')
 noextract=(${pkgbase}-${pkgver}.tar.xz)
 
