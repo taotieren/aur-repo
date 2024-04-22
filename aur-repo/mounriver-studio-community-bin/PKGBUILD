@@ -24,13 +24,14 @@ sha256sums=('ea0c0a896dbfdcb5db5f013a91aa6ad800ad3d622b24f296251a43f0e7b8d172')
 options=('!strip')
 noextract=(${pkgbase}-${pkgver}.tar.xz)
 
+export LC_CTYPE="zh_CN.UTF-8"
+
 prepare() {
     tar -xf "${srcdir}/${pkgbase}-${pkgver}.tar.xz" --strip-components=1 -C "${srcdir}/"
     find MRS_Community -perm 600 -exec chmod 644 {} \;
 }
 
 package_mounriver-studio-community-bin() {
-    export LC_CTYPE="zh_CN.UTF-8"
     pkgdesc="为 Eclipse 平台爱好者提供的一款 RISC-V 内核芯片集成开发环境，支持 WCH 系列 MCU 的工程模板、代码编译、下载、调试等功能。 "
     depends=('bash'
              'libftdi-compat'
