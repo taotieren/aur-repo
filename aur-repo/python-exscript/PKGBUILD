@@ -3,7 +3,7 @@
 _basename=exscript
 pkgname="python-${_basename}"
 pkgver=2.6.30
-pkgrel=4
+pkgrel=5
 pkgdesc="A Python module making Telnet and SSH easy "
 arch=('any')
 url="https://github.com/knipknap/exscript"
