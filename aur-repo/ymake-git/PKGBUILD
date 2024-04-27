@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 pkgname=ymake-git
 pkgver=0.7.2.16.g90f0154
-pkgrel=1
+pkgrel=2
 pkgdesc="ymake"
 arch=('any')
 url="https://github.com/evilbinary/ymake"
