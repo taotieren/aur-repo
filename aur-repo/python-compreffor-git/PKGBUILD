@@ -2,7 +2,7 @@
 
 pkgname=python-compreffor-git
 pkgver=0.5.5.r0.g639877c
-pkgrel=7
+pkgrel=8
 pkgdesc='A CFF table subroutinizer for FontTools'
 url='https://github.com/googlefonts/compreffor'
 license=('Apache-2.0')
