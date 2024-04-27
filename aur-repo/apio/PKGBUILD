@@ -1,7 +1,7 @@
 pkgname=apio
 _name=apio
 pkgver=0.8.4
-pkgrel=4
+pkgrel=5
 pkgdesc="Experimental micro-ecosystem for open FPGAs"
 arch=('any')
 url="https://pypi.org/project/apio/"
