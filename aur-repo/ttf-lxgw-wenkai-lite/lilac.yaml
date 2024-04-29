@@ -13,5 +13,5 @@ post_build_script: |
 update_on:
   - source: github
     github: lxgw/LxgwWenKai-Lite
-    use_max_tag: true
+    use_latest_release: true
     prefix: v
