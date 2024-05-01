@@ -14,7 +14,6 @@ repo_depends:
   - python-openstep-plist-git
   - python-ufo2ft-git
   - python-ufonormalizer
-  - python-xmldiff-git
 
 update_on:
   - source: github
