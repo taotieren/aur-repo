@@ -3,8 +3,8 @@
 
 pkgname=candevstudio-git
 _pkgbasename=candevstudio
-pkgver=r329.3b51e481
-pkgrel=3
+pkgver=r331.c7fb2a86
+pkgrel=1
 pkgdesc="Development tool for CAN bus simulation"
 arch=('i686' 'x86_64')
 url="https://github.com/GENIVI/CANdevStudio"
