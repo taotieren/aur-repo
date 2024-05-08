@@ -2,7 +2,7 @@
 
 pkgname=libdft-git
 pkgver=r80.066c9d8
-pkgrel=1
+pkgrel=2
 pkgdesc="libdft: Practical Dynamic Data Flow Tracking"
 arch=(x86_64)
 url="https://github.com/AngoraFuzzer/libdft64"
