@@ -15,4 +15,6 @@ update_on:
     github: cloud-fs/cloud-fs.github.io
     use_max_release: true
     prefix: v
+  - source: aur
+    github: clouddrive
 
