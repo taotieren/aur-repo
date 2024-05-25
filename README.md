@@ -28,3 +28,15 @@ Add and trust my GPG key in pacman keyring:
 sudo pacman-key --recv-keys FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 sudo pacman-key --lsign-key FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 ```
+
+rsync
+
+```bash
+# Only IPv4
+rsync rsync://home.taotieren.com
+rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://home.taotieren.com/aur-repo /opt/sync/aur-repo
+
+# Only IPv6
+rsync rsync://home.taotieren.com
+rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
+```
