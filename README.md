@@ -14,12 +14,17 @@ Add the following lines to `/etc/pacman.conf`:
 
 ```ini
 [aur-repo]
+# IPv4 & IPv6
+Server = https://fun.ie8.pub:2443/$arch
+Server = http://fun.ie8.pub:2442/$arch
+
 # Only IPv4
 Server = http://home.taotieren.com:12380/$arch
 
 # Only IPv6
 Server = https://aur-repo.taotieren.com:3443/$arch
 Server = http://aur-repo.taotieren.com:12380/$arch
+
 ```
 
 Add and trust my GPG key in pacman keyring:
