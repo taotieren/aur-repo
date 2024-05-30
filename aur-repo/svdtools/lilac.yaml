@@ -13,4 +13,5 @@ post_build_script: |
 update_on:
   - source: github
     github: rust-embedded/svdtools
+    use_latest_release: true
     prefix: v
