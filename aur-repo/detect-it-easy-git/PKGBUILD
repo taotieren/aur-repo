@@ -1,7 +1,7 @@
 # Maintainer: Arnaud Dovi <mr.dovi@gmail.com>
 
 pkgname=detect-it-easy-git
-pkgver=3.06
+pkgver=3.09.r1336.6591614c
 pkgrel=1
 pkgdesc='Detect It Easy, or abbreviated "DIE" is a program for determining types of files'
 arch=('x86_64')
@@ -94,7 +94,7 @@ package() {
   echo -e "${_prefix}Copying the package files"
   install -Dm 644 gui_source/translation/* -t "$pkgdir"/opt/"${_pkgname}"/lang
   install -Dm 644 XStyles/qss/* -t "$pkgdir"/opt/"${_pkgname}"/qss
-  cp -r Detect-It-Easy/info/* -t "$pkgdir"/opt/"${_pkgname}"/info
+  cp -r XInfoDB/info/* -t "$pkgdir"/opt/"${_pkgname}"/info/
   cp -r Detect-It-Easy/db/* -t "$pkgdir"/opt/"${_pkgname}"/db/
   install -Dm 644 signatures/crypto.db -t "$pkgdir"/opt/"${_pkgname}"/signatures
   cp -r images/* -t "$pkgdir"/opt/"${_pkgname}"/images/
