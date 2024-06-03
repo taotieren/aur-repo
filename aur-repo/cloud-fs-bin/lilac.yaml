@@ -16,5 +16,5 @@ update_on:
     use_latest_release: true
     prefix: v
   - source: aur
-    github: clouddrive
+    aur: clouddrive
 
