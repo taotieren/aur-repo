@@ -2,7 +2,7 @@
 
 pkgname=vtable-dumper
 pkgver=1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="A tool to list content of virtual tables in a C++ shared library."
 arch=('i686' 'x86_64')
 url="https://github.com/lvc/vtable-dumper"
