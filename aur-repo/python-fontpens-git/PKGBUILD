@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-fontpens-git
-pkgver=0.2.4.r14.gd8d26fe
-pkgrel=8
+pkgver=0.2.4.r16.g9110aee
+pkgrel=1
 pkgdesc='A collection of classes implementing the pen protocol for manipulating glyphs.'
 url='https://github.com/robotools/fontpens'
 license=('BSD')
