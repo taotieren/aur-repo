@@ -4,7 +4,7 @@
 pkgname=edrawmax-cn
 _pkgname=EdrawMax-13
 pkgver=13.0.0
-pkgrel=8
+pkgrel=9
 arch=('x86_64')
 options=(!strip)
 conflicts=("edrawmax")
