@@ -2,7 +2,7 @@
 
 pkgname=n-m3u8dl-re-bin
 pkgver=0.2.0_beta
-pkgrel=8
+pkgrel=9
 epoch=
 pkgdesc="Cross-Platform, beautiful and powerful stream downloader for DASH/HLS. "
 arch=('x86_64')
