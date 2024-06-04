@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=vnt-git
-pkgver=1.2.8.2.r7.ge64e172
-pkgrel=2
+pkgver=1.2.10.2.r8.ge36e450
+pkgrel=1
 pkgdesc="A virtual network tool (or VPN),简便高效的异地组网、内网穿透工具"
 arch=(x86_64
     aarch64
