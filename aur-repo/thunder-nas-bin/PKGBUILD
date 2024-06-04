@@ -2,7 +2,7 @@
 
 pkgname=thunder-nas-bin
 pkgver=1.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Synology NAS thunder run on Linux"
 arch=(aarch64
     x86_64)
