@@ -2,8 +2,8 @@
 # Contributor: Sebastian Bøe <sebastianbooe@gmail.com>
 
 pkgname=icestorm-git
-pkgver=r822.1a40ae7
-pkgrel=2
+pkgver=r829.c23e99c
+pkgrel=1
 pkgdesc="Lattice iCE40 FPGAs Bitstream Documentation (Reverse Engineered)"
 arch=(x86_64)
 url="https://github.com/YosysHQ/icestorm"
