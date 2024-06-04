@@ -1,17 +1,20 @@
-# Colored makepkg-like functions
-
-note() {
-    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
-}
-
 all_off="$(tput sgr0)"
 bold="${all_off}$(tput bold)"
 blue="${bold}$(tput setaf 4)"
 yellow="${bold}$(tput setaf 3)"
 
 post_install() {
-    note "要传递给 electron 的自定义参数应该写在: ~/.config/qq-electron-flags.conf"
-    note "如果要在 QQ 中下载文件，请先在「设置」->「存储管理」中把下载文件夹更改为系统的“下载”/“Downloads”文件夹。"
+    printf "${yellow}==== linuxqq-nt-bwrap 注意事项 ====${all_off}\n"
+    printf "${blue}==>${all_off} 要传递给 bwrap 的自定义参数应该写在 ${bold}~/.config/qq-bwrap-flags.conf${all_off}，\n"
+    printf "    可在此文件中设置自定义挂载目录。\n"
+    printf "${blue}==>${all_off} 要传递给 electron 的自定义参数应该写在 ${bold}~/.config/qq-electron-flags.conf${all_off}。\n"
+    printf "${blue}==>${all_off} 如果要在 QQ 中下载文件，请先在 设置 -> 存储管理 中\n"
+    printf "    把下载文件夹更改为系统的${bold}“下载”/“Downloads”${all_Off}文件夹。\n"
+    printf "${blue}==>${all_off} 如果系统中安装了 Docker / ZeroTier / Tailscale 或配置了 TUN / TAP 网络设备，\n"
+    printf "    则可以使用${bold}固定 MAC 地址模式${all_off}启动 QQ 以修复自动登录问题。\n"
+    printf "    当系统有上述网络设备时，安装 ${bold}slirp4netns${all_off} 和 ${bold}socat${all_off} 包再启动 QQ 即可使用此模式。\n"
+    printf "    如果未安装上述网络设备，你也可以在 ${bold}~/.config/qq-fix-mac.conf${all_off} 中写入任意内容，\n"
+    printf "    或设置 ${bold}QQ_FIX_MAC${all_off} 环境变量为 ${bold}1${all_off} 来手动启用此模式。\n"
 }
 
 post_upgrade() {
