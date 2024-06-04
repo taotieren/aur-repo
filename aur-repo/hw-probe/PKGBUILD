@@ -6,7 +6,7 @@
 
 pkgname=hw-probe
 pkgver=1.6.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Probe for hardware, check its operability and upload result to https://linux-hardware.org"
 arch=('any')
 url="https://github.com/linuxhw/hw-probe"
