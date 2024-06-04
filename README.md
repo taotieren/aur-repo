@@ -15,15 +15,15 @@ Add the following lines to `/etc/pacman.conf`:
 ```ini
 [aur-repo]
 # IPv4 & IPv6
-Server = https://fun.ie8.pub:2443/$arch
-Server = http://fun.ie8.pub:2442/$arch
+Server = https://fun.ie8.pub:2443/aur-repo/$arch
+Server = http://fun.ie8.pub:2442/aur-repo/$arch
 
 # Only IPv4
-Server = http://home.taotieren.com:12380/$arch
+Server = http://home.taotieren.com:12380/aur-repo/$arch
 
 # Only IPv6
-Server = https://aur-repo.taotieren.com:3443/$arch
-Server = http://aur-repo.taotieren.com:12380/$arch
+Server = https://aur-repo.taotieren.com:3443/aur-repo/$arch
+Server = http://aur-repo.taotieren.com:12380/aur-repo/$arch
 
 ```
 
