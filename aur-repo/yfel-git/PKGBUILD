@@ -2,7 +2,7 @@
 
 pkgname=yfel-git
 pkgver=r327.f643e1e
-pkgrel=8
+pkgrel=9
 pkgdesc="Yet another Allwinner FEL Toolkit"
 arch=(x86_64
     aarch64
