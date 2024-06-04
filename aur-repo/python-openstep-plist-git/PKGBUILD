@@ -2,7 +2,7 @@
 
 pkgname=python-openstep-plist-git
 pkgver=0.3.1.r3.g4f8a953
-pkgrel=8
+pkgrel=9
 pkgdesc='OpenStep plist parser and writer written in Cython'
 url='https://github.com/fonttools/openstep-plist'
 license=('MIT')
