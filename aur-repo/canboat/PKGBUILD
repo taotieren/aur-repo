@@ -39,7 +39,7 @@ sha256sums=('b095726ec4d7225ff10d13bbf2c9df68b6f82067128892f50a9ca845a55882b2')
 #validpgpkeys=()
 
 build() {
-    export LDFLAGS="-z relro -z now -z shstk"
+#     export LDFLAGS="-z relro -z now -z shstk"
     cd "${srcdir}/${pkgname}-${pkgver}"
     make generated
 #     make
