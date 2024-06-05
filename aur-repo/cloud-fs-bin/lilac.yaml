@@ -4,7 +4,7 @@ maintainers:
 build_prefix: extra-x86_64
 
 pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
+  update_pkgver_and_pkgrel(_G.newver.lstrip('V'))
 
 post_build_script: |
   git_pkgbuild_commit()
@@ -14,7 +14,6 @@ update_on:
   - source: github
     github: cloud-fs/cloud-fs.github.io
     use_latest_release: true
-    prefix: V
   - source: aur
     aur: clouddrive
 
