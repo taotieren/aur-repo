@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['yochananmarqos'])
+pre_build_script: aur_pre_build(maintainers='qubidt')
 
 post_build: aur_post_build
 
