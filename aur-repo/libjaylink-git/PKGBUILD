@@ -45,6 +45,6 @@ check() {
 package() {
 	meson install -C build --destdir "$pkgdir"
 
-	sed -i 's|plugdev|uucp|g' ${srcdir}/${_pkg}/contrib/99-libjaylink.rules
-	install -Dm644 ${srcdir}/${_pkg}/contrib/99-libjaylink.rules -t "${pkgdir}/usr/lib/udev/rules.d/"
+	sed -i 's|plugdev|uucp|g' ${srcdir}/${_pkg}/contrib/60-libjaylink.rules
+	install -Dm644 ${srcdir}/${_pkg}/contrib/60-libjaylink.rules -t "${pkgdir}/usr/lib/udev/rules.d/"
 }
