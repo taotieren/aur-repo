@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['muflone'])
+pre_build_script: aur_pre_build(maintainers='Muflone')
 
 post_build_script: aur_post_build
 
