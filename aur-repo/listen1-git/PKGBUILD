@@ -30,7 +30,7 @@ build() {
 }
 
 package() {
-
+	cd "${srcdir}"
 	gendesk -f -n --icon "listen1" --categories "Utility" --name "${pkgname%-git}" --exec "electron /opt/${pkgname%-git}/"
 	install -Dm644 "${srcdir}/${pkgname%-git}.desktop" -t "${pkgdir}/usr/share/applications"
 
