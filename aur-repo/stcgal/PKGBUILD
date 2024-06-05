@@ -2,7 +2,7 @@
 
 pkgname=stcgal
 pkgver=1.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Open Source STC MCU ISP flash tool"
 arch=('any')
 url="https://github.com/grigorig/stcgal"
