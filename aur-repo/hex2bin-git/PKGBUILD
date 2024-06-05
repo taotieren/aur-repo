@@ -16,8 +16,9 @@ depends=(glibc
     gcc-libs)
 makedepends=(git
 	cmake
-	ninja)
-checkdepends=(python)
+	ninja
+	python)
+checkdepends=()
 source=("$pkgname::git+${url}.git")
 md5sums=('SKIP')
 
@@ -31,7 +32,7 @@ pkgver() {
 
 build() {
 	cd "$srcdir/$pkgname"
-    cmake -DDISTRIBUTION==release \
+    cmake -DDISTRIBUTION=release \
         -DCMAKE_BUILD_TYPE=release \
         -DDEFSTART=0 \
         -DDEFLIMIT=0 \
