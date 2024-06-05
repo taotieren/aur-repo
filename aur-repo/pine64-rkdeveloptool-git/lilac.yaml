@@ -3,6 +3,9 @@ maintainers:
 
 pre_build_script: aur_pre_build(maintainers=['dcreager'])
 
+repo_depends:
+  - cmake
+
 post_build_script: aur_post_build
 
 update_on:
