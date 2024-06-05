@@ -2,7 +2,7 @@
 
 pkgname=serial-studio
 _pkgname=Serial-Studio
-pkgver=continuous.r0.gd4f7fbc
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="Multi-purpose serial data visualization & processing program"
 arch=('x86_64'
@@ -21,6 +21,7 @@ depends=(gcc-libs
     $_qt-serialport)
 makedepends=(git
     $_qt-charts
+    $_qt-location
     $_qt-quickcontrols2
     $_qt-svg
     $_qt-tools)
@@ -42,17 +43,10 @@ sha256sums=('SKIP'
             'SKIP')
 noextract=()
 
-pkgver() {
-    cd "${srcdir}/${pkgname}"
-    ( set -o pipefail
-        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
-    )
-}
-
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "$srcdir/${pkgname}"
+    git checkout -b v$pkgver v$pkgver
     git submodule init
     git config submodule.libs/QSimpleUpdater.url "$srcdir/QSimpleUpdater"
     git config submodule.libs/qtcsv.url "$srcdir/qtcsv"
@@ -63,7 +57,7 @@ prepare() {
 
 build() {
     cd "$srcdir/${pkgname}"
-    qmake6 ./${_pkgname}.pro CONFIG+=[release]
+    qmake6 ${_pkgname}.pro CONFIG+=[release]
     make -j$(nproc)
 }
 
