@@ -13,8 +13,8 @@ post_build_script: |
 update_on:
   - source: github
     github: cloud-fs/cloud-fs.github.io
-    use_max_tag: true
-    prefix: v
+    use_latest_release: true
+    prefix: V
   - source: aur
     aur: clouddrive
 
