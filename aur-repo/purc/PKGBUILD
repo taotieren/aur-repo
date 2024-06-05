@@ -30,8 +30,7 @@ conflicts=(${pkgname})
 replaces=(domruler
     purc-fetcher)
 depends=(glib2
-    glibc
-    python)
+    glibc)
 makedepends=(
 #     avahi
 #     nss-mdns
@@ -61,12 +60,15 @@ makedepends=(
     libxml2
     libxslt
     libsoup3
+    linux-api-headers
     icu
 #     libmariadbclient
     openssl
     sqlite
     systemd
     pkgconf
+    python
+    xorgproto
     zlib)
 checkdepends=(check
     gtest

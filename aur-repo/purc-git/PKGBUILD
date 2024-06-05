@@ -57,6 +57,7 @@ makedepends=(
     libxml2
     libxslt
     libsoup3
+    linux-api-headers
     icu
 #     libmariadbclient
     openssl
@@ -64,6 +65,7 @@ makedepends=(
     systemd
     pkgconf
     python
+    xorgproto
     zlib)
 checkdepends=(check
     gtest
