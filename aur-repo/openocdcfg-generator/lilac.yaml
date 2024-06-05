@@ -16,6 +16,6 @@ repo_depends:
 update_on:
   - source: github
     github: sifive/openocdcfg-generator
-    use_max_tag: true
+    use_latest_release: true
     prefix: v
   - alias: python
