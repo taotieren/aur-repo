@@ -15,7 +15,7 @@ pkgname=(
     icesugar-pro-doc-git
     )
 pkgver=1.1a.r27.g2abb4c7
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="iCESugar FPGA Board (base on iCE40UP5k) "
 arch=(x86_64
