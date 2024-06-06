@@ -1,20 +1,32 @@
+# maintainers:
+#   - github: taotieren
+#
+# build_prefix: extra-x86_64
+#
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+#
+# post_build_script: |
+#   git_pkgbuild_commit()
+#   update_aur_repo()
+#
+# update_on:
+#   - source: github
+#     github: cloud-fs/cloud-fs.github.io
+#     use_latest_release: true
+#     prefix: v
+
 maintainers:
   - github: taotieren
 
 build_prefix: extra-x86_64
 
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
+pre_build: aur_pre_build
 
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+pre_build_script: aur_pre_build(maintainers=['taotieren'])
+
+post_build: aur_post_build
 
 update_on:
-  - source: github
-    github: cloud-fs/cloud-fs.github.io
-    use_latest_release: true
-    prefix: v
   - source: aur
     aur: clouddrive
-
