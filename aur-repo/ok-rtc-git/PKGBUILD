@@ -2,8 +2,8 @@
 
 pkgbase=ok-rtc-git
 pkgname=ok-rtc-git
-pkgver=r400.1e34330
-pkgrel=4
+pkgver=r401.83cd2cf
+pkgrel=1
 arch=(x86_64
     aarch64
     riscv64)
