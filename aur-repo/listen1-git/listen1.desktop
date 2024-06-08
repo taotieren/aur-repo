@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=listen1
+Comment=PKGBUILD
+Exec=electron /opt/listen1/
+Icon=listen1
+Terminal=false
+StartupNotify=false
+Categories=Utility;
