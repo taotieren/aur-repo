@@ -7,6 +7,14 @@ post_build: aur_post_build
 
 repo_depends:
   - jlink-software-and-documentation
+  - glibc
+  - gcc-libs
+  - zlib
+  - freetype2
+  - fontconfig
+  - libx11
+  - libxext
+  - libxrender
 
 update_on:
   - source: aur
