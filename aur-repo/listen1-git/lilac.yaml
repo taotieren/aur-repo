@@ -1,12 +1,13 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers='xihale')
+build_prefix: extra-x86_64
 
-post_build_script: aur_post_build
+pre_build: vcs_update
+
+post_build_script: |
+  git_pkgbuild_commit()
 
 update_on:
   - source: github
     github: listen1/listen1_desktop
-  - source: aur
-    aur: listen1-git
