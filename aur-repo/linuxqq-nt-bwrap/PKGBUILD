@@ -2,9 +2,9 @@
 # Maintainer: sukanka
 
 _pkgname=linuxqq
-_base_pkgver=3.2.9-24402
+_base_pkgver=3.2.9-24568
 _update_pkgver=${_base_pkgver}
-_md5=442cbbb1
+_md5=a663aa83
 pkgname=linuxqq-nt-bwrap
 pkgver="${_update_pkgver//-/_}"
 pkgrel=1
@@ -31,16 +31,16 @@ source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkg
 source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkgver}_arm64.deb")
 source_loong64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkgver}_loongarch64.deb")
 source=('start.sh' 'start_normal.sh' 'start_mac_fix.sh' 'start_inner.sh' 'config.json' 'resolv.conf' 'xdg-open.sh')
-sha256sums=('b75b1757ed2356c719607eb02a74d9e6cc24d98edb078f13b93b7e722e07e5e0'  # start.sh
-			'46958947a35bde1cea2a2f2da6e8296fcb6752d84b6c62b2a49f6959d3235912'  # start_normal.sh
-			'801d778cb2cecca21cc294651ac5c85ad1c8cdd8c805c9d491740dd13bb9c7dc'  # start_mac_fix.sh
-			'3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'  # start_inner.sh
-            'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'  # config.json
-            'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'  # resolv.conf
-            'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675') # xdg-open.sh
-sha256sums_x86_64=('9f4bacc71f2756b120ea3532ee93396501ef2965d7749d187dffaf12c65bf10c')
-sha256sums_aarch64=('b46ae2d8d7509094df0c5d2f202d4f65e94088b3ccb168285a7728b023ee60ab')
-sha256sums_loong64=('4f17a048b3c818534fb5def3fa59b2213c5b5115ddf9e672d805106a27f2f3fb')
+sha256sums=('b75b1757ed2356c719607eb02a74d9e6cc24d98edb078f13b93b7e722e07e5e0'
+            '46958947a35bde1cea2a2f2da6e8296fcb6752d84b6c62b2a49f6959d3235912'
+            '801d778cb2cecca21cc294651ac5c85ad1c8cdd8c805c9d491740dd13bb9c7dc'
+            '3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'
+            'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
+            'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
+            'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675')
+sha256sums_x86_64=('0dc416c1ea78a78696500a01350f467b5401882c64e8185cce24c3487991a606')
+sha256sums_aarch64=('c19c9a22425d183bc8c3c3eb4653a22a9a37add7842e5c5804fc92ea595b2f8c')
+sha256sums_loong64=('0dd161939f866debe4b549440aeaf27bcfb0b4481e65c5cfd1ccb51c388b00f0')
 
 prepare() {
 	local base_ver=${_base_pkgver}
