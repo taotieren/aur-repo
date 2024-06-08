@@ -44,7 +44,7 @@ build() {
 
 check() {
 	cd "$srcdir/$pkgname"
-    python test.py --file bin/hex2bin --extra
+    python test.py -f bin/hex2bin --extra
 }
 
 package() {
