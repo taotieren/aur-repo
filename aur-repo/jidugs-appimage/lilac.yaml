@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+
+update_on:
+  - source: regex
+    url: "https://jidugs.wrste.com/#page2"
+    regex: '极度公式-(\d+.\d+.\d+).AppImage'
+  - source: manual
+    manual: 1
