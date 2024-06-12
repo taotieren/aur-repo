@@ -7,6 +7,6 @@ post_build: aur_post_build
 
 update_on:
   - source: aur
-    aur: epsidm24-secc0014-bin
+    aur: epsidm24-secc0019-bin
   - source: manual
     manual: 1
