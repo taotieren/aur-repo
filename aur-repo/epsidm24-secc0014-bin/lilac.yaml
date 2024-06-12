@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+
+build_prefix: extra-x86_64
+
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+
+update_on:
+  - source: regex
+    url: "https://www.epson.com.cn/services/supportproduct.html?p=b896c3f048ca4c62a5c339e7084feb8b#"
+    regex: 'signed_epsidm24-secc0014_(\d+_\d+_\d+)-1uos20_amd64.deb'
+  - source: manual
+    manual: 1
