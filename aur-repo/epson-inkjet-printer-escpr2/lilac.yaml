@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['AngryUbuntuNerd', 'andit'])
+
+post_build: aur_post_build
+
+update_on:
+  - source: aur
+    aur: epson-inkjet-printer-escpr2
+  - source: manual
+    manual: 1
