@@ -2,7 +2,7 @@
 
 pkgbase=ok-rtc-git
 pkgname=ok-rtc-git
-pkgver=r401.83cd2cf
+pkgver=r402.ee9dc00
 pkgrel=1
 arch=(x86_64
     aarch64
