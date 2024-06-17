@@ -1,8 +1,8 @@
 # Contributor: taotieren <admin@taotieren.com>
 
 pkgname=cloudflarespeedtest-git
-pkgver=2.2.5.9.gd96281a
-pkgrel=3
+pkgver=2.2.5.10.gdbb5864
+pkgrel=1
 pkgdesc="「自选优选 IP / 过滤假墙」测试 Cloudflare CDN 延迟和速度，获取最快 IP (IPv4+IPv6)！ "
 arch=(aarch64
     riscv64
