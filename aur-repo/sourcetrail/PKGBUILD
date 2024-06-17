@@ -13,7 +13,7 @@ unset _pkgtype
 _pkgname=sourcetrail
 pkgname="$_pkgname${_pkgtype:-}"
 pkgver=2023.11
-pkgrel=16
+pkgrel=17
 pkgdesc='Interactive source explorer for C/C++ and Java'
 url='https://github.com/petermost/Sourcetrail'
 license=('GPL-3.0-only')
