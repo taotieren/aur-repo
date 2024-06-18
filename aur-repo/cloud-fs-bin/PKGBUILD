@@ -3,7 +3,7 @@
 pkgbase=cloud-fs-bin
 pkgname=clouddrive
 pkgver=0.7.6
-pkgrel=4
+pkgrel=5
 epoch=2
 pkgdesc="CloudDrive - Unlocking the Unlimited Possibilities of Cloud Storage"
 arch=('x86_64' 'aarch64')
