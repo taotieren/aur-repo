@@ -3,7 +3,7 @@
 pkgbase=loongson-gnu-toolchain-bin
 pkgname=(${pkgbase})
 pkgver=8.3_rc1.3
-pkgrel=1
+pkgrel=3
 arch=('x86_64')
 pkgdesc="loongson gnu toolchain"
 url=http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/
