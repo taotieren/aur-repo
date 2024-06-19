@@ -3,7 +3,7 @@
 pkgbase=loongson-gnu-toolchain-bin
 pkgname=(${pkgbase})
 pkgver=8.3_rc1.3
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 pkgdesc="loongson gnu toolchain"
 url=http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/
@@ -13,13 +13,13 @@ provides=(${pkgbase%-bin} loongson-gcc)
 conflicts=(${pkgbase%-bin} loongson-gcc)
 depends=(
     bash
-    gcc-libs
     perl
     python)
 makedepends=()
 source=("${pkgbase%-bin}-${pkgver%%_*}-${CARCH}-loongarch64-linux-gnu-${pkgver#*_}-1.tar.xz::${url}/${pkgbase%-bin}-${pkgver%%_*}-${CARCH}-loongarch64-linux-gnu-${pkgver#*_}-1.tar.xz")
 sha256sums=('ae348afcd27a7c0fa6a58f1358842a3dbef8a4851ed018b43ddc4dac676649b8')
 options=(!strip !emptydirs !debug)
+install=${pkgname}.install
 noextract=(${pkgbase%-bin}-${pkgver%%_*}-${CARCH}-loongarch64-linux-gnu-${pkgver#*_}-1.tar.xz)
 
 package() {
@@ -29,9 +29,16 @@ package() {
 
     install -Dm0755 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" << EOF
 #!/bin/sh
+# loongson gnu toolchain
+
 [ -d /opt/loogson/${pkgname%-bin}/bin ] && append_path '/opt/loogson/${pkgname%-bin}/bin'
 
 export PATH
+EOF
+    install -Dm0755 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.csh" << EOF
+# loongson gnu toolchain
+
+setenv PATH "${PATH}:/opt/loogson/${pkgname%-bin}/bin"
 EOF
 }
 
