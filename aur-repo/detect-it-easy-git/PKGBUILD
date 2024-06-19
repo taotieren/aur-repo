@@ -1,8 +1,8 @@
 # Maintainer: Arnaud Dovi <mr.dovi@gmail.com>
 
 pkgname=detect-it-easy-git
-pkgver=3.09.r1516.09ead9d1
-pkgrel=2
+pkgver=3.09.r1525.c8a8fe49
+pkgrel=1
 pkgdesc='Detect It Easy, or abbreviated "DIE" is a program for determining types of files'
 arch=('x86_64')
 url='https://horsicq.github.io'
