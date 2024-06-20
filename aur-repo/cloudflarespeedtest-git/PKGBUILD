@@ -2,7 +2,7 @@
 
 pkgname=cloudflarespeedtest-git
 pkgver=2.2.5.11.g23b4f26
-pkgrel=7
+pkgrel=8
 pkgdesc="「自选优选 IP / 过滤假墙」测试 Cloudflare CDN 延迟和速度，获取最快 IP (IPv4+IPv6)！ "
 arch=(aarch64
     riscv64
