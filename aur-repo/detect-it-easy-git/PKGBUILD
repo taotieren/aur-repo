@@ -2,7 +2,7 @@
 
 pkgname=detect-it-easy-git
 pkgver=3.09.r1546.de867c51
-pkgrel=1
+pkgrel=2
 pkgdesc='Detect It Easy, or abbreviated "DIE" is a program for determining types of files'
 arch=('x86_64')
 url='https://horsicq.github.io'
