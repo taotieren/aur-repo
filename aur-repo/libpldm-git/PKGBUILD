@@ -2,7 +2,7 @@
 
 pkgname=libpldm-git
 pkgver=0.8.0.r30.g9e3a5d4
-pkgrel=20
+pkgrel=21
 epoch=
 pkgdesc="This is a library which deals with the encoding and decoding of PLDM messages."
 arch=(aarch64
