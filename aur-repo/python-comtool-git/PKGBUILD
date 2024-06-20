@@ -2,7 +2,7 @@
 
 pkgname=python-comtool-git
 pkgver=3.4.1.r2.g012b337
-pkgrel=14
+pkgrel=15
 epoch=
 pkgdesc="A cross platform serial debug tools written by python"
 arch=('any')
