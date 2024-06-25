@@ -11,7 +11,7 @@ unset _pkgtype
 _pkgname=sourcetrail
 pkgname="$_pkgname${_pkgtype:-}"
 pkgver=2024.6.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Interactive source explorer for C/C++ and Java'
 url='https://github.com/xiota/sourcetrail'
 license=('GPL-3.0-only')
