@@ -75,9 +75,9 @@ ch343
 EOF
 
     # Blacklists conflicting module
-    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/modprobe.d/cdc_acm.conf" <<EOF
-blacklist cdc_acm
-EOF
+#     install -Dm644 /dev/stdin "${pkgdir}/usr/lib/modprobe.d/cdc_acm.conf" <<EOF
+# blacklist cdc_acm
+# EOF
 }
 
 package_libch343ser-git() {
