@@ -102,5 +102,5 @@ package_libch343ser-git() {
     install -Dm644 libch34xcfg.so -t "${pkgdir}/usr/lib/"
     install -Dm644 ch343_lib.h -t "${pkgdir}/usr/include/"
     install -Dm644 ch34x_parse_cfg.h -t "${pkgdir}/usr/include/"
-    install -Dm644 ch9344_lib.h -t "${pkgdir}/usr/include/"
+#     install -Dm644 ch9344_lib.h -t "${pkgdir}/usr/include/"
 }
