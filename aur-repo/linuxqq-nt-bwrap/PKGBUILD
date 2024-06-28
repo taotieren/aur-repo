@@ -2,14 +2,14 @@
 # Maintainer: sukanka
 
 _pkgname=linuxqq
-_base_pkgver=3.2.9-24815
+_base_pkgver=3.2.10-25234
 _update_pkgver=${_base_pkgver}
-_md5=cbb0e5d9
+_md5=944f8942
 pkgname=linuxqq-nt-bwrap
 pkgver="${_update_pkgver//-/_}"
 pkgrel=1
 pkgdesc="New Linux QQ based on Electron, with bubblewrap sandbox and some tweaks"
-arch=('x86_64' 'aarch64' 'loong64')
+arch=('x86_64' 'aarch64' )
 url='https://im.qq.com/linuxqq/index.shtml'
 license=('custom')
 depends=('at-spi2-core' 'alsa-lib' 'desktop-file-utils' 'gtk3' 'gtk-update-icon-cache' 'libnotify' 'nss'
@@ -38,9 +38,8 @@ sha256sums=('b75b1757ed2356c719607eb02a74d9e6cc24d98edb078f13b93b7e722e07e5e0'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
             'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675')
-sha256sums_x86_64=('a1fa1e940cdbb82831487b197225925640c50effb3b16f80cd9aa378d95a8dad')
-sha256sums_aarch64=('a82dde51cdc7b359e895926101db34431fad0250ff011dec706c66700f1db44c')
-sha256sums_loong64=('19856f7fec5063bd5e2980dfecf96777676b89afee6cf07c5e7c1d94c2c7385c')
+sha256sums_x86_64=('087557e6d055ff0fff02ddb00632ea813cdaca2e0d2398b4e880e0c96fbe85ae')
+sha256sums_aarch64=('518f5415bc108d705dd3ee768aba27d4b65058ffe7714670ca5aed0f39b9956f')
 
 prepare() {
 	local base_ver=${_base_pkgver}
