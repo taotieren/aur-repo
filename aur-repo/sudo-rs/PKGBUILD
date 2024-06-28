@@ -7,7 +7,7 @@ pkgdesc="A safety oriented and memory safe implementation of sudo and su written
 arch=('x86_64'
     'aarch64'
     'riscv64')
-url="https://github.com/memorysafety/sudo-rs"
+url="https://github.com/trifectatechfoundation/sudo-rs"
 license=('Apache-2.0 AND MIT')
 provides=(${pkgname})
 conflicts=(${pkgname})

@@ -12,6 +12,6 @@ post_build_script: |
 
 update_on:
   - source: github
-    github: memorysafety/sudo-rs
+    github: trifectatechfoundation/sudo-rs
     use_latest_release: true
     prefix: v
