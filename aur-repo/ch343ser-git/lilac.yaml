@@ -6,8 +6,8 @@ build_prefix: extra-x86_64
 pre_build: vcs_update
 
 repo_depends:
-  - libch343ser-git
   - libch9344ser-git
+  # - libch343ser-git
 
 post_build_script: |
   git_pkgbuild_commit()
