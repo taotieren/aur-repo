@@ -7,7 +7,7 @@ pre_build: vcs_update
 
 repo_depends:
   - libch9344ser-git
-  # - libch343ser-git
+  - libch343ser-git
 
 post_build_script: |
   git_pkgbuild_commit()
