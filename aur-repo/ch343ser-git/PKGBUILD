@@ -40,8 +40,7 @@ package_ch343ser-dkms-git() {
     cd "$srcdir/${pkgbase}/driver"
     rm -rf Makefile
     install -Dm755 /dev/stdin  Makefile <<EOF
-# KERNELDIR := /lib/modules/\$(shell uname -r)/build
-KERNELDIR:=/lib/modules/$(pui_arch)/build
+KERNELDIR := /lib/modules/\$(shell uname -r)/build
 export KERNELDIR
 obj-m := ch343.o
 
