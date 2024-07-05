@@ -16,3 +16,5 @@ update_on:
     use_latest_release: true
     prefix: v
   - alias: python
+  - source: manual
+    manual: 1
