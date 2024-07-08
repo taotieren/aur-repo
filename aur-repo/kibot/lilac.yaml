@@ -19,6 +19,7 @@ repo_depends:
   - kicad-pcb-diff
   - python-qrcodegen
   - rar
+  - python-xvfbwrapper
 
 update_on:
   - source: github
