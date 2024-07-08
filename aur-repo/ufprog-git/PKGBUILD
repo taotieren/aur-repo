@@ -2,7 +2,7 @@
 
 pkgbase=ufprog-git
 pkgname=ufprog-git
-pkgver=r154.12a5948
+pkgver=1.0.2023.09.18.r72.g0b91c79
 pkgrel=1
 groups=()
 pkgdesc="Universal Flash Programmer - SPI-NOR/NAND ECC/SPI-NAND/WCH CH341 CH347/FTDI MPSSE FT232H FT2232H FT4232H FT4222H/SPI (Single/Dual/Quad/QPI using SPI-MEM)"
