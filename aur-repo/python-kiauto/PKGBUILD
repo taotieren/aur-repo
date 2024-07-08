@@ -12,7 +12,9 @@ license=(Apache-2.0)
 groups=()
 provides=(${_name})
 conflicts=(${_name})
-depends=(python
+depends=(
+    glibc
+    python
     python-xvfbwrapper
     python-psutil
 )
