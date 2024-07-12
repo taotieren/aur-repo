@@ -2,7 +2,7 @@
 # Contributor: Darren Ng <$(base64 --decode <<<VW4xR2ZuQGdtYWlsLmNvbQo=)>
 
 pkgname=edl-git
-pkgver=r528.3e4e569
+pkgver=r544.5367174
 pkgrel=1
 pkgdesc="Inofficial Qualcomm Firehose / Sahara / Streaming / Diag Tools"
 arch=('any')
