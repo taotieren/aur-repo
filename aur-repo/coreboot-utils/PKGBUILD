@@ -2,7 +2,7 @@
 # Contributor: slact
 pkgname=coreboot-utils
 pkgver=24.02.01
-pkgrel=2
+pkgrel=3
 pkgdesc="Tools and utilities to work with coreboot firmware"
 url="https://www.coreboot.org/"
 license=('GPL2')
