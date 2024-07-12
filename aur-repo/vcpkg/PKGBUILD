@@ -2,7 +2,7 @@
 
 pkgname=vcpkg
 pkgver=2024.06.10
-pkgrel=2
+pkgrel=3
 pkgdesc='C++ library manager'
 depends=('curl' 'fmt' 'gcc-libs' 'glibc' 'tar' 'unzip' 'zip')
 makedepends=('cmake' 'ninja')
