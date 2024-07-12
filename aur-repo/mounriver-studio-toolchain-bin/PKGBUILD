@@ -3,7 +3,7 @@
 pkgbase=mounriver-studio-toolchain-bin
 pkgname=($pkgbase mounriver-studio-toolchain-openocd-bin mounriver-studio-toolchain-riscv-gcc-bin mounriver-studio-toolchain-riscv-gcc12-bin)
 pkgver=1.91
-pkgrel=0
+pkgrel=1
 arch=('x86_64')
 url='http://www.mounriver.com/'
 license=('GPL2' 'GPL3' 'custom')
