@@ -3,7 +3,7 @@
 
 pkgname=python-cstruct
 pkgver=5.3
-pkgrel=4
+pkgrel=5
 pkgdesc="C-style structs for Python"
 url="https://github.com/andreax79/python-cstruct"
 arch=('any')
