@@ -3,7 +3,7 @@
 
 pkgname=abi-compliance-checker
 pkgver=2.3
-pkgrel=5
+pkgrel=6
 pkgdesc="Check ABI compatibility between library versions"
 arch=('i686' 'x86_64')
 url="https://lvc.github.io/abi-compliance-checker/"
