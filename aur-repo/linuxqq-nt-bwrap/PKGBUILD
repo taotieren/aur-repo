@@ -2,9 +2,9 @@
 # Maintainer: sukanka
 
 _pkgname=linuxqq
-_base_pkgver=3.2.10-25234
+_base_pkgver=3.2.10-25765
 _update_pkgver=${_base_pkgver}
-_md5=944f8942
+_md5=7bb2ea67
 pkgname=linuxqq-nt-bwrap
 pkgver="${_update_pkgver//-/_}"
 pkgrel=1
@@ -31,15 +31,15 @@ source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkg
 source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkgver}_arm64.deb")
 source_loong64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5}/linuxqq_${_base_pkgver}_loongarch64.deb")
 source=('start.sh' 'start_normal.sh' 'start_mac_fix.sh' 'start_inner.sh' 'config.json' 'resolv.conf' 'xdg-open.sh')
-sha256sums=('b75b1757ed2356c719607eb02a74d9e6cc24d98edb078f13b93b7e722e07e5e0'
+sha256sums=('2748a351259d378ab9773000cbf1ea0448de5ae92f28bb9e366fa795e1715739'
             '46958947a35bde1cea2a2f2da6e8296fcb6752d84b6c62b2a49f6959d3235912'
             '801d778cb2cecca21cc294651ac5c85ad1c8cdd8c805c9d491740dd13bb9c7dc'
             '3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
             'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675')
-sha256sums_x86_64=('087557e6d055ff0fff02ddb00632ea813cdaca2e0d2398b4e880e0c96fbe85ae')
-sha256sums_aarch64=('518f5415bc108d705dd3ee768aba27d4b65058ffe7714670ca5aed0f39b9956f')
+sha256sums_x86_64=('0ce218033135305f139e4a9e7c25d551893d37ec613f4a5b62944637475c9008')
+sha256sums_aarch64=('b70f785195cd75fd24f74566bd9a23f367c1c90217b4aea8be45f4702cb7cb90')
 
 prepare() {
 	local base_ver=${_base_pkgver}

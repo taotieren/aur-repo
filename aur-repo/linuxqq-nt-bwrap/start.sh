@@ -16,7 +16,7 @@ function warning() {
 }
 
 if [ "${QQ_FIX_MAC}" != 1 ]; then
-    if [ -s "{$XDG_CONFIG_HOME}/qq-fix-mac.conf" ]; then
+    if [ -s "${XDG_CONFIG_HOME}/qq-fix-mac.conf" ]; then
         export QQ_FIX_MAC=1
     else
         if ip link show | grep -q "docker"; then
