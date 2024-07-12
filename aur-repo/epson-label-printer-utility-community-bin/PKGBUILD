@@ -3,7 +3,7 @@
 pkgbase=epson-label-printer-utility-community-bin
 pkgname=epson-label-printer-utility-community-bin
 pkgver=1.5.1
-pkgrel=9
+pkgrel=10
 epoch=
 pkgdesc="Epson Label Printer Utility"
 arch=('x86_64')
