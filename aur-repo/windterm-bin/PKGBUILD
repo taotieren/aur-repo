@@ -3,7 +3,7 @@
 pkgname=windterm-bin
 _pkgname=WindTerm
 pkgver=2.6.1
-pkgrel=2
+pkgrel=3
 pkgdesc='A Quicker and better SSH/Telnet/Serial/Shell/Sftp client for DevOps.'
 arch=('x86_64')
 license=('Apache-2.0')
