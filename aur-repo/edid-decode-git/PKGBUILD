@@ -1,8 +1,8 @@
 # Maintainer: Jonathan Liu <net147@gmail.com>
 pkgname=edid-decode-git
 _gitname=edid-decode
-pkgver=r678.f4b0548
-pkgrel=2
+pkgver=r693.6f117a8
+pkgrel=1
 pkgdesc="EDID decoder and conformance tester"
 url="https://git.linuxtv.org/edid-decode.git/"
 arch=('i686' 'x86_64')
