@@ -3,7 +3,7 @@
 pkgbase=mounriver-studio-community-bin
 pkgname=(${pkgbase})
 pkgver=170
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url='http://www.mounriver.com/'
 license=('GPL2' 'GPL3' 'custom')
