@@ -1,6 +1,6 @@
 pkgname=115pc
 pkgver=2.0.10.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="115.com PC client"
 arch=('x86_64')
