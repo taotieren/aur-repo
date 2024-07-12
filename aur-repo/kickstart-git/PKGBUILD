@@ -1,7 +1,7 @@
 #Maintainer: Dmytro Aleksandrov <alkersan@gmail.com>
 pkgname=kickstart-git
 pkgver=r144.fe17004
-pkgrel=2
+pkgrel=3
 pkgdesc="Bash only provisioning tool"
 depends=('bash' 'which')
 makedepends=('git' 'which')
