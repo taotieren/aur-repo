@@ -5,7 +5,9 @@ pkgname=(ch34xsercfg-git)
 pkgver=r42.05b4e1f
 pkgrel=1
 pkgdesc="USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch9103/ch9104, etc. (ch34xsercfg)"
-arch=($CARCH)
+arch=(x86_64
+  aarch64
+  riscv64)
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 url="https://github.com/WCHSoftGroup/ch343ser_linux"
