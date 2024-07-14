@@ -4,7 +4,7 @@
 pkgname=linuxqq
 pkgver=3.2.10_25765
 _pkgver_loong64=3.2.9_24815
-pkgrel=1
+pkgrel=2
 epoch=4
 pkgdesc="New Linux QQ based on Electron"
 arch=('x86_64' 'aarch64' 'loong64')
@@ -21,7 +21,7 @@ sha512sums=('f463c5cb3323b86d9ea312d75f1e53d064885dabde2d1d6a554e083e15b5ff7fc54
 sha512sums_x86_64=('b8798b199bf4a2f83b802576b09b451a4fe213224095387370a658e52fb50be090e12c14855c69d08ec970f18011bc457a10338ed4d5a479a33eced77172cf61')
 sha512sums_aarch64=('f1f155510c875a70ff08744397218f9548e856c2805e95ea0c2e40229e17cddb7cfd7a34d6134d3cfa2189f903fe07052852c7252a97b7564a0b4063cb238631')
 sha512sums_loong64=('3d7a4ac16a9221acab5f333e545757d505d3d8d45077d6d6bae86bfaf8c48b058a4869d7b1d277518baf7b0b24a850c4d5fa7a8cfc317649cff6027ef224552f')
-options=('!strip')
+options=('!strip' '!debug')
 
 package() {
 	echo "  -> Extracting the data.tar.xz..."
