@@ -5,11 +5,7 @@ pre_build_script: aur_pre_build(maintainers='yochananmarqos')
 
 post_build: aur_post_build
 
-repo_depends:
-  - python-altgraph
-  - pyinstaller-hooks-contrib
-
 update_on:
   - source: aur
-    aur: pyinstaller
+    aur: pyinstaller-hooks-contrib
   - alias: python
