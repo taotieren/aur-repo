@@ -11,6 +11,7 @@ post_build_script: |
 
 repo_depends:
   - bwidget
+  - libmodbus
   - tclx
   - tkimg
   - python-yapps2
