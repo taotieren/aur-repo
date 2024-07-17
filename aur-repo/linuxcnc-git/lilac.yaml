@@ -15,6 +15,9 @@ repo_depends:
   - tclx
   - tkimg
   - python-yapps2
+  - python-pyodbc
+  - python-espeak
+  - gtksourceview2
 
 update_on:
   - source: github
