@@ -17,6 +17,7 @@ repo_depends:
   - python-yapps2
   - python-pyodbc
   - gtksourceview2
+  - linkchecker
   # - python-espeak
 
 update_on:

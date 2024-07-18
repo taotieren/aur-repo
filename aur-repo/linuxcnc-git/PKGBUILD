@@ -31,7 +31,8 @@ depends=(
   libxinerama
   libxmu
   libxss
-  readline
+#   readline
+  editline
   systemd-libs
   pango
   python
@@ -57,7 +58,7 @@ depends=(
 # AUR
   gtksourceview2
   python-pyodbc
-#   python-espeak
+# python-espeak
   libmodbus
 )
 makedepends=(
@@ -80,12 +81,13 @@ makedepends=(
   #AUR
   bwidget
 #   tclx
+  linkchecker
   python-yapps2
   )
 checkdepends=()
 provides=('linuxcnc')
 conflicts=('linuxcnc' 'linuxcnc-bin')
-options=(!emptydirs !strip)
+options=(!emptydirs)
 source=("${pkgname}::git+https://github.com/LinuxCNC/linuxcnc"
         'libtirpc.patch')
 sha256sums=('SKIP'
