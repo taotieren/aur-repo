@@ -2,7 +2,7 @@
 
 pkgname=fx2eeprom-git
 pkgver=r7.9b36acd
-pkgrel=2
+pkgrel=3
 pkgdesc="FX2 EZ USB eeprom reader/writer for libusb"
 arch=(x86_64
     aarch64
