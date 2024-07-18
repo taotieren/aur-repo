@@ -57,7 +57,7 @@ depends=(
 # AUR
   gtksourceview2
   python-pyodbc
-  python-espeak
+#   python-espeak
   libmodbus
 )
 makedepends=(

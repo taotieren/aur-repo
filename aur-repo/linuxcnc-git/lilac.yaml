@@ -16,8 +16,8 @@ repo_depends:
   - tkimg
   - python-yapps2
   - python-pyodbc
-  - python-espeak
   - gtksourceview2
+  # - python-espeak
 
 update_on:
   - source: github
