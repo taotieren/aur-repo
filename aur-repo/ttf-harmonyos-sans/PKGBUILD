@@ -2,7 +2,7 @@
 pkgname=ttf-harmonyos-sans
 _pkgname="HarmonyOS Sans"
 pkgver=2024.06.19
-pkgrel=1
+pkgrel=2
 pkgdesc="HarmonyOS Sans 字体"
 arch=("any")
 url='https://developer.harmonyos.com/cn/design/resource'
