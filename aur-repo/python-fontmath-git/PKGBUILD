@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-fontmath-git
-pkgver=0.9.3.r4.g8325a8f
-pkgrel=11
+pkgver=0.9.4.r0.gf8a68f9
+pkgrel=1
 pkgdesc='A collection of objects that implement fast font, glyph, etc. math.'
 url='https://github.com/robotools/fontMath'
 license=('MIT')
