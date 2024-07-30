@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['gustawho'])
+pre_build_script: aur_pre_build(maintainers=['a821'])
 
 post_build: aur_post_build
 
