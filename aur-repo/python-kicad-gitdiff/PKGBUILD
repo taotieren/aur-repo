@@ -21,7 +21,7 @@ makedepends=(python-build
 options=('!strip')
 source=("${_name//-/_}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/${_name//-/_}-$pkgver.tar.gz")
 noextract=()
-sha256sums=('e9d709d31dc57cb9e102492f6b5bceeed05affd466aeeaf42af37c6f4cf1946c')
+sha256sums=('97cf7c458b76817be7dd5c9b0a3dcb5531fae479900932485917db244662f3a1')
 
 build() {
     cd "${srcdir}/${_name//-/_}-${pkgver}"
