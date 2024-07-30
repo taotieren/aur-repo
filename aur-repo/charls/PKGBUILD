@@ -3,7 +3,7 @@
 
 pkgname=charls
 pkgver=2.4.2
-pkgrel=6
+pkgrel=7
 pkgdesc='A C++ JPEG-LS library implementation'
 arch=('i686' 'x86_64')
 url='https://github.com/team-charls/charls'
