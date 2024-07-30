@@ -23,8 +23,6 @@ repo_depends:
   - python-svgpathtools
 
 update_on:
-  - source: github
-    github: INTI-CMNB/KiBot
-    use_latest_release: true
-    prefix: v
+  - source: pypi
+    pypi: kibot
   - alias: python

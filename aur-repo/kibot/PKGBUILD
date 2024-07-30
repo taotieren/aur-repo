@@ -1,12 +1,13 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=kibot
+_name=${pkgname}
 pkgver=1.7.0
 pkgrel=1
 epoch=
 pkgdesc="KiCad automation utility"
 arch=('any')
-url="https://github.com/INTI-CMNB/KiBot"
+url="https://pypi.org/project/kibot"
 license=('AGPL-3.0-or-later')
 groups=()
 depends=(
@@ -56,18 +57,18 @@ backup=()
 options=()
 install=
 changelog=
-source=("KiBot-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
 sha256sums=('f4f0cf1f8e3da3f3919957ae3e041ce1e44f752aa281798f0c1ddedb95e70c5e')
 #validpgpkeys=()
 
 build() {
-    cd "${srcdir}/KiBot-${pkgver}"
+    cd "${srcdir}/${_name}-${pkgver}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/KiBot-${pkgver}"
+    cd "${srcdir}/${_name}-${pkgver}"
     # python setup.py install --no-compile --root="$pkgdir"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
