@@ -36,6 +36,7 @@ depends=(
     python-pyaml
     python-qrcodegen
     python-requests
+    python-svgpathtools
     python-xlsxwriter
     python-xvfbwrapper
     python-yaml
