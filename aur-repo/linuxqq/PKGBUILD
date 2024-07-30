@@ -4,7 +4,7 @@
 pkgname=linuxqq
 pkgver=3.2.10_25765
 _pkgver_loong64=3.2.9_24815
-pkgrel=2
+pkgrel=3
 epoch=4
 pkgdesc="New Linux QQ based on Electron"
 arch=('x86_64' 'aarch64' 'loong64')
