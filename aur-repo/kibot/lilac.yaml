@@ -20,6 +20,7 @@ repo_depends:
   - python-qrcodegen
   - rar
   - python-xvfbwrapper
+  - python-svgpathtools
 
 update_on:
   - source: github
