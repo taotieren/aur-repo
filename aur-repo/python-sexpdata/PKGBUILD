@@ -7,7 +7,7 @@
 pkgname=python-sexpdata
 _name=${pkgname#python-}
 pkgver=1.0.2
-pkgrel=2
+pkgrel=3
 pkgdesc="S-expression parser for Python"
 arch=('any')
 url="https://github.com/jd-boyd/sexpdata"
