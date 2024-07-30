@@ -5,7 +5,7 @@
 
 pkgname=gdcm
 pkgver=3.0.24
-pkgrel=2
+pkgrel=3
 pkgdesc="C++ library for DICOM medical files"
 arch=(x86_64)
 url="https://github.com/malaterre/GDCM"
