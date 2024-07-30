@@ -6,10 +6,6 @@ pre_build_script: aur_pre_build(maintainers=['pintert3'])
 post_build: aur_post_build
 
 update_on:
-  - source: github
-    github: mathandy/svgpathtools
-    use_max_tag: true
-    prefix: v
   - source: aur
     aur: svgpathtools
   - alias: python
