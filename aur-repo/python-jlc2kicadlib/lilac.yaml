@@ -9,7 +9,7 @@ post_build_script: |
   update_aur_repo()
 
 repo_depends:
-  - python-kicadmodtree
+  - python-kicadmodtree-git
 
 update_on:
   - source: pypi
