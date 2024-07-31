@@ -8,10 +8,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
-repo_depends:
-  - python-kicadmodtree
-
 update_on:
-  - source: pypi
-    pypi: JLC2KiCadLib
+  - source: gitlab
+    gitlab: kicad/libraries/kicad-footprint-generator
   - alias: python
