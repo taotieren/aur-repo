@@ -2,7 +2,7 @@
 
 pkgname=brunsli
 pkgver=0.1
-pkgrel=6
+pkgrel=7
 pkgdesc='Lossless JPEG repacker'
 arch=('x86_64')
 url='https://github.com/google/brunsli/'
