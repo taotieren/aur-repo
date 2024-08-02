@@ -38,7 +38,7 @@ _install_path="opt/${pkgname}"
 
 package() {
     cd ${srcdir}
-    install -dm755 ${pkgdir}/${_install_path} \
+    install -dm777 ${pkgdir}/${_install_path} \
         "${pkgdir}"/media/clouddrive \
         "${pkgdir}"/media/clouddrive-dav
 
