@@ -16,11 +16,13 @@ depends=(
     gcc-libs
     glib2
     glibc
+    gtk3
     gtkspell3
     hicolor-icon-theme
     icu
     libsecret
     lucene++
+    openssl
     pugixml
     wxwidgets-common
     wxwidgets-gtk3)
