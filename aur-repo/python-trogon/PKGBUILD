@@ -14,10 +14,12 @@ provides=(${_name})
 conflicts=(${_name})
 depends=(python
     python-click
+    python-rich
     python-textual
-    python-black
 )
-makedepends=(python-build
+makedepends=(
+    python-black
+    python-build
     python-installer
     python-wheel
     python-validate-pyproject
