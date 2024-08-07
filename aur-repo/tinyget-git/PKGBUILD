@@ -3,7 +3,7 @@
 pkgname=tinyget-git
 _name=${pkgname%-git}
 pkgver=r34.d0593e8
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A cross-distro package management tool."
 arch=('any')
