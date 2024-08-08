@@ -11,7 +11,8 @@ url="https://github.com/xboot/xfel"
 license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=('libusb')
+depends=('libusb'
+    'glibc')
 makedepends=('git' 'gcc')
 source=("${pkgname%-git}::git+${url}.git")
 sha256sums=('SKIP')

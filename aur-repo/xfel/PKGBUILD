@@ -11,7 +11,8 @@ arch=(x86_64
 url="https://github.com/xboot/xfel"
 license=('MIT')
 groups=()
-depends=('libusb')
+depends=('libusb'
+    'glibc')
 makedepends=("gcc")
 checkdepends=()
 optdepends=()
