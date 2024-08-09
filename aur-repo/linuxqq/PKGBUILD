@@ -3,14 +3,14 @@
 
 pkgname=linuxqq
 pkgver=3.2.12_26740
-pkgrel=1
+pkgrel=2
 epoch=4
 pkgdesc="New Linux QQ based on Electron"
 arch=('x86_64' 'aarch64' 'loong64')
 url="https://im.qq.com/${pkgname}"
 license=('LicenseRef-QQ')
 conflicts=("${pkgname}-nt-bwrap")
-depends=('nss' 'alsa-lib' 'gtk3' 'gjs' 'at-spi2-core' 'libvips' 'openjpeg2')
+depends=('nss' 'alsa-lib' 'gtk3' 'gjs' 'at-spi2-core' 'libvips' 'openjpeg2' 'openslide')
 optdepends=('libappindicator-gtk3: Allow QQ to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library).')
 source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/769073aa/${pkgname}_${pkgver/_/-}_amd64.deb")
 source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/769073aa/${pkgname}_${pkgver/_/-}_arm64.deb")
