@@ -47,4 +47,12 @@ package() {
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname}.csh" << EOF
 setenv PATH "${PATH}:/opt/rockchip/${pkgname}/tools/"
 EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname}.sh" << EOF
+#!/bin/sh
+# rkbin
+
+[ -d /opt/loogson/loongson-gnu-toolchain/bin ] && append_path '/opt/rockchip/rkbin/tools/'
+
+export PATH
+EOF
 }
