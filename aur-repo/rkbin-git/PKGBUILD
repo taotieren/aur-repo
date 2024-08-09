@@ -51,7 +51,7 @@ EOF
 #!/bin/sh
 # rkbin
 
-[ -d /opt/loogson/loongson-gnu-toolchain/bin ] && append_path '/opt/rockchip/rkbin/tools/'
+[ -d /opt/rockchip/rkbin/tools/ ] && append_path '/opt/rockchip/rkbin/tools/'
 
 export PATH
 EOF
