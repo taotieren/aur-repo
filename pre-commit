@@ -39,7 +39,7 @@ CHANGED_PACKAGES = set()
 SUBFOLDER = 'aur-repo'
 
 # URL for downloading latest database of packages and groups in official repos
-#DUMP_GROUPS_URL = 'https://build.archlinuxcn.org/~farseerfc/dump-groups.gz'
+DUMP_GROUPS_URL = 'https://build.archlinuxcn.org/~farseerfc/dump-groups.gz'
 DUMP_GROUPS_TMP = '/tmp/dump-groups-%s.gz'
 # Cache downloaded database for 1 hour
 DUMP_GROUPS_TIMEFORMAT = '%Y%m%d%H%z'
