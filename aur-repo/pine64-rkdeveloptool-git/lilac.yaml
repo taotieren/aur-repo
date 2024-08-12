@@ -1,13 +1,24 @@
+# maintainers:
+#   - github: taotieren
+#
+# pre_build_script: aur_pre_build(maintainers=['dcreager'])
+#
+# post_build_script: aur_post_build
+#
+# update_on:
+#   - source: aur
+#     aur: pine64-rkdeveloptool-git
+
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['dcreager'])
+build_prefix: extra-x86_64
 
-repo_depends:
-  - cmake
+pre_build: vcs_update
 
-post_build_script: aur_post_build
+post_build_script: |
+  git_pkgbuild_commit()
 
 update_on:
-  - source: aur
-    aur: pine64-rkdeveloptool-git
+  - source: gitlab
+    github: pine64-org/quartz-bsp/rkdeveloptool
