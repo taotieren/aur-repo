@@ -2,7 +2,7 @@
 
 pkgname=openixcard-git
 pkgver=1.1.8.r4.g1efa41d
-pkgrel=1
+pkgrel=2
 pkgdesc="Open Source Version of Allwinner PhoenixCard to Dump, Unpack, Flash Allwinner IMG Files on Linux"
 arch=(x86_64
     aarch64
