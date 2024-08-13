@@ -9,8 +9,8 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 
-repo_depends:
-  - xfel-git
+# repo_depends:
+#   - xfel-git
 
 update_on:
   - source: github
