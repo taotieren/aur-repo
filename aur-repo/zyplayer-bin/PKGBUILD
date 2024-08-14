@@ -1,6 +1,6 @@
 # Maintainer: zxp19821005 <zxp19821005 at 163 dot com>
 pkgname=zyplayer-bin
-pkgver=3.3.0
+pkgver=3.3.7
 pkgrel=1
 pkgdesc="跨平台桌面端视频资源播放器,免费高颜值"
 arch=("aarch" "x86_64")
