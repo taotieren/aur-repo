@@ -9,10 +9,5 @@ repo_depends:
   - electron19-bin
 
 update_on:
-  - source: github
-    github: Hiram-Wong/ZyPlayer
-    use_max_tag: true
-    prefix: v
-
   - source: aur
     aur: zyplayer-bin
