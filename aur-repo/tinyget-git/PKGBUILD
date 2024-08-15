@@ -2,14 +2,14 @@
 
 pkgname=tinyget-git
 _name=${pkgname%-git}
-pkgver=r34.d0593e8
-pkgrel=2
+pkgver=r47.55e8308
+pkgrel=1
 epoch=
 pkgdesc="A cross-distro package management tool."
 arch=('any')
 # url="https://pypi.org/project/tinyget"
 url="https://gitee.com/tinylab/tinyget"
-license=(Apache-2.0)
+license=(GPL-2.0-or-later)
 groups=()
 provides=(${_name})
 conflicts=(${_name})
@@ -22,13 +22,18 @@ depends=(
     python
     "${_pydeps[@]/#/python-}")
 _pymakedeps=(
+    black
+    hatchling
     orjson
     build
     installer
     wheel
     setuptools)
-makedepends=(git
+makedepends=(
+    flake8
+    git
     "${_pymakedeps[@]/#/python-}")
+optdepends=('vim: Default change to software source editor')
 checkdepends=(python-pytest)
 options=('!strip')
 # source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
@@ -44,10 +49,22 @@ pkgver() {
     )
 }
 
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${_name}"
+    flake8 ./${_name} --count --show-source --statistics
+    black ./${_name} --check  --verbose .
     python -m build --wheel --no-isolation
 }
+
+# check() {
+#     cd "${srcdir}/${_name}"
+# #     pytest
+#     PYTHONPATH=. pytest -k 'not test_cli'
+# }
 
 package() {
     cd "${srcdir}/${_name}"
