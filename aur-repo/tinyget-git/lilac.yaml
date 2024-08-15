@@ -15,6 +15,6 @@ repo_depends:
 update_on:
   - source: git
     git: https://gitee.com/tinylab/tinyget.git
-    branch: ospp-2024
+    branch: master
     use_commit: true
   - alias: python
