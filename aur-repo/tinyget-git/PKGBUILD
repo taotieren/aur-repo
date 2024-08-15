@@ -51,6 +51,8 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}"
+    git switch ospp2024
 }
 
 build() {

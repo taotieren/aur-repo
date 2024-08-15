@@ -12,5 +12,5 @@ post_build_script: |
 update_on:
   - source: git
     git: https://gitee.com/cxasm/notepad--.git
-    branch: master
+    branch: ospp-2024
     use_commit: true
