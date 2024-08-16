@@ -41,18 +41,18 @@ source=(${_name}::git+$url.git)
 noextract=()
 sha256sums=('SKIP')
 
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}"
+    git switch ospp2024
+}
+
 pkgver() {
     cd "${srcdir}/${_name}"
     ( set -o pipefail
         git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
         printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
     )
-}
-
-prepare() {
-    git -C "${srcdir}/${_name}" clean -dfx
-    cd "${srcdir}/${_name}"
-    git switch ospp2024
 }
 
 build() {
