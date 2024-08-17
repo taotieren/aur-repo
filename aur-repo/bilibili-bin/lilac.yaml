@@ -11,10 +11,5 @@ repo_depends:
   - electron21-bin
 
 update_on:
-  - source: github
-    github: msojocs/bilibili-linux
-    use_max_tag: true
-    prefix: v
-
   - source: aur
     aur: bilibili-bin
