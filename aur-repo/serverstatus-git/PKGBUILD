@@ -5,8 +5,8 @@ pkgname=(serverstatus-git
     serverstatus-clients-linux-git
     serverstatus-clients-psutil-git
     serverstatus-server-git)
-pkgver=1.1.4.r3.g08f15eb
-pkgrel=4
+pkgver=1.1.5.r0.ge8446cd
+pkgrel=1
 groups=()
 pkgdesc="云探针、多服务器探针、云监控、多服务器云监控"
 arch=(any)
