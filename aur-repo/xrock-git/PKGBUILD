@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=xrock-git
-pkgver=1.0.5.r0.g9581fea
+pkgver=1.0.5.r3.gb263009
 pkgrel=1
 epoch=
 pkgdesc="The low level tools for rockchip SOC with maskrom and loader mode support."
