@@ -1,0 +1,6 @@
+# nationstech-jlink-pack.install
+
+post_remove() {
+    echo "deleting the nationstech-jlink-pack ..."
+    find /home -maxdepth 5 -name "n32" -exec rm -rf {} \;
+}
