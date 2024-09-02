@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=poedit-git
-pkgver=3.5.r0.g22a556cdd
+pkgver=3.5.r3.g1673c7961
 pkgrel=1
 epoch=
 pkgdesc="Translations editor for Mac, Windows and Unix"
