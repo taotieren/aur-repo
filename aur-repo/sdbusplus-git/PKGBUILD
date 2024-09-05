@@ -1,7 +1,7 @@
 # Maintainer: amateurece <ethan.twardy at gmail dot com>
 
 pkgname=sdbusplus-git
-pkgver=r775.03b2c26c
+pkgver=r780.8d40adad
 pkgrel=1
 pkgdesc="C++ bindings for systemd dbus APIs"
 url="https://github.com/openbmc/sdbusplus"
