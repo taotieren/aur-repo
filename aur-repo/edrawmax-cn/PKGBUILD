@@ -2,11 +2,10 @@
 # edrawmax 中文版
 
 pkgname=edrawmax-cn
-_pkgname=EdrawMax-13
-pkgver=13.5.0
-pkgrel=1
+pkgver=14.0.0
+pkgrel=3
 arch=('x86_64')
-options=(!strip)
+options=(!strip !debug)
 conflicts=("edrawmax")
 pkgdesc="强大的办公绘图、工程绘图、图文编辑、彩页设计软件"
 depends=(
@@ -24,12 +23,13 @@ makedepends=(
 license=('Commercial')
 url="https://www.edrawsoft.cn/edrawmax/"
 # source_x86_64=("https://cc-download.edrawsoft.cn/EdrawMax_${pkgver}_cn.deb")
-source_x86_64=("${pkgname}-${pkgver}.deb::https://cc-download.edrawsoft.cn/archives/edrawmax_cn_full5374.deb")
-sha256sums_x86_64=('e1c7e2eff3b72db4ac712e9d3750b37b3ee255b86f1ed30c6e57f7438bdd5d06')
+source_x86_64=("${pkgname}-${pkgver}.deb::https://cc-download.wondershare.cc/prd/edrawmax_full5374.deb")
+sha256sums_x86_64=('4f6a3842a4c1393f442abebe22823f5e97d9f1d5198e3194f4972112cbf95692')
 
 package() {
     bsdtar -xf "${srcdir}/data.tar.xz" --numeric-owner -C ${pkgdir}
     chown -R root:root ${pkgdir}
-    install -dm755 "${pkgdir}/usr/bin/"
-    ln -sf "/opt/${_pkgname}/EdrawMax" "${pkgdir}/usr/bin/edrawmax"
+    install -dm0755 "${pkgdir}/usr/bin/"
+    #     /opt/apps/edrawmax/EdrawMax
+    ln -sf "/opt/apps/${pkgname%-cn}/${pkgname%-cn}.sh" "${pkgdir}/usr/bin/${pkgname%-cn}"
 }
