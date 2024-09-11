@@ -3,7 +3,7 @@
 pkgbase=mcu-jlink-pack
 pkgname=({airmcu,mcu,hkmicrochip,holtek,nationstech,py32}-jlink-pack)
 pkgver=r8.94c90db
-pkgrel=2
+pkgrel=3
 epoch=
 arch=('any')
 url="https://github.com/taotieren/mcu-jlink-pack"
@@ -75,7 +75,7 @@ package_airmcu-jlink-pack() {
 
     install -dm0755 "${pkgdir}/opt/$_path/"
 
-    mv "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/FLM/AIR32F10X_1024.FLM "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/FLM/Air32F10X_1024.FLM
+    mv -f "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/FLM/AIR32F10X_1024.FLM "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/FLM/Air32F10X_1024.FLM
 
     cp -rv "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/* "${pkgdir}/opt/$_path/"
 
