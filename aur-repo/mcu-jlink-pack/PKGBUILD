@@ -27,12 +27,12 @@ source=("${pkgbase}::git+${url}.git"
     "py32-jlink-pack.install")
 noextract=()
 sha256sums=('SKIP'
-    'SKIP'
-    '42a0931b0b5f6c84655fe6aace1902abde56b7fee42b2147ee3364789d6389d2'
-    'a526e928d9c5f57a05e7f938818c66504409809b9614c5450bc7c15c8b12871a'
-    '5453ba72d95c28241b5e8af002ce601ee6cf7749023256598457df219659326a'
-    '2281486bc2005550ff062e9788aff466d6b7d438551d97202c15579b7f344630'
-    '9e580eb5f854343c2f2d9c1a289911b4f5d275d841d5bf91d966f1716e9ec487')
+            'SKIP'
+            '42a0931b0b5f6c84655fe6aace1902abde56b7fee42b2147ee3364789d6389d2'
+            'a526e928d9c5f57a05e7f938818c66504409809b9614c5450bc7c15c8b12871a'
+            '5453ba72d95c28241b5e8af002ce601ee6cf7749023256598457df219659326a'
+            '2281486bc2005550ff062e9788aff466d6b7d438551d97202c15579b7f344630'
+            '9e580eb5f854343c2f2d9c1a289911b4f5d275d841d5bf91d966f1716e9ec487')
 
 prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
@@ -72,6 +72,8 @@ package_airmcu-jlink-pack() {
     _path=$_name/$_aname
 
     install -dm0755 "${pkgdir}/opt/$_path/"
+
+    sed -i 's|Air32F10X_1024|AIR32F10X_1024|g' "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/Air32/Devices.xml
 
     cp -rv "${srcdir}"/${pkgbase}/AirMCU-Jlink/$_aname/* "${pkgdir}/opt/$_path/"
 
