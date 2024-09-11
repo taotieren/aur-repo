@@ -9,7 +9,9 @@ arch=('any')
 url="https://github.com/taotieren/mcu-jlink-pack"
 license=('custom' 'Commercial' 'MIT')
 groups=()
-depends=("jlink-software-and-documentation>=7.62")
+depends=(
+    bash
+    "jlink-software-and-documentation>=7.62")
 makedepends=(git)
 checkdepends=()
 optdepends=()
