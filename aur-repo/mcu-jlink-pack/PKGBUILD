@@ -18,7 +18,7 @@ optdepends=()
 conflicts=()
 replaces=()
 backup=()
-options=()
+options=('!strip' '!debug' '!lto')
 changelog=
 source=("${pkgbase}::git+${url}.git"
     "AirMCU-Jlink::git+https://github.com/Air-duino/AirMCU-Jlink.git"
