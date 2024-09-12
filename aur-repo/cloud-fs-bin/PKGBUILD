@@ -2,8 +2,8 @@
 
 pkgbase=cloud-fs-bin
 pkgname=clouddrive
-pkgver=0.7.15
-pkgrel=1
+pkgver=0.7.16
+pkgrel=0
 epoch=2
 pkgdesc="CloudDrive - Unlocking the Unlimited Possibilities of Cloud Storage"
 arch=('x86_64' 'aarch64')
@@ -28,8 +28,8 @@ source=("LICENSE.html::https://raw.githubusercontent.com/cloud-fs/cloud-fs.githu
     "${pkgname}-${epoch}-aarch64-${pkgver}.tgz::${url}/releases/download/v${pkgver}/${pkgname}-${epoch}-linux-aarch64-${pkgver}.tgz")
 sha256sums=('c336f41e259916212c7fdd3e21a26a2faf94d725b5daf686bca501978efbf17e'
             '32d37f9ab2f20170c8938a7bf3349eac152f4ee663f2c630be3ca966f50300bc'
-            'c2efdff1d25a97871378ce4f14cde434da2cdf02ad5290650c16037cbfc11a30'
-            '34dedf7c75b2b7d758e6d3559df3968a1c25baf6775cfccb549276ee0bd38790')
+            'fd0a4cf483ad3dd78d9047022d9ea91573955bbd17ada07d1634b6f58575ac87'
+            '8f02564b0510eadfea905bd62510ac413797210e67ea097a966f295646cddd62')
 noextract=(
     ${pkgname}-${epoch}-x86_64-${pkgver}.tgz
     ${pkgname}-${epoch}-aarch64-${pkgver}.tgz)
@@ -44,11 +44,11 @@ package() {
 
     bsdtar -xf "${pkgname}-${epoch}-${CARCH}-${pkgver}.tgz" --strip-components=2 -C ${pkgdir}/${_install_path}
 
-#     sed -i 's/\\//g' "${pkgdir}/${_install_path}"/wwwroot/*.js
+    #     sed -i 's/\\//g' "${pkgdir}/${_install_path}"/wwwroot/*.js
 
     chown -R root:root ${pkgdir}/${_install_path}
 
-    install -Dm755 /dev/stdin  "${pkgdir}/usr/bin/${pkgname}" << EOF
+    install -Dm755 /dev/stdin "${pkgdir}/usr/bin/${pkgname}" <<EOF
 #!/usr/bin/env bash
 
 LOCAL_ROOT_PATH="/media/clouddrive"
@@ -58,7 +58,7 @@ cd /opt/clouddrive
 ./clouddrive
 EOF
 
-    install -Dm644 /dev/stdin  "${pkgdir}/usr/lib/systemd/system/${pkgname}.service" << EOF
+    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/systemd/system/${pkgname}.service" <<EOF
 [Unit]
 Description="CloudDrive"
 Wants=network-online.target
@@ -73,7 +73,7 @@ ExecStart=clouddrive
 WantedBy=multi-user.target
 EOF
 
-    install -Dm644 /dev/stdin  "${pkgdir}/usr/lib/systemd/system/media-${pkgname}-dav.service" << EOF
+    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/systemd/system/media-${pkgname}-dav.service" <<EOF
 [Unit]
 Description=Mount WebDAV filesystem after clouddrive.service
 Wants=network-online.target clouddrive.service
@@ -92,7 +92,7 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 EOF
 
-    install -Dm644 /dev/stdin "${pkgdir}/etc/systemd/system/docker.service.d/clear_mount_propagation_flags_clouddrive.conf" << EOF
+    install -Dm644 /dev/stdin "${pkgdir}/etc/systemd/system/docker.service.d/clear_mount_propagation_flags_clouddrive.conf" <<EOF
 [Service]
 MountFlags=shared
 EOF
