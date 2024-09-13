@@ -19,6 +19,7 @@ _pydeps=(
     rich
     trogon)
 depends=(
+    bash
     python
     "${_pydeps[@]/#/python-}")
 _pymakedeps=(
@@ -32,6 +33,7 @@ _pymakedeps=(
 makedepends=(
     flake8
     git
+    gettext
     "${_pymakedeps[@]/#/python-}")
 optdepends=('vim: Default change to software source editor')
 checkdepends=(python-pytest)
@@ -49,24 +51,25 @@ prepare() {
 
 pkgver() {
     cd "${srcdir}/${_name}"
-    ( set -o pipefail
+    (
+        set -o pipefail
         git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
     )
 }
 
 build() {
     cd "${srcdir}/${_name}"
     flake8 ./${_name} --count --show-source --statistics
-    black ./${_name} --check  --verbose .
+    black ./${_name} --check --verbose .
     python -m build --wheel --no-isolation
 }
 
-# check() {
-#     cd "${srcdir}/${_name}"
-# #     pytest
-#     PYTHONPATH=. pytest -k 'not test_cli'
-# }
+check() {
+    cd "${srcdir}/${_name}"
+    #     pytest
+    PYTHONPATH=. pytest -k 'not test_cli'
+}
 
 package() {
     cd "${srcdir}/${_name}"
