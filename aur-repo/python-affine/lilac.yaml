@@ -1,8 +1,8 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['daizhirui'])
+pre_build_script: aur_pre_build(maintainers=['2bluesc'])
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: python-pytest-runner
+    aur: python-affine
   - alias: python
