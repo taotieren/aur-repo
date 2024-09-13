@@ -26,10 +26,8 @@ makedepends=(git
     qt5-tools
     pkgconf)
 optdepends=()
-source=("${pkgname}::git+${url}.git"
-    "git+https://github.com/ma6254/qdap_chips")
-sha256sums=('SKIP'
-    'SKIP')
+source=("${pkgname}::git+${url}.git")
+sha256sums=('SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
