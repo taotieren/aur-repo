@@ -15,7 +15,6 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
     bash
-    rsync
 
     gcc-libs
     glibc
@@ -27,12 +26,13 @@ makedepends=(git
     cmake
     ninja
     qt5-tools
+    rsync
     pkgconf)
 optdepends=()
 source=("${pkgname}::git+${url}.git"
     "git+https://github.com/ma6254/qdap_chips.git")
 sha256sums=('SKIP'
-    'SKIP')
+            'SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -61,7 +61,8 @@ build() {
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/build install
     install -dm0755 "${pkgdir}/usr/share/${pkgname%-git}/chips"
-    rsync -av --exclude='.*' ${srcdir}/qdap_chips ${pkgdir}/usr/share/${pkgname%-git}/chips/
+    cd ${srcdir}/qdap_chips
+    rsync -av --exclude='.*' . ${pkgdir}/usr/share/${pkgname%-git}/chips/
     mv ${pkgdir}/usr/bin/QDAP "${pkgdir}/usr/share/${pkgname%-git}/"
     install -Dm755 /dev/stdin "${pkgdir}/usr/bin/${pkgname%-git}" <<EOF
 #!/usr/bin/env bash
