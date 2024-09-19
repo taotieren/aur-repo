@@ -35,19 +35,6 @@ install=
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 sha256sums=('e3b6137c0f9b55acc7c9298bb745079a20adf39ac62d58b4bf5d45f836109343')
 
-# prepare() {
-#   cd "$srcdir/$_name-$pkgver"
-# }
-
-# build() {
-#   cd "$srcdir/$_name-$pkgver"
-#   python setup.py build
-# }
-#
-# package() {
-#   cd "$srcdir/$_name-$pkgver"
-#   python setup.py install --root="$pkgdir/" --skip-build --optimize=1
-# }
 build() {
   cd "${srcdir}/${_name}-${pkgver}"
   python -m build --wheel --no-isolation
