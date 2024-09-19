@@ -2,8 +2,8 @@
 
 pkgbase=qdap-git
 pkgname=qdap-git
-pkgver=r38.e3bf1fe
-pkgrel=2
+pkgver=r39.4f3d58b
+pkgrel=1
 groups=()
 pkgdesc="cmsis-dap upper by a Qt"
 arch=(x86_64
@@ -14,6 +14,7 @@ license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
+    bash
     gcc-libs
     glibc
     libusb
