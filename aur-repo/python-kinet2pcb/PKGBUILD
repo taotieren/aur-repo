@@ -3,7 +3,7 @@
 pkgname=python-kinet2pcb
 _name=${pkgname#python-}
 pkgver=1.1.2
-pkgrel=0
+pkgrel=1
 epoch=
 pkgdesc="Convert KiCad netlist into a PCBNEW .kicad_pcb file."
 arch=('any')
