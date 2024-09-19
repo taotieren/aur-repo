@@ -50,6 +50,8 @@ package() {
 if [ -d /usr/share/kicad/symbols/ ]; then
   export KICAD_SYMBOL_DIR="/usr/share/kicad/symbols"
   export KICAD8_SYMBOL_DIR="/usr/share/kicad/symbols"
+  export KICAD7_SYMBOL_DIR="/usr/share/kicad/symbols"
+  export KICAD6_SYMBOL_DIR="/usr/share/kicad/symbols"
 fi
 
 export PATH
