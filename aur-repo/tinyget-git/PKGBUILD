@@ -17,6 +17,7 @@ _pydeps=(
     click
     requests
     rich
+    scripts
     trogon)
 depends=(
     bash
