@@ -18,11 +18,11 @@ depends=(
     bash
     gcc-libs
     glibc
-    #     nlohmann-json
 )
 makedepends=(
     git
     cmake
+    nlohmann-json
     ninja)
 optdepends=()
 checkdepends=()
