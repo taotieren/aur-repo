@@ -24,7 +24,7 @@ makedepends=(
     cmake
     nlohmann-json
     ninja)
-optdepends=()
+optdepends=("buildroot-meta: dependency requirements for buildroot")
 checkdepends=()
 options=()
 source=(${pkgname}::git+$url.git)
