@@ -3,7 +3,7 @@
 pkgbase=purc
 pkgname=purc
 pkgver=0.9.19
-pkgrel=2
+pkgrel=3
 pkgdesc="The prime HVML interpreter for C/C++ Language."
 arch=(x86_64
     aarch64
@@ -32,17 +32,17 @@ replaces=(domruler
 depends=(glib2
     glibc)
 makedepends=(
-#     avahi
-#     nss-mdns
+    #     avahi
+    #     nss-mdns
     bison
     cmake
-#     cython
+    #     cython
     flex
     git
     ninja
     ccache
     curl
-#     gcc
+    #     gcc
     clang
     llvm
     gcc-libs
@@ -62,7 +62,7 @@ makedepends=(
     libsoup3
     linux-api-headers
     icu
-#     libmariadbclient
+    #     libmariadbclient
     openssl
     sqlite
     systemd
@@ -82,23 +82,29 @@ sha256sums=('2a7a9cf8e7161f4da1ee453b59f110b276eb01082b84fa5fb0031ced668de13b')
 options=()
 
 build() {
+    export LDFLAGS="-L/lib64"
+    if test -n "$LD_LIBRARY_PATH"; then
+        export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/lib64"
+    else
+        export LD_LIBRARY_PATH=/lib64
+    fi
     cd "${srcdir}/PurC-ver-${pkgver}/"
 
-#     sed -i  's|0 9 13|0 9 14|g' CMakeLists.txt
+    #     sed -i  's|0 9 13|0 9 14|g' CMakeLists.txt
 
-# see：https://wiki.archlinux.org/title/CMake_package_guidelines
-# gcc build
-#     cmake -DCMAKE_BUILD_TYPE=Release \
-#     cmake -DCMAKE_BUILD_TYPE=None \
-#         -DPORT=Linux \
-#         -DENABLE_CHINESE_NAMES=ON \
-#         -DCMAKE_INSTALL_PREFIX=/usr \
-#         -DCMAKE_INSTALL_LIBDIR=lib \
-#         -DCMAKE_INSTALL_LIBEXECDIR=lib \
-#         -B build \
-#         -G Ninja
+    # see：https://wiki.archlinux.org/title/CMake_package_guidelines
+    # gcc build
+    #     cmake -DCMAKE_BUILD_TYPE=Release \
+    #     cmake -DCMAKE_BUILD_TYPE=None \
+    #         -DPORT=Linux \
+    #         -DENABLE_CHINESE_NAMES=ON \
+    #         -DCMAKE_INSTALL_PREFIX=/usr \
+    #         -DCMAKE_INSTALL_LIBDIR=lib \
+    #         -DCMAKE_INSTALL_LIBEXECDIR=lib \
+    #         -B build \
+    #         -G Ninja
 
-# clang build
+    # clang build
     cmake -DCMAKE_BUILD_TYPE=None \
         -DPORT=Linux \
         -DENABLE_CHINESE_NAMES=ON \
