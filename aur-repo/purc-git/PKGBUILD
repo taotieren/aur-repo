@@ -32,7 +32,7 @@ replaces=(domruler
 depends=(glib2
     glibc)
 makedepends=(
-#     avahi
+    #     avahi
     bison
     cmake
     flex
@@ -40,7 +40,7 @@ makedepends=(
     ninja
     ccache
     curl
-#     gcc
+    #     gcc
     clang
     llvm
     gperf
@@ -59,7 +59,7 @@ makedepends=(
     libsoup3
     linux-api-headers
     icu
-#     libmariadbclient
+    #     libmariadbclient
     openssl
     sqlite
     systemd
@@ -83,28 +83,33 @@ pkgver() {
     git describe --long --tags | sed 's/ver.//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
 build() {
+    export LDFLAGS="-L/lib64"
+    if test -n "$LD_LIBRARY_PATH"; then
+        export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/lib64"
+    else
+        export LD_LIBRARY_PATH=/lib64
+    fi
     cd "${srcdir}/${pkgname}"
 
-#     sed -i 's|0 9 14|0 9 15|g' CMakeLists.txt
-# see：https://wiki.archlinux.org/title/CMake_package_guidelines
-#     cmake -DCMAKE_BUILD_TYPE=Release \
-# gcc build
-#     cmake -DCMAKE_BUILD_TYPE=None \
-#         -DPORT=Linux \
-#         -DENABLE_CHINESE_NAMES=ON \
-#         -DCMAKE_INSTALL_PREFIX=/usr \
-#         -DCMAKE_INSTALL_LIBDIR=lib \
-#         -DCMAKE_INSTALL_LIBEXECDIR=lib \
-#         -B build \
-#         -G Ninja
+    #     sed -i 's|0 9 14|0 9 15|g' CMakeLists.txt
+    # see：https://wiki.archlinux.org/title/CMake_package_guidelines
+    #     cmake -DCMAKE_BUILD_TYPE=Release \
+    # gcc build
+    #     cmake -DCMAKE_BUILD_TYPE=None \
+    #         -DPORT=Linux \
+    #         -DENABLE_CHINESE_NAMES=ON \
+    #         -DCMAKE_INSTALL_PREFIX=/usr \
+    #         -DCMAKE_INSTALL_LIBDIR=lib \
+    #         -DCMAKE_INSTALL_LIBEXECDIR=lib \
+    #         -B build \
+    #         -G Ninja
 
-# clang llvm build
+    # clang llvm build
     cmake -DCMAKE_BUILD_TYPE=None \
         -DPORT=Linux \
         -DENABLE_CHINESE_NAMES=ON \
