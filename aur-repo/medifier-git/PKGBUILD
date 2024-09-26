@@ -3,8 +3,8 @@
 
 _pkgname=mEDIFIER
 pkgname=medifier-git
-pkgver=0.2.1.r1.g5d5b766
-pkgrel=4
+pkgver=0.2.1.r2.g10056b5
+pkgrel=1
 pkgdesc="An open-source alternative to the Edifier Connect app"
 arch=(x86_64
     aarch64
