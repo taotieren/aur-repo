@@ -3,7 +3,7 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers=['lainpants'])
 post_build: aur_post_build
 update_on:
-  - source: github
-    github: anthonix/ffts
   - source: aur
     aur: ffts-git
+  - source: github
+    github: anthonix/ffts
