@@ -4,6 +4,7 @@ pre_build_script: aur_pre_build(maintainers=['bilibili_xiaok', 'little_sheepycn'
 post_build: aur_post_build
 repo_depends:
   - electron21
+  - electron21-bin
 update_on:
   - source: aur
     aur: bilibili-bin
