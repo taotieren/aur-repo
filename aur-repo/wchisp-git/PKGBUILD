@@ -42,9 +42,9 @@ build() {
 }
 
 check() {
-  cd "${srcdir}/${pkgname}/"
-  # Tests need nightly features
-  RUSTC_BOOTSTRAP=1 cargo test --release
+    cd "${srcdir}/${pkgname}/"
+    # Tests need nightly features
+    RUSTC_BOOTSTRAP=1 cargo test --release
 }
 
 package() {
