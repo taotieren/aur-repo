@@ -2,8 +2,8 @@
 
 pkgbase=qdap-git
 pkgname=qdap-git
-pkgver=r39.4f3d58b
-pkgrel=5
+pkgver=r40.fb98da5
+pkgrel=1
 groups=()
 pkgdesc="cmsis-dap upper by a Qt"
 arch=(x86_64
