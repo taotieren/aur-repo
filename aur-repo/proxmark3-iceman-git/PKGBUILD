@@ -22,8 +22,8 @@ makedepends=('git'
   'readline'
   'bzip2'
   'lz4'
-#   'lua'
-#   'libwhereami'
+  #   'lua'
+  #   'libwhereami'
 )
 # checkdepends=(
 #   python-pyopenssl
@@ -38,31 +38,33 @@ replaces=($pkgname'-generic' $pkgname'-rdv4')
 source=("$pkgname::git+${url}.git"
   "${pkgname}.install")
 sha512sums=('SKIP'
-            'dd9b4a37918fcd2a646090b1805de159ec05fec337f14aac09ff476c164551d94c16085bae19be8a1f8f3eb66c0470f98b728f3bf1b48a7ab5b94f99e753afe7')
+  'dd9b4a37918fcd2a646090b1805de159ec05fec337f14aac09ff476c164551d94c16085bae19be8a1f8f3eb66c0470f98b728f3bf1b48a7ab5b94f99e753afe7')
 install=${pkgname}.install
 
 pkgver() {
-    cd "${srcdir}/${pkgname}"
-    ( set -o pipefail
-        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
-    )
+  cd "${srcdir}/${pkgname}"
+  (
+    set -o pipefail
+    git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+  )
 }
 
-prepare()
-{
-    git -C "${srcdir}/${pkgname}" clean -dfx
+prepare() {
+  git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
 build() {
   export DESTDIR="build"
   export PREFIX="/usr"
   export UDEV_PREFIX="/usr/lib/udev/rules.d"
-  
+
   cd "${srcdir}/${pkgname}"
 
+  sed -i 's|PLATFORM=PM3OTHER|PLATFORM=PM3GENERIC|g' common_arm/Makefile.hal
+
   mkdir "$DESTDIR"
- 
+
   STANDALONE_MODES=(
     'LF_SKELETON'
     'LF_EM4100EMUL'
@@ -88,7 +90,7 @@ build() {
     'HF_UNISNIFF'
     'HF_YOUNG'
     'DANKARMULTI'
-    )
+  )
   RDV4_STANDALONE_MODES=(
     'LF_HIDFCBRUTE'
     'LF_ICEHID'
@@ -102,8 +104,8 @@ build() {
     'HF_LEGICSIM'
     'HF_MFCSIM'
     'HF_REBLAY'
-    )
- 
+  )
+
   # Build recovery (without PLATFORM_EXTRAS and STANDALONE)
   make \
     PLATFORM="PM3RDV4" STANDALONE= FWTAG="rdv4-nostandalone" recovery/install
@@ -116,21 +118,21 @@ build() {
   # Build various firmwares
   for standalone in ${STANDALONE_MODES[@]}; do
 
-      make \
-        PLATFORM="PM3RDV4" PLATFORM_EXTRAS="BTADDON" STANDALONE="${standalone}" \
-        FWTAG="rdv4-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
+    make \
+      PLATFORM="PM3RDV4" PLATFORM_EXTRAS="BTADDON" STANDALONE="${standalone}" \
+      FWTAG="rdv4-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
 
-      make \
-        PLATFORM="PM3OTHER" STANDALONE="${standalone}" \
-        FWTAG="other-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
+    make \
+      PLATFORM="PM3OTHER" STANDALONE="${standalone}" \
+      FWTAG="other-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
 
   done
 
   for standalone in ${RDV4_STANDALONE_MODES[@]}; do
 
-      make \
-        PLATFORM="PM3RDV4" PLATFORM_EXTRAS="BTADDON" STANDALONE="${standalone}" \
-        FWTAG="rdv4-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
+    make \
+      PLATFORM="PM3RDV4" PLATFORM_EXTRAS="BTADDON" STANDALONE="${standalone}" \
+      FWTAG="rdv4-"$(echo ${standalone} | tr '[:upper:]' '[:lower:]') armsrc/install
 
   done
 
