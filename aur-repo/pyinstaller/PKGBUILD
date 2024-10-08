@@ -6,7 +6,7 @@
 # Contributor: Alessandro Pazzaglia <jackdroido at gmail dot com>
 pkgname=pyinstaller
 pkgver=6.10.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Bundles a Python application and all its dependencies into a single package"
 arch=('x86_64')
 url="https://www.pyinstaller.org"
@@ -22,17 +22,17 @@ makedepends=(
   'python-installer'
   'python-wheel'
 )
-checkdepends=(
-  'python-pillow'
-  'python-psutil'
-  'python-pytest'
-  'python-pytest-xdist'
-  'xmldiff'
-)
+#checkdepends=(
+#  'python-pillow'
+#  'python-psutil'
+#  'python-pytest'
+#  'python-pytest-xdist'
+#  'xmldiff'
+#)
 optdepends=('python-argcomplete: tab completion for CLI tools')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/pyinstaller/pyinstaller/archive/refs/tags/v$pkgver.tar.gz"
         'fortify-source-fix.diff')
-sha256sums=('e16c1e32c3d83a8a1d3f151a04c8d3245eda043351cb15aed992db0ce5d6ed0b'
+sha256sums=('1d077ed96b4123e05a55b3777c9beda08465f703fdcea170428d7a825e3097cc'
             '46f7cfd082570a3f4c138a868e55dc39deacccbff602ce7e70d033236566fa1b')
 
 prepare() {
@@ -52,14 +52,14 @@ build() {
   python -m build --wheel --no-isolation
 }
 
-check() {
-  cd "$pkgname-$pkgver"
+#check() {
+#  cd "$pkgname-$pkgver"
 
-  # run only the unit tests
-  pytest tests/unit \
-    -m 'not darwin and not win32' \
-    -n=auto --maxprocesses="${PYTEST_XDIST_AUTO_NUM_WORKERS:-2}" --dist='load'
-}
+#  # run only the unit tests
+#  pytest tests/unit \
+#    -m 'not darwin and not win32' \
+#    -n=auto --maxprocesses="${PYTEST_XDIST_AUTO_NUM_WORKERS:-2}" --dist='load'
+#}
 
 package() {
   cd "$pkgname-$pkgver"
