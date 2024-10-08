@@ -1,25 +1,20 @@
 maintainers:
   - github: taotieren
-
 build_prefix: extra-x86_64
-
 pre_build: vcs_update
-
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-
 repo_depends:
   - bwidget
   - libmodbus
   - tclx
   - tkimg
   - python-yapps2
-  - python-pyodbc
-  - gtksourceview2
   - linkchecker
+  # - python-pyodbc
+  # - gtksourceview2
   # - python-espeak
-
 update_on:
   - source: github
     github: LinuxCNC/linuxcnc
