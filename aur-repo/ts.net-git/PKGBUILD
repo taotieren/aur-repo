@@ -2,7 +2,7 @@
 
 pkgname=ts.net-git
 pkgver=r213.ea6fa52
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Thunderscope-compatible PC-host software written in C# using high-performing primitives & SIMD."
 arch=("x86_64" "aarch64")
