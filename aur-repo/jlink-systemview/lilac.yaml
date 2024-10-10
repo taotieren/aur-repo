@@ -1,14 +1,10 @@
 maintainers:
   - github: taotieren
-
-pre_build_script: aur_pre_build(maintainers='AlexisPolti')
-
+pre_build_script: aur_pre_build(maintainers=['AlexisPolti', 'pzl'])
 post_build: aur_post_build
-
 repo_depends:
   - jlink-software-and-documentation
   - jlink-systemview-target-src
-
 update_on:
   - source: aur
     aur: jlink-systemview
