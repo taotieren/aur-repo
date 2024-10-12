@@ -14,7 +14,7 @@ makedepends=('git')
 source=("${pkgbase}::git+${url}.git"
     "ch343ser-dkms-git.install")
 sha256sums=('SKIP'
-            '7c771e89409ef645c859f685daf2ae5bb84984b8c83e216c4c4fbd26e05e823b')
+    '7c771e89409ef645c859f685daf2ae5bb84984b8c83e216c4c4fbd26e05e823b')
 options=(!strip !debug)
 
 pkgver() {
@@ -108,7 +108,7 @@ EOF
     install -Dm644 /dev/stdin "${pkgdir}/etc/modules-load.d/ch343.conf" <<EOF
 ch343
 EOF
-    install -Dm644 "${srcdir}/${pkgbase}/udev/99-ch34x.rules" -t "${pkgdir}/usr/lib/udev/rules.d/"
+    install -Dm644 "${srcdir}/${pkgbase}/udev/99-ch34x-arch.rules" -t "${pkgdir}/usr/lib/udev/rules.d/"
     # Blacklists conflicting module
     #     install -Dm644 /dev/stdin "${pkgdir}/usr/lib/modprobe.d/cdc_acm.conf" <<EOF
     # blacklist cdc_acm

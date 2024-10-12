@@ -5,6 +5,7 @@ info() {
     echo -e "Non-root users need to be added to the uucp usergroup:"
     echo -e "  sudo gpasswd -a \$USER uucp"
     udevadm control --reload
+    udevadm trigger
 }
 post_install() {
     info
