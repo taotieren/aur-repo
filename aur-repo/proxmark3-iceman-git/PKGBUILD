@@ -38,7 +38,7 @@ replaces=($pkgname'-generic' $pkgname'-rdv4')
 source=("$pkgname::git+${url}.git"
   "${pkgname}.install")
 sha512sums=('SKIP'
-            'dd9b4a37918fcd2a646090b1805de159ec05fec337f14aac09ff476c164551d94c16085bae19be8a1f8f3eb66c0470f98b728f3bf1b48a7ab5b94f99e753afe7')
+  'dd9b4a37918fcd2a646090b1805de159ec05fec337f14aac09ff476c164551d94c16085bae19be8a1f8f3eb66c0470f98b728f3bf1b48a7ab5b94f99e753afe7')
 install=${pkgname}.install
 
 pkgver() {
@@ -139,7 +139,7 @@ build() {
 
   # Build & install other targets
   #   make {client,bootrom,recovery,mfc_card_only,mfc_card_reader,mfd_aes_brute,fpga_compress,cryptorf,common,}/install
-  make all install
+  make install
 }
 
 # check() {
