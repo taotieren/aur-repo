@@ -1,14 +1,11 @@
 maintainers:
   - github: taotieren
-
+pre_build_script: aur_pre_build(maintainers=['taotieren', 'gynamics'])
 build_prefix: extra-x86_64
-
 pre_build: vcs_update
-
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-
 update_on:
   - source: github
     github: WCHSoftGroup/ch343ser_linux
