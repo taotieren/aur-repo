@@ -3,7 +3,7 @@
 pkgbase=jidugs-appimage
 pkgname=jidugs
 pkgver=1.4.3
-pkgrel=0
+pkgrel=1
 pkgdesc="极度公式 公式一键识别快速转换，几十项技术创新助力，快捷方便！"
 arch=('x86_64')
 url="https://jidugs.wlhex.com/"
