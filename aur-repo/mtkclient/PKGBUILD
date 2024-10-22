@@ -2,7 +2,7 @@
 
 pkgname=mtkclient
 pkgver=2.0.1.freeze
-pkgrel=1
+pkgrel=2
 pkgdesc="Unofficial MTK reverse engineering and flash tool"
 arch=('any')
 url="https://github.com/bkerler/mtkclient"
