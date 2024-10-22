@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=myip-git
-pkgver=0.4.9.r2.gc771a92
-pkgrel=2
+pkgver=0.5.1.r1.ge74c157
+pkgrel=1
 pkgdesc="Returns your public IP and the public IP to access the extranet."
 arch=(x86_64
     aarch64
