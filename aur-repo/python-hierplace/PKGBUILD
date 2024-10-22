@@ -3,7 +3,7 @@
 pkgname=python-hierplace
 _name=${pkgname#python-}
 pkgver=1.1.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="This PCBNEW plugin arranges the parts into groups that reflect the hierarchy in the design."
 arch=('any')
