@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=openixcard-git
-pkgver=1.1.8.r4.g1efa41d
-pkgrel=3
+pkgver=1.1.8.r6.gdc7efda
+pkgrel=1
 pkgdesc="Open Source Version of Allwinner PhoenixCard to Dump, Unpack, Flash Allwinner IMG Files on Linux"
 arch=(x86_64
     aarch64
