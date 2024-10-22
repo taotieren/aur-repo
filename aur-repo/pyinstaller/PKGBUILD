@@ -1,4 +1,5 @@
-# Maintainer: Mark Wagie <mark dot wagie at proton dot me>
+# Maintainer: 
+# Contributor: Mark Wagie <mark dot wagie at proton dot me>
 # Contributor: Sam <dev at samarthj dot com>
 # Contributor: Mehmet Ozgur Bayhan <mozgurbayhan at gmail.com>
 # Contributor: Thomas Quillan <tjquillan at gmail.com>
@@ -6,7 +7,7 @@
 # Contributor: Alessandro Pazzaglia <jackdroido at gmail dot com>
 pkgname=pyinstaller
 pkgver=6.10.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Bundles a Python application and all its dependencies into a single package"
 arch=('x86_64')
 url="https://www.pyinstaller.org"
