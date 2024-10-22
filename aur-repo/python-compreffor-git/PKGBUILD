@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-compreffor-git
-pkgver=0.5.5.r0.g639877c
-pkgrel=12
+pkgver=0.5.6.r0.ga10be24
+pkgrel=1
 pkgdesc='A CFF table subroutinizer for FontTools'
 url='https://github.com/googlefonts/compreffor'
 license=('Apache-2.0')
