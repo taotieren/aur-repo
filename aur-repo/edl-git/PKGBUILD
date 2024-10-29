@@ -4,7 +4,7 @@
 _pkgbase=edl
 pkgname=$_pkgbase-git
 pkgver=r562.cef0076
-pkgrel=1
+pkgrel=2
 pkgdesc="Inofficial Qualcomm Firehose / Sahara / Streaming / Diag Tools"
 arch=('any')
 url="https://github.com/bkerler/edl"
