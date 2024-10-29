@@ -52,7 +52,7 @@ package() {
 #!/usr/bin/env bash
 
 LOCAL_ROOT_PATH="/media/clouddrive"
-MAX_QSP_115=4.5
+MAX_QSP_115=2.5
 
 cd /opt/clouddrive
 ./clouddrive
