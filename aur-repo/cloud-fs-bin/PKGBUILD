@@ -68,7 +68,7 @@ After=network-online.target network.target
 
 [Service]
 Type=exec
-Environment="LOCAL_ROOT_PATH=/media/clouddrive"
+#Environment="LOCAL_ROOT_PATH=/media/clouddrive"
 ExecStart=clouddrive
 
 [Install]
