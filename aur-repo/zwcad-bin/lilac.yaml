@@ -2,6 +2,9 @@ maintainers:
   - github: taotieren
 pre_build_script: aur_pre_build(maintainers=['taotieren'])
 post_build: aur_post_build
+repo_depends:
+  - libldap24
+  - openssl-1.0
 update_on:
   - source: aur
     aur: zwcad-bin
