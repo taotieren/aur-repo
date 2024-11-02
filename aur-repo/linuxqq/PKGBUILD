@@ -2,8 +2,8 @@
 # Contributor: Integral <integral@member.fsf.org>
 
 pkgname=linuxqq
-pkgver=3.2.13_28971
-pkgrel=1
+pkgver=3.2.13_29271
+pkgrel=2
 epoch=5
 pkgdesc="New Linux QQ based on Electron"
 arch=('x86_64' 'aarch64' 'loong64')
@@ -12,14 +12,14 @@ license=('LicenseRef-QQ')
 conflicts=("${pkgname}-nt-bwrap")
 depends=('nss' 'alsa-lib' 'gtk3' 'gjs' 'at-spi2-core' 'libvips' 'openjpeg2' 'openslide')
 optdepends=('libappindicator-gtk3: Allow QQ to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library).')
-source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/5e6b23f8/linuxqq_${pkgver/_/-}_amd64.deb")
-source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/5e6b23f8/linuxqq_${pkgver/_/-}_arm64.deb")
-source_loong64=("https://dldir1.qq.com/qqfile/qq/QQNT/5e6b23f8/linuxqq_${pkgver/_/-}_loongarch64.deb")
+source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/a090850e/linuxqq_${pkgver/_/-}_amd64.deb")
+source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/a090850e/linuxqq_${pkgver/_/-}_arm64.deb")
+source_loong64=("https://dldir1.qq.com/qqfile/qq/QQNT/a090850e/linuxqq_${pkgver/_/-}_loongarch64.deb")
 source=("${pkgname}.sh")
 sha512sums=('f463c5cb3323b86d9ea312d75f1e53d064885dabde2d1d6a554e083e15b5ff7fc548a96670284e5e996456c7a2ce4a25e9acb80bf48459ea47a8813d62203cb4')
-sha512sums_x86_64=('ecc525ab8a9477b27ac7731c5a942d37cf9084de51383501e597776960c44a953920625c72f8a9917c527f5df4571079efccb3a7178bc7f5e1e124f306576377')
-sha512sums_aarch64=('398ee7ef1e7d8958e0dab7d02a551a9f94798fd4ff3cc7e273454be84e8753e371f72a2823e653663dbeb6b26a5fe5b403712732ed2d7baf5f763510ba35473f')
-sha512sums_loong64=('2f880ac6c2f25d246f6afb24ebf3750b56a1a6c0d963490ed463f0aaa9ad0ec1b4738305dd8472c36c9e89885dac480816a296eebc66e28095e99f785392bb6e')
+sha512sums_x86_64=('fff691cdf9bb4284244bbb35b24b6464404ae97aa63f34153a43673d038d9bb9bf3e08aa599b5a23a104da596e1a86f2f7282752db6fbfd95c51c1d1a685a641')
+sha512sums_aarch64=('3fc07f86165e765dd5674c9d7052c73b33d7aba7b1479135a4cf8d0ceb9a5a0f894884b050f3abf9d2d3aad837d92fb7b286bce6e20e2ce5b146cac1a36ab812')
+sha512sums_loong64=('94a3be7a4f399b85daf240fc09d84abcd09c32a283e4070b2fd4d829a6172863142d6ef76b190e955a0d3fe759c95614e3ee1fe578c606f8fe9c1899c78b4110')
 options=('!strip' '!debug')
 
 package() {
