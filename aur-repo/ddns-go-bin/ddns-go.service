@@ -1,0 +1,12 @@
+[Unit]
+Description=A simple, easy-to-use DDNS service
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/bin/ddns-go "-l" ":9876" "-f" "300" "-c" "/etc/ddns-go/ddns-go.yaml"
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
