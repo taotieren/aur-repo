@@ -1,8 +1,8 @@
 maintainers:
   - github: taotieren
-pre_build_script: |
-update_pkgver_and_pkgrel(_G.newver)
 build_prefix: extra-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -11,5 +11,6 @@ update_on:
     github: cloud-fs/cloud-fs.github.io
     use_latest_release: true
     prefix: v
-    # use_max_tag: true
-    # prefix: v
+
+# use_max_tag: true
+# prefix: v
