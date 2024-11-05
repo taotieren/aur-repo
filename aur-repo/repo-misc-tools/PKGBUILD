@@ -34,6 +34,5 @@ package() {
     install -Dm0755 cleanup-repo-tool.sh "${pkgdir}/usr/bin/cleanup-repo-tool"
     install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.service
     install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.timer
-    touch cleanup.log
-    install -Dm0755 -t "${pkgdir}/var/log/cleanup-repo-tool" cleanup.log
+    install -dm0755 "${pkgdir}/var/log/cleanup-repo-tool"
 }
