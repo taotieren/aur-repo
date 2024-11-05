@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=repo-misc-tools-git
-pkgver=1.3.2.r35.ga02562b
+pkgver=r2.96cd6eb
 pkgrel=1
 pkgdesc="repo miscellaneous tools"
 arch=(any)
@@ -9,10 +9,11 @@ url="https://github.com/taotieren/repo-misc-tools"
 license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=('libusb'
-    'systemd-libs')
+depends=('sh'
+    #     'systemd-libs'
+)
 makedepends=('git')
-source=("${pkgname%-git}::git+${url}.git")
+source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
 pkgver() {
@@ -31,6 +32,6 @@ prepare() {
 package() {
     cd "${srcdir}/${pkgname}/cleanup-repo-tools/"
     install -Dm0755 cleanup-repo-tool.sh "${pkgdir}/usr/bin/cleanup-repo-tool"
-    install -Dm0644 -t cleanup-repo-tool.service "${pkgdir}/usr/lib/systemd/system"
-    install -Dm0644 -t cleanup-repo-tool.timer "${pkgdir}/usr/lib/systemd/system"
+    install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.service
+    install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.timer
 }
