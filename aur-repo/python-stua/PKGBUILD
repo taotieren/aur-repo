@@ -3,7 +3,7 @@
 _pkgname=stua
 pkgname=python-stua
 pkgver=0.3.0
-pkgrel=3
+pkgrel=4
 pkgdesc="A collection of various shell scripts"
 arch=('any')
 url='https://github.com/rsalmaso/python-stua'
