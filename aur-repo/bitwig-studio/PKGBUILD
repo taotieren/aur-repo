@@ -4,7 +4,7 @@
 pkgname='bitwig-studio'
 pkgver='5.2.5'
 _pkgver='5.2.5'
-pkgrel=2
+pkgrel=3
 pkgdesc='Digital audio workstation for music production, remixing and live performance'
 arch=('x86_64')
 url='https://www.bitwig.com/'
