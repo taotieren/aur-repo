@@ -12,7 +12,7 @@ _pkgname="io.github.msojocs.${pkgname%-bin}"
 pkgver=1.14.2_1
 _electronversion=21
 epoch=5
-pkgrel=4
+pkgrel=5
 pkgdesc='哔哩哔哩官方客户端linux移植版。Bilibili official desktop client.Binary version.Use system-wide electron.'
 arch=(
     'aarch64'
