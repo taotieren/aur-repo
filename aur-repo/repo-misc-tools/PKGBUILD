@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=repo-misc-tools-git
-pkgver=r5.1c03f6f
-pkgrel=2
+pkgver=r7.e82cf22
+pkgrel=1
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
