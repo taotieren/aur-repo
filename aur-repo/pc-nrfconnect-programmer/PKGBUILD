@@ -2,7 +2,7 @@
 
 pkgname=pc-nrfconnect-programmer
 pkgver=4.4.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Programmer app for nRF Connect for Desktop"
 arch=('any')
