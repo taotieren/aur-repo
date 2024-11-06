@@ -2,7 +2,7 @@
 
 pkgname=myip-git
 pkgver=0.5.1.r1.ge74c157
-pkgrel=2
+pkgrel=3
 pkgdesc="Returns your public IP and the public IP to access the extranet."
 arch=(x86_64
     aarch64
