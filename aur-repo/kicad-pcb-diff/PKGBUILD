@@ -19,8 +19,8 @@ depends=(python
     poppler
     xdg-utils)
 makedepends=(python-{build,installer}
-             python-setuptools-scm
-             python-wheel)
+    python-setuptools-scm
+    python-wheel)
 optdepends=("kiauto-git: KiCad automation scripts.")
 provides=('kidiff' 'kicad-diff' 'kicad-pcb-diff' 'python-kidiff')
 conflicts=('kidiff' 'kicad-diff' 'kicad-pcb-diff' 'python-kidiff')
@@ -29,7 +29,7 @@ backup=()
 options=('!strip')
 install=
 changelog=
-source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/${_name}/${_name}-${pkgver}.tar.gz")
 noextract=()
 sha256sums=('11731c3a98d1e2973f59b9c6e3b8633724cf90af210c0e3aa611a4cdda83c451')
 #validpgpkeys=()
