@@ -3,7 +3,7 @@
 pkgbase=ttf-lxgw-wenkai-lite
 pkgname=(ttf-lxgw-wenkai-lite ttf-lxgw-wenkai-mono-lite)
 pkgver=1.500
-pkgrel=0
+pkgrel=1
 url="https://github.com/lxgw/LxgwWenKai-Lite"
 makedepends=('fontconfig')
 license=("OFL-1.1")
