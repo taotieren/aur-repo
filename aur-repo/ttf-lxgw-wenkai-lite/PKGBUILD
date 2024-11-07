@@ -9,7 +9,7 @@ makedepends=('fontconfig')
 license=("OFL-1.1")
 arch=(any)
 source=(
-    "lxgw-wenkai-lite-v$pkgver.tar.gz::${url}/releases/download/v$pkgver/lxgw-wenkai-lite-v$pkgver.tar.gz"
+    "lxgw-wenkai-lite-v$pkgver.tar.gz::${url}/releases/download/v${pkgver}/lxgw-wenkai-lite-v${pkgver}.tar.gz"
 )
 
 sha256sums=('e88f61579ad27b39a15f403fa7e0068d83fd33572fb814e2db950a2eb702a356')
