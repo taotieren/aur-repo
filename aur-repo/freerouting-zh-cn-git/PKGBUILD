@@ -45,8 +45,8 @@ build() {
     cd "${srcdir}/${pkgname%-git}"
     export PATH="/usr/lib/jvm/java-${_jdkver}-openjdk/bin:$PATH"
     #     chmod +x gradlew
-    #     ./gradlew assemble
-    ./gradlew dist
+    ./gradlew assemble
+    #     ./gradlew dist
 }
 
 package() {
