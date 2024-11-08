@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=mwtool-git
-pkgver=0.0.1.1.r1.ga8dc5f6
-pkgrel=2
+pkgver=0.0.1.1.r2.g880a266
+pkgrel=1
 pkgdesc="云固件配置工具箱"
 arch=('any')
 url="https://gitee.com/xish-cc/MWTool"
