@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=repo-misc-tools-git
-pkgver=r30.f7e0e70
+pkgver=r53.4407fc9
 pkgrel=1
 pkgdesc="repo miscellaneous tools"
 arch=(any)
