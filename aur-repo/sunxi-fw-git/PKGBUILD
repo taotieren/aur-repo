@@ -2,7 +2,7 @@
 
 pkgname=sunxi-fw-git
 pkgver=r23.60712ec
-pkgrel=2
+pkgrel=3
 pkgdesc="Allwinner firmware images decoding and extraction tool"
 arch=(aarch64
     x86_64
