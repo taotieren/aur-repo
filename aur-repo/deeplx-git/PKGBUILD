@@ -2,7 +2,7 @@
 
 pkgname=deeplx-git
 pkgver=0.9.8.3.r0.gede6229
-pkgrel=1
+pkgrel=2
 pkgdesc="DeepL Free API (No TOKEN required)"
 arch=(x86_64
     aarch64
