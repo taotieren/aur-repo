@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=wlink-git
-pkgver=0.1.0.r0.g42127dc
+pkgname=wlink
+pkgver=0.1.0
 pkgrel=1
 pkgdesc="wlink - WCH-Link(RV) command line tool"
 arch=(x86_64
@@ -9,8 +9,8 @@ arch=(x86_64
     riscv64)
 url="https://github.com/ch32-rs/wlink"
 license=('Apache-2.0' 'MIT')
-provides=(${pkgname%-git})
-conflicts=(${pkgname%-git})
+provides=(${pkgname})
+conflicts=(${pkgname})
 replaces=()
 depends=(
     gcc-libs
@@ -24,36 +24,22 @@ makedepends=(
 backup=()
 options=('!strip' '!debug')
 install=
-source=("${pkgname}::git+$url.git")
-sha256sums=('SKIP')
-
-prepare() {
-    cd "${srcdir}/${pkgname}/"
-    git tag --delete nightly
-}
-
-pkgver() {
-    cd "${srcdir}/${pkgname}"
-    (
-        set -o pipefail
-        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
-    )
-}
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('b0d28175c4895c5846fc840bef78d9ff35b59f5c54cf62a49ed6e749bbc0fccb')
 
 build() {
-    cd "${srcdir}/${pkgname}/"
+    cd "${srcdir}/${pkgname}-${pkgver}/"
     cargo build --release --all-features
 }
 
 check() {
-    cd "${srcdir}/${pkgname}/"
+    cd "${srcdir}/${pkgname}-${pkgver}/"
     # Tests need nightly features
     RUSTC_BOOTSTRAP=1 cargo test --release
 }
 
 package() {
-    cd "${srcdir}/${pkgname}/"
+    cd "${srcdir}/${pkgname}-${pkgver}/"
     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/50-wlink.rules" <<EOF
 SUBSYSTEM=="usb" ATTR{idVendor}="1a86" ATTR{idProduct}=="8010" MODE:="0666"
