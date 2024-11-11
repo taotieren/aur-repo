@@ -1,0 +1,3 @@
+[pyinstaller-hooks-contrib]
+source = "pypi"
+pypi = "pyinstaller-hooks-contrib"
