@@ -21,7 +21,7 @@ _pydeps=(
     pyftdi)
 depends=(
     python
-    "${_pymakedeps[@]/#/python-}")
+    "${_pydeps[@]/#/python-}")
 _pymakedeps=(
     build
     installer
