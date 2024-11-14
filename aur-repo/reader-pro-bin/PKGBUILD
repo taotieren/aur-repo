@@ -11,7 +11,7 @@ license=('GPL-3.0-or-later')
 groups=()
 depends=(sh
     java-runtime)
-makedepends=("gcc")
+makedepends=()
 checkdepends=()
 optdepends=()
 provides=(${pkgname%-bin})
