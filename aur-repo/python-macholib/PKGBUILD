@@ -1,4 +1,6 @@
 # Maintainer: JP Cimalando <jp-dev@inbox.ru>
+# Maintainer: taotieren <admin@taotieren.com>
+
 _name=macholib
 pkgbase=python-macholib
 pkgname=python-macholib
