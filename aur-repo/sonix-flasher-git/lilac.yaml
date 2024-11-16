@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['yjun'])
+post_build: aur_post_build
+repo_depends:
+  - python-altgraph
+  - python-fbs
+  - python-macholib
+update_on:
+  - source: github
+    github: SonixQMK/sonix-flasher
+  - source: aur
+    github: sonix-flasher-git
