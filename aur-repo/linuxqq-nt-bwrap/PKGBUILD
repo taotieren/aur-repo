@@ -2,27 +2,27 @@
 # Maintainer: sukanka
 
 _pkgname=linuxqq
-_base_pkgver=3.2.13_241104
+_base_pkgver=3.2.13_241112
 _update_pkgver=${_base_pkgver}
 _md5=08c52833
 pkgname=linuxqq-nt-bwrap
 pkgver="${_update_pkgver//-/_}"
-pkgrel=3
+pkgrel=1
 pkgdesc="New Linux QQ based on Electron, with bubblewrap sandbox and some tweaks"
-arch=('x86_64' 'aarch64' 'loong64' )
+arch=('x86_64' 'aarch64' 'loong64')
 url='https://im.qq.com/linuxqq/index.shtml'
 license=('custom')
 depends=('at-spi2-core' 'alsa-lib' 'desktop-file-utils' 'gtk3' 'gtk-update-icon-cache' 'libnotify' 'nss'
-		'gnutls' 'bubblewrap' 'xdg-user-dirs' 'flatpak-xdg-utils' 'snapd-xdg-open-git'
-		'libvips' 'openslide' 'autoconf'
-		'libunwind'
-		'iproute2'
-		)
+	'gnutls' 'bubblewrap' 'xdg-user-dirs' 'flatpak-xdg-utils' 'snapd-xdg-open-git'
+	'libvips' 'openslide' 'autoconf'
+	'libunwind'
+	'iproute2'
+)
 makedepends=('p7zip')
 optdepends=('libappindicator-gtk3: 以显示托盘图标'
-			'gjs: 提供 GNOME Wayland 下的截图支持'
-			'slirp4netns: 固定 MAC 地址时需要'
-			'socat: 固定 MAC 地址时需要')
+	'gjs: 提供 GNOME Wayland 下的截图支持'
+	'slirp4netns: 固定 MAC 地址时需要'
+	'socat: 固定 MAC 地址时需要')
 provides=('qq' 'linuxqq')
 conflicts=('linuxqq')
 options=('!emptydirs')
@@ -38,9 +38,9 @@ sha256sums=('2748a351259d378ab9773000cbf1ea0448de5ae92f28bb9e366fa795e1715739'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
             'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675')
-sha256sums_x86_64=('8efaac80fa06ba4f6b7d73f08f7b5dd029ce824d02efa25714ba0bf161ec1a26')
-sha256sums_aarch64=('1216b7ff0bdc03c21c2a18db7caacc3d09bf66320f1a02cf60469f4753587667')
-sha256sums_loong64=('bcee8b952db6e88ba4bff1068eb5a5ee006ded7a72aa9d01397a8b359e9b99d2')
+sha256sums_x86_64=('c9c18d8a12d871e980dfb3c6a464f98426a2ab99c3e0aba6a92305ed32a4e222')
+sha256sums_aarch64=('7805a778c2ba689515b9d41e9a06a76918839c41ad0dc241f73d0e21e8650f8f')
+sha256sums_loong64=('f9fcf68cf626ea26b22483fbfd52ceea3554e297d6c054692637aa513a50cd4a')
 
 prepare() {
 	local base_ver=${_base_pkgver}
