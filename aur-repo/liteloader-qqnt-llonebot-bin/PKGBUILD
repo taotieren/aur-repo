@@ -3,7 +3,7 @@
 pkgname='liteloader-qqnt-llonebot-bin'
 _pkgname='LiteLoaderQQNT-LLOneBot-bin'
 pkgver='4.1.2'
-pkgrel=1
+pkgrel=2
 pkgdesc='使你的NTQQ支持OneBot11协议进行QQ机器人开发 '
 arch=('any')
 url="https://github.com/LLOneBot/LLOneBot"
