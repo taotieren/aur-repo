@@ -14,12 +14,13 @@ depends=(
   boost-libs
   hicolor-icon-theme
   libusb
-  qt5-base
+  qt6-base
   fftw
   python)
 makedepends=(boost
   cmake
   git
+  qt6-tools
   ninja)
 source=("${pkgname}::git+https://github.com/DreamSourceLab/DSView") #branch=develop
 sha1sums=('SKIP')
