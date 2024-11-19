@@ -37,8 +37,6 @@ pkgver() {
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}"/${pkgname}/
-  sed 's|/usr/local/|/usr/|' -i DSView/DSView.desktop
-  sed 's| /lib/udev/rules.d| /usr/lib/udev/rules.d|' -i CMakeLists.txt
   sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
 
 }
