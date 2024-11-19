@@ -113,6 +113,7 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_CXX_COMPILER=clang++ \
         -DCMAKE_C_COMPILER=clang \
+        -Wno-dev \
         -B build \
         -G Ninja
 
