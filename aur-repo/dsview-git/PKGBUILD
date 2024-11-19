@@ -10,17 +10,18 @@ arch=(i686 x86_64)
 url='http://www.dreamsourcelab.com/'
 license=(GPL-3.0-only)
 # Upstream added VCS dependency to libsigrokdecode :/
+_qt=qt5
 depends=(
   boost-libs
   hicolor-icon-theme
   libusb
-  qt6-base
+  ${_qt}-base
   fftw
   python)
 makedepends=(boost
   cmake
   git
-  qt6-tools
+  ${_qt}-tools
   ninja)
 source=("${pkgname}::git+https://github.com/DreamSourceLab/DSView") #branch=develop
 sha1sums=('SKIP')
