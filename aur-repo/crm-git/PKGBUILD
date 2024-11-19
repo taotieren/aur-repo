@@ -8,7 +8,7 @@ arch=(x86_64
     aarch64
     riscv64)
 url="https://github.com/wtklbm/crm"
-license=('MIT' 'Apache-2.0')
+license=('MIT AND Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
@@ -27,8 +27,7 @@ pkgver() {
     git describe --long --tags | sed 's/v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname%-git}" clean -dfx
 }
 

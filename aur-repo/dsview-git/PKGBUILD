@@ -10,42 +10,57 @@ arch=(i686 x86_64)
 url='http://www.dreamsourcelab.com/'
 license=(GPL-3.0-only)
 # Upstream added VCS dependency to libsigrokdecode :/
-depends=(boost-libs
-    qt5-base
-    fftw 
-    python)
-makedepends=(boost 
-    cmake 
-    git 
-    ninja)
+depends=(
+  boost-libs
+  hicolor-icon-theme
+  libusb
+  qt5-base
+  fftw
+  python)
+makedepends=(boost
+  cmake
+  git
+  ninja)
 source=("${pkgname}::git+https://github.com/DreamSourceLab/DSView") #branch=develop
 sha1sums=('SKIP')
 
 pkgver() {
-  cd "${srcdir}"/${pkgname}/
-  git describe --tags | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
+  cd "${srcdir}/${pkgname}"
+  (
+    set -o pipefail
+    git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+  )
 }
 
 prepare() {
+  git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}"/${pkgname}/
   sed 's|/usr/local/|/usr/|' -i DSView/DSView.desktop
   sed 's| /lib/udev/rules.d| /usr/lib/udev/rules.d|' -i CMakeLists.txt
+  sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
 
 }
 
 build() {
   cd "${srcdir}"/${pkgname}/
-# see：https://wiki.archlinux.org/title/CMake_package_guidelines
-    cmake -DCMAKE_BUILD_TYPE=None \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib \
-        -DCMAKE_INSTALL_LIBEXECDIR=lib \
-        -B build \
-        -G Ninja
+  # see：https://wiki.archlinux.org/title/CMake_package_guidelines
+  cmake -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DCMAKE_INSTALL_LIBEXECDIR=lib \
+    -Wno-dev \
+    -B build \
+    -G Ninja
 
-    ninja -C build
+  ninja -C build
+}
+
+check() {
+  cd "${srcdir}"/${pkgname}/
+  ctest --test-dir build --output-on-failure
 }
 
 package() {
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
+  DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
 }
