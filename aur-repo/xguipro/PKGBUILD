@@ -30,7 +30,6 @@ depends=(
     glib2
     glibc
     harfbuzz
-    icu
     openssl
     pango
     purc
@@ -46,11 +45,11 @@ makedepends=(
     gperf
     base-devel
     ninja
+    icu
     ruby
     pkgconf
     clang
     llvm
-
     # xguipro-gtk3
     gtk3
     libsoup
