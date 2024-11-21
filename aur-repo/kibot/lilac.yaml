@@ -12,10 +12,12 @@ repo_depends:
   - python-kiauto
   - python-kibom
   - kicad-pcb-diff
+  - python-configparser
   - python-qrcodegen
   - rar
   - python-xvfbwrapper
   - python-svgpathtools
+  - python-pypdf2
 update_on:
   - source: pypi
     pypi: kibot

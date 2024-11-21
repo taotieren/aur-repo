@@ -26,6 +26,7 @@ depends=(
     python-kiauto
     python-kibom
     python-colorama
+    python-configparser
     python-lark-parser
     python-lxml
     python-kikit
@@ -33,9 +34,15 @@ depends=(
     python-markdown2
     python-mistune
     python-pyaml
+    python-pybars3
+    python-pypdf2
     python-qrcodegen
     python-requests
+    python-scipy
+    python-svgwrite
     python-svgpathtools
+    python-wheel
+    python-wxpython
     python-xlsxwriter
     python-xvfbwrapper
     python-yaml
