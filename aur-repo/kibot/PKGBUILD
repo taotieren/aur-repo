@@ -23,12 +23,12 @@ depends=(
     kicost
     pandoc
     python
-    python-kiauto
-    python-kibom
     python-colorama
     python-configparser
     python-lark-parser
     python-lxml
+    python-kiauto
+    python-kibom
     python-kikit
     python-numpy
     python-markdown2
