@@ -22,7 +22,6 @@ depends=(
     kicad-pcb-diff
     kicost
     pandoc
-    pcbdraw
     python
     python-kiauto
     python-kibom
@@ -41,7 +40,7 @@ depends=(
     python-xvfbwrapper
     python-yaml
     xorg-server-xvfb
-    )
+)
 makedepends=('python-build'
     'python-installer'
     'python-setuptools'
@@ -51,8 +50,8 @@ checkdepends=(python-pytest)
 optdepends=('kicad-interactivehtmlbom: Interactive HTML BOM generation plugin for KiCad'
     'kicad-library: KiCad symbol, footprint and template libraries'
     'kicad-library-3d: KiCad 3D model libraries')
-provides=(kibot)
-conflicts=(kibot kibot-git)
+provides=(kibot pcbdraw kibot-git)
+conflicts=(kibot pcbdraw kibot-git)
 replaces=()
 backup=()
 options=()
