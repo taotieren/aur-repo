@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=freerouting-zh-cn
-pkgver=2.0.0
-pkgrel=0
+pkgver=2.0.1
+pkgrel=1
 _jrever=21
 _jdkver=21
 pkgdesc="Advanced PCB autorouter"
@@ -27,7 +27,7 @@ backup=()
 options=('!strip' '!debug')
 #install=${pkgname}.install
 source=("${pkgname%-zh-cn}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=('cf53f471bd32e441fdefc80ffbe5010e2429f886cc0988b8223bfb85e161eefc')
+sha256sums=('f1545d9b67224989c4e47c8a29e434e19fc4743077d34088a8f670db8c97ec8c')
 
 build() {
     cd "${pkgname%-zh-cn}-${pkgver}"
