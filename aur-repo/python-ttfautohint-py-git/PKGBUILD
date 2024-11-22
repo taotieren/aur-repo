@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-ttfautohint-py-git
-pkgver=0.5.1.r2.g5b66ad2
-pkgrel=16
+pkgver=0.5.1.r4.g49dc9cb
+pkgrel=1
 pkgdesc='Python wrapper for ttfautohint, a free auto-hinter for TrueType fonts'
 url='https://github.com/fonttools/ttfautohint-py'
 license=('MIT')
