@@ -12,3 +12,5 @@ repo_depends:
 update_on:
   - source: github
     github: HVML/xGUI-Pro
+  - source: manual
+    manual: 1
