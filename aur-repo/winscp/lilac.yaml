@@ -1,0 +1,9 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['D3SOX'])
+post_build: aur_post_build
+update_on:
+  - source: aur
+    aur: winscp
+  - source: manual
+    manual: 1
