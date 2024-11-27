@@ -2,7 +2,7 @@
 
 pkgbase=ok-gloox-git
 pkgname=ok-gloox-git
-pkgver=r219.c79a505
+pkgver=r222.c2131e8
 pkgrel=1
 arch=(x86_64
     aarch64
