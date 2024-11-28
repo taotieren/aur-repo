@@ -9,7 +9,7 @@ repo_depends:
   - jlink-software-and-documentation
 update_on:
   - source: github
-    github: pylink
+    github: square/pylink
     use_latest_release: true
     prefix: v
   - alias: python
