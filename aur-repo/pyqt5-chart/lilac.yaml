@@ -1,7 +1,19 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers='andreas_baumann')
+# post_build: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: python-pyqt5-chart
+
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers='andreas_baumann')
-post_build: aur_post_build
+build_prefix: extra-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
 update_on:
-  - source: aur
-    aur: python-pyqt5-chart
+  - source: pypi
+    pypi: PyQtChart
+  - alias: python
