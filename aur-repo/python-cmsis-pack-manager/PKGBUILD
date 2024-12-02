@@ -2,7 +2,7 @@
 
 pkgname=python-cmsis-pack-manager
 _name="${pkgname#python-}"
-pkgver=rust.0.7.0.r1.ga312ce0
+pkgver=0.5.3.r21.ga312ce0
 pkgrel=1
 pkgdesc="A Rust and Python module for handling CMSIS Pack files"
 arch=(x86_64)
