@@ -3,7 +3,7 @@
 pkgname=python-pyspice
 _name=PySpice
 pkgver=1.5
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Simulate electronic circuit using Python and the Ngspice / Xyce simulators"
 arch=('any')
