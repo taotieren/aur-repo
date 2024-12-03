@@ -9,7 +9,8 @@ post_build_script: |
 update_on:
   - source: github
     github: Akimio521/MediaWarp
-    use_max_tag: true
+    use_latest_release: true
     prefix: v
-# use_latest_release: true
+
+# use_max_tag: true
 # prefix: v
