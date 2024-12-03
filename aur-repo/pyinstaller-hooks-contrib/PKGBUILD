@@ -3,7 +3,7 @@
 # Contributor: Sam <dev at samarthj dot com>
 pkgname=pyinstaller-hooks-contrib
 pkgver=2024.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Community maintained hooks for PyInstaller"
 arch=('any')
 url="https://github.com/pyinstaller/pyinstaller-hooks-contrib"
