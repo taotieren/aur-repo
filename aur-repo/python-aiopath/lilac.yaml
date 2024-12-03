@@ -6,5 +6,5 @@ repo_depends:
   - python-caio
 update_on:
   - source: aur
-    aur: python-aiofile
+    aur: python-aiopath
   - alias: python
