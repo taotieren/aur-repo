@@ -10,7 +10,7 @@
 _pkgname="sourcetrail"
 pkgname="$_pkgname"
 pkgver=2024.8.2
-pkgrel=5
+pkgrel=6
 pkgdesc='Interactive source explorer for C/C++ and Java'
 url='https://github.com/xiota/sourcetrail'
 license=('GPL-3.0-only')
