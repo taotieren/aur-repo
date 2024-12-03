@@ -13,5 +13,3 @@ update_on:
     github: HVML/xGUI-Pro
     use_max_tag: true
     prefix: ver-
-  - source: manual
-    manual: 1
