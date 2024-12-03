@@ -2,7 +2,7 @@
 
 pkgname=xunlei-bin
 pkgver=1.0.0.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Xunlei download, 迅雷"
 arch=("x86_64" "aarch64")
 url="https://www.xunlei.com/"
