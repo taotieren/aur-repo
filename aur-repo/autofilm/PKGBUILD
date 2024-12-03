@@ -3,7 +3,7 @@
 pkgname=autofilm
 _name=AutoFilm
 pkgver=1.2.5
-pkgrel=2
+pkgrel=0
 pkgdesc="A small project to provide Strm direct-link playback for Emby and Jellyfin servers, recommended for use with MediaWarp."
 arch=(x86_64
     aarch64
