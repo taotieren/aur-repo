@@ -1,19 +1,14 @@
 maintainers:
   - github: taotieren
-
 build_prefix: extra-x86_64
-
 pre_build: vcs_update
-
 # repo_depends:
 #   - icestorm-nightly
 #   - nextpnr-ice40-nightly
 #   - yosys-nightly
-
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-
 update_on:
   - source: github
     github: wuxx/icesugar
@@ -21,4 +16,3 @@ update_on:
     github: wuxx/icesugar-nano
   - source: github
     github: wuxx/icesugar-pro
-

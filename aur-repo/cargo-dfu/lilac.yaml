@@ -9,7 +9,8 @@ post_build_script: |
 update_on:
   - source: github
     github: dfu-rs/cargo-dfu
-    use_latest_release: true
+    use_max_tag: true
     prefix: v
-    # use_max_tag: true
-    # prefix: v
+
+# prefix: v
+# use_latest_release: true

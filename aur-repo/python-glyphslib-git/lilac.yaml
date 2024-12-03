@@ -1,20 +1,14 @@
 maintainers:
   - github: taotieren
-
-build_prefix: extra-x86_64
-
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
-
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-
 repo_depends:
   - python-openstep-plist-git
   - python-ufo2ft-git
   - python-ufonormalizer
-
 update_on:
   - source: github
     github: googlefonts/glyphsLib
