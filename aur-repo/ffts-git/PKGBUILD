@@ -1,7 +1,7 @@
 # Maintainer: lain <aur@hacktheinter.net>
 pkgname=ffts-git
 pkgver=r800.b22d839b61c
-pkgrel=4
+pkgrel=5
 pkgdesc="The Fastest Fourier Transform in the South"
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
