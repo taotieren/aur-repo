@@ -20,5 +20,3 @@ update_on:
   - source: regex
     url: "https://dfm.elecfans.com/downloads"
     regex: 'HQDFM v(\d+.\d+).zip'
-  - source: manual
-    manual: 1
