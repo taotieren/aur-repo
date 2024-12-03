@@ -3,7 +3,7 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers='yochananmarqos')
 post_build: aur_post_build
 repo_depends:
-  - python-caio
+  - python-aiofile
 update_on:
   - source: aur
     aur: python-aiopath
