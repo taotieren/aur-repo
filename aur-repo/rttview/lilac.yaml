@@ -11,5 +11,7 @@ repo_depends:
 update_on:
   - source: github
     github: XIVN1987/RTTView
-    use_latest_release: true
+    use_max_tag: true
+    # prefix: v
+    # use_latest_release: true
   - alias: python
