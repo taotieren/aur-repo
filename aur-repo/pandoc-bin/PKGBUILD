@@ -1,6 +1,6 @@
 pkgname=pandoc-bin
 pkgver=3.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Conversion between documentation formats"
 url="https://pandoc.org"
 license=("GPL-2.0-or-later")
