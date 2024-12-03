@@ -9,5 +9,3 @@ repo_depends:
 update_on:
   - source: aur
     aur: scopehal-apps-git
-  - source: github
-    github: glscopeclient/scopehal-apps
