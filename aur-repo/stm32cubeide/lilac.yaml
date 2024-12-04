@@ -5,6 +5,7 @@ post_build: aur_post_build
 repo_depends:
   - jlink-software-and-documentation
   - ncurses5-compat-libs
+  - stlink-server
 update_on:
   - source: aur
     aur: stm32cubeide
