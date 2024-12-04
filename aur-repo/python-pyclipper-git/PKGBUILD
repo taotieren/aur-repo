@@ -9,9 +9,9 @@ license=('MIT')
 arch=(any)
 depends=(python)
 makedepends=(cython
-             python-{build,installer,wheel,pip}
-             python-setuptools-scm
-             git)
+    python-{build,installer,wheel,pip}
+    python-setuptools-scm
+    git)
 checkdepends=(python-pytest)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
@@ -23,8 +23,7 @@ pkgver() {
     git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
@@ -43,4 +42,3 @@ package() {
     cd "$pkgname"
     python setup.py install --root="$pkgdir" --optimize=1 --skip-build
 }
-
