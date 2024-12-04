@@ -43,11 +43,10 @@ validpgpkeys=()
 
 pkgver() {
     cd "${srcdir}/${pkgname%-git}"
-    git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
+    git describe --long --tags | sed 's/^ontinuous_build//g;s/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname%-git}" clean -dfx
 }
 
@@ -55,8 +54,8 @@ build() {
     cd "${srcdir}/${pkgname%-git}"
 
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
-          -B build \
-          -G Ninja
+        -B build \
+        -G Ninja
 
     ninja -C build
 }
