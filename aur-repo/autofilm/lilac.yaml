@@ -1,25 +1,16 @@
-# maintainers:
-#   - github: taotieren
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
-# repo_depends:
-#   - pyinstaller
-# update_on:
-#   - source: github
-#     github: Akimio521/AutoFilm
-#     use_max_tag: true
-#     prefix: v
-# # use_latest_release: true
-# prefix: v
-
 maintainers:
   - github: taotieren
-build_prefix: extra-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - pyinstaller
 update_on:
   - source: github
     github: Akimio521/AutoFilm
     use_max_tag: true
-  - alias: python
+    prefix: v
+# use_latest_release: true
+# prefix: v
