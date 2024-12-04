@@ -1,16 +1,14 @@
 maintainers:
   - github: taotieren
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+pre_build_script: aur_pre_build(maintainers=['alerque'])
 repo_depends:
   - python-cffsubr-git
   - python-compreffor-git
   - python-cu2qu-git
+  - python-pytest-runner
   - python-skia-pathops-git
+post_build: aur_post_build
 update_on:
-  - source: github
-    github: googlefonts/ufo2ft
+  - source: aur
+    aur: python-ufo2ft-git
   - alias: python

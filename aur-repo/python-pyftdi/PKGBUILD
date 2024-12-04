@@ -1,4 +1,5 @@
 # Maintainer: David Runge <dvzrv@archlinux.org>
+# Maintainer: taotieren <admin@taotieren.com>
 
 _name=pyftdi
 pkgname=python-pyftdi
