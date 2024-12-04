@@ -1,10 +1,7 @@
 maintainers:
   - github: taotieren
-
-pre_build_script: aur_pre_build(maintainers='JstKddng')
-
+pre_build_script: aur_pre_build(maintainers=['micwoj92'])
 post_build: aur_post_build
-
 update_on:
   - source: aur
     aur: ncurses5-compat-libs
