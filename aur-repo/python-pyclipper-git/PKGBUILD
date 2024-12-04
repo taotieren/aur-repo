@@ -29,16 +29,10 @@ prepare() {
 
 build() {
     cd "$pkgname"
-    python setup.py build_ext --inplace
-    python setup.py build
-}
-
-check() {
-    cd "$pkgname"
-    python setup.py test
+    python -m build -wn
 }
 
 package() {
     cd "$pkgname"
-    python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+    python -m installer -d "$pkgdir" dist/*.whl
 }
