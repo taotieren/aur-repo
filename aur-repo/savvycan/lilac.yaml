@@ -3,7 +3,7 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers='Dz99')
 post_build: aur_post_build
 repo_depends:
-  - qt5-serialbus
+  - qt5-serialbus-git
 update_on:
   - source: aur
     aur: savvycan
