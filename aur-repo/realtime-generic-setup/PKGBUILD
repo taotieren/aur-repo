@@ -8,14 +8,15 @@ pkgrel=1
 arch=('any')
 install="${pkgname}.install"
 depends=('realtime-privileges' 'fakeroot')
+makedepends=(git)
 optdepends=('linux-rt: The Linux-rt kernel and modules'
-            'htop: Interactive process viewer'
-            'iotop: View I/O usage of processes'
-            'rt-tests: A collection of latency testing tools for the linux(-rt) kernel'
-            'rtirq: Realtime IRQ thread system tuning'
-            'tuna: Thread and IRQ affinity setting GUI and cmd line tool'
-            'sysstat: a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)'
-            'schedtool: Query or alter a process scheduling policy')
+  'htop: Interactive process viewer'
+  'iotop: View I/O usage of processes'
+  'rt-tests: A collection of latency testing tools for the linux(-rt) kernel'
+  'rtirq: Realtime IRQ thread system tuning'
+  'tuna: Thread and IRQ affinity setting GUI and cmd line tool'
+  'sysstat: a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)'
+  'schedtool: Query or alter a process scheduling policy')
 url="https://github.com/redtide/${srcname}"
 source=("${srcname}::git+https://github.com/redtide/${srcname}.git")
 sha256sums=('SKIP')
