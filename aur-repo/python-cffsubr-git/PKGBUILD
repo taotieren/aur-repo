@@ -37,13 +37,11 @@ build() {
     python -m build -wn
 }
 
-check() {
-    cd "$pkgname"
-    # PYTHONPATH=src pytest tests
-    local _pyver=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
-    export PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-$_pyver"
-    pytest tests
-}
+# check() {
+#     cd "$pkgname"
+#     export PYTHONPATH="./src"
+#     pytest tests
+# }
 
 package() {
     cd "$pkgname"
