@@ -7,5 +7,7 @@ repo_depends:
   - liblxi
   - linux-gpib
 update_on:
+  - source: github
+    github: glscopeclient/scopehal-apps
   - source: aur
     aur: scopehal-apps-git
