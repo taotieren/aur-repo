@@ -7,31 +7,32 @@ pkgver=1.10.r1.ga8c5676
 pkgrel=2
 pkgdesc="Hex to binary converter."
 arch=(aarch64
-	riscv64
-	x86_64)
+    riscv64
+    x86_64)
 url="https://github.com/Keidan/hex2bin"
 license=('GPL-3.0-only')
 replaces=('hex2bin')
 depends=(glibc
     gcc-libs)
 makedepends=(git
-	cmake
-	ninja
-	python)
+    cmake
+    ninja
+    python)
 checkdepends=()
 source=("$pkgname::git+${url}.git")
 md5sums=('SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
-    ( set -o pipefail
+    (
+        set -o pipefail
         git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
     )
 }
 
 build() {
-	cd "$srcdir/$pkgname"
+    cd "$srcdir/$pkgname"
     cmake -DDISTRIBUTION=release \
         -DCMAKE_BUILD_TYPE=release \
         -DDEFSTART=0 \
@@ -43,7 +44,7 @@ build() {
 }
 
 check() {
-	cd "$srcdir/$pkgname"
+    cd "$srcdir/$pkgname"
     python test.py -f bin/hex2bin --extra
 }
 
