@@ -9,5 +9,5 @@ post_build_script: |
 #   -
 update_on:
   - source: github
-    github: offici5l/un-lock
+    github: offici5l/MiUnlockTool
   - alias: python
