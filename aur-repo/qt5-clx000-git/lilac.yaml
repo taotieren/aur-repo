@@ -1,15 +1,11 @@
 maintainers:
   - github: taotieren
-
-pre_build_script: aur_pre_build(maintainers='jim3692')
-
+pre_build_script: aur_pre_build(maintainers=['jim3692'])
 post_build: aur_post_build
-
 repo_depends:
-  - opencbm
-
+  - qt5-serialbus
 update_on:
-  - source: github
-    github: CSS-Electronics/clx000-qt5-plugin
   - source: aur
-    github: qt5-clx000-git
+    aur: qt5-clx000-git
+# - source: github
+#   github: CSS-Electronics/clx000-qt5-plugin
