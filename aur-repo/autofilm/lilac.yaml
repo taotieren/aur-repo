@@ -10,7 +10,7 @@ repo_depends:
 update_on:
   - source: github
     github: Akimio521/AutoFilm
-    use_latest_release: true
+    use_max_tag: true
     prefix: v
-# use_max_tag: true
+# use_latest_release: true
 # prefix: v
