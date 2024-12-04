@@ -3,7 +3,7 @@
 pkgbase=miassistanttool-git
 pkgname=miassistanttool-git
 pkgver=1.1.r17.g79ecedc
-pkgrel=1
+pkgrel=2
 pkgdesc="MiAssistantTool"
 arch=(x86_64
     aarch64
