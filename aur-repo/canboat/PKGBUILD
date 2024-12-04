@@ -17,7 +17,7 @@ depends=(bash
     php
     ksh)
 makedepends=(
-#     help2man
+    #     help2man
     git
     libftdi
     libxml2
@@ -39,10 +39,10 @@ sha256sums=('b095726ec4d7225ff10d13bbf2c9df68b6f82067128892f50a9ca845a55882b2')
 #validpgpkeys=()
 
 build() {
-#     export LDFLAGS="-z relro -z now -z shstk"
+    #     export LDFLAGS="-z relro -z now -z shstk"
     cd "${srcdir}/${pkgname}-${pkgver}"
     make generated
-#     make
+    #     make
 }
 
 check() {
@@ -54,7 +54,7 @@ package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
     make DESTDIR="$pkgdir" PREFIX=/usr install
     install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}"
-    install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/60-canboat-actisense.rules" << EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/60-canboat-actisense.rules" <<EOF
 # Copy this file to /etc/udev/rules.d/
 # If rules fail to reload automatically, you can refresh udev rules
 # with the command "sudo udevadm control --reload"
