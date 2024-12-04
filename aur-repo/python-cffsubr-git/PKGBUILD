@@ -8,6 +8,7 @@ url='https://github.com/adobe-type-tools/cffsubr'
 license=('Apache-2.0')
 arch=(any)
 depends=(
+    afdko
     python
     python-fonttools)
 makedepends=(
