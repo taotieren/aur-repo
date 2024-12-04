@@ -1,13 +1,10 @@
 maintainers:
   - github: taotieren
-
-pre_build_script: aur_pre_build(maintainers=['1ace', 'Martchus'])
-
+pre_build_script: aur_pre_build(maintainers=['Martchus'])
 post_build: aur_post_build
-
 repo_depends:
   - edid-decode-git
-
+  - v4l-utils-git
 update_on:
   - source: aur
     aur: hw-probe
