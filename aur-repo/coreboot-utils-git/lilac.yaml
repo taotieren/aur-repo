@@ -4,7 +4,7 @@ pre_build_script: aur_pre_build(maintainers=['anatolik', 'mytbk'])
 post_build: aur_post_build
 update_on:
   - source: aur
-    github: coreboot-utils-git
+    aur: coreboot-utils-git
 # build_prefix: extra-x86_64
 # pre_build: vcs_update
 # post_build_script: |
