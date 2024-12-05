@@ -24,8 +24,6 @@ source=("${pkgname}-${pkgver//_/-}.tar.gz::${url}/archive/refs/tags/v${pkgver//_
 noextract=()
 sha256sums=('9bc7be2f54e0ef789825ac520e3d4a5c53cd208e4c362a915ef4644cb928e9f1')
 #validpgpkeys=()
-pkgver() {
-}
 
 build() {
     cd "${srcdir}"/${pkgname}-${pkgver//_/-}
