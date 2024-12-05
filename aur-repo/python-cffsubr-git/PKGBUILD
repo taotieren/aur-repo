@@ -15,7 +15,10 @@ makedepends=(
     python-setuptools-git-ls-files
     python-setuptools-scm
     python-{build,installer,wheel}
-    git)
+    git
+    python-scikit-build
+    cmake
+    ninja)
 checkdepends=(python-pytest)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
