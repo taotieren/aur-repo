@@ -17,7 +17,7 @@ depends=(python
 makedepends=(python-build
     python-installer
     python-wheel
-    python-setuptools-git-versioning-git)
+    python-setuptools-git-versioning)
 checkdepends=()
 options=()
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
