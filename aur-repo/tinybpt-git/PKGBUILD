@@ -18,6 +18,7 @@ depends=(
     glibc
 )
 makedepends=(
+    cpp-httplib
     git
     cmake
     nlohmann-json
