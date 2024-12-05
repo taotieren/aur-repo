@@ -20,16 +20,18 @@ makedepends=(python-build
     python-setuptools-git-versioning)
 checkdepends=()
 options=()
-source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+# source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+source=(https://files.pythonhosted.org/packages/py3/${_name::1}/$_name/${_name//-/_}-$pkgver-py3-none-any.whl)
 noextract=()
 sha256sums=('e2a16bbe60e9af770117495c5cf4a7f2bdb3e658b61744d76089b5b4afb12d8d')
 
-build() {
-    cd "${srcdir}/${_name}-${pkgver}"
-    python -m build --wheel --no-isolation
-}
+# build() {
+#     cd "${srcdir}/${_name}-${pkgver}"
+#     python -m build --wheel --no-isolation
+# }
 
 package() {
-    cd "${srcdir}/${_name}-${pkgver}"
-    python -m installer --destdir="${pkgdir}" dist/*.whl
+    #     cd "${srcdir}/${_name}-${pkgver}"
+    #     python -m installer --destdir="${pkgdir}" dist/*.whl
+    python -m installer --destdir="$pkgdir" ${srcdir}/${_name//-/_}-$pkgver-py3-none-any.whl
 }
