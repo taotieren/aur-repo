@@ -7,9 +7,7 @@ pkgname=(ocrs-git
 pkgver=0.4.0.r23.g5de95fc
 pkgrel=1
 pkgdesc="A modern OCR engine (extracts text from images), written in Rust"
-arch=(x86_64
-    aarch64
-    riscv64)
+arch=($CARCH)
 url="https://github.com/robertknight/ocrs"
 license=('MIT' 'Apache-2.0')
 # provides=(${pkgname%-git})
@@ -28,15 +26,14 @@ install=
 source=("${pkgbase}::git+${url}.git"
     "chrome-extension-ocrs-git.install")
 sha256sums=('SKIP'
-            'c0de42c2aa99bda9824e956273db85c77d6b420ee5225a52a64c70564bc81816')
+    'c0de42c2aa99bda9824e956273db85c77d6b420ee5225a52a64c70564bc81816')
 
 pkgver() {
     cd "${srcdir}/${pkgbase}/"
     git describe --long --tags | sed 's/v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
     cd "${srcdir}/${pkgbase}"
     export RUSTUP_TOOLCHAIN=stable
@@ -71,7 +68,7 @@ package_libocrs-git() {
     pkgdesc+=' - Lib'
     provides=(${pkgname%-git})
     conflicts=(${pkgname%-git})
-#     depends=()
+    #     depends=()
 
     cd "${srcdir}/${pkgbase}/"
 
@@ -83,18 +80,18 @@ package_ocrs-git() {
     pkgdesc+=''
     provides=(${pkgname%-git})
     conflicts=(${pkgname%-git})
-#     depends=()
+    #     depends=()
 
     cd "${srcdir}/${pkgbase}/"
 
     export RUSTUP_TOOLCHAIN=stable
     install -Dm0755 target/release/${pkgname%-git} -t "$pkgdir/usr/bin/"
-#     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
-#     find target/release \
-#         -maxdepth 1 \
-#         -executable \
-#         -type f \
-#         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
+    #     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
+    #     find target/release \
+    #         -maxdepth 1 \
+    #         -executable \
+    #         -type f \
+    #         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
 }
 
 package_chrome-extension-ocrs-git() {

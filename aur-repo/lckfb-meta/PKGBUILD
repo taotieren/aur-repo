@@ -6,9 +6,7 @@ pkgver=0.0.1
 pkgrel=0
 epoch=
 pkgdesc="立创开发板元包 / LCKFB Development Board meta package"
-arch=(x86_64
-    aarch64
-    riscv64)
+arch=($CARCH)
 url="https://lckfb.com/"
 license=('unkown')
 # groups=()
@@ -27,7 +25,6 @@ options=('!strip')
 # noextract=()
 # sha256sums=()
 #validpgpkeys=()
-
 
 package_lckfb-meta() {
     pkgdesc=${pkgdesc}

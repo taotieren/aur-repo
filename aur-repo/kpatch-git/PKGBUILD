@@ -6,10 +6,12 @@ pkgname=kpatch-git
 pkgver=0.9.9.r62.g8cb8420
 pkgrel=2
 pkgdesc='Live kernel patching (git)'
-arch=(i686 x86_64)
+arch=($CARCH)
 url=https://github.com/dynup/kpatch
 license=(GPL-2.0-only)
-depends=(bash libelf)
+depends=(
+  sh
+  libelf)
 makedepends=(git)
 checkdepends=(
   shellcheck)
@@ -18,7 +20,7 @@ conflicts=(kpatch)
 source=("${pkgname}::git+$url.git"
   "objs::git+https://github.com/dynup/kpatch-unit-test-objs.git")
 sha512sums=('SKIP'
-            'SKIP')
+  'SKIP')
 
 pkgver() {
   cd "${srcdir}/${pkgname}/"
@@ -58,8 +60,8 @@ build() {
 check() {
   cd "${srcdir}/${pkgname}/"
   make unit
-#   see: https://github.com/dynup/kpatch/issues/1371
-#   make check
+  #   see: https://github.com/dynup/kpatch/issues/1371
+  #   make check
 }
 
 package() {

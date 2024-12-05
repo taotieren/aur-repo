@@ -6,8 +6,6 @@ repo_depends:
   - python-fusepy
   - python-mock
 update_on:
-  - source: github
-    github: bkerler/mtkclient
   - source: aur
     aur: mtkclient-git
   - alias: python

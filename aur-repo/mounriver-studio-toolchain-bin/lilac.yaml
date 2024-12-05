@@ -1,11 +1,7 @@
 maintainers:
   - github: taotieren
-
 pre_build_script: aur_pre_build(maintainers=['taotieren','yjun', 'glatavento'])
-
 post_build: aur_post_build
-
 update_on:
   - source: aur
     aur: mounriver-studio-toolchain-bin
-

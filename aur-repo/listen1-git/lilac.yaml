@@ -1,13 +1,8 @@
 maintainers:
   - github: taotieren
-
-build_prefix: extra-x86_64
-
 pre_build: vcs_update
-
 post_build_script: |
   git_pkgbuild_commit()
-
 update_on:
   - source: github
     github: listen1/listen1_desktop
