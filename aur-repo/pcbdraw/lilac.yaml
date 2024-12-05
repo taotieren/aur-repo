@@ -6,4 +6,5 @@ repo_depends:
   - python-svgpathtools
 update_on:
   - source: aur
-    aur: ozone
+    aur: pcbdraw
+  - alias: python
