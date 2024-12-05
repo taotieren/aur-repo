@@ -9,8 +9,6 @@ repo_depends:
   - python-pyexecjs
   - python-pybase62
   - python-base58
-  - python-bs4
-  - python-rarfile
 update_on:
   - source: pypi
     pypi: qsnctf
