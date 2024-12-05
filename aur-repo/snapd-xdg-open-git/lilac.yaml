@@ -1,15 +1,7 @@
 maintainers:
   - github: taotieren
-
-build_prefix: extra-x86_64
-
 pre_build_script: aur_pre_build(maintainers='CyberShadow')
-
 post_build_script: aur_post_build
-
 update_on:
-  - source: github
-    github: snapcore/snapd-xdg-open
-
   - source: aur
     aur: snapd-xdg-open-git

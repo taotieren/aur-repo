@@ -10,6 +10,6 @@ repo_depends:
 update_on:
   - source: github
     github: square/pylink
-    use_latest_release: true
+    use_max_tag: true
     prefix: v
   - alias: python
