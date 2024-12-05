@@ -11,10 +11,14 @@ license=('MIT')
 provides=(${pkgbase%-git}
     nanonng
     nng)
-conflicts=(${pkgbase%-git})
-depends=(mbedtls
+conflicts=(${pkgbase%-git}
+    nanonng
+    nng)
+depends=(
+    mbedtls
     python)
-makedepends=(asciidoctor
+makedepends=(
+    asciidoctor
     boost
     cmake
     gcc
@@ -56,6 +60,11 @@ package_nanomq-git() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DNNG_ENABLE_TLS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED=OFF \
+        -DCMAKE_CROSSCOMPILING=ON \
+        -DWITH_LIBBSD=OFF \
+        -DZMQ_BUILD_TESTS=OFF \
+        -DWITH_DOC=OFF \
         -B build_nanomq \
         -G Ninja
 
@@ -73,6 +82,11 @@ package_nanomq-sqlite-git() {
         -DNNG_ENABLE_TLS=ON \
         -DNNG_ENABLE_SQLITE=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED=OFF \
+        -DCMAKE_CROSSCOMPILING=ON \
+        -DWITH_LIBBSD=OFF \
+        -DZMQ_BUILD_TESTS=OFF \
+        -DWITH_DOC=OFF \
         -B build_nanomq-sqlite \
         -G Ninja
 
@@ -93,9 +107,14 @@ package_nanomq-msquic-git() {
         -DNNG_ENABLE_SQLITE=ON \
         -DQUIC_BUILD_SHARED=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED=OFF \
+        -DCMAKE_CROSSCOMPILING=ON \
+        -DWITH_LIBBSD=OFF \
+        -DZMQ_BUILD_TESTS=OFF \
+        -DWITH_DOC=OFF \
         -B build_nanomq-msquic \
         -G Ninja
-
+    #         -DONEBRANCH=1 \
     ninja -C build_nanomq-msquic
 
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase%-git}/build_nanomq-msquic install
@@ -117,10 +136,16 @@ package_nanomq-full-git() {
         -DNNG_ENABLE_QUIC=ON \
         -DNNG_ENABLE_SQLITE=ON \
         -DQUIC_BUILD_SHARED=OFF \
+        -DENABLE_RULE_ENGINE=ON \
         -DENABLE_JWT=ON \
         -DBUILD_ZMQ_GATEWAY=ON \
         -DBUILD_BENCH=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED=OFF \
+        -DCMAKE_CROSSCOMPILING=ON \
+        -DWITH_LIBBSD=OFF \
+        -DZMQ_BUILD_TESTS=OFF \
+        -DWITH_DOC=OFF \
         -B build_nanomq-full \
         -G Ninja
     #           -DBUILD_DDS_PROXY=ON \
