@@ -4,17 +4,17 @@ pkgname=crm-git
 pkgver=0.2.2.r0.gd392e9a
 pkgrel=3
 pkgdesc="crm (Cargo registry manager)"
-arch=(x86_64
-    aarch64
-    riscv64)
+arch=($CARCH)
 url="https://github.com/wtklbm/crm"
 license=('MIT AND Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(gcc-libs
+depends=(
+    gcc-libs
     glibc)
-makedepends=(git
+makedepends=(
+    git
     cargo)
 backup=()
 options=('!lto')

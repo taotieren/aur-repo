@@ -3,7 +3,5 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers='ivanovp')
 post_build_script: aur_post_build
 update_on:
-  - source: gitlab
-    gitlab: dfu-util/dfu-util
   - source: aur
     aur: dfu-util-git

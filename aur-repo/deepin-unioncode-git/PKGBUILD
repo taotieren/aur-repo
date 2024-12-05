@@ -5,12 +5,7 @@ pkgname=deepin-unioncode-git
 pkgver=1.3.10.r38.g34be0b9
 pkgrel=1
 pkgdesc="IDE authored by deepin"
-arch=(x86_64
-    aarch64
-    loongarch64
-    mips64
-    sw_64
-    riscv64)
+arch=($CARCH)
 url="https://github.com/linuxdeepin/deepin-unioncode"
 license=('GPL-3.0-only')
 groups=()

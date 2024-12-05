@@ -5,5 +5,3 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: ffts-git
-  - source: github
-    github: anthonix/ffts
