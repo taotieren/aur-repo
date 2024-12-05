@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-arm-gdb
-_name=${pkgname#python-}
+_name=arm_gdb
 pkgver=0.9.9
 pkgrel=3
 epoch=
