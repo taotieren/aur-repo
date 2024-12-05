@@ -107,7 +107,7 @@ EOF
 
     cp -rv LogicAnalyzer/* ${pkgdir}/usr/share/${pkgname%-git}
 
-    install -Dm644 "$srcdir/logicanalyzer-git/Software/LogicAnalyzer/LogicAnalyzer/Assets/Logo40.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/${pkgname%-git}.png"
+    install -Dm644 "$srcdir/logicanalyzer-git/Software/LogicAnalyzer/LogicAnalyzer/Assets/Logo.png" "$pkgdir/usr/share/icons/hicolor/256x256/apps/${pkgname%-git}.png"
 
     install -Dm0644 /dev/stdin "${pkgdir}/usr/share/applications/${pkgname%-git}.desktop" <<EOF
 [Desktop Entry]
