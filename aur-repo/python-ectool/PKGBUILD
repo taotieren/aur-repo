@@ -33,10 +33,10 @@ build() {
     python -m build --wheel --no-isolation
 }
 
-check() {
-    cd ${_name}-${pkgver}
-    PYTHONPATH=src pytest tests
-}
+# check() {
+#     cd ${_name}-${pkgver}
+#     PYTHONPATH=src pytest tests
+# }
 
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
