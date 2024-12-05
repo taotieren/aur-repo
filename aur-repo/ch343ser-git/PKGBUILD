@@ -14,7 +14,7 @@ makedepends=('git')
 source=("${pkgbase}::git+${url}.git"
     "ch343ser-dkms-git.install")
 sha256sums=('SKIP'
-            '6cd61719a10c54747b9794a684e68eedd8c6b38424b1710940c13434b2ec7d55')
+    '6cd61719a10c54747b9794a684e68eedd8c6b38424b1710940c13434b2ec7d55')
 options=(!strip !debug)
 
 pkgver() {
