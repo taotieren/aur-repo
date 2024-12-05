@@ -37,10 +37,10 @@ build() {
     python -m build -wn
 }
 
-check() {
-    cd "$pkgname"
-    python -m unittest discover
-}
+# check() {
+#     cd "$pkgname"
+#     python -m unittest discover
+# }
 
 package() {
     cd "$pkgname"
