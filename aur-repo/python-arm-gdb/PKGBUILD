@@ -26,7 +26,6 @@ sha256sums=('e2a16bbe60e9af770117495c5cf4a7f2bdb3e658b61744d76089b5b4afb12d8d')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    sed -i 's|<|<=|g' pyproject.toml
     python -m build --wheel --no-isolation
 }
 
