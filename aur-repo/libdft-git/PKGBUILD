@@ -40,7 +40,7 @@ build() {
     export PIN_ROOT=/opt/pin
 
     cd "${srcdir}/${pkgname}/"
-    sed -i 's|track|track nullpin libdft libdft-dta|g' tools/makefile.rules
+    #     sed -i 's|track|track nullpin libdft libdft-dta|g' tools/makefile.rules
     make
 }
 
