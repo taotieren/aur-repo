@@ -17,8 +17,8 @@ makedepends=(
     zlib
     krb5
     git
-    dotnet-host
-    dotnet-sdk)
+    dotnet-host-bin
+    dotnet-sdk-bin)
 backup=()
 options=('!strip' '!debug' '!lto')
 source=("${pkgname}::git+${url}.git")
