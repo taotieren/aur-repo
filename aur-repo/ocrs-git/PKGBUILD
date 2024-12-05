@@ -36,14 +36,14 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
     cd "${srcdir}/${pkgbase}"
-    export RUSTUP_TOOLCHAIN=stable
+    #     export RUSTUP_TOOLCHAIN=stable
     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
 }
 
 build() {
     cd "${srcdir}/${pkgbase}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    #     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
     cargo build --release --all-features
 
@@ -60,7 +60,7 @@ build() {
 check() {
     cd "${srcdir}/${pkgbase}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    #     export RUSTUP_TOOLCHAIN=stable
     cargo test --all-features
 }
 
@@ -72,7 +72,7 @@ package_libocrs-git() {
 
     cd "${srcdir}/${pkgbase}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    #     export RUSTUP_TOOLCHAIN=stable
     install -Dm0644 target/release/*.so -t "$pkgdir/usr/lib/"
 }
 
@@ -84,7 +84,7 @@ package_ocrs-git() {
 
     cd "${srcdir}/${pkgbase}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    #     export RUSTUP_TOOLCHAIN=stable
     install -Dm0755 target/release/${pkgname%-git} -t "$pkgdir/usr/bin/"
     #     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     #     find target/release \
