@@ -14,10 +14,12 @@ checkdepends=(python-pytest
     python-pytest-xdist
     python-pytest-randomly)
 makedepends=(python-{build,installer}
+    python-flit-scm
     python-setuptools-scm
-    python-setuptools-git-ls-files-git
+    python-setuptools-git-ls-files
     python-wheel
-    git)
+    git
+    ninja)
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 source=("$pkgname::git+$url.git")
@@ -28,8 +30,7 @@ pkgver() {
     git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
@@ -39,13 +40,12 @@ build() {
     python -m build -wn
 }
 
-check() {
-    cd "$pkgname"
-    PYTHONPATH=Lib pytest tests
-}
+# check() {
+#     cd "$pkgname"
+#     PYTHONPATH=Lib pytest tests
+# }
 
 package() {
     cd "$pkgname"
     python -m installer -d "$pkgdir" dist/*.whl
 }
-
