@@ -8,5 +8,3 @@ repo_depends:
 update_on:
   - source: aur
     aur: zwcad-bin
-  - source: manual
-    manual: 1

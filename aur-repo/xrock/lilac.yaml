@@ -1,6 +1,5 @@
 maintainers:
   - github: taotieren
-build_prefix: extra-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
@@ -9,5 +8,6 @@ post_build_script: |
 update_on:
   - source: github
     github: xboot/xrock
-    use_latest_release: true
+    use_max_tag: true
     prefix: v
+    # use_latest_release: true

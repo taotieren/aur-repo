@@ -1,13 +1,7 @@
 maintainers:
   - github: taotieren
-
 pre_build_script: aur_pre_build(maintainers=['sakura1943', 'zxp19821005'])
-
 post_build: aur_post_build
-
 update_on:
-  - source: github
-    github: kingToolbox/WindTerm
-    use_max_tag: true
   - source: aur
     aur: windterm-bin
