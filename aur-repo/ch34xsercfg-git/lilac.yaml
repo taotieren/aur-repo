@@ -1,7 +1,6 @@
 maintainers:
   - github: taotieren
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
+pre_build: vcs_update
 repo_depends:
   - libch9344ser-git
   - libch343ser-git
