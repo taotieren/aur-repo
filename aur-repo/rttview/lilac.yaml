@@ -7,7 +7,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - pyinstaller
-  - python-pyqt5-chart
+  # - python-pyqt5-chart
 update_on:
   - source: github
     github: XIVN1987/RTTView

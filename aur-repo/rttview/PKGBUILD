@@ -24,7 +24,7 @@ _makepydeps=(
     six
     pyelftools
     pyqt5
-    pyqt5-chart
+    #     pyqt5-chart
     pyqt5-webengine
     pyusb
 )
