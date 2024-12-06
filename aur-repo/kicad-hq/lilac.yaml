@@ -1,21 +1,20 @@
-maintainers:
-  - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: kicad-hq
-  - source: manual
-    manual: 1
 # maintainers:
 #   - github: taotieren
-# build_prefix: extra-x86_64
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
 # update_on:
-#   - source: gitlab
-#     gitlab: kicad-hq/kicad
-#     use_max_tag: true
+#   - source: aur
+#     aur: kicad-hq
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: gitlab
+    gitlab: kicad-hq/kicad
+    use_max_tag: true
+    # 8.0.6-hq
+    include_regex: \d+\..*
