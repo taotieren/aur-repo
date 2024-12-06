@@ -6,6 +6,9 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: regex
+  - source: htmlparser
     url: "https://115.com/product_browser"
-    regex: '最新版本： (\d.\d.\d.\d)'
+    rule:
+      xpath: "//a[contains(@href, '115br_v') and substring(@href, string-length(@href) - 3) = '.deb']"
+      attr: href
+      regex: '115br_v[\d.\d.\d.\d).deb'
