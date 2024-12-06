@@ -8,4 +8,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: "https://115.com/product_browser"
-    regex: '115br_v(\d.\d.\d.\d).deb'
+    regex: '\d.\d.\d.\d'
