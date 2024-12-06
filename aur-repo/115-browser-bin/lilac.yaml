@@ -1,14 +1,22 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+# post_build_script: |
+#   git_pkgbuild_commit()
+#   update_aur_repo()
+# update_on:
+#   - source: css
+#     url: "https://115.com/product_browser"
+#     rule:
+#       selector: "a[href*='115br_v'][href$='.deb']"
+#       attr: href
+#       regex: '115br_v[\d.\d.\d.\d).deb'
+
 maintainers:
   - github: taotieren
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
+pre_build_script: aur_pre_build(maintainers=['taotieren'])
+post_build: aur_post_build
 update_on:
-  - source: css
-    url: "https://115.com/product_browser"
-    rule:
-      selector: "a[href*='115br_v'][href$='.deb']"
-      attr: href
-      regex: '115br_v[\d.\d.\d.\d).deb'
+  - source: aur
+    aur: 115-browser-bin
