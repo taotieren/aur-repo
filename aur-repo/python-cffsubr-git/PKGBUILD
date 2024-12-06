@@ -16,6 +16,7 @@ makedepends=(
     python-setuptools-scm
     python-{build,installer,wheel}
     git
+    python-cmake-build-extension
     python-scikit-build
     cmake
     ninja)
