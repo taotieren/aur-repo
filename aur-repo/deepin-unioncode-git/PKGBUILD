@@ -51,6 +51,7 @@ makedepends=(
     hiredis
     llvm
     ncurses
+    libchardet
     libdwarf
     libmicrohttpd
     libutf8proc
@@ -59,6 +60,7 @@ makedepends=(
     qt5-tools
     qtermwidget
     openssl
+    uchardet
     systemd
     pkgconf
 )
