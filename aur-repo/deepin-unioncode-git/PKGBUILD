@@ -103,5 +103,4 @@ build() {
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
     install -Dm0644 "${srcdir}/${pkgname}"/LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -m0644 "${srcdir}/${pkgname}"/LICENSES/* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
