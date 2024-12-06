@@ -16,8 +16,10 @@ depends=(
     bash
     capstone
     clang
+    cmark
     dbus
     dtkcore
+    dtklog
     dtkwidget
     dtkgui
     gcc-libs
@@ -26,6 +28,8 @@ depends=(
     java-runtime
     jsoncpp
     json-c
+    icu
+    libchardet
     libelf
     libelfin
     libunwind
@@ -39,6 +43,7 @@ depends=(
     syntax-highlighting5
     python
     yaml-cpp
+    uchardet
     zstd)
 makedepends=(
     argtable
@@ -51,7 +56,6 @@ makedepends=(
     hiredis
     llvm
     ncurses
-    libchardet
     libdwarf
     libmicrohttpd
     libutf8proc
@@ -60,9 +64,10 @@ makedepends=(
     qt5-tools
     qtermwidget
     openssl
-    uchardet
     systemd
     pkgconf
+    python-onnxruntime
+    python-pyjsparser
 )
 checkdepends=()
 optdepends=()
