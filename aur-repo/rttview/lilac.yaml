@@ -13,7 +13,7 @@ update_on:
     github: XIVN1987/RTTView
     use_max_tag: true
     # 20241201
-    include_regex: (^\d+$)
+    include_regex: (^\d+)
   - alias: python
     # prefix: v
     # use_latest_release: true
