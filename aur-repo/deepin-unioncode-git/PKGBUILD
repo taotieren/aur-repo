@@ -81,7 +81,6 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd ${srcdir}/${pkgname/
 }
 
 build() {
