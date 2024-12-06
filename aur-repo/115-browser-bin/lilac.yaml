@@ -7,5 +7,5 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: "https://115.com/product_browser"
-    regex: '115br_v([\\d.]+)\\.deb'
+    url: "https://down.115.com/client/115pc/lin/"
+    regex: '/115br_v([\\d.]+)\\.deb'
