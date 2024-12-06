@@ -81,6 +81,7 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd ${srcdir}/${pkgname/
 }
 
 build() {
@@ -102,5 +103,4 @@ build() {
 
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
-    install -Dm0644 "${srcdir}/${pkgname}"/LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
