@@ -1,6 +1,7 @@
 maintainers:
   - github: taotieren
-pre_build_script: update_pkgver_and_pkgrel(_G.newver.lstrip('v'))
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -10,8 +11,8 @@ update_on:
   - source: github
     github: sifive/openocdcfg-generator
     use_max_tag: true
-    # prefix: v
+    prefix: v
     # v20.08.00.00
-    include_regex: 'v(\d+.\d+.\d+.\d+)'
+    # include_regex: 'v(\d+.\d+.\d+.\d+)'
   - alias: python
     # use_latest_release: true
