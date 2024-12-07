@@ -10,9 +10,12 @@ license=('MIT' 'Apache-2.0' 'GPL-3.0-only')
 provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
-depends=(cargo
+depends=(
+    cargo
     systemd)
-makedepends=(git
+makedepends=(
+    git
+    python-libclang
     rust)
 backup=()
 options=('!lto')
