@@ -2,6 +2,9 @@ maintainers:
   - github: taotieren
 pre_build_script: aur_pre_build(maintainers=['KafCoppelia'])
 post_build: aur_post_build
+repo_depends:
+  - ncurses5-compat-libs
+  - python38
 update_on:
   - source: aur
     aur: linkserver
