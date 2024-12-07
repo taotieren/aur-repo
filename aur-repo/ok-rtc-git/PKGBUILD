@@ -16,8 +16,7 @@ replaces=()
 license=('BSD-3-Clause')
 depends=(
     abseil-cpp
-    #     ffmpeg
-    ffmpeg4.4
+    ffmpeg
     gcc-libs
     glib2
     glibc

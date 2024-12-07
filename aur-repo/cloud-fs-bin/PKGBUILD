@@ -15,8 +15,11 @@ replaces=()
 depends=(
     bash
     fuse
+    rclone
     systemd-libs)
-makedepends=(libarchive)
+makedepends=(
+    libarchive
+)
 optdepends=('docker: Pack, ship and run any application as a lightweight container'
     'davfs2: File system driver that allows you to mount a WebDAV folder'
     'clouddrive-decrypt: clouddrive-decrypt is a standalone tool designed to demo how to decrypt files encrypted by CloudDrive2.')
@@ -28,9 +31,9 @@ source=("LICENSE.html::https://raw.githubusercontent.com/cloud-fs/cloud-fs.githu
     "${pkgname}-${epoch}-x86_64-${pkgver}.tgz::${url}/releases/download/v${pkgver}/${pkgname}-${epoch}-linux-x86_64-${pkgver}.tgz"
     "${pkgname}-${epoch}-aarch64-${pkgver}.tgz::${url}/releases/download/v${pkgver}/${pkgname}-${epoch}-linux-aarch64-${pkgver}.tgz")
 sha256sums=('c336f41e259916212c7fdd3e21a26a2faf94d725b5daf686bca501978efbf17e'
-            '32d37f9ab2f20170c8938a7bf3349eac152f4ee663f2c630be3ca966f50300bc'
-            'eb374fd1de57c81606efe486a9bd8349a0faac9ac19fc3a31abf415df3f50ad7'
-            'eeefc029918bfc0914b1a9197b10bfa31823a1ac9ac47ece89113ec671fe1aeb')
+    '32d37f9ab2f20170c8938a7bf3349eac152f4ee663f2c630be3ca966f50300bc'
+    'eb374fd1de57c81606efe486a9bd8349a0faac9ac19fc3a31abf415df3f50ad7'
+    'eeefc029918bfc0914b1a9197b10bfa31823a1ac9ac47ece89113ec671fe1aeb')
 noextract=(
     ${pkgname}-${epoch}-x86_64-${pkgver}.tgz
     ${pkgname}-${epoch}-aarch64-${pkgver}.tgz)
