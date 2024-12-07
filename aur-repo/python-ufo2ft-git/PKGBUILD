@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc='A bridge from UFOs to FontTools objects'
 url="https://github.com/googlefonts/ufo2ft"
 license=(MIT)
-arch=(x86_64)
+arch=(any)
 _py_deps=(booleanoperations
     cffsubr
     compreffor
@@ -27,29 +27,27 @@ source=("$pkgname::git+$url.git")
 sha256sums=('SKIP')
 
 pkgver() {
-	cd "$pkgname"
-	git describe --long --tags --abbrev=7 HEAD |
-		sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+    cd "$pkgname"
+    git describe --long --tags --abbrev=7 HEAD |
+        sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
 build() {
-	cd "$pkgname"
-	python setup.py build
+    cd "$pkgname"
+    python setup.py build
 }
 
 check() {
-	cd "$pkgname"
-		python setup.py test
+    cd "$pkgname"
+    python setup.py test
 }
 
 package() {
-	cd "$pkgname"
-	python setup.py install --skip-build --root="$pkgdir" --optimize=1
-	install -D -m755 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+    cd "$pkgname"
+    python setup.py install --skip-build --root="$pkgdir" --optimize=1
+    install -D -m755 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
-
