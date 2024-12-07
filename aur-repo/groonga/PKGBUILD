@@ -3,7 +3,7 @@
 pkgname=('groonga' 'groonga-doc')
 pkgver=14.0.4
 pkgbase=groonga
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 url="http://groonga.org/"
 license=('LGPL2.1')
