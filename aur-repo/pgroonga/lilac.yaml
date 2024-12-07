@@ -6,4 +6,4 @@ repo_depends:
   - groonga
 update_on:
   - source: aur
-    github: pgroonga
+    aur: pgroonga

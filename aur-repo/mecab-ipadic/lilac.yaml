@@ -6,4 +6,4 @@ repo_depends:
   - mecab-git
 update_on:
   - source: aur
-    github: mecab-ipadic
+    aur: mecab-ipadic

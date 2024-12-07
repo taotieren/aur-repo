@@ -7,4 +7,4 @@ repo_depends:
   - mecab-ipadic
 update_on:
   - source: aur
-    github: groonga
+    aur: groonga
