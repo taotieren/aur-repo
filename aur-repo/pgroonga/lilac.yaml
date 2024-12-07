@@ -1,0 +1,9 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['cosmo0920'])
+post_build: aur_post_build
+repo_depends:
+  - groonga
+update_on:
+  - source: aur
+    github: pgroonga
