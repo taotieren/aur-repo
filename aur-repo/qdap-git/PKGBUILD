@@ -3,7 +3,7 @@
 pkgbase=qdap-git
 pkgname=qdap-git
 pkgver=r40.fb98da5
-pkgrel=3
+pkgrel=4
 groups=()
 pkgdesc="cmsis-dap upper by a Qt"
 arch=($CARCH)
