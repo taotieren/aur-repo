@@ -2,7 +2,7 @@
 
 pkgbase=ok-edu-classroom-desktop-git
 pkgname=(ok-edu-classroom-desktop-git)
-pkgver=r31.341cfc8
+pkgver=1.3.0.231231.r83.g2b6fb23
 pkgrel=1
 arch=(x86_64
     aarch64
@@ -127,6 +127,9 @@ build() {
     #         -B build \
     #         -G Ninja \
     #         -Wno-dev
+    export QTDIR=/usr/lib/qt
+    export LINK_STATIC_QT=FALSE
+
     cmake -DCMAKE_BUILD_TYPE=Debug \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -B build \
