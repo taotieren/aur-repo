@@ -82,19 +82,18 @@ makedepends=(
 checkdepends=()
 optdepends=()
 source=("${pkgname}::git+${_url}/ok-edu-desktop.git"
-    "gloox::git+${_url}/ok-gloox.git"
+    #     "gloox::git+${_url}/ok-gloox.git"
 )
-sha256sums=('SKIP'
-    'SKIP')
+sha256sums=('SKIP')
 options=()
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    git submodule init
-    git config submodule.3rdparty/gloox.url "$srcdir/gloox"
-    git -c protocol.file.allow=always submodule update
-    git checkout develop
+    #     cd "${srcdir}/${pkgname}"
+    #     git submodule init
+    #     git config submodule.3rdparty/gloox.url "$srcdir/gloox"
+    #     git -c protocol.file.allow=always submodule update
+    #     git checkout develop
 }
 
 pkgver() {
