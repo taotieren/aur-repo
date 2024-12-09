@@ -13,7 +13,5 @@ update_on:
     github: sifive/openocdcfg-generator
     use_max_tag: true
     prefix: v
-    # v20.08.00.00
-    # include_regex: 'v(\d+.\d+.\d+.\d+)'
   - alias: python
     # use_latest_release: true
