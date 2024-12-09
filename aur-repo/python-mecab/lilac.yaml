@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers='envolution')
+post_build: aur_post_build
+repo_depends:
+  - mecab-git
+  - mecab-ipadic
+update_on:
+  - source: aur
+    aur: python-mecab
+  - alias: python
