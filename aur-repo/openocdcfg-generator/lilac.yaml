@@ -7,6 +7,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-pydevicetree
+  - python-jinja-time
 update_on:
   - source: github
     github: sifive/openocdcfg-generator
