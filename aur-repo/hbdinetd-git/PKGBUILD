@@ -15,7 +15,8 @@ replaces=()
 depends=(
     hbdbus
     wpa_supplicant
-    purc)
+    purc
+    xguipro-git)
 makedepends=(ccache
     cmake
     git

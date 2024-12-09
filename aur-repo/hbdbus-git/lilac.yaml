@@ -6,6 +6,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - purc-git
+  - xguipro-git
 update_on:
   - source: github
     github: HybridOS2/HBDBus

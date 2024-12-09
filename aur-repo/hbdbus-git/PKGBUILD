@@ -15,7 +15,8 @@ replaces=()
 depends=(
     glibc
     python
-    purc)
+    purc
+    xguipro-git)
 makedepends=(ccache
     cmake
     git
