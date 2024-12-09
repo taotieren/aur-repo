@@ -24,7 +24,8 @@ depends=(
     #     python-parse
     $_qt-base
     $_qt-charts
-    $_qt-svg)
+    $_qt-svg
+    octave)
 makedepends=(
     cmake
     dos2unix
