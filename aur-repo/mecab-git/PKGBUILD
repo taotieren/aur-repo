@@ -3,7 +3,7 @@
 # based on PKGBUILD for MeCab https://aur.archlinux.org/packages/mecab/
 
 pkgname=mecab-git
-pkgrel=2
+pkgrel=3
 pkgver=r155.05481e7
 pkgdesc="Yet another part-of-speech and morphological analyzer."
 arch=($CARCH)
