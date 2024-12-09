@@ -10,7 +10,9 @@ url="https://github.com/ra3xdh/qucs_s"
 license=('GPL-2.0-only')
 _qt=qt5
 groups=()
-depends=($_qt-base)
+depends=(
+    $_qt-base
+    $_qt-charts)
 makedepends=(cmake
     ninja
     git
