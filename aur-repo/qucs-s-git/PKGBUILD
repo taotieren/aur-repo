@@ -11,8 +11,16 @@ license=('GPL-2.0-only')
 _qt=qt5
 groups=()
 depends=(
+    sh
+    gcc-libs
+    hicolor-icon-theme
+    python
+    python-numpy
+    python-matplotlib
+    python-parse
     $_qt-base
-    $_qt-charts)
+    $_qt-charts
+    $_qt-svg)
 makedepends=(cmake
     ninja
     git
@@ -25,7 +33,7 @@ makedepends=(cmake
     flex
     bison
     $_qt-tools
-    $_qt-svg)
+)
 optdepends=('ngspice: recommended simulation backend'
     'qucs: for Qucsator simulation backend'
     'freehdl: to permit digital circuit simulation'
@@ -45,16 +53,20 @@ sha256sums=('SKIP')
 validpgpkeys=()
 
 pkgver() {
-    cd "${srcdir}/${pkgname%-git}"
-    git describe --long --tags | sed 's/^v//g;s/continuous_build.//g;s/\([^-]*-g\)/r\1/;s/-/./g'
+    cd "${srcdir}/${pkgname}"
+    (
+        set -o pipefail
+        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/continuous_build.//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    )
 }
 
 prepare() {
-    git -C "${srcdir}/${pkgname%-git}" clean -dfx
+    git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
 build() {
-    cd "${srcdir}/${pkgname%-git}"
+    cd "${srcdir}/${pkgname}"
 
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
         -B build \
@@ -64,6 +76,6 @@ build() {
 }
 
 package() {
-    cd "${srcdir}/${pkgname%-git}"
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname%-git}/build install
+    cd "${srcdir}/${pkgname}"
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
 }
