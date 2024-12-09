@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers='suridaj')
+post_build: aur_post_build
+repo_depends:
+  - python-patch-ng
+  - python-pluginbase
+update_on:
+  - source: aur
+    aur: conan
+  - alias: python
