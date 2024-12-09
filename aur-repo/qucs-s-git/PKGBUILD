@@ -14,7 +14,9 @@ depends=(
     sh
     gcc-libs
     glibc
+    graphicsmagick
     hicolor-icon-theme
+    imagemagick
     python
     python-numpy
     python-matplotlib
