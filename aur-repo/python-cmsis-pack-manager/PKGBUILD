@@ -3,7 +3,7 @@
 
 pkgname=python-cmsis-pack-manager
 _name=cmsis_pack_manager
-pkgver=0.5.3
+pkgver=0.5.3.r21.ga312ce0
 pkgrel=1
 pkgdesc="A Rust and Python module for handling CMSIS Pack files"
 arch=(any)
@@ -52,7 +52,7 @@ pkgver() {
   cd "${srcdir}/${_name}"
   (
     set -o pipefail
-    git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+    git describe --long --tag --match='v*' --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
       printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
   )
 }
