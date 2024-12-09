@@ -8,7 +8,7 @@ post_build_script: |
 update_on:
   - source: gitlab
     gitlab: etherlab.org/ethercat
-    # use_max_tag: true
-    use_latest_tag: true
+    use_max_tag: true
+    # use_latest_tag: true
     # 8.0.6-hq
     # include_regex: \d+\..*
