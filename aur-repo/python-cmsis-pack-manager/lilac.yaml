@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 pre_build: aur_pre_build
-pre_build: vcs_update
+# pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
