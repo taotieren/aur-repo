@@ -17,6 +17,7 @@ depends=(
     graphicsmagick
     hicolor-icon-theme
     imagemagick
+    ngspice
     python
     python-numpy
     python-matplotlib
