@@ -8,7 +8,7 @@ pkgdesc="Qucs-S provides GUI for different circuit simulation kernels. "
 arch=($CARCH)
 url="https://github.com/ra3xdh/qucs_s"
 license=('GPL-2.0-only')
-_qt=qt5
+_qt=qt6
 groups=()
 depends=(
     sh
@@ -22,7 +22,8 @@ depends=(
     $_qt-base
     $_qt-charts
     $_qt-svg)
-makedepends=(cmake
+makedepends=(
+    cmake
     ninja
     git
     autoconf
@@ -35,7 +36,10 @@ makedepends=(cmake
     bison
     $_qt-tools
 )
-optdepends=('ngspice: recommended simulation backend'
+optdepends=(
+    'ngspice: Mixed-level/Mixed-signal circuit simulator based on Spice3f5, Ciber1b1, and Xspice'
+    'spiceopus: Spice Opus is a free general purpose circuit simulator specially suited for optimization loops'
+    'qucsator: An integrated circuit simulator'
     'qucs: for Qucsator simulation backend'
     'freehdl: to permit digital circuit simulation'
     'asco: to enable circuit optimization')
@@ -76,6 +80,7 @@ build() {
     cd "${srcdir}/${pkgname}"
 
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
+        -DWITH_QT6=ON \
         -B build \
         -G Ninja
 
