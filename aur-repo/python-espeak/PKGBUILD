@@ -3,7 +3,7 @@
 
 pkgname=python-espeak
 pkgver=0.5
-pkgrel=4
+pkgrel=5
 pkgdesc="Python bindings for eSpeak."
 arch=('any')
 url="https://launchpad.net/python-espeak"
@@ -16,3 +16,4 @@ package() {
     cd "$srcdir/python-espeak-$pkgver"
     python setup.py install --root "$pkgdir"
 }
+makedepends=("python-installer" "python-setuptools" "python-wheel")
