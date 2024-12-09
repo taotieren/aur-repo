@@ -13,6 +13,7 @@ groups=()
 depends=(
     sh
     gcc-libs
+    glibc
     hicolor-icon-theme
     python
     python-numpy
@@ -47,9 +48,11 @@ backup=()
 options=('!makeflags')
 install=
 changelog=
-source=("${pkgname}::git+${url}.git")
+source=("${pkgname}::git+${url}.git"
+    "qucsator_rf::git+https://github.com/ra3xdh/qucsator_rf.git")
 noextract=()
-sha256sums=('SKIP')
+sha256sums=('SKIP'
+    'SKIP')
 validpgpkeys=()
 
 pkgver() {
@@ -63,6 +66,10 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}"
+    git submodule init
+    git config submodule.qucsator_rf.url "$srcdir/qucsator_rf"
+    git -c protocol.file.allow=always submodule update
 }
 
 build() {
