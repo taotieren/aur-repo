@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-bflb-crypto-plus
-_name=bflb_crypto_plus
+_name=${pkgname#python-}
 pkgver=1.0
 pkgrel=5
 epoch=
