@@ -2,7 +2,8 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   aur_pre_build(maintainers=['anatolik', 'abougouffa'])
-  add_makedepends(['git'])
+  add_depends(['fftw','python'])
+  add_makedepends(['git','qt5-tools'])
 post_build_script: aur_post_build
 # pre_build: vcs_update
 # post_build_script: |
