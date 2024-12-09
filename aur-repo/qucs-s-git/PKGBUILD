@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=qucs-s-git
-pkgver=r0.g1a3ce17
+pkgver=r5688.1a3ce17
 pkgrel=1
 epoch=
 pkgdesc="Qucs-S provides GUI for different circuit simulation kernels. "
@@ -24,6 +24,7 @@ depends=(
     $_qt-svg)
 makedepends=(
     cmake
+    dos2unix
     ninja
     git
     autoconf
