@@ -2,7 +2,7 @@
 
 pkgname=qucs-s-git
 pkgver=r5688.1a3ce17
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Qucs-S provides GUI for different circuit simulation kernels. "
 arch=($CARCH)
