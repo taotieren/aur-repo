@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: gitlab
+    gitlab: etherlab.org/pdcom
+    use_max_tag: true
+    # use_latest_tag: true
+    # 8.0.6-hq
+    # include_regex: \d+\..*
