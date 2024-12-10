@@ -4,8 +4,8 @@ pre_build_script: aur_pre_build(maintainers=[ 'cuvoodoo'])
 post_build: aur_post_build
 repo_depends:
   - fungw
-  - gtkglext
-  - libstroke
+  # - gtkglext
+  # - libstroke
 update_on:
   - source: aur
     aur: librnd4
