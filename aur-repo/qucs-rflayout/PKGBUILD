@@ -33,6 +33,7 @@ optdepends=(
     'kicad: Electronic schematic and printed circuit board (PCB) design tools'
     'qucs-s: Qucs-S provides GUI for different circuit simulation kernels.'
     'openems: free and open electromagnetic field solver using the FDTD method'
+    'pcb-rnd: free/open source, flexible, modular Printed Circuit Board editor'
 )
 provides=(${pkgname})
 conflicts=(${pkgname})
