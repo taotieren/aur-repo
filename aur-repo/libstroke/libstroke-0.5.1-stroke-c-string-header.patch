@@ -1,0 +1,10 @@
+--- libstroke-0.5.1-new/libstroke/stroke.c	2024-05-13 11:13:10.351037767 +0200
++++ libstroke-0.5.1-new/libstroke/stroke.c.new	2024-05-13 11:14:54.892227337 +0200
+@@ -12,6 +12,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <math.h>
++#include <string.h>
+ 
+ #ifdef STROKE_MOUSE_FOOTPRINTS
+ #include <X11/Xutil.h>
