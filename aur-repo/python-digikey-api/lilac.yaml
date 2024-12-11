@@ -12,5 +12,5 @@ update_on:
   - source: alpm
     alpm: python311
     provided: python
-  - source: alpm
+    repo: archlinuxcn
   - alias: python
