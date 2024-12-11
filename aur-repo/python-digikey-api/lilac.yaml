@@ -10,3 +10,4 @@ update_on:
   - source: aur
     aur: python-digikey-api
   - alias: python
+

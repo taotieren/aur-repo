@@ -12,3 +12,4 @@ update_on:
   - source: aur
     aur: python-copier
   - alias: python
+
