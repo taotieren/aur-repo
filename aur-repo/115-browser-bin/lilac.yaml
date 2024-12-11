@@ -28,6 +28,6 @@ post_build_script: |
 update_on:
   - source: htmlparser
     url: "https://115.com/product_browser"
-    regex: '最新版本：([\d.]+)'
+    regex: '：([\d.]+)'
 # - source: manual
 #   manual: 1
