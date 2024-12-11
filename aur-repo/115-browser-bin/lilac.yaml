@@ -10,19 +10,19 @@
 #     url: "https://115.com/product_browser"
 #     regex: '115br_v([\d.]+).deb'
 
-maintainers:
-  - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: 115-browser-bin
-
 # maintainers:
 #   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
 # update_on:
-#   - source: htmlparser
-#     url: "https://115.com/product_browser"
-#     regex: '115br_v([\d.]+).deb'
+#   - source: aur
+#     aur: 115-browser-bin
+
+maintainers:
+  - github: taotieren
+update_on:
+  - source: htmlparser
+    url: "https://115.com/product_browser"
+    regex: '最新版本：([\d.]+)'
 # - source: manual
 #   manual: 1
