@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['bcb'])
+post_build: aur_post_build
+repo_depends:
+  - python-funcy
+  - python-jinja2-ansible-filters
+  - python-questionary
+  - python-pytest-gitconfig
+  - python-poethepoet
+update_on:
+  - source: aur
+    aur: python-copier
+  - alias: python
