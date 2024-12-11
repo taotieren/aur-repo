@@ -26,8 +26,8 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: htmlparser
+  - source: regex
     url: "https://115.com/product_browser"
-    regex: '：([\d.]+)'
+    regex: '最新版本：([\d.]+)'
 # - source: manual
 #   manual: 1
