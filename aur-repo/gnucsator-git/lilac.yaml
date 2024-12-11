@@ -1,6 +1,8 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['felixs'])
+pre_build_script: |
+  aur_pre_build(maintainers=['felixs'])
+  add_makedepends(['gnucap-modelgen-verilog-git'])
 post_build: aur_post_build
 repo_depends:
   - gnucap-git
