@@ -6,8 +6,10 @@ repo_depends:
   - python-certauth
   - python-fake-useragent
   - python-schematics
-  - python38
 update_on:
   - source: aur
     aur: python-digikey-api
+  - source: alpm
+    alpm: python38
+    repo: aur-repo
   - alias: python
