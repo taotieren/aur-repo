@@ -1,13 +1,15 @@
-# maintainers:
-#   - github: taotieren
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
-# update_on:
-#   - source: "htmlparser"
-#     url: "https://115.com/product_browser"
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: "htmlparser"
+    url: "https://115.com/product_browser"
+    xptah: "/html/body/div[1]/div[3]/div[2]/div[5]/div[3]/div/div/div/div/div/div[4]"
+    prefix: 版本：
 #     regex: '115br_v([\d.]+).deb'
 
 # maintainers:
@@ -18,16 +20,16 @@
 #   - source: aur
 #     aur: 115-browser-bin
 
-maintainers:
-  - github: taotieren
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
-update_on:
-  - source: regex
-    url: "https://115.com/product_browser"
-    regex: '版本：(\d.\d.\d.\d)'
+# maintainers:
+#   - github: taotieren
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+# post_build_script: |
+#   git_pkgbuild_commit()
+#   update_aur_repo()
+# update_on:
+#   - source: regex
+#     url: "https://115.com/product_browser"
+#     regex: '版本：(\d.\d.\d.\d)'
 # - source: manual
 #   manual: 1
