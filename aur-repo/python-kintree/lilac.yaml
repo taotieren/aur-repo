@@ -11,6 +11,7 @@ repo_depends:
   - python-multiprocess
   - python-thefuzz
   - python-wrapt-timeout-decorator
+
 update_on:
   - source: aur
     aur: python-kintree
