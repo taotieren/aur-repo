@@ -3,7 +3,7 @@
 pkgname=python-pytest-gitconfig
 pkgdesc='A gitconfig sandbox for testing'
 pkgver=0.7.0
-pkgrel=1
+pkgrel=2
 url='https://github.com/noirbizarre/pytest-gitconfig'
 arch=('any')
 license=('MIT')
