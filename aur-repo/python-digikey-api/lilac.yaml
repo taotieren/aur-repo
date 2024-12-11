@@ -1,13 +1,12 @@
 maintainers:
   - github: taotieren
-pre_build_script: |
-  aur_pre_build(maintainers=['andrejr'])
-  add_depends(['python38'])
+pre_build_script: aur_pre_build(maintainers=['andrejr'])
 post_build: aur_post_build
 repo_depends:
   - python-certauth
   - python-fake-useragent
   - python-schematics
+  - python38
 update_on:
   - source: aur
     aur: python-digikey-api
