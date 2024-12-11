@@ -8,8 +8,8 @@ post_build_script: |
 update_on:
   - source: "htmlparser"
     url: "https://115.com/product_browser"
-    xptah: "/html/body/div[1]/div[3]/div[2]/div[5]/div[3]/div/div/div/div/div/div[4]"
-    prefix: 版本：
+    xptah: "/html/body/div[1]/div[3]/div[2]/div[6]/span[1]"
+    include_regex: '最新版本：(\d+.\d+.\d+.\d+)'
 #     regex: '115br_v([\d.]+).deb'
 
 # maintainers:
