@@ -5,6 +5,7 @@ post_build: aur_post_build
 repo_depends:
   - adms
   - gnucap-git
+  - gnucap-custom-git
 update_on:
   - source: aur
     aur: gnucap-adms-git
