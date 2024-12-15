@@ -1,0 +1,40 @@
+# Maintainer: Woshiluo Luo <woshiluo@woshiluo.site>
+
+pkgname=bililive-recorder
+_pkgname=bililive-recorder
+provides=($_pkgname)
+conflicts=($pkgname-bin)
+pkgver=2.13.0
+pkgrel=1
+pkgdesc='B站录播姬 | BiliBili Stream Recorder | 哔哩哔哩直播录制'
+arch=('x86_64')
+# options=(staticlibs)
+url='https://github.com/Bililive/BililiveRecorder'
+license=('GPL3')
+provides=("$_pkgname")
+depends=(aspnet-runtime)
+makedepends=(git dotnet-sdk nodejs npm)
+source=(git+https://github.com/BililiveRecorder/BililiveRecorder#tag=v${pkgver})
+sha256sums=('5db8fc7609010acb3371edc59c773179679fb3852954c9796747a0c9e5a75aad')
+
+prepare() {
+	cd ${srcdir}/BililiveRecorder
+
+	git submodule update --init --recursive
+}
+
+build() {
+	cd ${srcdir}/BililiveRecorder
+
+	./webui/build.sh
+	dotnet publish -c Release BililiveRecorder.Cli/BililiveRecorder.Cli.csproj -r linux-x64
+}
+
+package() {
+	cd $srcdir/BililiveRecorder
+
+	install -d $pkgdir/usr/lib/
+	install -d $pkgdir/usr/bin/
+	cp -ra BililiveRecorder.Cli/publish/linux-x64/Release/. $pkgdir/usr/lib/bililive-recorder
+	ln -s /usr/lib/bililive-recorder/BililiveRecorder.Cli "$pkgdir/usr/bin/BililiveRecorder.Cli"
+}
