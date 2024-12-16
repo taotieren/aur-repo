@@ -2,7 +2,7 @@
 
 pkgbase=ok-rtc-git
 pkgname=ok-rtc-git
-pkgver=r483.33cbb14
+pkgver=r485.2d2ca3f
 pkgrel=1
 arch=($CARCH)
 pkgdesc="OkStar - WebRTC 对 OkStar
