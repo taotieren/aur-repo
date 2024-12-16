@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+pre_build: vcs_update
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
+update_on:
+  - source: git
+    git: https://gitee.com/tinylab/tinyget-ui.git
+    branch: master
+    use_commit: true
