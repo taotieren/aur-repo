@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   aur_pre_build(maintainers=['cuvoodoo'])
-  add_depends(['python', 'prel', 'duktape', 'mujs', 'lua', 'tcl'])
+  add_depends(['python', 'perl', 'duktape', 'mujs', 'lua', 'tcl', 'libmawk'])
 post_build: aur_post_build
 repo_depends:
   - genht-svn
