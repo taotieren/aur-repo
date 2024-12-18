@@ -3,7 +3,7 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers=[ 'cuvoodoo'])
 post_build: aur_post_build
 repo_depends:
-  - genht
+  - genht-svn
   - libmawk
 update_on:
   - source: aur
