@@ -1,6 +1,6 @@
 # Maintainer: CuVoodoo <pcb-rnd@cuvoodoo.info>
 pkgname=librnd3-svn
-pkgver=r33757
+pkgver=r37782
 pkgrel=1
 pkgdesc="free/open source, flexible, modular two-dimensional CAD engine"
 url="http://www.repo.hu/projects/librnd/"
