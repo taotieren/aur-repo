@@ -22,6 +22,7 @@ depends=(
     ninja)
 makedepends=(
     cmake
+    cli11
     git
     gtest
     meson)
