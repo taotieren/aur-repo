@@ -1,10 +1,9 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['swiftgeek', 'cuvoodoo'])
+pre_build_script: aur_pre_build(maintainers=['cuvoodoo'])
 post_build: aur_post_build
 repo_depends:
-  - librnd3-svn
   - fungw-svn
 update_on:
   - source: aur
-    aur: pcb-rnd
+    aur: librnd3-svn
