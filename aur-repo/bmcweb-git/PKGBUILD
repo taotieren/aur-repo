@@ -10,22 +10,26 @@ url="https://github.com/openbmc/bmcweb"
 license=('Apache-2.0')
 groups=()
 depends=(
-    boost
+    boost-libs
+    gcc-libs
     glibc
-    libnghttp2
-    nlohmann-json
     openssl
     tinyxml2
+    pam
     sdbusplus-git
-    systemd
+    systemd-libs
     zlib
-    ninja)
+)
 makedepends=(
     cmake
     cli11
     git
     gtest
-    meson)
+    libnghttp2
+    ninja
+    nlohmann-json
+    meson
+)
 checkdepends=()
 optdepends=()
 provides=(${pkgname%-git})
