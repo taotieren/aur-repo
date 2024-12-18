@@ -12,6 +12,7 @@ arch=($CARCH)
 url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
+  'cairo'
   'curl'
   'freetype2'
   'fontconfig'
