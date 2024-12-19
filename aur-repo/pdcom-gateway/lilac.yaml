@@ -7,6 +7,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-libconf
+  - pdcom
   - python-pdcom
 update_on:
   - source: gitlab
