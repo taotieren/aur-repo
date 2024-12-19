@@ -1,6 +1,15 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['swiftgeek', 'cuvoodoo'])
+pre_build_script: |
+  aur_pre_build(maintainers=['swiftgeek', 'cuvoodoo'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pcb-rnd'])
+
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('librnd4>=4.1.0'):
+      line = "librnd4"
+    print(line)
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
   - librnd4-svn
