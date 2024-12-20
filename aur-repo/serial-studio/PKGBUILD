@@ -81,7 +81,7 @@ makedepends=(
     $_qt-5compat
     $_qt-charts
     $_qt-shadertools
-    $_qt-quickcontrols2
+    #     $_qt-quickcontrols2
     $_qt-quickeffectmaker
     $_qt-translations
     $_qt-tools
