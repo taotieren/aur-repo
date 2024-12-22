@@ -4,7 +4,7 @@
 pkgname=python-copier
 _name=${pkgname#python-}
 pkgver=9.4.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Library and command-line utility for rendering projects templates'
 arch=('any')
 url='https://github.com/copier-org/copier'
