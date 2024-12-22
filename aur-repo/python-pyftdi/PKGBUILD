@@ -4,7 +4,7 @@
 pkgname=python-pyftdi
 _name=${pkgname#python-}
 pkgver=0.56.0
-pkgrel=2
+pkgrel=3
 pkgdesc="FTDI device driver written in pure Python"
 arch=(any)
 url="https://github.com/eblot/pyftdi"
