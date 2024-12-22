@@ -3,7 +3,7 @@
 pkgname=python-genio-tools
 _name=${pkgname#python-}
 pkgver=1.4.2
-pkgrel=5
+pkgrel=6
 epoch=
 pkgdesc="Tools for flashing boards using MediaTek Genio SoCs"
 arch=('any')
