@@ -4,7 +4,6 @@ pre_build_script: aur_pre_build(maintainers=['Universebenzene'])
 post_build: aur_post_build
 repo_depends:
   - python-imageio
-  - python-lazy-loader
   - python-tifffile
   - python-imread
   - python-pywavelets
