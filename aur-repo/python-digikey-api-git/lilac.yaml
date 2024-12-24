@@ -1,6 +1,8 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['andrejr'])
+pre_build_script: |
+  aur_pre_build(maintainers=['andrejr'])
+  add_makedepends(['git'])
 post_build: aur_post_build
 repo_depends:
   - python-certauth
