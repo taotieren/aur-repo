@@ -18,6 +18,8 @@ makedepends=(python-{build,installer}
     python-setuptools-scm
     python-setuptools-git-ls-files
     python-wheel
+    cmake
+    ninja
     git
     ninja)
 provides=("${pkgname%-git}")
