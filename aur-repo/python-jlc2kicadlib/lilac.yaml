@@ -9,5 +9,6 @@ repo_depends:
   - python-kicadmodtree
 update_on:
   - source: pypi
-    pypi: JLC2KiCadLib
+    # pypi: JLC2KiCadLib
+    pypi: jlc2kicadlib
   - alias: python
