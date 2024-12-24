@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['andrejr'])
+post_build: aur_post_build
+repo_depends:
+  - python-certauth
+  - python-fake-useragent
+  - python-schematics
+update_on:
+  - source: aur
+    aur: python-digikey-api-git
+  - alias: python
