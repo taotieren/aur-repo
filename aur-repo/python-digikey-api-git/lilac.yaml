@@ -6,8 +6,8 @@ pre_build_script: |
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-digikey-api-git'])
 
   for line in edit_file('PKGBUILD'):
-    if line.startswith('source=("$pkgname::git+https://github.com/hvraven/digikey-api.git#commit=10b91ac61458e42f7757fd6c060766b5b9515314")'):
-      line = "source=("$pkgname::git+https://github.com/hvraven/digikey-api.git")"
+    if line.startswith('https://github.com/hvraven/digikey-api.git#commit=10b91ac61458e42f7757fd6c060766b5b9515314'):
+      line = "https://github.com/hvraven/digikey-api.git")"
     print(line)
 
   run_cmd(['updpkgsums'])
