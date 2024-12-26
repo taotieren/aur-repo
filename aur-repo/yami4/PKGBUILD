@@ -30,7 +30,8 @@ build() {
     python_version=$(python --version 2>&1)
     python_version=${python_version#Python }
     python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
-    awk -v python_version="$python_version" '{ gsub("python3.9", "python" python_version); print }' Makefile.common >Makefile.common.tmp
+    #     awk -v python_version="$python_version" '{ gsub("python3.9", "python" python_version); print }' Makefile.common >Makefile.common.tmp
+    awk -v new_python_version="python$python_version" '{ gsub(/python3\.9/, new_python_version); print }' Makefile.common >Makefile.common.tmp
     mv Makefile.common.tmp Makefile.common
 
     make build
