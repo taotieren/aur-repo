@@ -2,7 +2,7 @@
 
 pkgname=extundelete
 pkgver=0.2.4
-pkgrel=2
+pkgrel=3
 arch=('any')
 url="http://${pkgname}.sourceforge.net/"
 license=('GPL2')
