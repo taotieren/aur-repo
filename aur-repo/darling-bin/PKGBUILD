@@ -4,7 +4,7 @@
 _pkgname=darling
 pkgname=$_pkgname-bin
 pkgver=0.1.20230310
-pkgrel=1
+pkgrel=2
 pkgdesc="Darwin/macOS emulation layer for Linux"
 arch=('x86_64')
 url="https://github.com/darlinghq/darling"
