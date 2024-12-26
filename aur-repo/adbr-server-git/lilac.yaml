@@ -1,4 +1,4 @@
-rmaintainers:
+maintainers:
   - github: taotieren
 pre_build: vcs_update
 post_build_script: |
