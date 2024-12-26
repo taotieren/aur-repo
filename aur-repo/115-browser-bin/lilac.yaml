@@ -1,15 +1,15 @@
-maintainers:
-  - github: taotieren
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
-update_on:
-  - source: "htmlparser"
-    url: "https://115.com/product_browser"
-    xptah: "/html/body/div[1]/div[3]/div[2]/div[6]/span[1]"
-    include_regex: '最新版本：([0-9.]+)'
+# maintainers:
+#   - github: taotieren
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+# post_build_script: |
+#   git_pkgbuild_commit()
+#   update_aur_repo()
+# update_on:
+#   - source: "htmlparser"
+#     url: "https://115.com/product_browser"
+#     xptah: "/html/body/div[1]/div[3]/div[2]/div[6]/span[1]"
+#     include_regex: '最新版本：([0-9.]+)'
 #     regex: '115br_v([\d.]+).deb'
 
 # maintainers:
@@ -20,18 +20,17 @@ update_on:
 #   - source: aur
 #     aur: 115-browser-bin
 
-# maintainers:
-#   - github: taotieren
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
-#
-# update_on:
-#   - source: regex
-#     url: https://115.com/product_browser
-#     regex: '最新版本：([0-9.]+)'
-# /html/body/div[1]/div[3]/div[2]/div[6]/span[1]
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+
+update_on:
+  - source: regex
+    url: https://appversion.115.com/1/web/1.0/api/getMultiVer
+    regex: '115br_v([\d.]+).deb'
 # - source: manual
 #   manual: 1
