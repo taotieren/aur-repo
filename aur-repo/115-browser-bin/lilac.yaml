@@ -27,6 +27,7 @@ pre_build_script: |
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
+
 update_on:
   - source: regex
     url: https://115.com/product_browser
