@@ -7,5 +7,5 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: htmlparser
-    url: "https://www.babelstone.co.uk/Fonts/Han_Versions.html"
+    url: "https://www.7-zip.org/sdk.html"
     xpath: "/html/body/table/tbody/tr/td[2]/table/tbody/tr[2]/td[4]"
