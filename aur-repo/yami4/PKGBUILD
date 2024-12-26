@@ -18,7 +18,8 @@ depends=(
 makedepends=(
     gawk
     git
-    python)
+    python
+)
 backup=()
 options=()
 source=("http://www.inspirel.com/${pkgbase}/files/${pkgbase}-gpl-${pkgver}.zip")
@@ -40,6 +41,7 @@ build() {
 package_yami4-core() {
     pkgdesc+=" (core)"
     provides+=(${pkgname})
+    conflicts=(${pkgname})
 
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}"
 
@@ -60,6 +62,7 @@ package_yami4-core() {
 package_libyami4() {
     pkgdesc+=" (lib)"
     provides+=(${pkgname})
+    conflicts=(${pkgname})
 
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/"
 
@@ -74,7 +77,7 @@ package_libyami4() {
 package_python-libyami4() {
     pkgdesc+=" (python)"
     provides+=(${pkgname})
-    conflicts=()
+    conflicts=(${pkgname})
     depends=(python)
 
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/"
