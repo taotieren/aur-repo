@@ -1,6 +1,15 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['thasti', 'xiota'])
+pre_build_script: |
+  aur_pre_build(maintainers=['thasti', 'xiota'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=csxcad-git'])
+
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('hdf5'):
+      line = "hdf5-openmpi"
+    print(line)
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
   - fparser-git
