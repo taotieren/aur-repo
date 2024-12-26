@@ -31,6 +31,6 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://115.com/product_browser
-    regex: 最新版本：([0-9.]+)\
+    regex: '最新版本：([0-9.]+)'
 # - source: manual
 #   manual: 1
