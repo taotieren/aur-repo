@@ -10,6 +10,6 @@ repo_depends:
   - python-bidi
   - python-uniseg
 update_on:
-  - source: pypi
-    pypi: robhagemans/monobit
+  - source: github
+    github: robhagemans/monobit
   - alias: python
