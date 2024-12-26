@@ -40,7 +40,7 @@ _get_mirror() {
 source=("${_pkgname}-${pkgver}.tar.gz::$(_get_mirror _pkg_mirrors)"
 "${pkgname}.install")
 sha256sums=('66a3d2abd21e45aed5898e732236031b3148fa082cb26585dbab8a23cc1daaab'
-    '303f34246c0d341e1093d6e486e2cbfdbbb0d122d751de649f562ebac37777b4')
+            '303f34246c0d341e1093d6e486e2cbfdbbb0d122d751de649f562ebac37777b4')
 
 build() {
     cd "${srcdir}/${_pkgname}-${pkgver}/src/"
