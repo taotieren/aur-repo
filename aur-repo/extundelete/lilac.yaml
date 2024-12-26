@@ -9,4 +9,3 @@ update_on:
   - source: regex
     url: 'https://sourceforge.net/projects/extundelete/rss?path=/'
     regex: extundelete-([0-9.]+)\.tar.bz2
-

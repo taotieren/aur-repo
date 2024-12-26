@@ -7,9 +7,7 @@ pkgname=(libyami4
 pkgver=2.0.0
 pkgrel=0
 pkgdesc="YAMI4 - Messaging Solution for Distributed Systems"
-arch=(x86_64
-    aarch64
-    riscv64)
+arch=($CARCH)
 url="http://www.inspirel.com/yami4/index.html"
 license=('GPL-3.0-or-later')
 provides=()
@@ -32,12 +30,11 @@ build() {
     python_version=$(python --version 2>&1)
     python_version=${python_version#Python }
     python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
-    awk -v python_version="$python_version" '{ gsub("python3.9", "python" python_version); print }' Makefile.common > Makefile.common.tmp
+    awk -v python_version="$python_version" '{ gsub("python3.9", "python" python_version); print }' Makefile.common >Makefile.common.tmp
     mv Makefile.common.tmp Makefile.common
 
     make build
 }
-
 
 package_yami4-core() {
     pkgdesc+=" (core)"
@@ -48,7 +45,7 @@ package_yami4-core() {
     install -Dm0644 lib/libyamicore-fPIC.a -t ${pkgdir}/usr/lib/
     install -Dm0644 lib/libyamicore.a -t ${pkgdir}/usr/lib/
     install -dm755 ${pkgdir}/usr/share/doc/${pkgname}/ \
-    ${pkgdir}/usr/include/
+        ${pkgdir}/usr/include/
     cp -rv doc/core/* ${pkgdir}/usr/share/doc/${pkgname}/
     cp -rv include/yami4-core ${pkgdir}/usr/include/
 
@@ -68,7 +65,7 @@ package_libyami4() {
     install -Dm0644 lib/libyamicpp-fPIC.a -t ${pkgdir}/usr/lib/
     install -Dm0644 lib/libyamicpp.a -t ${pkgdir}/usr/lib/
     install -dm755 ${pkgdir}/usr/share/doc/${pkgname}/ \
-    ${pkgdir}/usr/include/
+        ${pkgdir}/usr/include/
     cp -rv doc/cpp/* ${pkgdir}/usr/share/doc/${pkgname}/
     cp -rv include/yami4-cpp ${pkgdir}/usr/include/
 }
