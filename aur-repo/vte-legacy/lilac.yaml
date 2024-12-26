@@ -1,0 +1,16 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['bidulock'])
+post_build: aur_post_build
+# repo_depends:
+#   - python2-gobject2
+#   - pygtk
+update_on:
+  - source: aur
+    aur: vte-legacy
+  - source: alpm
+    alpm: python2-gobject2
+    repo: blackarch
+  - source: alpm
+    alpm: pygtk
+    repo: blackarch
