@@ -3,7 +3,7 @@
 pkgname=python-startfile
 _name=${pkgname//-/_}
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python startfile."
 arch=('any')
