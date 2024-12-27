@@ -2,8 +2,8 @@
 
 pkgbase=nuclei-openocd
 pkgname=(nuclei-openocd)
-pkgver=2022.12
-pkgrel=0
+pkgver=2024.06
+pkgrel=1
 pkgdesc="nuclei-openocd 是 Nuclei Studio IDE 的调试工具。"
 arch=("x86_64")
 makedepends=('libftdi-compat' 'libusb-compat' 'hidapi' 'libudev.so')
@@ -16,7 +16,7 @@ url="https://www.nucleisys.com/download.php"
 license=('unknow')
 options=(!strip)
 source=("https://www.nucleisys.com/upload/files/toochain/openocd/nuclei-openocd-${pkgver}-linux-x64.tgz")
-sha256sums=('785a9fc1d03cd4e4c5ae5acb9e24f933b79fc30b8b07055200146259ac029866')
+sha256sums=('91cb00fb93860b43b0eab8357d91431cc46209926dea5f152fee0cfc019fa040')
 
 package() {
 	cd "$srcdir"
