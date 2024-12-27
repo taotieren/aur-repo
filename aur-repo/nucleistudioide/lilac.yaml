@@ -14,9 +14,9 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - nuclei-gcc-bin
-  - nuclei-openocd-bin
-  - nuclei-qemu-bin
+  - nuclei-gcc
+  - nuclei-openocd
+  - nuclei-qemu
 update_on:
   - source: regex
     url: https://www.nucleisys.com/download.php
