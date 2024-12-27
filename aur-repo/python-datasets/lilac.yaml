@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['daskol'])
+post_build: aur_post_build
+repo_depends:
+  - python-huggingface-hub
+  - python-multiprocess
+update_on:
+  - source: aur
+    aur: python-datasets
+  - alias: python
