@@ -17,7 +17,6 @@ depends=(
 )
 makedepends=(
     python-poetry
-    python-poetry-core
     python-build
     python-installer
     python-wheel
@@ -29,6 +28,7 @@ sha256sums=('05a0175a29cee018c97efe28e288cea9ee894bfd6e076f3ca46e988a3d43a524')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
+    rm -rf LICENSE
     python -m build --wheel --no-isolation
 }
 
