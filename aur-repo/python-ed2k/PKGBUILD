@@ -32,6 +32,7 @@ sha256sums=('84eacfdf605087806a57d56e21cbea08dbcc75410ad51e567cf6e510367b4f83')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
+    rm -rf LICENSE
     python -m build --wheel --no-isolation
 }
 
