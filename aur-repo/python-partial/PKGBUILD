@@ -35,4 +35,8 @@ build() {
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
+    #     python_version=$(python --version 2>&1)
+    #     python_version=${python_version#Python }
+    #     python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
+    #     rm -rf ${pkgdir}/usr/lib/python${python_version}/site-packages/LICENSE
 }
