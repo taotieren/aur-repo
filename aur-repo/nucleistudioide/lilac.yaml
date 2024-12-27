@@ -1,0 +1,25 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: nucleistudioide
+
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - nuclei-gcc-bin
+  - nuclei-openocd-bin
+  - nuclei-qemu-bin
+update_on:
+  - source: regex
+    url: https://www.nucleisys.com/download.php
+    regex: 'NucleiStudio_IDE_([\d.]+)-lin64.tgz'
+# - source: manual
+#   manual: 1
