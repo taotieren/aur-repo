@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=nuwriter-git
-pkgver=b7ef934
+pkgver=r23.20fb730
 pkgrel=1
 epoch=
 pkgdesc="The Nu-writer Command Tool is a linux console application consisting of functions to access storage(eg. DRAM,NAND,SPINOR,SPINAND,SD) in a NUC980 family processors"
