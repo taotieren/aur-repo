@@ -3,7 +3,7 @@
 pkgname=python-partial
 _name=${pkgname//-/_}
 pkgver=0.0.6
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Python partial."
 arch=('any')
