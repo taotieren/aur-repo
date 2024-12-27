@@ -6,25 +6,17 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - python-asynctools
-  - python-cookietools
-  - python-dictattr
-  - python-ed2k
-  - python-encode-uri
+  - python-argtools
+  - python-download
   - python-filewrap
-  - python-hashtools
   - python-httpfile
   - python-http-response
   - python-http-request
-  - python-httpx-request
-  - python-iterutils
-  - python-iter-collect
-  - python-startfile
-  - python-p115cipher
-  - python-posixpatht
-  - python-undefined
+  - python-glob-pattern
+  - python-grpclib
+  - python-path-ignore-pattern
   - python-urlopen
 update_on:
   - source: pypi
-    pypi: p115client
+    pypi: clouddrive
   - alias: python
