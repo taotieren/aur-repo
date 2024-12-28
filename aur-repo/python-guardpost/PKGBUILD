@@ -3,7 +3,7 @@
 pkgname=python-guardpost
 _name=${pkgname#python-}
 pkgver=1.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Framework to handle authentication and authorization."
 arch=('any')
