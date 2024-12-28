@@ -1,0 +1,25 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-a2wsgi
+  - python-blacksheep
+  - python-encode-uri
+  - python-fusepy
+  - python-httpagentparser
+  - python-httpfile
+  - python-p115client
+  - python-p115updatedb
+  - python-path-predicate
+  - python-property
+  - python-posixpatht
+  - python-pysubs2
+  - python-wsgidav
+update_on:
+  - source: pypi
+    pypi: p115servedb
+  - alias: python
