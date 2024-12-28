@@ -14,16 +14,21 @@ groups=()
 depends=(
     sh
     scons
-    'python'
+    python
     #     python-configupdater
     python-gitdb
     python-gitpython
-    #     python-httplib2
+    python-httplib2
     python-smmap
+    python-pyserial
+    python-requests-toolbelt
     python-ruamel-yaml
-    #     python-threadpoolctl
+    python-threadpoolctl
     python-xlsxwriter
+    python-ndg-httpsclient
     #     python-urllib3
+    #AUR
+    python-configparser
 )
 makedepends=(python-build
     python-installer
