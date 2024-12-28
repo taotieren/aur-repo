@@ -76,5 +76,4 @@ package() {
     cd "${srcdir}/${_name}-${pkgver}"
 
     python -m installer --destdir="${pkgdir}" dist/*.whl
-    #     python setup.py install --root="\$pkgdir" --optimize=1 dist/
 }
