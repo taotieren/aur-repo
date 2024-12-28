@@ -3,7 +3,7 @@
 pkgname=python-filerev
 _name=${pkgname#python-}
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Reversed iterator for files."
 arch=('any')
