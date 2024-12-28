@@ -8,6 +8,7 @@ post_build_script: |
 repo_depends:
   - python-argtools
   - python-download
+  - python-concurrenttools
   - python-filewrap
   - python-httpfile
   - python-http-response

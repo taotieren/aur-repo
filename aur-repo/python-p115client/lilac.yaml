@@ -6,7 +6,9 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
+  - python-aiofile
   - python-asynctools
+  - python-blacksheep
   - python-cookietools
   - python-dictattr
   - python-ed2k

@@ -14,6 +14,7 @@ provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
     python
+    python-aiohttp
     python-httpx
     python-multidict
     python-qrcode
@@ -22,7 +23,9 @@ depends=(
     python-urllib3
     python-yarl
     #AUR
+    python-aiofile
     python-asynctools
+    python-blacksheep
     python-cookietools
     python-dictattr
     python-ed2k
