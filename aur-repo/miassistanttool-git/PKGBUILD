@@ -3,7 +3,7 @@
 pkgbase=miassistanttool-git
 pkgname=miassistanttool-git
 pkgver=1.2.r0.g0912888
-pkgrel=1
+pkgrel=2
 pkgdesc="MiAssistantTool"
 arch=($CARCH)
 url="https://github.com/offici5l/MiAssistantTool"
