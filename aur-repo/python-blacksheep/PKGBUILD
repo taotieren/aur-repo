@@ -72,6 +72,7 @@ depends=(
 )
 makedepends=(
     python-poetry
+    python-hatchling
     python-build
     python-installer
     python-wheel
