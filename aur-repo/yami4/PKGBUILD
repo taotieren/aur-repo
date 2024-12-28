@@ -44,6 +44,10 @@ package_yami4-core() {
     pkgdesc+=" (core)"
     provides+=(${pkgname})
     conflicts=(${pkgname})
+    depends=(
+        gcc-libs
+        glibc
+    )
 
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}"
 
@@ -65,7 +69,10 @@ package_libyami4() {
     pkgdesc+=" (lib)"
     provides+=(${pkgname})
     conflicts=(${pkgname})
-
+    depends=(
+        gcc-libs
+        glibc
+    )
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/"
 
     install -Dm0644 lib/libyamicpp-fPIC.a -t ${pkgdir}/usr/lib/
