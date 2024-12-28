@@ -29,6 +29,7 @@ sha256sums=('dd599c8d72f08e344c563057d007ff57841910f931bba184dccfa3ad7e9041f1')
 build() {
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/src"
 
+    make clean
     python_version=$(python --version 2>&1)
     python_version=${python_version#Python }
     python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
@@ -36,7 +37,7 @@ build() {
     awk -v new_python_version="python$python_version" '{ gsub(/python3\.9/, new_python_version); print }' Makefile.common >Makefile.common.tmp
     cp -rv Makefile.common.tmp Makefile.common
 
-    make build
+    make CFLAGS="-O2 -DNDEBUG" build
 }
 
 package_yami4-core() {
