@@ -19,10 +19,11 @@ makedepends=(
     gawk
     git
     python
+    pkgconf
 )
 backup=()
 options=()
-source=("http://www.inspirel.com/${pkgbase}/files/${pkgbase}-gpl-${pkgver}.zip")
+source=("${pkgbase}-gpl-${pkgver}.zip::http://www.inspirel.com/${pkgbase}/files/${pkgbase}-gpl-${pkgver}.zip")
 sha256sums=('dd599c8d72f08e344c563057d007ff57841910f931bba184dccfa3ad7e9041f1')
 
 build() {
@@ -78,7 +79,11 @@ package_python-libyami4() {
     pkgdesc+=" (python)"
     provides+=(${pkgname})
     conflicts=(${pkgname})
-    depends=(python)
+    depends=(
+        gcc-libs
+        glibc
+        python
+    )
 
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/"
     install -Dm0644 lib/libyami4py.so -t ${pkgdir}/usr/lib/
