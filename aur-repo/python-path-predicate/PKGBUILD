@@ -16,7 +16,7 @@ conflicts=(${pkgname})
 depends=(
     python
     #AUR
-    python-ignore-pattern
+    python-path-ignore-pattern
 )
 makedepends=(
     python-poetry
