@@ -4,8 +4,8 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-# repo_depends:
-#   -
+repo_depends:
+  - tiny-json-git
 update_on:
   - source: github
     github: offici5l/MiAssistantTool
