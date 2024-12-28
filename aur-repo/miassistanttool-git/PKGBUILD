@@ -15,7 +15,9 @@ replaces=()
 depends=(
     curl
     glibc
-    libusb)
+    libusb
+    openssl
+    tiny-json)
 makedepends=(
     git
 )
@@ -42,7 +44,9 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}"
-    gcc -o ${pkgname%-git} main.c libs/*.c -lusb-1.0 -lcurl
+    gcc -o ${pkgname%-git} *.c -I/usr/include/tiny-json/tiny-json.c \
+        -I/usr/include/openssl -I. -lssl -lcrypto -lcurl \
+        -lusb-1.0 -lcurl
 }
 
 package() {
