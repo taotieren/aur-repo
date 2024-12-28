@@ -8,7 +8,7 @@ pkgname=qt5-webkit
 _pkgver=5.212.0-alpha4
 _basever=5.15.3
 pkgver=${_pkgver/-/}
-pkgrel=26
+pkgrel=27
 arch=(x86_64 aarch64)
 url="https://github.com/qtwebkit/qtwebkit"
 license=(LGPL2.1)
@@ -38,7 +38,7 @@ sha256sums=('9ca126da9273664dd23a3ccd0c9bebceb7bb534bddd743db31caf6a5a6d4a9e6'
             '4c71c958eae45cae65c9f002024eb1369d06029b668e595158138ff7971e64f1'
             'eea38db22078700887bf22b6a49bb628fd8444cdb2e506770c993df883d0e8fb'
             '8768433ff3f641b506962ed22cc596eaf57bf21b6d3402e0e73ad8c2afeaa502'
-            'b4d1ba1e99e28fd8cb1ec82252373c870ede683869a9cd43c8e465fe09531bcb'
+            '8fd479fc2ac56b17fde9392af95fb8ae8af13602e542193f4a64a9a6b8455616'
             '0b40ed924f03ff6081af610bb0ee01560b7bd1fb68f8af02053304a01d4ccdf0'
             '4969dd03e482155e2490b50307dada81dda7bbc9e5398e3a53c20bc474f7c04e'
             '6e0cee08e4fa57b04752e80817f33562f48aa42608a3a620930b6040259b4932'
