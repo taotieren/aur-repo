@@ -13,57 +13,16 @@ groups=()
 provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
-    hypercorn
+    glibc
     python
-    python-annotated-types
-    python-asgiref
-    python-attrs
-    python-blinker
+    python-setuptools
     python-certifi
-    python-cffi
-    python-charset-normalizer
-    python-click
-    python-cryptography
-    python-coverage
     python-dateutil
-    python-flask
-    python-gevent
-    python-greenlet
-    python-h11
-    python-h2
-    python-hpack
     python-httptools
-    python-hyperframe
-    python-idna
-    python-iniconfig
     python-itsdangerous
     python-jinja
-    python-markupsafe
-    python-mccabe
-    python-packaging
-    python-pluggy
-    python-priority
-    python-py
-    python-pycparser
     python-pydantic
-    python-pydantic-core
     python-pyjwt
-    python-pyparsing
-    python-pyaml
-    python-regex
-    python-requests
-    python-six
-    python-toml
-    python-tomli
-    python-typing_extensions
-    python-urllib3
-    python-wcwidth
-    python-websockets
-    python-werkzeug
-    python-wsproto
-    python-zope-event
-    python-zope-interface
-    uvicorn
     #AUR
     python-essentials
     python-essentials-openapi
@@ -71,12 +30,16 @@ depends=(
     python-rodi
 )
 makedepends=(
-    python-poetry
+    cython
+    flake8
+    mypy
+    python-black
+    python-flake8-black
     python-hatchling
     python-build
     python-installer
     python-wheel
-    python-setuptools
+    #     python-setuptools
 )
 checkdepends=(
     python-pytest
@@ -84,18 +47,34 @@ checkdepends=(
     python-pytest-cov
 )
 optdepends=()
-options=('!strip')
+options=()
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
 sha256sums=('ae192809c1e42de5a0d6230f1238d027641a8d889a4a9fb5349b7980f74afd88')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    rm -rf LICENSE
+
+    cython blacksheep/url.pyx
+    cython blacksheep/exceptions.pyx
+    cython blacksheep/headers.pyx
+    cython blacksheep/cookies.pyx
+    cython blacksheep/contents.pyx
+    cython blacksheep/messages.pyx
+    cython blacksheep/scribe.pyx
+    cython blacksheep/baseapp.pyx
+    python setup.py build_ext --inplace
+
+    #     make buildext
+    #     make annotate
+    #     make build
     python -m build --wheel --no-isolation
+
 }
 
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
+
     python -m installer --destdir="${pkgdir}" dist/*.whl
+    #     python setup.py install --root="\$pkgdir" --optimize=1 dist/
 }
