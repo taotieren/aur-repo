@@ -1,0 +1,26 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-argtools
+  - python-asynctools
+  - python-ed2k
+  - python-dictattr
+  - python-download
+  - python-filewrap
+  - python-glob-pattern
+  - python-httpfile
+  - python-http-request
+  - python-http-response
+  - python-iterutils
+  - python-path-ignore-pattern
+  - python-p115qrcode
+  - python-undefined
+update_on:
+  - source: pypi
+    pypi: python_alist
+  - alias: python
