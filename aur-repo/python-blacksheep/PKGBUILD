@@ -1,0 +1,100 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgname=python-blacksheep
+_name=${pkgname#python-}
+pkgver=2.0.7
+pkgrel=1
+epoch=
+pkgdesc="Fast web framework for Python asyncio"
+arch=($CARCH)
+url="https://pypi.org/project/${_name}"
+license=(MIT)
+groups=()
+provides=(${_name} ${pkgname})
+conflicts=(${_name} ${pkgname})
+depends=(
+    hypercorn
+    python
+    python-annotated-types
+    python-asgiref
+    python-attrs
+    python-blinker
+    python-certifi
+    python-cffi
+    python-charset-normalizer
+    python-click
+    python-cryptography
+    python-coverage
+    python-dateutil
+    python-flask
+    python-gevent
+    python-greenlet
+    python-h11
+    python-h2
+    python-hpack
+    python-httptools
+    python-hyperframe
+    python-idna
+    python-iniconfig
+    python-itsdangerous
+    python-jinja
+    python-markupsafe
+    python-mccabe
+    python-packaging
+    python-pluggy
+    python-priority
+    python-py
+    python-pycparser
+    python-pydantic
+    python-pydantic-core
+    python-pyjwt
+    python-pyparsing
+    python-pyaml
+    python-regex
+    python-requests
+    python-six
+    python-toml
+    python-tomli
+    python-typing_extensions
+    python-urllib3
+    python-wcwidth
+    python-websockets
+    python-werkzeug
+    python-wsproto
+    python-zope-event
+    python-zope-interface
+    uvicorn
+    #AUR
+    python-essentials
+    python-essentials-openapi
+    python-guardpost
+    python-rodi
+)
+makedepends=(
+    python-poetry
+    python-build
+    python-installer
+    python-wheel
+    python-setuptools
+)
+checkdepends=(
+    python-pytest
+    python-pytest-asyncio
+    python-pytest-cov
+)
+optdepends=()
+options=('!strip')
+source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+noextract=()
+sha256sums=('ae192809c1e42de5a0d6230f1238d027641a8d889a4a9fb5349b7980f74afd88')
+
+build() {
+    cd "${srcdir}/${_name}-${pkgver}"
+    rm -rf LICENSE
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "${srcdir}/${_name}-${pkgver}"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+}
