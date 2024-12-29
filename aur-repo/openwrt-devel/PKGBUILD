@@ -3,7 +3,7 @@
 
 pkgname=openwrt-devel
 pkgver=1.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Metapackage to pull all dependencies required to build OpenWrt'
 arch=('x86_64')
 url='https://openwrt.org/docs/guide-developer/build-system/install-buildsystem'
