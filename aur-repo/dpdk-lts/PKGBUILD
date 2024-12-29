@@ -10,10 +10,10 @@ depends=(numactl)
 makedepends=(linux-headers libpcap)
 checkdepends=()
 source=(
-    "http://fast.dpdk.org/rel/dpdk-$pkgver.tar.xz"
+  "http://fast.dpdk.org/rel/dpdk-$pkgver.tar.xz"
 )
 sha256sums=(
-    '97ee27bb98f5e38bdaa3762345817a56f821b016bb2f518cf0aade4fdffde9f4'
+  '97ee27bb98f5e38bdaa3762345817a56f821b016bb2f518cf0aade4fdffde9f4'
 )
 
 prepare() {
@@ -21,12 +21,12 @@ prepare() {
   cd dpdk-$pkgver
   make T=x86_64-native-linuxapp-gcc config
 
-  sed -ri 's,(RTE_MACHINE=).*,\1default,'    build/.config
-  sed -ri 's,(RTE_APP_TEST=).*,\1n,'         build/.config
-  sed -ri 's,(RTE_BUILD_SHARED_LIB=).*,\1y,' build/.config
-  sed -ri 's,(RTE_NEXT_ABI=).*,\1n,'         build/.config
-  sed -ri 's,(LIBRTE_VHOST=).*,\1y,'         build/.config
-  sed -ri 's,(LIBRTE_PMD_PCAP=).*,\1y,'      build/.config
+  #   sed -ri 's,(RTE_MACHINE=).*,\1default,'    build/.config
+  #   sed -ri 's,(RTE_APP_TEST=).*,\1n,'         build/.config
+  #   sed -ri 's,(RTE_BUILD_SHARED_LIB=).*,\1y,' build/.config
+  #   sed -ri 's,(RTE_NEXT_ABI=).*,\1n,'         build/.config
+  #   sed -ri 's,(LIBRTE_VHOST=).*,\1y,'         build/.config
+  #   sed -ri 's,(LIBRTE_PMD_PCAP=).*,\1y,'      build/.config
   #sed -ri 's,(LIBRTE_PMD_XENVIRT=).*,\1y,'   build/.config
 
   sed 's|\bpython\b|python2|' -i mk/rte.sdktest.mk
