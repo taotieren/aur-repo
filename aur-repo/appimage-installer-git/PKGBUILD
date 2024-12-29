@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=appimage-installer-git
-pkgver=2.0beta2.r0.g259510f
+pkgver=2.0beta2.r3.gd16ea8d
 pkgrel=1
 pkgdesc="AppImage install tool."
 arch=('x86_64')
