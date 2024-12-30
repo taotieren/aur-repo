@@ -9,7 +9,9 @@ arch=('any')
 url="https://github.com/sifive/duh"
 license=('Apache-2.0')
 groups=()
-depends=()
+depends=(
+    python
+)
 makedepends=('npm')
 checkdepends=()
 optdepends=()
