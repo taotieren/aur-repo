@@ -46,7 +46,6 @@ depends=(
 )
 makedepends=(
     python-poetry
-    python-poetry-core
     python-build
     python-installer
     python-wheel
