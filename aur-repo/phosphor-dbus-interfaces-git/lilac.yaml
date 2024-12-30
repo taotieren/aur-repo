@@ -1,0 +1,9 @@
+maintainers:
+  - github: taotieren
+pre_build_script: aur_pre_build(maintainers=['amateurece'])
+post_build: aur_post_build
+repo_depends:
+  - sdbusplus-git
+update_on:
+  - source: aur
+    aur: phosphor-dbus-interfaces-git
