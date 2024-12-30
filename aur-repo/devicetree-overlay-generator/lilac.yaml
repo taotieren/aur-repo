@@ -10,5 +10,6 @@ repo_depends:
 update_on:
   - source: github
     github: sifive/devicetree-overlay-generator
+    use_max_tag: true
     prefix: v
   - alias: python
