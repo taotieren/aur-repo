@@ -54,6 +54,7 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    meson subprojects download --sourcedir="${srcdir}/${pkgname}"
 }
 
 build() {
