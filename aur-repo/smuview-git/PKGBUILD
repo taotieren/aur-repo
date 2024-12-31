@@ -9,13 +9,18 @@ arch=($CARCH)
 url="https://github.com/knarfS/$_pkgname"
 license=('GPL-3.0-or-later')
 depends=(
-    glibmm
+    gcc-libs
+    glib2
     glibc
+    glibmm
+    hicolor-icon-theme
     libsigrok-git
+    #     libsigrok
     qt5-base
     qt5-svg
     qwt
     python
+    python-pdoc
 )
 makedepends=(
     git

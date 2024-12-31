@@ -6,6 +6,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - libsigrok-git
+  - python-pdoc
 update_on:
   - source: github
     github: knarfS/smuview
