@@ -51,9 +51,4 @@ package() {
 	make install INSTALL_ROOT=${pkgdir}/usr
 	cd canifconfig
 	make install INSTALL_ROOT=${pkgdir}/usr
-	# 	install -Dm755 "$srcdir/$pkgname/bin/cangaroo" -t "$pkgdir/usr/bin"
-	# 	install -Dm755 "$srcdir/$pkgname/src/scripts/setup_vcan.sh" "$pkgdir/usr/bin/cangaroo-setup-vcan"
-	# 	install -Dm755 "$srcdir/$pkgname/canifconfig/canifconfig" -t "$pkgdir/usr/bin"
-	# 	install -Dm644 "$srcdir/$pkgname/cangaroo.desktop" -t "$pkgdir/usr/share/applications"
-	# 	install -Dm644 "$srcdir/$pkgname/src/assets/cangaroo.png" -t "$pkgdir/usr/share/pixmaps"
 }
