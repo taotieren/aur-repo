@@ -1,0 +1,67 @@
+# Maintainer: Shayne Hartford <shayneehartford@gmail.com>
+
+_pkgname=smuview
+pkgname=${_pkgname}-git
+pkgver=continuous.r0.ga5ffb66
+pkgrel=1
+pkgdesc="SmuView is a Qt-based source measurement unit GUI for sigrok."
+arch=($CARCH)
+url="https://github.com/knarfS/$_pkgname"
+license=('GPL-3.0-or-later')
+depends=(
+    glibmm
+    glibc
+    libsigrok-git
+    qt5-base
+    qt5-svg
+    qwt
+    python
+)
+makedepends=(
+    git
+    boost
+    cmake
+    ninja
+    qt5-tools
+    pkgconf
+    pybind11
+)
+provides=($_pkgname)
+conflicts=($_pkgname)
+source=("git+$url.git")
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${srcdir}/${_pkgname}/"
+    (
+        set -o pipefail
+        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    )
+}
+
+prepare() {
+    git -C "${srcdir}/${_pkgname}" clean -dfx
+}
+
+build() {
+    cd "$srcdir/$_pkgname"
+
+    # Workaround - libsigrok-git
+    sed -i 's/option(DISABLE_WERROR "Build without -Werror" FALSE)/option(DISABLE_WERROR "Build without -Werror" TRUE)/' CMakeLists.txt
+
+    # see：https://wiki.archlinux.org/title/CMake_package_guidelines
+
+    cmake -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -B build \
+        -G Ninja
+    ninja -C build
+}
+
+package() {
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${_pkgname}/build install
+    #     install -Dm755 "$srcdir/$_pkgname/build/smuview" "$pkgdir/usr/bin/$_pkgname"
+    #     install -Dm644 "$srcdir/$_pkgname/contrib/org.sigrok.SmuView.desktop" "$pkgdir/usr/share/applications/$_pkgname.desktop"
+    #     install -Dm644 "$srcdir/$_pkgname/icons/smuview.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/$_pkgname.svg"
+}
