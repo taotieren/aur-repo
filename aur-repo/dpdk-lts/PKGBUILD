@@ -13,31 +13,35 @@ conflicts=(${pkgname%-lts})
 options=()
 depends=(
   sh
+  dtc
   gcc-libs
+  glibc
+  jansson
   libarchive
   libbsd
+  libbpf
   libelf
   libpcap
   libxdp
   numactl
   rdma-core
   openssl
+  python-scapy
   python-pyelftools
   zlib
+  #AUR
+  dlpack
+  isa-l
 )
 makedepends=(
   doxygen
   cmake
   ninja
   meson
-  scapy
-  dtc
-  libbpf
+
   man-db
   python-sphinx
-  #AUR
-  dlpack
-  isa-l
+
 )
 checkdepends=()
 source=(

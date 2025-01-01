@@ -49,11 +49,15 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/"
 
-    ./configure --prefix=/usr
-    make LDFLAGS="-Wl,-z,now -Wl,-z,relro"
+    cmake -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -Wno-dev \
+        -B build \
+        -G Ninja
+
+    ninja -C build
 }
 
 package() {
-    cd "${srcdir}/${pkgname}/"
-    make DESTDIR="$pkgdir/" install[
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
 }
