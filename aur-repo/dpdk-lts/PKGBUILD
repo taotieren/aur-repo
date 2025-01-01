@@ -29,7 +29,7 @@ prepare() {
   #   sed -ri 's,(LIBRTE_PMD_PCAP=).*,\1y,'      build/.config
   #sed -ri 's,(LIBRTE_PMD_XENVIRT=).*,\1y,'   build/.config
 
-  sed 's|\bpython\b|python2|' -i mk/rte.sdktest.mk
+  #   sed 's|\bpython\b|python2|' -i mk/rte.sdktest.mk
 }
 
 build() {
