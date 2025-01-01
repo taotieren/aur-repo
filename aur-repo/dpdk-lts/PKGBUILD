@@ -1,6 +1,6 @@
 pkgname=dpdk-lts
 pkgver=24.11.1
-pkgrel=0
+pkgrel=1
 pkgdesc='A set of libraries and drivers for fast packet processing'
 arch=($CARCH)
 url='http://dpdk.org'
