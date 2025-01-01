@@ -1,10 +1,24 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers=['codyps'])
+# post_build: aur_post_build
+# repo_depends:
+#   - libserialport-git
+# update_on:
+#   - source: aur
+#     aur: libsigrok-git
+# - alias: python
+
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['codyps'])
-post_build: aur_post_build
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+update_on:
 repo_depends:
   - libserialport-git
 update_on:
-  - source: aur
-    aur: libsigrok-git
-# - alias: python
+  - source: github
+    github: sigrokproject/libsigrok
+# update_aur_repo()

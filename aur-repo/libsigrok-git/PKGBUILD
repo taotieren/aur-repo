@@ -8,14 +8,22 @@ pkgname="${_gitname}-git"
 pkgver=0.2.1.r4392.gf06f7881
 pkgrel=1
 pkgdesc="Client software that supports various hardware logic analyzers, core library (git version)"
-arch=('armv6h' 'armv7h' 'i686' 'x86_64')
+arch=($CARCH)
 url="http://www.sigrok.org/wiki/Libsigrok"
-license=('GPL3')
-depends=('libzip' 'libftdi' 'alsa-lib' 'libserialport-git' 'glibmm' 'libieee1284')
-makedepends=('git' 'autoconf-archive' 'doxygen')
+license=('GPL-3.0-only')
+depends=(
+  'glibc' 'glib2' 'gcc-libs' 'libzip' 'libftdi' 'libserialport-git'
+  'glibmm' 'libieee1284' 'nettle' 'libtirpc' 'libsigc++' 'libusb'
+  'hidapi' 'hicolor-icon-theme' 'python' 'zlib'
+)
+makedepends=('git' 'autoconf-archive' 'doxygen'
+  'swig' 'python-setuptools' 'python-numpy' 'python-gobject' 'check'
+)
 conflicts=("${_gitname}")
 provides=("${_gitname}")
-source=("git://sigrok.org/${_gitname}"
+source=(
+  # "git://sigrok.org/${_gitname}"
+  git+https://github.com/sigrokproject/libsigrok.git
 )
 sha512sums=('SKIP')
 
@@ -33,7 +41,6 @@ build() {
   cd "${srcdir}/build"
   echo "CONFIGURE"
   ../${_gitname}/configure --prefix=/usr --disable-java --disable-ruby
-
   make
 }
 
