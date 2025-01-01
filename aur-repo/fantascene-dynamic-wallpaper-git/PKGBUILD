@@ -10,11 +10,15 @@ url="https://github.com/dependon/fantascene-dynamic-wallpaper"
 license=('GPL-3.0-only')
 provides=(${pkgname})
 conflicts=(${pkgname} ${pkgname%-git})
-depends=(mpv
-    qt5-tools
+depends=(
+    mpv
+    qt5-base
+    qt5-multimedia
     qt5-x11extras
     qt5-webengine)
-makedepends=(git
+makedepends=(
+    git
+    qt5-tools
     pkgconfig
     make)
 source=("${pkgname%-git}::git+${url}.git")
