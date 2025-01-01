@@ -12,3 +12,4 @@ update_on:
     github: HVML/xGUI-Pro
     use_max_tag: true
     prefix: ver-
+    lilac_throttle: 60d

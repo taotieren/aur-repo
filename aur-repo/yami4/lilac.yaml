@@ -17,3 +17,4 @@ update_on:
   - source: regex
     url: 'http://www.inspirel.com/yami4/index.html'
     regex: yami4-gpl-([0-9.]+)\.zip
+    lilac_throttle: 60d

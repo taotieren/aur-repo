@@ -8,3 +8,4 @@ post_build_script: |
 update_on:
   - source: github
     github: rustdesk/rustdesk
+    lilac_throttle: 15d

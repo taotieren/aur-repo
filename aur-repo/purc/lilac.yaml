@@ -12,4 +12,5 @@ update_on:
     github: HVML/PurC
     use_max_tag: true
     prefix: ver-
+    lilac_throttle: 60d
     # use_latest_release: true
