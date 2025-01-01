@@ -60,7 +60,8 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -Wno-dev \
         -B build \
-        -G Ninja
+        -G Ninja \
+        -Wno-dev
 
     ninja -C build
 }
