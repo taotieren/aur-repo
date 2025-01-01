@@ -15,16 +15,16 @@ replaces=()
 depends=(
 )
 makedepends=(
-    #     cmake
+    cmake
     git
-    #     ninja
-    #     pkgconf
-    #     arrow
-    #     curl
-    #     openmp
-    #     openssl
+    ninja
+    pkgconf
+    arrow
+    curl
+    openmp
+    openssl
     #AUR
-    #     dlpack
+    dlpack
 )
 checkdepends=(
 )
