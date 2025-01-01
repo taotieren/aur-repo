@@ -6,12 +6,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - isa-l
   - dlpack
-  - dmlc-core-git
 update_on:
-  - source: regex
-    url: https://core.dpdk.org/download/
-    regex: 'dpdk-([\d.]+).tar.xz'
-# - source: manual
-#   manual: 1
+  - source: github
+    github: dmlc/dmlc-core
