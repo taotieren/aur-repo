@@ -100,7 +100,8 @@ build() {
         -DCMAKE_C_COMPILER=clang \
         -Wno-dev \
         -B build \
-        -G Ninja
+        -G Ninja \
+        -Wno-dev
 
     ninja -C build
 }
