@@ -13,7 +13,9 @@ conflicts=(${pkgname%-git} librmqtt_macros.so)
 replaces=()
 depends=('cargo'
     protobuf-c)
-makedepends=('git' 'rust')
+makedepends=('git' 'rust'
+    cmake
+)
 backup=()
 options=('!strip' '!lto')
 install=
