@@ -37,7 +37,7 @@ build() {
     awk -v new_python_version="python$python_version" '{ gsub(/python3\.9/, new_python_version); print }' Makefile.common >Makefile.common.tmp
     cp -rv Makefile.common.tmp Makefile.common
 
-    make CFLAGS="-O2 -DNDEBUG" build
+    make CFLAGS="-O2 -DNDEBUG" build V=1
 }
 
 package_yami4-core() {
