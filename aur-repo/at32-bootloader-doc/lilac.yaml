@@ -1,7 +1,19 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: at32-bootloader-doc-zh
+
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
 update_on:
-  - source: aur
-    aur: at32-bootloader-doc-zh
+  - source: regex
+    url: https://www.arterytek.com/json/Document.json
+    regex: 'Bootloader_CH_V([\d.]+).zip'
