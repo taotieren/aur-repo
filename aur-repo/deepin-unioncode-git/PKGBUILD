@@ -60,6 +60,7 @@ makedepends=(
     libmicrohttpd
     libutf8proc
     libxi
+    lxqt-build-tools
     lxqt-build-tools-qt5
     qt5-tools
     qtermwidget
