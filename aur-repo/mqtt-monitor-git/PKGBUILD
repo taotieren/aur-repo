@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=mqtt-monitor-git
-pkgver=1325555
+pkgver=r12.1325555
 pkgrel=1
 pkgdesc="MQTT Monitor UI using react and mqtt.js"
 arch=('any')
