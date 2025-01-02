@@ -1,18 +1,12 @@
 maintainers:
   - github: taotieren
 pre_build: vcs_update
-# repo_depends:
-#   - libch9344ser
-#   - libch343ser
+repo_depends:
+  - libch9344ser-git
+  - libch343ser-git
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
   - source: github
     github: WCHSoftGroup/ch343ser_linux
-  - source: alpm
-    alpm: libch343ser-git
-    repo: aur-repo
-  - source: alpm
-    alpm: libch9344ser-git
-    repo: aur-repo
