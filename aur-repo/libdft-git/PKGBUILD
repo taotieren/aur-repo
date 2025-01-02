@@ -43,7 +43,7 @@ build() {
 
     cd "${srcdir}/${pkgname}/"
     sed -i 's|track|track nullpin libdft libdft-dta|g' tools/makefile.rules
-    make
+    make V=1
 }
 
 package() {
