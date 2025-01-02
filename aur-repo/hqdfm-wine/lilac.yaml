@@ -18,5 +18,5 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: "https://dfm.elecfans.com/downloads"
-    regex: 'HQDFM v(\d+.\d+).zip'
+    url: https://dfm.elecfans.com/downloads
+    regex: '版本：v([\d.]+)'
