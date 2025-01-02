@@ -67,6 +67,7 @@ makedepends=(
     systemd
     pkgconf
     python-onnxruntime
+    python-pip
     python-pyjsparser
 )
 checkdepends=()
