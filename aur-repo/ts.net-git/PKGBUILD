@@ -19,7 +19,7 @@ makedepends=(
     curl
     git
     dotnet-host-bin
-    dotnet-core-bin)
+    dotnet-sdk-bin)
 optdepends=('scopehal-apps: glscopeclient and other client applications for libscopehal')
 backup=()
 options=('!strip' '!debug' '!lto')
