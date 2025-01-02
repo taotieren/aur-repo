@@ -5,7 +5,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - dotnet-host-bin
+  - dotnet-runtime-bin
   - dotnet-sdk-bin
 update_on:
   - source: github

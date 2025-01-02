@@ -17,7 +17,7 @@ makedepends=(
     zlib
     krb5
     git
-    dotnet-host-bin
+    dotnet-runtime-bin
     dotnet-sdk-bin)
 backup=()
 options=('!strip' '!debug' '!lto')
