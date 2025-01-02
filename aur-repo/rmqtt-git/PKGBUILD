@@ -2,7 +2,7 @@
 
 pkgbase=rmqtt-git
 pkgname=rmqtt-git
-pkgver=0.2.18.r0.g45cf7e4
+pkgver=0.11.0.r0.g0ec9c19
 pkgrel=1
 pkgdesc="MQTT Server/MQTT Broker - Scalable Distributed MQTT Message Broker for IoT in the 5G Era"
 arch=($CARCH)
