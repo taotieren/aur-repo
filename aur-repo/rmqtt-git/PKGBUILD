@@ -11,9 +11,14 @@ license=('MIT')
 provides=(${pkgname%-git} librmqtt_macros.so)
 conflicts=(${pkgname%-git} librmqtt_macros.so)
 replaces=()
-depends=('cargo'
+depends=(
+    gcc-libs
+    glibc
+    openssl
     protobuf-c)
-makedepends=('git' 'rust'
+makedepends=(
+    git
+    rust
     cmake
 )
 backup=()
