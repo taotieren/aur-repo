@@ -6,6 +6,4 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: github
-    github: sipeed/sigrok_slogic
-    # use_max_tag: true
-    # prefix: v
+    github: openbmc/stdplus
