@@ -2,14 +2,14 @@
 
 pkgname=phosphor-dbus-interfaces-git
 _pkgname=${pkgname%%-git}
-pkgver=r581.b78a0704
-pkgrel=2
+pkgver=r764.3eb018016
+pkgrel=1
 pkgdesc="YAML descriptors of standard dbus interfaces (in OpenBMC)"
 url="https://github.com/openbmc/phosphor-dbus-interfaces"
 arch=('i686' 'x86_64' 'aarch64')
 license=('Apache')
 depends=('sdbusplus-git')
-makedepends=('git' 'meson')
+makedepends=("boost-libs" "cmake" "git" "meson" "nlohmann-json" "pkgconf" "python-jsonschema")
 source=("${pkgname}::git+https://github.com/openbmc/${_pkgname}.git")
 sha256sums=('SKIP')
 
