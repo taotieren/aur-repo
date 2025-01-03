@@ -20,27 +20,30 @@ install=${pkgname}.install
 
 # source mirrors
 # https://bbs.archlinux.org/viewtopic.php?id=224443
-_pkg_mirrors=("${url}/archive/refs/tags/V${pkgver}.tar.gz"
-    "https://ghproxy.com/${url}/archive/refs/tags/V${pkgver}.tar.gz")
+# _pkg_mirrors=("${url}/archive/refs/tags/V${pkgver}.tar.gz"
+#     "https://ghproxy.com/${url}/archive/refs/tags/V${pkgver}.tar.gz")
 
 # General function for scanning a list of mirrors
 # Author: grufo <madmurphy333@gmail.com>
-_get_mirror() {
-    local -n url_list=$1
-    local url_item
-    for url_item in ${url_list[@]}; do
-        if curl --output /dev/null --silent --head --fail "${url_item}"; then
-            echo -n "${url_item}"
-            return 0
-        fi
-    done
-    return 1
-}
+# _get_mirror() {
+#     local -n url_list=$1
+#     local url_item
+#     for url_item in ${url_list[@]}; do
+#         if curl --output /dev/null --silent --head --fail "${url_item}"; then
+#             echo -n "${url_item}"
+#             return 0
+#         fi
+#     done
+#     return 1
+# }
+#
+# source=("${_pkgname}-${pkgver}.tar.gz::$(_get_mirror _pkg_mirrors)"
+# "${pkgname}.install")
 
-source=("${_pkgname}-${pkgver}.tar.gz::$(_get_mirror _pkg_mirrors)"
-"${pkgname}.install")
+source=("${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/V${pkgver}.tar.gz"
+    "${pkgname}.install")
 sha256sums=('66a3d2abd21e45aed5898e732236031b3148fa082cb26585dbab8a23cc1daaab'
-            '303f34246c0d341e1093d6e486e2cbfdbbb0d122d751de649f562ebac37777b4')
+    '303f34246c0d341e1093d6e486e2cbfdbbb0d122d751de649f562ebac37777b4')
 
 build() {
     cd "${srcdir}/${_pkgname}-${pkgver}/src/"
