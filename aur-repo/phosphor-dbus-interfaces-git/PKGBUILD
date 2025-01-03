@@ -3,7 +3,7 @@
 pkgname=phosphor-dbus-interfaces-git
 _pkgname=${pkgname%%-git}
 pkgver=r764.3eb018016
-pkgrel=1
+pkgrel=2
 pkgdesc="YAML descriptors of standard dbus interfaces (in OpenBMC)"
 url="https://github.com/openbmc/phosphor-dbus-interfaces"
 arch=('i686' 'x86_64' 'aarch64')
