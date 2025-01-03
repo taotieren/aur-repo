@@ -3,7 +3,7 @@
 pkgname=python-epub3
 _name=${pkgname//-/_}
 pkgver=0.0.1.15
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="An awsome epub3 library."
 arch=('any')
