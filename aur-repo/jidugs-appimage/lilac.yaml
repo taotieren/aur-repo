@@ -30,6 +30,6 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://jidugs.wlhex.com/#page2
-    regex: 'Linux版本下载-1.4.4([\d.]+)'
+    regex: '极度公式-([\d.]+).AppImage'
 # - source: manual
 #   manual: 1
