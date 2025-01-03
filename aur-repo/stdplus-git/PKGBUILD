@@ -6,6 +6,8 @@ pkgrel=1
 pkgdesc="stdplus is a c++ project containing commonly used classes and functions for the Linux platform."
 url="https://github.com/openbmc/stdplus"
 arch=($CARCH)
+provides=(${pkgname%-git})
+conflicts=(${pkgname%-git})
 license=('Apache-2.0')
 depends=(
     sh
