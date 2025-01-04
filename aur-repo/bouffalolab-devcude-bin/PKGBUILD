@@ -21,7 +21,7 @@ install=${pkgname}.install
 source=("${pkgname%-bin}-${pkgver}.zip::https://dev.bouffalolab.com/media/upload/download/BouffaloLabDevCube-v${pkgver}.zip")
 sha256sums=('3c239de9fc9374d147be80a708a4247b444e4682a31711939930176ec564df82')
 noextract=(${pkgname%-bin}-${pkgver}.zip)
-options=('!strip')
+options=('!strip' '!debug')
 
 package() {
     #     export LC_CTYPE="zh_CN.UTF-8"
