@@ -8,7 +8,7 @@ pkgname=$_reponame-appimage
 # Version
 _ver=1-alpha-20240109-1
 pkgver=$(echo "$_ver" | sed 's/-/./g')                                                                                                                                                               
-pkgrel=1
+pkgrel=2
 
 # Generic
 pkgdesc="AppDir creation and maintenance tool."
