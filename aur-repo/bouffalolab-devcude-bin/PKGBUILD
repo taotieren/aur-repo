@@ -73,8 +73,8 @@ EOF
 # export LC_CTYPE="zh_CN.UTF-8"
 
 if [ ! -d "\$HOME"/.local/share/${pkgname%-bin} ] ; then
-    cp -a /${_path}/${pkgname%-bin}/ "$HOME"/.local/share/ || exit 1
-    ln -sf  "$HOME"/.local/share/${pkgname%-bin}/BLDevCube-ubuntu "\$HOME"/.local/share/${pkgname%-bin}/${pkgname%-bin} || exit 1
+    cp -a /${_path}/${pkgname%-bin}/ "\$HOME"/.local/share/ || exit 1
+    ln -sf  "\$HOME"/.local/share/${pkgname%-bin}/BLDevCube-ubuntu "\$HOME"/.local/share/${pkgname%-bin}/${pkgname%-bin} || exit 1
 fi
 
 /"\$HOME"/.local/share/${pkgname%-bin}/${pkgname%-bin} "\$@"
@@ -86,7 +86,7 @@ EOF
 
 if [ ! -d "\$HOME"/.local/share/${pkgname%-bin} ] ; then
     cp -a /${_path}/${pkgname%-bin}/ "\$HOME"/.local/share/ || exit 1
-    ln -sf  "$HOME"/.local/share/${pkgname%-bin}/bflb_iot_tool-ubuntu "\$HOME"/.local/share/${pkgname%-bin}/bflb-iot-tool || exit 1
+    ln -sf  "\$HOME"/.local/share/${pkgname%-bin}/bflb_iot_tool-ubuntu "\$HOME"/.local/share/${pkgname%-bin}/bflb-iot-tool || exit 1
 fi
 
 /"\$HOME"/.local/share/${pkgname%-bin}/bflb-iot-tool "\$@"
