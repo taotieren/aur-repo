@@ -38,6 +38,10 @@ package() {
 
     ln -sf /opt/SEGGER/JLink/ "${pkgdir}"/opt/bouffalolab/${pkgname%-bin}/utils/jlink
 
+    chmod +x "${pkgdir}/opt/bouffalolab/bouffalolab-devcude/BLDevCube-ubuntu"
+    chmod +x "${pkgdir}/opt/bouffalolab/bouffalolab-devcude/bflb_iot_tool-ubuntu"
+    find "${pkgdir}/opt/bouffalolab/bouffalolab-devcude/utils/genromfs/" -type f -exec chmod +x {} \;
+
     # desktop entry
     install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop <<EOF
 [Desktop Entry]
