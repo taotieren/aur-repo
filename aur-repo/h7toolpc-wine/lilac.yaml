@@ -16,8 +16,13 @@ post_build_script: |
   update_aur_repo()
 
 update_on:
-  - source: regex
-    url: https://www.armbbs.cn/forum.php?mod=viewthread&tid=95468
+  - source: "htmlparser"
+    url: "https://www.armbbs.cn/forum.php?mod=viewthread&tid=95468"
+    xptah: "/html/body/div[8]/div[4]/div[2]/div[1]/table/tbody/tr[1]/td[2]/div[2]/div/div[1]/table/tbody/tr/td/a[11]"
     regex: 'h7toolPC_release(V([\d.]+)).7z'
+    # - source: regex
+    #   url: https://www.armbbs.cn/forum.php?mod=viewthread&tid=95468
+    #   regex: 'h7toolPC_release(V([\d.]+)).7z'
 # - source: manual
 #   manual: 1
+# /html/body/div[8]/div[4]/div[2]/div[1]/table/tbody/tr[1]/td[2]/div[2]/div/div[1]/table/tbody/tr/td/a[11]
