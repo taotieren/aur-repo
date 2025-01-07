@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=qucs-s-git
-pkgver=r5765.b955037
+pkgver=r5777.ac24a25
 pkgrel=1
 epoch=
 pkgdesc="Qucs-S provides GUI for different circuit simulation kernels. "
