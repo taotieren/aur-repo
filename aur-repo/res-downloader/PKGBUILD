@@ -40,6 +40,7 @@ build() {
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
 
+    sed -i 's|/usr/local/share/ca-certificates/|/usr/share/ca-certificates/|g' core/system_linux.go
     wails build
 }
 
