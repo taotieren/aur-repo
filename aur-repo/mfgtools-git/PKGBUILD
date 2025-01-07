@@ -2,8 +2,8 @@
 
 pkgbase=mfgtools-git
 pkgname=(mfgtools{,-doc}-git)
-pkgver=1.5.191.r4.g64a5a8f
-pkgrel=2
+pkgver=1.5.191.r5.ga370bfb
+pkgrel=1
 epoch=
 pkgdesc="uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools."
 arch=($CARCH)
