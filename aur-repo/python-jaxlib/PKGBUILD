@@ -1,0 +1,35 @@
+# Maintainer: Daniel Bershatsky <bepshatsky@yandex.ru>
+
+pkgname=python-jaxlib
+pkgver=0.4.38
+pkgrel=1
+pkgdesc='XLA library for JAX'
+arch=('x86_64')
+url='https://github.com/jax-ml/jax/'
+license=('Apache')
+groups=('jax')
+depends=('python-absl'
+         'python-flatbuffers'
+         'python-ml-dtypes>=0.4.0'
+         'python-numpy'
+         'python-scipy')
+makedepends=('clang' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
+source=("jax-${pkgver}.tar.gz::$url/archive/refs/tags/jax-v${pkgver}.tar.gz")
+sha256sums=('ca1e63c488d505b9c92e81499e8b06cc1977319c50d64a0e58adbd2dae1a625c')
+
+build() {
+    cd $srcdir/jax-jax-v$pkgver
+    JAXLIB_RELEASE=$pkgver python build/build.py build \
+	--wheels=jaxlib \
+        --bazel_startup_options="--output_user_root=$srcdir/bazel"\
+        --bazel_options='--action_env=JAXLIB_RELEASE' \
+        --target_cpu_features=release
+}
+
+package() {
+    cd $srcdir/jax-jax-v$pkgver
+    python -m installer \
+        --compile-bytecode 1 \
+        --destdir $pkgdir \
+        $srcdir/jax-jax-v$pkgver/dist/jaxlib-$pkgver-*.whl
+}
