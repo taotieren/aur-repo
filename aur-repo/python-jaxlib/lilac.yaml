@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   aur_pre_build(maintainers='daskol')
-  add_makedepends(['git'])
+  add_makedepends(['git', 'llvm'])
 post_build: aur_post_build
 # repo_depends:
 #   -
