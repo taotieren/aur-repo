@@ -14,7 +14,7 @@ depends=('glibc'
     'libusb')
 makedepends=('git' 'meson')
 optdepends=('doxygen: Required for API documentation')
-provides=("$_pkg.so")
+provides=("$_pkg.so" "$_pkg")
 conflicts=("$_pkg")
 source=("$_pkg::git+$url.git")
 sha256sums=('SKIP')
