@@ -68,7 +68,7 @@ package() {
     find ${pkgdir}/usr/share/MRS2 -perm 600 -exec chmod 644 {} \;
 
     cd ${pkgdir}/usr/share/
-    sed -i 's|/usr/share/MRS2/MRS-linux-x64/mounriver-studio\ 2|mounriverstudio|g' applications/MounRiverStudio2.desktop
+    sed -i 's|/usr/share/MRS2/MRS-linux-x64/mounriver-studio\\ 2|mounriverstudio|g' applications/MounRiverStudio2.desktop
     cd MRS2
     sed -i 's|plugdev|uucp|g' beforeinstall/50-wch.rules
     sed -i 's|plugdev|uucp|g' beforeinstall/60-openocd.rules
