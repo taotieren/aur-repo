@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - ncurses5-compat-libs
+update_on:
+  - source: regex
+    url: http://api.mounriver.com/mountriver/api/version/fetchRecent2?swType=2&osType=LINUX&lang=zh
+    regex: 'MounRiverStudio_Linux_X64_V([\d.]+).deb'
