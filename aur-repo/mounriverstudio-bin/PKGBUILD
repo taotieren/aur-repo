@@ -64,6 +64,7 @@ options=('!strip' '!debug')
 
 package() {
     tar -xf "${srcdir}//data.tar.xz" -C "${pkgdir}/"
+    find "${pkgdir}/" -type d -exec chmod 755 {} \;
     find ${pkgdir}/usr/share/MRS2 -perm 600 -exec chmod 644 {} \;
 
     cd ${pkgdir}/usr/share/MRS2
