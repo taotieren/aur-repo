@@ -23,7 +23,6 @@ depends=(
     gtk3
     libcups
     libdrm
-    libgdm
     libjaylink
     libsecret
     libusb
@@ -42,10 +41,9 @@ depends=(
     nss
     pango
     python
-    python-pt
     python-pygments
     # AUR
-    ncurses5-compat-libs
+    #     ncurses5-compat-libs
 
 )
 
