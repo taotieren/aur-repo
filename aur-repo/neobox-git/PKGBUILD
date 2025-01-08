@@ -26,8 +26,6 @@ source=(
   "WinToast::git+https://github.com/mohabouje/WinToast.git"
   "YJson::git+https://github.com/yjmthu/YJson.git"
   "zip::git+https://github.com/kuba--/zip.git"
-  "neobox-plugins:git+https://github.com/yjmthu/neobox-plugins.git"
-
 )
 sha256sums=('SKIP'
   'SKIP'
