@@ -26,9 +26,11 @@ makedepends=(
 )
 backup=()
 options=(!debug !strip !lto)
-#install=${pkgname}.install
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('952ba006706972e3464e5da9834c4cc1c04a63ae55823ee3cd4feb3be26e8512')
+install=${pkgname}.install
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
+    ${pkgname}.install)
+sha256sums=('952ba006706972e3464e5da9834c4cc1c04a63ae55823ee3cd4feb3be26e8512'
+            '43a0e7b64375c4fda9aab504b6946cc5a85e11bbe457061e6073e936c82571da')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
