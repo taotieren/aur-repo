@@ -41,7 +41,7 @@ build() {
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
 
-    sed -i -e 's|/usr/local/share/ca-certificates/|/usr/share/ca-certificates/trust-source/anchors/|g' \
+    sed -i -e 's|/usr/local/share/ca-certificates/|/usr/share/ca-certificates/trust-source/|g' \
         -e 's|update-ca-certificates|update-ca-trust|g' core/system_linux.go
     wails build
 }
@@ -51,15 +51,16 @@ package() {
 
     install -Dvm755 build/bin/${pkgname} -t ${pkgdir}/usr/bin
     install -Dvm644 build/appicon.png ${pkgdir}/usr/share/icons/hicolor/512x512/apps/${pkgname}.png
-    install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
-[Desktop Entry]
-Categories=
-Comment=${pkgdesc}
-Exec=${pkgname}
-Icon=${pkgname}.png
-Name=${pkgname}
-Terminal=false
-Type=Application
-
-EOF
+    install -Dvm644 build/linux/${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+    #     install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
+    # [Desktop Entry]
+    # Categories=
+    # Comment=${pkgdesc}
+    # Exec=${pkgname}
+    # Icon=${pkgname}.png
+    # Name=${pkgname}
+    # Terminal=false
+    # Type=Application
+    #
+    # EOF
 }
