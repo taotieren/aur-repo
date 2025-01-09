@@ -12,5 +12,5 @@ post_upgrade() {
 }
 pre_remove() {
     echo "deleting the res-downloader  crt..."
-    rm -rf /usr/share/ca-certificates/trust-source/res-downloader.crt
+    find /usr/share/ca-certificates/trust-source/ -type f -name "res-downloader.crt" -exec rm -f {} +
 }
