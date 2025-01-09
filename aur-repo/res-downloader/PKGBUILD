@@ -30,7 +30,7 @@ install=${pkgname}.install
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
     ${pkgname}.install)
 sha256sums=('952ba006706972e3464e5da9834c4cc1c04a63ae55823ee3cd4feb3be26e8512'
-            '019fcf36ddc04a633727715658115c812fbb8e61484d359cd00e1ffea946d4cc')
+            '9edd4dcc06ba719619976d070de35997324a4d06496a146764f3c1a2d1e46601')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
