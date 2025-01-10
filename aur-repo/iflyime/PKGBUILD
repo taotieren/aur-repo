@@ -3,7 +3,7 @@
 
 pkgname=iflyime
 pkgver=2.0.51
-pkgrel=1
+pkgrel=2
 pkgdesc="XunFei for Linux (iflyime)"
 arch=('x86_64')
 url="http://srf.xunfei.cn/"
@@ -11,16 +11,16 @@ license=("custom AND LGPL-3.0-or-later")
 depends=(
         sh
         curl
-        fcitx
+        #         fcitx
         gcc-libs
         glibc
-        #         grpc
+        grpc
         hicolor-icon-theme
         # "dtkwidget"
         libx11
         libxtst
         qt5-base
-        #         protobuf
+        protobuf
         sqlite
         opencc
         xdg-utils
@@ -59,8 +59,8 @@ package() {
                 -e 's|/opt/apps/com.iflytek.iflyime/entries|/usr/share|g' usr/share/applications/iflyime-setting-wizard.desktop
         sed -i -e 's|/usr/bin/iflyime-qimpanel|/opt/iflyime/bin/iflyime-qimpanel|g' opt/${pkgname}/bin/iflyime-daemon.sh
 
-        rm -rf usr/lib/x86_64-linux-gnu/fcitx/fcitx-iflyime.so
-        ln -sf /opt/${pkgname}/bin/libiflyime.so ${pkgdir}/usr/lib/x86_64-linux-gnu/fcitx/fcitx-iflyime.so
+        rm -rf usr/lib/x86_64-linux-gnu
+        ln -sf /opt/${pkgname}/bin/libiflyime.so ${pkgdir}/usr/lib/fcitx/fcitx-iflyime.so
         ln -sf /opt/${pkgname}/bin/fcitx-iflyime.conf ${pkgdir}/usr/share/fcitx/addon/fcitx-iflyime.conf
         ln -sf /opt/${pkgname}/bin/fcitx-iflyime.conf ${pkgdir}/usr/share/fcitx/inputmethod/iflyime.conf
         ln -sf /usr/share/icons/hicolor/48x48/apps/iflyime.png ${pkgdir}/usr/share/fcitx/imicon/fcitx-iflyime.png
@@ -73,6 +73,6 @@ package() {
 export PATH
 EOF
 
-        #         ln -sf /usr/lib/libgrpc++.so ${pkgdir}/usr/lib/libgrpc++.so.1
-        #         ln -sf /usr/lib/libprotobuf.so ${pkgdir}/usr/lib/libprotobuf.so.17
+        ln -sf /usr/lib/libgrpc++.so ${pkgdir}/usr/lib/libgrpc++.so.1
+        ln -sf /usr/lib/libprotobuf.so ${pkgdir}/usr/lib/libprotobuf.so.17
 }
