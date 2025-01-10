@@ -14,7 +14,9 @@ depends=(
     cargo
     systemd)
 makedepends=(
+    clang
     git
+    llvm
     python-libclang
     rust)
 backup=()
