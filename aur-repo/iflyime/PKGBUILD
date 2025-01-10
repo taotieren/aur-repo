@@ -60,6 +60,7 @@ package() {
         sed -i -e 's|/usr/bin/iflyime-qimpanel|/opt/iflyime/bin/iflyime-qimpanel|g' opt/${pkgname}/bin/iflyime-daemon.sh
 
         rm -rf usr/lib/x86_64-linux-gnu
+        install -dm755 ${pkgdir}/usr/lib/fcitx/
         ln -sf /opt/${pkgname}/bin/libiflyime.so ${pkgdir}/usr/lib/fcitx/fcitx-iflyime.so
         ln -sf /opt/${pkgname}/bin/fcitx-iflyime.conf ${pkgdir}/usr/share/fcitx/addon/fcitx-iflyime.conf
         ln -sf /opt/${pkgname}/bin/fcitx-iflyime.conf ${pkgdir}/usr/share/fcitx/inputmethod/iflyime.conf
