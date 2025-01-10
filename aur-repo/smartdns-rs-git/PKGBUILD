@@ -18,7 +18,7 @@ makedepends=(
     git
     llvm-libs
     llvm
-    python-libclang
+    #     python-libclang
     rust)
 backup=()
 options=('!lto')
