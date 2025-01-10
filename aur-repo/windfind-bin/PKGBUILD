@@ -19,7 +19,7 @@ replaces=()
 pkgdesc="A high performace file locator for instantly finding files and folders by name."
 license=('Commercial AND Apache-2.0')
 url="https://github.com/kingToolbox/WindFind"
-source_x86_64=("${url}/WindFind/releases/download/${pkgver}/${_name}.zip")
+source_x86_64=("${url}/releases/download/${pkgver}/${_name}.zip")
 sha256sums_x86_64=('f24270d4ed0ba0ae609b9ca804b588bdc435117dad9460d8a36ed9bed2f25029')
 # noextract=()
 
