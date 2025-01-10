@@ -3,7 +3,7 @@
 pkgbase='etherlab-ethercat'
 pkgname=('etherlab-ethercat-tools' 'etherlab-ethercat-dkms')
 pkgver=1.6.2
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64')
 url='https://etherlab.org'
 license=('GPL2')
@@ -64,3 +64,4 @@ package_etherlab-ethercat-tools() {
   make DESTDIR="$pkgdir/" install
   install -Dm 0644 -t "$pkgdir/etc/systemd/system/" script/ethercat.service
 }
+makedepends=("automake" "dkms")
