@@ -11,7 +11,7 @@ license=("custom AND LGPL-3.0-or-later")
 depends=(
         sh
         curl
-        #         fcitx
+        fcitx
         gcc-libs
         glibc
         grpc
