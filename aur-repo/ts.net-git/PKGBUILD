@@ -42,7 +42,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}/build-scripts"
-    bash ./"TS.NET.Engine (linux-x64).bash"
+    bash ./"TS.NET.Engine (linux-x64)"
 }
 
 package() {
