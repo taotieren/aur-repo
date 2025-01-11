@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-pydevicetree
+  - python-jinja-time
+update_on:
+  - source: github
+    github: sifive/ldscript-generator
+    use_max_tag: true
+    prefix: v
