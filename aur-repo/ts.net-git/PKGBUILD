@@ -18,7 +18,8 @@ depends=(bash
 makedepends=(
     curl
     git
-    dotnet-host-bin
+    "dotnet-runtime>=9.0"
+    "dotnet-sdk>=9.0"
 )
 optdepends=('scopehal-apps: glscopeclient and other client applications for libscopehal')
 backup=()
