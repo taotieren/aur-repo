@@ -17,8 +17,8 @@ makedepends=(
     zlib
     krb5
     git
-    dotnet-runtime
-    dotnet-sdk
+    'dotnet-runtime>=9.0.0'
+    'dotnet-sdk>=9.0.0'
 )
 backup=()
 options=('!strip' '!debug' '!lto')
