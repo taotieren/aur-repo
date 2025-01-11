@@ -26,7 +26,7 @@ makedepends=(
 )
 optdepends=(
     'motrix: A full-featured download manager (release version)'
-    'gopeed: High speed downloader that supports all platforms.(Prebuilt version)'
+    'gopeed-bin: High speed downloader that supports all platforms.(Prebuilt version)'
 )
 backup=()
 options=(!debug !strip !lto)
