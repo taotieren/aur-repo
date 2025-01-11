@@ -2,7 +2,7 @@
 
 pkgname=res-downloader
 pkgver=3.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="This is a high-value and high-performance and diverse resource downloader called res-downloader"
 arch=($CARCH)
 url="https://github.com/putyy/res-downloader"
@@ -34,7 +34,7 @@ install=${pkgname}.install
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
     ${pkgname}.install)
 sha256sums=('a4312e1e1cdb8e814c715dada939566376e77f1a0d9f5161a2dbc50445cfe503'
-            '23a4cbb1eb388d0a847bbc9918a103769b15ad22d462840fe5d9d6bd6a720cbe')
+    '23a4cbb1eb388d0a847bbc9918a103769b15ad22d462840fe5d9d6bd6a720cbe')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
