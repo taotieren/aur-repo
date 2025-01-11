@@ -4,8 +4,8 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - dotnet-core-bin
+# repo_depends:
+#   -
 update_on:
   - source: github
     github: nilaoda/N_m3u8DL-RE
