@@ -12,9 +12,9 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
+    pdcom
     python
     python-libconf
-    python-pdcom
 )
 makedepends=(
     python-build
