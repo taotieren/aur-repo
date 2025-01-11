@@ -5,8 +5,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - dotnet-runtime-bin
-  - dotnet-sdk-bin
+  - dotnet-core-bin
 update_on:
   - source: github
     github: nilaoda/N_m3u8DL-RE
