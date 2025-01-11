@@ -24,6 +24,10 @@ makedepends=(
     go
     wails
 )
+optdepends=(
+    'motrix: A full-featured download manager (release version)'
+    'gopeed: High speed downloader that supports all platforms.(Prebuilt version)'
+)
 backup=()
 options=(!debug !strip !lto)
 install=${pkgname}.install
