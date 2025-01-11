@@ -47,7 +47,7 @@ package_nuclei-dlink-gdbserver() {
 	install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Name=${pkgname}
+Name=Nuclei DLink GDB Server
 Comment=${pkgdesc}
 Exec=dlink_gdbserver
 Icon=${pkgname}.ico
