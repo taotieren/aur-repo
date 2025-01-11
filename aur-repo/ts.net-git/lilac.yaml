@@ -4,8 +4,10 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
 repo_depends:
-  - dotnet-core-bin
   - dotnet-host-bin
+  - dotnet-runtime-bin
+  - dotnet-sdk-bin
+  - aspnet-runtime-bin
 update_on:
   - source: github
     github: EEVengers/TS.NET
