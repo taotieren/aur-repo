@@ -11,7 +11,9 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=()
-makedepends=('cargo')
+makedepends=(
+    cargo
+    cargo-expand)
 optdepends=('mdbook: Create book from markdown files, like Gitbook but implemented in Rust')
 backup=()
 options=()
