@@ -62,6 +62,7 @@ makedepends=(
     libxi
     lxqt-build-tools
     lxqt-build-tools-qt5
+    qt5-networkauth
     qt5-tools
     qtermwidget
     openssl
