@@ -23,7 +23,8 @@ depends=(
     zlib)
 makedepends=(git
     crystal
-    shards)
+    shards
+    pkgconf)
 optdepends=("goldendict: Feature-rich dictionary lookup program supporting multiple dictionary formats")
 backup=()
 options=()

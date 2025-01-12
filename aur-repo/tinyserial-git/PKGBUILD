@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=tinyserial-git
-pkgver=1.4.r0.g73e6933
+pkgver=1.4.r2.g3c6cda7
 pkgrel=1
 epoch=
 pkgdesc="A GUI Serial Debug Tool for Linux/Mac OS."
@@ -10,6 +10,8 @@ url="https://github.com/carloscn/tinyserial"
 license=('MPL-2.0')
 groups=()
 depends=(
+  gcc-libs
+  glibc
   qt5-base
   qt5-serialport
 )
