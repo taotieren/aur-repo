@@ -39,7 +39,7 @@ source_aarch64=(
     "${pkgname}-${epoch}-aarch64-${pkgver}.tgz::${url}/releases/download/v${pkgver}/${pkgname}-${epoch}-linux-aarch64-${pkgver}.tgz"
 )
 sha256sums=('c336f41e259916212c7fdd3e21a26a2faf94d725b5daf686bca501978efbf17e'
-            'f2d0bffedcfcb542ee07eef4f797dc848703f6d63f0d7b837a89a190dcc09780')
+    'f2d0bffedcfcb542ee07eef4f797dc848703f6d63f0d7b837a89a190dcc09780')
 sha256sums_x86_64=('eb374fd1de57c81606efe486a9bd8349a0faac9ac19fc3a31abf415df3f50ad7')
 sha256sums_aarch64=('eeefc029918bfc0914b1a9197b10bfa31823a1ac9ac47ece89113ec671fe1aeb')
 noextract=(
@@ -103,7 +103,7 @@ RemainAfterExit=true
 [Install]
 WantedBy=multi-user.target
 EOF
-    install -Dm644 /dev/stdin "/usr/lib/systemd/system/rclone-${pkgname}-cd2-dav@.service" <<EOF
+    install -Dm644 /dev/stdin "/usr/lib/systemd/system/rclone-${pkgname}-cd2-dav\@.service" <<EOF
 [Unit]
 Description=Rclone mount for CloudDrive2 WebDAV for user %i
 After=network.target
