@@ -6,6 +6,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - sdbusplus-git
+  - sdeventplus-git
   - stdplus-git
   - phosphor-dbus-interfaces-git
 update_on:
