@@ -8,7 +8,6 @@ post_build_script: |
 repo_depends:
   - python-affine
   - python-sexpdata
-  - python-future
 update_on:
   - source: pypi
     pypi: kipart

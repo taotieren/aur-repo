@@ -18,7 +18,6 @@ depends=(
     python
     "${_pydeps[@]/#/python-}")
 _pymakedeps=(
-    future
     pycodestyle
     build
     installer
