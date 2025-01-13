@@ -13,7 +13,7 @@ optdepends=('nucleistudioide: Nuclei Studio IDE 是基于 MCU Eclipse IDE 开发
 	'embedded-studio-risc-v: Segger Embedded Studio for RISC-V')
 conflicts=()
 url="https://www.nucleisys.com/download.php"
-license=('unknow')
+license=('LicenseRef-unknow')
 options=(!strip)
 source=("https://www.nucleisys.com/upload/files/toochain/gcc/nuclei_riscv_newlibc_prebuilt_linux64_${pkgver}.tar.bz2")
 sha256sums=('8cea2d10310150d8591d00eb8430377cc28865e76decbaca2abefea7dad80d89')
