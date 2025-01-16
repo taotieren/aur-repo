@@ -2,7 +2,7 @@
 
 pkgbase=deepin-unioncode-git
 pkgname=deepin-unioncode-git
-pkgver=1.4.1.r2.ga5da401
+pkgver=1.4.1.r3.g4b5fd4a
 pkgrel=1
 pkgdesc="IDE authored by deepin"
 arch=($CARCH)
