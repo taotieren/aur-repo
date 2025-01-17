@@ -1,6 +1,8 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers='yjun')
+pre_build_script: |
+  aur_pre_build(maintainers='yjun')
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 update_on:
   - source: aur
