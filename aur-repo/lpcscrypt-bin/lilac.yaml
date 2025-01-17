@@ -7,5 +7,6 @@ repo_depends:
 update_on:
   - source: aur
     aur: lpcscrypt-bin
+
 # - source: manual
 #   manual: 1
