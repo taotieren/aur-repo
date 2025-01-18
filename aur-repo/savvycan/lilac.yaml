@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   aur_pre_build(maintainers='Dz99')
-  add_makedepends(['qt5-xmlpatterns'])
+  add_makedepends(['qt5-3d'])
 post_build: aur_post_build
 repo_depends:
   - qt5-serialbus-git
