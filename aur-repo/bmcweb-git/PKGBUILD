@@ -54,11 +54,11 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    meson subprojects download --sourcedir="${srcdir}/${pkgname}"
+    #     meson subprojects download --sourcedir="${srcdir}/${pkgname}"
 }
 
 build() {
-    arch-meson ${pkgname} build
+    arch-meson "${srcdir}/${pkgname}" build
     ninja -C build
 }
 
