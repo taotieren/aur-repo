@@ -2,7 +2,7 @@
 
 pkgbase=magiskboot-git
 pkgname=magiskboot-git
-pkgver=28101.77.r8.g6ab46d5
+pkgver=28101.77.r9.gd406ec1
 pkgrel=1
 pkgdesc="Magiskboot_ndk"
 arch=($CARCH)
