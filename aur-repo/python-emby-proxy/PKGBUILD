@@ -27,6 +27,9 @@ makedepends=(
     python-installer
     python-wheel
     python-setuptools)
+optdepends=(
+    'emby-theater: Bring together your videos, music, photos, and live television'
+)
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
