@@ -51,7 +51,8 @@ build() {
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -B build \
-        -G Ninja
+        -G Ninja \
+        -Wno-dev
 
     ninja -C build
 }
