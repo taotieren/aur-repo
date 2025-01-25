@@ -7,6 +7,9 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-pylink-square
+  - python-bflb-crypto-plus
+  - python-pycklink
+  - python-portalocker
 update_on:
   - source: pypi
     pypi: bflb-iot-tool

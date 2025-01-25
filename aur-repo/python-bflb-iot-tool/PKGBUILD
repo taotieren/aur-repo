@@ -20,7 +20,12 @@ depends=(
     glibc
     libusb
     python
-    "${_pydeps[@]/#/python-}")
+    "${_pydeps[@]/#/python-}"
+    #AUR
+    python-bflb-crypto-plus
+    python-pycklink
+    python-portalocker
+)
 _pymakedeps=(
     build
     installer

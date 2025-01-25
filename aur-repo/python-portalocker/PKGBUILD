@@ -1,0 +1,32 @@
+# Maintainer: Ashley Bone <ashley DOT bone AT pm DOT me>
+# Contributor: Carlos Aznarán <caznaranl@uni.pe>
+pkgname=('python-portalocker')
+_pkgname=portalocker
+pkgver=3.0.0
+pkgrel=1
+pkgdesc='Easy, portable file locking API.'
+arch=('any')
+url="https://github.com/WoLpH/${_pkgname}"
+license=('BSD-3-Clause')
+depends=('python')
+makedepends=('python-build' 'python-installer' 'python-pygments' 'python-setuptools' 'python-setuptools-scm' 'python-wheel')
+checkdepends=('python-pytest' 'python-pytest-cov' 'python-pytest-timeout' 'python-redis')
+optdepends=('python-redis: redis lock support')
+source=("https://pypi.python.org/packages/source/p/${_pkgname}/${_pkgname}-${pkgver}.tar.gz")
+sha256sums=('21f535de2e7a82c94c130c054adb5c7421d480d5619d61073996e2f89bcb879b')
+
+build() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+    python -m build --wheel --no-isolation
+}
+
+check() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+    pytest
+}
+
+package() {
+    cd "${srcdir}/${_pkgname}-${pkgver}"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+    install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}
