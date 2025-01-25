@@ -3,7 +3,7 @@
 pkgname=python-qcc74x-crypto-plus
 _name=${pkgname#python-}
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="PyCrypto Cipher extension."
 arch=('any')
