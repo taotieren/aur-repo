@@ -10,11 +10,23 @@ arch=('any')
 url="https://pypi.org/project/bflb-mcu-tool"
 license=(MIT)
 groups=()
+_pydeps=(
+    ecdsa
+    six
+    pycryptodome
+    pylink-square
+    pyserial)
 depends=(
     gcc-libs
     glibc
     libusb
-    python)
+    python
+    "${_pydeps[@]/#/python-}"
+    #AUR
+    python-bflb-crypto-plus
+    python-pycklink
+    python-portalocker
+)
 _pymakedeps=(
     build
     installer
