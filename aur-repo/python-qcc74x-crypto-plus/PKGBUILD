@@ -1,23 +1,23 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-bflb-crypto-plus
+pkgname=python-qcc74x-crypto-plus
 _name=${pkgname#python-}
 pkgver=1.0
-pkgrel=6
+pkgrel=1
 epoch=
-pkgdesc="PyCryptoPlus is an extension to the Python Crypto module (www.pycrypto.org)."
+pkgdesc="PyCrypto Cipher extension."
 arch=('any')
-url="https://pypi.org/project/bflb-crypto-plus"
-license=('BSD-3-Clause')
+url="https://pypi.org/project/qcc74x-crypto-plus"
+license=('LGPL-3.0-or-later')
 groups=()
 _pydeps=(
+    bflb-crypto-plus
     setuptools
     pycryptodome
 )
 depends=(
     python
-    "${_pydeps[@]/#/python-}"
-)
+    "${_pydeps[@]/#/python-}")
 _pymakedeps=(
     build
     installer
@@ -36,7 +36,7 @@ install=
 changelog=
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
-sha256sums=('fb4062db0226c98831c645f63fc81d73d82511c30409f65a399b5876d6924edb')
+sha256sums=('efada10cfbca5b68881a8d33818c832cb06c92618aab71cd1b48c6f91b105b67')
 #validpgpkeys=()
 
 build() {
