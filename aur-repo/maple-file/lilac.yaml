@@ -7,6 +7,9 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - flutter
+  - flutter-devel
+  - flutter-target-linux
+  - flutter-intellij-patch
 update_on:
   - source: github
     github: honmaple/maple-file
