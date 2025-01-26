@@ -52,7 +52,8 @@ build() {
     go build -ldflags="-w -s -X github.com/honmaple/maple-file/server/internal/app.VERSION=${pkgver}" -buildmode=c-shared -o ../app/linux/libserver.so github.com/honmaple/maple-file/server/cmd/desktop
     cd ../app
     flutter config --analytics
-    flutter pub get
+    flutter pub outdated
+    flutter pub
     dart run build_runner build
     flutter build linux
 
