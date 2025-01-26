@@ -47,8 +47,8 @@ build() {
     export GOPROXY=https://goproxy.cn,direct
 
     cd server
-    go build -ldflags="-w -s" -buildmode=c-shared -o libserver.so ../app/linux/libserver.so cmd/desktop
-
+    #     go build -ldflags="-w -s" -buildmode=c-shared -o libserver.so ../app/linux/libserver.so cmd/desktop
+    go build -ldflags="-w -s -X github.com/honmaple/maple-file/server/internal/app.VERSION=${pkgver}" -buildmode=c-shared -o ../app/linux/libserver.so github.com/honmaple/maple-file/server/cmd/desktop
     cd ../app
     flutter pub get
     dart run build_runner build
