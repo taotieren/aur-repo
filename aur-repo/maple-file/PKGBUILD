@@ -47,7 +47,7 @@ build() {
     export GOPROXY=https://goproxy.cn,direct
 
     cd server
-    go build -ldflags="-w -s" -buildmode=c-shared -o libserver.so ../app/linux/libserver.so github.com/honmaple/maple-file/server/cmd/desktop
+    go build -ldflags="-w -s" -buildmode=c-shared -o libserver.so ../app/linux/libserver.so cmd/desktop
 
     cd ../app
     flutter pub get
