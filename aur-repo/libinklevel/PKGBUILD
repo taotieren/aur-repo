@@ -6,7 +6,7 @@
 
 pkgname=libinklevel
 pkgver=0.9.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A library for checking the ink level of your printer"
 arch=('i686' 'x86_64')
 url="http://libinklevel.sourceforge.net/"
