@@ -3,9 +3,9 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers=['pmattern', 'tinywrkb'])
 post_build: aur_post_build
 update_on:
+  - source: aur
+    aur: python-bidi
   - source: github
     github: MeirKriheli/python-bidi
     use_max_tag: true
-  - source: aur
-    aur: python-bidi
   - alias: python
