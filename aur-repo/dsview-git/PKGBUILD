@@ -4,8 +4,8 @@
 # Contributor: Thomas Krug <t.krug@elektronenpumpe.de>
 
 pkgname=dsview-git
-pkgver=1.3.2.r53.g2e9e2c8
-pkgrel=0
+pkgver=1.3.2.r55.gfa25478
+pkgrel=1
 pkgdesc='GUI programe for supporting various instruments from DreamSourceLab, including logic analyzer, oscilloscope, etc.'
 arch=($CARCH)
 url='http://www.dreamsourcelab.com/'
@@ -15,7 +15,9 @@ _qt=qt6
 depends=(
   boost-libs
   hicolor-icon-theme
+  gcc-libs
   glib2
+  glibc
   libusb
   ${_qt}-base
   fftw
@@ -44,8 +46,10 @@ pkgver() {
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}"/${pkgname}/
+  git remote add taotieren https://github.com/taotieren/DSView
+  git fetch --all
+  git merge taotieren/fix-build
   sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
-
 }
 
 build() {
