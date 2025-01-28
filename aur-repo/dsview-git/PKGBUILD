@@ -24,7 +24,8 @@ depends=(
   python
   zlib
 )
-makedepends=(boost
+makedepends=(
+  boost
   cmake
   git
   ${_qt}-tools
