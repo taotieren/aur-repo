@@ -18,13 +18,16 @@ depends=(
     glibc
     gtk3
     hicolor-icon-theme
+    librsvg
     libsoup3
+    libappindicator-gtk3
     webkit2gtk-4.1
 )
 makedepends=(
     cargo
     cargo-tauri
     pnpm
+    patchelf
 )
 backup=()
 options=(!debug !strip !lto)
