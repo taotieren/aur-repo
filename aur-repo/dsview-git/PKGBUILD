@@ -49,6 +49,7 @@ prepare() {
   git remote add taotieren https://github.com/taotieren/DSView.git
   git fetch --all
   git merge taotieren/fix-build
+  git merge taotieren/update-zh
   sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
 }
 
