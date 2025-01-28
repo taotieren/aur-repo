@@ -23,7 +23,8 @@ makedepends=(boost
   cmake
   git
   ${_qt}-tools
-  ninja)
+  ninja
+  pkgconf)
 source=("${pkgname}::git+https://github.com/DreamSourceLab/DSView.git")
 sha1sums=('SKIP')
 
