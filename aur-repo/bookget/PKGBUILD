@@ -16,7 +16,7 @@ makedepends=(
     git
     go
 )
-backup=()
+backup=(etc/bookget/config.ini)
 options=('!strip' '!debug')
 #install=${pkgname}.install
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
