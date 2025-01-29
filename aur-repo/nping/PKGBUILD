@@ -13,6 +13,7 @@ conflicts=(${pkgname})
 # replaces=(${pkgname})
 depends=(
     gcc-libs
+    glibc
 )
 makedepends=(
     cargo
