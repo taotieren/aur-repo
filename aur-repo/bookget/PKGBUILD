@@ -3,7 +3,7 @@
 pkgname=bookget
 pkgver=25.0116
 pkgrel=1
-pkgdesc="bookget 数字图书馆下载工具，目前支持约50+个数字图书馆。"
+pkgdesc="bookget 数字图书馆下载工具，目前支持约 50+ 个数字图书馆。"
 arch=($CARCH)
 url="https://github.com/deweizhu/bookget"
 license=('GPL-3.0-only')
