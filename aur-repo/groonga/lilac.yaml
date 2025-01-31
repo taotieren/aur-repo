@@ -6,5 +6,8 @@ repo_depends:
   - mecab-git
   - mecab-ipadic
 update_on:
+  - source: regex
+    url: https://groonga.org/
+    regex: 'groonga-([\d.]+).tar.gz'
   - source: aur
     aur: groonga
