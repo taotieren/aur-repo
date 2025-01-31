@@ -5,10 +5,10 @@ post_build: aur_post_build
 # repo_depends:
 #   -
 update_on:
-  - source: aur
-    aur: dezoomify-rs
   - source: github
     github: lovasoa/dezoomify-rs
     use_max_tag: true
     prefix: v
+  - source: aur
+    aur: dezoomify-rs
 # - alias: python
