@@ -6,6 +6,7 @@ update_on:
   - source: github
     github: MeirKriheli/python-bidi
     use_max_tag: true
+    prefix: v
   - source: aur
     aur: python-bidi
   - alias: python
