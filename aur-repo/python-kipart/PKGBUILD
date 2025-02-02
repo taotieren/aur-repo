@@ -35,4 +35,6 @@ build() {
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
+    # https://wiki.archlinux.org/index.php/Python_package_guidelines
+    rm -rf ${pkgdir}/usr/lib/python*/site-packages/tests/
 }
