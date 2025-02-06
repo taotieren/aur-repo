@@ -7,4 +7,5 @@ repo_depends:
 update_on:
   - source: aur
     aur: python-jaxtyping
+    lilac_throttle: 10d
   - alias: python
