@@ -7,4 +7,4 @@ post_build_script: |
 update_on:
   - source: github
     github: linuxdeepin/deepin-unioncode
-    lilac_throttle: 60d
+    lilac_throttle: 10d
