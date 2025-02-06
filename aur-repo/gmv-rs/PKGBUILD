@@ -68,6 +68,8 @@ package() {
     export RUSTUP_TOOLCHAIN=stable
     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm0644 session/config.yml "${pkgdir}/etc/gmv/session/config.yml"
+    install -Dm0644 stream/readme "${pkgdir}/usr/share/doc/gmv/stream/readme"
+
     #     find target/release \
     #         -maxdepth 1 \
     #         -executable \
