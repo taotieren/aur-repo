@@ -2,6 +2,8 @@ maintainers:
   - github: taotieren
 pre_build_script: aur_pre_build(maintainers=['zhullyb', 'sukanka', 'yjun', 'witt.9099'])
 post_build_script: aur_post_build
+repo_depends:
+  - execstack
 update_on:
   - source: aur
     aur: dingtalk-bin
