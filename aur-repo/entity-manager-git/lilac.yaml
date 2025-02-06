@@ -11,3 +11,4 @@ repo_depends:
 update_on:
   - source: github
     github: openbmc/entity-manager
+    lilac_throttle: 15d
