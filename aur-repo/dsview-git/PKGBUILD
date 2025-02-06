@@ -10,6 +10,13 @@ pkgdesc='GUI programe for supporting various instruments from DreamSourceLab, in
 arch=($CARCH)
 url='http://www.dreamsourcelab.com/'
 license=('GPL-3.0-only')
+provides=(
+  ${pkgname%-git}
+)
+conflicts=(
+  ${pkgname%-git}
+)
+replaces=()
 # Upstream added VCS dependency to libsigrokdecode :/
 _qt=qt6
 depends=(
