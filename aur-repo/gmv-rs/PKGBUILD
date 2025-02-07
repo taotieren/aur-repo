@@ -47,13 +47,13 @@ build() {
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/mapper.rs
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
-    #     cargo build --release --all-features
+    cargo build --release --all-features
     #     CFLAGS+=" -ffat-lto-objects"
     #    --features 'cli,ftdi' \
-    cargo build \
-        --offline \
-        --locked \
-        --release
+    #     cargo build \
+    #         --offline \
+    #         --locked \
+    #         --release
 }
 
 # check() {
@@ -67,13 +67,13 @@ package() {
     cd "${srcdir}/${_name}-${pkgver}/"
 
     export RUSTUP_TOOLCHAIN=stable
-    cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
+    #     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm0644 session/config.yml "${pkgdir}/etc/gmv/session/config.yml"
     install -Dm0644 stream/readme "${pkgdir}/usr/share/doc/gmv/stream/readme"
 
-    #     find target/release \
-    #         -maxdepth 1 \
-    #         -executable \
-    #         -type f \
-    #         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
+    find target/release \
+        -maxdepth 1 \
+        -executable \
+        -type f \
+        -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
 }
