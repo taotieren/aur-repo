@@ -1,0 +1,10 @@
+maintainers:
+  - github: taotieren
+build_prefix: multilib
+pre_build_script: aur_pre_build(maintainers=['gbs'])
+post_build: aur_post_build
+repo_depends:
+  - lib32-ncurses5-compat-libs
+update_on:
+  - source: aur
+    aur: modelsim-intel-starter
