@@ -5,7 +5,6 @@ post_build: aur_post_build
 repo_depends:
   - python-cli-exit-tools
   - python-lib-detect-testenv
-  - python-multiprocess
 update_on:
   - source: aur
     aur: python-wrapt-timeout-decorator

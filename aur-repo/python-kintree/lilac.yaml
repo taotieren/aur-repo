@@ -8,7 +8,6 @@ repo_depends:
   - python-kiutils
   - python-inventree
   - python-mouser
-  - python-multiprocess
   - python-thefuzz
   - python-wrapt-timeout-decorator
 update_on:
