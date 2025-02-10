@@ -3,7 +3,7 @@
 pkgbase=jlink-flush-gui-git
 pkgname=jlink-flush-gui-git
 pkgver=62d5ba7.r9.g36f01c5
-pkgrel=1
+pkgrel=2
 groups=()
 pkgdesc="JLink Flush GUI"
 arch=($CARCH)
