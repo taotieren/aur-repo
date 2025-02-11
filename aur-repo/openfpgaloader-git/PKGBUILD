@@ -74,7 +74,7 @@ build() {
 package() {
   DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
   install -Dm 0644 "${srcdir}/${pkgname}"/99-openfpgaloader.rules "$pkgdir"/usr/lib/udev/rules.d/99-openfpgaloader.rules
-  install -dm0644 ${pkgdir}/usr/share/doc/${pkgname}
+  install -dm0755 ${pkgdir}/usr/share/doc/${pkgname}
   cp -r "${srcdir}"/${pkgbase}/doc/_build/html "${pkgdir}/usr/share/doc/${pkgname}/"
 
   chown root:root "${pkgdir}/usr/share/doc/${pkgname}/"
