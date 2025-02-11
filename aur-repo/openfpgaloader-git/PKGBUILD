@@ -50,6 +50,7 @@ build() {
 
   export CFLAGS+=" ${CPPFLAGS}"
   export CXXFLAGS+=" ${CPPFLAGS}"
+  export LDFLAGS+=" ${LDFLAGS}"
 
   cmake -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=None \
