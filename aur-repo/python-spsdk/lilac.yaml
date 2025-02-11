@@ -14,8 +14,6 @@ repo_depends:
   - python-pylink-square
   - python-pyocd
   - python-sly
-  - python-spsdk-mcu-link
-  - python-spsdk-pyocd
   - python-pyftdi
 update_on:
   - source: github

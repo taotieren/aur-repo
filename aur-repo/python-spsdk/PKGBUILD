@@ -40,8 +40,8 @@ depends=(
   python-ruamel-yaml
   python-setuptools-scm
   python-sly
-  python-spsdk-mcu-link
-  python-spsdk-pyocd
+  #   python-spsdk-mcu-link
+  #   python-spsdk-pyocd
   python-typing_extensions
 )
 makedepends=(
