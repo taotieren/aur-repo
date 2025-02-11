@@ -78,5 +78,6 @@ package() {
   cp -r "${srcdir}"/${pkgbase}/doc/_build/html "${pkgdir}/usr/share/doc/${pkgname}/"
 
   chown root:root "${pkgdir}/usr/share/doc/${pkgname}/"
-  chmod 644 -R "${pkgdir}/usr/share/doc/${pkgname}/"
+  find "${pkgdir}/usr/share/doc/${pkgname}/" -type f -exec chmod 644 "{}" \;
+  find "${pkgdir}/usr/share/doc/${pkgname}/" -type d -exec chmod 755 "{}" \;
 }
