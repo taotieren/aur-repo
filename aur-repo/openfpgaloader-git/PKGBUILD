@@ -68,6 +68,7 @@ build() {
 
   cd doc
   make html
+  rm -rf html/.*
 }
 
 package() {
