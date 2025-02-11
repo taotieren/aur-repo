@@ -23,17 +23,25 @@ depends=(
   python-cryptography
   python-deepmerge
   python-fastjsonschema
+  python-filelock
   python-hexdump
+  python-importlib-metadata
   python-libusbsio
+  python-libuuu
   python-oscrypto
+  python-packaging
   python-platformdirs
   python-prettytable
+  python-pyasn1
   python-pylink-square
   python-pyocd
   python-pyserial
   python-requests
   python-ruamel-yaml
+  python-setuptools-scm
   python-sly
+  python-spsdk-mcu-link
+  python-spsdk-pyocd
   python-typing_extensions
 )
 makedepends=(

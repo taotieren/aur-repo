@@ -10,9 +10,12 @@ repo_depends:
   - python-click-option-group
   - python-deepmerge
   - python-libusbsio
+  - python-libuuu
   - python-pylink-square
   - python-pyocd
   - python-sly
+  - python-spsdk-mcu-link
+  - python-spsdk-pyocd
   - python-pyftdi
 update_on:
   - source: github
