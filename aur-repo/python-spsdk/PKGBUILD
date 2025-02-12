@@ -3,8 +3,8 @@
 
 _name=spsdk
 pkgname=python-spsdk
-pkgver=2.1.1
-pkgrel=2
+pkgver=2.6.0
+pkgrel=0
 pkgdesc="NXP Secure Provisioning SDK"
 arch=(any)
 url="https://github.com/nxp-mcuxpresso/spsdk"
@@ -63,7 +63,7 @@ source=(
   $_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz
   #   $pkgname-2.1.0-remove_pypemicro.patch
 )
-sha512sums=('3ef8398eb0f3008b50a0cac7f9491913f6acc70513f50351a0e15fb64af7759c18f1771a9ca0d297f7977df20e4278072c1b8f70613d1af5d962ab2b0c54f2e6')
+sha512sums=('f9b10369dd14a90eb0c8c054d72382040fe796789c4be90831cc4d04eaa39c2682d5a6f814baaa436166b6dae80174dc8693b7ded1743368497d9daa1bf006af')
 
 prepare() {
   cd $_name-$pkgver
@@ -80,6 +80,9 @@ prepare() {
   # https://github.com/NXPmicro/spsdk/issues/30
   # https://github.com/NXPmicro/pypemicro/issues/10
   sed '/pyocd-pemicro/d' -i requirements.txt
+  sed -e '/spsdk-mcu-link/d' \
+    -e '/spsdk-pyocd/d' \
+    -i requirements.txt
 }
 
 build() {
