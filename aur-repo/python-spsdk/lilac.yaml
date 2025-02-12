@@ -9,6 +9,7 @@ repo_depends:
   - python-bincopy
   - python-click-option-group
   - python-deepmerge
+  - libusbsio
   - python-libusbsio
   - python-libuuu
   - python-pylink-square
