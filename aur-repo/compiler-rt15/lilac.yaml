@@ -3,10 +3,10 @@ maintainers:
 # build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['greyltc'])
 post_build: aur_post_build
-repo_depends:
-  - compiler-rt15
+# repo_depends:
+#   - clang15
 #   - lief
 update_on:
   - source: aur
-    aur: clang15
+    aur: compiler-rt15
 # - alias: python
