@@ -62,14 +62,8 @@ build() {
         -G Ninja
 
     ninja -C build
-    #     cd "${srcdir}/${pkgname}"
-    #     make
 }
 
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/build install
-    #     cd "${srcdir}/${pkgname}"
-    #     install -dm755 "$pkgdir"/usr
-    #     DESTDIR="$pkgdir" make install prefix=/usr
-    install -dm777 ${pkgdir}/var/cache/tinybpt
 }
