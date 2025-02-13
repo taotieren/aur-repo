@@ -8,7 +8,7 @@ repo_depends:
 update_on:
   - source: aur
     aur: pgroonga
-  - source: github
-    github: pgroonga/pgroonga
-    use_max_tag: true
-    # prefix: v
+# - source: github
+#   github: pgroonga/pgroonga
+#   use_max_tag: true
+# prefix: v

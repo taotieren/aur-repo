@@ -9,6 +9,6 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: groonga
-  - source: regex
-    url: https://groonga.org/
-    regex: 'groonga-([\d.]+).tar.gz'
+# - source: regex
+#   url: https://groonga.org/
+#   regex: 'groonga-([\d.]+).tar.gz'
