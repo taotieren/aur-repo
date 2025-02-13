@@ -1,6 +1,7 @@
 # Maintainer: Goncalo Pereira <goncalo_pereira@outlook.pt>
 pkgname=python-kintree
-_name=${pkgname#python-}
+# _name=${pkgname#python-}
+_name=Ki-nTree
 pkgver=1.1.4
 pkgrel=6
 pkgdesc="Fast part creation in KiCad and InvenTree"
@@ -28,7 +29,9 @@ makedepends=(
 )
 license=('GPL-3.0-or-later')
 arch=('any')
-source=("https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
+source=(
+    #     "https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
+    "$_name-$pkgver.tar.gz::https://github.com/sparkmicro/Ki-nTree/archive/refs/tags/$pkgver.tar.gz"
     "kintree.png"
     "kintree.desktop")
 sha256sums=('85e7587bcc84018c14db7bde82bc6bb6bd42a4f15c7b6834b43eec45a15ee27c'
