@@ -49,5 +49,4 @@ prepare() {
 package() {
     cd "${srcdir}/$pkgname"
     install -Dm0755 ${_name}.py "$pkgdir/usr/bin/${pkgname%-git}"
-    install -Dm0755 ${_name}-beta.py "$pkgdir/usr/bin/${pkgname%-git}-beta"
 }
