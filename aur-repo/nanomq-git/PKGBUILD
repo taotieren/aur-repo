@@ -65,6 +65,7 @@ package_nanomq-git() {
         -DWITH_LIBBSD=OFF \
         -DZMQ_BUILD_TESTS=OFF \
         -DWITH_DOC=OFF \
+        -Wno-dev \
         -B build_nanomq \
         -G Ninja
 
@@ -87,6 +88,7 @@ package_nanomq-sqlite-git() {
         -DWITH_LIBBSD=OFF \
         -DZMQ_BUILD_TESTS=OFF \
         -DWITH_DOC=OFF \
+        -Wno-dev \
         -B build_nanomq-sqlite \
         -G Ninja
 
@@ -112,6 +114,7 @@ package_nanomq-msquic-git() {
         -DWITH_LIBBSD=OFF \
         -DZMQ_BUILD_TESTS=OFF \
         -DWITH_DOC=OFF \
+        -Wno-dev \
         -B build_nanomq-msquic \
         -G Ninja
     #         -DONEBRANCH=1 \
@@ -146,6 +149,7 @@ package_nanomq-full-git() {
         -DWITH_LIBBSD=OFF \
         -DZMQ_BUILD_TESTS=OFF \
         -DWITH_DOC=OFF \
+        -Wno-dev \
         -B build_nanomq-full \
         -G Ninja
     #           -DBUILD_DDS_PROXY=ON \
