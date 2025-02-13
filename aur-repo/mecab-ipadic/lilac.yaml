@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
-build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['envolution'])
+# build_prefix: aur-repo-x86_64
+pre_build_script: |
+  aur_pre_build(maintainers=['envolution'])
+  add_makedepends(['git'])
 post_build: aur_post_build
 repo_depends:
   - mecab-git
