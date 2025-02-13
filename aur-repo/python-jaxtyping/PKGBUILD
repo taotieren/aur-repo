@@ -2,7 +2,7 @@
 pkgname=python-jaxtyping
 _pkgname=${pkgname#python-}
 pkgver=0.2.36
-pkgrel=1
+pkgrel=2
 pkgdesc='Type annotations and runtime checking for shape and dtype of JAX arrays, and PyTrees.'
 arch=('any')
 url="https://github.com/patrick-kidger/jaxtyping"
