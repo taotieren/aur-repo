@@ -17,7 +17,8 @@ _pydeps=(
     typing_extensions
     yaml
     # AUR
-    #     cadquery
+    cadquery
+    ocp
 )
 depends=(
     nlopt
