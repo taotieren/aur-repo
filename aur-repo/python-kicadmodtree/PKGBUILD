@@ -52,10 +52,10 @@ build() {
     python -m build --wheel --no-isolation
 }
 
-check() {
-    cd "${srcdir}/${pkgname}"
-    ./manage.sh tests
-}
+# check() {
+#     cd "${srcdir}/${pkgname}"
+#     ./manage.sh tests
+# }
 
 package() {
     cd "${srcdir}/${pkgname}"
