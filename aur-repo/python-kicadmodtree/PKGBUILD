@@ -12,17 +12,26 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 _pydeps=(
+    nptyping
+    numpy
     typing_extensions
-    yaml)
+    yaml
+    # AUR
+    #     cadquery
+)
 depends=(
+    nlopt
     python
-    "${_pydeps[@]/#/python-}")
+    "${_pydeps[@]/#/python-}"
+)
 _pymakedeps=(
     pycodestyle
     build
     installer
     wheel
     setuptools
+    sphinx
+    sphinx_rtd_theme
     # AUR
     asteval-git
 )
