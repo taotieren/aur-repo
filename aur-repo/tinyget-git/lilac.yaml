@@ -6,7 +6,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-trogon
-  - python-scripts
+  # - python-scripts
 update_on:
   - source: git
     git: https://gitee.com/tinylab/tinyget.git

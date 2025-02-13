@@ -2,7 +2,7 @@
 
 pkgname=tinyget-git
 _name=${pkgname%-git}
-pkgver=r47.55e8308
+pkgver=r118.39b1533
 pkgrel=1
 epoch=
 pkgdesc="A cross-distro package management tool."
@@ -15,10 +15,12 @@ provides=(${_name})
 conflicts=(${_name})
 _pydeps=(
     click
+    grpcio
     requests
     rich
-    scripts
-    trogon)
+    protobuf
+    trogon
+)
 depends=(
     bash
     python
@@ -30,7 +32,8 @@ _pymakedeps=(
     build
     installer
     wheel
-    setuptools)
+    setuptools
+)
 makedepends=(
     flake8
     git
@@ -47,7 +50,7 @@ sha256sums=('SKIP')
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
-    git switch ospp2024
+    git switch ospp-2024
 }
 
 pkgver() {
