@@ -19,4 +19,5 @@ update_on:
   #   pypi: kintree
   - source: github
     github: sparkmicro/Ki-nTree
+    use_max_tag: true
   - alias: python
