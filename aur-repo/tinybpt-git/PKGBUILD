@@ -15,22 +15,25 @@ depends=(
     bash
     gcc-libs
     glibc
+    openssl
 )
 makedepends=(
     git
     cmake
-    cpp-httplib
-    openssl
     nlohmann-json
-    ninja)
+    ninja
+)
 optdepends=("buildroot-meta: dependency requirements for buildroot")
 checkdepends=()
 options=()
 source=(${pkgname}::git+$url.git
-    "tinybpt_cacert.pem::https://curl.se/ca/cacert.pem")
+    "tinybpt_cacert.pem::https://curl.se/ca/cacert.pem"
+    "CMakeLists.patch"
+)
 noextract=()
 sha256sums=('SKIP'
-    'bb1782d281fe60d4a2dcf41bc229abe3e46c280212597d4abcc25bddf667739b')
+    'a3f328c21e39ddd1f2be1cea43ac0dec819eaa20a90425d7da901a11531b3aa5'
+    'aef37c794e79637913ceb23a9a300c51cf4d3264ab48837c82209f4bf6c3cddb')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -43,21 +46,30 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}"
+    patch -p1 <${srcdir}/CMakeLists.patch
 }
 
 build() {
     cp -rv ${srcdir}/tinybpt_cacert.pem ${srcdir}/${pkgname}
+
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -S ${pkgname} \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -Wno-dev \
         -B build \
         -G Ninja
 
     ninja -C build
+    #     cd "${srcdir}/${pkgname}"
+    #     make
 }
 
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/build install
+    #     cd "${srcdir}/${pkgname}"
+    #     install -dm755 "$pkgdir"/usr
+    #     DESTDIR="$pkgdir" make install prefix=/usr
     install -dm777 ${pkgdir}/var/cache/tinybpt
 }
