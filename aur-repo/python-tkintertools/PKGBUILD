@@ -17,6 +17,7 @@ depends=(
     python-darkdetect
     python-pillow
     python-pilkit
+    python-setuptools-scm
     #AUR
 )
 makedepends=(
