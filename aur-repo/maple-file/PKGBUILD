@@ -23,7 +23,7 @@ makedepends=(
     go
     # AUR
     flutter
-    flutter-target-linux
+    #     flutter-target-linux
 )
 optdepends=(
 )
