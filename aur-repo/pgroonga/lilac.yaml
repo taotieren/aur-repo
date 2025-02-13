@@ -6,9 +6,9 @@ post_build: aur_post_build
 repo_depends:
   - groonga
 update_on:
+  - source: aur
+    aur: pgroonga
   - source: github
     github: pgroonga/pgroonga
     use_max_tag: true
     # prefix: v
-  - source: aur
-    aur: pgroonga

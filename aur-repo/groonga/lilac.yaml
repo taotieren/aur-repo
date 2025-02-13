@@ -7,8 +7,8 @@ post_build: aur_post_build
 #   - mecab-git
 #   - mecab-ipadic
 update_on:
+  - source: aur
+    aur: groonga
   - source: regex
     url: https://groonga.org/
     regex: 'groonga-([\d.]+).tar.gz'
-  - source: aur
-    aur: groonga
