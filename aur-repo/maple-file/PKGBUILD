@@ -22,8 +22,9 @@ makedepends=(
     pnpm
     go
     # AUR
-    flutter
-    #     flutter-target-linux
+    #     flutter
+    flutter-tool
+    flutter-target-linux
 )
 optdepends=(
 )
