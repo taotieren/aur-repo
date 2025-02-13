@@ -26,14 +26,13 @@ makedepends=(
 optdepends=("buildroot-meta: dependency requirements for buildroot")
 checkdepends=()
 options=()
-source=(${pkgname}::git+$url.git
+source=(
+    ${pkgname}::git+$url.git
     "tinybpt_cacert.pem::https://curl.se/ca/cacert.pem"
-    "CMakeLists.patch"
 )
 noextract=()
 sha256sums=('SKIP'
-            'a3f328c21e39ddd1f2be1cea43ac0dec819eaa20a90425d7da901a11531b3aa5'
-            'aef37c794e79637913ceb23a9a300c51cf4d3264ab48837c82209f4bf6c3cddb')
+            'a3f328c21e39ddd1f2be1cea43ac0dec819eaa20a90425d7da901a11531b3aa5')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -46,8 +45,6 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    patch -p1 <${srcdir}/CMakeLists.patch
 }
 
 build() {
