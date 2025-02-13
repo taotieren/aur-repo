@@ -1,16 +1,17 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['GPereira'])
 post_build: aur_post_build
-repo_depends:
-  - python-digikey-api-git
-  - python-flet
-  - python-kiutils
-  - python-inventree
-  - python-mouser
-  - python-thefuzz
-  - python-wrapt-timeout-decorator
+# repo_depends:
+#   - python-digikey-api-git
+#   - python-flet
+#   - python-kiutils
+#   - python-inventree
+#   - python-mouser
+#   - python-thefuzz
+#   - python-wrapt-timeout-decorator
 update_on:
-  - source: aur
-    aur: python-kintree
+  - source: pypi
+    pypi: kintree
   - alias: python
