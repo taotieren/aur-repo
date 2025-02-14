@@ -3,9 +3,9 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['greyltc'])
 post_build: aur_post_build
-# repo_depends:
-#   - clang15
-#   - lief
+repo_depends:
+  - clang15
+  - lief
 update_on:
   - source: aur
     aur: python-ocp
