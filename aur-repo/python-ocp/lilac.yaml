@@ -5,8 +5,8 @@ pre_build_script: |
   aur_pre_build(maintainers=['greyltc'])
   add_makedepends(['python-lief'])
 post_build: aur_post_build
-# repo_depends:
-#   - clang15
+repo_depends:
+  - clang15
 #   - lief
 #   - python-lief
 update_on:
