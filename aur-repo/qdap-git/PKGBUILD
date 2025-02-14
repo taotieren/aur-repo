@@ -19,13 +19,16 @@ depends=(
     libusb
     hidapi
     qt5-base
-    yaml-cpp)
-makedepends=(git
+    yaml-cpp
+)
+makedepends=(
+    git
     cmake
     ninja
     qt5-tools
     rsync
-    pkgconf)
+    pkgconf
+)
 optdepends=()
 source=("${pkgname}::git+${url}.git"
     "git+https://github.com/ma6254/qdap_chips.git")
