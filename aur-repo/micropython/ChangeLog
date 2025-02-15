@@ -1,0 +1,22 @@
+This is a patch release containing the following commits:
+- tools/mpremote: fix UnboundLocalError in Transport.fs_writefile()
+- esp32/machine_pwm: use IDF functions to calculate resolution correctly
+- pic16bit: make it build with recent XC16 versions
+- py/objdeque: fix buffer overflow in deque_subscr
+- extmod/modlwip: fix IGMP address type when IPv6 is enabled
+- esp32/machine_pwm: restore PWM support for ESP-IDF v5.0.x and v5.1.x
+- esp32: workaround native code execution crash on ESP32-S2
+- tools/mpremote: make sure stdout and stderr output appear in order
+- tools/mpremote: add test for forced copy
+- tools/mpremote: support trailing slash on dest for non-recursive copy
+- esp32/modsocket: fix getaddrinfo hints to set AI_CANONNAME
+- extmod/vfs_blockdev: support bool return from Python read/write blocks
+- extmod/network_cyw43: fix isconnected() result on AP interface
+- extmod/network_cyw43: fix uninitialised variable in status('stations')
+- extmod/network_cyw43: allow configuring active AP interface
+- esp32: fix setting WLAN channel in AP mode
+- esp32: use hardware version for touchpad macro defines
+- esp32: fix machine.TouchPad startup on ESP32-S2 and S3
+- extmod/modframebuf: fix 0 radius bug in FrameBuffer.ellipse
+- nrf/drivers/ticker: reset slow ticker callback count on soft reboot
+- py/objfloat: workaround non-constant NAN definition on Windows MSVC
