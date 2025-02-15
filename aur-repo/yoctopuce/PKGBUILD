@@ -1,0 +1,40 @@
+# Maintainer: Luis Martinez <luis dot martinez at disroot dot org>
+
+pkgname=yoctopuce
+pkgver=2.0.64286
+pkgrel=0
+pkgdesc="C++ library for interfacing with Yoctopuce devices"
+arch=($CARCH)
+url="https://github.com/yoctopuce/yoctolib_cpp"
+license=('LicenseRef-custom')
+groups=('yoctopuce-libs')
+depends=(
+	gcc-libs
+	glibc
+	libusb
+)
+makedepends=(java-runtime)
+provides=('libyocto.so' 'libyapi.so')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
+	'LICENSE'
+)
+sha256sums=('2ba89d6867ba5add43d7bff4f25869e00cebed9612448686ce1385bc9136e0df'
+	'2b22a5342677bd71e40e9fadab57146a8662ded89e97ac98b8726fb9a0e22e30')
+
+build() {
+	export CFLAGS+=" ${CPPFLAGS}"
+	export CXXFLAGS+=" ${CPPFLAGS}"
+	export LDFLAGS+=" ${LDFLAGS}"
+
+	make -C "${srcdir}/yoctolib_cpp-$pkgver/Binaries"
+}
+
+package() {
+	# 	local x86_64=64bits i686=32bits armv7h=armhf
+	install -Dm644 ${srcdir}/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+	cd "${srcdir}/yoctolib_cpp-$pkgver"
+	install -Dm644 "Binaries/linux/${CARCH}/"libyocto.so.* -t "$pkgdir/usr/lib/"
+	install -Dm644 "Binaries/linux/${CARCH}/yapi/"libyapi.so.* -t "$pkgdir/usr/lib/"
+	install -Dm644 udev_conf/51-yoctopuce_group.rules -t "$pkgdir/usr/lib/udev/rules.d/"
+	install -Dm644 Documentation/yoctolib-cpp* -t "$pkgdir/usr/share/doc/${pkgname}/"
+}
