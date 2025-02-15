@@ -61,8 +61,8 @@ package() {
 
 		# 创建符号链接
 		install -Dm644 "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so.${full_version}"
-		ln -sf "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so"
-		ln -sf "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so.${major_version}"
+		ln -sf "${target_dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so"
+		ln -sf "${target_dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so.${major_version}"
 	done
 
 	install -Dm644 udev_conf/51-yoctopuce_group.rules -t "$pkgdir/usr/lib/udev/rules.d/"
