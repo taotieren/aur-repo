@@ -34,8 +34,37 @@ package() {
 	# 	local x86_64=64bits i686=32bits armv7h=armhf
 	install -Dm644 ${srcdir}/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
 	cd "${srcdir}/yoctolib_cpp-$pkgver"
-	install -Dm644 "Binaries/linux/${CARCH}/"libyocto.so.* -t "$pkgdir/usr/lib/"
-	install -Dm644 "Binaries/linux/${CARCH}/yapi/"libyapi.so.* -t "$pkgdir/usr/lib/"
+	# 	install -Dm644 "Binaries/linux/${CARCH}/"libyocto.so.* -t "$pkgdir/usr/lib/"
+	# 	install -Dm644 "Binaries/linux/${CARCH}/yapi/"libyapi.so.* -t "$pkgdir/usr/lib/"
+	declare -A libs
+	libs=(
+		["libyapi"]="Binaries/linux/${CARCH}/yapi"
+		["libyocto"]="Binaries/linux/${CARCH}"
+	)
+
+	target_dir="/usr/lib"
+
+	# 获取版本号并创建符号链接
+	for lib in "${!libs[@]}"; do
+		dir="${libs[$lib]}"
+
+		# 获取完整版本号（例如 1.0.1）
+		full_version=$(ls "${dir}/${lib}.so."* | grep -oP '\d+(\.\d+)+')
+
+		if [ -z "$full_version" ]; then
+			echo "无法找到 ${lib} 的版本号"
+			continue
+		fi
+
+		# 获取主版本号（例如 1）
+		major_version=$(echo "$full_version" | cut -d '.' -f 1)
+
+		# 创建符号链接
+		install -Dm644 "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so.${full_version}"
+		ln -sf "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so"
+		ln -sf "${dir}/${lib}.so.${full_version}" "${pkgdir}/${target_dir}/${lib}.so.${major_version}"
+	done
+
 	install -Dm644 udev_conf/51-yoctopuce_group.rules -t "$pkgdir/usr/lib/udev/rules.d/"
 	install -Dm644 Documentation/yoctolib-cpp* -t "$pkgdir/usr/share/doc/${pkgname}/"
 }
