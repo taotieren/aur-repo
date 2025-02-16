@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
 pre_build_script: aur_pre_build(maintainers='taotieren')
-post_build_script: aur_post_build
+post_build_script: |
+  aur_post_build
+  git_pkgbuild_commit()
 update_on:
   - source: aur
     aur: lckfb-meta
