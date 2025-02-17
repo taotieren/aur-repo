@@ -10,4 +10,4 @@ update_on:
     github: x-tools-author/wx-tools
     use_max_tag: true
     prefix: v
-    # exclude_regex: "continuous"
+    exclude_regex: "continuous"

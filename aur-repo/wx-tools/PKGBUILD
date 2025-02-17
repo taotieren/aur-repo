@@ -48,8 +48,7 @@ checkdepends=(
     gtest
 )
 optdepends=()
-# source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('7b8ee05412b4a16020166ec6b1d12548949fe68941e0558b17d6bc515e18beb6')
 
 build() {
