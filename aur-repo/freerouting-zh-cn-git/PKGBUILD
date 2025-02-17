@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=freerouting-zh-cn-git
-pkgver=2.0.1.r1.g5b1c365
-pkgrel=2
+pkgver=2.0.1.r3.g4442c9b
+pkgrel=1
 _jrever=21
 _jdkver=21
 pkgdesc="Advanced PCB autorouter"
