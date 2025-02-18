@@ -3,7 +3,7 @@
 pkgname=python-obd
 _name=${pkgname#python-}
 pkgver=0.7.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Serial module for handling live sensor data from a vehicle's OBD-II port."
 arch=('any')
