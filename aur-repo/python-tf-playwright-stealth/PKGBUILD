@@ -3,7 +3,7 @@
 pkgname=python-tf-playwright-stealth
 _name=${pkgname#python-}
 pkgver=1.1.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Makes playwright stealthy like a ninja!."
 arch=('any')
