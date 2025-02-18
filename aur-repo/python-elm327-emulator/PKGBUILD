@@ -3,7 +3,7 @@
 pkgname=python-elm327-emulator
 _name=${pkgname#python-}
 pkgver=3.0.3.post31
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="ELM327 Emulator for testing software interfacing OBDII via ELM327 adapter."
 arch=('any')
