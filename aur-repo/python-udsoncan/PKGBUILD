@@ -3,7 +3,7 @@
 pkgname=python-udsoncan
 _name=${pkgname#python-}
 pkgver=1.23.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Implementation of the Unified Diagnostic Service (UDS) protocol (ISO-14229) used in the automotive industry."
 arch=('any')
