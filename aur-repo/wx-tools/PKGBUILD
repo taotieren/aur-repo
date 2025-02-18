@@ -9,7 +9,7 @@ pkgdesc="wxTools: A Serial Port, UDP, TCP, and WebSocket Debugging Assistant Bas
 "
 arch=($CARCH)
 url="https://github.com/x-tools-author/wx-tools"
-license=('LicenseRef-custom')
+license=('LicenseRef-wxWindows')
 provides=(${pkgname} wx-tools)
 conflicts=(${pkgname} wx-tools)
 depends=(
