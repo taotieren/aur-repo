@@ -18,7 +18,6 @@ makedepends=(
 optdepends=(
     "can-utils: Linux-CAN / SocketCAN user space applications"
     "can-doc: Linux-CAN / SocketCAN documentation"
-    "can-isotp-dkms: Kernel modules for isotp"
     "iproute2: IP Routing Utilities")
 source=("${pkgname}::git+${url}.git"
     "git+https://github.com/CANopenNode/CANopenNode.git")
