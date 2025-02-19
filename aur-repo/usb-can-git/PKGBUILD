@@ -51,6 +51,7 @@ build() {
 
 package() {
     cd "${srcdir}/${pkgname}/"
-    install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm755 canusb -t "${pkgdir}/usr/bin/"
+    install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -Dm644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
 }
