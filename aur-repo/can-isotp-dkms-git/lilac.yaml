@@ -1,8 +1,0 @@
-maintainers:
-  - github: taotieren
-pre_build: vcs_update
-pre_build_script: aur_pre_build(maintainers='epozzobon')
-post_build_script: aur_post_build
-update_on:
-  - source: aur
-    aur: can-isotp-dkms-git
