@@ -2,7 +2,7 @@
 
 pkgname=usb-can-git
 pkgver=r28.abb584a
-pkgrel=1
+pkgrel=2
 pkgdesc="USB-CAN Analyzer Linux Support"
 url="https://github.com/kobolt/usb-can"
 arch=($CARCH)
