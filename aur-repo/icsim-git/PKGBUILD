@@ -2,7 +2,7 @@
 
 pkgname=icsim-git
 pkgver=r41.74c0916
-pkgrel=1
+pkgrel=2
 pkgdesc="Instrument Cluster Simulator for SocketCAN"
 url="https://github.com/zombieCraig/ICSim"
 arch=($CARCH)
