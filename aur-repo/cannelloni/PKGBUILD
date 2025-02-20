@@ -22,10 +22,10 @@ makedepends=(
     ninja
     pkgconf
 )
-checkdepends=(
+checkdepends=()
+optdepends=(
     'can-utils: Linux-CAN / SocketCAN user space applications'
 )
-optdepends=()
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('0dcb9277b21f916f5646574b9b2229d3b8e97d5e99b935a4d0b7509a5f0ccdcd')
 options=()
