@@ -2,6 +2,12 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
+  tag = _G.newver.lstrip('v')
+  for line in edit_file('PKGBUILD'):
+  if line.startswith('_tagname='):
+    line = f"_tagname='{tag}'"
+    print(line)
+  update_pkgver_and_pkgrel(tag.replace('-', ''))
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -12,5 +18,5 @@ update_on:
     github: aleksey-hoffman/sigma-file-manager
     use_latest_tag: true
     # use_max_tag: true
-    exclude_regex: "*alpha*"
     prefix: v
+    # exclude_regex: "*alpha*"

@@ -1,14 +1,15 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sigma-file-manager
-pkgver=1.7.0
+_tagname='1.7.0'
+pkgver="${_tagname//-/}"
 pkgrel=0
 pkgdesc="\"Sigma File Manager\" is a free, open-source, quickly evolving, modern file manager (explorer / finder) app for Windows and Linux."
 arch=('any')
 url="https://github.com/aleksey-hoffman/sigma-file-manager"
 license=('GPL-3.0-or-later')
 provides=(${pkgname})
-conflicts=(${pkgname}  ${pkgname}-git)
+conflicts=(${pkgname} ${pkgname}-git)
 replaces=()
 depends=(npm)
 makedepends=(git
