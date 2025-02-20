@@ -1,7 +1,6 @@
 maintainers:
   - github: taotieren
 pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
   tag = _G.newver.lstrip('v')
   for line in edit_file('PKGBUILD'):
   if line.startswith('_tagname='):
