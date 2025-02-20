@@ -22,18 +22,19 @@ depends=(
   glu
   gtk3
   libglvnd
+  libgit2
   harfbuzz
   hicolor-icon-theme
+  nng
   ngspice
   opencascade
+  protobuf
   python
   python-wxpython
+  wayland
   wxwidgets-gtk3
   wxwidgets-common
   unixodbc
-  libgit2
-  protobuf
-  nng
   zlib
 )
 makedepends=(
@@ -47,6 +48,7 @@ makedepends=(
   swig
   ngspice
   ninja
+  pkgconf
 )
 optdepends=('kicad-library: KiCad symbol, footprint and template libraries'
   'kicad-library: KiCad 3D model libraries')
