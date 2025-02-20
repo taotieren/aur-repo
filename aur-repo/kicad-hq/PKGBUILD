@@ -9,40 +9,42 @@ arch=($CARCH)
 url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
-  'cairo'
-  'curl'
-  'freetype2'
-  'fontconfig'
-  'gcc-libs'
-  'glib2'
-  'glibc'
-  'glu'
-  'gtk3'
-  'libglvnd'
-  'harfbuzz'
-  'hicolor-icon-theme'
-  'opencascade'
-  'python'
-  'python-wxpython'
-  'wayland'
-  'wxwidgets-gtk3'
-  'wxwidgets-common'
-  'unixodbc'
-  'libgit2'
-  'zlib'
-  #   'nng'
+  cairo
+  curl
+  freetype2
+  fontconfig
+  gcc-libs
+  glib2
+  glibc
+  glu
+  gtk3
+  libglvnd
+  harfbuzz
+  hicolor-icon-theme
+  opencascade
+  python
+  python-wxpython
+  wayland
+  wxwidgets-gtk3
+  wxwidgets-common
+  unixodbc
+  libgit2
+  zlib
+  nng
 )
 makedepends=(
-  'boost-libs'
-  'cmake'
-  'glew'
-  'glm'
-  'mesa'
-  'boost'
-  'swig'
-  'ngspice'
-  'ninja'
-  'protobuf'
+  boost-libs
+  cmake
+  doxygen
+  glew
+  glm
+  git
+  mesa
+  boost
+  swig
+  ngspice
+  ninja
+  protobuf
 )
 optdepends=('kicad-library: KiCad symbol, footprint and template libraries'
   'kicad-library: KiCad 3D model libraries')
@@ -56,7 +58,6 @@ build() {
 
   cmake -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -DKICAD_USE_OCC=ON \
     -DKICAD_USE_EGL=ON \
     -DKICAD_SCRIPTING_WXPYTHON=ON \
     -DKICAD_BUILD_I18N=ON \
