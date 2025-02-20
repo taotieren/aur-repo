@@ -10,4 +10,5 @@ update_on:
     github: mguentner/cannelloni
     use_max_tag: true
     prefix: v
+    include_regex: "[\d.]+"
     exclude_regex: "\d+"
