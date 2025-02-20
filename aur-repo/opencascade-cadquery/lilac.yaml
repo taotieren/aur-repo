@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+build_prefix: aur-repo-x86_64
+pre_build_script: |
+  aur_pre_build(maintainers=['greyltc'])
+  add_makedepends(['python-lief', 'freetype2', 'vtk'])
+post_build: aur_post_build
+# repo_depends:
+#   - clang15
+#   - lief
+#   - python-lief
+update_on:
+  - source: aur
+    aur: opencascade-cadquery
+# - alias: python
