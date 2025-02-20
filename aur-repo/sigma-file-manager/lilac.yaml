@@ -12,5 +12,5 @@ update_on:
     github: aleksey-hoffman/sigma-file-manager
     use_latest_tag: true
     # use_max_tag: true
-    # exclude_regex: ".*alpha.*"
+    exclude_regex: "*alpha*"
     prefix: v
