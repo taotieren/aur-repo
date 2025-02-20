@@ -9,31 +9,34 @@ arch=($CARCH)
 url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
+  boost-libs
   cairo
   curl
   freetype2
   fontconfig
   gcc-libs
+  glew
   glib2
   glibc
+  glm
   glu
   gtk3
   libglvnd
   harfbuzz
   hicolor-icon-theme
+  ngspice
   opencascade
   python
   python-wxpython
-  wayland
   wxwidgets-gtk3
   wxwidgets-common
   unixodbc
   libgit2
-  zlib
+  protobuf
   nng
+  zlib
 )
 makedepends=(
-  boost-libs
   cmake
   doxygen
   glew
@@ -44,7 +47,6 @@ makedepends=(
   swig
   ngspice
   ninja
-  protobuf
 )
 optdepends=('kicad-library: KiCad symbol, footprint and template libraries'
   'kicad-library: KiCad 3D model libraries')
