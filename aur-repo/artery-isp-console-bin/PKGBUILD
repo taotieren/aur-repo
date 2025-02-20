@@ -37,6 +37,7 @@ package() {
         "${pkgdir}/usr/lib/"
 
     cp -rv Document "${pkgdir}/opt/artery32/${pkgname%-bin}/Document"
+    cp -rv *.pdf "${pkgdir}/opt/artery32/${pkgname%-bin}/Document"
 
     cd ${_pkg_file_name%.zip}
     cp -rv Map "${pkgdir}/opt/artery32/${pkgname%-bin}/Map"
