@@ -1,9 +1,0 @@
-maintainers:
-  - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['class101', 'horsicq'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: detect-it-easy-git
-# - source: github
-#   github: horsicq/Detect-It-Easy
