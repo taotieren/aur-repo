@@ -34,6 +34,7 @@ sha256sums=('151829def2d8b2cee7228c6ea0ace8f46351502e01dbebef831f74185b73b576')
 
 package() {
     install -dm755 ${pkgdir}/usr/share/${pkgname}/
+    install -dm777 ${pkgdir}/var/log/petoicamp-opencat/
 
     bsdtar -xf ${srcdir}/${_name}-${pkgver}.tar.gz --strip-components=1 -C ${pkgdir}/usr/share/${pkgname}/
 
@@ -41,7 +42,7 @@ package() {
 
     install -Dm644 pyUI/resources/Petoi.png ${pkgdir}/usr/share/pixmaps/${pkgname}.png
     install -vDm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
-    sed -e 's|./logfile.log|/var/log/petoicamp-opencat.log|g' \
+    sed -e 's|./logfile.log|/var/log/petoicamp-opencat/logfile.log|g' \
         -i \
         pyUI/FirmwareUploader.py \
         serialMaster/ardSerial.py
