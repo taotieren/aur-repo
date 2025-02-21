@@ -18,7 +18,7 @@ _pydeps=(
     yaml
     # AUR
     cadquery
-    ocp
+    #     ocp
 )
 depends=(
     nlopt

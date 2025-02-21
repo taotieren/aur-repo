@@ -8,7 +8,7 @@ post_build_script: |
 repo_depends:
   - python-asteval-git
   - python-cadquery
-  - python-ocp
+  # - python-ocp
 update_on:
   - source: gitlab
     gitlab: kicad/libraries/kicad-footprint-generator
