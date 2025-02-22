@@ -1,7 +1,10 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['Maik93'])
-post_build: aur_post_build
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
 repo_depends:
   - python-argparse-addons
   - python-bitstruct
@@ -9,6 +12,7 @@ repo_depends:
   - python-diskcache
   - python-textparser
 update_on:
-  - source: aur
-    aur: python-cantools
+  - source: github
+    github: eerimoq/cantools
+    use_max_tag: true
   - alias: python
