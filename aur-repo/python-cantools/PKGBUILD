@@ -29,7 +29,6 @@ depends=(
 	'python-matplotlib'
 )
 optdepends=(
-	'python-matplotlib: plot decoded messages'
 	'mypy'
 	'python-pipx'
 	'python-ruff'
