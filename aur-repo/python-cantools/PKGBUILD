@@ -26,6 +26,7 @@ depends=(
 	'python-diskcache'
 	'python-argparse-addons'
 	'python-crccheck'
+	'python-matplotlib'
 )
 optdepends=(
 	'python-matplotlib: plot decoded messages'
