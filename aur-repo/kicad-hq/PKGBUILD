@@ -9,24 +9,22 @@ arch=($CARCH)
 url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
-  boost-libs
+  abseil-cpp
   cairo
   curl
   freetype2
   fontconfig
   gcc-libs
-  glew
   glib2
   glibc
-  glm
   glu
   gtk3
   libglvnd
   libgit2
+  libsecret
   harfbuzz
   hicolor-icon-theme
   nng
-  ngspice
   opencascade
   protobuf
   python
@@ -36,13 +34,16 @@ depends=(
   wxwidgets-common
   unixodbc
   zlib
+  zstd
 )
 makedepends=(
+  boost-libs
   cmake
   doxygen
   glew
   glm
   git
+  ngspice
   mesa
   boost
   swig
