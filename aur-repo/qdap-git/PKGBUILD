@@ -19,7 +19,7 @@ depends=(
     libusb
     hidapi
     qt5-base
-    #     yaml-cpp
+    yaml-cpp
 )
 makedepends=(
     git
