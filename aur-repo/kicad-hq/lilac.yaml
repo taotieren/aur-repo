@@ -14,4 +14,4 @@ update_on:
     exclude_regex: ".*rc.*"
 # use_latest_tag: true
 # 8.0.6-hq
-
+time_limit_hours: 2
