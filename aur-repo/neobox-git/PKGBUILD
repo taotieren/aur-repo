@@ -52,8 +52,6 @@ build() {
   cmake -S . \
     -D CMAKE_BUILD_TYPE=None \
     -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_INSTALL_LIBEXECDIR=lib \
     -B build \
     -G Ninja \
     -Wno-dev
