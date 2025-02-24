@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['yjmthu', 'taotieren'])
 pre_build: vcs_update
 post_build_script: |

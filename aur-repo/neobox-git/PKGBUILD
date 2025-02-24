@@ -13,7 +13,10 @@ conflicts=(${pkgname%-git})
 depends=(
   curl
   libnotify
-  qt6-base)
+  qt6-base
+  # AUR
+  cpp-httplib
+)
 makedepends=(
   cmake
   git
