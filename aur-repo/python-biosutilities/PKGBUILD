@@ -37,7 +37,7 @@ optdepends=(
 options=('!strip' '!debug')
 source=(
     "${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
-    "main.py::https://github.com/platomav/BIOSUtilities/raw/refs/heads/main/main.py"
+    "main-$pkgver.py::https://github.com/platomav/BIOSUtilities/raw/refs/heads/main/main.py"
 )
 noextract=()
 sha256sums=('cda4caf7bb92f1cc1f0d610ea0e6b8b8888e32a3998a84685b44bb6b5a78c467'
@@ -49,7 +49,7 @@ prepare() {
 
     echo -e "[project.entry-points.\"console_scripts\"]\nbiosutilities = 'biosutilities:main'" >>pyproject.toml
 
-    cp -rv ${srcdir}/main.py biosutilities
+    cp -rv ${srcdir}/main-$pkgver.py biosutilities/main.py
 
     cd biosutilities
 
