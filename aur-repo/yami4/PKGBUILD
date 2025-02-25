@@ -1,9 +1,11 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgbase=yami4
-pkgname=(libyami4
+pkgname=(
+    libyami4
     python-libyami4
-    yami4-core)
+    yami4-core
+)
 pkgver=2.0.0
 pkgrel=0
 pkgdesc="YAMI4 - Messaging Solution for Distributed Systems"
@@ -14,7 +16,8 @@ provides=()
 conflicts=()
 depends=(
     gcc-libs
-    glibc)
+    glibc
+)
 makedepends=(
     gawk
     git
@@ -30,9 +33,9 @@ build() {
     cd "${srcdir}/${pkgbase}-gpl-${pkgver}/src"
 
     make clean
-    python_version=$(python --version 2>&1)
-    python_version=${python_version#Python }
-    python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
+    local python_version=$(python --version 2>&1)
+    local python_version=${python_version#Python }
+    local python_version=$(echo "$python_version" | awk -F'.' '{print $1"."$2}')
     #     awk -v python_version="$python_version" '{ gsub("python3.9", "python" python_version); print }' Makefile.common >Makefile.common.tmp
     awk -v new_python_version="python$python_version" '{ gsub(/python3\.9/, new_python_version); print }' Makefile.common >Makefile.common.tmp
     cp -rv Makefile.common.tmp Makefile.common
