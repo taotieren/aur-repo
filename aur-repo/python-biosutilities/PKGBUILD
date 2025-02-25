@@ -3,7 +3,7 @@
 pkgname=python-biosutilities
 _name=${pkgname#python-}
 pkgver=25.2.23
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Various BIOS Utilities for Modding/Research"
 arch=('any')
