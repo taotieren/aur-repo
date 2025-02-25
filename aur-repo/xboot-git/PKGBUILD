@@ -10,7 +10,8 @@ license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
-depends=(sdl2
+depends=(
+    sdl2-compat
     alsa-lib
     cpio
     libdrm)
@@ -26,8 +27,7 @@ pkgver() {
     git describe --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/g' | sed -r 's/-([0-9,a-g,A-G]{7}.*)//' | sed 's/-/./g'
 }
 
-prepare()
-{
+prepare() {
     git -C "${srcdir}/${pkgname%-git}" clean -dfx
 }
 
@@ -42,7 +42,7 @@ package() {
     install -Dm0644 "${srcdir}/${pkgname%-git}/developments/logo/xboot-logo.svg" "${pkgdir}/usr/share/pixmaps/${pkgname%-git}.svg"
     install -Dm0644 "${srcdir}/${pkgname%-git}/developments/logo/xboot-logo.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/mimetypes/application-x-${pkgname%-git}.svg"
 
-    install -Dm0644 /dev/stdin "${pkgdir}/usr/share/applications/${pkgname%-git}.desktop" << EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/usr/share/applications/${pkgname%-git}.desktop" <<EOF
 [Desktop Entry]
 Name=${pkgname%-git}
 Name[zh_CN]=${pkgname%-git}
@@ -56,7 +56,7 @@ Icon=${pkgname%-git}
 Version=${pkgver}
 EOF
 
-    install -Dm0644 /dev/stdin "${pkgdir}/usr/share/mime/packages/${pkgname%-git}.xml" << EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/usr/share/mime/packages/${pkgname%-git}.xml" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
 	<mime-type type="application/x-xboot">
