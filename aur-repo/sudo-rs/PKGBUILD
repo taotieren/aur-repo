@@ -35,10 +35,8 @@ build() {
     export CARGO_TARGET_DIR=target
 
     cd "${srcdir}/${pkgname}-${pkgver}/"
-
-    # https://github.com/memorysafety/sudo-rs/issues/832#issuecomment-1994101988
-    sed -i 's|sudo-i|sudo|g' src/sudo/pam.rs
-    cargo build --release --all-features
+    #     cargo build --release --all-features
+    cargo build --release
 }
 
 # check() {
@@ -54,7 +52,8 @@ package() {
     export CARGO_TARGET_DIR=target
 
     cd "${srcdir}/${pkgname}-${pkgver}/"
-    cargo install --no-track --all-features --root "${pkgdir}/usr/" --path .
+    #     cargo install --no-track --all-features --root "${pkgdir}/usr/" --path .
+    cargo install --no-track --root "${pkgdir}/usr/" --path .
 
     install -Dm0644 LICENSE-{APACHE,MIT} -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
