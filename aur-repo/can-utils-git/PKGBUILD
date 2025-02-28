@@ -3,7 +3,7 @@
 
 pkgbase=can-utils-git
 pkgname=can-utils-git
-pkgver=2025.01.r4.g2b8c7c5
+pkgver=2025.01.r5.gc542c9a
 pkgrel=1
 groups=()
 pkgdesc="Linux-CAN / SocketCAN user space applications"
