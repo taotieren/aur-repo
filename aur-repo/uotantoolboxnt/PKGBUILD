@@ -47,14 +47,16 @@ build() {
         msg2 "build for arm64"
         dotnet publish -r linux-arm64 --self-contained true -p:PublishSingleFile=true \
             -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-arm64
-    elif "$CARCH" == "loong64" ]; then
+    elif [ "$CARCH" == "loong64" ]; then
         msg2 "build for loong64"
         dotnet publish -r linux-loong64 --self-contained true -p:PublishSingleFile=true \
             -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-loong64
-    else
+    elif [ "$CARCH" == "x86_64" ]; then
         msg2 "build for x64"
         dotnet publish -r linux-x64 --self-contained true -p:PublishSingleFile=true \
             -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-x64
+    else
+        msg2 "Unsupported architectures"
     fi
 }
 
@@ -64,14 +66,19 @@ package() {
     install -dm755 ${pkgdir}/usr/lib/UotanToolbox
 
     if [ "$CARCH" == "aarch64" ]; then
+        msg2 "aarch64"
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AArch64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-arm64/* ${pkgdir}/usr/lib/UotanToolbox
     elif [ "$CARCH" == "loong64" ]; then
+        msg2 "loong64"
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_LoongArch64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-loong64/* ${pkgdir}/usr/lib/UotanToolbox
-    else
+    elif [ "$CARCH" == "x86_64" ]; then
+        msg2 "x64"
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AMD64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-x64/* ${pkgdir}/usr/lib/UotanToolbox
+    else
+        msg2 "Unsupported architectures"
     fi
 
     chmod -R a+rX ${pkgdir}/usr/lib/UotanToolbox
