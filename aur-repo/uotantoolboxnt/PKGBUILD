@@ -28,7 +28,7 @@ options=(!strip !debug)
 install=
 source=(
     "${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
-    "https://github.com/Uotan-Dev/UotanToolboxNT.Binary.git"
+    "UotanToolboxNT.Binary::git+https://github.com/Uotan-Dev/UotanToolboxNT.Binary.git"
     "https://github.com/Uotan-Dev/SukiUI-Uotan/releases/download/v${_uiver}/SukiUI.${_uiver}.nupkg"
 )
 sha256sums=('SKIP')
@@ -42,32 +42,32 @@ build() {
 
     if [ "$CARCH" == "aarch64" ]; then
         msg2 "build for arm64"
-        dotnet publish -r linux-x64 --self-contained true -p:PublishSingleFile=true  \ 
-        -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-x64
+        dotnet publish -r linux-x64 --self-contained true -p:PublishSingleFile=true \
+            -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-x64
     else
         msg2 "build for x64"
         dotnet publish -r linux-arm64 --self-contained true -p:PublishSingleFile=true \
-        -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-arm64
+            -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-arm64
     fi
 }
 
-package(){
+package() {
     cd ${srcdir}/${_name}-${pkgver}
 
-    install -vDm755 UotanToolbox/Assets/Linux/UotanToolbox -t ${pkgdir}/usr/bin
     install -dm755 ${pkgdir}/usr/lib/UotanToolbox
 
     if [ "$CARCH" == "aarch64" ]; then
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AArch64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-arm64/* ${pkgdir}/usr/lib/UotanToolbox
-        
+
     else
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AMD64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-x64/* ${pkgdir}/usr/lib/UotanToolbox
     fi
 
     chmod -R a+rX ${pkgdir}/usr/lib/UotanToolbox
-    chmod +x  ${pkgdir}/usr/lib/UotanToolbox/UotanToolbox
+    chmod +x ${pkgdir}/usr/lib/UotanToolbox/UotanToolbox
+    install -vDm755 UotanToolbox/Assets/Linux/UotanToolbox -t ${pkgdir}/usr/bin
     install -vDm644 UotanToolbox/Assets/Linux/UotanToolbox.desktop -t ${pkgdir}/usr/share/applications
     install -vDm644 UotanToolbox/Assets/Linux/UotanToolbox.png -t ${pkgdir}/usr/share/pixmaps
     sed -i '5i\Name[zh_CN]=柚坛工具箱' "$pkgdir/usr/share/applications/UotanToolbox.desktop"
