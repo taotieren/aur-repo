@@ -11,8 +11,8 @@ pkgdesc="现代化 Android & OpenHarmony 工具箱 | A Modern Toolbox for Androi
 arch=($CARCH)
 url="https://github.com/Uotan-Dev/UotanToolboxNT"
 license=('GPL-3.0-only')
-provides=(${pkgname} ${_name})
-conflicts=(${pkgname} ${_name})
+provides=(${pkgname} ${pkgname%nt} ${_name%NT} ${_name})
+conflicts=(${pkgname} ${pkgname%nt} ${_name%NT} ${_name})
 replaces=()
 depends=(
     android-tools
@@ -33,8 +33,8 @@ source=(
     "https://github.com/Uotan-Dev/SukiUI-Uotan/releases/download/v${_uiver}/SukiUI.${_uiver}.nupkg"
 )
 sha256sums=('d3eedd35659241922320b95ff6e6bee4f3b5cb7e0228fb84ccb0c75d459c99bd'
-            'SKIP'
-            'cd6df48c674b256218855dd6d8789b6bc7322cfa5131614d34ef35730b3a24df')
+    'SKIP'
+    'cd6df48c674b256218855dd6d8789b6bc7322cfa5131614d34ef35730b3a24df')
 noextract=()
 
 build() {
