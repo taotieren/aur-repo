@@ -45,12 +45,12 @@ build() {
 
     if [ "$CARCH" == "aarch64" ]; then
         msg2 "build for arm64"
-        dotnet publish -r linux-x64 --self-contained true -p:PublishSingleFile=true \
-            -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-x64
-    else
-        msg2 "build for x64"
         dotnet publish -r linux-arm64 --self-contained true -p:PublishSingleFile=true \
             -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-arm64
+    else
+        msg2 "build for x64"
+        dotnet publish -r linux-x64 --self-contained true -p:PublishSingleFile=true \
+            -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish-x64
     fi
 }
 
