@@ -15,6 +15,10 @@ provides=(${pkgname} ${pkgname%nt} ${_name%NT} ${_name})
 conflicts=(${pkgname} ${pkgname%nt} ${_name%NT} ${_name})
 replaces=()
 depends=(
+    gcc-libs
+    glibc
+    java-runtime
+    sh
     android-tools
     usbutils
 )
