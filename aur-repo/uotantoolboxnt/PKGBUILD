@@ -62,7 +62,9 @@ package() {
     if [ "$CARCH" == "aarch64" ]; then
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AArch64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-arm64/* ${pkgdir}/usr/lib/UotanToolbox
-
+    elif [ "$CARCH" == "loong64" ]; then
+        cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_LoongArch64/* ${pkgdir}/usr/lib/UotanToolbox
+        cp -r publish-x64/* ${pkgdir}/usr/lib/UotanToolbox
     else
         cp -r ${srcdir}/UotanToolboxNT.Binary/Linux_AMD64/* ${pkgdir}/usr/lib/UotanToolbox
         cp -r publish-x64/* ${pkgdir}/usr/lib/UotanToolbox
