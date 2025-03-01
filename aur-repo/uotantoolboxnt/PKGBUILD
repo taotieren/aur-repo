@@ -20,6 +20,7 @@ depends=(
 )
 makedepends=(
     git
+    dotnet-host
     dotnet-sdk
     nuget
 )
@@ -32,8 +33,8 @@ source=(
     "https://github.com/Uotan-Dev/SukiUI-Uotan/releases/download/v${_uiver}/SukiUI.${_uiver}.nupkg"
 )
 sha256sums=('edd784ad20384a82baf98d90e7beef1f08febbd99abbcaa15691254ef330aeb9'
-            'SKIP'
-            'cd6df48c674b256218855dd6d8789b6bc7322cfa5131614d34ef35730b3a24df')
+    'SKIP'
+    'cd6df48c674b256218855dd6d8789b6bc7322cfa5131614d34ef35730b3a24df')
 noextract=()
 
 build() {
