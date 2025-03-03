@@ -13,7 +13,7 @@ conflicts=()
 url="https://www.nucleisys.com/download.php"
 license=('LicenseRef-unknow')
 options=(!strip)
-source=("https://www.nucleisys.com/upload/files/nucleistudio/NucleiStudio_IDE_${pkgver}-lin64.tgz")
+source=("https://download.nucleisys.com/upload/files/nucleistudio/NucleiStudio_IDE_${pkgver}-lin64.tgz")
 sha256sums=('ad57d82569660a7f0a46671549bddfe58d043475eae2e7cc3814b2b477558f17')
 
 package() {
