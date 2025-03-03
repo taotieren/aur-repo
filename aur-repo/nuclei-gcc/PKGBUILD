@@ -14,7 +14,7 @@ optdepends=('nucleistudioide: Nuclei Studio IDE 是基于 MCU Eclipse IDE 开发
 conflicts=()
 url="https://www.nucleisys.com/download.php"
 license=('LicenseRef-unknow')
-options=(!strip)
+options=(!strip !debug)
 # https://download.nucleisys.com/upload/files/toolchain/gcc/nuclei_riscv_newlibc_prebuilt_linux64_2025.02.tar.bz2
 source=("https://download.nucleisys.com/upload/files/toochain/gcc/nuclei_riscv_newlibc_prebuilt_linux64_${pkgver}.tar.bz2")
 sha256sums=('8cea2d10310150d8591d00eb8430377cc28865e76decbaca2abefea7dad80d89')
