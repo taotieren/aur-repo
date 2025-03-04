@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=turbo-attack-git
-pkgver=0.1.0.1.gb99cdfe
-pkgrel=5
+pkgver=0.1.0.2.g7fc82bb
+pkgrel=1
 pkgdesc="A turbo traffic generator pentesting tool to generate random traffic with random mac and ip addresses in addition to random sequence numbers to a particular ip and port."
 arch=($CARCH)
 url="https://github.com/mytechnotalent/turbo-attack"
