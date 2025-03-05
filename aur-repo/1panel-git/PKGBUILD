@@ -91,4 +91,5 @@ package() {
     install -vDm755 ${srcdir}/${pkgname}/build/1panel ${pkgdir}/usr/bin/1panel
     install -vDm644 ${srcdir}/1panel.service -t ${pkgdir}/usr/lib/systemd/system
     install -vDm755 ${srcdir}/1pctl ${pkgdir}/usr/bin/1pctl
+    install -vDm644 ${srcdir}/${pkgname}/LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
