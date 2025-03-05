@@ -23,7 +23,9 @@ optdepends=(
     'docker'            # Docker image manager
     'docker-compose'    # Docker compose plugin, make sure 1Panel app store works.
 )
+provides=(${pkgname%-git})
 conflicts=(
+    ${pkgname%-git}
     '1panel-dev-bin'
     '1panel-bin'
 )
