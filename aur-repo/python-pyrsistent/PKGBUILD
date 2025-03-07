@@ -5,7 +5,7 @@
 pkgname=python-pyrsistent
 _name=${pkgname#python-}
 pkgver=0.20.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Persistent/Functional/Immutable data structures"
 arch=($CARCH)
 license=('MIT')
