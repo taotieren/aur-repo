@@ -1,0 +1,55 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgbase=wyc
+pkgname=wyc
+pkgver=2.65.4
+pkgrel=0
+pkgdesc="网云穿最便捷的端口映射"
+license=('LicenseRef-Commercial')
+url="https://xiaomy.net/"
+arch=(
+    'x86_64'
+    'aarch64'
+)
+options=(!strip !debug)
+depends=(
+    dbus
+    expat
+    gcc-libs
+    glib2
+    glibc
+    sh
+    zlib
+)
+makedepends=(libarchive)
+provides=(${pkgname} ${pkgname}-bin)
+conflicts=(${pkgname} ${pkgname}-bin)
+replaces=()
+install=${pkgname}.install
+source=(
+    "wyc.service"
+    "wyc.conf"
+    "${pkgname}.install"
+    "LICENSE::https://xiaomy.net/agreement"
+    "${pkgname}-${CARCH}-${pkgver}::https://down.xiaomy.net/linux/wyc_linux_64"
+    "${pkgname}-${CARCH}-${pkgver}::https://down.xiaomy.net/linux/wyc_linux_arm"
+)
+sha256sums=(
+)
+noextract=()
+
+package() {
+    if [ "$CARCH" == "aarch64" ]; then
+        msg2 "Install for arm64"
+        install -vDm755 ${srcdir}/${pkgname}-${CARCH}-${pkgver} ${pkgdir}/usr/bin/${pkgname}
+    elif [ "$CARCH" == "x86_64" ]; then
+        msg2 "Install for x64"
+        install -vDm755 ${srcdir}/${pkgname}-${CARCH}-${pkgver} ${pkgdir}/usr/bin/${pkgname}
+    else
+        msg2 "Unsupported architectures"
+    fi
+
+    install -vDm644 ${srcdir}/wyc.service -t ${pkgdir}/usr/lib/systemd/system/
+    install -vDm644 ${srcdir}/wyc.conf -t ${pkgdir}/etc/
+    install -vDm644 ${srcdir}/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+}
