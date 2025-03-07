@@ -29,7 +29,6 @@ pre_upgrade() {
     fi
 }
 
-
 post_upgrade() {
     if [ -n "${_restart_wyc_service+x}" ]; then
         echo -e "Restarting..."

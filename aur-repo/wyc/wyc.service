@@ -5,9 +5,10 @@ After=network.target
 [Service]
 Type=simple
 EnvironmentFile=/etc/wyc.conf
-ExecStart=/usr/bin/wyc -token=%I
 ExecStart=/usr/bin/wyc -token=${TOKEN}
 PrivateTmp=true
+Restart=on-failure
+RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
