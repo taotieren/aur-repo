@@ -2,8 +2,8 @@
 
 pkgbase=wyc
 pkgname=wyc
-pkgver=2.65.4
-pkgrel=0
+pkgver=8
+pkgrel=1
 pkgdesc="网云穿最便捷的端口映射"
 license=('LicenseRef-Commercial')
 url="https://xiaomy.net/"
@@ -34,8 +34,12 @@ source=(
     "${pkgname}-${CARCH}-${pkgver}::https://down.xiaomy.net/linux/wyc_linux_64"
     "${pkgname}-${CARCH}-${pkgver}::https://down.xiaomy.net/linux/wyc_linux_arm"
 )
-sha256sums=(
-)
+sha256sums=('31bd73965551628983cd82e12c88b750ce89510bde07f029fa2fb6c953e69b15'
+            '2f312b91f11d55a9513e6fb8a7f3686c6e83afcb0ae7ef56f1cf8882a145b5a6'
+            'f5dded035fd3aa32e858897ae00d02862b3e99c07292d01d8a62580e420ac983'
+            'ca9e6e9fb214e74ac908ce8b5a37880006c337d6a5fb5b9c550c1019b348791b'
+            'c299049774e59ee7a12645a461f571ace0f1b09dcca1b2707a49475ef0d18694'
+            'c299049774e59ee7a12645a461f571ace0f1b09dcca1b2707a49475ef0d18694')
 noextract=()
 
 package() {
