@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-openstep-plist-git
-pkgver=0.4.0.r18.g2fa77b2
+pkgver=0.5.0.r0.g2fa77b2
 pkgrel=1
 pkgdesc='OpenStep plist parser and writer written in Cython'
 url='https://github.com/fonttools/openstep-plist'
