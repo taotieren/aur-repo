@@ -2,7 +2,7 @@
 
 pkgname=sunxi-blobs-git
 pkgver=r146.fa44656
-pkgrel=18
+pkgrel=19
 pkgdesc="The goal of this project is to understand the various blobs provided by Allwinner for their sunxi series of ARM SoCs."
 arch=('any')
 url="https://github.com/smaeul/sunxi-blobs"
