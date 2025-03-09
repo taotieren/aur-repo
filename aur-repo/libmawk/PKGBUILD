@@ -2,7 +2,7 @@
 # Contributor: aksr <aksr at t-com dot me>
 pkgname=libmawk
 pkgver=1.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="a fork of mawk 1.3.3, restructured for embedding"
 url="http://www.repo.hu/projects/libmawk/"
 arch=('i686' 'x86_64')
