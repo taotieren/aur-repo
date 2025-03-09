@@ -3,7 +3,7 @@
 pkgname=python-libclang
 _pkgname=${pkgname:7}
 pkgver=18.1.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Clang Python Bindings"
 arch=($CARCH)
 url="https://pypi.org/project/${_pkgname}"
