@@ -7,7 +7,7 @@
 pkgname=python-pdoc
 _pypiname=${pkgname/python-/}
 pkgver=15.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc='A simple program and library to auto generate API documentation for Python modules.'
 arch=('any')
 url='https://pdoc.dev/'
