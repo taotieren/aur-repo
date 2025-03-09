@@ -3,7 +3,7 @@
 pkgname=python-plum-dispatch
 _pkgname=${pkgname#python-}
 pkgver=2.5.2
-pkgrel=4
+pkgrel=5
 pkgdesc='Multiple dispatch in Python'
 arch=('any')
 url='https://github.com/beartype/plum'
