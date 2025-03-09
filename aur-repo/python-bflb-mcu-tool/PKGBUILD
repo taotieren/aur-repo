@@ -3,7 +3,7 @@
 pkgname=python-bflb-mcu-tool
 _name=${pkgname#python-}
 pkgver=1.9.0
-pkgrel=7
+pkgrel=8
 epoch=
 pkgdesc="BOUFFALOLAB MCU TOOL"
 arch=('any')
