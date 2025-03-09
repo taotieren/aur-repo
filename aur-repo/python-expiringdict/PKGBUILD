@@ -7,7 +7,7 @@
 pkgname=python-expiringdict
 _name=${pkgname#python-}
 pkgver=1.2.2
-pkgrel=2
+pkgrel=3
 pkgdesc='Dictionary with auto-expiring values for caching purposes'
 arch=(any)
 url="https://pypi.org/project/${_name}"
