@@ -2,7 +2,7 @@
 
 pkgname=python-123-client
 pkgver=0.0.5
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for 123 webdisk."
 arch=('any')
