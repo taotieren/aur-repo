@@ -4,7 +4,7 @@
 
 pkgname=libbass
 pkgver=2.4.17
-pkgrel=3
+pkgrel=4
 pkgdesc='BASS audio library'
 arch=(i686 x86_64 armv6h armv7h aarch64)
 url='https://www.un4seen.com/'
