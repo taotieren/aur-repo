@@ -2,7 +2,7 @@
 pkgname=python-inventree
 _name=${pkgname#python-}
 pkgver=0.17.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Python interface for InvenTree inventory management system"
 url="https://github.com/inventree/inventree-python/"
 depends=(
