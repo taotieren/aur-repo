@@ -3,7 +3,7 @@
 
 pkgname=ink
 pkgver=0.5.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Command line tool for checking the ink level of printers"
 arch=('i686' 'x86_64')
 url="http://ink.sourceforge.net/"
