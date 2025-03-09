@@ -2,7 +2,7 @@
 
 pkgname=log4jscanner-bin
 pkgver=0.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="log4j vulnerability filesystem scanner for analyzing JAR files"
 arch=('x86_64' 'aarch64')
 url="https://github.com/google/log4jscanner"
