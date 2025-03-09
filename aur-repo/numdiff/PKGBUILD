@@ -1,7 +1,7 @@
 # Contributor: Anton Leontiev <bunder /at/ t-25.ru>
 pkgname=numdiff
 pkgver=5.9.0
-pkgrel=2
+pkgrel=3
 arch=('i686' 'x86_64')
 pkgdesc='Program to compare files ignoring small numeric differences'
 url='http://www.nongnu.org/numdiff/'
