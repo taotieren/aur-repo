@@ -3,7 +3,7 @@
 pkgname='liteloader-qqnt-llonebot-bin'
 _pkgname='LiteLoaderQQNT-LLOneBot-bin'
 pkgver='4.7.5'
-pkgrel=1
+pkgrel=2
 pkgdesc='一种插件，支持 OneBot 11 和 Satori 协议'
 arch=('any')
 url="https://github.com/LLOneBot/LLOneBot"
