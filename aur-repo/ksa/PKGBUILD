@@ -2,7 +2,7 @@
 
 pkgname=ksa
 pkgver=0.80
-pkgrel=6
+pkgrel=7
 #epoch=0
 pkgdesc="Kanxue Security Access. 看雪安全接入,无需公网IP,远程接入内网"
 arch=('i686' 'x86_64' 'armv7h' 'aarch64' )
