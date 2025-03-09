@@ -2,7 +2,7 @@
 pkgname=python-schematics
 _name=${pkgname#python-}
 pkgver=2.1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Python Data Structures for Humans"
 url="https://github.com/schematics/schematics"
 depends=('python')
