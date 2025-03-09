@@ -2,7 +2,7 @@
 
 pkgname=qserial-git
 pkgver=1.2.r0.g82c1af2
-pkgrel=18
+pkgrel=19
 pkgdesc="An advanced cross-platform serial port utility"
 arch=($CARCH)
 url="https://github.com/tuna/QSerial"
