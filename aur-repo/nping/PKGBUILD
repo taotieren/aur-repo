@@ -3,7 +3,7 @@
 pkgname=nping
 _name=Nping
 pkgver=0.3.0
-pkgrel=2
+pkgrel=3
 pkgdesc="🏎 Nping mean NB Ping, A Ping Tool in Rust with Real-Time Data and Visualizations"
 arch=($CARCH)
 url="https://github.com/hanshuaikang/Nping"
