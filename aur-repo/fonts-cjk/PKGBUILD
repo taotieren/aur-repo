@@ -3,7 +3,7 @@
 pkgbase=fonts-cjk
 pkgname=($pkgbase{,-jp-seto,-sc-{zcool,pangmenzhengdao,huxiaobo,yrdzst,opposans,baotuxiaobaiti,shoushuti,youshe,zhenyangb},-tc-qingsongshouxieti})
 pkgver=r17.6c32da2
-pkgrel=14
+pkgrel=15
 arch=(any)
 url='https://gitee.com/atzlinux/fonts-zh-cn-business-free-atzlinux'
 license=(LicenseRef-custom)
