@@ -3,7 +3,7 @@
 pkgname=python-treedir
 _name=${pkgname//-/_}
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Iterate a directory in a tree-like format."
 arch=('any')
