@@ -3,7 +3,7 @@
 pkgname=python-115
 _name=${pkgname//-/_}
 pkgver=0.0.9.8.8.4
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python wrapper for 115 webdisk."
 arch=('any')
