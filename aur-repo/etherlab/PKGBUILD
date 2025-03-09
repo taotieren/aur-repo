@@ -2,7 +2,7 @@
 
 pkgname=etherlab
 pkgver=2.4.0
-pkgrel=2
+pkgrel=3
 pkgdesc="An Open Source Toolkit for rapid real time code generation under Linux using Simulink/RTW and EtherCAT technology."
 arch=(any)
 url="https://gitlab.com/etherlab.org/etherlab"
