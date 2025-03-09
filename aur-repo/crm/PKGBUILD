@@ -2,7 +2,7 @@
 
 pkgname=crm
 pkgver=0.2.2
-pkgrel=2
+pkgrel=3
 pkgdesc="crm (Cargo registry manager)"
 arch=($CARCH)
 url="https://github.com/wtklbm/crm"
