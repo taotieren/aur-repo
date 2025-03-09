@@ -2,7 +2,7 @@
 
 pkgname="mpv-handler"
 pkgver=0.3.13
-pkgrel=3
+pkgrel=4
 pkgdesc="Play website videos and songs with mpv & yt-dlp."
 arch=("x86_64")
 depends=("mpv")
