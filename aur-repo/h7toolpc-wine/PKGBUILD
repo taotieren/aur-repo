@@ -2,7 +2,7 @@
 
 pkgname=h7toolpc-wine
 pkgver=2.2.7
-pkgrel=2
+pkgrel=3
 pkgdesc="Wine H7-TOOL 的 PC 上位机，支持串口、CAN、示波器、CMSIS-DAP、DS18B20、RTT Viewer、脱机烧录等"
 arch=('x86_64')
 url="http://www.armbbs.cn/forum.php?mod=viewthread&tid=95468"
