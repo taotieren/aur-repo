@@ -2,7 +2,7 @@
 
 pkgname=repo-misc-tools-git
 pkgver=r88.f1192e6
-pkgrel=2
+pkgrel=3
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
