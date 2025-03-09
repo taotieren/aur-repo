@@ -2,7 +2,7 @@
 
 pkgname=cargo-dfu
 pkgver=0.1.0
-pkgrel=14
+pkgrel=15
 pkgdesc="cargo extension for flashing embedded rust programs via dfu based on jacobrosenthals cargo-hf2"
 arch=($CARCH)
 url="https://github.com/dfu-rs/cargo-dfu"
