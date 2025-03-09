@@ -3,7 +3,7 @@
 _pkgname='repath'
 pkgname="python-${_pkgname}"
 pkgver=0.9.0 # From https://pypi.org/project/repath/, although it isn't tagged on github.
-pkgrel=4
+pkgrel=5
 pkgdesc='Parses express-style paths to PCRE regular expression patterns.'
 arch=(any)
 url="https://github.com/nickcoutsos/${pkgname}"
