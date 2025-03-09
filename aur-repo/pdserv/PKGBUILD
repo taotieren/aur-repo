@@ -2,7 +2,7 @@
 
 pkgname=pdserv
 pkgver=3.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The PdServ library provides process data communication mechanisms for Linux real-time applications in user space (i. e. using RT-PREEMPT). The main focus is placed on providing a process-data interface without interfering real-time operation."
 arch=($CARCH)
 url="https://gitlab.com/etherlab.org/pdserv"
