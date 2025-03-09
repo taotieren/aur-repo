@@ -3,7 +3,7 @@
 pkgbase=mcu-jlink-pack
 pkgname=({airmcu,mcu,hkmicrochip,holtek,nationstech,py32}-jlink-pack)
 pkgver=r8.94c90db
-pkgrel=9
+pkgrel=10
 epoch=
 arch=('any')
 url="https://github.com/taotieren/mcu-jlink-pack"
