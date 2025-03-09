@@ -2,7 +2,7 @@
 
 pkgname=sdeventplus-git
 pkgver=r156.a97cdd1
-pkgrel=1
+pkgrel=2
 pkgdesc="sdeventplus is a c++ wrapper around the systemd sd_event apis meant to provide c++ ergonomics to their usage."
 url="https://github.com/openbmc/sdeventplus"
 arch=($CARCH)
