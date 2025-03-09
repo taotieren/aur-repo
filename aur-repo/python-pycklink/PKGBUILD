@@ -3,7 +3,7 @@
 pkgname=python-pycklink
 _name=${pkgname#python-}
 pkgver=0.1.1
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="Python interface for the T-HEAD CKLink"
 arch=('any')
