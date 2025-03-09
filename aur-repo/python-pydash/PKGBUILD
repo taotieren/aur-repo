@@ -3,7 +3,7 @@
 
 pkgname=python-pydash
 pkgver=8.0.1
-pkgrel=9
+pkgrel=10
 pkgdesc='The kitchen sink of Python utility libraries for doing "stuff" in a functional way. Based on the Lo-Dash Javascript library.'
 arch=('any')
 url='https://github.com/dgilland/pydash'
