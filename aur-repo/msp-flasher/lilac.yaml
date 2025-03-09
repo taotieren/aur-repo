@@ -2,11 +2,12 @@ maintainers:
   - github: taotieren
 pre_build_script: |
   aur_pre_build(maintainers=['ivanovp'])
+
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=msp-flasher'])
 
   for line in edit_file('PKGBUILD'):
-    if line.startswith('PKGEXT'):
-      line = f'_PKGEXT'
+    if line.startswith('pkg.tar'):
+      line = f'pkg.tar.zst'
      print(line)
 
   run_cmd(['updpkgsums'])
