@@ -3,7 +3,7 @@
 pkgname=python-bitstruct
 _pkgname=bitstruct
 pkgver=8.19.0
-pkgrel=11
+pkgrel=12
 pkgdesc="This module performs conversions between Python values and C bit field structs represented as Python byte strings"
 arch=('any')
 url="https://github.com/eerimoq/bitstruct"
