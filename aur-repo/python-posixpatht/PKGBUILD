@@ -3,7 +3,7 @@
 pkgname=python-posixpatht
 _name=${pkgname#python-}
 pkgver=0.0.4
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="Another posixpath module, supports names that contain backslashes."
 arch=('any')
