@@ -4,7 +4,7 @@ pkgbase=nrf-command-line-tools-bin
 pkgname=(nrf-command-line-tools python-nrf-command-line-tools)
 _pkgname=${pkgbase%-bin}
 pkgver=10.24.2
-pkgrel=5
+pkgrel=6
 arch=('x86_64' 'aarch64')
 makedepends=(python-wheel
     python-setuptools-scm
