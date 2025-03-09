@@ -4,7 +4,7 @@
 pkgbase="zyplayer-appimage"
 pkgname="zyfun-appimage"
 pkgver=3.3.10
-pkgrel=1
+pkgrel=2
 pkgdesc="跨平台桌面端视频资源播放器,免费高颜值"
 arch=(aarch64
     x86_64)
