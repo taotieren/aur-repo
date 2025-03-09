@@ -3,7 +3,7 @@
 pkgbase=nuclei-openocd
 pkgname=(nuclei-openocd)
 pkgver=2025.02
-pkgrel=1
+pkgrel=2
 pkgdesc="nuclei-openocd 是 Nuclei Studio IDE 的调试工具。"
 arch=("x86_64")
 makedepends=('libftdi-compat' 'libusb-compat' 'hidapi' 'libudev.so')
