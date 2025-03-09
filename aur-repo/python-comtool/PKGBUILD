@@ -3,7 +3,7 @@
 pkgname=python-comtool
 _name=COMTool
 pkgver=3.4.1
-pkgrel=5
+pkgrel=6
 epoch=
 pkgdesc="A cross platform serial debug tools written by python"
 arch=('any')
