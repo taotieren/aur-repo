@@ -3,7 +3,7 @@
 _pkgname=spflashtool
 pkgname="${_pkgname}-bin"
 pkgver="6.2228"
-pkgrel=12
+pkgrel=13
 pkgdesc="SP Flash Tool is an application to flash your MediaTek (MTK) SmartPhone."
 arch=('x86_64')
 url="http://spflashtools.com/category/linux"
