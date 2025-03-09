@@ -3,7 +3,7 @@
 pkgname=python-urlopen
 _name=${pkgname//-/_}
 pkgver=0.0.8
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python urlopen wrapper."
 arch=('any')
