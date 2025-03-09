@@ -2,7 +2,7 @@
 
 pkgname=kicad-allegro
 pkgver=r9.4968f13
-pkgrel=6
+pkgrel=7
 pkgdesc="Converter from Allegro to KiCad, and Allegro extract viewer "
 arch=($CARCH)
 url="https://github.com/system76/kicad-allegro"
