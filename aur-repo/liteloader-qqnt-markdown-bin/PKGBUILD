@@ -4,7 +4,7 @@
 pkgname='liteloader-qqnt-markdown-bin'
 _pkgname='LiteLoaderQQNT-Markdown'
 pkgver='2.4.1'
-pkgrel=1
+pkgrel=2
 pkgdesc='LiteLoaderQQNT插件，为QQ添加Markdown支持'
 arch=('any')
 url="https://github.com/d0j1a1701/${_pkgname}"
