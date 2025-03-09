@@ -2,7 +2,7 @@
 pkgname=python-mouser
 _name=${pkgname#python-}
 pkgver=0.1.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Mouser Python API"
 url="https://github.com/sparkmicro/mouser-api/"
 depends=(
