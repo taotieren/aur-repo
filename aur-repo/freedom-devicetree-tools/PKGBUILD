@@ -2,7 +2,7 @@
 
 pkgname=freedom-devicetree-tools
 pkgver=201908
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="This project contains a handful of tools that are designed to aid embedded software developers to generate statically parameterized designs from Freedom platform device trees."
 arch=($CARCH)
