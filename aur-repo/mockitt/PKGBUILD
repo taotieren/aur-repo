@@ -2,7 +2,7 @@
 
 pkgname=mockitt
 pkgver=6.0.0
-pkgrel=4
+pkgrel=5
 pkgdesc="A prototyping & collaboration tool.墨刀/modao/mockitt"
 arch=('x86_64')
 url="https://mockitt.wondershare.com"
