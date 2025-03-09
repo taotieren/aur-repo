@@ -6,7 +6,7 @@
 #
 pkgname=opencbm
 pkgver=0.4.99.104
-pkgrel=8
+pkgrel=9
 epoch=
 pkgdesc="OpenCBM allows access to Commodore (C64) floppy drives 1540, 1541, 1570, 1571, 1581"
 arch=('i686' 'x86_64')
