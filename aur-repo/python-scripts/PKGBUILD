@@ -3,7 +3,7 @@
 _pkgname=scripts
 pkgname=python-scripts
 pkgver=3.0.0
-pkgrel=5
+pkgrel=6
 pkgdesc="A collection of various shell scripts"
 arch=('any')
 url='https://github.com/rsalmaso/scripts'
