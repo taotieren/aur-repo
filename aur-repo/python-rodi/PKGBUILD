@@ -3,7 +3,7 @@
 pkgname=python-rodi
 _name=${pkgname#python-}
 pkgver=2.0.6
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Implementation of dependency injection for Python 3"
 arch=('any')
