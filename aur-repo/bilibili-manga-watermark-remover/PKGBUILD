@@ -2,7 +2,7 @@
 
 pkgname=bilibili-manga-watermark-remover
 pkgver=0.9.0
-pkgrel=1
+pkgrel=2
 pkgdesc="bilibili漫画 哔哩哔哩漫画 B漫 去水印工具(无痕 无损)，带图形界面"
 arch=($CARCH)
 url="https://github.com/lanyeeee/bilibili-manga-watermark-remover"
