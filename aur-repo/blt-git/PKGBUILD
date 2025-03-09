@@ -7,7 +7,7 @@
 
 pkgname=blt-git
 pkgver=r1904.0857004
-pkgrel=2
+pkgrel=3
 pkgdesc="Adds new commands and widgets to the Tcl interpreter."
 url="http://blt.sourceforge.net"
 license=("custom")
