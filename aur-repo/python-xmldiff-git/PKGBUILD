@@ -2,7 +2,7 @@
 
 pkgname=python-xmldiff-git
 pkgver=2.6.3.r15.gca0e024
-pkgrel=8
+pkgrel=9
 pkgdesc='A library and command line utility for diffing xml'
 url='https://github.com/Shoobx/xmldiff'
 license=('MIT')
