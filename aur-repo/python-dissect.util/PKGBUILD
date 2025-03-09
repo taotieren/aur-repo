@@ -3,7 +3,7 @@
 pkgname=python-dissect.util
 _name=dissect_util
 pkgver=3.19
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A Dissect module implementing various utility functions for the other Dissect modules"
 arch=('any')
