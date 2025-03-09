@@ -2,7 +2,7 @@
 
 pkgname=picacomic-downloader
 pkgver=0.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="哔咔漫画 picacomic pica漫画 bika漫画 PicACG 多线程下载器，带图形界面，已打包exe，带收藏夹，下载速度飞快"
 arch=($CARCH)
 url="https://github.com/lanyeeee/picacomic-downloader"
