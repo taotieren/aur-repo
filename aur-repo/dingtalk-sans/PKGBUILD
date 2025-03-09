@@ -3,7 +3,7 @@
 pkgbase=dingtalk-sans
 pkgname=ttf-dingtalk-sans
 pkgver=1.0.0
-pkgrel=9
+pkgrel=10
 pkgdesc="钉钉进步体 dingtalk jinbuti"
 url="https://page.dingtalk.com/wow/dingtalk/default/dingtalk/y-W5aF3_ZJwzulU0nceIl"
 depends=()
