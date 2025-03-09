@@ -3,7 +3,7 @@
 
 pkgname=adms
 pkgver=2.3.7
-pkgrel=2
+pkgrel=3
 pkgdesc="codegenerator for the VERILOG-A(MS) language"
 arch=('x86_64' 'i686')
 url="https://github.com/qucs/adms"
