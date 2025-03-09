@@ -2,7 +2,7 @@
 pkgname=stlink-tool-git
 _pkgname=stlink-tool
 pkgver=r57.dff59ad
-pkgrel=2
+pkgrel=3
 pkgdesc="Tool for flashing chinese clone (STM32) ST-Link dongles"
 arch=('i686' 'x86_64')
 license=('GPL')
