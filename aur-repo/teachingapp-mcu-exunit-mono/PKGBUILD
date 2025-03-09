@@ -3,7 +3,7 @@
 pkgbase=teachingapp-mcu-exunit-mono
 pkgname=($pkgbase teachingapp-mcu-exunit-led-display-mono teachingapp-mcu-exunit-keyboard-mono)
 pkgver=20200403.051824
-pkgrel=1
+pkgrel=2
 arch=($CARCH)
 url='https://github.com/kmakise/TeachingApp_MCU_Exunit'
 license=('MIT')
