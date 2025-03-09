@@ -3,7 +3,7 @@
 pkgname=uconfig
 _pkgname=uConfig
 pkgver=0.4
-pkgrel=13
+pkgrel=14
 pkgdesc="Datasheet pinout extractor from PDF and library Stylizer for KiCad."
 arch=($CARCH)
 url="https://github.com/Robotips/uConfig"
