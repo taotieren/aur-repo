@@ -3,7 +3,7 @@
 pkgname=python-blacksheep
 _name=${pkgname#python-}
 pkgver=2.0.8
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Fast web framework for Python asyncio"
 arch=($CARCH)
