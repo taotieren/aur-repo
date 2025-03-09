@@ -3,7 +3,7 @@
 _pkgname=GX_ISPTool
 pkgname=gx-isptool-git
 pkgver=r20.dac5b44
-pkgrel=5
+pkgrel=6
 pkgdesc="GX (感芯科技) 芯片下载工具，用于连接USB给GX芯片下载固件/调试固件，持续开发中，欢迎支持~"
 arch=($CARCH)
 url="https://gitee.com/gxchip/${_pkgname}"
