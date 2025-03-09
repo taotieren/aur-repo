@@ -1,6 +1,6 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['Bad-Boy'])
+pre_build_script: aur_pre_build(maintainers=['okbzl'])
 post_build: aur_post_build
 update_on:
   - source: aur
