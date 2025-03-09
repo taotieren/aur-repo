@@ -6,7 +6,7 @@
 _base=pyodbc
 pkgname=python-${_base}
 pkgver=5.2.0
-pkgrel=5
+pkgrel=6
 pkgdesc="ODBC module for Python"
 arch=(x86_64)
 url="https://github.com/mkleehammer/${_base}"
