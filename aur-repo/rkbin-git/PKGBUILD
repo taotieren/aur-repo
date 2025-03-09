@@ -3,7 +3,7 @@
 pkgbase=rkbin-git
 pkgname=rkbin-git
 pkgver=r2022.f43a462
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Rockchip Firmware and Tool Binarys"
 arch=('x86_64')
