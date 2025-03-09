@@ -2,7 +2,7 @@
 
 pkgname=epsidm24-secc0019-bin
 pkgver=1.2.5
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="Driver for Epson SIDM Printers: LQ-790KII/690KII/680KIII/675KTII/106KFII/2680KII ppds"
 arch=('aarch64' 'x86_64' )
