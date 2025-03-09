@@ -3,7 +3,7 @@
 pkgname=python-property
 _name=${pkgname//-/_}
 pkgver=0.0.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python property discriptors"
 arch=('any')
