@@ -3,7 +3,7 @@
 pkgbase=libosal
 pkgname=libosal
 pkgver=0.0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="libosal is an operating system abstraction layer Library. It's purpose is to write os-independent code for easy portability between different systems and architectures."
 arch=($CARCH)
 url="https://github.com/robert-burger/libosal"
