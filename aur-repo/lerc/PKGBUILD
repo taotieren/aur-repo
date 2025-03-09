@@ -2,7 +2,7 @@
 
 pkgname=lerc
 pkgver=4.0.0
-pkgrel=14
+pkgrel=15
 pkgdesc='Limited Error Raster Compression library'
 arch=('x86_64')
 url='https://github.com/Esri/lerc'
