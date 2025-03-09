@@ -2,7 +2,7 @@
 
 pkgname=wps-office-fonts
 pkgver=1.0
-pkgrel=7
+pkgrel=8
 pkgdesc="The wps-office-fonts package contains Founder Chinese fonts"
 arch=(any)
 url="http://wps-community.org/"
