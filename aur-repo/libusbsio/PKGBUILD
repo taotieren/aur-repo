@@ -8,7 +8,7 @@ pkgname=(
   python-libusbsio
 )
 pkgver=2.1.13
-pkgrel=2
+pkgrel=3
 pkgdesc="Library for USB-HID communication over SPI, I2C or GPIO"
 arch=($CARCH)
 url="https://www.nxp.com/design/software/development-software/library-for-windows-macos-and-ubuntu-linux:LIBUSBSIO"
