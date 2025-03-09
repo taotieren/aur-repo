@@ -2,7 +2,7 @@
 
 pkgname=python-setuptools-git-ls-files-git
 pkgver=0.1.1.r1.g2327ed6
-pkgrel=20
+pkgrel=21
 pkgdesc='setuptools plugin to list all files tracked by git, recursing into submodules'
 url='https://github.com/anthrotype/setuptools_git_ls_files'
 license=('MIT')
