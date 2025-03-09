@@ -2,7 +2,7 @@
 pkgname=python-caio
 _name=${pkgname#python-}
 pkgver=0.9.21
-pkgrel=1
+pkgrel=2
 pkgdesc="Linux AIO c python bindings"
 arch=('x86_64')
 url="https://github.com/mosquito/caio"
