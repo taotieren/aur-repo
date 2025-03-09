@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-cmsis-svd-git
-pkgver=0.5.r19.ge1f3120
+pkgver=0.6.r0.ge1f3120
 pkgrel=1
 pkgdesc='Aggegration of ARM Cortex-M (and other) CMSIS SVDs and related tools'
 url='https://github.com/cmsis-svd/cmsis-svd'
