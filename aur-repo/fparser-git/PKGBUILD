@@ -3,7 +3,7 @@
 _pkgname="fparser"
 pkgname="$_pkgname-git"
 pkgver=r12.a952179
-pkgrel=3
+pkgrel=4
 pkgdesc="Function Parser for C++, Fork from http://warp.povusers.org/FunctionParser/"
 url="https://github.com/thliebig/fparser"
 arch=('i686' 'x86_64')
