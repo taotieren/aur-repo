@@ -3,7 +3,7 @@
 pkgname=python-concurrenttools
 _name=${pkgname//-/_}
 pkgver=0.0.8.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python concurrent tools."
 arch=('any')
