@@ -2,7 +2,7 @@
 
 pkgname=mqtt-monitor-git
 pkgver=r12.1325555
-pkgrel=1
+pkgrel=2
 pkgdesc="MQTT Monitor UI using react and mqtt.js"
 arch=('any')
 url="https://github.com/mcxiaoke/mqtt-monitor"
