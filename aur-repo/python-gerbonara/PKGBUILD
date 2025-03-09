@@ -3,7 +3,7 @@
 pkgname=python-gerbonara
 _name=${pkgname#python-}
 pkgver=0.10.7
-pkgrel=7
+pkgrel=8
 pkgdesc="Pythonic library for reading/modifying/writing Gerber/Excellon/IPC-356 files"
 arch=('any')
 url="https://gerbolyze.gitlab.io/gerbonara"
