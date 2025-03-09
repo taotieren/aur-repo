@@ -1,7 +1,7 @@
 # Maintainer: mickele
 pkgname=tclreadline
 pkgver=2.3.8
-pkgrel=6
+pkgrel=7
 pkgdesc="GNU readline for interactive tcl shells"
 url="https://github.com/flightaware/tclreadline"
 arch=('x86_64' 'i686')
