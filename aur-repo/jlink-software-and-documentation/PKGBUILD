@@ -3,7 +3,7 @@
 
 pkgname=jlink-software-and-documentation
 pkgver=8.18
-pkgrel=1
+pkgrel=2
 epoch=63
 pkgdesc="Segger JLink software & documentation pack for Linux"
 arch=('i686' 'x86_64' 'armv7h' 'aarch64' )
