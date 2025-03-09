@@ -5,7 +5,7 @@
 pkgname=libjaylink-git
 _pkg="${pkgname%-git}"
 pkgver=0.4.0.r0.gfa52ee2
-pkgrel=4
+pkgrel=5
 pkgdesc='Library for accessing SEGGER J-Link and compatible devices'
 arch=($CARCH)
 url='https://gitlab.zapb.de/libjaylink/libjaylink'
