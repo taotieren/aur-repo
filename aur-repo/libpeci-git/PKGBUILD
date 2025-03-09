@@ -2,7 +2,7 @@
 
 pkgname=libpeci-git
 pkgver=r57.e92985a
-pkgrel=1
+pkgrel=2
 pkgdesc="libpeci is a library that provides various APIs to interface with the IOCTLs provided by the PECI driver in the OpenBMC kernel. "
 url="https://github.com/openbmc/libpeci"
 arch=($CARCH)
