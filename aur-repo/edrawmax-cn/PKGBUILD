@@ -3,7 +3,7 @@
 
 pkgname=edrawmax-cn
 pkgver=14.0.2
-pkgrel=2
+pkgrel=3
 arch=('x86_64')
 options=(!strip !debug)
 conflicts=("edrawmax")
@@ -20,7 +20,7 @@ depends=(
     zlib)
 makedepends=(
     libarchive)
-license=('LicenseRef-Commercial')
+license=('Commercial')
 url="https://www.edrawsoft.cn/edrawmax/"
 # source_x86_64=("https://cc-download.edrawsoft.cn/EdrawMax_${pkgver}_cn.deb")
 source_x86_64=("${pkgname}-${pkgver}.deb::https://cc-download.wondershare.cc/prd/edrawmax_full5374.deb")
