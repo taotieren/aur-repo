@@ -2,7 +2,7 @@
 
 pkgname=udsim-git
 pkgver=r33.b379464
-pkgrel=4
+pkgrel=5
 pkgdesc="UDS Simulator and Fuzzer"
 url="https://github.com/zombieCraig/UDSim"
 arch=($CARCH)
