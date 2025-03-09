@@ -4,7 +4,7 @@
 
 pkgname=python-lzo
 pkgver=1.15
-pkgrel=1
+pkgrel=2
 pkgdesc="Python bindings for the LZO data compression library"
 arch=('x86_64')
 url="https://pypi.python.org/pypi/python-lzo"
