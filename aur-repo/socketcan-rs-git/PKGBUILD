@@ -2,7 +2,7 @@
 
 pkgname=socketcan-rs-git
 pkgver=3.5.0.r0.g3d6843c
-pkgrel=2
+pkgrel=3
 pkgdesc="Linux SocketCAN access in Rust"
 arch=($CARCH)
 url="https://github.com/socketcan-rs/socketcan-rs"
