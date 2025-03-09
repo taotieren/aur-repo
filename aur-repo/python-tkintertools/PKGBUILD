@@ -3,7 +3,7 @@
 pkgname=python-tkintertools
 _name=${pkgname#python-}
 pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="The tkintertools module is an auxiliary module of the tkinter module."
 arch=('any')
