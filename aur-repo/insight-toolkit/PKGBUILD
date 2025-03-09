@@ -7,7 +7,7 @@
 
 pkgname=insight-toolkit
 pkgver=5.4.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Cross-platform system that provides developers with an extensive suite of software tools for image analysis"
 arch=(x86_64)
 url="https://itk.org/"
