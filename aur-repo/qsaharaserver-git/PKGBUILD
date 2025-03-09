@@ -2,7 +2,7 @@
 
 pkgname=qsaharaserver-git
 pkgver=2015.r0.g4a5b814
-pkgrel=9
+pkgrel=10
 pkgdesc="QSaharaServer Source Code "
 arch=($CARCH)
 url="https://github.com/Muhmmad-Almuhmmah/QSaharaServer"
