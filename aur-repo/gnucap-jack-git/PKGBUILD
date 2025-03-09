@@ -3,7 +3,7 @@
 _pkgname=gnucap-jack
 pkgname=$_pkgname-git
 pkgver=r17.50c41f5
-pkgrel=1
+pkgrel=2
 pkgdesc="jack audio devices and simulation for Gnucap"
 arch=('i686' 'x86_64')
 url="http://gnucap.org/"
