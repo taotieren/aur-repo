@@ -20,7 +20,7 @@ _phpbase="83"
 _suffix=""
 pkgver="8.3.14"
 pkgbase_rc=""
-pkgrel=4
+pkgrel=5
 pkgbase="php83"
 pkgdesc="PHP 8.3.14 compiled as to not conflict with mainline php"
 _cppflags=" -DU_USING_ICU_NAMESPACE=1 "
