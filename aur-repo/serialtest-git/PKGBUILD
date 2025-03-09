@@ -4,7 +4,7 @@
 _pkgname=SerialTest
 pkgname=serialtest-git
 pkgver=0.3.5.r1.gc632519
-pkgrel=6
+pkgrel=7
 pkgdesc="A cross-platform test tool for serial port, Bluetooth, TCP and UDP."
 arch=($CARCH)
 url="https://github.com/wh201906/SerialTest"
