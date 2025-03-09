@@ -2,7 +2,7 @@
 
 pkgname=xrock-git
 pkgver=1.1.2.r6.gee72e88
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="The low level tools for rockchip SOC with maskrom and loader mode support."
 arch=($CARCH)
