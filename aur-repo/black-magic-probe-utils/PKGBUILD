@@ -6,7 +6,7 @@
 #
 pkgname=black-magic-probe-utils
 pkgver=1.5.7087
-pkgrel=2
+pkgrel=3
 epoch=
 _pkgname="Black-Magic-Probe-Book"
 _pkgver=${pkgver}
