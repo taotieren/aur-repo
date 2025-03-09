@@ -2,7 +2,7 @@
 
 pkgname=opengnb-git
 pkgver=1.4.5.b.16.g5016db2
-pkgrel=1
+pkgrel=2
 pkgdesc="GNB is open source de-centralized VPN to achieve layer3 network via p2p with the ultimate capability of NAT Traversal."
 arch=($CARCH)
 url="https://github.com/gnbdev/opengnb"
