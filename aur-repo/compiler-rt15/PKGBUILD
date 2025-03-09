@@ -1,6 +1,6 @@
 pkgname=compiler-rt15
 pkgver=15.0.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Compiler runtime libraries for clang 15"
 arch=('x86_64')
 url="https://compiler-rt.llvm.org/"
