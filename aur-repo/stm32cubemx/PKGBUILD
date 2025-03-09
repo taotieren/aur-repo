@@ -1,7 +1,7 @@
 # Maintainer: laserK <echo 'Y29udGFjdEBrYXJzdGVucHVmYWhsLmRlCg==' | base64 -d>
 pkgname=stm32cubemx
 pkgver=6.13.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="graphical software configuration tool for STM32 microcontrollers that allows generating C initialization code"
 arch=(any)
