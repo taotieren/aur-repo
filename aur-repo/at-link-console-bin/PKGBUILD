@@ -2,7 +2,7 @@
 
 pkgname=at-link-console-bin
 pkgver=3.0.12
-pkgrel=1
+pkgrel=2
 pkgdesc="Artery AT LINK Console 是一款基于 MCU Bootloader 的命令行应用程序。支持AT32 MCU「在电路编程」Console工具"
 arch=('x86_64')
 url="https://www.arterytek.com/cn/product/AT32F403.jsp"
