@@ -4,7 +4,7 @@ pkgname=modelsim-intel-starter
 # Keep dot in _patchver
 _mainver=20.1; _patchver=.1; _buildver=720
 pkgver=${_mainver}${_patchver}.${_buildver}
-pkgrel=1
+pkgrel=2
 pkgdesc="ModelSim-Intel FPGA Starter Edition - last version"
 arch=('x86_64')
 url="http://fpgasoftware.intel.com"
