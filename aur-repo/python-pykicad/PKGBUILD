@@ -2,7 +2,7 @@
 _name=pykicad
 pkgname=python-${_name}
 pkgver=0.1.1
-pkgrel=6
+pkgrel=7
 pkgdesc="Python library for working with KiCAD file formats"
 arch=(any)
 url="https://github.com/dvc94ch/pykicad"
