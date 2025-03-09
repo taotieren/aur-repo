@@ -2,7 +2,7 @@
 
 pkgname=proxmark3gui-git
 pkgver=0.2.8.r0.ge2fb189
-pkgrel=20
+pkgrel=21
 pkgdesc="A cross-platform GUI for Proxmark3 client | 为 PM3 设计的图形界面"
 arch=($CARCH)
 url="https://github.com/wh201906/Proxmark3GUI"
