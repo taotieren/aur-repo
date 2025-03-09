@@ -1,6 +1,6 @@
 # Maintainer: Sebastian Bøe <sebastianbooe@gmail.com>
 pkgname=arachne-pnr-git
-pkgrel=9
+pkgrel=10
 pkgver=r328.c40fb22
 pkgdesc=" Place and route tool for FPGAs"
 arch=('x86_64' 'i686')
