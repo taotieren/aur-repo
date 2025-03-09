@@ -2,7 +2,7 @@
 
 pkgname=usbfluxd-git
 pkgver=1.0.r27.g608cb24
-pkgrel=26
+pkgrel=27
 epoch=
 pkgdesc="Redirects the standard usbmuxd socket to allow connections to local and remote usbmuxd instances so remote devices appear connected locally."
 arch=($CARCH)
