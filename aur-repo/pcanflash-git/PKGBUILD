@@ -3,7 +3,7 @@
 pkgbase=pcanflash-git
 pkgname=pcanflash-git
 pkgver=r94.ff6be26
-pkgrel=13
+pkgrel=14
 pkgdesc="Linux Tool to flash PCAN Routers"
 arch=($CARCH)
 url="https://github.com/peak-system/pcanflash"
