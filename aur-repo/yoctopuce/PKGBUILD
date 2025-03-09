@@ -3,7 +3,7 @@
 
 pkgname=yoctopuce
 pkgver=2.0.64286
-pkgrel=2
+pkgrel=3
 pkgdesc="C++ library for interfacing with Yoctopuce devices"
 arch=($CARCH)
 url="https://github.com/yoctopuce/yoctolib_cpp"
