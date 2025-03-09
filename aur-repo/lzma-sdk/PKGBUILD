@@ -2,7 +2,7 @@
 
 pkgname=lzma-sdk
 pkgver=2409
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="The LZMA SDK provides the documentation, samples, header files, libraries, and tools you need to develop applications that use LZMA compression."
 arch=('any')
