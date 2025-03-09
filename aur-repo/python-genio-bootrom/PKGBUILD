@@ -3,7 +3,7 @@
 pkgname=python-genio-bootrom
 _name=${pkgname#python-}
 pkgver=1.1.12
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="Tool to bootstrap the flashing on MediaTek Genio SoCs"
 arch=('any')
