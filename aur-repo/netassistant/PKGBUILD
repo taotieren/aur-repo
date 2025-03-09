@@ -3,7 +3,7 @@
 pkgname=netassistant
 _pkgname=NetAssistant
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A network debugging assistant based on Qt GUI."
 arch=($CARCH)
