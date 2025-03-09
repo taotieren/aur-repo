@@ -4,7 +4,7 @@
 pkgbase=bin2c
 pkgname=('bin2c')
 pkgver=0.15.0
-pkgrel=1
+pkgrel=2
 pkgdesc="bin2c Conversion Tool."
 arch=($CARCH)
 url="https://github.com/AraHaan/bin2c"
