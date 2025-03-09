@@ -2,7 +2,7 @@
 
 pkgname=python-asteval-git
 _name=asteval
-pkgver=1.0.5.r0.g8d7326d
+pkgver=1.0.6.r2.gf8233d1
 pkgrel=1
 pkgdesc="Minimalistic evaluator of python expression using ast module"
 url="https://github.com/lmfit/asteval"
