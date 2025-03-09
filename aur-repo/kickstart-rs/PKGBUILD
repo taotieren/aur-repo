@@ -3,7 +3,7 @@
 pkgname=kickstart-rs
 _name=${pkgname%-rs}
 pkgver=0.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A scaffolding tool to get new projects up and running quickly"
 arch=($CARCH)
 url="https://github.com/Keats/kickstart"
