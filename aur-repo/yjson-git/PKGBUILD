@@ -2,7 +2,7 @@
 
 pkgname=yjson-git
 pkgver=r76.d87e783
-pkgrel=1
+pkgrel=2
 pkgdesc="YJson"
 arch=($CARCH)
 url="https://github.com/yjmthu/YJson"
