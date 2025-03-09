@@ -3,7 +3,7 @@
 
 _pkgname="mtkclient"
 pkgname="$_pkgname-git"
-pkgver=2.0.1.r96.ge80f288
+pkgver=2.0.1.r107.gcf885a3
 pkgrel=1
 pkgdesc="Unofficial MTK reverse engineering and flash tool"
 url="https://github.com/bkerler/mtkclient"
