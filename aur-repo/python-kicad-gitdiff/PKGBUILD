@@ -3,7 +3,7 @@
 pkgname=python-kicad-gitdiff
 _name=${pkgname#python-}
 pkgver=0.0.5
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="Simple visual diff for kicad 8 or higher. one can easily extend this tool to build a diff-er for anything that outputs svg."
 arch=('any')
