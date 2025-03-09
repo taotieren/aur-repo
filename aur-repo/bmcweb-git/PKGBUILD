@@ -23,6 +23,7 @@ depends=(
 makedepends=(
     cmake
     cli11
+    boost
     git
     gtest
     libnghttp2
