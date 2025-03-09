@@ -4,7 +4,7 @@
 pkgname=gtkglext
 pkgver=1.2.0
 _pkgvershort='1.2'
-pkgrel=21
+pkgrel=22
 pkgdesc='An OpenGL extension to GTK2.'
 arch=('x86_64')
 url='https://sourceforge.net/projects/gtkglext/'
