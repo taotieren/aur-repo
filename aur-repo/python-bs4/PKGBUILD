@@ -5,7 +5,7 @@
 pkgname='python-bs4'
 _pkgname='bs4'
 pkgver='0.0.2'
-pkgrel=9
+pkgrel=10
 pkgdesc='Dummy package for BS4 name, because CME requires it.'
 arch=('any')
 url='https://pypi.python.org/pypi/bs4/'
