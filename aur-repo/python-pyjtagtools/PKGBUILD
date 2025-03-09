@@ -3,7 +3,7 @@
 pkgname=python-pyjtagtools
 _name=${pkgname#python-}
 pkgver=0.10.1
-pkgrel=1
+pkgrel=2
 pkgdesc="JTAG tools for PyFtdi and QEMU"
 arch=(any)
 url="https://github.com/eblot/pyjtagtools"
