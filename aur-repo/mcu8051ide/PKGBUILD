@@ -3,7 +3,7 @@
 
 pkgname=mcu8051ide
 pkgver=1.4.10
-pkgrel=10
+pkgrel=11
 pkgdesc="Graphical IDE for MCS-51 based microcontrollers"
 arch=('any')
 url="https://sourceforge.net/projects/mcu8051ide/"
