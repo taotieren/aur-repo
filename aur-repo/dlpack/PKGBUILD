@@ -3,7 +3,7 @@
 pkgbase=dlpack
 pkgname=dlpack
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="common in-memory tensor structure"
 arch=($CARCH)
 url="https://github.com/dmlc/dlpack"
