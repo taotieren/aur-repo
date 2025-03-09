@@ -3,7 +3,7 @@
 pkgname=python-magnet2torrent
 _name=${pkgname#python-}
 pkgver=1.2.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Turn a bittorrent magnet links into a .torrent file."
 arch=('any')
