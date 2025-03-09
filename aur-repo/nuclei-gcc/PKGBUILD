@@ -3,7 +3,7 @@
 pkgbase=nuclei-gcc
 pkgname=(nuclei-gcc)
 pkgver=2025.02
-pkgrel=1
+pkgrel=2
 pkgdesc="nuclei-gcc 是 Nuclei Studio IDE 的编译工具。"
 arch=("x86_64")
 makedepends=()
