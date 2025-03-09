@@ -3,7 +3,7 @@
 pkgname=python-qq-botpy
 _name=${pkgname#python-}
 pkgver=1.2.1
-pkgrel=7
+pkgrel=8
 epoch=
 pkgdesc="qq-botpy 是基于机器人开放平台API 实现的机器人框架，目的提供一个易使用、开发效率高的开发框架。"
 arch=('any')
