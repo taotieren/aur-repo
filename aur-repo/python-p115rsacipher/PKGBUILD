@@ -3,7 +3,7 @@
 pkgname=python-p115rsacipher
 _name=${pkgname#python-}
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="115 webdisk RSA encryption and decryption."
 arch=('any')
