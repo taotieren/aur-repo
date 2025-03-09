@@ -6,7 +6,7 @@
 pkgname=pin
 pkgver=3.31
 _pkgver=3.31-98869-gfa6f126a8
-pkgrel=2
+pkgrel=3
 pkgdesc="A tool for the dynamic instrumentation of programs"
 arch=('x86_64')
 url="https://software.intel.com/content/www/us/en/develop/articles/pin-a-dynamic-binary-instrumentation-tool.html"
