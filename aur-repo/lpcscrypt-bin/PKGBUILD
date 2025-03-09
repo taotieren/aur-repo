@@ -3,7 +3,7 @@
 
 pkgname="lpcscrypt-bin"
 pkgver=2.1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="LPCScrypt is the recommended tool for programming the latest versions of CMSIS-DAP and J-Link firmware onto boards with Link2/LPC-Link2 debug probes."
 arch=("x86_64")
 makedepends=('imagemagick')
