@@ -2,7 +2,7 @@
 pkgname=openspin
 _pkgname=OpenSpin
 pkgver=1.00.78
-pkgrel=6
+pkgrel=7
 pkgdesc="Open Source Spin interpreter for the Parallax Propeller"
 arch=('x86_64' 'i686')
 url="https://github.com/parallaxinc/OpenSpin"
