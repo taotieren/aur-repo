@@ -2,8 +2,8 @@
 _pkgname=lcd-image-converter
 pkgname=lcd-image-converter-git
 provides=('lcd-image-converter')
-pkgver=r1776.4d43872
-pkgrel=5
+pkgver=r1814.5bdae35
+pkgrel=1
 pkgdesc="Tool to create bitmaps and fonts for embedded applications. Tracking develop branch."
 arch=('i686' 'x86_64')
 url="http://www.riuson.com/lcd-image-converter"
