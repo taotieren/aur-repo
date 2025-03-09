@@ -1,7 +1,7 @@
 # Maintainer: Richard Petri <git@rpls.de>
 pkgname=prjapicula
 pkgver=0.15
-pkgrel=2
+pkgrel=3
 pkgdesc="Project Apicula bitstream documentation for Gowin FPGAs"
 arch=('i686' 'x86_64')
 url="https://github.com/YosysHQ/apicula"
