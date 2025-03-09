@@ -2,7 +2,7 @@
 
 pkgname=tinybpt-git
 pkgver=r28.b490fcc
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Tinybpt (Tiny Buildroot Packaging Tool) 是一个 buildroot 的包管理工具，主要处理 buildroot 的包依赖关系，提供包的安装、卸载等功能。"
 arch=($CARCH)
