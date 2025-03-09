@@ -3,7 +3,7 @@
 pkgname=electron-builder
 pkgver=25.1.8
 # 可以通过 npm search electron-builder来确定版本
-pkgrel=2
+pkgrel=3
 pkgdesc="A complete solution to package and build a ready for distribution Electron app with “auto update” support out of the box"
 arch=(any)
 url="https://www.electron.build/"
