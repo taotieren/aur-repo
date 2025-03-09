@@ -2,7 +2,7 @@
 
 pkgname=mcuviewer-git
 pkgver=1.1.0.r0.g3650ed7
-pkgrel=2
+pkgrel=3
 pkgdesc="Real-time embedded variable & trace viewer"
 arch=($CARCH)
 url="https://github.com/klonyyy/MCUViewer"
