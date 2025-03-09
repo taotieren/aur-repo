@@ -2,7 +2,7 @@
 
 pkgname=turbo-scanner-git
 pkgver=0.1.0.2.g8271001
-pkgrel=1
+pkgrel=2
 pkgdesc="A port scanner and service detection tool that uses 1000 goroutines at once to scan any hosts's ip or fqdn with the sole purpose of testing your own network to ensure there are no malicious services running."
 arch=($CARCH)
 url="https://github.com/mytechnotalent/turbo-scanner"
