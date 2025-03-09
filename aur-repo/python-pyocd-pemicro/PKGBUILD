@@ -2,7 +2,7 @@
 _pkgname=pyocd-pemicro
 pkgname=python-$_pkgname
 pkgver=1.1.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Python On Chip Debugger and programmer for ARM Cortex-M microcontrollers using CMSIS-DAP"
 url="https://github.com/pyocd/pyocd-pemicro"
 depends=('python'
