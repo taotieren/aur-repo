@@ -2,7 +2,7 @@
 
 pkgname=adbr-server-git
 pkgver=r2.a601e45
-pkgrel=2
+pkgrel=3
 pkgdesc="ADB Server in pure Rust."
 arch=($CARCH)
 url="https://github.com/xDvir/ADBRServer"
