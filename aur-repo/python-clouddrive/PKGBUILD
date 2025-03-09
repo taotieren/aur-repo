@@ -3,7 +3,7 @@
 pkgname=python-clouddrive
 _name=${pkgname#python-}
 pkgver=0.0.12.7.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for CloudDrive."
 arch=('any')
