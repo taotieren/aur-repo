@@ -1,0 +1,4 @@
+[fvm]
+source = "git"
+git = "https://github.com/leoafarias/fvm.git"
+prefix = "v"
