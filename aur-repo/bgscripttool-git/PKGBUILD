@@ -2,7 +2,7 @@
 
 pkgname=bgscripttool-git
 pkgver=r9.c53fe9d
-pkgrel=2
+pkgrel=3
 pkgdesc="Intel BIOS Guard Script Tool"
 arch=(any)
 url="https://github.com/platomav/BGScriptTool"
