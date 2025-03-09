@@ -3,7 +3,7 @@
 _pkgname=stua
 pkgname=python-stua
 pkgver=0.3.0
-pkgrel=6
+pkgrel=7
 pkgdesc="A collection of generic python functions and classes, with no specific focus."
 arch=('any')
 url='https://github.com/rsalmaso/python-stua'
