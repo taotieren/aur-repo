@@ -2,7 +2,7 @@
 
 pkgname=bouffalo-isp-git
 pkgver=r2.7caf644
-pkgrel=2
+pkgrel=3
 pkgdesc="bouffalo_isp is an ISP tool that supports flashing firmware into BouffaloLab chips for MPUs running on the Linux platform."
 arch=($CARCH)
 url="https://github.com/bouffalolab/bouffalo_isp"
