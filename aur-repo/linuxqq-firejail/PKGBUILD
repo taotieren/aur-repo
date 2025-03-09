@@ -3,7 +3,7 @@
 # Contributor: glitsj16
 pkgname=linuxqq-firejail
 pkgver=1.0.3
-pkgrel=13
+pkgrel=14
 epoch=1
 pkgdesc='New Linux QQ based on Electron, running in Firejail sandbox.'
 arch=('x86_64' 'aarch64')
