@@ -3,7 +3,7 @@
 _name=fake-useragent
 pkgname=python-fake-useragent
 pkgver=2.0.1
-pkgrel=3
+pkgrel=4
 pkgdesc='Up to date simple useragent faker with real world database'
 arch=('any')
 url=https://github.com/hellysmile/fake-useragent
