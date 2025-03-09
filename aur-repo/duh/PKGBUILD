@@ -2,7 +2,7 @@
 
 pkgname=duh
 pkgver=1.21.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="DUH is a suite of tools for packaging reusable hardware components and designs."
 arch=($CARCH)
