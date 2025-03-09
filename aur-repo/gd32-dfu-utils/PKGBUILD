@@ -2,7 +2,7 @@
 
 pkgname=gd32-dfu-utils
 pkgver=0.9
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Dfu-utils GD32 fork. Dfu-util - Device Firmware Upgrade Utilities"
 arch=($CARCH)
