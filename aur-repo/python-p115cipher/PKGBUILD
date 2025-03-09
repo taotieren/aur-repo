@@ -3,7 +3,7 @@
 pkgname=python-p115cipher
 _name=${pkgname#python-}
 pkgver=0.0.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="115 cipher module."
 arch=('any')
