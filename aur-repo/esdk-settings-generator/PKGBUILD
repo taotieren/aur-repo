@@ -2,7 +2,7 @@
 
 pkgname=esdk-settings-generator
 pkgver=20.08.00.00
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="This is a python tool based on pydevicetree (GitHub/PyPI) which generates the settings.mk files for freedom-e-sdk."
 arch=('any')
