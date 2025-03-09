@@ -2,7 +2,7 @@
 
 pkgname=qbootctl
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Qualcomm bootctl HAL for Linux."
 arch=($CARCH)
