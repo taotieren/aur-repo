@@ -2,7 +2,7 @@
 pkgname=kicost
 _pkgname=KiCost
 pkgver=1.1.18
-pkgrel=18
+pkgrel=19
 pkgdesc="KiCAD script to convert BOM xml into spreadsheet"
 url="https://github.com/xesscorp/KiCost/"
 makedepends=('python-build'
