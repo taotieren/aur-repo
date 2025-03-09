@@ -1,7 +1,7 @@
 # Maintainer: CuVoodoo <pcb-rnd@cuvoodoo.info>
 pkgname=sch-rnd
 pkgver=1.0.7
-pkgrel=1
+pkgrel=2
 pkgdesc="simple, modular, scriptable schematics editor"
 url="http://www.repo.hu/projects/sch-rnd/"
 arch=('x86_64')
