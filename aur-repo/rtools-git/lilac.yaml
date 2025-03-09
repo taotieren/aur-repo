@@ -4,8 +4,8 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - qt5-mqtt-git
+# repo_depends:
+#   -
 update_on:
   - source: git
     git: https://gitee.com/RiceChen0/rtools.git
