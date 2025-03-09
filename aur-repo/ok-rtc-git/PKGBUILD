@@ -3,7 +3,7 @@
 pkgbase=ok-rtc-git
 pkgname=ok-rtc-git
 pkgver=r486.5ca3469
-pkgrel=1
+pkgrel=2
 arch=($CARCH)
 pkgdesc="OkStar - WebRTC 对 OkStar
 的拓展，上游主页：https://github.com/desktop-app/tg_owt"
