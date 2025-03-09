@@ -2,7 +2,7 @@
 
 pkgname=metaphyuni-wallpapers
 pkgver=0.0.2
-pkgrel=7
+pkgrel=8
 pkgdesc="metaphyuni-wallpapers (玄派壁纸)"
 arch=(any)
 url="https://metaphyuni.com/pc/wallpaper"
