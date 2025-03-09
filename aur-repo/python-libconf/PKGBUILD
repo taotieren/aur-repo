@@ -3,7 +3,7 @@
 pkgname=python-libconf
 _name=${pkgname#python-}
 pkgver=2.0.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A pure-Python libconfig reader/writer with permissive license"
 arch=('any')
