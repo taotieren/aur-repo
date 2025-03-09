@@ -3,7 +3,7 @@
 pkgname=python-emby-proxy
 _name=${pkgname//-/_}
 pkgver=0.0.3
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python emby reverse proxy."
 arch=('any')
