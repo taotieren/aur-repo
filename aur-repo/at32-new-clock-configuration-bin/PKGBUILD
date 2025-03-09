@@ -3,7 +3,7 @@
 pkgbase=at32-new-clock-configuration-bin
 pkgname=at32-new-clock-configuration
 pkgver=3.0.16
-pkgrel=1
+pkgrel=2
 # epoch=1
 pkgdesc="AT32 时钟配置工具是雅特力科技为方便对 AT32 系列 MCU 进行时钟配置而开发的一个图形化配置工具，其主旨是使用户清晰了解时钟路径和配置出期望的时钟频率。"
 arch=('x86_64')
