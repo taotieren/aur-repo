@@ -2,7 +2,7 @@
 
 pkgname=arch-secure-boot
 pkgver=1.6.2
-pkgrel=1
+pkgrel=2
 license=('ISC')
 pkgdesc='UEFI Secure Boot for Arch Linux + btrfs snapshot recovery'
 url='https://github.com/maximbaz/arch-secure-boot'
