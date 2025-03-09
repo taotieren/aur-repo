@@ -1,7 +1,7 @@
 # Maintainer: Benoît Allard <benoit.allard@gmx.de>
 pkgname=python-grpclib
 pkgver=0.4.7
-pkgrel=2
+pkgrel=3
 pkgdesc="Pure-Python gRPC implementation for asyncio"
 arch=('any')
 url="http://grpclib.readthedocs.io/"
