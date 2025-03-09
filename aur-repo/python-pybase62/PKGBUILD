@@ -3,7 +3,7 @@
 pkgname=python-pybase62
 _pkgname=pybase62
 pkgver=1.0.0
-pkgrel=11
+pkgrel=12
 pkgdesc="Python module for base62 encoding"
 arch=("any")
 url="https://github.com/suminb/base62"
