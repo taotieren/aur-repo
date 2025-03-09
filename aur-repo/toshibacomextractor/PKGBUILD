@@ -3,7 +3,7 @@
 pkgname=toshibacomextractor
 _name=ToshibaComExtractor
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Quick and dirty tool to extract Toshiba .COM firmware files, released so it does not get lost.'
 arch=($CARCH)
 url='https://github.com/LongSoft/ToshibaComExtractor'
