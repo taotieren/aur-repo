@@ -3,7 +3,7 @@
 pkgbase=canopenlinux-git
 pkgname=canopenlinux-git
 pkgver=4.0.r23.g52ffe7a
-pkgrel=1
+pkgrel=2
 groups=()
 pkgdesc="CANopenNode on Linux devices"
 arch=($CARCH)
