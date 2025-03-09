@@ -3,7 +3,7 @@
 pkgname=python-caringcaribou
 _name=${pkgname#python-}
 pkgver=0.6
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A friendly car security exploration tool for the CAN bus."
 arch=('any')
