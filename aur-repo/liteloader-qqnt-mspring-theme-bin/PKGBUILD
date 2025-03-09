@@ -4,7 +4,7 @@
 pkgname='liteloader-qqnt-mspring-theme-bin'
 _pkgname='LiteLoaderQQNT-MSpring-Theme'
 pkgver='1.3.7'
-pkgrel=1
+pkgrel=2
 pkgdesc="LiteLoaderQQNT主题，优雅、粉粉、细致"
 arch=('any')
 url="https://github.com/MUKAPP/${_pkgname}"
