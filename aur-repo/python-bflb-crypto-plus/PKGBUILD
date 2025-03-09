@@ -3,7 +3,7 @@
 pkgname=python-bflb-crypto-plus
 _name=${pkgname#python-}
 pkgver=1.0
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="PyCryptoPlus is an extension to the Python Crypto module (www.pycrypto.org)."
 arch=('any')
