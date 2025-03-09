@@ -3,7 +3,7 @@
 
 pkgname=python-diskcache
 pkgver=5.6.3
-pkgrel=12
+pkgrel=13
 pkgdesc="Python disk and file backed cache library"
 arch=('any')
 license=('Apache-2.0')
