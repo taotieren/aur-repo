@@ -2,7 +2,7 @@
 pkgname=gopeed-bin
 _pkgname=Gopeed
 pkgver=1.6.10
-pkgrel=1
+pkgrel=2
 pkgdesc="High speed downloader that supports all platforms.(Prebuilt version)"
 arch=('x86_64')
 url="https://gopeed.com/"
