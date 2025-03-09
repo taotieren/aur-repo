@@ -3,7 +3,7 @@
 pkgname=ffts-git
 _pkgname=ffts
 pkgver=r800.b22d839b61c
-pkgrel=7
+pkgrel=8
 pkgdesc="The Fastest Fourier Transform in the South"
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
