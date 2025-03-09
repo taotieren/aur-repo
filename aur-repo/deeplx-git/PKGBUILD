@@ -2,7 +2,7 @@
 
 pkgname=deeplx-git
 pkgver=1.0.6.r0.g2400139
-pkgrel=1
+pkgrel=2
 pkgdesc="DeepL Free API (No TOKEN required)"
 arch=($CARCH)
 url="https://github.com/OwO-Network/DeepLX"
