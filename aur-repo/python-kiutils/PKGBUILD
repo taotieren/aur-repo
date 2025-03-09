@@ -2,7 +2,7 @@
 pkgname=python-kiutils
 _name=${pkgname#python-}
 pkgver=1.4.8
-pkgrel=4
+pkgrel=5
 pkgdesc="Simple and SCM-friendly KiCad file parser based on Python dataclasses"
 url="https://github.com/mvnmgrx/kiutils"
 depends=('python')
