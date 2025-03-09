@@ -4,7 +4,7 @@ pkgbase=mfgtools-git
 pkgname=(mfgtools{,-doc}-git
     python-libuuu-git)
 pkgver=1.5.201.r7.g40bd85c
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools."
 arch=($CARCH)
