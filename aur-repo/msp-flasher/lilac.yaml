@@ -7,7 +7,7 @@ pre_build_script: |
 
   for line in edit_file('PKGBUILD'):
     if line.startswith('PKGEXT'):
-      line = f'_PKGEXT'
+      line = '_PKGEXT'
     print(line)
 
   run_cmd(['updpkgsums'])
