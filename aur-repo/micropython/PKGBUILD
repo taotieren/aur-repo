@@ -2,7 +2,7 @@
 
 pkgname=(micropython)
 pkgver=1.24.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Python3 for microcontrollers, with stdlib. (UNIX version)"
 arch=('i686' 'x86_64')
 url="http://micropython.org/"
