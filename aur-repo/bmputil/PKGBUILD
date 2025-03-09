@@ -2,7 +2,7 @@
 
 pkgname='bmputil'
 pkgver=0.1.3
-pkgrel=2
+pkgrel=3
 pkgdesc='A management utility for debuggers running the Black Magic Debug firmware'
 arch=('any')
 url='https://github.com/blackmagic-debug/bmputil'
