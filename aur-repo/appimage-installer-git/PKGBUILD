@@ -2,7 +2,7 @@
 
 pkgname=appimage-installer-git
 pkgver=2.0beta2.r3.gd16ea8d
-pkgrel=1
+pkgrel=2
 pkgdesc="AppImage install tool."
 arch=('x86_64')
 url="https://gitee.com/deepin-opensource/appimage-installer"
