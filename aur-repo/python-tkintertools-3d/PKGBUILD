@@ -3,7 +3,7 @@
 pkgname=python-tkintertools-3d
 _name=${pkgname#python-}
 pkgver=1.0.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Extension package for tkintertools to simple 3D drawings."
 arch=('any')
