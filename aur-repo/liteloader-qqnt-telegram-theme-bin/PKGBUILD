@@ -4,7 +4,7 @@
 pkgname='liteloader-qqnt-telegram-theme-bin'
 _pkgname='LiteLoaderQQNT-Telegram-Theme'
 pkgver='4.4.3'
-pkgrel=2
+pkgrel=3
 pkgdesc="LiteLoaderQQNT 插件，高仿 Telegram 风格的 QQNT 主题"
 arch=('any')
 url="https://github.com/festoney8/${_pkgname}"
