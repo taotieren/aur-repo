@@ -12,7 +12,7 @@
 
 pkgname=linkserver
 pkgver=24.12.21
-pkgrel=1
+pkgrel=2
 pkgdesc="A utility for launching and managing GDB servers for NXP debug probes, which also provides a command-line target flash programming capabilities."
 arch=('x86_64')
 url="https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/linkserver-for-microcontrollers:LINKERSERVER"
