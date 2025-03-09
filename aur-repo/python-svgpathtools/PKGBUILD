@@ -3,7 +3,7 @@
 pkgname=python-svgpathtools
 _name=${pkgname#python-}
 pkgver=1.6.1
-pkgrel=20
+pkgrel=21
 pkgdesc='Manipulate and analyze SVG Path objects and Bezier curves'
 arch=('any')
 url='https://github.com/mathandy/svgpathtools'
