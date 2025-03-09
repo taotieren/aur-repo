@@ -3,7 +3,7 @@
 _name=altgraph
 pkgname=python-$_name
 pkgver=0.17.4
-pkgrel=7
+pkgrel=8
 pkgdesc='A graph (network) package for constructing graphs, BFS and DFS traversals, topological sort, shortest paths, etc. with graphviz output.'
 arch=(any)
 url="https://pypi.python.org/pypi/$_name"
