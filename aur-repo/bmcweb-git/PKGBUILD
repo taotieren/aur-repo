@@ -13,6 +13,7 @@ depends=(
     boost-libs
     gcc-libs
     glibc
+    libnghttp2
     openssl
     tinyxml2
     pam
@@ -26,7 +27,6 @@ makedepends=(
     boost
     git
     gtest
-    libnghttp2
     ninja
     nlohmann-json
     meson
