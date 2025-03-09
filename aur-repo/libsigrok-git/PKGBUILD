@@ -6,7 +6,7 @@
 _gitname='libsigrok'
 pkgname="${_gitname}-git"
 pkgver=0.2.1.r4392.gf06f7881
-pkgrel=2
+pkgrel=3
 pkgdesc="Client software that supports various hardware logic analyzers, core library (git version)"
 arch=($CARCH)
 url="http://www.sigrok.org/wiki/Libsigrok"
