@@ -3,7 +3,7 @@
 pkgname=python-ectool
 _name=${pkgname#python-}
 pkgver=1.2.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A tools for EC modules, like EC618/EC616/EC718"
 arch=('any')
