@@ -3,7 +3,7 @@
 
 pkgname=neobox-git
 pkgver=2.4.6.r30.g440cd22
-pkgrel=1
+pkgrel=2
 pkgdesc="采用 C++ 20 编写的一个插件管理工具，可以安装网速悬浮窗等插件。"
 arch=($CARCH)
 url="https://github.com/yjmthu/Neobox"
