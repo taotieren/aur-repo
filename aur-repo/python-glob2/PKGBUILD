@@ -3,7 +3,7 @@
 pkgname=python-glob2
 _name=${pkgname#python-}
 pkgver=0.7
-pkgrel=5
+pkgrel=6
 pkgdesc="Version of the glob module that can capture patterns and supports recursive wildcards"
 url="https://pypi.org/project/${_name}"
 license=('BSD')
