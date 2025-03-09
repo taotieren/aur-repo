@@ -3,7 +3,7 @@
 pkgname=python-hashtools
 _name=${pkgname//-/_}
 pkgver=0.0.3.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python hash tools."
 arch=('any')
