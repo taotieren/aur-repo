@@ -2,7 +2,7 @@
 _pkgname=affine
 pkgname=python-${_pkgname}
 pkgver=2.4.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Python package for matrices describing affine transformation of the plane"
 url='https://github.com/rasterio/affine'
 makedepends=('python-build'
