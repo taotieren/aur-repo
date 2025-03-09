@@ -3,7 +3,7 @@
 
 pkgname=deskreen
 pkgver=2.0.4
-pkgrel=6
+pkgrel=7
 pkgdesc='Turn any device into a secondary screen for your computer'
 arch=('aarch64'
       'x86_64')
