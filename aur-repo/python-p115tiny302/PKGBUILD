@@ -3,7 +3,7 @@
 pkgname=python-p115tiny302
 _name=${pkgname#python-}
 pkgver=0.1.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="115 tiny 302 backend."
 arch=('any')
