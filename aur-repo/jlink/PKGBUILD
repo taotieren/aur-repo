@@ -2,7 +2,7 @@
 
 pkgname=jlink
 pkgver=20160122
-pkgrel=11
+pkgrel=12
 pkgdesc="meta package for JLink ARM embedded tools from Segger"
 arch=('i686' 'x86_64')
 url="https://www.segger.com/jlink-software.html"
