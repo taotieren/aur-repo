@@ -3,7 +3,7 @@
 pkgname=python-p115updatedb
 _name=${pkgname#python-}
 pkgver=0.0.11
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="把 115 网盘的文件列表导出到数据库"
 arch=('any')
