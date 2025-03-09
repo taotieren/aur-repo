@@ -3,7 +3,7 @@
 pkgname=python-alist
 _name=${pkgname//-/_}
 pkgver=0.0.13.7
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for alist."
 arch=('any')
