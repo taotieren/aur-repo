@@ -4,7 +4,7 @@ pkgname=xunlei-bin
 _appname=thunder
 _debname="com.${pkgname%-bin}.download"
 pkgver=1.0.0.5
-pkgrel=7
+pkgrel=8
 pkgdesc="Xunlei download, 迅雷"
 arch=(
     'aarch64'
