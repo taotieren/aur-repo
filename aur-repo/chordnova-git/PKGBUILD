@@ -2,7 +2,7 @@
 
 pkgname=chordnova-git
 pkgver=3.0.2021.r14.gf90c32d
-pkgrel=1
+pkgrel=2
 pkgdesc="ChordNova is a powerful open-source chord progression analysis plus generation software for multiple operating systems."
 arch=($CARCH)
 url="https://github.com/Chen-and-Sim/ChordNova"
