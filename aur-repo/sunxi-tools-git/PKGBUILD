@@ -3,8 +3,8 @@
 # Contributor: BOYPT <pentie at gmail.com>
 
 pkgname=sunxi-tools-git
-pkgver=1.4.2.r179.g29d48c3
-pkgrel=3
+pkgver=1.4.2.r193.g4390ca6
+pkgrel=1
 pkgdesc="Tools to help hacking Allwinner based devices. (A10, A20, sun4i, sun7i)"
 arch=(i686 x86_64 arm armv6h armv7h aarch64)
 url="https://github.com/linux-sunxi/sunxi-tools"
