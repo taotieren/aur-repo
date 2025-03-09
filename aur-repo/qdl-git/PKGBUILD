@@ -6,7 +6,7 @@
 
 pkgname=qdl-git
 _pkgname=qdl
-pkgver=r134.ad320a1
+pkgver=r137.cfdb938
 pkgrel=1
 pkgdesc="Tool to communicate with Qualcomm System On a Chip bootroms to install or execute code"
 arch=('armv7h' 'i686' 'x86_64')
