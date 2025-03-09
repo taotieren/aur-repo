@@ -2,7 +2,7 @@
 
 pkgname=reader-pro-bin
 pkgver=3.2.12
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Read 3 Server Edition"
 arch=(any)
