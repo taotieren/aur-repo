@@ -2,7 +2,7 @@
 
 pkgname=asciidoctor-web-pdf-git
 pkgver=1.0.0.alpha.16.r8.g3fe542a
-pkgrel=8
+pkgrel=9
 pkgdesc="A PDF converter for AsciiDoc based on web technologies. It allows complex layouts to be defined with CSS and JavaScript, while writing the content in AsciiDoc."
 arch=($CARCH)
 url="https://github.com/Mogztter/asciidoctor-web-pdf"
