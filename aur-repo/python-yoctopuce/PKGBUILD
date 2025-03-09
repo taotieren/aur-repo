@@ -5,7 +5,7 @@
 pkgname=python-yoctopuce
 _pkg="${pkgname#python-}"
 pkgver=2.0.63620
-pkgrel=1
+pkgrel=2
 pkgdesc="Yoctopuce library for Python"
 arch=('any')
 url='https://github.com/yoctopuce/yoctolib_python'
