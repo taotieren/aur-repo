@@ -1,7 +1,7 @@
 _pkgname=ddns-go
 pkgname=${_pkgname}-bin
 pkgver="6.9.0"
-pkgrel=1
+pkgrel=2
 pkgdesc='A simple, easy-to-use ddns service optimized for Chinese Mainland users'
 license=('MIT')
 arch=(
