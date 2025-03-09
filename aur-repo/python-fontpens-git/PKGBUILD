@@ -2,7 +2,7 @@
 
 pkgname=python-fontpens-git
 pkgver=0.3.0.r1.g1444f3f
-pkgrel=1
+pkgrel=2
 pkgdesc='A collection of classes implementing the pen protocol for manipulating glyphs.'
 url='https://github.com/robotools/fontpens'
 license=('BSD')
