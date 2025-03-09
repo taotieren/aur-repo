@@ -2,7 +2,7 @@
 
 pkgname=yfel-git
 pkgver=r327.f643e1e
-pkgrel=3
+pkgrel=4
 pkgdesc="Yet another Allwinner FEL Toolkit"
 arch=($CARCH)
 url="https://github.com/YuzukiTsuru/YFEL"
