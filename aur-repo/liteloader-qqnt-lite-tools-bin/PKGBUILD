@@ -4,7 +4,7 @@
 pkgname='liteloader-qqnt-lite-tools-bin'
 _pkgname='LiteLoaderQQNT-lite_tools'
 pkgver='2.33.9'
-pkgrel=3
+pkgrel=4
 pkgdesc='LiteLoaderQQNT插件，轻量工具箱，轻量、优雅、高效'
 arch=('any')
 url="https://github.com/xiyuesaves/${_pkgname}"
