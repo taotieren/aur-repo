@@ -2,7 +2,7 @@
 
 pkgname=zhcon
 pkgver=0.2.6
-pkgrel=10
+pkgrel=11
 pkgdesc="A Fast CJK Virtual Console"
 arch=(i686 x86_64)
 url="http://zhcon.sourceforge.net"
