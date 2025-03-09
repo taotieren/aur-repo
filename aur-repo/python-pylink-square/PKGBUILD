@@ -3,7 +3,7 @@
 pkgname=python-pylink-square
 _name=pylink
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Python interface for the SEGGER J-Link"
 arch=(any)
 url="https://github.com/Square/pylink"
