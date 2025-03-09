@@ -1,7 +1,7 @@
 # Contributor: Clint Valentine <valentine.clint@gmail.com>
 pkgname=python-logzero
 pkgver=1.7.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Robust and effective logging for Python"
 arch=(x86_64)
 url="https://github.com/metachris/logzero"
