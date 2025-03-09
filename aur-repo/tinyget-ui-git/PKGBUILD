@@ -2,7 +2,7 @@
 
 pkgname=tinyget-ui-git
 pkgver=r10.d8ecddb
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Tinyget is a Python package management tool, handling mainstream system package managers such as apt (used in Debian, Ubuntu, etc.), dnf (used in Fedora, CentOS, etc.) and pacman (used in ArchLinux, etc.)."
 arch=('any')
