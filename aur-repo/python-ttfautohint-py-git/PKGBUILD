@@ -2,7 +2,7 @@
 
 pkgname=python-ttfautohint-py-git
 pkgver=0.5.1.r4.g49dc9cb
-pkgrel=4
+pkgrel=5
 pkgdesc='Python wrapper for ttfautohint, a free auto-hinter for TrueType fonts'
 url='https://github.com/fonttools/ttfautohint-py'
 license=('MIT')
