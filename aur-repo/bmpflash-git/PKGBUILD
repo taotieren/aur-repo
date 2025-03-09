@@ -3,7 +3,7 @@
 _pkgname='bmpflash'
 pkgname="${_pkgname}-git"
 pkgver=r268.ea1fa34
-pkgrel=1
+pkgrel=2
 pkgdesc='A command line utility for setting up the on-board Flash of BMP v2.3+ hardware for use in standalone mode'
 arch=('any')
 url="https://github.com/blackmagic-debug/${_pkgname}"
