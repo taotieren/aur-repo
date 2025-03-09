@@ -2,7 +2,7 @@
 
 pkgname=canboat
 pkgver=5.1.3
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="CAN Boat provides NMEA 2000 and NMEA 0183 utilities. It contains a NMEA 2000 PGN decoder and can read and write N2K messages. It is not meant as an end-user tool but as a discovery mechanism for delving into NMEA 2000 networks."
 arch=($CARCH)
