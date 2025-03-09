@@ -2,7 +2,7 @@
 
 pkgname=nodejs-nativefier
 pkgver=52.0.0
-pkgrel=28
+pkgrel=29
 pkgdesc="A command-line tool to easily create a desktop app for any web site with minimal configuration"
 arch=("any")
 url="https://github.com/${pkgname#nodejs-}/${pkgname#nodejs-}/"
