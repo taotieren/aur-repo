@@ -2,7 +2,7 @@
 
 pkgname=qeda
 pkgver=0.4.3
-pkgrel=1
+pkgrel=2
 pkgdesc="The tool for easy creating electronic component libraries"
 arch=('any')
 url="https://github.com/qeda/qeda"
