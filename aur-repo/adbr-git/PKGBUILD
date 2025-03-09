@@ -2,7 +2,7 @@
 
 pkgname=adbr-git
 pkgver=r13.baf5e48
-pkgrel=2
+pkgrel=3
 pkgdesc="ADB Client in pure Rust."
 arch=($CARCH)
 url="https://github.com/xDvir/ADBRClient"
