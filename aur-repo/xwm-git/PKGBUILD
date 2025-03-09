@@ -3,7 +3,7 @@
 pkgbase=xwm-git
 pkgname=xwm-git
 pkgver=1.0.0.r11.g96d93c0
-pkgrel=7
+pkgrel=8
 pkgdesc="XWM (X light Window Manager) is a light-weight window manager for the X11 Window System"
 arch=($CARCH)
 url="https://gitee.com/xinligg/xwm"
