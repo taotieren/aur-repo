@@ -1,6 +1,6 @@
 pkgname=srecord
 pkgver=1.65.0
-pkgrel=2
+pkgrel=3
 pkgdesc='The SRecord package is a collection of powerful tools for manipulating EPROM load files.'
 arch=('x86_64')
 license=('GPL3')
