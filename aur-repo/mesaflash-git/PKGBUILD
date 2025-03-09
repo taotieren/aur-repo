@@ -2,7 +2,7 @@
 
 pkgname=mesaflash-git
 pkgver=3.4.9.r25.g91fb3ab
-pkgrel=1
+pkgrel=2
 pkgdesc="Configuration and diagnostic tool for Mesa Electronics PCI(E)/ETH/EPP/USB/SPI boards"
 arch=($CARCH)
 url="https://github.com/LinuxCNC/mesaflash"
