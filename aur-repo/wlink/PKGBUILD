@@ -2,7 +2,7 @@
 
 pkgname=wlink
 pkgver=0.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="wlink - WCH-Link(RV) command line tool"
 arch=($CARCH)
 url="https://github.com/ch32-rs/wlink"
