@@ -3,7 +3,7 @@
 pkgname=python-arm-gdb
 _name=arm_gdb
 pkgver=0.9.10
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python module for an easier access to analyze ARM Cortex-M peripherals"
 arch=('any')
