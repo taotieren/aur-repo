@@ -3,7 +3,7 @@
 
 _pkgname=gnucap
 pkgname=$_pkgname-git
-pkgver=20241210.dev.r1.g09f289c
+pkgver=20250301.dev.r0.g34dd18b6
 pkgrel=1
 pkgdesc="GNU Circuit Analysis Package (develop branch)"
 arch=('x86_64')
