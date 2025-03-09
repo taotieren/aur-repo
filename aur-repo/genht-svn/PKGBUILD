@@ -2,7 +2,7 @@
 
 pkgname=genht-svn
 pkgver=r135
-pkgrel=2
+pkgrel=3
 pkgdesc="genht is a simple generic hash table implementation in C."
 arch=($CARCH)
 url="http://www.repo.hu/projects/genht"
