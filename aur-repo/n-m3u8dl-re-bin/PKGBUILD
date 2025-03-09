@@ -1,10 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=n-m3u8dl-re-bin
-_tagname='0.3.0-beta'
-# pkgver=0.3.0_beta
-pkgver="${_tagname//-/}"
-pkgrel=2
+pkgver=0.3.0_beta
+pkgrel=1
 epoch=
 pkgdesc="Cross-Platform, beautiful and powerful stream downloader for DASH/HLS. "
 arch=('x86_64')
