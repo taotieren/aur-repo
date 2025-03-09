@@ -3,7 +3,7 @@
 pkgname=python-tkintertools-mpl
 _name=${pkgname#python-}
 pkgver=1.2.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Extension package for tkintertools to matplotlib."
 arch=('any')
