@@ -3,7 +3,7 @@
 pkgbase=epson-printer-io-community-bin
 pkgname=epson-printer-io-community-bin
 pkgver=1.2.6
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="EPSON Linux Printer IO daemon"
 arch=('x86_64')
