@@ -3,7 +3,7 @@
 pkgname=kibot
 _name=${pkgname}
 pkgver=1.8.2
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="KiCad automation utility"
 arch=('any')
