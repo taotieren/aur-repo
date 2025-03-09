@@ -2,7 +2,7 @@
 
 pkgname=chaosblade-bin
 pkgver=1.7.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Chaosblade: An Easy to Use and Powerful Chaos Engineering Toolkit"
 arch=(x86_64)
 url="https://github.com/chaosblade-io/chaosblade"
