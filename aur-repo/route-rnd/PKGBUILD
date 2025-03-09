@@ -1,7 +1,7 @@
 # Maintainer: CuVoodoo <pcb-rnd@cuvoodoo.info>
 pkgname=route-rnd
 pkgver=0.9.3
-pkgrel=1
+pkgrel=2
 pkgdesc="free/open source, flexible, modular autorouter for Printed Circuit Boards"
 url="http://www.repo.hu/projects/route-rnd/"
 arch=('x86_64')
