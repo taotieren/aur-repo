@@ -8,7 +8,7 @@ pkgname=$_reponame-appimage
 # Version
 _ver=1-alpha-20240109-1
 pkgver=$(echo "$_ver" | sed 's/-/./g')                                                                                                                                                               
-pkgrel=2
+pkgrel=3
 
 # Generic
 pkgdesc="AppDir creation and maintenance tool."
@@ -36,3 +36,4 @@ sha256sums=('c86d6540f1df31061f02f539a2d3445f8d7f85cc3994eee1e74cd1ac97b76df0')
 package() {
     install -Dm755 $_filename $pkgdir/usr/bin/linuxdeploy
 }
+makedepends=("sed")
