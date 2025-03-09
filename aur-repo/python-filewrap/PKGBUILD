@@ -3,7 +3,7 @@
 pkgname=python-filewrap
 _name=${pkgname//-/_}
 pkgver=0.2.8.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python file wrappers."
 arch=('any')
