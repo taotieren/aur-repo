@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   aur_pre_build(maintainers=['carlosal1015'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=openems'])
