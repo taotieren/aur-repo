@@ -2,14 +2,14 @@
 
 pkgname=msp-flasher
 pkgver=1.03.20.00
-pkgrel=2
+pkgrel=3
 pkgdesc="Flasher for TI MSP430 processor"
 arch=('i686' 'x86_64')
 url="http://www.ti.com/tool/msp430-flasher"
 license=('GPL')
 depends=('elfutils' 'libmpc' 'zlib' 'gcc-libs' 'glibc')
 options=(!strip !emptydirs !libtool staticlibs)
-PKGEXT=".pkg.tar"
+_PKGEXT=".pkg.tar"
 if [ $CARCH = i686 ]; then
     _installer_arch_infix=linux
 elif [ $CARCH = x86_64 ]; then
