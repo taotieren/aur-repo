@@ -6,8 +6,8 @@ pre_build_script: |
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-click-option-group'])
 
   for line in edit_file('PKGBUILD'):
-    if line.startswith('check()'):
-      line = f'_check()'
+    if line.startswith('check() {'):
+      line = f'_check() {'
     print(line)
 
   run_cmd(['updpkgsums'])
