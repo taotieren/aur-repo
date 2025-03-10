@@ -7,3 +7,4 @@ repo_depends:
 update_on:
   - source: aur
     aur: quartus-free
+time_limit_hours: 3
