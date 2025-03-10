@@ -5,8 +5,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 # repo_depends:
-#   - python-libclang
+#   -
 update_on:
   - source: github
     github: mokeyish/smartdns-rs
-    use_commit: true
