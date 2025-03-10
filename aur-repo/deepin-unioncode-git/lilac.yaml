@@ -8,3 +8,4 @@ update_on:
   - source: github
     github: linuxdeepin/deepin-unioncode
     lilac_throttle: 10d
+time_limit_hours: 2
