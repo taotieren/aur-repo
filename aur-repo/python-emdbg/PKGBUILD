@@ -3,7 +3,7 @@
 pkgname=python-emdbg
 _name=${pkgname#python-}
 pkgver=1.7.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Tools for debugging and profiling ARM Cortex-M devices as found on the PX4 Autopilot FMU boards"
 arch=('any')
