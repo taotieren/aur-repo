@@ -1,12 +1,11 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build: vcs_update
 pre_build_script: aur_pre_build(maintainers=['xiota', 'thotypous', 'thasti'])
 post_build: aur_post_build
-repo_depends:
-  - csxcad-git
-  - openems-git
-  - qcsxcad-git
+# repo_depends:
+#   -
 update_on:
   - source: aur
     aur: appcsxcad-git
