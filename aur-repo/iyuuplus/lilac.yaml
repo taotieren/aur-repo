@@ -4,7 +4,7 @@ build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers='evine')
 post_build: aur_post_build
 # repo_depends:
-#   -
+#   - php83-mysqli
 update_on:
   - source: aur
     aur: iyuuplus
