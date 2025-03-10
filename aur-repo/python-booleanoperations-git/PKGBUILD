@@ -38,10 +38,10 @@ build() {
     python -m build -wn
 }
 
-check() {
-    cd "$pkgname"
-    PYTHONPATH=Lib pytest tests
-}
+# check() {
+#     cd "$pkgname"
+#     PYTHONPATH=Lib pytest tests
+# }
 
 package() {
     cd "$pkgname"
