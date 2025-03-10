@@ -3,7 +3,7 @@
 pkgbase=x-tools
 pkgname=x-tools
 pkgver=7.0.0
-pkgrel=1
+pkgrel=2
 groups=()
 pkgdesc="Qt SerialPort-BLE-UDP-TCP-WebSocket-Modbus-CAN Assistant."
 arch=($CARCH)
