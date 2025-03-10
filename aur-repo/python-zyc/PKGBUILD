@@ -3,7 +3,7 @@
 pkgname=python-zyc
 _name=${pkgname#python-}
 pkgver=1.0.0
-pkgrel=5
+pkgrel=6
 pkgdesc="A GUI for searching and selecting parts and footprints for use in SKiDL."
 arch=(any)
 url="https://pypi.org/project/zyc"
