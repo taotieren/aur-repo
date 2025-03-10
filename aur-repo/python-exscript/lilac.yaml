@@ -1,14 +1,11 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['SelfRef'])
 post_build: aur_post_build
 repo_depends:
   - python-configparser
-  - python-future
 update_on:
   - source: aur
     aur: python-exscript
-  # - source: alpm
-  #   alpm: python-future
-  # provided: python-future
   - alias: python
