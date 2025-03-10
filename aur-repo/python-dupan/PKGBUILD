@@ -3,7 +3,7 @@
 pkgname=python-dupan
 _name=${pkgname//-/_}
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for baidu webdisk <https://pan.baidu.com>."
 arch=('any')
