@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 pre_build_script: |
-  aur_pre_build(maintainers=['vinipsmaker'])
+  aur_pre_build(maintainers=['Bink'])
   add_makedepends(['python-setuptools', 'python-installer', 'python-wheel'])
 post_build: aur_post_build
 repo_depends:
