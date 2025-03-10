@@ -6,8 +6,8 @@ pre_build_script: |
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=msp-flasher'])
 
   for line in edit_file('PKGBUILD'):
-    if line.startswith('.pkg.tar'):
-      line = f'.pkg.tar.zst'
+    if line.startswith('PKGEXT=".pkg.tar"'):
+      line = f'_PKGEXT=".pkg.tar"'
     print(line)
 
   run_cmd(['updpkgsums'])
