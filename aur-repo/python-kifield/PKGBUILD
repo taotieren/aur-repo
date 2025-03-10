@@ -3,7 +3,7 @@
 pkgname=python-kifield
 _name=${pkgname#python-}
 pkgver=1.0.1
-pkgrel=4
+pkgrel=5
 pkgdesc="A utility for manipulating part fields in KiCad schematic files or ""\
 libraries."
 url="https://github.com/devbisme/KiField"
