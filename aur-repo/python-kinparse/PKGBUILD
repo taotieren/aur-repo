@@ -1,7 +1,7 @@
 # Maintainer: Caleb Jamison <cbjamo@gmail.com> 
 pkgname=python-kinparse
 pkgver=1.1.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Parser for KiCad schematic netlists."
 arch=(any)
 url="https://github.com/devbisme/kinparse"
