@@ -4,7 +4,7 @@
 pkgname=vofa+
 _pkgname=vofaplus
 pkgver=1.3.10
-pkgrel=19
+pkgrel=20
 pkgdesc="A high degree of freedom embedded debugging tool with plugins support."
 arch=('x86_64')
 url="https://www.vofa.plus/"
