@@ -11,7 +11,7 @@ _mainver=23.1; _patchver=.0; _buildver=991; _litever=${_mainver}std${_patchver}.
 # HLS compiler is only released with Pro numbering
 _promain=23.4; _propatch=.0; _probuild=79; _prover=${_promain}${_propatch}.${_probuild}
 pkgver=${_mainver}${_patchver}.${_buildver}
-pkgrel=2
+pkgrel=3
 pkgdesc="Quartus Prime Lite design software for Intel FPGAs"
 arch=('x86_64')
 url="http://fpgasoftware.intel.com/?edition=lite"
