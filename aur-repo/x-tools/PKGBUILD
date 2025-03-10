@@ -55,8 +55,6 @@ build() {
 
     cd "${srcdir}/${pkgname}-${pkgver}"
 
-    sed -i 's|0.0.0|${pkgver}|g' source/Common/xTools.cpp
-
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
