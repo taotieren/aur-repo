@@ -4,6 +4,7 @@ pre_build_script: aur_pre_build(maintainers=['xuwd1'])
 post_build_script: aur_post_build
 repo_depends:
   - wemeet-bin
+  - xwaylandvideobridge
 update_on:
   - source: aur
     aur: wemeet-wayland-screenshare-git
