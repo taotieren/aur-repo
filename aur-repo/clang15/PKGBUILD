@@ -1,6 +1,6 @@
 pkgname=clang15
 pkgver=15.0.7
-pkgrel=5
+pkgrel=6
 pkgdesc="C language family frontend for LLVM 15"
 arch=('x86_64')
 url="https://clang.llvm.org/"
