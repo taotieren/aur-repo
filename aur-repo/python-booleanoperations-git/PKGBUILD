@@ -2,7 +2,7 @@
 
 pkgname=python-booleanoperations-git
 pkgver=0.9.0.r3.g25f7091
-pkgrel=18
+pkgrel=19
 pkgdesc='Boolean operations on paths'
 url='https://github.com/typemytype/booleanOperations'
 license=('MIT')
