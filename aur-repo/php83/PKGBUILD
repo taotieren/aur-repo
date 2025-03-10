@@ -20,7 +20,7 @@ _phpbase="83"
 _suffix=""
 pkgver="8.3.14"
 pkgbase_rc=""
-pkgrel=6
+pkgrel=7
 pkgbase="php83"
 pkgdesc="PHP 8.3.14 compiled as to not conflict with mainline php"
 _cppflags=" -DU_USING_ICU_NAMESPACE=1 "
@@ -374,11 +374,13 @@ _phpextensions_fpm="\
     --with-fpm-systemd \
     --with-fpm-acl"
 
+
 options=('!lto')
 arch=("$CARCH")
 checkdepends=('procps-ng' 'smtp-forwarder')
 license=('PHP')
 url='http://www.php.net'
+
 
 ################################################################################
 # Prepare it
@@ -420,10 +422,10 @@ prepare() {
             s|PIDFile[\s]?=[\s]?@([a-zA-Z_]+)@/run/php-fpm.pid|PIDFile=/run/${_build_fpm_service_name}/php-fpm.pid|g" \
         -i sapi/fpm/php-fpm.service.in
 
-    local _check_files=("sapi/fpm/www.conf.in" "sapi/fpm/php-fpm.conf.in")
+    local _check_files=("sapi/fpm/www.conf.in" "sapi/fpm/php-fpm.conf.in");
     for file_conf in "${_check_files[@]}"; do
-        if [[ ! -f $file_conf ]]; then
-            continue
+        if [[ ! -f $file_conf  ]]; then
+            continue;
         fi
         echo "[SED] ${file_conf}"
         sed -e "s#^listen =.*#listen = /run/${_build_fpm_service_name}/php-fpm.sock#" \
@@ -444,7 +446,7 @@ prepare() {
         -i php.ini-production
 
     for patch_name in "${_patches[@]}"; do
-        echo "[PATCH] Applying source patch ${patch_name}"
+        echo "[PATCH] Applying source patch ${patch_name}";
         patch -p1 -i "../${patch_name}"
     done
     ./buildconf --force
@@ -457,7 +459,7 @@ prepare() {
 _build_sapi() {
     _sapi="${1}"
     _commands="${2}"
-    if ((_sapi == "cli")); then
+    if (( _sapi == "cli" )); then
         if [[ ! -d "build-${_sapi}" ]]; then
             mkdir "build-${_sapi}"
         fi
@@ -472,7 +474,7 @@ _build_sapi() {
     fi
 
     pushd "build-${_sapi}"
-    ./configure ${_phpconfig} ${_commands}
+     ./configure ${_phpconfig} ${_commands}
     patch -p1 -i "${srcdir}/make-tests.patch"
     if (($_sapi != "cli")); then
         make clean
@@ -504,12 +506,12 @@ build() {
 
     if ((_build_ini_per_sapi)); then
 
-        # CLI
-        _cli_addons=''
-        # CGI enabled here only for tests passing, then overriden later by cgi build
-        _cli_addons+=" --enable-cgi "
+    # CLI
+    _cli_addons=''
+    # CGI enabled here only for tests passing, then overriden later by cgi build
+    _cli_addons+=" --enable-cgi "
 
-        _build_sapi "cli" "\
+    _build_sapi "cli" "\
         --sysconfdir=/${_build_sapi_ini_cli} \
         --with-config-file-path=/${_build_sapi_ini_cli} \
         --enable-cli \
@@ -520,10 +522,10 @@ build() {
         --disable-phpdbg \
     "
 
-        # phpdbg
-        if ((_build_phpdbg)); then
-            _sapi="phpdbg"
-            _build_sapi "phpdbg" "\
+    # phpdbg
+    if ((_build_phpdbg)); then
+        _sapi="phpdbg"
+        _build_sapi "phpdbg" "\
             --sysconfdir=/${_build_sapi_ini_phpdbg} \
             --with-config-file-path=/${_build_sapi_ini_phpdbg} \
             --disable-all \
@@ -533,10 +535,10 @@ build() {
             --disable-fpm \
             --disable-embed \
         "
-        fi
+    fi
 
-        # embed
-        _build_sapi "embed" "\
+    # embed
+    _build_sapi "embed" "\
         --sysconfdir=/${_build_sapi_ini_embed}  \
         --with-config-file-path=/${_build_sapi_ini_embed}  \
         --disable-all \
@@ -547,8 +549,8 @@ build() {
         --disable-phpdbg \
     "
 
-        # cgi
-        _build_sapi "cgi" "\
+    # cgi
+    _build_sapi "cgi" "\
         --sysconfdir=/${_build_sapi_ini_cgi} \
         --with-config-file-path=/${_build_sapi_ini_cgi} \
         --disable-all \
@@ -559,10 +561,10 @@ build() {
         --disable-phpdbg \
     "
 
-        # litespeed
-        _cflags="${CFLAGS}"
-        export CFLAGS="${CFLAGS} -Wno-error=format-security"
-        _build_sapi "litespeed" "\
+    # litespeed
+    _cflags="${CFLAGS}"
+    export CFLAGS="${CFLAGS} -Wno-error=format-security"
+    _build_sapi "litespeed" "\
         --sysconfdir=/${_build_sapi_ini_litespeed} \
         --with-config-file-path=/${_build_sapi_ini_litespeed} \
         --disable-all \
@@ -573,10 +575,10 @@ build() {
         --disable-phpdbg \
         ${_build_sapi_litespeed} \
     "
-        export CFLAGS="${_cflags}"
+    export CFLAGS="${_cflags}"
 
-        # fpm
-        _build_sapi "fpm" "\
+    # fpm
+    _build_sapi "fpm" "\
         --sysconfdir=/${_build_sapi_ini_fpm} \
         --with-config-file-path=/${_build_sapi_ini_fpm} \
         --disable-all \
@@ -589,11 +591,11 @@ build() {
     "
     else
 
-        # CLI
-        if ((_build_phpdbg)); then
-            _cli_addons+=" --enable-phpdbg "
-        fi
-        _build_sapi "cli" "\
+    # CLI
+    if ((_build_phpdbg)); then
+        _cli_addons+=" --enable-phpdbg "
+    fi
+    _build_sapi "cli" "\
         --sysconfdir=/${_build_sapi_ini_cli} \
         --with-config-file-path=/${_build_sapi_ini_cli} \
         --enable-cli \
@@ -649,42 +651,42 @@ _install_module_ini() {
     local extension=$(echo "${1}" | sed 's/\.so//')
     local priority="${_priority_default}"
     case "${extension}" in
-    "json")
-        priority="${_priority_json}"
-        ;;
-    "xml")
-        priority="${_priority_xml}"
-        ;;
-    "openssl")
-        priority="${_priority_openssl}"
-        ;;
-    "mysqlnd")
-        priority="${_priority_mysqlnd}"
-        ;;
-    "pdo")
-        priority="${_priority_pdo}"
-        ;;
-    "opcache")
-        priority="${_priority_opcache}"
-        ;;
-    "dom")
-        priority="${_priority_dom}"
-        ;;
+        "json")
+            priority="${_priority_json}"
+            ;;
+        "xml")
+            priority="${_priority_xml}"
+            ;;
+        "openssl")
+            priority="${_priority_openssl}"
+            ;;
+        "mysqlnd")
+            priority="${_priority_mysqlnd}"
+            ;;
+        "pdo")
+            priority="${_priority_pdo}"
+            ;;
+        "opcache")
+            priority="${_priority_opcache}"
+            ;;
+        "dom")
+            priority="${_priority_dom}"
+            ;;
     esac
     local extension_type="extension"
     case "${extension}" in
-    "opcache" | "xdebug")
-        extension_type="zend_extension"
-        ;;
-    "recode")
-        extension_type=";extension"
-        ;;
+        "opcache" | "xdebug")
+            extension_type="zend_extension"
+            ;;
+        "recode")
+            extension_type=";extension"
+            ;;
     esac
 
     if [[ ! -d "${pkgdir}/${_build_conf_d}" ]]; then
         mkdir -p "${pkgdir}/${_build_conf_d}"
     fi
-    echo "${extension_type}=${extension}.so" >"${pkgdir}/${_build_conf_d}/${priority}-${extension}.ini"
+    echo "${extension_type}=${extension}.so" > "${pkgdir}/${_build_conf_d}/${priority}-${extension}.ini"
     chmod 0644 "$pkgdir/${_build_conf_d}/${priority}-${extension}.ini"
     _last_priority=${priority}
     _last_extension=${extension}
@@ -692,7 +694,7 @@ _install_module_ini() {
 
 _install_module() {
     if [[ -f "build-cli/modules/${1}.so" ]]; then
-        install -D -m755 "build-cli/modules/${1}.so" "${pkgdir}/usr/lib/${pkgbase}/modules/${1}.so"
+        install -D -m755 "build-cli/modules/${1}.so" "${pkgdir}/usr/lib/${pkgbase}/modules/${1}.so";
         _install_module_ini "${1}"
     else
         echo "[DEBUG]: Install_module can't find ${1}.so, skipped"
@@ -737,7 +739,7 @@ package_php83() {
     rm -f {sockets,tokenizer,gettext,sysvmsg,sysvsem,sysvshm}.so
     popd
     pushd build-cli
-    if ((!_build_ini_per_sapi)); then
+    if (( ! _build_ini_per_sapi )); then
         backup=("${_build_sapi_ini_cli}/php.ini")
         install -d -m755 "${pkgdir}/${_build_sapi_ini_cli}"
         install -D -m644 "../php-${pkgver}/php.ini-production" "${pkgdir}/${_build_sapi_ini_cli}/php.ini"
@@ -795,8 +797,8 @@ package_php83-apache() {
     pkgdesc="Apache SAPI for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'apache')
     depends+=("${_sapi_depends[@]}")
-    depends+=('libxcrypt')
-    depends+=('ncurses')
+    depends+=('libxcrypt');
+    depends+=('ncurses');
     backup=("${_build_apache_cfg}/${_apache_module_conf}")
     echo "# End of LoadModule in httpd.conf - see ArchWiki Apache HTTP Server"
     echo "LoadModule ${_build_mod_php_module} modules/lib${pkgbase}.so"
@@ -847,7 +849,7 @@ package_php83-fpm() {
     fi
     make -j1 INSTALL_ROOT="${pkgdir}" install-fpm
     install -D -m644 "sapi/fpm/php-fpm.service" "${pkgdir}/usr/lib/systemd/system/${_build_fpm_service_name}.service"
-    echo "d /run/${_build_fpm_service_name} 755 root root" >php-fpm.tmpfiles
+    echo "d /run/${_build_fpm_service_name} 755 root root" > php-fpm.tmpfiles
     install -D -m644 "php-fpm.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/${_build_fpm_service_name}.conf"
     popd
 }
@@ -919,9 +921,9 @@ package_php83-litespeed() {
         backup=("${_build_sapi_ini_cgi}/php.ini")
     fi
     case "${_phpbase}" in
-    *)
-        install -D -m755 sapi/litespeed/php "${pkgdir}/usr/bin/ls${pkgbase}"
-        ;;
+        *)
+            install -D -m755 sapi/litespeed/php "${pkgdir}/usr/bin/ls${pkgbase}"
+            ;;
     esac
     popd
 }
@@ -960,16 +962,16 @@ package_php83-pear() {
         -d extension=modules/phar.so \
         -d date.timezone=UTC -d memory_limit=64M -d short_open_tag=0 -d safe_mode=0 \
         -d 'error_reporting=E_ALL&~E_DEPRECATED' -d detect_unicode=0 "pear/install-pear-nozlib.phar" \
-        -ds "${_phpbase}${_suffix}" \
-        --php "/usr/bin/${pkgbase}" \
-        --bin "/usr/bin" \
-        --man "/usr/share/man" \
-        --dir "/usr/share/${pkgbase}/pear" \
-        --data "/usr/share/${pkgbase}/pear/data" \
-        --doc "/usr/share/${pkgbase}/pear/doc" \
-        --test "/usr/share/${pkgbase}/pear/test" \
-        --www "/usr/share/${pkgbase}/pear/htdocs" \
-        --config "/usr/share/${pkgbase}/pear/cfg" \
+        -ds       "${_phpbase}${_suffix}" \
+        --php      "/usr/bin/${pkgbase}" \
+        --bin      "/usr/bin" \
+        --man      "/usr/share/man" \
+        --dir      "/usr/share/${pkgbase}/pear" \
+        --data     "/usr/share/${pkgbase}/pear/data" \
+        --doc      "/usr/share/${pkgbase}/pear/doc" \
+        --test     "/usr/share/${pkgbase}/pear/test" \
+        --www      "/usr/share/${pkgbase}/pear/htdocs" \
+        --config   "/usr/share/${pkgbase}/pear/cfg" \
         --force
     # fix pear.conf with unserialize
     # first arg: path to pear.conf
@@ -1028,22 +1030,25 @@ package_php83-json() {
 package_php83-pdo() {
     pkgdesc="pdo module for php83"
     depends=("php83=${pkgver}")
-    _install_module pdo
+   _install_module pdo
 }
+
 
 # mbstring
 package_php83-mbstring() {
     pkgdesc="mbstring module for php83"
     depends=("${_ext_depends_mbstring[@]}")
-    _install_module mbstring
+   _install_module mbstring
 }
+
 
 # phar
 package_php83-phar() {
     pkgdesc="phar module for php83"
     depends=("php83=${pkgver}")
-    _install_module phar
+   _install_module phar
 }
+
 
 ###############################################################################
 # PHP modules: XML
@@ -1196,22 +1201,23 @@ package_php83-recode() {
 package_php83-gettext() {
     pkgdesc="gettext module for php83"
     depends=("php83=${pkgver}")
-    _install_module gettext
+   _install_module gettext
 }
 
 # iconv
 package_php83-iconv() {
     pkgdesc="iconv module for php83"
     depends=("php83=${pkgver}")
-    _install_module iconv
+   _install_module iconv
 }
 
 # calendar
 package_php83-calendar() {
     pkgdesc="calendar module for php83"
     depends=("php83=${pkgver}")
-    _install_module calendar
+   _install_module calendar
 }
+
 
 ###############################################################################
 # PHP Modules: multimedia
@@ -1228,15 +1234,16 @@ package_php83-gd() {
 package_php83-exif() {
     pkgdesc="exif module for php83"
     depends=("php83=${pkgver}")
-    _install_module exif
+   _install_module exif
 }
 
 # fileinfo
 package_php83-fileinfo() {
     pkgdesc="fileinfo module for php83"
     depends=("php83=${pkgver}")
-    _install_module fileinfo
+   _install_module fileinfo
 }
+
 
 ###############################################################################
 # PHP modules: math
@@ -1342,14 +1349,14 @@ package_php83-xmlrpc() {
 package_php83-imap() {
     pkgdesc="imap module for php83"
     depends=("${_ext_depends_imap[@]}")
-    _install_module imap
+   _install_module imap
 }
 
 # sockets
 package_php83-sockets() {
     pkgdesc="sockets module for php83"
     depends=("php83=${pkgver}")
-    _install_module sockets
+   _install_module sockets
 }
 
 ###############################################################################
@@ -1370,6 +1377,7 @@ package_php83-mcrypt() {
     _install_module mcrypt
 }
 
+
 ###############################################################################
 # PHP Zend modules: opcache/jit
 ###############################################################################
@@ -1389,42 +1397,42 @@ package_php83-opcache() {
 package_php83-posix() {
     pkgdesc="posix module for php83"
     depends=("php83=${pkgver}")
-    _install_module posix
+   _install_module posix
 }
 
 # pcntl
 package_php83-pcntl() {
     pkgdesc="pcntl module for php83"
     depends=("php83=${pkgver}")
-    _install_module pcntl
+   _install_module pcntl
 }
 
 # shmop
 package_php83-shmop() {
     pkgdesc="shmop module for php83"
     depends=("php83=${pkgver}")
-    _install_module shmop
+   _install_module shmop
 }
 
 # sysvmsg
 package_php83-sysvmsg() {
     pkgdesc="sysvmsg module for php83"
     depends=("php83=${pkgver}")
-    _install_module sysvmsg
+   _install_module sysvmsg
 }
 
 # sysvsem
 package_php83-sysvsem() {
     pkgdesc="sysvsem module for php83"
     depends=("php83=${pkgver}")
-    _install_module sysvsem
+   _install_module sysvsem
 }
 
 # sysvshm
 package_php83-sysvshm() {
     pkgdesc="sysvshm module for php83"
     depends=("php83=${pkgver}")
-    _install_module sysvshm
+   _install_module sysvshm
 }
 
 ###############################################################################
@@ -1435,35 +1443,36 @@ package_php83-sysvshm() {
 package_php83-ffi() {
     pkgdesc="ffi module for php83"
     depends=("php83=${pkgver}" 'libffi')
-    _install_module ffi
+   _install_module ffi
 }
 
 # ctype
 package_php83-ctype() {
     pkgdesc="ctype module for php83"
     depends=("php83=${pkgver}")
-    _install_module ctype
+   _install_module ctype
 }
 
 # tokenizer
 package_php83-tokenizer() {
     pkgdesc="tokenizer module for php83"
     depends=("php83=${pkgver}")
-    _install_module tokenizer
+   _install_module tokenizer
 }
 
 # libedit/readline
 package_php83-readline() {
     pkgdesc="readline (libedit version) module for php83"
     depends=("php83=${pkgver}" 'libedit')
-    _install_module readline
+   _install_module readline
 }
 
+
 sha256sums=('e6b8530d747000eebb0089249ec70a3b14add7b501337046700544883f62b17b'
-    'ba72fc64f77822755a469314160d5889d5298f4eb5758dd7939dac9b811afe52'
-    '6d0ad9becb5470ce8e5929d7d45660b0f32579038978496317544c5310281a91'
-    '0b7e98dca9c996ec10cb9b3f6296bb7547c68797fd5f35006fdfd3e97700672d'
-    '58b4cb9019bf70c0cbcdb814c7df79b9065059d14cf7dbf48d971f8e56ae9be7'
-    'c537b06cc5d2645b566021d038f28bc32c4037efc3605023b3d37196b3b744cc'
-    '40bcc1e5058602302198d0925e431495391d8469499593af477f59d84d32f764'
-    '267c8ea589c2aec13e481ebfa2ae2e78176ce070000ed25fbc613ab52abd4e21')
+            'ba72fc64f77822755a469314160d5889d5298f4eb5758dd7939dac9b811afe52'
+            '6d0ad9becb5470ce8e5929d7d45660b0f32579038978496317544c5310281a91'
+            '0b7e98dca9c996ec10cb9b3f6296bb7547c68797fd5f35006fdfd3e97700672d'
+            '58b4cb9019bf70c0cbcdb814c7df79b9065059d14cf7dbf48d971f8e56ae9be7'
+            'c537b06cc5d2645b566021d038f28bc32c4037efc3605023b3d37196b3b744cc'
+            '40bcc1e5058602302198d0925e431495391d8469499593af477f59d84d32f764'
+            '267c8ea589c2aec13e481ebfa2ae2e78176ce070000ed25fbc613ab52abd4e21')
