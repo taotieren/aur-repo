@@ -6,7 +6,6 @@ repo_depends:
   - python-imageio
   - python-tifffile
   - python-pywavelets
-  - python-simpleitk
 update_on:
   - source: aur
     aur: python-scikit-image
