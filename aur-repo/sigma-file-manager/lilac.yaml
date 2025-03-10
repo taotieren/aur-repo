@@ -18,7 +18,7 @@ repo_depends:
 update_on:
   - source: github
     github: aleksey-hoffman/sigma-file-manager
-    use_latest_tag: true
-    # use_max_tag: true
+    # use_latest_tag: true
+    use_max_tag: true
     prefix: v
-    exclude_regex: ".*alpha*"
+    # exclude_regex: ".*alpha*"
