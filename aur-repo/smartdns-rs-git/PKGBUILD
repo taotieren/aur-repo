@@ -46,7 +46,8 @@ build() {
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
 
-    cargo build --release --all-features
+    cargo build --release
+    #     --all-features
 }
 
 # check() {
@@ -59,7 +60,8 @@ build() {
 package() {
     cd "${srcdir}/${pkgname%-git}/"
 
-    cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
+    cargo install --no-track --root "$pkgdir/usr/" --path .
+    #     --all-features
 
     install -Dm0644 etc/smartdns/smartdns.conf -t "$pkgdir/etc/smartdns/"
     sed -i 's|sbin|bin|g' src/service/linux/systemd/files/lib/systemd/system/smartdns-rs.service
