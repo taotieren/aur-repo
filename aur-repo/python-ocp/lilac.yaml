@@ -13,3 +13,4 @@ update_on:
   - source: aur
     aur: python-ocp
   - alias: python
+time_limit_hours: 2
