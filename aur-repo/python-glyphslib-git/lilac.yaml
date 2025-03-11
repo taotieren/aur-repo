@@ -1,13 +1,14 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - python-openstep-plist-git
-  - python-ufo2ft-git
-  - python-ufonormalizer
+# repo_depends:
+#   - python-openstep-plist-git
+#   - python-ufo2ft-git
+#   - python-ufonormalizer
 update_on:
   - source: github
     github: googlefonts/glyphsLib
