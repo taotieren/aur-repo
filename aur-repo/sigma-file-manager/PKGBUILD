@@ -13,8 +13,11 @@ provides=(${pkgname})
 conflicts=(${pkgname} ${pkgname}-git)
 replaces=()
 depends=(npm)
-makedepends=(git
-    electron-builder)
+makedepends=(
+    git
+    electron-builder
+    node-gyp
+)
 backup=()
 options=()
 install=
