@@ -8,5 +8,6 @@ post_build_script: |
 update_on:
   - source: github
     github: OpenAtom-Linyaps/linyaps
-    use_max_tag: true
+    # use_max_tag: true
+    use_latest_release: true
     prefix: V
