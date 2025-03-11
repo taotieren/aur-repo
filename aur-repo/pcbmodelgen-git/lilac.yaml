@@ -1,10 +1,11 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['bit0fun'])
 post_build: aur_post_build
-repo_depends:
-  - appcsxcad-git
-  - openems-git
+# repo_depends:
+#   - appcsxcad-git
+#   - openems-git
 update_on:
   - source: aur
     aur: pcbmodelgen-git
