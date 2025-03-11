@@ -7,7 +7,8 @@ pkgdesc='A bridge from UFOs to FontTools objects'
 url="https://github.com/googlefonts/ufo2ft"
 license=(MIT)
 arch=(any)
-_py_deps=(booleanoperations
+_py_deps=(
+    booleanoperations
     cffsubr
     compreffor
     cu2qu
