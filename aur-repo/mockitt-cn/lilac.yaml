@@ -8,6 +8,6 @@ post_build_script: |
 update_on:
   - source: regex
     url: "https://modao.cc/feature/downloads.html"
-    regex: 'Mockitt-linux-x64-([\d.]+).deb'
+    regex: 'modao-linux-x64-([\d.]+).deb'
 # - source: manual
 #   manual: 1
