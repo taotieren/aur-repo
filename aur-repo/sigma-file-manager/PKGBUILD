@@ -18,12 +18,12 @@ makedepends=(git
 backup=()
 options=()
 install=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}-${_tagname}.tar.gz::${url}/archive/refs/tags/v${_tagname}.tar.gz")
 sha256sums=('0cb7935e9209bea7b70f610f785e62d7e9c84dbf1961cfbbf8d0d7f9c0aaa879')
-noextract=("${pkgname}-${pkgver}.tar.gz")
+noextract=("${pkgname}-${_tagname}.tar.gz")
 
 package() {
-    npm install -g --prefix "${pkgdir}/usr" "${srcdir}/${pkgname}-${pkgver}.tar.gz"
+    npm install -g --prefix "${pkgdir}/usr" "${srcdir}/${pkgname}-${_tagname}.tar.gz"
 
     # Non-deterministic race in npm gives 777 permissions to random directories.
     # See https://github.com/npm/cli/issues/1103 for details.
