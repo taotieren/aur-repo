@@ -24,7 +24,7 @@ backup=()
 options=()
 install=
 _pkg_file_name=Bootloader_CH_V${pkgver}.zip
-source=("${_pkg_file_name}::https://www.arterytek.com/download/TOOL/Bootloader_CH_V${pkgver}.zip")
+source=("${_pkg_file_name}::https://www.arterytek.com/download/TOOL/Bootloader_V${pkgver}_ZH.zip")
 sha256sums=('47357f6e0c2ebededd8a156780f62a5c31820b1f95d2f5916e6a72f608023706')
 noextract=(${_pkg_file_name})
 

@@ -16,4 +16,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://www.arterytek.com/json/Document.json
-    regex: 'Bootloader_CH_V([\d.]+).zip'
+    regex: 'Bootloader_V([\d.]+)_ZH.zip'
