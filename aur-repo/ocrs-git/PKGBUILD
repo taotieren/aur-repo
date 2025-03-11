@@ -14,12 +14,14 @@ license=('MIT' 'Apache-2.0')
 # conflicts=(${pkgname%-git})
 replaces=()
 depends=(glibc)
-makedepends=(git
+makedepends=(
+    git
     binaryen
     cargo
     rust-wasm
     wasm-bindgen
-    npm)
+    npm
+)
 backup=()
 options=('!lto')
 install=
@@ -45,7 +47,8 @@ build() {
 
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
-    cargo build --release --all-features
+    cargo build --release
+    #     --all-features
 
     # build chrome-extension-ocrs-git
     make wasm
