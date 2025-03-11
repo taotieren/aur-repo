@@ -1,8 +1,0 @@
-maintainers:
-  - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: webkit2gtk-3.0-hvml
-    lilac_throttle: 180d
