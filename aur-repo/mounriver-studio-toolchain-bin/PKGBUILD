@@ -71,7 +71,7 @@ package_mounriver-studio-toolchain-riscv-gcc-bin() {
         'glibc'
         'python')
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}"/RISC-V\ Embedded\ GCC/
+    cd ${srcdir}/*GCC/
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
@@ -88,7 +88,7 @@ package_mounriver-studio-toolchain-riscv-gcc12-bin() {
         'glibc'
         'python')
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}"/RISC-V\ Embedded\ GCC12/
+    cd ${srcdir}/*GCC12/
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
