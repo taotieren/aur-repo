@@ -41,6 +41,7 @@ depends=(
 )
 makedepends=(
     cmake
+    gcc
     python-build
     python-installer
     python-wheel
