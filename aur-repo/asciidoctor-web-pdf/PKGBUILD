@@ -11,8 +11,27 @@ license=('MIT')
 provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
-depends=('npm' 'poppler' 'ghostscript')
-makedepends=()
+depends=(
+    sh
+    cairo
+    dbus
+    expat
+    gcc-libs
+    glib2
+    glibc
+    libcups
+    libx11
+    libxcb
+    libxext
+    nodejs
+    nspr
+    nss
+)
+makedepends=(
+    npm
+    poppler
+    ghostscript
+)
 backup=()
 options=()
 install=

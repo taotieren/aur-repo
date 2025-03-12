@@ -1,10 +1,3 @@
-# maintainers:
-#   - github: taotieren
-# pre_build_script: aur_pre_build(maintainers=['taotieren'])
-# post_build: aur_post_build
-# update_on:
-#   - source: aur
-#     aur: asciidoctor-web-pdf
 
 maintainers:
   - github: taotieren

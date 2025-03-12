@@ -10,7 +10,22 @@ license=('MIT')
 provides=(${pkgname%-git} asciidoctor-pdf)
 conflicts=(${pkgname%-git} asciidoctor-pdf)
 #replaces=(${pkgname})
-depends=()
+depends=(
+    sh
+    cairo
+    dbus
+    expat
+    gcc-libs
+    glib2
+    glibc
+    libcups
+    libx11
+    libxcb
+    libxext
+    nodejs
+    nspr
+    nss
+)
 makedepends=(
     git
     npm
