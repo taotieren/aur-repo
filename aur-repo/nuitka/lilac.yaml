@@ -1,6 +1,17 @@
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers='txtsd')
+pre_build_script: |
+  aur_pre_build(maintainers='txtsd')
+
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=nuitka'])
+
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('check() {'):
+      line = "_check() {"
+    print(line)
+
+  run_cmd(['updpkgsums'])
+
 post_build: aur_post_build
 # repo_depends:
 #   -
