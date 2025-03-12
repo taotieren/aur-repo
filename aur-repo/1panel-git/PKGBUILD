@@ -36,7 +36,9 @@ source=("${pkgname}"::"git+https://github.com/1Panel-dev/1Panel.git"
     "1pctl"
     "1panel.service"
 )
-sha256sums=("SKIP")
+sha256sums=('SKIP'
+            'b10ccbfe7055854185cb2cbcaff60774bfd6105e90780ffd0a3a5a2980c5696d'
+            '4763d661d985228b99b9be12ef8140c63c14e6cf40a07411db8e32d9a73cae42')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -48,7 +50,7 @@ pkgver() {
 }
 
 prepare() {
-    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=v${pkgver//_/-}#g" ${srcdir}/1pctl
+    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver//_/-}#g" ${srcdir}/1pctl
     find ${srcdir} -type f -exec sed -i 's@/usr/local/bin@/usr/bin@g' {} +
     find ${srcdir} -type f -exec sed -i 's@/etc/systemd/system@/usr/lib/systemd/system@g' {} +
 }
