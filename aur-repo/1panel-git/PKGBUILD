@@ -11,7 +11,8 @@ url="https://1panel.cn"
 license=('GPL-3.0-or-later')
 install=1panel.install
 depends=(
-
+    glibc
+    sh
 )
 makedepends=(
     go
