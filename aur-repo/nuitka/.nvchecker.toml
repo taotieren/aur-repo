@@ -1,0 +1,3 @@
+[nuitka]
+source = "git"
+git = "https://github.com/Nuitka/Nuitka.git"
