@@ -50,7 +50,7 @@ pkgver() {
 }
 
 build() {
-    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver//_/-}#g" ${srcdir}/1pctl
+    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver}#g" ${srcdir}/1pctl
     find ${srcdir} -type f -exec sed -i 's@/usr/local/bin@/usr/bin@g' {} +
     find ${srcdir} -type f -exec sed -i 's@/etc/systemd/system@/usr/lib/systemd/system@g' {} +
 
