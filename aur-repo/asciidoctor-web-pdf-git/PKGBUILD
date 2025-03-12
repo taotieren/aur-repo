@@ -44,5 +44,6 @@ package() {
     # npm gives ownership of ALL FILES to build user
     # https://bugs.archlinux.org/task/63396
     chown -R root:root "${pkgdir}"
+
     install -Dm0644 "${srcdir}/${pkgname%-git}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }

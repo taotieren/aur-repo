@@ -1,7 +1,30 @@
+# maintainers:
+#   - github: taotieren
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: asciidoctor-web-pdf
+
 maintainers:
   - github: taotieren
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
+pre_build_script: |
+  tag = _G.newver.lstrip('v')
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
+
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
 update_on:
-  - source: aur
-    aur: asciidoctor-web-pdf
+  - source: github
+    github: ggrossetie/asciidoctor-web-pdf
+    # use_latest_tag: true
+    use_max_tag: true
+    prefix: v
+    # exclude_regex: ".*alpha*"
