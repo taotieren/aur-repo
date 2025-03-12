@@ -3,8 +3,8 @@
 
 pkgbase=can-utils-git
 pkgname=can-utils-git
-pkgver=2025.01.r32.ge217254
-pkgrel=2
+pkgver=2025.01.r34.g7fb81e6
+pkgrel=1
 groups=()
 pkgdesc="Linux-CAN / SocketCAN user space applications"
 arch=($CARCH)
