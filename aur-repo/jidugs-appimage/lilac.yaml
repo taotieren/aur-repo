@@ -30,6 +30,7 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://jidugs.wlhex.com/#page2
-    regex: '极度公式-([\d.]+).AppImage'
+    #
+    regex: '%E6%9E%81%E5%BA%A6%E5%85%AC%E5%BC%8F-([\d.]+).AppImage'
 # - source: manual
 #   manual: 1
