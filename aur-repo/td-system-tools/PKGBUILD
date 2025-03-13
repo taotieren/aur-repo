@@ -3,7 +3,7 @@
 pkgbase=td-system-tools
 pkgname=td-system-tools
 pkgver=2.0.8
-pkgrel=1
+pkgrel=2
 groups=()
 pkgdesc="Tools for Basic System Management"
 arch=($CARCH)
