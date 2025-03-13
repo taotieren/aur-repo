@@ -18,6 +18,7 @@ depends=(
 makedepends=(
     git
     gettext
+    intltool
     openssl
     cmake
     ninja
