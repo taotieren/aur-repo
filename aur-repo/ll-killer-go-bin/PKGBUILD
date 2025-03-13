@@ -2,7 +2,7 @@
 
 pkgname=ll-killer-go-bin
 pkgver=1.4.9
-pkgrel=0
+pkgrel=1
 pkgdesc="玲珑杀手 Go: 玲珑应用快速构建系统"
 arch=(aarch64 x86_64 loong64)
 url="https://github.com/System233/ll-killer-go"
@@ -33,9 +33,9 @@ source=(
 
 )
 sha256sums=('967bb960ec557a9facf1fac23929257af2994c5acabcd903013e52fa02655005'
-    '82d13394e7c8e816916ab7a79ef9150c8b461592e26f8596487282ee5da6b336'
-    '4ea778173976c029c4b886201637b240abeb91e48fe6ceb381331dd18bffd090'
-    '687bf17b3dea772247820724ddbcb1a6dcb8ac48f9a85612d836b7ebfe11db36')
+            '82d13394e7c8e816916ab7a79ef9150c8b461592e26f8596487282ee5da6b336'
+            '4ea778173976c029c4b886201637b240abeb91e48fe6ceb381331dd18bffd090'
+            '687bf17b3dea772247820724ddbcb1a6dcb8ac48f9a85612d836b7ebfe11db36')
 
 package() {
     install -Dm755 "${srcdir}/ll-killer-${CARCH}-${pkgver}" ${pkgdir}/usr/bin/ll-killer
