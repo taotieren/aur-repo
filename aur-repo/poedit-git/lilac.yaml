@@ -9,7 +9,7 @@ post_build_script: |
 
 repo_depends:
   - cld2-git
-  - cpprestsdk
+  # - cpprestsdk
 
 update_on:
   - source: github
