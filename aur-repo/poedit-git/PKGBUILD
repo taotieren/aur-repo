@@ -2,7 +2,7 @@
 
 pkgname=poedit-git
 pkgver=3.5.2.r80.ge4a64e4c1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Translations editor for Mac, Windows and Unix"
 arch=($CARCH)
