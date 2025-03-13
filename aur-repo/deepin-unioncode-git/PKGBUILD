@@ -3,7 +3,7 @@
 pkgbase=deepin-unioncode-git
 pkgname=deepin-unioncode-git
 pkgver=1.4.6.r3.gf9161e9
-pkgrel=1
+pkgrel=2
 pkgdesc="IDE authored by deepin"
 arch=($CARCH)
 url="https://github.com/linuxdeepin/deepin-unioncode"
