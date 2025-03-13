@@ -2,7 +2,7 @@
 
 pkgbase=qdap-git
 pkgname=qdap-git
-pkgver=r42.2ef8b7d
+pkgver=r59.e98842a
 pkgrel=1
 groups=()
 pkgdesc="cmsis-dap upper by a Qt"
