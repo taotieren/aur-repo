@@ -54,6 +54,12 @@ pkgver() {
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}"/${pkgname}/
+  git config user.email "admin@taotieren.com"
+  git config user.name "taotieren"
+  git remote add taotieren https://github.com/taotieren/DSView.git
+  git fetch --all
+  git merge taotieren/fix-build
+  git merge taotieren/update-zh
   sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
 }
 
