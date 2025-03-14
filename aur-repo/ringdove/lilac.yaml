@@ -2,12 +2,12 @@ maintainers:
   - github: taotieren
 pre_build_script: aur_pre_build(maintainers=['taotieren'])
 post_build: aur_post_build
-repo_depends:
-  - camv-rnd
-  - librnd
-  - pcb-rnd
-  - sch-rnd
-  - route-rnd
+# repo_depends:
+#   - camv-rnd
+#   - librnd
+#   - pcb-rnd
+#   - sch-rnd
+#   - route-rnd
 update_on:
   - source: aur
     aur: ringdove
