@@ -31,7 +31,7 @@ Server = https://aur-repo.taotieren.com/aur-repo/$arch
 ## [aur-repo-mirrorlist](https://github.com/taotieren/repo-misc-tools/tree/main/mirrorlist)
 
 ```bash
-yay -Ss aur-repo-mirrorlist-git
+pacman -Syu aur-repo-mirrorlist-git
 ```
 
 ```ini
