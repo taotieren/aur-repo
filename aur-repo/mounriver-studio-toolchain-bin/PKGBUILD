@@ -49,7 +49,7 @@ package_mounriver-studio-toolchain-openocd-bin() {
 
     pkgdesc="MRS Toolchain OpenOCD supports erasure, programming, verification and debugging of the chip."
 
-    cd "${srcdir}"/${pkgbase}-${pkgver}/OpenOCD/
+    cd "${srcdir}"/${pkgbase}-${pkgver}/OpenOCD/OpenOCD/
     _install 644 bin -name "*.cfg"
     _install 755 bin -name "openocd"
     _install 644 share
