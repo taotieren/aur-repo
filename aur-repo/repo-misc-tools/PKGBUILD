@@ -50,6 +50,6 @@ package_aur-repo-mirrorlist-git() {
 
     cd "${srcdir}/${pkgbase}/mirrorlist/"
 
-    install -m0644 aur-repo-mirrorlist -t "${pkgdir}/etc/pacman.d/"
-    install -m0644 aur-repo.urls -t "${pkgdir}/etc/debuginfod/"
+    install -Dm0644 aur-repo-mirrorlist -t "${pkgdir}/etc/pacman.d/"
+    install -Dm0644 aur-repo.urls -t "${pkgdir}/etc/debuginfod/"
 }
