@@ -18,17 +18,25 @@ Add the following lines to `/etc/pacman.conf`:
 
 ```ini
 [aur-repo]
-# IPv4 & IPv6
-Server = https://aur-repo.taotieren.com:3443/aur-repo/$arch
+## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
 Server = https://fun.ie8.pub:2443/aur-repo/$arch
-Server = http://fun.ie8.pub:2442/aur-repo/$arch
+```
 
-# Only IPv4 (When https is enabled, http returns the https address.)
-# Server = http://home.taotieren.com:12380/aur-repo/$arch
+```ini
+[aur-repo]
+## China Mobile Network (50Mbps) (ipv6, http, https)
+Server = https://aur-repo.taotieren.com/aur-repo/$arch
+```
 
-# Only IPv6 (When https is enabled, http returns the https address.)
-# Server = http://aur-repo.taotieren.com:12380/aur-repo/$arch
+## [aur-repo-mirrorlist](https://github.com/taotieren/repo-misc-tools/tree/main/mirrorlist)
 
+```bash
+yay -Ss aur-repo-mirrorlist-git
+```
+
+```ini
+[aur-repo]
+Include = /etc/pacman.d/aur-repo-mirrorlist
 ```
 
 Add and trust my GPG key in pacman keyring:
@@ -38,14 +46,16 @@ sudo pacman-key --recv-keys FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 sudo pacman-key --lsign-key FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 ```
 
-rsync
+## rsync
 
 ```bash
-# Only IPv4
+## Only IPv6
+## Status: OK
 rsync rsync://aur-repo.taotieren.com
 rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
 
-# Only IPv6
-rsync rsync://aur-repo.taotieren.com
-rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
+## Only IPv4
+## Status: NO
+# rsync rsync://aur-repo.taotieren.com
+# rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
 ```

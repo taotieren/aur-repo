@@ -1,23 +1,25 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=repo-misc-tools-git
+pkgbase=repo-misc-tools-git
+pkgname=(
+    repo-misc-tools-git
+    aur-repo-mirrorlist-git
+)
 pkgver=r88.f1192e6
 pkgrel=3
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
 license=('MIT')
-provides=(${pkgname%-git})
-conflicts=(${pkgname%-git})
 depends=('sh'
     #     'systemd-libs'
 )
 makedepends=('git')
-source=("${pkgname}::git+${url}.git")
+source=("${pkgbase}::git+${url}.git")
 sha256sums=('SKIP')
 
 pkgver() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgbase}"
     (
         set -o pipefail
         git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
@@ -26,13 +28,28 @@ pkgver() {
 }
 
 prepare() {
-    git -C "${srcdir}/${pkgname}" clean -dfx
+    git -C "${srcdir}/${pkgbase}" clean -dfx
 }
 
-package() {
-    cd "${srcdir}/${pkgname}/cleanup-repo-tools/"
+package_repo-misc-tools-git() {
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
+
+    cd "${srcdir}/${pkgbase}/cleanup-repo-tools/"
     install -Dm0755 cleanup-repo-tool.py "${pkgdir}/usr/bin/cleanup-repo-tool"
     install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.service
     install -Dm0644 -t "${pkgdir}/usr/lib/systemd/system" cleanup-repo-tool.timer
     install -dm0755 "${pkgdir}/var/log/cleanup-repo-tool"
+}
+
+package_aur-repo-mirrorlist-git() {
+    pkgdesc="Arch Linux aur-repo mirrorlist or use by pacman"
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
+    backup=(etc/pacman.d/aur-repo-mirrorlist)
+
+    cd "${srcdir}/${pkgbase}/mirrorlist/"
+
+    install -m0644 aur-repo-mirrorlist -t "${pkgdir}/etc/pacman.d/"
+    install -m0644 aur-repo.urls -t "${pkgdir}/etc/debuginfod/"
 }
