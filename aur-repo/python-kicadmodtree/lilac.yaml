@@ -1,14 +1,13 @@
 maintainers:
   - github: taotieren
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - python-asteval-git
-  - python-cadquery
-  # - python-ocp
+# repo_depends:
+#   - python-asteval-git
 update_on:
   - source: gitlab
     gitlab: kicad/libraries/kicad-footprint-generator

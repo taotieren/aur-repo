@@ -6,10 +6,9 @@ pre_build_script: |
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - python-kinparse
-  - python-hierplace
-  - python-pytest-runner
+# repo_depends:
+#   - python-kinparse
+#   - python-hierplace
 update_on:
   - source: pypi
     pypi: kinet2pcb
