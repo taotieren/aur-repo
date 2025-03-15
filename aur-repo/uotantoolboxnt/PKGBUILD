@@ -44,8 +44,7 @@ noextract=()
 prepare() {
     git -C "${srcdir}/UotanToolboxNT.Binary" clean -dfx
     cd ${srcdir}/${_name}-${pkgver}
-    dotnet nuget locals global-packages --clear
-    dotnet nuget locals all --clear
+    dotnet clean && dotnet restore
 }
 
 build() {
