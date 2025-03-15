@@ -4,5 +4,7 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
+repo_depends:
+  - librnd4-svn
 update_on:
   - source: vcs
