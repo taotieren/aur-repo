@@ -5,7 +5,7 @@ description: Descriptive configuration data for lilac packaging
 type: object
 properties:
   build_prefix:
-    description: The prefix of build command to be used. E.g. extra-x86_64, multilib or archlinuxcn-x86_64.
+    description: The prefix of build command to be used. E.g. extra-x86_64, multilib, aur-repo-x86_64 or archlinuxcn-x86_64.
     type: string
     default: "extra-$(uname -m)"
     enum:
@@ -14,6 +14,7 @@ properties:
       - multilib
       - multilib-archlinuxcn
       - extra-aarch64
+      - aur-repo-x86_64
   pre_build:
     description: Name of function to be used as the pre_build function.
     type: string
