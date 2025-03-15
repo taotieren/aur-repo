@@ -48,6 +48,12 @@ sudo pacman-key --recv-keys FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 sudo pacman-key --lsign-key FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 ```
 
+## [devtools-aur-repo](https://github.com/taotieren/repo-misc-tools/tree/main/devtools-aur-repo)
+
+```bash
+pacman -Syu devtools-aur-repo-git
+```
+
 ## rsync
 
 ```bash
