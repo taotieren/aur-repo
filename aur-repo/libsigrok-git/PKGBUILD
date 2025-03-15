@@ -3,8 +3,8 @@
 # Contributor: veox <veox at wemakethings dot net>
 # Contributor: Vuokko <vuokko@msn.com>
 
-_gitname='libsigrok'
-pkgname="${_gitname}-git"
+pkgname=libsigrok-git
+_gitname=${pkgname%-git}
 pkgver=0.2.1.r4392.gf06f7881
 pkgrel=3
 pkgdesc="Client software that supports various hardware logic analyzers, core library (git version)"
