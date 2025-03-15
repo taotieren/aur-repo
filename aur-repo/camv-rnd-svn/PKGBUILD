@@ -2,7 +2,7 @@
 
 pkgname=camv-rnd-svn
 pkgver=r962
-pkgrel=1
+pkgrel=2
 pkgdesc="free/open source, small, flexible viewer for PCB-related CAM file formats"
 arch=($CARCH)
 url="http://www.repo.hu/projects/camv-rnd"
