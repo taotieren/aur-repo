@@ -13,7 +13,6 @@ maintainers:
   - github: taotieren
 post_build_script: |
   git_pkgbuild_commit()
-update_on:
 repo_depends:
   - libserialport-git
 update_on:

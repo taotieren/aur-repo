@@ -4,6 +4,8 @@ This repository contains the packages I maintain in [AUR](https://aur.archlinux.
 
 Powered by [lilac](https://github.com/archlinuxcn/lilac).
 
+[![Packaging consistency check](https://github.com/taotieren/aur-repo/actions/workflows/test.yml/badge.svg)](https://github.com/taotieren/aur-repo/actions/workflows/test.yml)
+
 [![Maintainer](https://img.shields.io/static/v1?label=maintainer&message=taotieren&color=097788)](https://aur.archlinux.org/account/taotieren)
 
 <a href="https://http3.wcode.net/?q=aur-repo.taotieren.com" target="_blank">
