@@ -1,7 +1,7 @@
 # Maintainer: Hiroshi Hatake <cosmo0920.wp[at]gmail.com>
 
 pkgname=pgroonga
-pkgver=3.2.5
+pkgver=4.0.1
 pkgrel=0
 pkgdesc="Fast fulltext search on PostgreSQL."
 arch=('i686' 'x86_64' 'armv7h' 'aarch64')
@@ -10,7 +10,7 @@ license=('custom:PostgreSQL')
 # source=("http://packages.groonga.org/source/pgroonga/$pkgname-$pkgver.tar.gz"
 #         "http://packages.groonga.org/source/pgroonga/$pkgname-$pkgver.tar.gz.asc")
 source=(https://github.com/pgroonga/pgroonga/archive/refs/tags/${pkgver}.tar.gz)
-sha256sums=('18cf44390b72ef685d13811cabc8e90ee76164b887de93fd3832f1b3c0d77126')
+sha256sums=('158be22b2de8d171117668625ee68e2d4c72c0ab0a26a22e74230bb8f9faf0b4')
 depends=('groonga')
 makedepends=('postgresql' 'clang' 'llvm')
 # validpgpkeys=(2701F317CFCCCB975CADE9C2624CF77434839225)
