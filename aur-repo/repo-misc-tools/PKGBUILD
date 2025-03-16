@@ -7,7 +7,7 @@ pkgname=(
     devtools-aur-repo-git
 )
 pkgver=r92.b5afa9b
-pkgrel=2
+pkgrel=3
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
