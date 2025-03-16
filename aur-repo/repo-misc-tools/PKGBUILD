@@ -4,6 +4,7 @@ pkgbase=repo-misc-tools-git
 pkgname=(
     repo-misc-tools-git
     aur-repo-mirrorlist-git
+    devtools-aur-repo-git
 )
 pkgver=r92.b5afa9b
 pkgrel=1
@@ -52,4 +53,16 @@ package_aur-repo-mirrorlist-git() {
 
     install -Dm0644 aur-repo-mirrorlist -t "${pkgdir}/etc/pacman.d/"
     install -Dm0644 aur-repo.urls -t "${pkgdir}/etc/debuginfod/"
+}
+
+package_devtools-aur-repo-git() {
+    pkgdesc="Tools for Arch Linux package maintainers - aur-repo"
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
+    depends=(devtools)
+
+    cd "${srcdir}/${pkgbase}/devtools-aur-repo/"
+
+    install -Dm0644 aur-repo-x86_64-build -t "${pkgdir}/usr/bin/"
+    install -Dm0644 aur-repo.conf -t "${pkgdir}/usr/share/devtools/pacman.conf.d/"
 }
