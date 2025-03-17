@@ -53,12 +53,12 @@ pkgver() {
 
 prepare() {
   git -C "${srcdir}/${pkgbase}" clean -dfx
-  cd "${srcdir}/${pkgbase}"
-  git config --global user.email "admin@taotieren.com"
-  git config --global user.name "taotieren"
-  git remote add sigrok_slogic https://github.com/sipeed/sigrok_slogic.git
-  git fetch --all
-  git merge sigrok_slogic/hardware-sipeed-slogic-analyzer-support
+  #   cd "${srcdir}/${pkgbase}"
+  #   git config --global user.email "admin@taotieren.com"
+  #   git config --global user.name "taotieren"
+  #   git remote add sigrok_slogic https://github.com/sipeed/sigrok_slogic.git
+  #   git fetch --all
+  #   git merge sigrok_slogic/hardware-sipeed-slogic-analyzer-support
   #   hardware-sipeed-slogic-analyzer-support
 }
 
