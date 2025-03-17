@@ -9,6 +9,7 @@ arch=($CARCH)
 url="https://wiki.sipeed.com/hardware/zh/logic_analyzer/combo8/index.html"
 license=('GPL-3.0-or-later')
 depends=(
+  gcc-libs
   glib2
   glibc
   bluez-libs
