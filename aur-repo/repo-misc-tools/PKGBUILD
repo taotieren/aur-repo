@@ -7,7 +7,7 @@ pkgname=(
     devtools-aur-repo-git
 )
 pkgver=r92.b5afa9b
-pkgrel=3
+pkgrel=4
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
@@ -63,6 +63,6 @@ package_devtools-aur-repo-git() {
 
     cd "${srcdir}/${pkgbase}/devtools-aur-repo/"
 
-    install -Dm0644 aur-repo-x86_64-build -t "${pkgdir}/usr/bin/"
+    install -Dm0755 aur-repo-x86_64-build -t "${pkgdir}/usr/bin/"
     install -Dm0644 aur-repo.conf -t "${pkgdir}/usr/share/devtools/pacman.conf.d/"
 }
