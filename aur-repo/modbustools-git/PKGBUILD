@@ -57,6 +57,7 @@ build() {
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_SHARED_LIBS=OFF \
+        -Wdeprecated-declarations \
         -Wno-dev \
         -Bbuild \
         -GNinja
