@@ -62,10 +62,10 @@ build() {
     --prefix=/usr \
     --enable-cxx \
     --enable-shared \
-    --disable-static \
     --disable-java \
     --disable-ruby \
     --disable-python
+  #   --disable-static \
 
   make
 }
