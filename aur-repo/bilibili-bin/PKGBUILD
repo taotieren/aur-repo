@@ -10,10 +10,10 @@
 pkgname=bilibili-bin
 _pkgver=1.16.2
 _subver=4
-pkgver="${_pkgver}_${subver}"
+pkgver="${_pkgver}_${_subver}"
 _electronversion=33
 epoch=5
-pkgrel=2
+pkgrel=1
 pkgdesc="Bilibili official desktop client.(Prebuilt version.Use system-wide electron)哔哩哔哩官方客户端linux移植版。"
 arch=(
     'aarch64'
