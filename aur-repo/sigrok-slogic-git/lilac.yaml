@@ -9,7 +9,5 @@ repo_depends:
 update_on:
   - source: github
     github: sipeed/sigrok_slogic
-# - source: github
-#   github: sigrokproject/libsigrok
 # use_max_tag: true
 # prefix: v
