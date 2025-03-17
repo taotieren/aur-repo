@@ -38,8 +38,8 @@ makedepends=(
 )
 conflicts=("${pkgname%-git}" libsigrok libsigrok-git)
 provides=("${pkgname%-git}" libsigrok libsigrok-git)
-# source=("${pkgbase}::git+https://github.com/sipeed/sigrok_slogic.git")
-source=("${pkgbase}::git+https://github.com/sigrokproject/libsigrok.git")
+source=("${pkgbase}::git+https://github.com/sipeed/sigrok_slogic.git")
+# source=("${pkgbase}::git+https://github.com/sigrokproject/libsigrok.git")
 md5sums=('SKIP')
 
 pkgver() {
