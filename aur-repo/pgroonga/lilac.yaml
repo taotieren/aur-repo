@@ -1,15 +1,15 @@
 maintainers:
   - github: taotieren
 build_prefix: aur-repo-x86_64
-# pre_build_script: aur_pre_build(maintainers=['cosmo0920'])
-# post_build: aur_post_build
+pre_build_script: aur_pre_build(maintainers=['cosmo0920'])
+post_build: aur_post_build
 # repo_depends:
 #   - groonga
 
 update_on:
-  # - source: aur
-  #   aur: pgroonga
-  - source: github
-    github: pgroonga/pgroonga
-    use_max_tag: true
-    # prefix: v
+  - source: aur
+    aur: pgroonga
+# - source: github
+#   github: pgroonga/pgroonga
+#   use_max_tag: true
+# prefix: v
