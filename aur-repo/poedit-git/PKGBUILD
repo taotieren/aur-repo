@@ -44,6 +44,7 @@ makedepends=(
     openssl
     pkgconf
     webkit2gtk-4.1
+    wxwidgets-gtk3
     xmlto
     zlib)
 checkdepends=()
