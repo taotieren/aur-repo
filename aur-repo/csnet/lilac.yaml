@@ -1,0 +1,21 @@
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  update_pkgver_and_pkgrel(_G.newver.replace('-', '.'))
+
+# pre_build_script: |
+# update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: regex
+    url: https://aite.xyz/product/csnet/client
+    regex: '(\d+-\d+-\d+)'
+    # include_regex: ".*-*-*"
+# - source: manual
+#   manual: 1
