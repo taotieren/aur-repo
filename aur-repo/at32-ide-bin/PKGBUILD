@@ -8,7 +8,7 @@ pkgdesc="AT32 IDE 是个跨平台 ARM 嵌入式系统的软件开发环境。 �
 MCU。"
 arch=('x86_64')
 url="https://www.arterytek.com/cn/support/index.jsp"
-license=('LicenseRef-Commercial')
+license=('LicenseRef-scancode-commercial-license')
 provides=(at32-ide AT32IDE)
 conflicts=(at32-ide AT32IDE)
 replaces=()

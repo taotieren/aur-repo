@@ -7,7 +7,7 @@ pkgrel=1
 pkgdesc="Artery AT MCU Bootloader ISP 协议文档"
 arch=(any)
 url="https://www.arterytek.com/cn/support/index.jsp?index=5"
-license=('LicenseRef-Commercial')
+license=('LicenseRef-scancode-commercial-license')
 provides=(${pkgbase} ${pkgname})
 conflicts=(${pkgbase} ${pkgname})
 replaces=()

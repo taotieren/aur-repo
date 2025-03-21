@@ -17,7 +17,7 @@ depends=(
     glibc)
 makedepends=(
     libarchive)
-license=('LicenseRef-Commercial')
+license=('LicenseRef-scancode-commercial-license')
 url="https://modao.cc/feature/downloads.html"
 # https://cdn-release.modao.cc/desktop/prod-1.5.0/linux/modao-linux-x64-1.5.0.deb
 source_x86_64=("${pkgname}-${pkgver}.deb::https://cdn-release.modao.cc/desktop/prod-${pkgver}/linux/modao-linux-x64-${pkgver}.deb")
