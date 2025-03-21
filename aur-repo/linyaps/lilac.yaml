@@ -9,6 +9,6 @@ update_on:
   - source: github
     github: OpenAtom-Linyaps/linyaps
     use_max_tag: true
-    prefix: V
+    # prefix: V
     # use_latest_release: true
 

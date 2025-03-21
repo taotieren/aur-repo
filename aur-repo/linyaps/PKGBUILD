@@ -48,7 +48,7 @@ optdepends=(
 )
 install=${pkgname}.install
 source=(
-  "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/V${pkgver}.tar.gz"
+  "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
   "${pkgname}.install"
 )
 sha256sums=('73a70e455e02ba26e489cc1b7b11b68bbf3e638fd50e7030910392c07fa04f84'
