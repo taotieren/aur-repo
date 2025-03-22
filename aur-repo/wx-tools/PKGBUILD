@@ -58,7 +58,7 @@ build() {
     cd "${srcdir}/${pkgname}-${pkgver}"
 
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
-    cmake -DCMAKE_BUILD_TYPE=None \
+    cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DWXT_GENERATE_MSIX:BOOL=OFF \
         -B build \
