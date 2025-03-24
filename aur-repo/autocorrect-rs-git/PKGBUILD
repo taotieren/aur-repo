@@ -2,7 +2,7 @@
 
 pkgbase=autocorrect-rs-git
 pkgname=autocorrect-git
-pkgver=2.13.2.r6.gd6ea7c1
+pkgver=2.13.3.r0.gb7bb0a8
 pkgrel=1
 pkgdesc="A linter and formatter to help you to improve copywriting, correct spaces, words, and punctuations between CJK (Chinese, Japanese, Korean)."
 arch=('x86_64')
