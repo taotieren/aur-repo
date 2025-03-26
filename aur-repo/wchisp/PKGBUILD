@@ -26,6 +26,12 @@ install=
 source=("${pkgname}-${pkgver}.tar.gz::https://static.crates.io/crates/${pkgname}/${pkgname}-${pkgver}.crate")
 sha256sums=('b915a23df6c2e6d6f7d8dd680ea33bc78123040e3ff8860bcc68cf103c7b021d')
 
+prepare() {
+    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
+}
+
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
     export RUSTUP_TOOLCHAIN=stable
@@ -41,7 +47,7 @@ check() {
 
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
-#     install -Dm0755 -t "${pkgdir}/usr/bin/" "target/release/${pkgname}"
+    #     install -Dm0755 -t "${pkgdir}/usr/bin/" "target/release/${pkgname}"
     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/50-wchisp.rules" <<EOF
 SUBSYSTEM=="usb" ATTR{idVendor}="1a86" ATTR{idProduct}=="8010" MODE:="0666"

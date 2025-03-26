@@ -29,8 +29,9 @@ sha256sums=('SKIP')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    #     cd "${srcdir}/${pkgname}/"
-    #     git tag --delete nightly
+    cd "${srcdir}/${pkgname}/"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 pkgver() {

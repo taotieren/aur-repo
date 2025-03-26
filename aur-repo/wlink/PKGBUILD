@@ -25,6 +25,12 @@ install=
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('817adff68df1883d489cfe698ab8b05495ed666bd5cab4d2df67a5198b55a9a3')
 
+prepare() {
+    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
+}
+
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
     cargo build --release --all-features

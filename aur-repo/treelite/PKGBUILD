@@ -18,7 +18,6 @@ makedepends=(
     pkgconf
     nlohmann-json
     rapidjson
-
     python
     python-numpy
     python-scipy

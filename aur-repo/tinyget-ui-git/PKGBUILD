@@ -55,20 +55,35 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}/src-tauri"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
     cd "${srcdir}/${pkgname}"
+    export CARGO_HOME="${srcdir}/.cargo"
+    {
+        echo -e '\n'
+        #echo 'build_from_source=true'
+        echo 'link-workspace-packages=true'
+        echo 'fetch-retry-maxtimeout=10000'
+        echo "cache-dir="${srcdir}"/.pnpm_cache"
+        echo "store-dir="${srcdir}"/.pnpm_store"
+        echo "shamefully-hoist=true"
+        echo "virtual-store-dir-max-length=80"
+    } >>.npmrc
 
-    export PNPM_HOME="$HOME/.local/share/pnpm"
-    export PATH="$PNPM_HOME:$PATH"
-    mkdir -p "$PNPM_HOME"
-    pnpm setup
-    pnpm install
-    mkdir -pv dist
-    cd src-tauri
-    cargo build --release --all-features
+    NODE_ENV=development pnpm install --force
+    NODE_ENV=production pnpm tauri build -b deb
+
+    #     export PNPM_HOME="$HOME/.local/share/pnpm"
+    #     export PATH="$PNPM_HOME:$PATH"
+    #     mkdir -p "$PNPM_HOME"
+    #     pnpm setup
+    #     pnpm install
+    #     mkdir -pv dist
+    #     cd src-tauri
+    #     cargo build --release --all-features
 
 }
 
