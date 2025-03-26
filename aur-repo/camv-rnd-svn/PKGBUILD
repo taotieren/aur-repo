@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=camv-rnd-svn
-pkgver=r967
+pkgver=r975
 pkgrel=1
 pkgdesc="free/open source, small, flexible viewer for PCB-related CAM file formats"
 arch=($CARCH)
