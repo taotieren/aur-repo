@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 pre_build_script: |
-  aur_pre_build(maintainers='Dominiquini')
+  aur_pre_build(maintainers='getzze')
 
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-click-option-group'])
 
