@@ -12,6 +12,7 @@ conflicts=(${pkgname%-lts})
 options=()
 depends=(
   sh
+  bpf
   dtc
   gcc-libs
   glibc
