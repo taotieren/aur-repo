@@ -2,7 +2,7 @@
 
 pkgname=cargo-thanku
 pkgver=0.4.2
-pkgrel=0
+pkgrel=1
 pkgdesc="A command-line tool for generating acknowledgments for your Rust project dependencies."
 arch=($CARCH)
 url="https://github.com/YuniqueUnic/cargo-thanku"
