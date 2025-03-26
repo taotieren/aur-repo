@@ -34,16 +34,27 @@ sha256sums=('48b8c9795c66a7b35ed2060c4d45648c70433e8f29b4e7f033f2da85071f4ad6')
 
 prepare() {
     cd "${srcdir}/${pkgname}-${pkgver}/src-tauri"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
 
-    pnpm install
-    cd src-tauri
-    cargo build --release
-    #     pnpm tauri build
+    export CARGO_HOME="${srcdir}/.cargo"
+    {
+        echo -e '\n'
+        #echo 'build_from_source=true'
+        echo 'link-workspace-packages=true'
+        echo 'fetch-retry-maxtimeout=10000'
+        echo "cache-dir="${srcdir}"/.pnpm_cache"
+        echo "store-dir="${srcdir}"/.pnpm_store"
+        echo "shamefully-hoist=true"
+        echo "virtual-store-dir-max-length=80"
+    } >>.npmrc
+
+    NODE_ENV=development pnpm install --force
+    NODE_ENV=production pnpm tauri build -b deb
 }
 
 # check() {
