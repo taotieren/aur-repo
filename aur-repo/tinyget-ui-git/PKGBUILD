@@ -2,7 +2,7 @@
 
 pkgname=tinyget-ui-git
 pkgver=r10.d8ecddb
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Tinyget is a Python package management tool, handling mainstream system package managers such as apt (used in Debian, Ubuntu, etc.), dnf (used in Fedora, CentOS, etc.) and pacman (used in ArchLinux, etc.)."
 arch=('any')
@@ -31,10 +31,9 @@ makedepends=(
     gettext
     pnpm
     openssh
-    cargo
+    rust
     cargo-tauri
     libayatana-appindicator
-
 )
 optdepends=('tinyget: A cross-distro package management tool.')
 checkdepends=()

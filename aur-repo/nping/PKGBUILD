@@ -16,7 +16,7 @@ depends=(
     glibc
 )
 makedepends=(
-    cargo
+    rust
 )
 backup=()
 options=(!debug !strip !lto)

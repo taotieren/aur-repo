@@ -2,7 +2,7 @@
 
 pkgname=jmcomic-downloader
 pkgver=0.14.0
-pkgrel=2
+pkgrel=3
 pkgdesc="禁漫天堂 18comic.vip jmcomic 18comic 的多线程下载器，带图形界面，已打包exe，带收藏夹，免费下载收费的漫画，下载速度飞快"
 arch=($CARCH)
 url="https://github.com/lanyeeee/jmcomic-downloader"
@@ -22,7 +22,7 @@ depends=(
     webkit2gtk-4.1
 )
 makedepends=(
-    cargo
+    rust
     cargo-tauri
     pnpm
 )

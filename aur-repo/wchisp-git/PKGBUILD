@@ -4,9 +4,7 @@ pkgname=wchisp-git
 pkgver=0.3.0.r13.gf18828c
 pkgrel=2
 pkgdesc="WCH ISP Tool in Rust"
-arch=(x86_64
-    aarch64
-    riscv64)
+arch=($CARCH)
 url="https://github.com/ch32-rs/wchisp"
 license=('GPL-2.0-only')
 provides=(${pkgname%-git})
@@ -16,11 +14,12 @@ depends=(
     gcc-libs
     glibc
     libusb
-    systemd-libs)
+    systemd-libs
+)
 makedepends=(
-    cargo
     git
-    rust)
+    rust
+)
 backup=()
 options=('!lto')
 install=

@@ -26,7 +26,7 @@ depends=(
     systemd-libs
 )
 makedepends=(
-    cargo
+    rust
     cmake
     git
     pkgconf
@@ -49,6 +49,8 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {

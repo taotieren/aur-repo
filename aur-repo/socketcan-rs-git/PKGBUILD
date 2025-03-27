@@ -13,7 +13,7 @@ replaces=()
 depends=(gcc-libs
     glibc)
 makedepends=(
-    cargo
+    rust
     git
     mold)
 checkdepends=()
@@ -34,6 +34,9 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {

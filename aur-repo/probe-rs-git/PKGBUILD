@@ -28,7 +28,7 @@ depends=(gcc-libs
     libftdi
     systemd-libs)
 makedepends=(git
-    cargo
+    rust
     cmake
     openssl
     pkgconf)
@@ -43,6 +43,7 @@ prepare() {
     cd "${srcdir}/${pkgname}"
     export RUSTUP_TOOLCHAIN=stable
     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 pkgver() {

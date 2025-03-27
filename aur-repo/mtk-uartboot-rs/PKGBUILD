@@ -10,10 +10,14 @@ license=('AGPL-3.0-or-later')
 provides=(${pkgname} ${pkgname%-rs})
 conflicts=(${pkgname} ${pkgname%-rs})
 replaces=()
-depends=(gcc-libs
-    glibc)
-makedepends=(git
-    cargo)
+depends=(
+    gcc-libs
+    glibc
+)
+makedepends=(
+    git
+    rust
+)
 backup=()
 options=('!strip' '!debug' '!lto')
 #install=${pkgname}.install

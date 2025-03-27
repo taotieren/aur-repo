@@ -14,11 +14,12 @@ depends=(
     gcc-libs
     glibc
     libusb
-    systemd-libs)
+    systemd-libs
+)
 makedepends=(
-    cargo
     git
-    rust)
+    rust
+)
 backup=()
 options=('!strip' '!debug')
 install=

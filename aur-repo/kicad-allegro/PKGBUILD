@@ -10,10 +10,14 @@ license=("unkown")
 provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
-depends=(glibc
-    gcc-libs)
-makedepends=(cargo
-    git)
+depends=(
+    glibc
+    gcc-libs
+)
+makedepends=(
+    rust
+    git
+)
 optdepends=('kicad')
 backup=()
 options=()
@@ -32,6 +36,9 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}/"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {

@@ -13,8 +13,10 @@ replaces=()
 depends=(
     gcc-libs
     glibc)
-makedepends=(git
-    cargo)
+makedepends=(
+    git
+    rust
+)
 optdepends=('iptables: Linux kernel packet control tool (using legacy interface)')
 backup=()
 options=('!lto')

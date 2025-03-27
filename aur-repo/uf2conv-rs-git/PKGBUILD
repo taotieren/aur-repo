@@ -10,10 +10,14 @@ license=('MIT')
 provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
-depends=(gcc-libs
-    glibc)
-makedepends=(git
-    cargo)
+depends=(
+    gcc-libs
+    glibc
+)
+makedepends=(
+    git
+    rust
+)
 backup=()
 options=()
 install=
@@ -33,8 +37,8 @@ prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}"
     export RUSTUP_TOOLCHAIN=stable
-    #     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
-    cargo fetch --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {

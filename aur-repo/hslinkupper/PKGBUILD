@@ -26,10 +26,9 @@ depends=(
     webkit2gtk-4.1
 )
 makedepends=(
-    git
     hidapi
     pnpm
-    cargo
+    rust
     cargo-tauri
 )
 optdepends=()
