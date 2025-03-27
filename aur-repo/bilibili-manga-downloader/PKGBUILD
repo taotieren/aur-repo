@@ -2,7 +2,7 @@
 
 pkgname=bilibili-manga-downloader
 pkgver=0.11.1
-pkgrel=2
+pkgrel=3
 pkgdesc="哔哩哔哩漫画 bilibili漫画 B漫 的多线程下载器，带图形界面、导出cbz"
 arch=($CARCH)
 url="https://github.com/lanyeeee/bilibili-manga-downloader"
