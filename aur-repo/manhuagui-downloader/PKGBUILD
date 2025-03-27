@@ -2,7 +2,7 @@
 
 pkgname=manhuagui-downloader
 pkgver=0.4.2
-pkgrel=4
+pkgrel=5
 pkgdesc="漫画柜 manhuagui 看漫画 下载器，带图形界面，支持下载隐藏内容、导出PDF"
 arch=($CARCH)
 url="https://github.com/lanyeeee/manhuagui-downloader"
