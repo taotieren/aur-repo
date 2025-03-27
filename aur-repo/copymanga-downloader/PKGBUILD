@@ -66,6 +66,7 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}/"
 
+    install -Dvm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
     install -Dvm755 src-tauri/target/release/${pkgname} -t ${pkgdir}/usr/bin
     install -Dvm644 src-tauri/icons/icon.png ${pkgdir}/usr/share/icons/hicolor/512x512/apps/${pkgname}.png
     install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
