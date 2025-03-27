@@ -19,9 +19,11 @@ depends=(
     gtk3
     hicolor-icon-theme
     libsoup3
+    openssl
     webkit2gtk-4.1
 )
 makedepends=(
+    git
     rust
     cargo-tauri
     pnpm
