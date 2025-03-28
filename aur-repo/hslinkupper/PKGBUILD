@@ -39,7 +39,7 @@ source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz"
 )
 noextract=()
 sha256sums=('27b630a7d515380e21a48787eff4f8c1c2cbd899f35dd1943199da6fb7bbfd10'
-    '597cc3f412fc855d02e513a71c2d23e40ac9fc84fa4256ed44ea8ec90f457006')
+            'f8d3530f952be3ce378e7690ef34fe0eff76e978f75242a59d781fa561d20c71')
 
 prepare() {
     cd "${srcdir}/${_name}-${pkgver}/src-tauri"

@@ -11,14 +11,14 @@
 #   sudo udevadm trigger
 
 # The device group for newer versions of Linux such as Arch is uucp.
-# sudo usermod -aG uucp builduser
+# sudo usermod -aG uucp $USER
 # or
-# sudo gpasswd -a builduser uucp
+# sudo gpasswd -a $USER uucp
 
 # Older Linux device groups such as Ubuntu are plugdev
-# sudo usermod -aG plugdev builduser
+# sudo usermod -aG plugdev $USER
 # or
-# sudo gpasswd -a builduser plugdev
+# sudo gpasswd -a $USER plugdev
 
 ACTION!="add|change", GOTO="hslink_rules_end"
 
