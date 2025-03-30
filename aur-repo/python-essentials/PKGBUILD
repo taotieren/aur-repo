@@ -14,8 +14,6 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
-    python-isort
-    python-typing_extensions
 )
 makedepends=(
     flake8
@@ -23,6 +21,8 @@ makedepends=(
     python-pydantic
     python-black
     python-flake8-black
+    python-isort
+    python-typing_extensions
     python-hatchling
     python-build
     python-installer
