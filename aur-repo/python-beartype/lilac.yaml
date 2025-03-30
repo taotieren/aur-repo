@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
 pre_build_script: |
-  aur_pre_build(maintainers='alhirzel')
+  aur_pre_build(maintainers=['alhirzel', 'redponike'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-beartype'])
 
   for line in edit_file('PKGBUILD'):
