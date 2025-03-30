@@ -18,9 +18,11 @@ depends=(
 makedepends=(
     flake8
     mypy
+    python-pydantic
     python-black
     python-flake8-black
     python-hatchling
+    python-isort
     python-typing_extensions
     python-build
     python-installer
