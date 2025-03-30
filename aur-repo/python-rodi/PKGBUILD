@@ -40,11 +40,11 @@ sha256sums=('f533e315d84b63824efcc67526a156ad5fb0a158f1ccbc41e0db3944d0c08693')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    rm -rf LICENSE
     python -m build --wheel --no-isolation
 }
 
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
+
 }
