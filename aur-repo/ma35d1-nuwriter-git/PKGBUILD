@@ -37,6 +37,7 @@ package() {
     cd "${srcdir}/${pkgname%-git}"
     install -Dm644 "${srcdir}/${pkgname%-git}/gui/images/NuWriter.ico" "${pkgdir}/usr/share/pixmaps/${pkgname%-git}.ico"
     cp -ra ${srcdir}/${pkgname%-git}/ "${pkgdir}/usr/share/"
+    rm -rf "${pkgdir}/usr/share/${pkgname%-git}/.git"
 
     install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/${pkgname%-git}" <<EOF
 #!/bin/bash
