@@ -18,4 +18,4 @@ update_on:
     regex: '(\d+-\d+-\d+)'
     # include_regex: ".*-*-*"
   - source: manual
-    manual: 1
+    manual: 3
