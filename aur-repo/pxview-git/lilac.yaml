@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='yjun')
+
+post_build: aur_post_build
+
+repo_depends:
+  - saribbon
+
+update_on:
+  - source: aur
+    aur: pxview-git
