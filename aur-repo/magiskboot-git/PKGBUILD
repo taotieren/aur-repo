@@ -38,7 +38,10 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}"
-    python ./build.py --build_binary
+
+    python3 ./build.py --setup_ndk
+    python3 ./build.py --build_binary
+
 }
 
 package() {
