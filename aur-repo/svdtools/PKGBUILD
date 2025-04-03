@@ -35,7 +35,7 @@ export CARGO_TARGET_DIR=target
 
 prepare() {
   cd "${srcdir}/${pkgbase}-${pkgver}"
-  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+  cargo fetch --offline --target "$(rustc -vV | sed -n 's/host: //p')"
   cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
