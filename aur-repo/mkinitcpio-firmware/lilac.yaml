@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers='LinusDierheimer')
+
+post_build: aur_post_build
+
+repo_depends:
+  - aic94xx-firmware
+  - ast-firmware
+  - wd719x-firmware
+
+update_on:
+  - source: aur
+    aur: mkinitcpio-firmware
