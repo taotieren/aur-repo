@@ -11,6 +11,7 @@ repo_depends:
   - tkimg
   - python-yapps2
   - linkchecker
+  - termcap
   # - python-pyodbc
   # - gtksourceview2
   # - python-espeak
