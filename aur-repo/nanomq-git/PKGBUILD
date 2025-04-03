@@ -139,6 +139,7 @@ package_nanomq-git() {
         -DNNG_ENABLE_TLS=ON \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-dev \
         -B build_nanomq \
         -G Ninja
@@ -159,6 +160,7 @@ package_nanomq-sqlite-git() {
         -DNNG_ENABLE_SQLITE=ON \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-dev \
         -B build_nanomq-sqlite \
         -G Ninja
@@ -182,6 +184,7 @@ package_nanomq-msquic-git() {
         -DNNG_ENABLE_SQLITE=ON \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-dev \
         -B build_nanomq-msquic \
         -G Ninja
@@ -218,6 +221,7 @@ package_nanomq-full-git() {
         -DBUILD_BENCH=ON \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-dev \
         -B build_nanomq-full \
         -G Ninja
