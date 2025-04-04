@@ -140,7 +140,7 @@ build() {
   eatmydata make -O -j$((1 + $(nproc))) default pycheck V=1
   # Note that the package build covers html docs
   eatmydata make -O -j$((1 + $(nproc))) manpages V=1
-  eatmydata make -O -j$((1 + $(nproc))) translateddocs V=1
+  #   eatmydata make -O -j$((1 + $(nproc))) translateddocs V=1
   eatmydata make -O -j$((1 + $(nproc))) default pycheck V=1
 }
 
