@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=librnd4-svn
-pkgver=r37852
+pkgver=r37853
 pkgrel=1
 pkgdesc="free/open source, flexible, modular two-dimensional CAD engine"
 arch=($CARCH)
