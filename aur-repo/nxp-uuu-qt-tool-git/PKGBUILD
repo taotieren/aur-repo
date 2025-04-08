@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=nxp-uuu-qt-tool-git
-pkgver=1.0.0.r3.g6bec255
+pkgver=1.0.0.r5.gb07a0e2
 pkgrel=1
 pkgdesc="Gui tool based on mfgtools uuu."
 arch=($CARCH)
