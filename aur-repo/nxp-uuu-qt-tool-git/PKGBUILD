@@ -39,13 +39,6 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    git config user.email "admin@taotieren.com"
-    git config user.name "taotieren"
-    git remote add taotieren https://github.com/taotieren/nxp-uuu-qt-tool.git
-    git fetch --all
-    git merge taotieren/arch
-
 }
 
 build() {
