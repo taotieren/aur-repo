@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
 
-pre_build_script: aur_pre_build(maintainers=['zxp19821005'])
+pre_build_script: |
+  aur_pre_build(maintainers=['zxp19821005'])
+  add_makedepends(['python'])
 
 post_build_script: aur_post_build
 
