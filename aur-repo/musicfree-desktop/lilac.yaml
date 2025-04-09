@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+
+pre_build_script: aur_pre_build(maintainers=['zxp19821005'])
+
+post_build_script: aur_post_build
+
+repo_depends:
+  - electron25-bin
+
+update_on:
+  - source: aur
+    aur: musicfree-desktop
