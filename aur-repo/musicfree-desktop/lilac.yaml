@@ -3,7 +3,7 @@ maintainers:
 
 pre_build_script: |
   aur_pre_build(maintainers=['zxp19821005'])
-  add_makedepends(['python', 'python-build', 'python-installer', 'python-wheel', 'python-setuptools'])
+  add_makedepends(['python', 'python-build', 'python-installer', 'python-wheel', 'python-setuptools', 'openjpeg2', 'python-pyvips'])
 
 post_build_script: aur_post_build
 
