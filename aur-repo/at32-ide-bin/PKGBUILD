@@ -39,9 +39,11 @@ install=${pkgname}.install
 _pkg_file_name=AT32_IDE_V${pkgver}_Linux-${arch}
 source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/TOOL/${_pkg_file_name}.zip")
 sha256sums=('12cb9e8ee8d50924854181d01e2808cbe005a2a0815e691dfb146627280b07bd')
-noextract=()
+noextract=(${_pkg_file_name}.zip)
 
 package() {
+  bsdtar -xf ${srcdir}/${_pkg_file_name}.zip -C ${srcdir}/
+
   install -dm0755 "${pkgdir}/opt/artery32/${pkgname%-bin}/"
 
   bsdtar -xf ${srcdir}/AT32IDE_V${pkgver}_Linux-X86_64.tar.gz -C "${pkgdir}/opt/artery32/${pkgname%-bin}/"
