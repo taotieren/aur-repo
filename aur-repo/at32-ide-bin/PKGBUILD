@@ -41,7 +41,7 @@ noextract=()
 package() {
   install -dm0755 "${pkgdir}/opt/artery32/${pkgname%-bin}/"
 
-  bsdtar -xf ${srcdir}/AT32IDE_V${pkgver}_Linux-${arch/x/X}.tar.gz -C "${pkgdir}/opt/artery32/${pkgname%-bin}/"
+  bsdtar -xf ${srcdir}/AT32_IDE_V${pkgver}_Linux-${arch/x/X}.tar.gz -C "${pkgdir}/opt/artery32/${pkgname%-bin}/"
 
   install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/${pkgname%-bin}" <<EOF
 #!/bin/bash
