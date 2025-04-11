@@ -45,7 +45,7 @@ prepare() {
 }
 
 package() {
-    install -dm755 "${pkgdir}/usr/bin" \
+    install -dvm755 "${pkgdir}/usr/bin" \
         "${pkgdir}/opt/115"
 
     bsdtar -xf "${srcdir}/${pkgname}-${pkgver}/data.tar.xz" --numeric-owner -C "${pkgdir}"
