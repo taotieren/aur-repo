@@ -36,6 +36,9 @@ sha256sums_x86_64=('2fc526ed61e435517afc15a01d1a84f4cb04c234f642f7cbf4c7e278c23c
 noextract=("${pkgname}-${pkgver}.deb")
 
 package() {
+    if [ -d ${srcdir}/${pkgname}-${pkgver} ]; then
+        rm -rf ${srcdir}/${pkgname}-${pkgver}
+    fi
     mkdir -pv ${srcdir}/${pkgname}-${pkgver}
     bsdtar -xf "${srcdir}/${pkgname}-${pkgver}.deb" --numeric-owner -C "${srcdir}/${pkgname}-${pkgver}"
     bsdtar -xf "${srcdir}/${pkgname}-${pkgver}/data.tar.xz" --numeric-owner -C "${pkgdir}"
