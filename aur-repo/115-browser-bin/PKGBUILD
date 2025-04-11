@@ -35,16 +35,20 @@ sha256sums_x86_64=('2fc526ed61e435517afc15a01d1a84f4cb04c234f642f7cbf4c7e278c23c
     'ce0e3cdf98637003986feb9abb198cf04135333116f44e1642ba438d344a6a2e')
 noextract=("${pkgname}-${pkgver}.deb")
 
-package() {
+prepare() {
     if [ -d ${srcdir}/${pkgname}-${pkgver} ]; then
         rm -rf ${srcdir}/${pkgname}-${pkgver}
     fi
     mkdir -pv ${srcdir}/${pkgname}-${pkgver}
-    bsdtar -xf "${srcdir}/${pkgname}-${pkgver}.deb" --numeric-owner -C "${srcdir}/${pkgname}-${pkgver}"
-    bsdtar -xf "${srcdir}/${pkgname}-${pkgver}/data.tar.xz" --numeric-owner -C "${pkgdir}"
 
+    bsdtar -xf "${srcdir}/${pkgname}-${pkgver}.deb" --numeric-owner -C "${srcdir}/${pkgname}-${pkgver}"
+}
+
+package() {
     install -dm755 "${pkgdir}/usr/bin" \
         "${pkgdir}/opt/115"
+
+    bsdtar -xf "${srcdir}/${pkgname}-${pkgver}/data.tar.xz" --numeric-owner -C "${pkgdir}"
 
     chown -R root:root "${pkgdir}"
 
