@@ -7,3 +7,4 @@ post_build_script: |
 update_on:
   - source: github
     github: nanomq/nanomq
+time_limit_hours: 2
