@@ -26,7 +26,13 @@ Server = https://fun.ie8.pub:2443/aur-repo/$arch
 
 ```ini
 [aur-repo]
-## China Mobile Network (50Mbps) (ipv6, http, https)
+## CloudFlare Preferred CDN (ipv4, ipv6, http, https)
+Server = https://mirrors.kicad.online/aur-repo/$arch
+```
+
+```ini
+[aur-repo]
+## CloudFlare Free CDN (ipv4, ipv6, http, https)
 Server = https://aur-repo.taotieren.com/aur-repo/$arch
 ```
 
@@ -63,7 +69,7 @@ rsync rsync://aur-repo.taotieren.com
 rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
 
 ## Only IPv4
-## Status: NO
+## Status: OK
 # rsync rsync://aur-repo.taotieren.com
 # rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo.taotieren.com/aur-repo /opt/sync/aur-repo
 ```
