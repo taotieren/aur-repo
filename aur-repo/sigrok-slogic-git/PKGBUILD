@@ -2,7 +2,7 @@
 
 pkgbase=sigrok-slogic-git
 pkgname=(sigrok-slogic-git)
-pkgver=r5830.fa71bbc
+pkgver=r6107.4397c41
 pkgrel=1
 pkgdesc="sigrok_slogic"
 arch=($CARCH)
