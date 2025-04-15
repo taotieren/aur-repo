@@ -6,7 +6,7 @@ pkgname=(
     aur-repo-mirrorlist-git
     devtools-aur-repo-git
 )
-pkgver=r94.1a109e6
+pkgver=r95.b4a952c
 pkgrel=1
 pkgdesc="repo miscellaneous tools"
 arch=(any)
