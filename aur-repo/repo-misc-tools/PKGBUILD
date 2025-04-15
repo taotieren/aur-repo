@@ -6,8 +6,8 @@ pkgname=(
     aur-repo-mirrorlist-git
     devtools-aur-repo-git
 )
-pkgver=r92.b5afa9b
-pkgrel=5
+pkgver=r94.1a109e6
+pkgrel=1
 pkgdesc="repo miscellaneous tools"
 arch=(any)
 url="https://github.com/taotieren/repo-misc-tools"
