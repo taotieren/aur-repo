@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 
 # pre_build_script: |
 #   tag = _G.newver.lstrip('v')

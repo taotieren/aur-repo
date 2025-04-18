@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers=['If_Return'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-scripts'])

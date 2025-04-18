@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 # tag = _G.newver.lstrip('v')
 pre_build_script: |
   for line in edit_file('PKGBUILD'):

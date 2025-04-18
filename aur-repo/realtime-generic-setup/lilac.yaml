@@ -9,6 +9,7 @@
 #     aur: realtime-generic-setup
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()

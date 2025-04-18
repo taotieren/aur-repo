@@ -1,5 +1,6 @@
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers=['codyps', 'mruslan', 'Jake', 'slaesh',  'imi415', 'flipmess', 'Krakonos', 'moustafine'])
 post_build_script: aur_post_build
 update_on:

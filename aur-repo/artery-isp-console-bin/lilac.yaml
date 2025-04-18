@@ -13,6 +13,7 @@
 
 maintainers:
   - github: taotieren
+    email: admin@taotieren.com
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
