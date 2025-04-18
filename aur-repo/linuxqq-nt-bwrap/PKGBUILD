@@ -2,12 +2,12 @@
 # Maintainer: sukanka
 
 _pkgname=linuxqq
-_base_pkgver=3.2.16_250307
+_base_pkgver=3.2.16_250401
 _update_pkgver=${_base_pkgver}
 #_md5=08c52833
 pkgname=linuxqq-nt-bwrap
 pkgver="${_update_pkgver//-/_}"
-pkgrel=2
+pkgrel=1
 pkgdesc="New Linux QQ based on Electron, with bubblewrap sandbox and some tweaks"
 arch=('x86_64' 'aarch64' 'loong64')
 url='https://im.qq.com/linuxqq/index.shtml'
@@ -38,9 +38,9 @@ sha256sums=('2748a351259d378ab9773000cbf1ea0448de5ae92f28bb9e366fa795e1715739'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
             'f1c778b5a8b23bc77fd8e5e89056fea07309794c9a44ec38134a176cf1f7b675')
-sha256sums_x86_64=('4f27d68557909bb8217b52e2e0fbcd899fd7d4901d69961c5affdf9c285ac015')
-sha256sums_aarch64=('673ac6d2b930b6027d62703e5acacba8df777f0171d2ee52189727370f87e2a3')
-sha256sums_loong64=('ca764843022c56bfa20535980e54407b5ded886d41a41230d44144b443b04bcd')
+sha256sums_x86_64=('7feedba38cd54b2c27004d5624f52354bc85250625cf9e905446a1dae0d2ccff')
+sha256sums_aarch64=('6afd4fbb96570127342669b473bc71b6610220701858ea3535039d2377c39990')
+sha256sums_loong64=('3b220f2d133fb8bbe96f23bf5ffb3fdb4ff2ce6657a358849ca6cb65ff6a8018')
 
 prepare() {
 	local base_ver=${_base_pkgver}
