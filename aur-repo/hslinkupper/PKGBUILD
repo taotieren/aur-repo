@@ -1,17 +1,18 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=hslinkupper
-_name=HSLinkUpper
+pkgbase=hslinkupper
+pkgname=hslinknexus
+_name=HSLinkNexus
 pkgver=1.2.0
 pkgrel=1
 epoch=
 pkgdesc="HSLinkUpper is a simple tool that allows you to config HSLink."
 arch=($CARCH)
-url="https://github.com/HSLink/HSLinkUpper"
+url="https://github.com/HSLink/HSLinkNexus"
 license=(MIT)
 groups=()
-provides=(${pkgname} hslink-upper)
-conflicts=(${pkgname} hslink-upper)
+provides=(${pkgname} hslinkupper hslink-upper)
+conflicts=(${pkgname} hslinkupper hslink-upper)
 depends=(
     cairo
     gdk-pixbuf2
@@ -70,11 +71,10 @@ build() {
 
 package() {
     cd "${srcdir}/${_name}-${pkgver}"
-    #     tar xpf src-tauri/target/release/bundle/deb/${pkganame}_${pkgver}_amd64/data.tar.gz -C ${pkgdir}
-    #     chown -R root:root ${pkgdir}
+
     install -Dvm644 99-hslink.rules -t ${pkgdir}/usr/lib/udev/rules.d/
     install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
-    install -Dm755 src-tauri/target/release/hslinkupper ${pkgdir}/usr/bin/${pkgname%-git}
+    install -Dm755 src-tauri/target/release/${pkgname} ${pkgdir}/usr/bin/${pkgname}
     install -Dm644 src-tauri/icons/128x128.png ${pkgdir}/usr/share/icons/hicolor/128x128/apps/${pkgname}.png
     install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
 [Desktop Entry]
