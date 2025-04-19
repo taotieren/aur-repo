@@ -12,7 +12,7 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 _pydeps=(
-    nptyping
+    #     nptyping
     numpy
     typing_extensions
     yaml
