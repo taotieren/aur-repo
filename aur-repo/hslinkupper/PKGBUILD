@@ -28,6 +28,7 @@ depends=(
 )
 makedepends=(
     hidapi
+    npm
     pnpm
     rust
     cargo-tauri
