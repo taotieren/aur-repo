@@ -3,7 +3,7 @@
 # Contributor: Senge Dev <sengedev at gmail dot com>
 
 pkgname=1panel-git
-pkgver=1.10.29.lts.r7.g713202b
+pkgver=1.10.29.lts.r12.g0aa90e1
 pkgrel=1
 pkgdesc="1Panel, a modern open source linux panel."
 arch=('x86_64' 'aarch64')
