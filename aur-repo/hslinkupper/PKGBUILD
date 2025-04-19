@@ -11,8 +11,8 @@ arch=($CARCH)
 url="https://github.com/HSLink/HSLinkNexus"
 license=(MIT)
 groups=()
-provides=(${pkgname} hslinkupper hslink-upper)
-conflicts=(${pkgname} hslinkupper hslink-upper)
+provides=(${pkgname} hslinkupper hslink-nexus hslink-upper)
+conflicts=(${pkgname} hslinkupper hslink-nexus hslink-upper)
 replaces=(hslinkupper)
 depends=(
     cairo
