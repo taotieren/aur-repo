@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['GPereira'])
+pre_build_script: |
+  aur_pre_build(maintainers=['GPereira'])
+  add_makedepends(['python-build', 'python-installer', 'python-wheel', 'python-setuptools'])
 post_build: aur_post_build
 # repo_depends:
 #   -
