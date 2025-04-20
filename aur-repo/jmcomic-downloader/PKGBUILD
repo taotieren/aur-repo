@@ -25,6 +25,7 @@ depends=(
 makedepends=(
     rust
     cargo-tauri
+    git
     pnpm
 )
 backup=()
