@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sunxi-fw-git
-pkgver=r23.60712ec
-pkgrel=5
+pkgver=r27.2e2aaf4
+pkgrel=1
 pkgdesc="Allwinner firmware images decoding and extraction tool"
 arch=($CARCH)
 url="https://github.com/apritzel/sunxi-fw"
