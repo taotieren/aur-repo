@@ -2,7 +2,7 @@
 
 pkgbase=ch9344ser-git
 pkgname=(ch9344ser-dkms-git libch9344ser-git)
-pkgver=r51.e13ee01
+pkgver=r53.7c2408a
 pkgrel=1
 pkgdesc="This driver supports USB to quad serial ports chip ch9344 and USB to octal serial ports chip ch348."
 arch=('any')
