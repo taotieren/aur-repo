@@ -37,7 +37,7 @@ depends=(
     qt6-base
     qt6-declarative
     qt6-location
-    qt6-script
+    qt5-script
     qt6-webchannel
     qt6-webengine
     syntax-highlighting5
