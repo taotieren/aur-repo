@@ -39,13 +39,15 @@ build() {
     #     else
     #         export LD_LIBRARY_PATH=/lib64
     #     fi
+    PLATFORM=x64
+
     cd "${srcdir}/${pkgname}-${pkgver}/"
 
     sed -e 's|"."|"share/bin2cpp"|g' \
         -e 's|"docs"|"share/doc/bin2cpp"|g' \
         -i CMakeLists.txt
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
-    cmake -DCMAKE_BUILD_TYPE=None \
+    cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DBIN2CPP_BUILD_TEST=OFF \
         -DBIN2CPP_BUILD_SAMPLES=OFF \
