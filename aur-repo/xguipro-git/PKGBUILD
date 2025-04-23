@@ -29,7 +29,7 @@ depends=(
     harfbuzz
     openssl
     pango
-    purc
+    purc-git
     zlib
 )
 makedepends=(
