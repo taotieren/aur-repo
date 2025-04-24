@@ -14,6 +14,7 @@ update_on:
     include_regex: '([\d.]+)'
     # include_regex: '(8.[\d.]+)'
     exclude_regex: ".*rc.*"
+    exclude_regex: ".*99.*"
 # use_latest_tag: true
 # 8.0.6-hq
 time_limit_hours: 3
