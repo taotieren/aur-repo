@@ -151,7 +151,7 @@ package() {
         -DENABLE_GAMEPAD=OFF \
         -DENABLE_INTROSPECTION=OFF \
         -DUSE_GTK4=OFF \
-        -DUSE_SOUP2=OFF \
+        -DUSE_SOUP2=ON \
         -DUSE_WPE_RENDERER=OFF \
         -DUSE_LCMS=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
