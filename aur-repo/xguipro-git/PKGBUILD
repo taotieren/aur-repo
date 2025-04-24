@@ -107,6 +107,9 @@ EOF
 }
 
 package() {
+    export CFLAGS+=" ${CPPFLAGS}"
+    export CXXFLAGS+=" ${CPPFLAGS}"
+    export LDFLAGS+=" ${LDFLAGS}"
     #     pkgdesc+=" (gtk3)"
     #     conflicts+=(${pkgname%-git})
     #     depends+=(
@@ -179,7 +182,9 @@ package() {
 #         gtk4
 #         libsoup3)
 #     options=('!strip')
-#
+#     export CFLAGS+=" ${CPPFLAGS}"
+#     export CXXFLAGS+=" ${CPPFLAGS}"
+#     export LDFLAGS+=" ${LDFLAGS}"
 #     export LDFLAGS="-L/lib64"
 #     if test -n "$LD_LIBRARY_PATH"; then
 #         export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/lib64"
