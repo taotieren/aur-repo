@@ -36,7 +36,7 @@ prepare() {
     cd "${srcdir}/${pkgbase}/"
 
     git submodule update --init --recursive
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    #     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
