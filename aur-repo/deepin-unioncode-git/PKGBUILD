@@ -104,6 +104,7 @@ build() {
         -DCMAKE_C_COMPILER=clang \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Winconsistent-missing-override \
+        -Wunused-command-line-argument \
         -Wno-dev \
         -B build \
         -G Ninja \
