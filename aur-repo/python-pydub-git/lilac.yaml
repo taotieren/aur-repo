@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='gilcu3')
+pre_build_script: |
+  aur_pre_build(maintainers='gilcu3')
+  add_makedepends(['git', 'python-build', 'python-installer', 'python-setuptools-scm'])
 post_build: aur_post_build
 #repo_depends:
 #  - 
