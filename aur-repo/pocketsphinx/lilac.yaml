@@ -7,5 +7,5 @@ repo_depends:
   - python-sounddevice
 update_on:
   - source: aur
-    aur: python-pocketsphinx
+    aur: pocketsphinx
   - alias: python
