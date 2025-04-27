@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='Martchus')
+post_build: aur_post_build
+repo_depends:
+  - python-sounddevice
+update_on:
+  - source: aur
+    aur: python-pocketsphinx
+  - alias: python
