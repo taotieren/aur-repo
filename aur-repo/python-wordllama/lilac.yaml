@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='Magi3r')
+post_build: aur_post_build
+repo_depends:
+  - python-safetensors
+  - python-tokenizers
+update_on:
+  - source: aur
+    aur: python-wordllama
+  - alias: python

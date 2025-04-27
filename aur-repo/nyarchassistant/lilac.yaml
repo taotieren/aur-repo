@@ -1,0 +1,17 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='Magi3r')
+post_build: aur_post_build
+repo_depends:
+  - python-curl-cffi
+  - python-edge-tts
+  - python-gpt4all
+  - python-livepng
+  - python-speechrecognition
+  - python-voicevox-client
+  - python-wordllama
+update_on:
+  - source: aur
+    aur: nyarchassistant
+  - alias: python
