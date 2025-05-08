@@ -19,7 +19,7 @@ makedepends=(
 backup=(etc/bookget/config.ini)
 options=('!strip' '!debug')
 #install=${pkgname}.install
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('c0653efa23328d3357078d1da96a2a894d5ed91bd3f1cc01516bbcebd6558ac3')
 
 build() {
