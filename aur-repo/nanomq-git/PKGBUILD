@@ -2,7 +2,7 @@
 
 pkgbase=nanomq-git
 pkgname=(nanomq{,-sqlite,-msquic,-full}-git)
-pkgver=0.23.6.r15.gf3ec4b53
+pkgver=0.23.7.r0.g986d7756
 pkgrel=1
 pkgdesc="Nano MQTT Broker - An Ultra-light and Blazing-fast MQTT Broker for IoT Edge"
 arch=($CARCH)
