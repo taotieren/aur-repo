@@ -2,7 +2,7 @@
 
 pkgbase=can-tests-git
 pkgname=can-tests-git
-pkgver=2023.05.0.r9.ga159b9d
+pkgver=2023.05.0.r10.g9dba061
 pkgrel=1
 groups=()
 pkgdesc="Linux-CAN / SocketCAN testing applications"
