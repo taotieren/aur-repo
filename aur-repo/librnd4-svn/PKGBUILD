@@ -2,7 +2,7 @@
 
 pkgname=librnd4-svn
 pkgver=r37921
-pkgrel=1
+pkgrel=2
 pkgdesc="free/open source, flexible, modular two-dimensional CAD engine"
 arch=($CARCH)
 url="http://www.repo.hu/projects/librnd"
