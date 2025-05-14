@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=fungw-svn
-pkgver=r827
+pkgver=r828
 pkgrel=1
 pkgdesc="tiny, portable library written in C (C89) that manages dynamic function calls across different programming languages"
 arch=($CARCH)
