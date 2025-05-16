@@ -2,7 +2,7 @@
 
 pkgbase=bcu-git
 pkgname=bcu-git
-pkgver=1.1.117.r2.g23cc5af
+pkgver=1.1.118.r3.gc2e3f6f
 pkgrel=1
 epoch=
 pkgdesc="bcu (Board Control Utilities)"
