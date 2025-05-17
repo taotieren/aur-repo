@@ -3,7 +3,7 @@
 _name=ncurses
 pkgname=lib32-${_name}5-compat-libs
 pkgver=6.5
-pkgrel=3
+pkgrel=4
 pkgdesc="System V Release 4.0 curses emulation library (32-bit), ABI 5"
 arch=(x86_64)
 url=https://invisible-island.net/ncurses/ncurses.html
@@ -60,6 +60,9 @@ build() {
 
   export CC="gcc -m32"
   export CXX="g++ -m32"
+
+  # allow building with gcc >= 15
+  CFLAGS+=' -std=gnu17'
 
   cd $_name
   ./configure "${configure_options[@]}"
