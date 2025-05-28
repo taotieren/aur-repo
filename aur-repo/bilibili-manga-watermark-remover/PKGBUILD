@@ -25,22 +25,24 @@ depends=(
 makedepends=(
     rust
     cargo-tauri
+    git
     pnpm
 )
 backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tags=v${pkgver}")
 sha256sums=('70513ce755573604db2df5e158035bdea5ba0520b30c125344ec0dc326538b2d')
 
 prepare() {
-    cd "${srcdir}/${pkgname}-${pkgver}/src-tauri"
+    git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}/src-tauri"
     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
 
     export CARGO_HOME="${srcdir}/.cargo"
     {
@@ -64,7 +66,7 @@ build() {
 # }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
 
     install -Dvm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
     install -Dvm755 src-tauri/target/release/${pkgname} -t ${pkgdir}/usr/bin
