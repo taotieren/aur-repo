@@ -32,17 +32,18 @@ makedepends=(
 backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('abcfc58a4281c0d02d9ba7554affc652c7bfe5a19137798876c3fcc915f86269')
 
 prepare() {
-    cd "${srcdir}/${pkgname}-${pkgver}/src-tauri"
+    git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}/src-tauri"
     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
 
     export CARGO_HOME="${srcdir}/.cargo"
     {
@@ -61,12 +62,12 @@ build() {
 }
 
 # check() {
-#     cd "${srcdir}/${pkgname}-${pkgver}/"
+#     cd "${srcdir}/${pkgname}/"
 #     cargo test --release --all-features
 # }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
 
     install -Dvm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
     install -Dvm755 src-tauri/target/release/${pkgname} -t ${pkgdir}/usr/bin
