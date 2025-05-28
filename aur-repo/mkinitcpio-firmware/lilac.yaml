@@ -10,6 +10,7 @@ repo_depends:
   - aic94xx-firmware
   - ast-firmware
   - wd719x-firmware
+  - upd72020x-fw
 
 update_on:
   - source: aur
