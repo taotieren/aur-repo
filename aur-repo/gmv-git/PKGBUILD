@@ -2,7 +2,7 @@
 
 pkgname=gmv-git
 _name=${pkgname%-git}
-pkgver=1.0.r5.g31d0038
+pkgver=1.01.r0.g95469e4
 pkgrel=1
 pkgdesc="This is a video surveillance implementation based on GB28181: compatible with 2016 and 2022 versions."
 arch=($CARCH)
