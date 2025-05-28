@@ -19,7 +19,7 @@ makedepends=(
 backup=(etc/bookget/config.yaml)
 options=('!strip' '!debug')
 #install=${pkgname}.install
-source=("${pkgname}::git+${url}.git#tags=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('c0653efa23328d3357078d1da96a2a894d5ed91bd3f1cc01516bbcebd6558ac3')
 
 prepare() {

@@ -31,8 +31,8 @@ makedepends=(
 backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
-source=("${pkgname}::git+${url}.git#tags=v${pkgver}")
-sha256sums=('45d7f79671df726c08c460f9adcaf9db139aebf9fa35bd50bf78c9005a859bd3')
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+sha256sums=('d8aa91b54281228ae56bd4614ddbfc95c738bd3bae2cdf17fb684a63f3fb106d')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
