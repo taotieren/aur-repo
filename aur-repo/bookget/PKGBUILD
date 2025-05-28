@@ -33,7 +33,7 @@ build() {
     export GOPROXY=https://goproxy.cn,direct
 
     mkdir -pv build/
-    go build -o build
+    go build -o build ./cmd/
 }
 
 package() {
