@@ -2,7 +2,7 @@
 
 pkgname=mkinitcpio-firmware
 pkgver=1.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Optional firmware for the default linux kernel to get rid of the annoying 'WARNING: Possibly missing firmware for module:' messages"
 arch=("any")
 url="https://aur.archlinux.org/packages/mkinitcpio-firmware"
