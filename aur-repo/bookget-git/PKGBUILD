@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=bookget-git
-pkgver=25.0517.3.g123917c
-pkgrel=3
+pkgver=25.0517.4.gb10b2e3
+pkgrel=1
 pkgdesc="bookget 数字图书馆下载工具，目前支持约 50+ 个数字图书馆。"
 arch=($CARCH)
 url="https://github.com/deweizhu/bookget"
