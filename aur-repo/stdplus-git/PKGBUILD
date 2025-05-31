@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=stdplus-git
-pkgver=r275.be32aee
+pkgver=r277.38af2d8
 pkgrel=1
 pkgdesc="stdplus is a c++ project containing commonly used classes and functions for the Linux platform."
 url="https://github.com/openbmc/stdplus"
