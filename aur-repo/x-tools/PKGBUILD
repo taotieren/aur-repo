@@ -45,7 +45,7 @@ checkdepends=(
     gtest
 )
 optdepends=()
-source=("${pkgname}::igt+${url}.git#tag=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('7f11a188d8dba6497ee8fad4cac42abb1636bd9e241f52f38c9a91be622c6f6b')
 
 prepare() {
