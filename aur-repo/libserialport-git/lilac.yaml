@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['aisuneko', 'Manouchehri'])
+pre_build_script: aur_pre_build(maintainers='aisuneko')
 post_build: aur_post_build
 # repo_depends:
 #   -
