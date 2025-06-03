@@ -16,7 +16,7 @@ makedepends=(
     git
     go
 )
-backup=(etc/bookget/config.yaml)
+backup=()
 options=('!strip' '!debug')
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
@@ -45,5 +45,4 @@ package() {
 
     install -Dm755 build/${pkgname} -t ${pkgdir}/usr/bin/
     install -Dm0644 "${srcdir}/${pkgname}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -Dm0644 "${srcdir}/${pkgname}/config.yaml" -t "${pkgdir}/etc/${pkgname}/"
 }
