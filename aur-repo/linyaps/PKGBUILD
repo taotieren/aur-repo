@@ -16,7 +16,7 @@ conflicts=(
   linglong
 )
 replaces=(linglong-git)
-_qt=qt5
+_qt=qt6
 depends=(
   sh
   curl
