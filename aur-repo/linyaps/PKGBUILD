@@ -2,7 +2,7 @@
 
 pkgname=linyaps
 pkgver=1.8.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Linglong is the container application toolkit of deepin.'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps'
@@ -52,7 +52,7 @@ source=(
   "${pkgname}.install"
 )
 sha256sums=('3d7813d17aa6a7c6cb2961203a335c76385936e0ae2ce7dad7a0bb88301a6d0c'
-            '2ede7bc18aad4065a5c3f4552af1dde0b029099d572670b118a1453bf3d75f66')
+  '2ede7bc18aad4065a5c3f4552af1dde0b029099d572670b118a1453bf3d75f66')
 
 build() {
   cd "${srcdir}"/${pkgname}-${pkgver}/
