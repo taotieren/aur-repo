@@ -48,14 +48,18 @@ optdepends=(
 )
 install=${pkgname}.install
 source=(
-  "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz"
+  "${pkgname}::git+${url}.git#tag=${pkgver}"
   "${pkgname}.install"
 )
 sha256sums=('3d7813d17aa6a7c6cb2961203a335c76385936e0ae2ce7dad7a0bb88301a6d0c'
-  '2ede7bc18aad4065a5c3f4552af1dde0b029099d572670b118a1453bf3d75f66')
+  '4f61616d74f698741410555dda0d39843179eaa910f7e3fafb1c779d1e51d4ac')
+
+prepare() {
+  git -C "${srcdir}/${pkgname}" clean -dfx
+}
 
 build() {
-  cd "${srcdir}"/${pkgname}-${pkgver}/
+  cd "${srcdir}"/${pkgname}/
   # see：https://wiki.archlinux.org/title/CMake_package_guidelines
   cmake -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_INSTALL_PREFIX=/usr \
@@ -69,10 +73,10 @@ build() {
 }
 
 # check() {
-#   cd "${srcdir}"/${pkgname}-${pkgver}/
+#   cd "${srcdir}"/${pkgname}/
 #   ctest --test-dir build --output-on-failure
 # }
 
 package() {
-  DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}-${pkgver}/build install
+  DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
 }
