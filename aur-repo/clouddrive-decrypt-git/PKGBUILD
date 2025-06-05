@@ -2,7 +2,7 @@
 
 pkgname=clouddrive-decrypt-git
 pkgver=r1.b7472e4
-pkgrel=7
+pkgrel=8
 pkgdesc="clouddrive-decrypt is a standalone tool designed to demo how to decrypt files encrypted by CloudDrive2."
 arch=($CARCH)
 url="https://github.com/cloud-fs/clouddrive-decrypt"
