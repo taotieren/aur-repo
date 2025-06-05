@@ -22,6 +22,7 @@ depends=(
   gtk3
   harfbuzz
   libepoxy
+  libmodbus
   libgpiod
   librsvg
   libtirpc
@@ -63,7 +64,6 @@ depends=(
   #   gtksourceview2
   #   python-pyodbc
   # python-espeak
-  libmodbus
 )
 makedepends=(
   asciidoc

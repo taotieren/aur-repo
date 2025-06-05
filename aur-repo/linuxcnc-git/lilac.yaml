@@ -7,7 +7,6 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - bwidget
-  - libmodbus
   - tclx
   - tkimg
   - python-yapps2
@@ -16,6 +15,7 @@ repo_depends:
   # - python-pyodbc
   # - gtksourceview2
   # - python-espeak
+  # - libmodbus
 update_on:
   - source: github
     github: LinuxCNC/linuxcnc
