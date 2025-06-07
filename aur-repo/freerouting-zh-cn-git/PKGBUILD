@@ -38,6 +38,10 @@ pkgver() {
     )
 }
 
+prepare() {
+    git -C "${srcdir}/${pkgname%-git}" clean -dfx
+}
+
 build() {
     # don't forget to set active JDK to 21 version before running makepkg:
     # sudo archlinux-java set java-21-openjdk
