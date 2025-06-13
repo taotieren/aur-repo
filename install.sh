@@ -3,16 +3,17 @@
 # 将仓库配置添加到 /etc/pacman.conf
 echo "
 [aur-repo]
-# IPv4 & IPv6
-Server = https://aur-repo.taotieren.com:3443/aur-repo/\$arch
+## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
 Server = https://fun.ie8.pub:2443/aur-repo/\$arch
-Server = http://fun.ie8.pub:2442/aur-repo/\$arch
 
-# Only IPv4 (When https is enabled, http returns the https address.)
-# Server = http://home.taotieren.com:12380/aur-repo/\$arch
+## CloudFlare Preferred CDN (ipv4, ipv6, http, https)
+Server = https://mirrors.kicad.online/aur-repo/\$arch
 
-# Only IPv6 (When https is enabled, http returns the https address.)
-# Server = http://aur-repo.taotieren.com:12380/aur-repo/\$arch
+## CloudFlare Free CDN (ipv4, ipv6, http, https)
+Server = https://aur-repo.taotieren.com/aur-repo\$arch
+
+## China Mobile Network (50Mbps) (ipv6, http, https)
+Server = https://aur-repo6.taotieren.com/aur-repo/\$arch
 " | sudo tee -a /etc/pacman.conf
 
 # 添加并信任 GPG 密钥
