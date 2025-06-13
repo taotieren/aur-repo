@@ -45,7 +45,11 @@ Server = https://aur-repo6.taotieren.com/aur-repo/$arch
 ## [aur-repo-mirrorlist](https://github.com/taotieren/repo-misc-tools/tree/main/mirrorlist)
 
 ```bash
-pacman -Syu aur-repo-mirrorlist-git
+sudo pacman -Syu aur-repo-mirrorlist-git
+```
+
+```bash
+sudo vim /etc/pacman.conf
 ```
 
 ```ini
@@ -63,7 +67,7 @@ sudo pacman-key --lsign-key FEB77F0A6AB274FB0F0E5947B327911EA9E522AC
 ## [devtools-aur-repo](https://github.com/taotieren/repo-misc-tools/tree/main/devtools-aur-repo)
 
 ```bash
-pacman -Syu devtools-aur-repo-git
+sudo pacman -Syu devtools-aur-repo-git
 ```
 
 ## rsync
