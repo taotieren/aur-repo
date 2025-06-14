@@ -1,0 +1,26 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+# tag = _G.newver.lstrip('v')
+pre_build_script: |
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
+update_on:
+  - source: github
+    github: OpenAtom-Linyaps/linyaps-web-store-installer
+    # use_max_tag: true
+    use_latest_tag: true
+    include_regex: ".*-*"
+    # use_max_tag: true
+    # prefix: v
+    # exclude_regex: '.([\d.]+)'
