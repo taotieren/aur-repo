@@ -43,7 +43,10 @@ makedepends=(
   tl-expected
 )
 optdepends=(
+  "linyaps-box: 玲珑（Linglong） is the container application toolkit of deepin."
+  "linyaps-installer: 玲珑（Linglong）linyaps-web-store-installer is a package installer for the Linyaps Web store."
   "linglong-pica: deb package to Linglong package tool."
+  "linglong-tools: A command line helper for linglong."
   "ll-killer-go: 玲珑杀手 Go: 玲珑应用快速构建系统"
 )
 install=${pkgname}.install
