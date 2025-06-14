@@ -23,6 +23,7 @@ depends=(
   libelf
   libpcap
   libxdp
+  isa-l
   numactl
   rdma-core
   openssl
@@ -31,7 +32,6 @@ depends=(
   zlib
   #AUR
   dlpack
-  isa-l
 )
 makedepends=(
   doxygen
