@@ -3,7 +3,7 @@
 pkgbase=un-lock-git
 pkgname=miunlocktool-git
 _name=MiUnlockTool
-pkgver=1.5.9.r10.g4dd0577
+pkgver=1.5.9.r11.gbef3565
 pkgrel=1
 pkgdesc="MiUnlockTool developed to retrieve encryptData(token) for Xiaomi devices for unlocking bootloader, It is compatible with all platforms."
 arch=(any)
