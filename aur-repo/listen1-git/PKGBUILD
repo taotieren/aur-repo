@@ -1,6 +1,6 @@
 # Maintainer: xihale <xihale.top@qq.com>
 pkgname=listen1-git
-pkgver=perf.test.r5.gd48d74c
+pkgver=2.33.0.r0.gbbc3865
 pkgrel=1
 pkgdesc="Listen 1 可以搜索和播放来自多个主流音乐网站的歌曲，让你的曲库更全面。并支持收藏功能，方便的创建自己的歌单。"
 arch=("x86_64")
