@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps
-pkgver=1.8.0
-pkgrel=2
+pkgver=1.9.0
+pkgrel=1
 pkgdesc='Linglong is the container application toolkit of deepin.'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps'
@@ -54,8 +54,8 @@ source=(
   "${pkgname}::git+${url}.git#tag=${pkgver}"
   "${pkgname}.install"
 )
-sha256sums=('3d7813d17aa6a7c6cb2961203a335c76385936e0ae2ce7dad7a0bb88301a6d0c'
-  '4f61616d74f698741410555dda0d39843179eaa910f7e3fafb1c779d1e51d4ac')
+sha256sums=('3bf8024b8643f65f38dd792c88aaeebeb4a40c2551b55b2ace3a2f0dbca011a8'
+            '08e41ba735bf4285a089e3c86515bd9aee4f8fb3a78b1c06ec74fd1e3959efc3')
 
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
