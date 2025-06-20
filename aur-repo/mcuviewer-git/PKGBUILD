@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=mcuviewer-git
-pkgver=1.1.0.r0.g3650ed7
-pkgrel=3
+pkgver=1.1.0.r1.g4be6621
+pkgrel=1
 pkgdesc="Real-time embedded variable & trace viewer"
 arch=($CARCH)
 url="https://github.com/klonyyy/MCUViewer"
