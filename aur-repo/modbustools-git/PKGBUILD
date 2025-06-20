@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=modbustools-git
-pkgver=0.4.3.r33.g00cf362
+pkgver=0.4.3.r34.ga931332
 pkgrel=1
 pkgdesc="ModbusTools are cross-platform Modbus simulator tools with GUI to work with Modbus protocol (TCP,RTU,ASCII)"
 arch=($CARCH)
