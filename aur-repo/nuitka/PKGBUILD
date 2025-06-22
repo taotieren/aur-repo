@@ -5,8 +5,8 @@
 # Contributor: Panagiotis Mavrogiorgos <pmav99@gmail.com>
 
 pkgname=nuitka
-pkgver=2.5.9
-pkgrel=7
+pkgver=2.7.10
+pkgrel=1
 pkgdesc='Python compiler with full language support and CPython compatibility'
 arch=(any)
 url='https://nuitka.net'
@@ -41,7 +41,7 @@ checkdepends=(
 optdepends=('ccache: for caching builds')
 options=(!debug lto)
 source=("https://github.com/Nuitka/Nuitka/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('1262be7189593db04c58a6af792f71c7ea0b34f71a54a323f693e39386b47ed2')
+sha256sums=('8c7c6edde4e818680714b4f551140615bbbed47e91a04b9ee8d27d9024818e9d')
 
 build() {
   cd ${pkgname^}-${pkgver}
@@ -53,7 +53,8 @@ _check() {
   cd ${pkgname^}-${pkgver}
 
   # Needed to make LTO work with GCC
-  export CFLAGS="-fuse-linker-plugin"
+  export CFLAGS="${CFLAGS} -fuse-linker-plugin -ffat-lto-objects"
+  # export LDFLAGS="${LDFLAGS} -fuse-linker-plugin -fno-fat-lto-objects"
 
   # Catch testing failures early
   echo '==> tests/basics/EmptyModuleTest.py'
