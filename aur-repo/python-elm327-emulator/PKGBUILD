@@ -14,10 +14,10 @@ provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
     python
+    python-daemon
     python-lockfile
     python-yaml
     # AUR
-    python-daemon
     python-obd
 )
 makedepends=(
