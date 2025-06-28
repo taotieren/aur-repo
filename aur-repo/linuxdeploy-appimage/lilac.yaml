@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 pre_build_script: |
-  aur_pre_build(maintainers=['Reylyer'])
+  aur_pre_build(maintainers=['KDLoww'])
   add_makedepends(['sed'])
 post_build: aur_post_build
 # repo_depends:
