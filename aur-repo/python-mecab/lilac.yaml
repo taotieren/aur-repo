@@ -1,13 +1,14 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   aur_pre_build(maintainers='envolution')
   add_makedepends(['python-build', 'python-installer', 'python-setuptools-scm'])
 post_build: aur_post_build
-repo_depends:
-  - mecab-git
-  - mecab-ipadic
+# repo_depends:
+#   - mecab-git
+#   - mecab-ipadic
 update_on:
   - source: aur
     aur: python-mecab
