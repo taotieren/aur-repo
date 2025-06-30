@@ -3,8 +3,8 @@
 # Contributor: Filipe Laíns (FFY00) <lains@archlinux.org>
 
 pkgname=openfpgaloader-git
-pkgver=0.13.1.r147.gafb7bbe
-pkgrel=2
+pkgver=0.13.1.r149.gb06220f
+pkgrel=1
 pkgdesc="Universal utility for programming FPGA"
 arch=($CARCH)
 url="https://github.com/trabucayre/openFPGALoader"
