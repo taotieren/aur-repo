@@ -3,8 +3,8 @@
 # 将仓库配置添加到 /etc/pacman.conf
 echo "
 [aur-repo]
-## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
-Server = https://fun.ie8.pub:2443/aur-repo/$arch
+## China Telecom Network (200Mbps) (ipv4,  http, https)
+Server = https://rom.ie8.pub:2443/aur-repo/\$arch
 
 ## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
 Server = https://fun.ie8.pub:2443/aur-repo/\$arch

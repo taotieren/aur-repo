@@ -20,7 +20,7 @@ Add the following lines to `/etc/pacman.conf`:
 
 ```ini
 [aur-repo]
-## China Telecom Network (200Mbps) (ipv4, ipv6, http, https)
+## China Telecom Network (200Mbps) (ipv4, http, https)
 Server = https://rom.ie8.pub:2443/aur-repo/$arch
 ```
 
