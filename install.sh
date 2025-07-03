@@ -4,6 +4,9 @@
 echo "
 [aur-repo]
 ## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
+Server = https://fun.ie8.pub:2443/aur-repo/$arch
+
+## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
 Server = https://fun.ie8.pub:2443/aur-repo/\$arch
 
 ## CloudFlare Preferred CDN (ipv4, ipv6, http, https)
