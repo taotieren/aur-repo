@@ -2,7 +2,7 @@
 # Contributor: Integral <integral@member.fsf.org>
 
 pkgname=linuxqq
-pkgver=3.2.18_36580
+pkgver=3.2.18_37012
 pkgrel=1
 epoch=5
 pkgdesc="New Linux QQ based on Electron"
@@ -12,16 +12,16 @@ license=('LicenseRef-QQ')
 conflicts=("${pkgname}-nt-bwrap")
 depends=('nss' 'alsa-lib' 'gtk3' 'gjs' 'at-spi2-core' 'libvips' 'openjpeg2' 'openslide')
 optdepends=('libappindicator-gtk3: Allow QQ to extend a menu via Ayatana indicators in Unity, KDE or Systray (GTK+ 3 library).')
-_md5_prefix=a5fab4ff
+_md5_prefix=f7f84830
 _src_prefix="${pkgname}_${pkgver/_/-}"
 source_x86_64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5_prefix}/${_src_prefix}_amd64.deb")
 source_aarch64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5_prefix}/${_src_prefix}_arm64.deb")
 source_loong64=("https://dldir1.qq.com/qqfile/qq/QQNT/${_md5_prefix}/${_src_prefix}_loongarch64.deb")
 source=("${pkgname}.sh")
 sha512sums=('e06676ac2297cba5d20877ac82ef506a9596980bc66257952f37d45ef9810953aedb789655d004b3fd0ac548f2f085e1be406081d9c8d5321622567431c7b3da')
-sha512sums_x86_64=('bc9e3265ad046ea9a8779d957728e893e124dbffcb40646aaa3e0273dc3d68fb92528374e96c32967bd767d02ab8563ec699839e9d7c4a73fabe82f886041f0d')
-sha512sums_aarch64=('d8a00a723b2c9fda1549315d7c3d1a89235a6d7f8607ba9a009cc85d11ba9335e197d3c9c3db2fbcd99cbe40dd0e160c4b1d731c3f594a6e7da744a94938c6d1')
-sha512sums_loong64=('c00aabf14f857dc8bdd4431d50407f65cc624c50763da759a756380ce2903c30c5bc61ecf4768c5d2f2b9a371818639ae937bba48e6f1b2499ded8861fa21ad6')
+sha512sums_x86_64=('2d1ce9fe860fef0b79ddf38803130a6068eabeedc09c03e7b21b1c3477d1aec9867e6ec07e59e7eb9c7a061ccb8df50f12c5a9632c23d232630fbb3d21395d03')
+sha512sums_aarch64=('630d9f13fca0e3bec63c06255b3bc25b9e4aee5b97e3c16cfade1b1a3357bd6cc8cb6d8f0cdcd467083bed30a562d1154c2149fb3bf96e5d146b971a8678a0cb')
+sha512sums_loong64=('a8900e3d2adb2844a43f80e402468029ca95d04023265c9d1a0c7452a0cefa04f35be9d5d7b31961dfca3161fd2ef55040303e3e508247113fe56d6d2a056dc0')
 options=('!strip' '!debug')
 
 package() {
