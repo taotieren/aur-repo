@@ -20,6 +20,7 @@ depends=(
   sh
 )
 makedepends=(
+  git
   go
   pkgconf
 )
@@ -27,11 +28,15 @@ makedepends=(
 #   apt
 # )
 optdepends=("linyaps: Linglong is the container application toolkit ofdeepin.")
-source=("${pkgname}-${_tagname}.tar.gz::${url}/archive/refs/tags/${_tagname}.tar.gz")
-sha1sums=('7440c177ab608542fd0f079f9994c2f6230d5f82')
+source=("${pkgname}::git+${url}.git#tag=${_tagname}")
+sha256sums=('7440c177ab608542fd0f079f9994c2f6230d5f82')
+
+prepare(){
+  git -C "${srcdir}/${pkgname}" clean -dfx 
+}
 
 build() {
-  cd "${srcdir}"/${pkgname}-${_tagname}/
+  cd "${srcdir}"/${pkgname}/
   export CGO_CPPFLAGS="${CPPFLAGS}"
   export CGO_CFLAGS="${CFLAGS}"
   export CGO_CXXFLAGS="${CXXFLAGS}"
@@ -45,12 +50,12 @@ build() {
 }
 
 # check() {
-#   cd "${srcdir}"/${pkgname}-${_tagname}/
+#   cd "${srcdir}"/${pkgname}/
 #   make test
 # }
 
 package() {
-  cd "${srcdir}"/${pkgname}-${_tagname}
+  cd "${srcdir}"/${pkgname}
   make DESTDIR="${pkgdir}" install
   install -Dm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
