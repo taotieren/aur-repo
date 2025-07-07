@@ -55,7 +55,7 @@ optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     'ch341eeprom-git: A libusb based programming tool for 24xx I²C EEPROMs using the WCH CH341A'
     'ch343ser-dkms: USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch9103/ch9104, etc (dkms).'
     'wchisp: WCH ISP Tool in Rust')
-source=("${pkgbase}-${pkgver}.deb::http://file-oss.mounriver.com/upgrade/MounRiverStudio_Linux_X64_V${pkgver}.deb")
+source=("${pkgbase}-${pkgver}.deb::https://file-oss.mounriver.com/upgrade/MounRiverStudio_Linux_X64_V${pkgver}.deb")
 sha256sums=('83745c730b3646dc9a5207dbc90e852fb662de9162a45d01cce0f8d90e37ec94')
 options=('!strip' '!debug')
 # noextract=(${pkgbase}-${pkgver}.deb)
