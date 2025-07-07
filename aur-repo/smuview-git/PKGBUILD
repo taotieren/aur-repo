@@ -20,7 +20,6 @@ depends=(
     qwt
     python
     python-time-machine
-    #     python-pdoc
 )
 makedepends=(
     asciidoctor
