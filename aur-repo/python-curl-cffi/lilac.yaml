@@ -4,7 +4,7 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers='Neurognostic')
 post_build: aur_post_build
 repo_depends:
-  - curl-impersonate-chrome
+  - libcurl-impersonate-bin
 update_on:
   - source: aur
     aur: python-curl-cffi
