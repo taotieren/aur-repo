@@ -2,7 +2,7 @@
 
 pkgname=canboatjs
 pkgver=3.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Native javascript NMEA 2000 decoder and encoder"
 arch=(any)
 url="https://github.com/canboat/canboatjs"
