@@ -30,6 +30,7 @@ depends=(
   python
   python-wxpython
   wayland
+  webkit2gtk-4.1
   wxwidgets-gtk3
   wxwidgets-common
   unixodbc
