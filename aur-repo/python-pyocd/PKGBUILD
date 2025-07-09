@@ -59,8 +59,8 @@ prepare() {
 
   # we remove the dependency for libusb-package, because it would vendor libusb
   # https://github.com/pyocd/pyOCD/issues/1331
-  sed '/libusb-package/d' -i setup.cfg
-  patch -Np1 -i ../$pkgname-0.36.0-optional_libusb_package.patch
+ #  sed '/libusb-package/d' -i setup.cfg
+ #  patch -Np1 -i ../$pkgname-0.36.0-optional_libusb_package.patch
 
   # remove udev rules for stlink devices (the stlink package provides them):
   rm -v udev/*stlink*.rules
