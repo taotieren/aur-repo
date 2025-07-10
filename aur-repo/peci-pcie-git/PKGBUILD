@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=peci-pcie-git
-pkgver=r50.091de6b
-pkgrel=2
+pkgver=r51.89e121b
+pkgrel=1
 pkgdesc="The peci-pcie application uses the CPU PECI interface to get PCIe Device information for the system and shares it on D-Bus."
 url="https://github.com/openbmc/peci-pcie"
 arch=($CARCH)
