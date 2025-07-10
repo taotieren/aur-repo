@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-xmldiff-git
-pkgver=2.6.3.r15.gca0e024
-pkgrel=9
+pkgver=2.6.3.r17.gf1f3a40
+pkgrel=1
 pkgdesc='A library and command line utility for diffing xml'
 url='https://github.com/Shoobx/xmldiff'
 license=('MIT')
