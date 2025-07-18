@@ -3,7 +3,7 @@
 # Contributor: Quey-Liang Kao <s101062801@m101.nthu.edu.tw>
 
 pkgname=kpatch-git
-pkgver=0.9.10.r37.g21dad4d
+pkgver=0.9.10.r39.g686957f
 pkgrel=1
 pkgdesc='Live kernel patching (git)'
 arch=($CARCH)
