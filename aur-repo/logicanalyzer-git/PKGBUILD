@@ -2,7 +2,7 @@
 
 pkgbase=logicanalyzer-git
 pkgname=({logicanalyzer,clcapture}-git)
-pkgver=6.0.0.1.r10.g63b923b
+pkgver=6.0.0.1.r11.gcbed359
 pkgrel=1
 epoch=
 pkgdesc="24 channel, 100Msps logic analyzer hardware and software "
