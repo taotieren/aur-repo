@@ -5,5 +5,5 @@ pre_build_script: aur_pre_build(maintainers='konez2k')
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: python-pyglet
+    aur: pyglet
   - alias: python
