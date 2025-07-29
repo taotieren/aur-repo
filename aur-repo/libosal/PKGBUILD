@@ -17,19 +17,16 @@ depends=(glibc)
 makedepends=(
     cmake
     git
-    pkgconf)
+    pkgconf
+)
 checkdepends=()
 optdepends=()
 source=("${pkgname}::git+${url}.git#tag=${_tagname}")
-sha256sums=('74528bcac168feb45feffe3178887ee566d38d1a04a58b73f4806b2fdd56e6e3')
+sha256sums=('8d26e50c9e2cee9ec576c71df614785e662b3da611c603f6e79a1c53dbcaf01d')
 options=()
 
 build() {
     cd "${srcdir}/${pkgname}/"
-    #     autoreconf -is
-    #     ./configure --prefix=/usr
-    #     make
-
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     # gcc build
     #     cmake -DCMAKE_BUILD_TYPE=Release \
