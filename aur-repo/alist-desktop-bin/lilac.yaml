@@ -12,7 +12,7 @@ repo_depends:
 update_on:
   - source: github
     github: AlistGo/desktop-release
-    use_max_tag: true
+    use_latest_release: true
     prefix: v
-# use_latest_release: true
+# use_max_tag: true
 # prefix: v
