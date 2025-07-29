@@ -10,6 +10,6 @@ repo_depends:
   - python-pyglet
 update_on:
   - source: github
-    github: NightFurySL2001/CJK-character-count/
+    github: NightFurySL2001/CJK-character-count
     use_latest_release: true
     prefix: v
