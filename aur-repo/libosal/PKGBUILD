@@ -2,7 +2,8 @@
 
 pkgbase=libosal
 pkgname=libosal
-pkgver=0.0.5
+_tagname=0.0.5
+pkgver="${_tagname//-/_}"
 pkgrel=4
 pkgdesc="libosal is an operating system abstraction layer Library. It's purpose is to write os-independent code for easy portability between different systems and architectures."
 arch=($CARCH)
@@ -15,15 +16,16 @@ replaces=()
 depends=(glibc)
 makedepends=(
     cmake
+    git
     pkgconf)
 checkdepends=()
 optdepends=()
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=${_tagname}")
 sha256sums=('74528bcac168feb45feffe3178887ee566d38d1a04a58b73f4806b2fdd56e6e3')
 options=()
 
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
     #     autoreconf -is
     #     ./configure --prefix=/usr
     #     make
@@ -42,13 +44,13 @@ build() {
 }
 
 check() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
     #     make check
     ctest --test-dir build --output-on-failure
 }
 
 package() {
-    DESTDIR="${pkgdir}" cmake --install "${srcdir}"/${pkgname}-${pkgver}/build
+    DESTDIR="${pkgdir}" cmake --install "${srcdir}"/${pkgname}/build
     #     cd "${srcdir}/${pkgname}-${pkgver}"
     #     make DESTDIR=${pkgdir} install
 }
