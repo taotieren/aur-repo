@@ -24,11 +24,13 @@ depends=(
   'perl'
   'python'
   "${_pydeps[@]/#/python-}"
-  'libsndfile'
-  'bluez'
+  #   'libsndfile'
+  #   'bluez'
   'bluez-libs'
   'gd'
-  'qt5-base')
+  'qt5-base'
+  'openssl'
+)
 makedepends=(
   'git'
   'arm-none-eabi-gcc'
