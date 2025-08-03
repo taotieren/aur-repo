@@ -5,7 +5,7 @@ _pkgname=SOEM
 
 pkgname=soem
 pkgver=2.0.0.r0.g304d1c0
-pkgrel=3
+pkgrel=4
 pkgdesc="Simple Open EtherCAT Master Library"
 arch=('x86_64')
 url="https://openethercatsociety.github.io/doc/soem"
