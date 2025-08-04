@@ -4,7 +4,7 @@
 pkgname=alist
 pkgver=3.48.0
 _web_pkgver=3.48.0
-pkgrel=2
+pkgrel=3
 pkgdesc="File list program that supports multiple storage"
 arch=('x86_64' 'i686' 'arm' 'armv6h' 'arm7vh' 'aarch64' 'riscv64' 'loong64')
 url="https://github.com/AlistGo/alist"
