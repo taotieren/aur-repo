@@ -1,7 +1,7 @@
 # Maintainer: taotieren <cadmin@taotieren.com>
 
 pkgname=python-pycorrector-git
-pkgver=1.1.2.r6.g2c3edd6
+pkgver=1.1.2.r7.g6bb3794
 pkgrel=1
 pkgdesc='pycorrector is a toolkit for text error correction. 文本纠错，Kenlm，ConvSeq2Seq，BERT，MacBERT，ELECTRA，ERNIE，Transformer，T5等模型实现，开箱即用。 '
 url='https://github.com/shibing624/pycorrector'
