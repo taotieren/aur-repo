@@ -16,6 +16,7 @@ depends=(
 )
 makedepends=(
     cmake
+    dlpack
     git
     ninja
     pkgconf
@@ -23,8 +24,6 @@ makedepends=(
     curl
     openmp
     openssl
-    #AUR
-    dlpack
 )
 checkdepends=(
 )

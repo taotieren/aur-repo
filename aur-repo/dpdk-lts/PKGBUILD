@@ -13,6 +13,7 @@ options=()
 depends=(
   sh
   bpf
+  dlpack
   dtc
   gcc-libs
   glibc
@@ -30,8 +31,6 @@ depends=(
   python-scapy
   python-pyelftools
   zlib
-  #AUR
-  dlpack
 )
 makedepends=(
   doxygen
