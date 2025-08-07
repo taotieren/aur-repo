@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=mesaflash-git
-pkgver=3.4.9.r27.g7fe33a2
-pkgrel=2
+pkgver=3.4.9.r30.gd3db30c
+pkgrel=1
 pkgdesc="Configuration and diagnostic tool for Mesa Electronics PCI(E)/ETH/EPP/USB/SPI boards"
 arch=($CARCH)
 url="https://github.com/LinuxCNC/mesaflash"
