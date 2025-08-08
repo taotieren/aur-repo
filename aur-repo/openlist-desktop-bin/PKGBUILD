@@ -3,7 +3,7 @@
 pkgname=openlist-desktop-bin
 _pkgname=OpenList.Desktop
 pkgver=0.6.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A desktop application for OpenList"
 arch=('x86_64')
 url="https://github.com/OpenListTeam/OpenList-Desktop"
