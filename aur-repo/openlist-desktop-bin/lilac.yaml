@@ -8,7 +8,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - alist
+  - openlist
 update_on:
   - source: github
     github: OpenListTeam/OpenList-Desktop
