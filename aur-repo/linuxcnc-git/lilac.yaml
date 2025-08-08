@@ -9,7 +9,7 @@ repo_depends:
   - bwidget
   - tclx
   - tkimg
-  # - python-yapps2
+  - python-yapps2
   - linkchecker
   - termcap
   # - python-pyodbc

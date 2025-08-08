@@ -60,7 +60,7 @@ depends=(
   tcl
   zlib
   # AUR
-  #   python-yapps2
+   python-yapps2
   #   gtksourceview2
   #   python-pyodbc
   # python-espeak
