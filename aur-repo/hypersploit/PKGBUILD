@@ -3,7 +3,7 @@
 pkgbase=hypersploit
 pkgname=hypersploit
 pkgver=1.1.0
-pkgrel=0
+pkgrel=1
 epoch=
 pkgdesc="Bypasses HyperOS restrictions on bootloader unlocking"
 arch=($CARCH)
