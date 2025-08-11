@@ -7,6 +7,7 @@ post_build: aur_post_build
 repo_depends:
   - python-gpt4all
   - python-newspaper
+  - python-markdownify
   - python-speechrecognition
 update_on:
   - source: aur
