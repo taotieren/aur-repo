@@ -3,7 +3,7 @@
 pkgbase=libethercat
 pkgname=(libethercat{,-tools})
 pkgver=0.6.5
-pkgrel=2
+pkgrel=1
 pkgdesc="EtherCAT master library. This library is used to build a deterministic fieldbus network with EtherCAT components."
 arch=($CARCH)
 url="https://github.com/robert-burger/libethercat"
@@ -15,15 +15,17 @@ depends=(
     libosal)
 makedepends=(
     cmake
-    pkgconf)
+    git
+    pkgconf
+)
 checkdepends=()
 optdepends=()
-source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('8dbcb68d74b2cd7c4cdac2adcbf3b531131f0987bb98b21bda6ab1b65f65d946')
+source=("${pkgbase}::git+${url}.git#tag=${pkgver}")
+sha256sums=('ebffb52bdbcb0d430dccbc327624de5a045675b5a54037ac4a79ef1a575481cc')
 options=()
 
 build() {
-    cd "${srcdir}/${pkgbase}-${pkgver}/"
+    cd "${srcdir}/${pkgbase}/"
 
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     # gcc build
@@ -35,13 +37,12 @@ build() {
         -Wno-dev \
         -B build
 
-    cmake --build build
+     cmake --build build
 }
 
 check() {
-    cd "${srcdir}/${pkgbase}-${pkgver}"
+    cd "${srcdir}/${pkgbase}"
     ctest --test-dir build --output-on-failure
-
 }
 
 package_libethercat() {
@@ -52,8 +53,8 @@ package_libethercat() {
 
     DESTDIR="${pkgdir}" cmake --install "${srcdir}"/${pkgbase}-${pkgver}/build
 
-    #     cd "${srcdir}/${pkgname}-${pkgver}/build"
-    #     make DESTDIR=${pkgdir} install
+    #cd "${srcdir}/${pkgname}/build"
+    #make DESTDIR=${pkgdir} install
 }
 
 package_libethercat-tools() {
@@ -61,7 +62,7 @@ package_libethercat-tools() {
     conflicts=(${pkgname} eepromtool ethercatdiag example-with-dc)
     depends+=(libethercat.so)
 
-    cd "${srcdir}/${pkgbase}-${pkgver}/build"
+    cd "${srcdir}/${pkgbase}/build"
     install -Dvm755 -t ${pkgdir}/usr/bin eepromtool
     install -Dvm755 -t ${pkgdir}/usr/bin ethercatdiag
     install -Dvm755 example_with_dc ${pkgdir}/usr/bin/example-with-dc
