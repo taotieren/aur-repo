@@ -2,9 +2,9 @@
 
 pkgbase=libosal
 pkgname=libosal
-_tagname=0.2.0-rev0
+_tagname=0.2.1
 pkgver="${_tagname//-/_}"
-pkgrel=0
+pkgrel=1
 pkgdesc="Write os-independent code for easy portability between different systems and architectures"
 arch=($CARCH)
 url="https://github.com/robert-burger/libosal"
@@ -22,7 +22,7 @@ makedepends=(
 checkdepends=()
 optdepends=()
 source=("${pkgname}::git+${url}.git#tag=${_tagname}")
-sha256sums=('SKIP')
+sha256sums=('e1db7e29d34bb88177b30f81d7f4a079ae0c33f3ea130de9482c1d324bb1858d')
 options=()
 
 build() {
