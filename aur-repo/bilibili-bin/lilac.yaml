@@ -7,5 +7,5 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: bilibili-bin
-# repo_depends:
-#   - electron21-bin
+repo_depends:
+  - electron28-bin
