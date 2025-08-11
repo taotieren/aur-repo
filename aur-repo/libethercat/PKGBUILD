@@ -58,8 +58,8 @@ package_libethercat() {
 }
 
 package_libethercat-tools() {
-    provides=(${pkgname} eepromtool ethercatdiag example-with-dc)
-    conflicts=(${pkgname} eepromtool ethercatdiag example-with-dc)
+    provides=(${pkgname} eepromtool ethercatdiag example-with-dc foe-tool)
+    conflicts=(${pkgname} eepromtool ethercatdiag example-with-dc foe-tool)
     depends+=(libethercat.so)
 
     cd "${srcdir}/${pkgbase}/build"
