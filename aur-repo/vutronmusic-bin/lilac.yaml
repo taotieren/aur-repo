@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['chenus'])
+post_build: aur_post_build
+update_on:
+  - source: aur
+    aur: vutronmusic-bin
+#repo_depends:
+#  - electron28-bin
