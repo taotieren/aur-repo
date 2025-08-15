@@ -2,7 +2,7 @@
 
 pkgname=arch-router-git
 pkgver=r11.29177d3
-pkgrel=1
+pkgrel=2
 pkgdesc="Arch Linux Soft Router Script Toolbox"
 arch=(any)
 url="https://github.com/switchToLinux/arch_router"
