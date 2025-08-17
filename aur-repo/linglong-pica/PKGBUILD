@@ -18,6 +18,7 @@ conflicts=(
 replaces=()
 depends=(
   sh
+  linyaps
 )
 makedepends=(
   git
@@ -31,8 +32,8 @@ optdepends=("linyaps: Linglong is the container application toolkit ofdeepin.")
 source=("${pkgname}::git+${url}.git#tag=${_tagname}")
 sha256sums=('7440c177ab608542fd0f079f9994c2f6230d5f82')
 
-prepare(){
-  git -C "${srcdir}/${pkgname}" clean -dfx 
+prepare() {
+  git -C "${srcdir}/${pkgname}" clean -dfx
 }
 
 build() {

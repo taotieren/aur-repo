@@ -19,6 +19,7 @@ _qt=qt6
 depends=(
   gcc-libs
   glibc
+  linyaps
   ${_qt}-base
   xdg-utils
 )
@@ -32,8 +33,6 @@ makedepends=(
 )
 checkdepends=()
 optdepends=(
-  "linyaps: Linglong is the container application toolkit ofdeepin."
-  "linyaps-box: 玲珑（Linglong） is the container application toolkit of deepin."
   "linglong-pica: deb package to Linglong package tool."
 )
 source=("${pkgname}::git+${url}.git#tag=v${_tagname}")
