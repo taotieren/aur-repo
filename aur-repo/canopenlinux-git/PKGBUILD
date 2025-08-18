@@ -2,7 +2,7 @@
 
 pkgbase=canopenlinux-git
 pkgname=canopenlinux-git
-pkgver=4.0.r24.g064b4c4
+pkgver=4.0.r25.gf1348d4
 pkgrel=1
 groups=()
 pkgdesc="CANopenNode on Linux devices"
