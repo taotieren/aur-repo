@@ -2,7 +2,7 @@
 
 pkgname=linyaps-box-git
 pkgver=2.1.0.r2.g61d1b26
-pkgrel=1
+pkgrel=2
 pkgdesc='玲珑（Linglong） is the container application toolkit of deepin.'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps-box'
