@@ -2,7 +2,7 @@
 
 pkgname=linyaps-git
 pkgver=1.7.11.r260.gb76e908
-pkgrel=1
+pkgrel=2
 pkgdesc='Next-Gen Universal Package Manager for Linux (linglong)'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps'
