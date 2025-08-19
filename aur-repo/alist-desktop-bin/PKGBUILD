@@ -2,7 +2,7 @@
 
 pkgname=alist-desktop-bin
 pkgver=3.51.0
-pkgrel=1
+pkgrel=2
 pkgdesc="File list program that supports multiple storage"
 arch=('x86_64')
 url="https://github.com/AlistGo/desktop-release"
