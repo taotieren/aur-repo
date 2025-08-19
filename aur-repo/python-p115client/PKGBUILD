@@ -3,7 +3,7 @@
 pkgname=python-p115client
 _name=${pkgname#python-}
 pkgver=0.0.5.18.6
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python 115 webdisk client."
 arch=('any')
