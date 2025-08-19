@@ -3,7 +3,7 @@
 
 pkgname=python-copier
 pkgver=9.9.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Library and command-line utility for rendering projects templates'
 arch=('any')
 url='https://github.com/copier-org/copier'
