@@ -35,7 +35,7 @@ checkdepends=()
 optdepends=(
   "linglong-pica: deb package to Linglong package tool."
 )
-source=("${pkgname}::git+${url}.git#tag=v${_tagname}")
+source=("${pkgname}::git+${url}.git#tag=${_tagname}")
 sha256sums=('6bde58936b4a7562dfe6b9470e69220c2bfd1bb6be442f5bcd429e95033ddafa')
 
 prepare() {
