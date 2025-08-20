@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-git
-pkgver=1.7.11.r260.gb76e908
-pkgrel=2
+pkgver=1.7.11.r261.g61cd732
+pkgrel=1
 pkgdesc='Next-Gen Universal Package Manager for Linux (linglong)'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps'
