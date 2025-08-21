@@ -8,10 +8,10 @@ arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps-box'
 license=('LGPL-3.0-or-later')
 provides=(
-  ${pkgname}
+  ${pkgname%-git}
 )
 conflicts=(
-  ${pkgname}
+  ${pkgname%-git}
 )
 replaces=()
 depends=(

@@ -8,11 +8,11 @@ arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps'
 license=('LGPL-3.0-or-later')
 provides=(
-  ${pkgname}
+  ${pkgname%-git}
   linglong
 )
 conflicts=(
-  ${pkgname}
+  ${pkgname%-git}
   linglong
 )
 replaces=(linglong-git)
