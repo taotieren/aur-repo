@@ -14,7 +14,7 @@ provides=(
 conflicts=(
   ${pkgname}
 )
-replaces=()
+replaces=(linyaps-installer)
 _qt=qt6
 depends=(
   gcc-libs
