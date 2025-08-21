@@ -46,7 +46,7 @@ makedepends=(
   vulkan-headers
 )
 optdepends=(
-  "linyaps-installer: 玲珑（Linglong）linyaps-web-store-installer is a package installer for the Linyaps Web store."
+  "linyaps-web-store-installer: 玲珑（Linglong）linyaps-web-store-installer is a package installer for the Linyaps Web store."
   "linglong-pica: deb package to Linglong package tool."
   "linglong-tools: A command line helper for linglong."
   "ll-killer-go: 玲珑杀手 Go: 玲珑应用快速构建系统"
