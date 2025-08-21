@@ -1,20 +1,20 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=linyaps-web-store-installer
+pkgname=linyaps-web-store-installer-git
 _tagname=1.6.8
-pkgver="${_tagname//-/_}"
-pkgrel=4
+pkgver=1.6.8.r1.e9e2e7e
+pkgrel=1
 pkgdesc='玲珑（Linglong）linyaps-web-store-installer is a package installer for the Linyaps Web store.'
 arch=($CARCH)
 url='https://github.com/OpenAtom-Linyaps/linyaps-web-store-installer'
 license=('LGPL-3.0-or-later')
 provides=(
-  ${pkgname}
+  ${pkgname%-git}
 )
 conflicts=(
-  ${pkgname}
+  ${pkgname%-git}
 )
-replaces=(linyaps-installer)
+replaces=()
 _qt=qt6
 depends=(
   gcc-libs
@@ -36,8 +36,22 @@ checkdepends=()
 optdepends=(
   "linglong-pica: deb package to Linglong package tool."
 )
-source=("${pkgname}::git+${url}.git#tag=${_tagname}")
-sha256sums=('3436e85fa8d36109a1ae22e5321a27b5d63360677cf052fef58d2f69e18c18dc')
+source=("${pkgname}::git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "${srcdir}/${pkgname}"
+  (
+    set -o pipefail
+    
+    latest_tag=$(git tag --sort=-version:refname | grep -Ev '^[vV]' | head -1)
+    commit_count=$(git rev-list --count "${latest_tag}..HEAD")
+    commit_hash=$(git rev-parse --short=7 HEAD)
+
+    printf "%s.r%s.%s" "${latest_tag}" "${commit_count}" "${commit_hash}"||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+  )
+}
 
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
