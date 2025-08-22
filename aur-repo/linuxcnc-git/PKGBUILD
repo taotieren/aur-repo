@@ -60,7 +60,8 @@ depends=(
   tcl
   zlib
   # AUR
-   python-yapps2
+  bwidget
+  python-yapps2
   #   gtksourceview2
   #   python-pyodbc
   # python-espeak
@@ -86,7 +87,7 @@ makedepends=(
   texlive-bin
   texlive-binextra
   #AUR
-  bwidget
+  #   bwidget
   #   tclx
   linkchecker
   termcap
