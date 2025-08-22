@@ -1,0 +1,17 @@
+post_install() {
+  /usr/share/code-features/patch.py code-features patch
+  printf "==> [code-features] Use command /usr/bin/code-features-update to manually update the patch to keep up with the official vscode release when this package is out of date or some extensions don't work after an update in extra/code."
+}
+
+pre_upgrade() {
+  /usr/share/code-features/patch.py code-features restore
+}
+
+post_upgrade() {
+  /usr/share/code-features/patch.py code-features patch
+}
+
+pre_remove() {
+  /usr/share/code-features/patch.py code-features restore
+  /usr/bin/rm -f /usr/share/code-features/cache.json
+}
