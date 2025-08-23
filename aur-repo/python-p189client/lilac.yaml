@@ -9,9 +9,11 @@ post_build_script: |
 repo_depends:
   - python-aiofile
   - python-asynctools
+  - python-cookietools
   - python-errno2
   - python-dictattr
   - python-dicttools
+  - python-encode-uri
   - python-filewrap
   - python-hashtools
   - python-httpfile
