@@ -13,7 +13,6 @@ repo_depends:
   - python-errno2
   - python-dictattr
   - python-dicttools
-  - python-encode-uri
   - python-filewrap
   - python-hashtools
   - python-httpfile
