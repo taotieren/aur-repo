@@ -3,7 +3,7 @@
 pkgname=python-ariarpc
 _name=${pkgname#python-}
 pkgver=0.0.2.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python aria2 RPC call."
 arch=('any')
