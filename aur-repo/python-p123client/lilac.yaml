@@ -11,6 +11,7 @@ repo_depends:
   - python-asynctools
   - python-dictattr
   - python-dicttools
+  - python-encode-uri
   - python-filewrap
   - python-hashtools
   - python-httpfile
