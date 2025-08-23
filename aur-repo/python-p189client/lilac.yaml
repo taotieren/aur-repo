@@ -22,5 +22,5 @@ repo_depends:
   - python-property
 update_on:
   - source: pypi
-    pypi: p123client
+    pypi: p189client
   - alias: python
