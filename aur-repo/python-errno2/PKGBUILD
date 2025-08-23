@@ -3,7 +3,7 @@
 pkgname=python-errno2
 _name=${pkgname#python-}
 pkgver=0.0.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python another errno."
 arch=('any')
