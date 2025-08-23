@@ -1,0 +1,26 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-aiofile
+  - python-asynctools
+  - python-errno2
+  - python-dictattr
+  - python-dicttools
+  - python-filewrap
+  - python-hashtools
+  - python-httpfile
+  - python-http-request
+  - python-httpx-request
+  - python-iterutils
+  - python-p189sign
+  - python-property
+update_on:
+  - source: pypi
+    pypi: p123client
+  - alias: python
