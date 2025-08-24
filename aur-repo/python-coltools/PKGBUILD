@@ -3,7 +3,7 @@
 pkgname=python-coltools
 _name=${pkgname#python-}
 pkgver=0.0.1
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Python collection operations."
 arch=('any')
