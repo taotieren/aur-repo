@@ -3,7 +3,7 @@
 pkgname=python-http-request
 _name=${pkgname//-/_}
 pkgver=0.1.5
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python http response utils."
 arch=('any')
