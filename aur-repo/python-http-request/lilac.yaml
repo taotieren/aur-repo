@@ -8,24 +8,12 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-asynctools
+  - python-dicttools
+  - python-ensure
   - python-filewrap
-  - python-integer-tool
+  - python-http-response
   - python-texttools
 update_on:
   - source: pypi
     pypi: python-http_request
   - alias: python
-
-# maintainers:
-#   - github: taotieren
-# pre_build_script: aur_pre_build(maintainers=['taotieren'])
-# post_build: aur_post_build
-# repo_depends:
-#   - python-asynctools
-#   - python-filewrap
-#   - python-integer-tool
-#   - python-texttools
-# update_on:
-#   - source: aur
-#     aur: python-http-request
-#   - alias: python

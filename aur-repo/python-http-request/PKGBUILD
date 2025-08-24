@@ -14,10 +14,14 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
+    python-orjson
+    python-yarl
     #AUR
     python-asynctools
+    python-dicttools
+    python-ensure
     python-filewrap
-    python-integer-tool
+    python-http-response
     python-texttools
 )
 makedepends=(
@@ -26,7 +30,8 @@ makedepends=(
     python-build
     python-installer
     python-wheel
-    python-setuptools)
+    python-setuptools
+)
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
