@@ -1,0 +1,9 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='backbord')
+post_build: aur_post_build
+update_on:
+  - source: aur
+    aur: python-async_generator
+  - alias: python
