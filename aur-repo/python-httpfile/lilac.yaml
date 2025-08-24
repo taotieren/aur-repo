@@ -10,6 +10,7 @@ repo_depends:
   - python-asynctools
   - python-filewrap
   - python-http-response
+  - python-property
   - python-urlopen
 update_on:
   - source: pypi

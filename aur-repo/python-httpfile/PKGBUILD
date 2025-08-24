@@ -14,18 +14,20 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
-    python-poetry
     #AUR
     python-asynctools
     python-filewrap
     python-http-response
+    python-property
     python-urlopen
 )
 makedepends=(
+    python-poetry
     python-build
     python-installer
     python-wheel
-    python-setuptools)
+    python-setuptools
+)
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
