@@ -3,7 +3,7 @@
 pkgname=python-ensure
 _name=${pkgname//-/_}
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python functions used to ensure something."
 arch=('any')
