@@ -4,7 +4,7 @@ pkgname=python-urllib3-request
 _name=${pkgname#python-}
 _name=${_name//-/_}
 pkgver=0.1.4.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="urllib3 request extension."
 arch=('any')
@@ -16,9 +16,14 @@ conflicts=(${pkgname})
 depends=(
     python
     python-urllib3
+    python-yarl
     #AUR
     python-argtools
     python-cookietools
+    python-dicttools
+    python-filewrap
+    python-http-response
+    python-http-request
 )
 makedepends=(
     python-poetry

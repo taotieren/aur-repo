@@ -9,6 +9,10 @@ post_build_script: |
 repo_depends:
   - python-argtools
   - python-cookietools
+  - python-dicttools
+  - python-filewrap
+  - python-http-client-request
+  - python-http-response
 update_on:
   - source: pypi
     pypi: urllib3_request
