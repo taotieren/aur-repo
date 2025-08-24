@@ -14,6 +14,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
+    # AUR
+    python-dicttools
 )
 makedepends=(
     python-poetry
