@@ -11,11 +11,11 @@ repo_depends:
   - python-cookietools
   - python-dicttools
   - python-filewrap
-  - python-http-client-request
   - python-http-response
   - python-http-request
+  - python-property
   - python-undefined
 update_on:
   - source: pypi
-    pypi: python-urlopen
+    pypi: http_client_request
   - alias: python
