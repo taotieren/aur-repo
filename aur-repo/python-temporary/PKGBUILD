@@ -3,7 +3,7 @@
 pkgname=python-temporary
 _name=${pkgname//-/_}
 pkgver=0.0.1
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python temporary context."
 arch=('any')
