@@ -18,6 +18,7 @@ depends=(
     hicolor-icon-theme
     libiconv
     libunwind
+    vulkan-headers
     qt6-charts
     qt6-connectivity
     qt6-base
