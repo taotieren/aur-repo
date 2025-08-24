@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='PumpkinCheshire')
+post_build: aur_post_build
+repo_depends:
+  - python-async_generator
+update_on:
+  - source: aur
+    aur: python-asks
+  - alias: python
