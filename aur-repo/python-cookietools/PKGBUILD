@@ -3,7 +3,7 @@
 pkgname=python-cookietools
 _name=${pkgname/-/_}
 pkgver=0.1.4
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python cookietools."
 arch=('any')
