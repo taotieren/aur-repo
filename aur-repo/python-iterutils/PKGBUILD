@@ -3,7 +3,7 @@
 pkgname=python-iterutils
 _name=${pkgname//-/_}
 pkgver=0.2.8
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python another itertools."
 arch=('any')
@@ -16,6 +16,8 @@ depends=(
     python
     #AUR
     python-asynctools
+    python-texttools
+    python-undefined
 )
 makedepends=(
     python-poetry

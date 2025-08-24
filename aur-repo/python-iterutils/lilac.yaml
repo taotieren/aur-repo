@@ -8,6 +8,8 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-asynctools
+  - python-texttools
+  - python-undefined
 update_on:
   - source: pypi
     pypi: python-iterutils
