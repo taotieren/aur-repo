@@ -8,6 +8,11 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-argtools
+  - python-cookietools
+  - python-dicttools
+  - python-filewrap
+  - python-http-client-request
+  - python-http-response
 update_on:
   - source: pypi
     pypi: requests_request

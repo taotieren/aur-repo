@@ -4,7 +4,7 @@ pkgname=python-requests-request
 _name=${pkgname#python-}
 _name=${_name//-/_}
 pkgver=0.1.2.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="requests request extension."
 arch=('any')
@@ -16,8 +16,14 @@ conflicts=(${pkgname})
 depends=(
     python
     python-requests
+    python-yarl
     #AUR
     python-argtools
+    python-cookietools
+    python-dicttools
+    python-filewrap
+    python-http-response
+    python-http-request
 )
 makedepends=(
     python-poetry
