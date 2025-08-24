@@ -72,7 +72,7 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}/bin/Linux/None/xTools"
     install -Dm0755 xTools -t "${pkgdir}/usr/share/${pkgname}/"
-    cp -r 3rd_styles "${pkgdir}/usr/share/${pkgname}/"
+    cp -r translations "${pkgdir}/usr/share/${pkgname}/"
 
     install -Dm644 "${srcdir}/${pkgname}/LICENCE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
