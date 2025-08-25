@@ -4,7 +4,7 @@
 
 pkgname=kpatch-git
 pkgver=0.9.10.r41.g42cebc8
-pkgrel=1
+pkgrel=2
 pkgdesc='Live kernel patching (git)'
 arch=($CARCH)
 url=https://github.com/dynup/kpatch
