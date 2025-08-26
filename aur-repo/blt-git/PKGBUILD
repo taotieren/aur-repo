@@ -19,9 +19,11 @@ provides=(${pkgname%-git})
 conflicts=('blt_tcl85' ${pkgname%-git})
 arch=($CARCH)
 source=("${pkgname}::git+git://git.code.sf.net/p/blt/src"
-  "fix-build.patch")
+  "fix-build.patch"
+  "fix-vectors.patch")
 sha256sums=('SKIP'
-  '4c274da7a995c31fbbc99bca2804b9fda58c8ce02470eaf853cff836a7d48ae4')
+  '4c274da7a995c31fbbc99bca2804b9fda58c8ce02470eaf853cff836a7d48ae4'
+  '2ba8efe817c07ce0ceb9dd04eedd6fa0dba8becc939af0ea7f3738db51c4956d')
 
 pkgver() {
   cd "${srcdir}/${pkgname}"
@@ -40,6 +42,7 @@ build() {
   # configure
   cd ${srcdir}/${pkgname}
   patch configure <${srcdir}/fix-build.patch
+  patch configure <${srcdir}/fix-vectors.patch
   #   autoreconf -i
   ./configure \
     --prefix=/usr \
