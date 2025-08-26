@@ -9,6 +9,6 @@ post_build_script: |
 update_on:
   - source: regex
     url: "https://modao.cc/feature/downloads.html"
-    regex: 'modao-([\d.]+)-x64.deb'
+    regex: 'modao-([\d.]+)-x86.deb'
 # - source: manual
 #   manual: 1
