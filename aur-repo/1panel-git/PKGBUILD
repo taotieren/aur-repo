@@ -57,7 +57,7 @@ build() {
 
     # Edit the source code using sed
     sed -i 's/当前已经是最新版本/当前版本为 AUR 版本，如需更新，请使用 AUR 更新/g' ${srcdir}/${pkgname}/frontend/src/lang/modules/zh.ts
-    sed -i 's/當前已經是最新版本/當前版本為 AUR 版本，如需更新，請使用 AUR 更新/g' ${srcdir}/${pkgname}/frontend/src/lang/modules/tw.ts
+    sed -i 's/當前已經是最新版本/當前版本為 AUR 版本，如需更新，請使用 AUR 更新/g' ${srcdir}/${pkgname}/frontend/src/lang/modules/zh-Hant.ts
     sed -i 's/It is currently the latest version/It is ArchLinux AUR version, if you want to update it, please use AUR./g' ${srcdir}/${pkgname}/frontend/src/lang/modules/en.ts
 
     export CGO_CPPFLAGS="${CPPFLAGS}"
