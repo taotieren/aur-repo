@@ -24,9 +24,9 @@ source=(
     "privacy.txt"
     "tos.txt"
 )
-source_x86_64=("${pkgname}-${pkgver}.deb::https://cdn-release.modao.cc/desktop/prod-${pkgver}/linux/modao-linux-x64-${pkgver}.deb")
+source_x86_64=("${pkgname}-${pkgver}.deb::https://cdn-release.modao.cc/desktop/prod-${pkgver}/linux/modao-${pkgver}-x86.deb")
 sha256sums=('845ceda2ba76e8dde171e28cf4347591785195fd63f8e1eef3c7b978ecba580a'
-            '2cbf3af6aaa6ecc240a719795f00af5f18bf11f21b35a9e381b9fb1f7ec1887c')
+    '2cbf3af6aaa6ecc240a719795f00af5f18bf11f21b35a9e381b9fb1f7ec1887c')
 sha256sums_x86_64=('a8f192a2bc8a2e48248edf92d61190ef1d170e87bfa813ce09fc367f4b468459')
 
 package() {
