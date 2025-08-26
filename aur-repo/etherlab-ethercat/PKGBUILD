@@ -7,13 +7,13 @@ pkgrel=1
 arch=('i686' 'x86_64')
 url='https://etherlab.org'
 source=("ethercat-$pkgver.tar.bz2::https://gitlab.com/etherlab.org/ethercat/-/releases/$pkgver/downloads/dist-tarballs/ethercat.tar.bz2"
-        "ethercat.sysusers"
-        "99-EtherCAT.rules"
-        "dkms.conf")
+  "ethercat.sysusers"
+  "99-EtherCAT.rules"
+  "dkms.conf")
 sha512sums=('1a26b6fbbae7cf371468171dc2d05190ab4461b7e1bcce6ded51207c2083f8c9b8a426d37887b144011f364b4d55acb59ee563d3d48b17c8956e94e321dda34a'
-            'b029d47d10850569f180801fdc6bb2209dc9014649615123fe677416586df1c5a4f0901bcbd2da73b0e48ce752fe2a732272afdbf2445edf9ed4740be1ada7d8'
-            'b3baca5c546af8d57fe59e30d3acd63310a128fc938436b4a151e12fe2fde75029cf0f47b0ac2edc676e762a4cf7ac308b8229594a5d2c8301a02c0e8f623569'
-            '1b13d1fab22d82b08af2c90535ad4e02f232ff4cadd22a0aea5a7819c857862e64f50daa5445ed512527fa7a3b1d038d6da93046e35182330ec0e7112d908ca9')
+  'b029d47d10850569f180801fdc6bb2209dc9014649615123fe677416586df1c5a4f0901bcbd2da73b0e48ce752fe2a732272afdbf2445edf9ed4740be1ada7d8'
+  'b3baca5c546af8d57fe59e30d3acd63310a128fc938436b4a151e12fe2fde75029cf0f47b0ac2edc676e762a4cf7ac308b8229594a5d2c8301a02c0e8f623569'
+  '1b13d1fab22d82b08af2c90535ad4e02f232ff4cadd22a0aea5a7819c857862e64f50daa5445ed512527fa7a3b1d038d6da93046e35182330ec0e7112d908ca9')
 
 prepare() {
   cp -r "${srcdir}/ethercat-${pkgver}" "${srcdir}/ethercat-${pkgver}-dkms"
@@ -25,6 +25,7 @@ build() {
   ./configure \
     --prefix=/usr --sbindir=/usr/bin --libdir=/usr/lib --sysconfdir=/etc \
     --with-systemdsystemunitdir=/usr/lib/systemd/system \
+    --with-linux-dir=/usr/src/linux-headers-$(uname -r) \
     --disable-kernel --enable-generic \
     --enable-tool --enable-userlib --disable-initd
   make all
@@ -48,7 +49,7 @@ package_etherlab-ethercat-dkms() {
   cp ${srcdir}/dkms.conf ${pkgdir}/usr/src/ethercat-dkms-${pkgver}
   # Set version
   sed -e "s/#MODULE_VERSION#/${pkgver}/" \
-  -i "${pkgdir}"/usr/src/ethercat-dkms-${pkgver}/dkms.conf
+    -i "${pkgdir}"/usr/src/ethercat-dkms-${pkgver}/dkms.conf
 }
 
 package_etherlab-ethercat-tools() {
