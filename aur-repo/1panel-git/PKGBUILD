@@ -74,8 +74,8 @@ build() {
     npm install
     #     npm audit fix --force
     npm rum build:pro
-    cd ${srcdir}/${pkgname}/backend
-    GOOS=linux GOARCH=$(go env GOARCH) go build -trimpath -ldflags '-s -w' -o ${srcdir}/${pkgname}//build/1panel ${srcdir}/${pkgname}/cmd/server/main.go
+    cd ${srcdir}/${pkgname}/core
+    GOOS=linux GOARCH=$(go env GOARCH) go build -trimpath -ldflags '-s -w' -o ${srcdir}/${pkgname}//build/1panel ${srcdir}/${pkgname}/agent/cmd/server/main.go
 }
 
 package() {
