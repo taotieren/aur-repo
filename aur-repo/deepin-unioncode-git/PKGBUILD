@@ -72,6 +72,7 @@ makedepends=(
     python-onnxruntime
     python-pip
     python-pyjsparser
+    vulkan-headers
 )
 checkdepends=()
 optdepends=()
@@ -103,6 +104,9 @@ build() {
         -DCMAKE_CXX_COMPILER=clang++ \
         -DCMAKE_C_COMPILER=clang \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_CXX_STANDARD=11 \
+        -DCMAKE_CXX_STANDARD_REQUIRED=ON \
+        -DCMAKE_CXX_EXTENSIONS=OFF \
         -Winconsistent-missing-override \
         -Wunused-command-line-argument \
         -Wno-dev \
