@@ -41,8 +41,8 @@ prepare() {
 build() {
   # configure
   cd ${srcdir}/${pkgname}
-  patch configure <${srcdir}/fix-build.patch
   patch configure <${srcdir}/fix-vectors.patch
+  patch configure <${srcdir}/fix-build.patch
   #   autoreconf -i
   ./configure \
     --prefix=/usr \
