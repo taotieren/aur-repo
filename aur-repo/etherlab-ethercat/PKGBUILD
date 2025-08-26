@@ -20,12 +20,16 @@ prepare() {
 }
 
 build() {
+  _kernver=$(uname -r)
+  _kern_type=$(echo ${_kernver} | grep -oP '(?<=-)\w+')
+  _linux_src="/usr/src/linux-${_kern_type}"
+
   cd "ethercat-$pkgver"
   # Only include the generic driver
   ./configure \
     --prefix=/usr --sbindir=/usr/bin --libdir=/usr/lib --sysconfdir=/etc \
     --with-systemdsystemunitdir=/usr/lib/systemd/system \
-    --with-linux-dir=/usr/src/linux-headers-$(uname -r) \
+    --with-linux-dir="${_linux_src}" \
     --disable-kernel --enable-generic \
     --enable-tool --enable-userlib --disable-initd
   make all
