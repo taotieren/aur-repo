@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=notepad---git
-pkgver=3.4.r1.gdddb7e3
+pkgver=3.5.1.r3.g1d69aee
 pkgrel=1
 pkgdesc="Notepad-- 是使用C++编写的轻量级文本编辑器, 简称ndd, 可以支持Window/Mac/Linux操作系统平台。"
 arch=($CARCH)
