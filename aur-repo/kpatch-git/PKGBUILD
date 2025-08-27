@@ -3,8 +3,8 @@
 # Contributor: Quey-Liang Kao <s101062801@m101.nthu.edu.tw>
 
 pkgname=kpatch-git
-pkgver=0.9.10.r41.g42cebc8
-pkgrel=6
+pkgver=0.9.10.r44.g205a317
+pkgrel=1
 pkgdesc='Live kernel patching (git)'
 arch=($CARCH)
 url=https://github.com/dynup/kpatch
