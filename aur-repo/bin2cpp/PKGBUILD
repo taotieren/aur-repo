@@ -3,7 +3,7 @@
 pkgbase=bin2cpp
 pkgname=bin2cpp
 pkgver=3.1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="bin2cpp: The easiest way to embed small files into a c++ executable. bin2cpp converts text or binary files to C++ files (*.h, *.cpp) for easy access within the code."
 arch=($CARCH)
 url="https://github.com/end2endzone/bin2cpp"
