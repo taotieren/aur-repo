@@ -4,10 +4,11 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers='acxz')
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=libccd'])
-
-  for line in edit_file('PKGBUILD'):
+  
+  from lilaclib import edit_file
+  # for line in edit_file('PKGBUILD'):
     if line.startswith('Release'):
-      line = f'Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5'
+      line =  'Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5'
     print(line)
 
   run_cmd(['updpkgsums'])
