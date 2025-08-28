@@ -4,7 +4,7 @@
 
 pkgname=1panel-git
 pkgver=2.0.8.r121.g5c59042
-pkgrel=3
+pkgrel=4
 pkgdesc="1Panel, a modern open source linux panel."
 arch=('x86_64' 'aarch64')
 url="https://1panel.cn"
@@ -55,7 +55,8 @@ pkgver() {
 }
 
 build() {
-    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver}#g" ${srcdir}/1pctl
+    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver}#g" ${srcdir}/1pctl-agent
+    sed -i -e "s#ORIGINAL_VERSION=.*#ORIGINAL_VERSION=${pkgver}#g" ${srcdir}/1pctl-core
     find ${srcdir} -type f -exec sed -i 's@/usr/local/bin@/usr/bin@g' {} +
     find ${srcdir} -type f -exec sed -i 's@/etc/systemd/system@/usr/lib/systemd/system@g' {} +
 
