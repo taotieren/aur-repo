@@ -6,8 +6,8 @@ pre_build_script: |
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=libccd'])
 
   for line in edit_file('PKGBUILD'):
-    if line.startswith('-DCMAKE_BUILD_TYPE=Release'):
-      line = f'-DCMAKE_BUILD_TYPE=Release  -DCMAKE_POLICY_VERSION_MINIMUM=3.5'
+    if line.startswith('Release'):
+      line = f'Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5'
     print(line)
 
   run_cmd(['updpkgsums'])
