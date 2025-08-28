@@ -1,10 +1,12 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='AlphaJack')
+pre_build_script: aur_pre_build(maintainers=['AlphaJack', 'medaminezghal'])
 post_build: aur_post_build
 repo_depends:
+  - python-aioboto3
   - python-backoff
+  - python-fastuuid
   - python-tokenizers
 update_on:
   - source: aur
