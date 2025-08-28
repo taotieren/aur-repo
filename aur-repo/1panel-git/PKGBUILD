@@ -4,7 +4,7 @@
 
 pkgname=1panel-git
 pkgver=2.0.8.r121.g5c59042
-pkgrel=5
+pkgrel=6
 pkgdesc="1Panel, a modern open source linux panel."
 arch=('x86_64' 'aarch64')
 url="https://1panel.cn"
