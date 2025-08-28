@@ -18,5 +18,5 @@ update_on:
     url: https://aite.xyz/product/csnet/client
     regex: '(\d+-\d+-\d+)'
     # include_regex: ".*-*-*"
-  - source: manual
-    manual: 1
+#   - source: manual
+#     manual: 1
