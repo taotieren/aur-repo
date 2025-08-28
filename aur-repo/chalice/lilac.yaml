@@ -1,7 +1,14 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='medaminezghal')
+pre_build_script: |
+  aur_pre_build(maintainers='medaminezghal')
+  
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=chalice'])
+  
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])  
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
   - python-inquirer
