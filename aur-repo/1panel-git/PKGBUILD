@@ -4,7 +4,7 @@
 
 pkgname=1panel-git
 pkgver=2.0.8.r121.g5c59042
-pkgrel=2
+pkgrel=3
 pkgdesc="1Panel, a modern open source linux panel."
 arch=('x86_64' 'aarch64')
 url="https://1panel.cn"
@@ -40,10 +40,10 @@ source=("${pkgname}"::"git+https://github.com/1Panel-dev/1Panel.git"
     "1panel-core.service"
 )
 sha256sums=('SKIP'
-            '76b2e927b03781e1d8a49d551b5847ba8f2031d4e12f3a200776659e337ebb15'
-            'f297311c938647af849c4ed2958d76a3c78d12f3cd4ee241ba6cfbed5133850a'
-            'd9c84bef23acd99fec47ae49a5469968499fb27f16ed07f32e849f573e78fd71'
-            '50c10b9cf798f139dd3c0f98f0f09febcc5456c96f10cfd235232bd3bef42265')
+    '76b2e927b03781e1d8a49d551b5847ba8f2031d4e12f3a200776659e337ebb15'
+    'f297311c938647af849c4ed2958d76a3c78d12f3cd4ee241ba6cfbed5133850a'
+    'd9c84bef23acd99fec47ae49a5469968499fb27f16ed07f32e849f573e78fd71'
+    '50c10b9cf798f139dd3c0f98f0f09febcc5456c96f10cfd235232bd3bef42265')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
