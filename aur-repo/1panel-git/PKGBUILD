@@ -4,7 +4,7 @@
 
 pkgname=1panel-git
 pkgver=2.0.8.r121.g5c59042
-pkgrel=4
+pkgrel=5
 pkgdesc="1Panel, a modern open source linux panel."
 arch=('x86_64' 'aarch64')
 url="https://1panel.cn"
@@ -81,7 +81,7 @@ build() {
     npm rum build:pro
     cd ${srcdir}/${pkgname}/core
     GOOS=linux GOARCH=$(go env GOARCH) go build -trimpath -ldflags '-s -w' -o ${srcdir}/${pkgname}/build/1panel-core ${srcdir}/${pkgname}/core/cmd/server/main.go
-    cd ${srcdir}/${pkgname}/agnet
+    cd ${srcdir}/${pkgname}/agent
     GOOS=linux GOARCH=$(go env GOARCH) go build -trimpath -ldflags '-s -w' -o ${srcdir}/${pkgname}/build/1panel-agent ${srcdir}/${pkgname}/agent/cmd/server/main.go
 }
 
