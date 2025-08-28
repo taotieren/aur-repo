@@ -6,8 +6,8 @@ pkgrel=1
 pkgdesc="Four-channel CANFD analyzer based on hpmicro hpm5361"
 arch=($CARCH)
 license=('GPL-2.0-only')
-provides=(${pkgname} cangaroo)
-conflicts=(${pkgname} cangaroo)
+provides=(${pkgname%-git} cangaroo)
+conflicts=(${pkgname%-git} cangaroo)
 depends=(
 	bash
 	gcc-libs
