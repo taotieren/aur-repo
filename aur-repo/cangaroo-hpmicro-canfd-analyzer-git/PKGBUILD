@@ -41,6 +41,7 @@ prepare() {
 	git remote add taotieren https://github.com/taotieren/cangaroo_hpmicro_canfd_analyzer.git
 	git fetch --all
 	git merge taotieren/update-linux
+	git merge taotieren/rename-autoheightdelegate.h
 }
 
 build() {
