@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='jnphilipp')
+post_build: aur_post_build
+repo_depends:
+  - python-blis
+  - python-catalogue
+  - python-confection
+  - python-murmurhash
+  - python-preshed
+  - python-srsly
+  - python-wasabi
+   
+update_on:
+  - source: aur
+    aur: python-thinc
+  - alias: python
