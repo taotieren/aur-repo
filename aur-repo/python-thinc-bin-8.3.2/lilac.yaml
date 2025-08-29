@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='envolution')
+pre_build_script: |
+  aur_pre_build(maintainers='envolution')
+  add_makedepends(['python-installer'])
 post_build: aur_post_build
 repo_depends:
   - python-blis
