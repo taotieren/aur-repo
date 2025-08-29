@@ -3,6 +3,8 @@ pre_install() {
 }
 
 _help() {
+    echo -e "sa_username、sa_password 字段为空时，http/https/socks5 代理服务器关闭认证，不为空时开启认证。"
+    echo -e "When the sa_username and sa_password fields are empty, authentication for the HTTP/HTTPS/SOCKS5 proxy server is disabled. When these fields are not empty, authentication is enabled."
     echo -e "启用 csnet 的服务: sudo systemctl enable --now csnet"
     echo -e "Enable the service with: sudo systemctl enable --now csnet"
     echo -e "Socks5 代理地址： socks5://localhost:54321 或 socks5://127.0.0.1:54321"
