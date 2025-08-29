@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='jnphilipp')
+pre_build_script: aur_pre_build(maintainers='envolution')
 post_build: aur_post_build
 repo_depends:
   - python-blis
@@ -14,5 +14,5 @@ repo_depends:
    
 update_on:
   - source: aur
-    aur: python-thinc
+    aur: python-thinc-bin-8.3.2
   - alias: python

@@ -10,7 +10,7 @@ repo_depends:
   - python-preshed
   - python-spacy-loggers
   - python-srsly
-  - python-thinc
+  - python-thinc-bin-8.3.2
   - python-wasabi
   - python-weasel
 update_on:
