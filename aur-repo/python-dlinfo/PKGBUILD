@@ -3,7 +3,7 @@
 pkgname=python-dlinfo
 _name=${pkgname#python-}
 pkgver=2.0.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for libc's dlinfo and dyld_find on Mac"
 arch=('any')
