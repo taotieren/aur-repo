@@ -3,7 +3,7 @@
 pkgname=python-segments
 _name=${pkgname#python-}
 pkgver=2.3.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Segmentation with orthography profiles"
 arch=('any')
