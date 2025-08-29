@@ -74,7 +74,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/python /usr/share/serverstatus/clients/client-linux.py
-ExecReload=/bin/kill -HUP $MAINPID
+ExecReload=/bin/kill -HUP \$MAINPID
 Restart=on-failure
 
 [Install]
@@ -99,7 +99,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/python /usr/share/serverstatus/clients/client-psutil.py
-ExecReload=/bin/kill -HUP $MAINPID
+ExecReload=/bin/kill -HUP \$MAINPID
 Restart=on-failure
 
 [Install]
@@ -135,7 +135,7 @@ After=network.target
 
 [Service]
 ExecStart=sergate --config=/usr/share/serverstatus/server/config.json --web-dir=/usr/share/serverstatus/web
-ExecReload=/bin/kill -HUP $MAINPID
+ExecReload=/bin/kill -HUP \$MAINPID
 Restart=on-failure
 
 [Install]
