@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_preu_build(maintainers='edh')
+pre_build_script: aur_pre_build(maintainers='edh')
 post_build: aur_post_build
 # repo_depends:
 #  - 
