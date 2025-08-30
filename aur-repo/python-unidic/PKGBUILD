@@ -5,7 +5,7 @@ _pypkgname=unidic-py
 pkgver=1.1.0.unidic3.1.0
 _projver=${pkgver%.unidic3.1.0}
 
-pkgrel=5
+pkgrel=6
 pkgdesc="UniDic for Contemporary Written Japanese packaged for use with pip (with UniDic 3.1.0)"
 url="https://github.com/polm/unidic-py"
 license=(
