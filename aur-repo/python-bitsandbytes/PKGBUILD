@@ -34,7 +34,7 @@ makedepends=(
     python-setuptools
 )
 optdepends=()
-options=('!strip' '!debug')
+options=('!strip')
 source=("${_name}::git+${url}.git#tag=$pkgver")
 noextract=()
 sha256sums=('b40be8d6997375e5dc441a467cb3a403d89401b3f4e533b6f9d903f4ff0d2fe8')
