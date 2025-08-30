@@ -3,7 +3,7 @@
 pkgname=python-ipadic
 _gitname=ipadic-py
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 
 pkgdesc="IPAdic packaged for easy use from Python"
 url="https://github.com/polm/ipadic-py"
