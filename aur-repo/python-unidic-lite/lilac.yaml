@@ -3,7 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers='skeilnet')
-  add_makedepends(['python-setuptools', 'python-build', 'python-wheel', 'python-installer'])
+  add_makedepends(['git', 'python-setuptools', 'python-build', 'python-wheel', 'python-installer'])
 post_build: aur_post_build
 # repo_depends:
 #   -

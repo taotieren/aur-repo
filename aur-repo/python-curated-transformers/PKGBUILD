@@ -15,13 +15,17 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
+    python-fsspec
     python-huggingface-hub
     python-pytorch
     python-pytest
-    python-pytest-mypy
+    python-requests
+    python-typing_extensions
     # AUR
     python-catalogue
     python-curated-tokenizers
+    python-safetensors
+    python-transformers
     python-tokenizers
 )
 makedepends=(
@@ -30,6 +34,7 @@ makedepends=(
     python-installer
     python-wheel
     python-setuptools
+    python-pytest-mypy
 )
 optdepends=()
 options=('!strip' '!debug')

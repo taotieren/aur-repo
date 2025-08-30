@@ -9,6 +9,8 @@ post_build_script: |
 repo_depends:
   - python-catalogue
   - python-curated-tokenizers
+  - python-safetensors
+  - python-transformers
   - python-tokenizers
 update_on:
   - source: pypi
