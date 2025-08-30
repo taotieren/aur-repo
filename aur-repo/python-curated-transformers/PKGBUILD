@@ -3,7 +3,7 @@
 pkgname=python-curated-transformers
 _name=${pkgname#python-}
 pkgver=2.0.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A PyTorch library of transformer models and components"
 arch=('any')
