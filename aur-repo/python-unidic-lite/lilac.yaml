@@ -3,14 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers='skeilnet')
-
-  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-unidic-lite'])
-
-  run_cmd(['sed', '-i', 's/pkgrel=00/pkgrel=1/', 'PKGBUILD'])
-
   add_makedepends(['git', 'python-setuptools', 'python-build', 'python-wheel', 'python-installer'])
-
-  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 # repo_depends:
 #   -
