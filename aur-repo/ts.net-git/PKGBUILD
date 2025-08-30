@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ts.net-git
-pkgver=r379.f041380
+pkgver=r381.b4c81bc
 pkgrel=1
 epoch=
 pkgdesc="Thunderscope-compatible PC-host software written in C# using high-performing primitives & SIMD."
