@@ -3,7 +3,7 @@
 pkgname=python-simp-sexp
 _name=${pkgname#python-}
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A simple S-expression parser"
 arch=('any')
