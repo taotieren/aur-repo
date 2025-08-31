@@ -3,7 +3,7 @@
 pkgname=python-proces
 _name=${pkgname#python-}
 pkgver=0.1.7
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="text preprocess."
 arch=('any')
