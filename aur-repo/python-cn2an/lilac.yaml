@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-proces
+  - python-torbjorn
+update_on:
+  - source: pypi
+    pypi: cn2an
+  - alias: python
