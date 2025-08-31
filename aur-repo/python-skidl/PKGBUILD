@@ -31,8 +31,8 @@ makedepends=(
   python-setuptools
 )
 optdepends=('kicad-library: part libraries')
-provides=(${_name})
-conflicts=(${_name})
+provides=(${pkgname} ${_name})
+conflicts=(${pkgname} ${_name})
 options=('!emptydirs' '!strip' '!debug')
 install=
 # source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
