@@ -3,7 +3,7 @@
 pkgname=python-cn2an
 _name=${pkgname#python-}
 pkgver=0.5.23
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Convert Chinese numerals and Arabic numerals."
 arch=('any')
