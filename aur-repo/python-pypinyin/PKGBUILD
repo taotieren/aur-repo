@@ -3,7 +3,7 @@
 pkgname=python-pypinyin
 _name=${pkgname#python-}
 pkgver=0.55.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="汉字拼音转换模块/工具."
 arch=('any')
