@@ -23,6 +23,7 @@ depends=(
 )
 makedepends=(
     cmake
+    cython
     python-flake8
     python-build
     python-installer
