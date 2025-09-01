@@ -28,10 +28,8 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
-source=("${pkgname}::git+${url}.git#tag=${pkgver}"
-	"0001-Use-the-kernel-version-as-a-fallback.patch")
-sha256sums=('511965596926455f0c73c20b43a2b5264e3456ba057b373c09b27ab9f2bb1c2f'
-            '68d7965d56cf62457c5aaee9f911cd8526f9b83557ca53a751ca062ed4bd44f2')
+source=("${pkgname}::git+${url}.git#tag=${pkgver}")
+sha256sums=('511965596926455f0c73c20b43a2b5264e3456ba057b373c09b27ab9f2bb1c2f')
 options=(!strip !lto !debug)
 
 build() {
@@ -43,7 +41,6 @@ build() {
     #     fi
     PLATFORM=x64
     cd "${srcdir}/${pkgname}/"
-   patch -Np1 < ${srcdir}/0001-Use-the-kernel-version-as-a-fallback.patch
     sed -e 's|"."|"share/bin2cpp"|g' \
         -e 's|"docs"|"share/doc/bin2cpp"|g' \
         -i CMakeLists.txt
