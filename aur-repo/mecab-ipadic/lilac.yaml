@@ -12,13 +12,13 @@ pre_build_script: |
     pkgbuild_content = f.read()
 
   old_build_section = """build() {
-  cd "$pkgname/$pkgname"
-  make
+cd "$pkgname/$pkgname"
+make
 }"""
   new_build_section = """build() {
-  cd "$pkgname/$pkgname"
-  sed -i 's!libexec/mecab!lib/mecab!g' config.status
-  make
+cd "$pkgname/$pkgname"
+sed -i 's!libexec/mecab!lib/mecab!g' config.status
+make
 }"""
 
   pkgbuild_content = pkgbuild_content.replace(old_build_section, new_build_section)
