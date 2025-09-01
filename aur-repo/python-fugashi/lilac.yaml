@@ -1,12 +1,13 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers='atticf')
 post_build: aur_post_build
 repo_depends:
   - mecab-ipadic
   - python-ipadic
-  - python-unidic-lite
+  # - python-unidic-lite
 update_on:
   - source: aur
     aur: python-fugashi
