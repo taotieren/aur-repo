@@ -7,12 +7,7 @@ pre_build_script: |
 
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=mecab-ipadic'])
 
-  run_cmd([
-    'sed', 
-    '-i', 
-    '/sed/d',
-    'PKGBUILD'
-  ])
+  run_cmd(['sed',  '-i', '/sed/d', 'PKGBUILD'  ])
 
   run_cmd([
     'sed', 
