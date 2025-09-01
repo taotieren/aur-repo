@@ -10,7 +10,7 @@ pre_build_script: |
   run_cmd([
     'sed', 
     '-i', 
-    r'/^make$/i\tsed -i "s!libexec/mecab!lib/mecab!g" config.status', 
+    r's|sed -i "s\^MECAB_DICT_INDEX=\.\*MECAB_DICT_INDEX=/usr/lib/mecab/mecab-dict-index|g" configure\.in|sed -i "s!libexec/mecab!lib/mecab!g" config.status|g',
     'PKGBUILD'
   ])
 
