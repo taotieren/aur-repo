@@ -7,25 +7,7 @@ pre_build_script: |
   add_makedepends(['git'])
 
   run_cmd(['sed', '-i', "s/make/sed -i 's!libexec/mecab!lib/mecab!g' config.status make/", 'PKGBUILD'])
-
-  with open('PKGBUILD', 'r') as f:
-    pkgbuild_content = f.read()
-
-  old_build_section = """build() {
-cd "$pkgname/$pkgname"
-make
-}"""
-  new_build_section = """build() {
-cd "$pkgname/$pkgname"
-sed -i 's!libexec/mecab!lib/mecab!g' config.status
-make
-}"""
-
-  pkgbuild_content = pkgbuild_content.replace(old_build_section, new_build_section)
-
-  with open('PKGBUILD', 'w') as f:
-      f.write(pkgbuild_content)
-
+  run_cmd(['sed', '-i', "s/make/sed -i 's!libexec\\/mecab!lib\\/mecab!g' config.status && make/", 'PKGBUILD'])
   run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
