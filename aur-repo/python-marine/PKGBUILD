@@ -3,7 +3,7 @@
 pkgname=python-marine
 _name=${pkgname#python-}
 pkgver=0.0.6
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Marine: Multi-task learning based on Japanese accent estimatio"
 arch=('any')
