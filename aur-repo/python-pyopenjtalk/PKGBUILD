@@ -3,7 +3,7 @@
 pkgname=python-pyopenjtalk
 _name=${pkgname#python-}
 pkgver=0.4.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A python wrapper for OpenJTalk"
 arch=($CARCH)
