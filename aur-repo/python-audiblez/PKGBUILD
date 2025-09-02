@@ -3,7 +3,7 @@
 pkgname=python-audiblez
 _name=${pkgname#python-}
 pkgver=0.4.9
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Generate audiobooks from e-books (epub to wav/m4b)"
 arch=('any')
