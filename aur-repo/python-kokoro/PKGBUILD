@@ -3,7 +3,7 @@
 pkgname=python-kokoro
 _name=${pkgname#python-}
 pkgver=0.9.4
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="TTS An inference library for Kokoro-82M"
 arch=('any')
