@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='daskol')
+post_build: aur_post_build
+repo_depends:
+  - python-jax
+  - python-jmp
+update_on:
+  - source: aur
+    aur: python-dm-haiku
+  - alias: python

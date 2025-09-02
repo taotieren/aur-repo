@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers=['daskol', 'ei-grad'])
+post_build: aur_post_build
+repo_depends:
+  - python-jaxlib
+update_on:
+  - source: aur
+    aur: python-jax
+  - alias: python
