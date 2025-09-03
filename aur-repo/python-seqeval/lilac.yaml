@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='zhixi')
+pre_build_script: |
+  aur_pre_build(maintainers='zhixi')
+  add_makedepends(['python-setuptools-scm', 'python-numpy', 'python-scikit-learn'])
 post_build: aur_post_build
 # repo_depends:
 #   -
