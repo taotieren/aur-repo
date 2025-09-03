@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script:  aur_pre_build(maintainers='carlosal1015')
+post_build: aur_post_build
+repo_depends:
+  - python-cucumber-tag-expressions
+update_on:
+  - source: aur
+    aur: python-behave
+  - alias: python
