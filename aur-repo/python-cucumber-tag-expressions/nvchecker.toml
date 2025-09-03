@@ -1,0 +1,4 @@
+[python-cucumber-tag-expressions]
+source = "github"
+github = "cucumber/tag-expressions"
+use_latest_release = true
