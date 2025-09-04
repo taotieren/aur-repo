@@ -1,0 +1,12 @@
+--- a/setup.py	2024-10-16 16:00:32.765302631 +0300
++++ b/setup.py	2024-10-16 16:00:53.435366849 +0300
+@@ -46,7 +46,8 @@
+     long_description_content_type='text/markdown',
+     author_email='haiku-dev-os@google.com',
+     # Contained modules and scripts.
+-    packages=find_namespace_packages(exclude=['*_test.py', 'examples']),
++    packages=find_namespace_packages(include=['haiku*']),
++    package_data={'': ['py.typed', '*.json', '*.pkl', 'README.md']},
+     install_requires=_parse_requirements('requirements.txt'),
+     extras_require={
+         'jax': _parse_requirements('requirements-jax.txt'),
