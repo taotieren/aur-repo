@@ -25,10 +25,10 @@ makedepends=(
   python-wheel
 )
 checkdepends=(
-  python-mock
   python-tests
   python-pytest
   # AUR
+  python-mock
   #   python-behave
 )
 conflicts=(${pkgname} pylink)
