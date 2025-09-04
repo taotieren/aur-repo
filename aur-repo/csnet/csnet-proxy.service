@@ -1,0 +1,26 @@
+[Unit]
+Description=CSnet Proxy Environment Manager
+After=network.target csnet.service
+Requires=network.target
+Wants=csnet.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=/etc/csnet/proxy
+ExecStart=/bin/bash -c ' \
+    echo "HTTP_PROXY=${HTTP_PROXY}" >> /etc/environment; \
+    echo "HTTPS_PROXY=${HTTPS_PROXY}" >> /etc/environment; \
+    echo "SOCKS5_PROXY=${SOCKS5_PROXY}" >> /etc/environment; \
+    echo "ALL_PROXY=${ALL_PROXY}" >> /etc/environment; \
+    echo "NO_PROXY=${NO_PROXY}" >> /etc/environment; \
+    echo "Proxy environment configured from /etc/csnet/proxy"'
+ExecStop=/bin/bash -c ' \
+    sed -i "/^HTTP_PROXY=/d; /^HTTPS_PROXY=/d; /^SOCKS5_PROXY=/d; /^ALL_PROXY=/d; /^NO_PROXY=/d" /etc/environment; \
+    echo "Proxy environment removed from /etc/environment"'
+ExecStartPost=/bin/bash -c 'source /etc/environment || true'
+StandardOutput=append:/var/log/csnet/csnet-proxy.log
+StandardError=append:/var/log/csnet/csnet-proxy.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+# CSnet SOCKS5 Proxy Configuration
+SOCKS5_PROXY=socks5://localhost:54321
+# 以下为可选配置，如果你的环境需要或存在 HTTP 转换代理
+HTTP_PROXY=socks5://localhost:54321
+HTTPS_PROXY=socks5://localhost:54321
+NO_PROXY=localhost,127.0.0.1,::1,*.local,10.*
+ALL_PROXY=socks5://localhost:54321
