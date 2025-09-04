@@ -1,21 +1,22 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgbase=img2kvm-rs-git
-pkgname=img2kvm-rs-git
-pkgver=0.2.0.r0.g1c857ab
-pkgrel=2
+pkgbase=img2kvm-rs
+pkgname=img2kvm-rs
+pkgver=0.2.0
+pkgrel=1
 pkgdesc="A utility that convert disk image in Proxmox VE."
 arch=('x86_64')
 url="https://github.com/ywjno/img2kvm-rs"
 license=('MIT')
-provides=(${pkgbase%-git} ${pkgbase%-rs-git})
-conflicts=(${pkbase%-git} ${pkgbase%-rs-git})
+provides=(${pkgbase} ${pkgbase%-rs})
+conflicts=(${pkbase} ${pkgbase%-rs})
 replaces=()
 depends=(
     bzip2
     gcc-libs
     glibc
-    xz)
+    xz
+)
 makedepends=(
     'git'
     'cargo'
@@ -25,17 +26,8 @@ optdepend=('qemu-img: QEMU tooling for manipulating disk images'
 backup=()
 options=('!strip' '!lto' '!debug')
 install=${pkgname}.install
-source=("${pkgname}::git+${url}.git")
-sha256sums=('SKIP')
-
-pkgver() {
-    cd "${srcdir}/${pkgname}"
-    (
-        set -o pipefail
-        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
-            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
-    )
-}
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+sha256sums=('55da12e9779b3c5bb8d492a918d9310417f156596adf5928121a3aa7b7da022f')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
