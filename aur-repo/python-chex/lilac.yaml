@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='daskol')
+pre_build_script: |
+  aur_pre_build(maintainers='daskol')
+  add_makedepends(['python-flit-core'])
 post_build: aur_post_build
 repo_depends:
   - python-jax
