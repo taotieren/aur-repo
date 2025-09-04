@@ -11,3 +11,4 @@ repo_depends:
 update_on:
   - source: github
     github: deepmind/mujoco
+    use_latest_release: true
