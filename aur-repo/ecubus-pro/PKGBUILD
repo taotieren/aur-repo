@@ -3,7 +3,7 @@
 pkgname=ecubus-pro
 _tagname=0.8.54
 pkgver=${_tagname//-/_}
-pkgrel=1
+pkgrel=2
 pkgdesc="A powerful automotive ECU development tool Easy of use, Cross platform, Multi dongle, Powerful script ability, CLI support"
 arch=(x86_64)
 url="https://github.com/ecubus/EcuBus-Pro"
@@ -16,11 +16,6 @@ depends=(
     electron
     gcc-libs
     glibc
-    python
-    python-pytest
-    # AUR
-    python-udsoncan
-    python-doipclient
 )
 makedepends=(
     git
@@ -29,6 +24,10 @@ makedepends=(
     ghostscript
     node-gyp
     nodejs
+)
+optdepends=(
+    "python-doipclient: A Diagnostic over IP (DoIP) client implementing ISO-13400-2."
+    "python-udsoncan: Implementation of the Unified Diagnostic Service (UDS) protocol (ISO-14229) used in the automotive industry."
 )
 backup=()
 options=(!debug !strip)
