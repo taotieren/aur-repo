@@ -82,6 +82,13 @@ EOF
 
 exec electron /usr/lib/ecubus-pro/resources/app.asar "\$@"
 EOF
+    install -Dm0755 /dev/stdin ${pkgdir}/usr/bin/ecb-cli <<EOF
+#!/bin/sh
+
+cd /usr/lib/ecubus-pro/resources/app.asar.unpacked/resources/lib/
+
+./ecb_cli "\$@"
+EOF
     install -Dm0644 build/icon.png ${pkgdir}/usr/share/pixmaps/${pkgname}.png
     #	for size in 16 32 48 64 128 256 512; do
     #    install -Dm644 "public/icons/${size}x${size}.png" \
