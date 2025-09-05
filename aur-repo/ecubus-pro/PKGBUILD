@@ -82,7 +82,7 @@ EOF
 
 exec electron /usr/lib/ecubus-pro/resources/app.asar "\$@"
 EOF
-    install -Dm0755 /dev/stdin ${pkgdir}/usr/bin/ecb-cli <<EOF
+    install -Dm0755 /dev/stdin ${pkgdir}/usr/bin/ecb_cli <<EOF
 #!/bin/sh
 
 cd /usr/lib/ecubus-pro/resources/app.asar.unpacked/resources/lib/
