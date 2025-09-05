@@ -24,7 +24,7 @@ depends=(
     python-confection
     python-curated-tokenizers
     python-curated-transformers
-    #     python-fugashi
+    python-fugashi
     python-huggingface-hub
     python-spacy
     python-srsly

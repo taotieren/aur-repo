@@ -10,10 +10,11 @@ repo_depends:
   - python-confection
   - python-curated-tokenizers
   - python-curated-transformers
-  # - python-fugashi
+  - python-fugashi
   - python-spacy
   - python-srsly
-  - python-thinc
+  # - python-thinc
+  - python-thinc-bin-8.3.2
   - python-transformers
   - python-wasabi
 update_on:
