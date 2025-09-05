@@ -1,19 +1,17 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=linglong-pica
-_tagname=1.2.4-1
-pkgver="${_tagname//-/_}"
-# pkgver=1.2.4
-pkgrel=2
+pkgname=linglong-pica-git
+pkgver=1.2.5.r0.g1a7be60
+pkgrel=1
 pkgdesc='deb package to Linglong package tool.'
 arch=($CARCH)
 url='https://github.com/linuxdeepin/linglong-pica'
 license=('LGPL-3.0-or-later')
 provides=(
-  ${pkgname}
+  ${pkgname%-git}
 )
 conflicts=(
-  ${pkgname}
+  ${pkgname%-git}
 )
 replaces=()
 depends=(
@@ -29,8 +27,17 @@ makedepends=(
 #   apt
 # )
 optdepends=()
-source=("${pkgname}::git+${url}.git#tag=${_tagname}")
-sha256sums=('7440c177ab608542fd0f079f9994c2f6230d5f82')
+source=("${pkgname}::git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "${srcdir}/${pkgname}"
+  (
+    set -o pipefail
+    git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+      printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+  )
+}
 
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
