@@ -1,10 +1,8 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
-
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -16,4 +14,4 @@ update_on:
     github: ecubus/EcuBus-Pro
     use_max_tag: true
     prefix: v
- - alias: python
+  - alias: python
