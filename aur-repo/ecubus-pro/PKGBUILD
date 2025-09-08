@@ -1,8 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ecubus-pro
-_tagname=0.8.55
-pkgver=${_tagname//-/_}
+pkgver=0.8.55
 pkgrel=4
 pkgdesc="A powerful automotive ECU development tool Easy of use, Cross platform, Multi dongle, Powerful script ability, CLI support"
 arch=(x86_64)
@@ -16,6 +15,7 @@ depends=(
     electron
     gcc-libs
     glibc
+    python
 )
 makedepends=(
     git
@@ -24,7 +24,6 @@ makedepends=(
     ghostscript
     node-gyp
     nodejs
-    python
 )
 optdepends=(
     "python-doipclient: A Diagnostic over IP (DoIP) client implementing ISO-13400-2."
@@ -33,9 +32,9 @@ optdepends=(
 backup=()
 options=(!debug !strip)
 install=
-source=("${pkgname}::git+${url}.git#tag=v${_tagname}")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('fd4fe1f1ff396c1c2dc8d4beec54942e4e677171353e73fc3d57683d26b3f862')
-# noextract=("${pkgname}-${_tagname}.tar.gz")
+# noextract=("${pkgname}-${pkgver}.tar.gz")
 
 _pkgname=EcuBus-Pro
 prepare() {
