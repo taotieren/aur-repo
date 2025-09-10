@@ -13,6 +13,7 @@ depends=(
   python-capstone
   python-cmsis-pack-manager
   python-colorama
+  python-hidapi
   python-importlib-metadata
   python-importlib-resources
   python-intelhex
