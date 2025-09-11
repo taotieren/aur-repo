@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linglong-pica-git
-pkgver=1.2.5.r0.g1a7be60
-pkgrel=2
+pkgver=1.2.5.r1.g62ce347
+pkgrel=1
 pkgdesc='deb package to Linglong package tool.'
 arch=($CARCH)
 url='https://github.com/linuxdeepin/linglong-pica'
