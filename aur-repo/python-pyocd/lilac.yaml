@@ -12,7 +12,8 @@ repo_depends:
 update_on:
   - source: github
     github: pyocd/pyOCD
-    use_max_tag: true
+    # use_max_tag: true
+    use_latest_release: true
     prefix: v
   - alias: python
 # use_latest_release: true
