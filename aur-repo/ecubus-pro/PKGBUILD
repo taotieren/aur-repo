@@ -51,9 +51,7 @@ prepare() {
 
 build() {
     cd ${srcdir}/${pkgname}/
-    npm run docan
-    npm run dolin
-    npm run someip
+    npm run native
     npm run worker
     npm run api
     npm run cli:build:linux
