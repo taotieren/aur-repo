@@ -9,7 +9,7 @@ post_build_script: |
 repo_depends:
   - pyinstaller
   - python-pyocd
-  - python-spsdk
+#  - python-spsdk
 update_on:
   - source: pypi
     pypi: spsdk-pyocd
