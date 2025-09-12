@@ -10,7 +10,7 @@ repo_depends:
   - pyinstaller
 update_on:
   - source: github
-    github: libusb-package
+    github: pyocd/libusb-package
     # use_max_tag: true
     use_latest_release: true
     prefix: v
