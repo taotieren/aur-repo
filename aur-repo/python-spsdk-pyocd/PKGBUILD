@@ -1,5 +1,4 @@
 # Maintainer: taotieren <admin@taotieren.com>
-# Maintainer: David Runge <dvzrv@archlinux.org>
 
 pkgname=python-spsdk-pyocd
 _name=${pkgname#python-}
