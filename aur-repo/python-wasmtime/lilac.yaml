@@ -3,10 +3,10 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers='gonsolo')
-  add_makedepends(['python-setuptools-git-versioning', 'wasm-tools', 'rust'])
+  add_makedepends(['python-setuptools-git-versioning', 'wasm-tools', 'rust-wasm'])
 post_build: aur_post_build
-repo_depends:
-  - cargo-wasi
+# repo_depends:
+# -
 update_on:
   - source: aur
     aur: python-wasmtime
