@@ -6,7 +6,7 @@ pre_build_script: |
   add_makedepends(['python-setuptools-git-versioning', 'wasm-tools', 'rust'])
 post_build: aur_post_build
 repo_depends:
-  - chalice
+  - cargo-wasi
 update_on:
   - source: aur
     aur: python-wasmtime
