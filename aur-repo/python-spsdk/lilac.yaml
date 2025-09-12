@@ -7,10 +7,15 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - pyinstaller
-  - python-pyocd
-  - python-spsdk
+  - python-ftd2xx
+  - python-pyftdi
+  - python-pylibftdi
+  - python-gmssl
+  - python-libuuu
+  - python-sly
+  - python-spsdk-pqc
+  - python-x690
 update_on:
   - source: pypi
-    pypi: spsdk-pyocd
+    pypi: spsdk
   - alias: python

@@ -1,0 +1,88 @@
+# Maintainer: David Runge <dvzrv@archlinux.org>
+
+_name=spsdk
+pkgname=python-spsdk
+pkgver=3.1.0
+pkgrel=1
+pkgdesc="Open Source Secure Provisioning SDK for NXP MCU/MPU"
+arch=(any)
+url="https://github.com/nxp-mcuxpresso/spsdk"
+license=(BSD-3-Clause)
+depends=(
+  ipython
+  python
+  python-asn1crypto
+  python-astunparse
+  python-bincopy
+  python-bitstring
+  python-can
+  python-click
+  python-click-command-tree
+  python-click-option-group
+  python-colorama
+  python-crcmod
+  python-cryptography
+  python-deepmerge
+  python-fastjsonschema
+  python-filelock
+  python-hexdump
+  python-importlib-metadata
+  python-libusbsio
+  python-ipywidgets
+  python-setuptools-scm
+  python-packaging
+  python-platformdirs
+  python-prettytable
+  python-pyasn1
+  python-pyserial
+  python-requests
+  python-ruamel-yaml
+  python-typing_extensions
+  python-yaml
+  # AUR
+  python-ftd2xx
+  python-pyftdi
+  python-pylibftdi
+  python-gmssl
+  python-libuuu
+  python-sly
+  python-spsdk-pqc
+  #   python-spsdk-mcu-link
+  #   python-spsdk-pyocd
+  python-x690
+)
+makedepends=(
+  python-tomli
+  python-build
+  python-installer
+  python-setuptools
+  python-wheel
+)
+checkdepends=(
+  python-pytest
+  python-pytest-xdist
+  python-voluptuous
+)
+optdepends=()
+source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+sha512sums=('02d2a422ddf7543aceac2995ff59c5b21a302b1a2fdc33a12ae9c4d4191996f2b09fd9587e3b801940a72d5f3c491aa6067afd7c1a03ecc948b879c1db390734')
+
+prepare() {
+  cd $_name-$pkgver
+  # remove all version pinning and overly explicit version bounds
+  # https://github.com/NXPmicro/spsdk/issues/35
+  sed -e 's|>=.*||g;s|==.*||g;s|~=.*||g;s|<.*||g' -i requirements{,-develop}.txt
+  sed -E 's/(requires = \[.*"setuptools_scm)[^"]*(".*"setuptools)[^"]*(".*"wheel")/\1\2\3/' -i pyproject.toml
+}
+
+build() {
+  cd $_name-$pkgver
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd $_name-$pkgver
+  python -m installer --destdir="$pkgdir" dist/*.whl
+  install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname"
+  install -vDm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
+}

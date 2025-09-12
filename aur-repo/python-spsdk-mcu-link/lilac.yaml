@@ -9,7 +9,7 @@ post_build_script: |
 repo_depends:
   - python-libusb-package
   - python-wasmtime
-#  - python-spsdk
+  - python-spsdk
 update_on:
   - source: pypi
     pypi: spsdk-mcu-link
