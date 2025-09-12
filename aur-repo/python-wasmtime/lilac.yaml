@@ -3,7 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers='gonsolo')
-  add_makedepends(['python-setuptools-git-versioning', 'wasm-tools'])
+  add_makedepends(['python-setuptools-git-versioning', 'wasm-tools', 'rust'])
 post_build: aur_post_build
 repo_depends:
   - chalice
