@@ -2,7 +2,7 @@
 
 pkgname=python-libusb-package
 _name=${pkgname#python-}
-pkgver=1.0.26.2
+pkgver=1.0.26.3
 pkgrel=1
 pkgdesc='Package containing libusb so it can be installed via Python package managers'
 arch=($CARCH)
@@ -27,7 +27,7 @@ makedepends=(
   'libusb'
 )
 source=("$pkgname-$pkgver::${url}/archive/v$pkgver.tar.gz")
-sha256sums=('556c37dd7b1c7bf8fb4bbe4812faf8acf42a7bae214c42b69ca30076837319eb')
+sha256sums=('c83823b244bb153a0bb8d1e1d86cd4553d354dd6fbfc87ed2aae8d3a3acd6df8')
 
 build() {
   cd "${srcdir}/${_name}-${pkgver}"
