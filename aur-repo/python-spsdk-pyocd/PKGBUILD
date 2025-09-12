@@ -38,6 +38,7 @@ provides=(${_name})
 conflicts=(${_name})
 replaces=(${_name})
 _real_url=$(curl -s "https://pypi.org/pypi/${_name}/${pkgver}/json" | jq -r '.urls[] | select(.packagetype == "sdist") | .url')
+_name=${_name//-/_}
 source=("${_name}-${pkgver}.tar.gz::${_real_url}")
 sha512sums=('d4a49989ecb5ff46ded385a71546bb13df13721f67981adbcaf372f68a7bf10a089985c6a5b5e0cd9761d850fe40c7e5232ebc6e11a1ff6afd96b9be2cc952e0')
 
