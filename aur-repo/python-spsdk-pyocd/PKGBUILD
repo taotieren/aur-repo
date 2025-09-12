@@ -23,8 +23,6 @@ makedepends=(
   python-setuptools-scm
   python-toml
   python-wheel
-  jq
-  curl
 )
 checkdepends=(
   python-pytest
