@@ -13,21 +13,17 @@ depends=(
   python
   python-asn1crypto
   python-astunparse
-  python-bincopy
   python-bitstring
   python-can
   python-click
   python-click-command-tree
-  python-click-option-group
   python-colorama
   python-crcmod
   python-cryptography
-  python-deepmerge
   python-fastjsonschema
   python-filelock
   python-hexdump
   python-importlib-metadata
-  python-libusbsio
   python-ipywidgets
   python-setuptools-scm
   python-packaging
@@ -40,6 +36,9 @@ depends=(
   python-typing_extensions
   python-yaml
   # AUR
+  python-bincopy
+  python-click-option-group
+  python-deepmerge
   python-ftd2xx
   python-pyftdi
   python-pylibftdi
@@ -47,6 +46,7 @@ depends=(
   python-libuuu
   python-sly
   python-spsdk-pqc
+  python-libusbsio
   #   python-spsdk-mcu-link
   #   python-spsdk-pyocd
   python-x690
