@@ -1,6 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
@@ -14,10 +15,10 @@ repo_depends:
   - python-pyftdi
   - python-pylibftdi
   - python-gmssl
-  - python-libuuu-git
+  # - python-libuuu-git
   - python-sly
   - python-spsdk-pqc
-  - python-libusbsio
+  # - python-libusbsio
   - python-x690
 update_on:
   - source: pypi
