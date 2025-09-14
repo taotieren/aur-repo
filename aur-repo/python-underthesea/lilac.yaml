@@ -1,0 +1,24 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-einops
+  - python-crfsuite
+  - python-dm-haiku
+  - python-fasttext
+  - python-jax
+  - python-playsound
+  - python-seqeval
+  - python-optax
+  - python-transformers
+  - python-youtube-transcript-api
+  - python-underthesea-core
+update_on:
+  - source: pypi
+    pypi: underthesea
+  - alias: python
