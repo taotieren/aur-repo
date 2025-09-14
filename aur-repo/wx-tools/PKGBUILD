@@ -69,7 +69,7 @@ build() {
 package() {
     install -Dm0755 "${srcdir}/${pkgname}/build/assets/wxTools/wxTools" -t "${pkgdir}/usr/share/${pkgname}/"
     cd "${srcdir}/${pkgname}/"
-    cp -r res/{files,i18n} "${pkgdir}/usr/share/${pkgname}/"
+    cp -r res/{files,i18n,icons,scripts} "${pkgdir}/usr/share/${pkgname}/"
 
     install -Dm644 "LICENCE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm644 "wxTools.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/io.github.x-tools-author.wx-tools.svg"
