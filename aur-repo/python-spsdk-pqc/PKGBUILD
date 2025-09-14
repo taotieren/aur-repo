@@ -32,6 +32,7 @@ checkdepends=(
 
 )
 optdepends=()
+groups=(spsdk-plugins)
 # options=('!strip' '!debug')
 provides=(${_name})
 conflicts=(${_name})

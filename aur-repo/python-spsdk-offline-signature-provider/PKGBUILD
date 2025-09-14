@@ -21,6 +21,7 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
+groups=(spsdk-plugins)
 provides=(${_name})
 conflicts=(${_name})
 replaces=(${_name})

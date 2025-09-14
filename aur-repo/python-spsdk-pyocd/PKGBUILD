@@ -31,6 +31,7 @@ checkdepends=(
 optdepends=(
   'stlink: for stlink device detection via udev'
 )
+groups=(spsdk-plugins)
 provides=(${_name})
 conflicts=(${_name})
 replaces=(${_name})
