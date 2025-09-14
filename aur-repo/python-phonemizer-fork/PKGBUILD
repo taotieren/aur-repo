@@ -37,10 +37,10 @@ sha256sums=('10e16e827d0443b087062e21b55e805c00989cf1343b2e81e734cae5f6c0cf69')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    mv tests phonemizer
+    mv test phonemizer
     install -Dm644 /dev/stdin pytest.ini <<EOF
 [pytest]
-testpaths = phonemizer/tests
+testpaths = phonemizer/test
 pythonpath = phonemizer
 EOF
     python -m build --wheel --no-isolation
