@@ -2,7 +2,7 @@
 
 pkgname=python-spsdk-offline-signature-provider
 _name=${pkgname#python-}
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Offline Signature Provider for SPSDK."
 arch=(any)
