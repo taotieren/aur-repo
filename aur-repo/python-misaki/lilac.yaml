@@ -22,7 +22,7 @@ repo_depends:
   - python-cn2an
   - python-pypinyin-dict
   - python-underthesea
-  - python-mishkal-hebrew
+  # - python-mishkal-hebrew
 update_on:
   - source: pypi
     pypi: misaki
