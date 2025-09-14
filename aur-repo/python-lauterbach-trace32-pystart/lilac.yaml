@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
+update_on:
+  - source: pypi
+    pypi: lauterbach-trace32-pystart
+  - alias: python
