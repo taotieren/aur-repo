@@ -34,9 +34,9 @@ sha256sums=('fea9ddfe7445f6bb5c018407ba37aabd46043fb754f2d36088aab8a2c542f5ae')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    sed -i 's|0.15.0|0.25.1|g' Cargo.toml
-    sed -i -e 's|PyModule)|Bound<PyModule>)|' \
-        -e '/use pyo3\s*::.*;/a use pyo3::types::PyModule;' src/lib.rs
+    #     sed -i 's|0.15.0|0.25.1|g' Cargo.toml
+    #     sed -i -e 's|PyModule)|Bound<PyModule>)|' \
+    #         -e '/use pyo3\s*::.*;/a use pyo3::types::PyModule;' src/lib.rs
     python -m build --wheel --no-isolation
 }
 
