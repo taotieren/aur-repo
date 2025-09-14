@@ -20,6 +20,7 @@ optdepends=(
     'emby-server: Bring together your videos, music, photos, and live television'
     'jellyfin-server: Jellyfin server backend')
 makedepends=(
+    git
     go)
 backup=(etc/${pkgname}/config.yaml)
 options=('!strip' '!debug')
