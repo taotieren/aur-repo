@@ -3,7 +3,7 @@
 pkgname=python-underthesea-core
 _name=${pkgname#python-}
 pkgver=1.0.4
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Underthesea Core"
 arch=($CARCH)
