@@ -43,6 +43,7 @@ package() {
     install -dm0755 "${pkgdir}/usr/lib/${pkgname%-bin}/"
 
     mv ${pkgdir}/opt/EcuBus-Pro/* ${pkgdir}/usr/lib/${pkgname%-bin}
+    rm -rf ${pkgdir}/usr/lib/${pkgname%-bin}/resources/bin/esbuild{.exe,_mac}
     rm -rf ${pkgdir}/opt
 
     sed -i 's|/opt/EcuBus-Pro/ecubuspro|/usr/bin/ecubus-pro|g' ${pkgdir}/usr/share/applications/ecubuspro.desktop

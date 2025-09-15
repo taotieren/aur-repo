@@ -61,9 +61,9 @@ build() {
 package() {
     cd ${srcdir}/${pkgname}/
     install -dm0755 "${pkgdir}/usr/lib/${pkgname}/"
-
-    cp -r dist/linux-unpacked/locales ${pkgdir}/usr/lib/${pkgname}
-    cp -r dist/linux-unpacked/resources ${pkgdir}/usr/lib/${pkgname}
+    rm -rf dist/linux-unpacked/resources/bin/esbuild{.exe,_mac}
+    cp -R dist/linux-unpacked/locales ${pkgdir}/usr/lib/${pkgname}
+    cp -R dist/linux-unpacked/resources ${pkgdir}/usr/lib/${pkgname}
     install -Dm0644 /dev/stdin "${pkgdir}/usr/share/applications/ecubus-pro.desktop" <<EOF
 [Desktop Entry]
 Name=EcuBus-Pro
