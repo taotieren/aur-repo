@@ -3,7 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers=['entidi', 'micwoj92'])
-  add_makedepends(['dkms', 'automake', 'linux-zen-headers'])
+  add_makedepends(['dkms', 'automake', 'linux-headers'])
 
 post_build: aur_post_build
 # repo_depends:
