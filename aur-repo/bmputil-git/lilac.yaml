@@ -1,7 +1,15 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['perigoso'])
+pre_build_script: |
+  aur_pre_build(maintainers=['perigoso'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=bmputil-git'])
+  run_cmd(['sed', '-i', '/^prepare() {/,/^}/ {
+    /export RUSTUP_TOOLCHAIN=stable/a\\    cargo update -p ring -p rustls -p reqwest
+}', 'PKGBUILD'])
+  #run_cmd(['sed', '-i', '/export RUSTUP_TOOLCHAIN=stable/a\\    cargo update -p ring -p rustls -p reqwest', 'PKGBUILD'])
+  run_cmd(['updpkgsums'])
+
 post_build: aur_post_build
 # repo_depends:
 #   -
