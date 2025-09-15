@@ -3,7 +3,7 @@
 basename=ringdove
 pkgname=ringdove
 pkgver=0.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Ringdove EDA is a suite of multiple software components. Ringdove is a traditional UNIX software. The normal way to install it is installing individual components that are required, starting with librnd (as most others depend on it)."
 arch=($CARCH)
 url="http://www.repo.hu/projects/ringdove"
