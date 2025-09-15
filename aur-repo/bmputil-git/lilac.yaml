@@ -4,7 +4,22 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers=['perigoso'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=bmputil-git'])
-  run_cmd(['sed', '-i', 's/export RUSTUP_TOOLCHAIN=stable/a cargo update -p ring -p rustls -p reqwest', 'PKGBUILD'])  
+
+  with open('PKGBUILD', 'r') as f:
+    lines = f.readlines()
+
+    new_lines = []
+    inserted = False
+
+    for line in lines:
+      new_lines.append(line)
+        if 'export RUSTUP_TOOLCHAIN=stable' in line and not inserted:
+          indent = line.split('export')[0]
+          new_lines.append(f"{indent}cargo update -p ring -p rustls -p reqwest\n")
+          inserted = True
+
+    with open('PKGBUILD', 'w') as f:
+      f.writelines(new_lines)
 
   run_cmd(['updpkgsums'])
 
