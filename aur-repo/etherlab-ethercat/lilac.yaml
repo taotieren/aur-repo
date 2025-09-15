@@ -4,6 +4,12 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers=['entidi', 'micwoj92'])
   add_makedepends(['dkms', 'automake'])
+
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=etherlab-ethercat'])
+
+  run_cmd(['sed', '-i', 's/make cmd_depmod/make -C cmd_depmod/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 # repo_depends:
 #   -
