@@ -7,7 +7,7 @@ pre_build_script: |
   run_cmd(['sed', '-i', 's/python setup.py build/python -m build --wheel --no-isolation/', 'PKGBUILD'])
   run_cmd(['sed', '-i', 's|python setup.py install --root="\$pkgdir"|python -m installer --destdir="\$pkgdir" dist/*.whl|', 'PKGBUILD'])
   run_cmd(['updpkgsums'])
-  add_makedepends(['cmake', 'ninja', 'nlohmann-json', 'pkgconf', 'boost-libs'])
+  add_makedepends(['cmake', 'ninja', 'nlohmann-json', 'pkgconf', 'boost-libs', ' python-build', 'python-installer', 'python-wheel'])
 post_build: aur_post_build
 update_on:
   - source: aur
