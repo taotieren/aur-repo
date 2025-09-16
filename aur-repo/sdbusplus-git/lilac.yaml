@@ -8,5 +8,7 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: sdbusplus-git
+  - source: github
+    github: openbmc/sdbusplus
   - alias: python
 # add_depends([''])
