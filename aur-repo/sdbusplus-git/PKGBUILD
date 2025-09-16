@@ -1,14 +1,14 @@
 # Maintainer: amateurece <ethan.twardy at gmail dot com>
 
 pkgname=sdbusplus-git
-pkgver=r845.da8574d5
+pkgver=r868.ed24aa51
 pkgrel=1
 pkgdesc="C++ bindings for systemd dbus APIs"
 url="https://github.com/openbmc/sdbusplus"
 arch=('i686' 'x86_64' 'aarch64')
 license=('Apache')
 depends=('systemd-libs' 'python-mako' 'python-inflection' 'python-yaml')
-makedepends=("boost-libs" "cmake" "git" "meson" "nlohmann-json" "pkgconf" "python-setuptools")
+makedepends=("boost-libs" "cmake" "git" "meson" "ninja" "nlohmann-json" "pkgconf" "python-build" "python-installer" "python-setuptools" "python-wheel")
 source=("${pkgname}::git+https://github.com/openbmc/sdbusplus.git")
 sha256sums=('SKIP')
 
@@ -31,11 +31,11 @@ build() {
 
     # Python tools
     cd "${pkgname}/tools"
-    python setup.py build
+    python -m build --wheel --no-isolation
 }
 
 package() {
     meson install -C build --destdir "$pkgdir"
     cd "${pkgname}/tools"
-    python setup.py install --root="$pkgdir" --optimize=1
+    python -m installer --destdir="$pkgdir" dist/*.whl
 }
