@@ -5,7 +5,7 @@ pre_build_script: |
   aur_pre_build(maintainers=['amateurece'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=sdbusplus-git'])
   run_cmd(['sed', '-i', 's/python setup.py build/python -m build --wheel --no-isolation/', 'PKGBUILD'])
-  run_cmd(['sed', '-i', 's|python setup.py install --root="\$pkgdir"|python -m installer --destdir="\$pkgdir" dist/*.whl|g', 'PKGBUILD'])
+  run_cmd(['sed', '-i', 's|python setup.py install --root="\$pkgdir" --optimize=1|python -m installer --destdir="\$pkgdir" dist/*.whl|g', 'PKGBUILD'])
   run_cmd(['updpkgsums'])
   add_makedepends(['cmake', 'ninja', 'nlohmann-json', 'pkgconf', 'boost-libs', 'python-build', 'python-installer', 'python-wheel'])
 post_build: aur_post_build
