@@ -27,7 +27,7 @@ options=()
 _pkg_name=AT32IDE_Project_Generate
 _pkg_linux=${_pkg_name}_Linux-${arch}
 _pkg_file_name=${_pkg_linux}_V${pkgver}
-source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/TOOL/${_pkg_file_name}.zip")
+source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/AT32 IDE/${_pkg_file_name}.zip")
 sha256sums=('62d467329563818c97e6de1aa9ae20f25b68d2e3b57461546e477bf0c9d39e58')
 noextract=(${_pkg_file_name}.zip)
 

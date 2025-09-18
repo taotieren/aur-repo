@@ -27,7 +27,7 @@ backup=()
 options=('!strip' '!debug' '!lto')
 install=${pkgname}.install
 _pkg_file_name=Artery_ATLINK_Console_V${pkgver}.zip
-source=("${_pkg_file_name}::https://www.arterytek.com/download/TOOL/Artery_ATLINK_Console_Linux-${arch}_V${pkgver}.zip")
+source=("${_pkg_file_name}::https://www.arterytek.com/download/Program and Debug/Artery_ATLINK_Console_Linux-${arch}_V${pkgver}.zip")
 sha256sums=('4c384bf0cffad0e2265a8ef057408181ae627a3f9592c8b3855a92b97447eac6')
 noextract=(${_pkg_file_name})
 
