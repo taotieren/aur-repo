@@ -34,7 +34,7 @@ backup=()
 options=('!strip' '!debug' '!lto')
 install=
 _pkg_file_name=AT32_Work_Bench_Linux-${arch}_V${pkgver}
-source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/AT32 Workbench/${_pkg_file_name}.zip")
+source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/AT32%20Workbench/${_pkg_file_name}.zip")
 sha256sums=('2036ea6b0290b64ba2850b4181ddd21ab020617f0af9e2b6ef587266e5d93b0a')
 noextract=()
 

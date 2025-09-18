@@ -37,7 +37,7 @@ backup=()
 options=(!strip !emptydirs !staticlibs)
 install=${pkgname}.install
 _pkg_file_name=AT32_IDE_V${pkgver}_Linux-${arch}
-source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/AT32 IDE/${_pkg_file_name}.zip")
+source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/AT32%20IDE/${_pkg_file_name}.zip")
 sha256sums=('85329870af5c3bb6f6551c207c244ff1c947afe737ebe2d5c1aa959ed66c46fb')
 noextract=(${_pkg_file_name}.zip)
 

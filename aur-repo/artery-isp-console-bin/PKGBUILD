@@ -23,7 +23,7 @@ backup=()
 options=('!strip' '!debug' '!lto')
 install=${pkgname}.install
 _pkg_file_name=Artery_ISP_Console_Linux-${arch}_V${pkgver}.zip
-source=("${_pkg_file_name}::https://www.arterytek.com/download/Program and Debug/Artery_ISP_Console_Linux-${arch}_V${pkgver}.zip"
+source=("${_pkg_file_name}::https://www.arterytek.com/download/Program%20and%20Debug/Artery_ISP_Console_Linux-${arch}_V${pkgver}.zip"
     ${pkgname}.install)
 sha256sums=('b6203bf2c3b58a592c965b8dea6012e33cc82c39b767f95eeecb3a26a0b69ffc'
     'a5c4d923298e09eef75b9481ea4fd83998d01c1d3605f118edd42f89ee17e619')
