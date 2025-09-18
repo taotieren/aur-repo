@@ -23,6 +23,7 @@ depends=(
     python-requests
     python-rfc3986
     python-colorama
+    python-termcolor
     python-uritemplate
     # AUR
     python-language-tags
