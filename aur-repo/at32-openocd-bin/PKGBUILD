@@ -2,7 +2,7 @@
 
 pkgname=at32-openocd-bin
 pkgver=2.0.7
-pkgrel=1
+pkgrel=2
 # epoch=1
 pkgdesc="AT32 OpenOCD 支持 AT32 MCU调试、编程及边界扫描"
 arch=('x86_64')
