@@ -11,10 +11,13 @@ url=https://github.com/dynup/kpatch
 license=(GPL-2.0-only)
 depends=(
   sh
-  libelf)
+  glibc
+  libelf
+)
 makedepends=(git)
 checkdepends=(
-  shellcheck)
+  shellcheck
+)
 provides=(kpatch)
 conflicts=(kpatch)
 source=("${pkgname}::git+$url.git"
