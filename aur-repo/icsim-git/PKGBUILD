@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=icsim-git
-pkgver=r41.74c0916
-pkgrel=3
+pkgver=r43.2b3333e
+pkgrel=1
 pkgdesc="Instrument Cluster Simulator for SocketCAN"
 url="https://github.com/zombieCraig/ICSim"
 arch=($CARCH)
