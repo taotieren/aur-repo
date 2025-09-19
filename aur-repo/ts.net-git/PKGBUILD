@@ -52,7 +52,7 @@ package() {
         ${pkgdir}/usr/bin
     cd "${srcdir}/${pkgname}/build-scripts"
     version=$(cat ../source/TS.NET.Engine/TS.NET.Engine.csproj | grep -oPm1 "(?<=<Version>)[^<]+")
-    cp -rv ${srcdir}/${pkgname}/builds/linux-x64/* ${pkgdir}/usr/share/${pkgname%-git}/
+    cp -rv ${srcdir}/${pkgname}/builds/TS.NET.Engine/linux-x64/* ${pkgdir}/usr/share/${pkgname%-git}/
     install -Dm755 /dev/stdin ${pkgdir}/usr/bin/${pkgname%-git} <<EOF
 #!/bin/env bash
 
