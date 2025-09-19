@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+pre_build: vcs_update
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-pyogg
+update_on:
+  - source: github
+    github: pyglet/pyglet
+  - alias: python
