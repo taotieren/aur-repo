@@ -21,4 +21,4 @@ update_on:
     github: ecubus/EcuBus-Pro
     use_max_tag: true
     prefix: v
-# - alias: python
+  - alias: python
