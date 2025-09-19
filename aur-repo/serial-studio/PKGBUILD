@@ -29,7 +29,6 @@ depends=(
     libffi
     libglvnd
     libgudev
-    libldap
     libice
     libpng
     libpsl
