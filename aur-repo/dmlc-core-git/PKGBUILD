@@ -2,7 +2,7 @@
 
 pkgbase=dmlc-core-git
 pkgname=dmlc-core-git
-pkgver=0.5.r50.gaa88ddc
+pkgver=0.6.20250923.003728.r0.gaaa2d8a
 pkgrel=1
 pkgdesc="A common bricks library for building scalable and portable distributed machine learning."
 arch=($CARCH)
