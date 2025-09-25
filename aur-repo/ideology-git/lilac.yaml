@@ -10,5 +10,5 @@ repo_depends:
 update_on:
   - source: git
     git: https://gitee.com/jcnc-org/IDEology.git
-    branch: master
+    branch: main
     use_commit: true
