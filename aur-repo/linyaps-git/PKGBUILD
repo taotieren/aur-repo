@@ -60,8 +60,8 @@ source=(
   "${pkgname}.install"
 )
 sha256sums=('SKIP'
-            'SKIP'
-            '6c667df761d724921d5dc0e15f67567ec14b5681a5d5e22298f943ea15b6c5be')
+  'SKIP'
+  '4520bd1f10204220dea4141c970436deef01e9556727772ab76e408b7de69e54')
 
 pkgver() {
   cd "${srcdir}/${pkgname}"
