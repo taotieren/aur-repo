@@ -51,6 +51,7 @@ build() {
   # see：https://wiki.archlinux.org/title/CMake_package_guidelines
   cmake -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -Dlinyaps-box_CPM_LOCAL_PACKAGES_ONLY=ON \
     -Wno-dev \
     -B build \
