@@ -53,8 +53,9 @@ build() {
 
   export GO111MODULE=on
   export GOPROXY=https://goproxy.cn,direct
-  make build
-
+  
+  sed -i 's|libexec|lib|g' Makefile
+   make build
 }
 
 # check() {
