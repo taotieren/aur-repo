@@ -56,10 +56,12 @@ optdepends=(
 install=${pkgname}.install
 source=(
   "${pkgname}::git+${url}.git"
+  "quicktype::git+https://github.com/glideapps/quicktype.git"
   "${pkgname}.install"
 )
 sha256sums=('SKIP'
-  '4520bd1f10204220dea4141c970436deef01e9556727772ab76e408b7de69e54')
+            'SKIP'
+            '6c667df761d724921d5dc0e15f67567ec14b5681a5d5e22298f943ea15b6c5be')
 
 pkgver() {
   cd "${srcdir}/${pkgname}"
@@ -77,6 +79,10 @@ pkgver() {
 
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
+  cd ${srcdir}/${pkgname}
+  git submodule init
+  git config submodule.tools/quicktype.url "$srcdir/quicktype"
+  git -c protocol.file.allow=always submodule update
 }
 
 build() {
