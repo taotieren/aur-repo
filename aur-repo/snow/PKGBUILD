@@ -48,5 +48,6 @@ package() {
 
     cp -R lib/* "${pkgdir}/usr/lib/${pkgname}"
     cp -R docs/* "${pkgdir}/usr/share/doc/${pkgname}"
+    cp -R *.md "${pkgdir}/usr/share/doc/${pkgname}"
     install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
