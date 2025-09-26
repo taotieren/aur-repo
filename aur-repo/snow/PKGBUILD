@@ -3,7 +3,7 @@
 pkgname=snow
 _name=Snow
 pkgver=0.10.0
-pkgrel=1
+pkgrel=2
 _java=24
 pkgdesc="AI-friendly programming language inspired by the LLM era. Its design goal is to make it easier for LLMs to generate and understand programming code."
 arch=($CARCH)
