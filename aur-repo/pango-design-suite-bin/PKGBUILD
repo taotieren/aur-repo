@@ -63,10 +63,10 @@ package() {
   mv "${srcdir}/${_pkg_file_name}/opensource_licenses" "${pkgdir}/usr/share/licenses/${pkgname}/"
   mv "${srcdir}/${_pkg_file_name}/doc" "${pkgdir}/usr/share/doc/${pkgname}/"
 
-  install -dm0755 "${pkgdir}/opt/pangomicro/${pkgname%-bin}/" \
-	  "${pkgdir}/opt/pangomicro/${pkgname%-bin}/lib/plugins/platforminputcontexts/"
+  install -dm0755 "${pkgdir}/opt/pangomicro/${pkgname%-bin}/"
   mv ${srcdir}/${_pkg_file_name}/{arch,bin,driver,example,install.sh,ip,lib} "${pkgdir}/opt/pangomicro/${pkgname%-bin}/"
 
+  install -dm0755 "${pkgdir}/opt/pangomicro/${pkgname%-bin}/lib/plugins/platforminputcontexts/"
   ln -sf /usr/lib/qt/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so \
 	  "${pkgdir}/opt/pangomicro/${pkgname%-bin}/lib/plugins/platforminputcontexts/libfcitx5platforminputcontextplugin.so"
 
