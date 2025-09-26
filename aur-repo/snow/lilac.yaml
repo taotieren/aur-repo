@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+# pre_build: vcs_update
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - jdk24-graalvm-ee-bin
+update_on:
+  - source: git
+    git: https://gitee.com/jcnc-org/IDEology.git
+    branch: main
+    # use_commit: true
+    use_max_tag: true
+    prefix: v
