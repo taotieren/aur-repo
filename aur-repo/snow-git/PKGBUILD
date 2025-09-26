@@ -2,6 +2,7 @@
 
 pkgname=snow-git
 _name=Snow
+groups=(snow-lang-git)
 pkgver=0.10.0.r0.gd5161d2
 pkgrel=1
 _java=24
