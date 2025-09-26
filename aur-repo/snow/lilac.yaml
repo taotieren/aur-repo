@@ -10,9 +10,6 @@ post_build_script: |
 repo_depends:
   - jdk24-graalvm-ee-bin
 update_on:
-  - source: git
-    git: https://gitee.com/jcnc-org/IDEology.git
-    branch: main
-    # use_commit: true
-    use_max_tag: true
-    prefix: v
+  - source: regex
+    url: https://gitee.com/jcnc-org/snow/releases/
+    regex: 'v([\d.]+).tar.gz'
