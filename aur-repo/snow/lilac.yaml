@@ -7,7 +7,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - jdk24-graalvm-ee-bin
+  - jdk25-graalvm-bin
 update_on:
   - source: regex
     url: https://gitee.com/jcnc-org/snow/releases/
