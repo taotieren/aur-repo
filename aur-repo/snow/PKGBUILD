@@ -1,7 +1,6 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=snow
-_name=Snow
 groups=(snow-lang)
 pkgver=0.10.0
 pkgrel=4
@@ -37,13 +36,15 @@ prepare() {
 }
 
 build() {
+    export PATH="/usr/lib/jvm/java-${_java}-graalvm/bin/:$PATH"
+    export JAVA_HOME="/usr/lib/jvm/java-${_java}-graalvm"
     cd "${pkgname}"
     mvn -P native-linux -DskipTests clean package
 }
 
 package() {
     cd "${pkgname}"
-    install -Dm0755 target/${_name} "${pkgdir}/usr/bin/${pkgname}"
+    install -Dm0755 target/${pkgname} -t "${pkgdir}/usr/bin/"
     install -dm0775 "${pkgdir}/usr/lib/${pkgname}" \
         "${pkgdir}/usr/share/doc/${pkgname}"
 
