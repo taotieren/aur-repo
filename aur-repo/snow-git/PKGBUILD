@@ -11,6 +11,7 @@ url="https://gitee.com/jcnc-org/snow"
 license=('Apache-2.0')
 depends=(
     glibc
+    hicolor-icon-theme
     zlib
 )
 makedepends=(
@@ -55,10 +56,13 @@ package() {
     cd "${pkgname}"
     install -Dm0755 target/${pkgname%-git} -t "${pkgdir}/usr/bin/"
     install -dm0775 "${pkgdir}/usr/lib/${pkgname%-git}" \
-        "${pkgdir}/usr/share/doc/${pkgname%-git}"
+        "${pkgdir}/usr/share/doc/${pkgname%-git}" \
+        "${pkgdir}/usr/share/${pkgname%-git}"
 
     cp -R lib/* "${pkgdir}/usr/lib/${pkgname%-git}"
     cp -R docs/* "${pkgdir}/usr/share/doc/${pkgname%-git}"
     cp -R *.md "${pkgdir}/usr/share/doc/${pkgname%-git}"
+    cp -R playground/* "${pkgdir}/usr/share/${pkgname%-git}"
+    install -Dm0644 docs/README/IMG/icon/IMG_Snow.svg "${pkgname}/usr/share/icons/hicolor/scalable/apps/${pkgname%-git}.svg"
     install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
