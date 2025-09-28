@@ -91,6 +91,7 @@ Categories=Development;IDE;
 MimeType=application/x-snow;
 Keywords=snow;compiler;programming;language;
 StartupNotify=true
+Actions=Compile;Clean;Init;Build;
 
 [Desktop Action Compile]
 Name=Compile Snow File
