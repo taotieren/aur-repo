@@ -65,8 +65,8 @@ package() {
     cp -R playground/* "${pkgdir}/usr/share/${pkgname%-git}"
     install -Dm0644 docs/README/IMG/icon/IMG_Snow.svg "${pkgdir}/usr/share/icons/hicolor/scalable/apps/${pkgname%-git}.svg"
     install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-    install -Dm0644 docs/README/IMG/icon/IMG_Snow.svg ${pkgdir}/usr/share/icons/hicolor/scalable/mimetypes/application-x-snow.svg
-    install -Dm0644 /dev/stdin ${pkgdir}/usr/share/mime/packages/application-x-snow.xml  <<EOF
+    install -Dm0644 docs/README/IMG/icon/IMG_Snow.svg "${pkgdir}/usr/share/icons/hicolor/scalable/mimetypes/application-x-snow.svg"
+    install -Dm0644 /dev/stdin ${pkgdir}/usr/share/mime/packages/application-x-snow.xml <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
     <mime-type type="application/x-snow">
@@ -76,41 +76,5 @@ package() {
         <icon name="application-x-snow"/>
     </mime-type>
 </mime-info>
-EOF
-    install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/snow-compiler.desktop <<EOF
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Snow Compiler
-GenericName=Snow Programming Language
-Comment=Compile and run Snow programming language files
-Exec=snow run %F
-Icon=application-x-snow
-Terminal=true
-Categories=Development;IDE;
-MimeType=application/x-snow;
-Keywords=snow;compiler;programming;language;
-StartupNotify=true
-Actions=Compile;Clean;Init;Build;
-
-[Desktop Action Compile]
-Name=Compile Snow File
-Exec=snow compile %F
-Icon=application-x-snow
-
-[Desktop Action Clean]
-Name=Clean Build Files
-Exec=snow clean
-Icon=application-x-snow
-
-[Desktop Action Init]
-Name=Initialize New Project
-Exec=snow init
-Icon=application-x-snow
-
-[Desktop Action Build]
-Name=Build Project
-Exec=snow build
-Icon=application-x-snow
 EOF
 }
