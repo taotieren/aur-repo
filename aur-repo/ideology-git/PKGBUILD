@@ -99,11 +99,12 @@ GenericName="IDEology is the IDE for the Snow programming language."
 GenericName[zh_CN]="IDEology 是 Snow 编程语言的 IDE"
 Name=IDEology
 Name[zh_CN]=IDEology
-Exec=${pkgname%-git}
+Exec=${pkgname%-git} %F
 StartupNotify=false
 Terminal=false
 Type=Application
-Categories=Development;Tool;
+Categories=Development;Tool;IDE;
+MimeType=application/x-snow;
 Icon=${pkgname%-git}.png
 EOF
 }
