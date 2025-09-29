@@ -111,7 +111,7 @@ EOF
     install -Dm0644 /dev/stdin ${pkgdir}/usr/share/mime/packages/application-x-cloud.xml <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
-    <mime-type type="application/x-cloudw">
+    <mime-type type="application/x-cloud">
         <comment>Snow lang project files</comment>
         <comment xml:lang="zh_CN">Snow 语言的项目文件</comment>
         <glob pattern="*.cloud"/>
