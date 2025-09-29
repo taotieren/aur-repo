@@ -91,7 +91,7 @@ cd /usr/share/${pkgname%-git}
 ./ideology "\$@"
 EOF
 
-    install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname%-git}.desktop <<EOF
+    install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/org.jcnc.snow.ideology.desktop <<EOF
 [Desktop Entry]
 Comment="IDEology is the IDE for the Snow programming language."
 Comment[zh_CN]="IDEology 是 Snow 编程语言的 IDE"
