@@ -5,8 +5,8 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - fvm
+# repo_depends:
+#   -
 update_on:
   - source: git
     git: https://gitee.com/jcnc-org/IDEology.git

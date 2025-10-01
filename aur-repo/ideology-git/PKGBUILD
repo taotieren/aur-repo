@@ -26,13 +26,12 @@ depends=(
 )
 makedepends=(
     cmake
+    fvm
     git
     ninja
     clang
     llvm
     pkgconf
-    # AUR
-    fvm
 )
 checkdepends=()
 optdepends=()
