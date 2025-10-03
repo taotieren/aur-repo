@@ -16,6 +16,7 @@ depends=(
     gcc-libs
     glibc
     python
+    python-hatch-vcs
     python-numpy
     python-scipy
     python-pytorch
