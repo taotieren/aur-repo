@@ -20,6 +20,7 @@ depends=(
     python-scipy
     python-pytorch
     python-triton
+    python-trove-classifiers
     python-typing_extensions
 )
 makedepends=(
