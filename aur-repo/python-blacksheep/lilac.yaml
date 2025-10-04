@@ -10,6 +10,8 @@ repo_depends:
   - python-essentials
   - python-essentials-openapi
   - python-guardpost
+  - python-opentelemetry-exporter-otlp-proto-http
+  - python-opentelemetry-sdk
   - python-rodi
 update_on:
   # - source: pypi
