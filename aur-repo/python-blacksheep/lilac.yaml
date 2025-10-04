@@ -12,6 +12,10 @@ repo_depends:
   - python-guardpost
   - python-rodi
 update_on:
-  - source: pypi
-    pypi: blacksheep
+  # - source: pypi
+  #   pypi: blacksheep
+  - source: github
+    github: Neoteroi/BlackSheep
+    use_max_tag: true
+    prefix: v
   - alias: python
