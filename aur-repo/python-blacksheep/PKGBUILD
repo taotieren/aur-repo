@@ -31,6 +31,7 @@ depends=(
     python-rodi
 )
 makedepends=(
+    git
     cython
     flake8
     mypy
