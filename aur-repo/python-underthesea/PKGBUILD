@@ -21,6 +21,7 @@ depends=(
     python-fire
     python-google-auth-oauthlib
     python-joblib
+    python-huggingface-hub
     python-librosa
     python-nltk
     python-numpy
