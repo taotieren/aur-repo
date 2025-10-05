@@ -1,6 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
@@ -17,7 +18,7 @@ repo_depends:
   - python-optax
   - python-transformers
   - python-youtube-transcript-api
-  - python-underthesea-core
+  # - python-underthesea-core
 update_on:
   - source: pypi
     pypi: underthesea
