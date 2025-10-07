@@ -3,7 +3,7 @@
 pkgname=python-csvw
 _name=${pkgname#python-}
 pkgver=3.7.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python library to work with CSVW described tabular data"
 arch=('any')
