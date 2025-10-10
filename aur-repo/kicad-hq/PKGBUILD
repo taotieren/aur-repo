@@ -26,6 +26,7 @@ depends=(
   hicolor-icon-theme
   nng
   opencascade
+  openssl
   protobuf
   python
   python-wxpython
