@@ -2,7 +2,7 @@
 
 pkgname=libvisual
 pkgver=0.4.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Abstraction library that comes between applications and audio visualisation plugins"
 arch=('x86_64')
 url="https://sourceforge.net/projects/libvisual/"
