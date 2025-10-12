@@ -18,7 +18,6 @@ repo_depends:
   - python-unidic
   - python-pyopenjtalk
   - python-jamo
-  - python-pypinyin
   - python-cn2an
   - python-pypinyin-dict
   - python-underthesea

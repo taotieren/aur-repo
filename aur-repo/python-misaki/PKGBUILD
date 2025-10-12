@@ -40,7 +40,6 @@ package_python-misaki() {
     conflicts=(${pkgname})
     optdepends=(python-misaki-{en,ja,ko,zh,vi,he})
 
-
     cd "${srcdir}/${_name}-${pkgver}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
     install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
@@ -94,12 +93,12 @@ package_python-misaki-zh() {
     provides=(${pkgname})
     conflicts=(${pkgname})
     depends=(
+        pypinyin
         python-jieba
         python-ordered-set
         python-misaki
         # AUR
         python-cn2an
-        python-pypinyin
         python-pypinyin-dict
     )
 }

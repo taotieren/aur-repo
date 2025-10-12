@@ -15,8 +15,7 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
     python
-    # AUR
-    python-pypinyin
+    pypinyin
 )
 makedepends=(
     python-build
