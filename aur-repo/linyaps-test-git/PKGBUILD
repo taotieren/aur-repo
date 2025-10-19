@@ -1,18 +1,18 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=linyaps-git
-pkgver=1.9.13.r99.588fd5c
+pkgname=linyaps-test-git
+pkgver=1.9.13_6.r0.7990a12
 pkgrel=1
 pkgdesc='Next-Gen Universal Package Manager for Linux (linglong)'
 arch=($CARCH)
-url='https://github.com/OpenAtom-Linyaps/linyaps'
+url='https://github.com/LFRon/linyaps-generic-linux'
 license=('LGPL-3.0-or-later')
 provides=(
-  ${pkgname%-git}
+  ${pkgname%-test-git}
   linglong
 )
 conflicts=(
-  ${pkgname%-git}
+  ${pkgname%-test-git}
   linglong
 )
 replaces=(linglong-git)
@@ -61,8 +61,8 @@ source=(
   "${pkgname}.install"
 )
 sha256sums=('SKIP'
-  'SKIP'
-  '4520bd1f10204220dea4141c970436deef01e9556727772ab76e408b7de69e54')
+            'SKIP'
+            '4520bd1f10204220dea4141c970436deef01e9556727772ab76e408b7de69e54')
 
 pkgver() {
   cd "${srcdir}/${pkgname}"
@@ -73,7 +73,7 @@ pkgver() {
     commit_count=$(git rev-list --count "${latest_tag}..HEAD")
     commit_hash=$(git rev-parse --short=7 HEAD)
 
-    printf "%s.r%s.%s" "${latest_tag}" "${commit_count}" "${commit_hash}" ||
+    printf "%s.r%s.%s" "${latest_tag//-/_}" "${commit_count}" "${commit_hash}" ||
       printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
   )
 }
