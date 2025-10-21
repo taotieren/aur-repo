@@ -2,7 +2,9 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers='Blyss_Sarania')
+pre_build_script: |
+  aur_pre_build(maintainers='Blyss_Sarania')
+  add_makedepends(['python-setuptools'])
 post_build: aur_post_build
 # repo_depends:
 #   -
