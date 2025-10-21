@@ -13,11 +13,13 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
+    cuda
     gcc-libs
     glibc
     python
     python-numpy
     python-scipy
+    python-packaging
     python-pytorch
     python-triton
     python-trove-classifiers
@@ -25,7 +27,6 @@ depends=(
 )
 makedepends=(
     cmake
-    cuda
     git
     python-scikit-build
     python-scikit-build-core
