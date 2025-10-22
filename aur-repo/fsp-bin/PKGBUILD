@@ -23,7 +23,6 @@ backup=()
 options=('!strip' '!debug' '!lto' 'emptydirs')
 install=
 _year_month=${_tagname##*v}
-_year_month=${_year_month//_/-}
 _e2s=setup_fsp_v${pkgver//./_}_e2s_v${_year_month}.xz.run
 _rasc=setup_fsp_v${pkgver//./_}_rasc_v${_year_month}.xz.run
 source=(
