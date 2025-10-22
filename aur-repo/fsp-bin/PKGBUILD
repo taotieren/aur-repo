@@ -2,7 +2,10 @@
 
 pkgbase=fsp-bin
 pkgname=(fsp-bin fsp-e2s-bin fsp-renesas-bin)
-pkgver=6.2.0
+_tagname=6_2_0_e2s_v2025-10
+_pkgver="${_tagname%%_*}"."${_tagname#*_}"
+_pkgver="${_pkgver%%_*}"."${_pkgver#*.}"
+pkgver="${_pkgver%%_*}"
 pkgrel=1
 epoch=
 pkgdesc="Flexible Software Package (FSP) for Renesas RA MCU Family"
@@ -19,7 +22,8 @@ optdepends=()
 backup=()
 options=('!strip' '!debug' '!lto' 'emptydirs')
 install=
-_year_month=2025-10
+_year_month=${_tagname##*v}
+_year_month=${_year_month//_/-}
 _e2s=setup_fsp_v${pkgver//./_}_e2s_v${_year_month}.xz.run
 _rasc=setup_fsp_v${pkgver//./_}_rasc_v${_year_month}.xz.run
 source=(
@@ -41,7 +45,7 @@ prepare() {
 }
 
 package_fsp-bin() {
-    pkgdesc="Flexible Software Package (FSP) for Renesas RA MCU Family - Renesas e² studio"
+    pkgdesc="Flexible Software Package (FSP) for Renesas RA MCU Family"
     provides=(${pkgname%-bin})
     conflicts=(${pkgname%-bin})
     depends=(

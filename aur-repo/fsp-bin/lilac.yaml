@@ -1,26 +1,29 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
 # pre_build_script: |
-#   for line in edit_file('PKGBUILD'):
-#     if line.startswith('_tagname='):
-#       line = f"_tagname={_G.newver}"
-#     print(line)
-#   update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
+#   update_pkgver_and_pkgrel(_G.newver)
+pre_build_script: |
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 # repo_depends:
 #   -
 update_on:
-  - source: github
-    github: renesas/fsp
-    # use_max_tag: true
-    use_latest_tag: true
-    # include_regex: ".*e2s*"
-    # use_max_tag: true
-    prefix: v
-    # exclude_regex: '.([\d_]+)'
+  - source: regex
+    url: https://github.com/renesas/fsp/releases/
+    regex: 'setup_fsp_v(([\d_]+)_[a-zA-Z0-9]+_v(\d{4}-\d{2})).xz.run'
+  # - source: github
+  #   github: renesas/fsp
+  #   # use_max_tag: true
+  #   use_latest_tag: true
+  #   # include_regex: ".*e2s*"
+  #   # use_max_tag: true
+  #   prefix: v
+  #   # exclude_regex: '.([\d_]+)'
 time_limit_hours: 3
