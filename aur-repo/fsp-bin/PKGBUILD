@@ -2,7 +2,7 @@
 
 pkgbase=fsp-bin
 pkgname=(fsp-bin fsp-e2s-bin fsp-renesas-bin)
-_tagname=6_2_0_e2s_v2025-10
+_tagname=6_2_0_rasc_v2025-10
 _pkgver=${_tagname%%_rasc*}
 pkgver="${_pkgver//_/.}"
 pkgrel=2
