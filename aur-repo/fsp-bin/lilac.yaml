@@ -17,13 +17,13 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://github.com/renesas/fsp/releases/
-    regex: 'setup_fsp_v(([\d_]+)_[a-zA-Z0-9]+_v(\d{4}-\d{2})).xz.run'
-  # - source: github
-  #   github: renesas/fsp
-  #   # use_max_tag: true
-  #   use_latest_tag: true
-  #   # include_regex: ".*e2s*"
-  #   # use_max_tag: true
-  #   prefix: v
-  #   # exclude_regex: '.([\d_]+)'
+    regex: 'setup_fsp_v(([\d_]+)_e2s_v([\d-]+)).xz.run'
+    # - source: github
+    #   github: renesas/fsp
+    #   # use_max_tag: true
+    #   use_latest_tag: true
+    #   # include_regex: ".*e2s*"
+    #   # use_max_tag: true
+    #   prefix: v
+    #   # exclude_regex: '.([\d_]+)'
 time_limit_hours: 3
