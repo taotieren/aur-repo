@@ -17,7 +17,7 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://github.com/renesas/fsp/releases/
-    regex: 'setup_fsp_v(([\d_]+)_e2s_v([\d-]+)).xz.run'
+    regex: 'setup_fsp_v([a-zA-Z0-9_]+).xz.run'
     # - source: github
     #   github: renesas/fsp
     #   # use_max_tag: true
