@@ -10,4 +10,4 @@ update_on:
   - source: github
     github: venera-app/venera
     use_max_tag: true
-    # prefix: v
+    prefix: v
