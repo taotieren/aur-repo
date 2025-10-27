@@ -8,5 +8,6 @@ post_build: aur_post_build
 #   -
 update_on:
   - source: aur
-    aur: python-opentelemetry
+    # aur: python-opentelemetry
+    aur: python-opentelemetry-api
   - alias: python
