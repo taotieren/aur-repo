@@ -22,14 +22,17 @@ depends=(
     python-blacksheep-client-request
     python-blacksheep-rich-log
     python-cachedict
-    python-p115cipher
+    python-dicttools
+    python-p115rsacipher
+    python-p115pickcode
 )
 makedepends=(
     python-poetry
     python-build
     python-installer
     python-wheel
-    python-setuptools)
+    python-setuptools
+)
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
