@@ -22,7 +22,7 @@ depends=(
     python-blacksheep-rich-log
     python-cachedict
     python-dicttools
-    python-p115cient
+    python-p115client
     python-p115pickcode
 )
 makedepends=(
