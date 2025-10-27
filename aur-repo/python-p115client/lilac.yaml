@@ -7,26 +7,28 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - python-aiofile
+  - python-argtools
   - python-asynctools
-  - python-blacksheep
   - python-cookietools
   - python-dictattr
+  - python-dicttools
   - python-ed2k
   - python-encode-uri
+  - python-ensure
   - python-filewrap
   - python-hashtools
   - python-httpfile
   - python-http-response
   - python-http-request
-  - python-httpx-request
+  - python-integer-tool
   - python-iterutils
   - python-iter-collect
   - python-startfile
   - python-p115cipher
+  - python-p115oss
+  - python-property
   - python-posixpatht
   - python-undefined
-  - python-urlopen
 update_on:
   - source: pypi
     pypi: p115client
