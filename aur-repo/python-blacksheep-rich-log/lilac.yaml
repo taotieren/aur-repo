@@ -8,11 +8,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-blacksheep
-  - python-blacksheep-client-request
-  - python-blacksheep-rich-log
-  - python-cachedict
-  - python-p115cipher
 update_on:
   - source: pypi
-    pypi: p115nano302
+    pypi: blacksheep-rich-log
   - alias: python

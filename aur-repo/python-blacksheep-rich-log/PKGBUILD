@@ -1,39 +1,36 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-p115nano302
+pkgname=python-blacksheep-rich-log
 _name=${pkgname#python-}
-pkgver=0.1.2.4
+_name=${_name//-/_}
+pkgver=0.0.1.1
 pkgrel=1
 epoch=
-pkgdesc="115 nano 302 backend."
+pkgdesc="BlackSheep access log middleware."
 arch=('any')
 url="https://pypi.org/project/${_name}"
 license=(MIT)
 groups=()
-provides=(${_name} ${pkgname})
-conflicts=(${_name} ${pkgname})
+provides=(${pkgname})
+conflicts=(${pkgname})
 depends=(
     python
+    python-rich
     python-orjson
-    python-yaml
-    uvicorn
-    #AUR
+    # AUR
     python-blacksheep
-    python-blacksheep-client-request
-    python-blacksheep-rich-log
-    python-cachedict
-    python-p115cipher
 )
 makedepends=(
     python-poetry
     python-build
     python-installer
     python-wheel
-    python-setuptools)
+    python-setuptools
+)
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
-sha256sums=('534f9635362862c16751ecb27e11992e0b5cf47906736d22bd562d0de08be71e')
+sha256sums=('5e361c00b7926f81df8560b247467ebb7e68494fdae84ebf9e8852faff30c625')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
