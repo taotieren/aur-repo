@@ -13,8 +13,10 @@ repo_depends:
   - python-dictattr
   - python-encode-uri
   - python-httpagentparser
+  - python-texttools
   - python-p115client
   - python-path-predicate
+  - python-property
   - python-posixpatht
   - python-pysubs2
   - python-wsgidav
