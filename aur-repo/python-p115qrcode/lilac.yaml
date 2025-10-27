@@ -8,6 +8,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-httpx-request
+  - python-iterutils
   - python-startfile
 update_on:
   - source: pypi
