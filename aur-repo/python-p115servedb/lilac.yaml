@@ -9,12 +9,15 @@ post_build_script: |
 repo_depends:
   - python-a2wsgi
   - python-blacksheep
+  - python-blacksheep-rich-log
+  - python-cachedict
   - python-encode-uri
   - python-fusepy
   - python-httpagentparser
   - python-httpfile
+  - python-http-response
   - python-p115client
-  - python-p115updatedb
+  - python-p115pickcode
   - python-path-predicate
   - python-property
   - python-posixpatht
