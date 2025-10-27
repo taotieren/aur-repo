@@ -1,0 +1,26 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-asynctools
+  - python-dicttools
+  - python-filewrap
+  - python-hashtools
+  - python-integer-tool
+  - python-iterutils
+  - python-httpcore-request
+  - python-httpfile
+  - python-http-client-request
+  - python-http-request
+  - python-http-response
+  - python-p115cipher
+  - python-p115pickcode
+update_on:
+  - source: pypi
+    pypi: p115oss
+  - alias: python
