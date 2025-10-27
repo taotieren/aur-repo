@@ -9,7 +9,11 @@ post_build_script: |
 repo_depends:
   - python-cachedict
   - python-blacksheep
+  - python-blacksheep-rich-log
+  - python-dicttools
   - python-p115client
+  - python-p115pickcode
+  - python-posixpatht
 update_on:
   - source: pypi
     pypi: p115tiny302
