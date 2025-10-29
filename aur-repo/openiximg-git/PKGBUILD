@@ -2,7 +2,7 @@
 
 pkgname=openiximg-git
 pkgver=r17.9c7d143
-pkgrel=1
+pkgrel=2
 pkgdesc="A comprehensive toolset for handling Allwinner IMAGEWTY format firmware images"
 arch=($CARCH)
 url="https://github.com/YuzukiTsuru/OpenixIMG"
