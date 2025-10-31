@@ -3,6 +3,8 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers=['AlexisPolti',  'pzl'])
 post_build: aur_post_build
+repo_depends:
+  - libudev0-shim
 update_on:
   - source: aur
     aur: jlink-software-and-documentation
