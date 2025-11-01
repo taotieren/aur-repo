@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=libefex-git
-pkgver=r50.b62b5f9
+pkgver=r52.31252d5
 pkgrel=1
 pkgdesc="library and cli for embedded firmware exchange protocol, support fel and fes protocol"
 arch=($CARCH)
