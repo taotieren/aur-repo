@@ -22,6 +22,7 @@ depends=(
     python-packaging
     python-pytorch
     python-triton
+    python-trove-classifiers
     python-typing_extensions
     # AUR
     python-pynvml
