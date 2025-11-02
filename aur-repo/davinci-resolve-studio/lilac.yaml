@@ -6,6 +6,7 @@ pre_build_script: aur_pre_build(maintainers='Muflone')
 post_build: aur_post_build
 repo_depends:
   - gtk2
+  - libpng12
 update_on:
   - source: aur
     aur: davinci-resolve-studio
