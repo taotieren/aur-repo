@@ -2,7 +2,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=proxmark3-iceman-git
-pkgver=4.20728.r117.gd1a093e
+pkgver=4.20728.r118.g3bdb765
 pkgrel=1
 pkgdesc='RRG / Iceman repo - Proxmark3 RDV4.0 and other Proxmark3 platforms.'
 arch=('x86_64')
