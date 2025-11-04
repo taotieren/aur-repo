@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linglong-pica-git
-pkgver=1.2.6.r3.g65a2ede
+pkgver=1.2.6.r4.g400ea33
 pkgrel=1
 pkgdesc='deb package to Linglong package tool.'
 arch=($CARCH)
