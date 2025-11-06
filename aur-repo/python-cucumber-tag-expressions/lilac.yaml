@@ -3,7 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers='laura7089')
-  add_makedepeds([python-uv-build])
+  add_makedepeds(['python-uv-build'])
 post_build: aur_post_build
 #repo_depends:
 #  - 
