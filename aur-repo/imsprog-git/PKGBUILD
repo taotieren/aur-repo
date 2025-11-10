@@ -10,15 +10,18 @@ license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
+  sh
   gcc-libs
   glibc
   libusb
-  qt5-base)
+  qt5-base
+)
 makedepends=(
   cmake
   git
   ninja
-  qt5-tools)
+  qt5-tools
+)
 optdepends=("sfp-master: SFP-module programmer for CH341a devices")
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
@@ -52,5 +55,4 @@ build() {
 package() {
   install -Dm0644 "${srcdir}/${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
   DESTDIR="${pkgdir}" ninja -C "${srcdir}/${pkgname}/build" install
-#  mv "${pkgdir}/usr/bin/YFEL" "${pkgdir}/usr/bin/yfel"
 }
