@@ -2,7 +2,7 @@
 
 pkgname=ezp-chip-data-editor-git
 pkgver=r50.5af9e51
-pkgrel=1
+pkgrel=2
 pkgdesc="QT based editor chip database for EZP2019, EZP2019+, EZP2020, EZP2023, EZP2025, MinPro programmer devices"
 arch=($CARCH)
 url="https://github.com/bigbigmdm/EZP2019-EZP2025_chip_data_editor"
