@@ -2,7 +2,7 @@
 
 pkgname=sfp-master
 pkgver=1.0.7
-pkgrel=1
+pkgrel=2
 pkgdesc="SFP-module programmer for CH341a devices"
 arch=($CARCH)
 url="https://github.com/bigbigmdm/SFP-Master"
