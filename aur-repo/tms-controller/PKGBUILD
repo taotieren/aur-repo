@@ -2,7 +2,7 @@
 
 pkgname=tms-controller
 pkgver=1.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="TMS Controller is a professional liquid cooling unit communication control software that supports serial port communication with various liquid cooling devices."
 arch=($CARCH)
 url="https://gitee.com/zynwh/tms-controller"
