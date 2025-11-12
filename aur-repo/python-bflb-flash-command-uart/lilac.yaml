@@ -8,9 +8,10 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-pylink-square
-#  - python-bflb-crypto-plus
+  #  - python-bflb-crypto-plus
   - python-pycklink
- # - python-portalocker
+  - python-telnetlib-313-and-up
+  # - python-portalocker
 update_on:
   - source: pypi
     pypi: bflb-flash-command-uart
