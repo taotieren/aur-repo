@@ -24,7 +24,7 @@ source=("${pkgname}::git+${url}.git"
     "git+https://github.com/YuzukiTsuru/ColorCout.git"
     "git+https://github.com/p-ranav/argparse.git"
     "git+https://github.com/arun11299/cpp-subprocess.git"
-    "git+https://github.com/ArthurSonzogni/FTXUI.git"
+    "git+https://github.com/ArthurSonzogni/ftxui.git"
     "git+https://github.com/SemaiCZE/inicpp.git")
 sha256sums=('SKIP'
     'SKIP'
@@ -46,10 +46,10 @@ prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     pushd "${srcdir}/${pkgname}"
     git submodule init
-    git config submodule.lib/ColorCout.url "$srcdir/ColorCout"
     git config submodule.lib/argparse.url "$srcdir/argparse"
+    git config submodule.lib/ftxui.url "$srcdir/ftxui"
+    git config submodule.lib/ColorCout.url "$srcdir/ColorCout"
     git config submodule.lib/cpp-subprocess.url "$srcdir/cpp-subprocess"
-    git config submodule.lib/ftxui.url "$srcdir/FTXUI"
     git config submodule.lib/inicpp.url "$srcdir/inicpp"
     git -c protocol.file.allow=always submodule update
     #         pushd lib/argparse
