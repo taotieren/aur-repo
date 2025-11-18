@@ -28,8 +28,8 @@ options=('!strip' '!debug' '!lto')
 _pkg_name=AT32_New_Clock_Configuration
 _pkg_linux=${_pkg_name}_Linux-${arch}
 _pkg_file_name=${_pkg_linux}_V${pkgver}
-source=("${_pkg_file_name}.zip::https://www.arterytek.com/Program%20and%20Debug/${_pkg_file_name}.zip")
-# https://www.arterytek.com/download/TOOL/AT32_New_Clock_Configuration_Linux-x86_64_V3.0.14.zip
+source=("${_pkg_file_name}.zip::https://www.arterytek.com/download/Program%20and%20Debug/${_pkg_file_name}.zip")
+# https://www.arterytek.com/download/Program%20and%20Debug/AT32_New_Clock_Configuration_Linux-x86_64_V3.0.19.zip
 sha256sums=('bbff3a1823baa13225b4029166b2d39f32c8685f85268ec999b59199bbd982ce')
 # noextract=(${_pkg_file_name}.zip)
 
