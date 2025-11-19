@@ -1,5 +1,6 @@
 
 
+
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=rkdeveloptool-gui
@@ -20,7 +21,7 @@ depends=(
 )
 makedepends=(
     git
-    python-pyqt6
+    pyside6
     nuitka
 )
 optdepends=(
