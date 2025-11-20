@@ -13,4 +13,4 @@ update_on:
   - source: github
     github: gahingwoo/RKDevelopTool-GUI
     use_max_tag: true
-    prefix: v
+    #prefix: v
