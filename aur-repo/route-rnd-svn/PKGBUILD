@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=route-rnd-svn
-pkgver=r1534
-pkgrel=2
+pkgver=r1536
+pkgrel=1
 pkgdesc="free/open source, flexible, modular autorouter for Printed Circuit Boards"
 arch=($CARCH)
 url="http://www.repo.hu/projects/route-rnd/"
