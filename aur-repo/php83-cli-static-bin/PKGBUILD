@@ -1,7 +1,7 @@
 # Maintainer: devome <evinedeng@hotmail.com>
 
 pkgname=php83-cli-static-bin
-pkgver=8.3.27
+pkgver=8.3.28
 pkgrel=1
 pkgdesc="A general-purpose scripting language that is especially suited to web development (8.3.x static precompiled binary)"
 arch=("x86_64" "aarch64")
@@ -72,8 +72,8 @@ source=("php-${pkgver}-cli-build-extensions.json::https://dl.static-php.dev/stat
 source_x86_64=("php-${pkgver}-cli-linux-x86_64.tar.gz::https://dl.static-php.dev/static-php-cli/bulk/php-${pkgver}-cli-linux-x86_64.tar.gz")
 source_aarch64=("php-${pkgver}-cli-linux-aarch64.tar.gz::https://dl.static-php.dev/static-php-cli/bulk/php-${pkgver}-cli-linux-aarch64.tar.gz")
 sha256sums=('12dd52ca07a75ef5f5242397ce88402de920e4f78105a573e9ac222ffb747275')
-sha256sums_x86_64=('7ab6a7a15dde6af4b38e7bc9ceaf75252168fb21fd55669879994c07d35334e3')
-sha256sums_aarch64=('53494b1d170731220af1b5ad53481481d7e1310426e362c443ca0add4c0d9973')
+sha256sums_x86_64=('d1093572ab249fac4a7762f2af9c7f8a754e4fa63b770be45fe0311897cd3a5d')
+sha256sums_aarch64=('a71cc63ee312df2c9f9c666a719ba097b0065cc7222bc176e88de83b70adf094')
 options=(!strip)
 
 package() {
