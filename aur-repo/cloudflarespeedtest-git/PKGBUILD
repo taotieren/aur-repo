@@ -1,7 +1,7 @@
 # Contributor: taotieren <admin@taotieren.com>
 
 pkgname=cloudflarespeedtest-git
-pkgver=2.3.4.3.ge57e9d3
+pkgver=2.3.4.4.gb955387
 pkgrel=1
 pkgdesc="XIU2/CloudflareSpeedTest 🌩 “Choose Your Own Preferred IP” Test Cloudflare CDN latency and speed, get the fastest IP! Written in go."
 arch=($CARCH)
