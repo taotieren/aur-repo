@@ -3,7 +3,7 @@
 pkgname=linyaps-store-minimalist-bin
 _pkgname=OpenList.Desktop
 pkgver=1.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Linyaps Store Minimalist"
 arch=('x86_64')
 url="https://github.com/LFRon/Linyaps-Store-Minimalist"
