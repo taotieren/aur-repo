@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=probe-rs-git
-pkgver=0.30.0.r26.gc321231
+pkgver=0.30.0.r28.ga59937a
 pkgrel=1
 pkgdesc="A debugging toolset and library for debugging embedded ARM and RISC-V targets on a separate host"
 arch=($CARCH)
