@@ -29,15 +29,15 @@ makedepends=('libarchive')
 optdepends=("linyaps: Next-Gen Universal Package Manager for Linux (linglong)")
 backup=()
 options=('!strip' '!debug')
-source=("${url}/releases/download/${pkgver}/${pkgver}-x86_64.deb")
+source=("${url}/releases/download/${pkgver}/linux-${pkgver}-x86_64.deb")
 sha256sums=('f5d61914b71e6772c8dd0d93ecfebe050d53d3f8f1c65227be2dc6455d9f11f5')
-noextract=("${pkgver}-x86_64.deb")
+noextract=("linux-${pkgver}-x86_64.deb")
 
 package() {
     cd "$srcdir"/
-    mkdir -pv ${pkgver}-x86_64
-    bsdtar -xf ${pkgver}-x86_64.deb -C ${pkgver}-x86_64
-    cd ${pkgver}-x86_64
+    mkdir -pv linux-${pkgver}-x86_64
+    bsdtar -xf linux-${pkgver}-x86_64.deb -C linux-${pkgver}-x86_64
+    cd linux-${pkgver}-x86_64
     bsdtar -xf data.tar.xz --numeric-owner -C ${pkgdir}/
     chown -R root:root ${pkgdir}
 }
