@@ -2,9 +2,9 @@
 
 pkgbase=csnet
 pkgname=csnet
-_tagname=2025-12-04
+_tagname=2025-12-05
 pkgver=${_tagname//-/.}
-pkgrel=12
+pkgrel=13
 pkgdesc="CSNet (Computer Science Network) client for linux"
 license=('LicenseRef-scancode-commercial-license')
 url="https://aite.xyz/product/csnet/client"
@@ -41,7 +41,7 @@ sha256sums=('99e4dfd7cf1e77a455f94485e51a55d1ba05cbfa48e0e8457a9ae0bad6e50cea'
             '40983531523f0d2e9d7ffbd334fcddb3fdf083778a99b1762cddecda2c0ddb72'
             '5950180f132da5b7471398e203e9eb23f8bab2b3283dcddafffd60863e7a6fb1'
             '45c78ac187b598be40421bfaaba5e065ff09bcc2cdb4e381d0b4e6bd7960ac69')
-sha256sums_x86_64=('0765d94980a77733eb93ba37dd5a8c5d1b3bea4e0d0df35b4066d6338601cf54')
+sha256sums_x86_64=('d14fd81acf584e0222d53af5cb7e0f035fc6796637a35498926803bd155be003')
 noextract=()
 
 package() {
