@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=wlink-git
-pkgver=0.1.1.r3.g217f0e5
-pkgrel=2
+pkgver=0.1.1.r7.g057724f
+pkgrel=1
 pkgdesc="wlink - WCH-Link(RV) command line tool"
 arch=($CARCH)
 url="https://github.com/ch32-rs/wlink"
