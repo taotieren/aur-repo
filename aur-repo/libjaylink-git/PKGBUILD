@@ -4,7 +4,7 @@
 
 pkgname=libjaylink-git
 _pkg="${pkgname%-git}"
-pkgver=0.4.0.r11.gecada7b
+pkgver=0.4.0.r12.g9a44e32
 pkgrel=1
 pkgdesc='Library for accessing SEGGER J-Link and compatible devices'
 arch=($CARCH)
