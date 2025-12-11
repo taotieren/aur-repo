@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=tinyserial-git
-pkgver=1.4.r2.g3c6cda7
-pkgrel=3
+pkgver=1.4.r3.g098bff2
+pkgrel=1
 epoch=
 pkgdesc="A GUI Serial Debug Tool for Linux/Mac OS."
 arch=($CARCH)
