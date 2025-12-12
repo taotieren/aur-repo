@@ -59,7 +59,7 @@ optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     "imsprog: MSProg - software for CH341A-based programmers to work with I2C, SPI and MicroWire EEPROM/Flash chips"
     "sfp-master: SFP-module programmer for CH341a devices"
 )
-_sign="?sign=6ae13b387d3fe49ecb40360684a52718&time=19a6e6a68ce&from=120.239.79.160&resId=1987838612315652097"
+_sign="?sign=c5604eb8218c9e25c4a33e1169b5f59f&time=19b11b2ce25&from=211.7.96.64&resId=1987838612315652097"
 source=("${pkgbase}-${pkgver}.deb::https://file-oss.mounriver.com/upgrade/MounRiverStudio_Linux_X64_V${pkgver}.deb${_sign}")
 sha256sums=('31358a6af0c2be722f5b50f9d490005e15942f67fb106ab002e8ea2cb8540b78')
 options=('!strip' '!debug')
