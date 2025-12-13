@@ -47,7 +47,7 @@ depends=(
     # AUR
     #     ncurses5-compat-libs
 )
-makedepends=('tar' 'jq' 'curl')
+makedepends=('tar')
 optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     'i2c-ch341-dkms: CH341 USB-I2C adapter driver'
     'spi-ch341-usb-dkms: SPI/GPIO driver for CH341'
@@ -60,51 +60,12 @@ optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     "imsprog: MSProg - software for CH341A-based programmers to work with I2C, SPI and MicroWire EEPROM/Flash chips"
     "sfp-master: SFP-module programmer for CH341a devices"
 )
-source=()
-sha256sums=()
+
+_sign=""
+source=("${pkgname}-${pkgver}.tar.xz::https://dummy-url/file.tar.xz${_sign}")
+sha256sums=('SKIP')
+
 options=('!strip' '!debug')
-
-# automatic version detection & download via MounRiver API
-prepare() {
-    msg "Querying MounRiver API for the latest Linux version..."
-    local _info_json=$(curl -s "https://api.mounriver.com/mountriver/api/version/fetchRecent?swType=2&osType=LINUX&lang=en")
-    
-    local _soft_id=$(echo "${_info_json}" | jq -r '.result.softId')
-    local _filename=$(echo "${_info_json}" | jq -r '.result.softFileName')
-    local _api_version=$(echo "${_info_json}" | jq -r '.result.version')
-
-    if [[ "${_soft_id}" == "null" || -z "${_soft_id}" ]]; then
-        error "Failed to retrieve software ID from API."
-        return 1
-    fi
-
-    msg "Found Version: ${_api_version} (File: ${_filename}, ID: ${_soft_id})"
-
-    msg "Fetching dynamic download link..."
-    local _dl_json=$(curl -s "https://api.mounriver.com/mountriver/api/version/getDownloadUrl?resourceId=${_soft_id}")
-    local _dl_url=$(echo "${_dl_json}" | jq -r '.data // .result')
-
-    if [[ "${_dl_url}" == "null" || -z "${_dl_url}" || "${_dl_url}" != http* ]]; then
-        error "Failed to retrieve valid download URL."
-        return 1
-    fi
-
-    if [ ! -f "${_filename}" ]; then
-        msg "Downloading ${_filename}..."
-        curl -L -o "${_filename}" "${_dl_url}"
-    else
-        msg "File ${_filename} already exists, skipping download."
-    fi
-
-    # Cleanup old extraction
-    local _old_dir=$(find . -maxdepth 1 -mindepth 1 -type d -print -quit)
-    if [ -n "$_old_dir" ]; then
-        rm -rf "$_old_dir"
-    fi
-
-    msg "Extracting ${_filename}..."
-    tar -xf "${_filename}"
-}
 
 package() {
     cd "${srcdir}/"
