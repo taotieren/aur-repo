@@ -30,7 +30,7 @@ pre_build_script: |
 
   def get_real_url():
       # get softId
-      info_url = "https://api.mounriver.com/mountriver/api/version/fetchRecent?swType=2&osType=LINUX&lang=en"
+      info_url = "https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh"
       with urllib.request.urlopen(info_url) as r:
           data = json.loads(r.read().decode())
           soft_id = data['result']['softId']
@@ -69,5 +69,5 @@ post_build_script: |
 #   - ncurses5-compat-libs
 update_on:
   - source: regex
-    url: http://api.mounriver.com/mountriver/api/version/fetchRecent2?swType=2&osType=LINUX&lang=zh
+    url: https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh
     regex: 'softFileName":"MRS_Toolchain_Linux_x64_V([\d.]+)\.tar\.xz'
