@@ -1,7 +1,45 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: extra-x86_64
 pre_build_script: |
+  import urllib.request
+  import json
+  from lilac2.api import update_pkgver_and_pkgrel, edit_file
+
+  def get_real_url():
+      # get softId
+      info_url = "https://api.mounriver.com/mountriver/api/version/fetchRecent?swType=2&osType=LINUX&lang=en"
+      with urllib.request.urlopen(info_url) as r:
+          data = json.loads(r.read().decode())
+          soft_id = data['result']['softId']
+
+      # get dl
+      dl_api = f"https://api.mounriver.com/mountriver/api/version/getDownloadUrl?resourceId={soft_id}"
+      with urllib.request.urlopen(dl_api) as r:
+          dl_data = json.loads(r.read().decode())
+          return dl_data.get('data') or dl_data.get('result')
+
+  # get URL
+  full_url = get_real_url()
+  print(f"Detected Full URL: {full_url}")
+
+  if '?' in full_url:
+      base_url, sign_part = full_url.split('?', 1)
+      sign_val = f"?{sign_part}"
+  else:
+      base_url = full_url
+      sign_val = ""
+
+  # rewrite PKGBUILD
+  for line in edit_file('PKGBUILD'):
+      if line.strip().startswith('_sign='):
+          print(f'_sign="{sign_val}"')
+      elif line.strip().startswith('source=('):
+          print(f'source=("${{pkgname}}-${{pkgver}}.tar.xz::{base_url}${{_sign}}")')
+      else:
+          print(line)
+
   update_pkgver_and_pkgrel(_G.newver)
 post_build_script: |
   git_pkgbuild_commit()
