@@ -158,7 +158,7 @@ package() {
 [Desktop Entry]
 Type=Application
 Name=MounRiver Studio Ⅱ
-Exec=bash "/usr/share/MRS2/beforeinstall/load.sh" %F
+Exec=/usr/bin/${pkgname%-bin} %F
 Icon=MounRiverStudio2
 MimeType=application/x-mrs-project;
 Comment=MounRiver Stduio Ⅱ is a free integrated development environment for embedded MCU.
