@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=genht-svn
-pkgver=r136
+pkgver=r137
 pkgrel=1
 pkgdesc="genht is a simple generic hash table implementation in C."
 arch=($CARCH)
