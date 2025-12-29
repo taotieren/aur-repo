@@ -82,7 +82,7 @@ package() {
 Categories=
 Comment=${pkgdesc}
 Exec=${pkgname}
-Icon=${pkgname}.png
+Icon=${pkgname}
 Name=HSLink Nexus
 Terminal=false
 Type=Application
