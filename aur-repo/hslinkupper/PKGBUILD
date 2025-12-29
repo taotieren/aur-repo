@@ -83,7 +83,7 @@ Categories=
 Comment=${pkgdesc}
 Exec=${pkgname}
 Icon=${pkgname}.png
-Name=${pkgname}
+Name=HSLink Nexus
 Terminal=false
 Type=Application
 
