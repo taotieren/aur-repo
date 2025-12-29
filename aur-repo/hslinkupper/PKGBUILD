@@ -75,7 +75,7 @@ package() {
 
     install -Dvm644 69-hslink.rules -t ${pkgdir}/usr/lib/udev/rules.d/
     install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
-    install -Dm755 src-tauri/target/release/${pkgname} ${pkgdir}/usr/bin/${pkgname}
+    install -Dm755 src-tauri/target/release/hslinknexus ${pkgdir}/usr/bin/${pkgname}
     install -Dm644 src-tauri/icons/128x128.png ${pkgdir}/usr/share/icons/hicolor/128x128/apps/${pkgname}.png
     install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname}.desktop <<EOF
 [Desktop Entry]
