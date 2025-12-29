@@ -6,7 +6,7 @@ _name=HSLinkNexus
 pkgver=1.2.3
 pkgrel=1
 epoch=
-pkgdesc="HSLinkUpper is a simple tool that allows you to config HSLink."
+pkgdesc="A simple tool that allows you to config HSLink."
 arch=($CARCH)
 url="https://github.com/HSLink/HSLinkNexus"
 license=(MIT)
@@ -36,7 +36,6 @@ makedepends=(
 )
 optdepends=()
 checkdepends=()
-options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
 noextract=()
 sha256sums=('2bdfc69d1b6c5b78bbcec89579cc5588eb06c6386464a0c59f806be1a97af547')
@@ -83,8 +82,8 @@ package() {
 Categories=
 Comment=${pkgdesc}
 Exec=${pkgname}
-Icon=${pkgname}.png
-Name=${pkgname}
+Icon=${pkgname}
+Name=HSLink Nexus
 Terminal=false
 Type=Application
 
