@@ -71,7 +71,7 @@ build() {
 }
 
 package() {
-    cd "${srcdir}/${pkgname}/bin/Linux/None/xTools"
+    cd "${srcdir}/${pkgname}/bin/"*/Linux/None/xTools
     install -Dm0755 xTools -t "${pkgdir}/usr/share/${pkgname}/"
     cp -r translations "${pkgdir}/usr/share/${pkgname}/"
 
