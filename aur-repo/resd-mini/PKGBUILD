@@ -2,7 +2,7 @@
 
 pkgname=resd-mini
 pkgver=3.1.3
-pkgrel=1
+pkgrel=2
 pkgdesc="This is the mini version of a high-value, high-performance and diverse resource downloader called res-downloader."
 arch=($CARCH)
 url="https://github.com/putyy/resd-mini"
