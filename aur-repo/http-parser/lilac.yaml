@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+
+pre_build_script: aur_pre_build(maintainers=['Martchus'])
+
+post_build_script: |
+  aur_post_build
+  git_pkgbuild_commit()
+
+update_on:
+  - source: aur
+    aur: http-parser
