@@ -74,7 +74,6 @@ build() {
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -Wno-dev \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -B build \
     -G Ninja
 
