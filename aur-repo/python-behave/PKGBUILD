@@ -3,7 +3,7 @@
 _base=behave
 pkgname=python-${_base}
 pkgver=1.3.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Behaviour-driven development, Python style"
 url="https://github.com/${_base}/${_base}"
 license=(BSD-2-Clause)
