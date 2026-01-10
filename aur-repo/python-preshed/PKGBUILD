@@ -3,7 +3,7 @@
 pkgname=python-preshed
 _origpkgname=preshed
 pkgver=3.0.8
-pkgrel=1
+pkgrel=2
 pkgdesc="Cython hash table that trusts the keys are pre-hashed"
 arch=("x86_64")
 url="https://github.com/explosion/preshed"
