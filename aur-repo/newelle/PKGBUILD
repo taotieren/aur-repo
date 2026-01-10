@@ -2,7 +2,7 @@
 
 pkgname=newelle
 pkgver=1.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Your Ultimate Virtual Assistant"
 url="https://github.com/qwersyk/Newelle"
 license=('GPL-3.0-or-later')
