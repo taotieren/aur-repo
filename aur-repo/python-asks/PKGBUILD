@@ -5,7 +5,7 @@
 _name=asks
 pkgname=python-asks
 pkgver=3.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Async requests-like httplib for python."
 arch=('any')
 url="https://github.com/theelous3/asks"
