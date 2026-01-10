@@ -4,7 +4,7 @@
 
 pkgname=python-voicevox-client
 pkgver=0.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Voicevox engine unoffical wrapper"
 arch=(any)
 url="https://github.com/voicevox-client/python"
