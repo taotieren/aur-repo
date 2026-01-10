@@ -3,7 +3,7 @@
 pkgname=python-trogon
 _name=${pkgname#python-}
 pkgver=0.6.0
-pkgrel=6
+pkgrel=7
 epoch=
 pkgdesc="Automatically generate a Textual TUI for your Click CLI"
 arch=('any')
