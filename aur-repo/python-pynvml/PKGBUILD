@@ -4,7 +4,7 @@
 _pkgname=pynvml
 pkgname=python-pynvml
 pkgver=13.0.1
-pkgrel=5
+pkgrel=6
 pkgdesc="Python utilities for the NVIDIA Management Library"
 arch=('any')
 url="https://pypi.org/project/pynvml/"
