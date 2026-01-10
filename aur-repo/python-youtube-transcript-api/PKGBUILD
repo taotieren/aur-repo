@@ -2,7 +2,7 @@
 _pkgname=youtube-transcript-api
 pkgname=python-youtube-transcript-api
 pkgver=1.2.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A Python API which allows you to get the transcripts/subtitles for a given YouTube video."
 arch=('any')
 url="https://github.com/jdepoix/youtube-transcript-api"
