@@ -3,7 +3,7 @@
 _pkgname=spacy-loggers
 pkgname=python-${_pkgname}
 pkgver=1.0.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Logging utilities for spaCy"
 arch=(x86_64 aarch64)
 url="https://github.com/explosion/spacy-loggers"
