@@ -3,7 +3,7 @@
 pkgname=python-lauterbach-trace32-pystart
 _name=${pkgname#python-}
 pkgver=0.4.0
-pkgrel=2
+pkgrel=3
 pkgdesc="start Lauterbach TRACE32"
 arch=(any)
 url="https://pypi.org/project/${_name}"
