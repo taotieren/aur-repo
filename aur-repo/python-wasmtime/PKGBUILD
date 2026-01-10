@@ -1,7 +1,7 @@
 # Maintainer: gonsolo@gmail.com
 pkgname=python-wasmtime
 pkgver=35.0.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Python 3 extension for interfacing with Wasmtime/Cranelift."
 arch=('x86_64' 'aarch64')
 url="https://github.com/bytecodealliance/wasmtime-py"
