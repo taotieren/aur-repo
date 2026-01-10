@@ -2,7 +2,7 @@
 
 pkgname=python-lauterbach
 pkgver=0.0.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Python Lauterbach Automation"
 arch=(any)
 url="https://pypi.org/project/${_name}"
