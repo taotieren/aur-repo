@@ -5,7 +5,7 @@
 pkgname=python-inquirer
 _pkg="${pkgname#python-}"
 pkgver=3.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Collection of common interactive command line user interfaces, based on Inquirer.js"
 arch=('any')
 url='https://github.com/magmax/python-inquirer'
