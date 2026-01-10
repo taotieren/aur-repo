@@ -5,7 +5,7 @@
 pkgname=python-addict
 _pkg="${pkgname#python-}"
 pkgver=2.4.0
-pkgrel=5
+pkgrel=6
 pkgdesc='Augments dictionaries with attribute syntax'
 arch=('any')
 url='https://github.com/mewwts/addict'
