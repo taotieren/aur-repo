@@ -2,7 +2,7 @@
 _pipname=curl_cffi
 pkgname=python-${_pipname//_/-}
 pkgver=0.13.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Python FFI binding for curl-impersonate'
 arch=(x86_64)
 url='https://github.com/lexiforest/curl_cffi'
