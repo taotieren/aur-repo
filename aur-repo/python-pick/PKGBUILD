@@ -3,7 +3,7 @@
 _name=pick
 pkgname=python-${_name}
 pkgver=2.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Python library to create interactive selection list in the terminal"
 arch=('any')
 url="https://github.com/wong2/pick"
