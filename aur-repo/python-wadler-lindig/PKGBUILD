@@ -3,7 +3,7 @@
 pkgname=python-wadler-lindig
 _pkgname=wadler_lindig
 pkgver=0.1.7
-pkgrel=1
+pkgrel=2
 pkgdesc='A Wadler–Lindig pretty-printer for Python.'
 arch=('any')
 url='https://github.com/patrick-kidger/wadler_lindig'
