@@ -5,7 +5,7 @@
 pkgbase=pocketsphinx
 pkgname=(pocketsphinx python-pocketsphinx)
 pkgver=5.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc='A small speech recognizer'
 arch=('i686' 'x86_64')
 url='https://cmusphinx.github.io'
