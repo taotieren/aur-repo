@@ -1,7 +1,7 @@
 # Maintainer: Henry-ZHR <henry-zhr@qq.com>
 pkgname=python-gmssl
 pkgver=3.2.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Python crypto for sm2/sm3/sm4"
 arch=('any')
 url="https://github.com/py-gmssl/py-gmssl"
