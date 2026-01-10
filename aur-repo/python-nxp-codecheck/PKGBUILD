@@ -3,7 +3,7 @@
 pkgname=python-nxp-codecheck
 _name=${pkgname#python-}
 pkgver=0.3.16
-pkgrel=1
+pkgrel=2
 pkgdesc="Simple set of checking tools for accepting code quality for NXP python projects"
 arch=(any)
 url="https://pypi.org/project/${_name}"
