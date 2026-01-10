@@ -2,7 +2,7 @@
 
 pkgname=iyuuplus
 pkgver=8.3.23
-pkgrel=2
+pkgrel=3
 pkgdesc="IYUU Auto Reseed Plus"
 arch=("any")
 url="https://github.com/ledccn/iyuuplus-dev"
