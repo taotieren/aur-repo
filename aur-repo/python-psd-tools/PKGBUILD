@@ -3,7 +3,7 @@
 _name=psd-tools
 pkgname=python-$_name
 pkgver=1.11.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Python package for working with Adobe Photoshop PSD files'
 arch=(any)
 url='https://github.com/psd-tools/psd-tools'
