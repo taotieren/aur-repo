@@ -3,7 +3,7 @@
 pkgname=python-ftd2xx
 _name=${pkgname#python-}
 pkgver=1.3.8
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python interface to ftd2xx.dll from FTDI using ctypes based on d2xx by Pablo Bleyer"
 arch=('any')
