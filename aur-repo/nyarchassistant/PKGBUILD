@@ -2,7 +2,7 @@
 pkgname=nyarchassistant
 _pkgname=NyarchAssistant
 pkgver=0.9.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Nyarch Linux Assistant (Newelle Fork)"
 arch=("any")
 url="https://github.com/NyarchLinux/NyarchAssistant"
