@@ -4,7 +4,7 @@
 
 pkgname=python-espeak
 pkgver=0.5
-pkgrel=8
+pkgrel=9
 pkgdesc="Python bindings for eSpeak."
 arch=('any')
 url="https://launchpad.net/python-espeak"
