@@ -3,7 +3,7 @@
 pkgname=python-x690
 _name=${pkgname#python-}
 pkgver=1.0.0.post1
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Pure Python X.690 implementation"
 arch=('any')
