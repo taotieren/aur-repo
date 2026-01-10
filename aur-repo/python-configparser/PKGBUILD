@@ -4,7 +4,7 @@
 pkgname=python-configparser
 _pkgname=configparser
 pkgver=7.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Backport of configparser from Python's stdlib."
 arch=('any')
 url='https://github.com/jaraco/configparser/'
