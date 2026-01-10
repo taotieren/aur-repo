@@ -3,7 +3,7 @@
 pkgname=python-jieba3
 _name=${pkgname#python-}
 pkgver=1.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="jieba 3 Chinese Word Segmentation: Building the Best Modern Python 3 Chinese Word Segmentation Component"
 arch=('any')
