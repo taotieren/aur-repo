@@ -3,7 +3,7 @@
 pkgname=python-p115pickcode
 _name=${pkgname#python-}
 pkgver=0.0.5.4
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="115 transcoding between pickcode and id."
 arch=('any')
