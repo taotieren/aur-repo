@@ -6,7 +6,7 @@
 pkgname=python-requests-pkcs12
 _pkg=requests_pkcs12
 pkgver=1.27
-pkgrel=1
+pkgrel=2
 pkgdesc='Adds PKCS#12 support to python-requests'
 arch=('any')
 license=('ISC')
