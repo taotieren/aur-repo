@@ -3,7 +3,7 @@
 _name=uuid7
 pkgname=python-$_name
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='UUID version 7, generating time-sorted UUIDs with 200ns time resolution and 48 bits of randomness.'
 arch=(any)
 url="https://github.com/stevesimmons/uuid7"
