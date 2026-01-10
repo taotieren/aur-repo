@@ -4,7 +4,7 @@
 
 pkgname=python-wordllama
 pkgver=0.3.9
-pkgrel=2
+pkgrel=3
 pkgdesc="WordLlama NLP Utility"
 arch=(any)
 url="https://github.com/dleemiller/WordLlama"
