@@ -5,7 +5,7 @@
 pkgname=python-torchmetrics
 _pkgname=${pkgname#python-}
 pkgver=1.7.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Machine learning metrics for distributed, scalable PyTorch applications'
 arch=('any')
 url='https://github.com/PyTorchLightning/metrics'
