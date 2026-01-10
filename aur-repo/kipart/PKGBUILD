@@ -2,7 +2,7 @@
 
 pkgname=kipart
 pkgver=1.4.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Python package for generating multi-unit schematic symbols for KiCad from a CSV file"
 url="https://github.com/devbisme/KiPart"
 depends=(
