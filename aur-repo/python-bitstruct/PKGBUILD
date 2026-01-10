@@ -3,7 +3,7 @@
 _name=bitstruct
 pkgname=python-${_name}
 pkgver=8.21.0
-pkgrel=1
+pkgrel=2
 pkgdesc="This module performs conversions between Python values and C bit field structs represented as Python byte strings"
 arch=('x86_64')
 url="https://github.com/eerimoq/${_name}"
