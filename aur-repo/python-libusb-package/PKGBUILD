@@ -3,7 +3,7 @@
 pkgname=python-libusb-package
 _name=${pkgname#python-}
 pkgver=1.0.26.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Package containing libusb so it can be installed via Python package managers'
 arch=($CARCH)
 url='https://github.com/pyocd/libusb-package'
