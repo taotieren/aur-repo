@@ -3,7 +3,7 @@
 _name=aioboto3
 pkgname=python-$_name
 pkgver=15.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Async boto3 wrapper.'
 arch=('any')
 url='https://github.com/terricain/aioboto3'
