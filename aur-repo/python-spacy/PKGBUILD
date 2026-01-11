@@ -6,7 +6,7 @@
 pkgname=python-spacy
 _pkg="${pkgname#python-}"
 pkgver=3.8.11
-pkgrel=1
+pkgrel=2
 pkgdesc='Free open-source library for Natural Language Processing in Python'
 arch=('x86_64' 'aarch64')
 url='https://github.com/explosion/spacy'
