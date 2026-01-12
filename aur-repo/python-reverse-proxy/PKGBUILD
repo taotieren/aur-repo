@@ -3,7 +3,7 @@
 pkgname=python-reverse-proxy
 _name=${pkgname//-/_}
 pkgver=0.0.10
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python reverse proxy."
 arch=('any')
