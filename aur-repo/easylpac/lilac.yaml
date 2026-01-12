@@ -2,11 +2,13 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['root-core'])
+pre_build_script: |
+  aur_pre_build(maintainers=['root-core'])
+  add_makedepends(['libx11'])
 post_build: aur_post_build
 repo_depends:
   - lpac
 update_on:
   - source: aur
     aur: easylpac
-  # - alias: python
+# - alias: python
