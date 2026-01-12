@@ -1,41 +1,42 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sdbusplus-git
-pkgver=r885.5e36f4ab
+pkgver=r891.663b7b7
 pkgrel=1
 pkgdesc="C++ bindings for systemd dbus APIs"
 url="https://github.com/openbmc/sdbusplus"
 arch=($CARCH)
 license=('Apache-2.0')
 depends=(
-    "gcc-libs" 
+    "sh"
+    "gcc-libs"
     "glibc"
     "nlohmann-json"
-    "python" 
-    "python-inflection" 
-    "python-jsonschema" 
-    "python-mako" 
-    "python-yaml" 
+    "python"
+    "python-inflection"
+    "python-jsonschema"
+    "python-mako"
+    "python-yaml"
     "systemd-libs"
+    # AUR
+    stdexec
 )
 makedepends=(
-    "boost-libs" 
+    "boost"
+    "boost-libs"
     "cmake"
-    "git" 
-    "meson" 
-    "ninja" 
-    "pkgconf" 
-    "python-build" 
-    "python-installer" 
-    "python-setuptools" 
+    "git"
+    "gtest"
+    "meson"
+    "ninja"
+    "pkgconf"
+    "python-build"
+    "python-installer"
+    "python-setuptools"
     "python-wheel"
 )
 source=("${pkgname}::git+https://github.com/openbmc/sdbusplus.git")
 sha256sums=('SKIP')
-
-_meson_setup() {
-    arch-meson -Dtests=disabled -Dexamples=disabled "${pkgname}" build
-}
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -46,12 +47,8 @@ pkgver() {
     )
 }
 
-prepare() {
-    _meson_setup
-}
-
 build() {
-    _meson_setup
+    arch-meson ${pkgname} build
     meson compile -C build
 
     # Python tools
