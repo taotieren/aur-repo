@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 
-pre_build_script: aur_pre_build(maintainers=['Martchus'])
+pre_build_script: aur_pre_build(maintainers=['Martchus', 'jelly'])
 
 post_build_script: |
   aur_post_build
