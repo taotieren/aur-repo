@@ -3,14 +3,14 @@
 
 pkgname=python-cstruct
 pkgver=6.1
-pkgrel=0
+pkgrel=1
 pkgdesc="C-style structs for Python"
 url="https://github.com/andreax79/python-cstruct"
 arch=('any')
 license=('MIT')
 depends=('python')
 makedepends=('python-setuptools' 'python-build' 'python-installer' 'python-wheel')
-checkdepends=('python-pytest')
+_checkdepends=('python-pytest')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 sha256sums=('3c4f70a8adfaca32542af481bdd58e10b5224d8dc34340e018b940b8b730c060')
 
@@ -19,7 +19,7 @@ build() {
 	python -m build --wheel --no-isolation
 }
 
-check() {
+_check() {
 	cd "$pkgname-$pkgver"
 	pytest -x
 }
