@@ -12,7 +12,7 @@ license=('MIT')
 depends=(
     'python'
     'python-openpyxl'
-    'python-future'
+    #     'python-future'
     'python-sexpdata'
 )
 makedepends=('python-setuptools')
