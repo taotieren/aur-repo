@@ -37,13 +37,17 @@ _meson_setup() {
     arch-meson -Dtests=disabled -Dexamples=disabled "${pkgname}" build
 }
 
-prepare() {
-    _meson_setup
+pkgver() {
+    cd "${srcdir}/${_pkgname}"
+    (
+        set -o pipefail
+        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    )
 }
 
-pkgver() {
-    cd "${pkgname}"
-    echo "r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+prepare() {
+    _meson_setup
 }
 
 build() {
