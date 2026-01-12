@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=file-manager-preview-git
-pkgver=r5.a226f12
+pkgver=r7.964ed88
 pkgrel=1
 pkgdesc="Modern file manager with preview support"
 arch=($CARCH)
