@@ -1,7 +1,13 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['justapony'])
+pre_build_script: |
+  aur_pre_build(maintainers=['justapony'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-cstruct'])
+
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 update_on:
   - source: aur
