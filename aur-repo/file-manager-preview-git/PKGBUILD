@@ -47,7 +47,6 @@ pkgver() {
 
 build() {
     cd "${srcdir}/${pkgname}/"
-    sed -i '1s/^#include "OfficeConverter.h"/#include "OfficeConverter.h"\n#include <QRegularExpression>/' src/OfficeConverter.cpp
 
     cmake -B build \
           -DCMAKE_BUILD_TYPE=Release \
