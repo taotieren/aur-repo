@@ -2,8 +2,8 @@
 
 pkgname=python-blacksheep
 _name=${pkgname#python-}
-pkgver=2.4.5
-pkgrel=2
+pkgver=2.4.6
+pkgrel=1
 epoch=
 pkgdesc="Fast web framework for Python asyncio"
 arch=($CARCH)
@@ -55,7 +55,7 @@ options=()
 # source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 source=("${_name}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('c250fed4c9908f2447ac03ae7abca223df9e61a80bf9554dcd1daf69af66cfac')
+sha256sums=('7ff1c9944bdc61814ec582ac3ef62207afd5ae8e7941210387d92558be071e4d')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
