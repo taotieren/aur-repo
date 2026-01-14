@@ -2,7 +2,7 @@
 
 pkgname=ofdrw
 pkgver=2.3.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Open Fixed layout Document Reader And Writer Libary(OFD-RW) provider developers to generate ofd document and edit it."
 arch=(any)
 url="https://github.com/ofdrw/ofdrw"
