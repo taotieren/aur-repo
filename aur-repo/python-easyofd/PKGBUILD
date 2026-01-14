@@ -7,7 +7,7 @@ pkgname=(
 )
 _name=${pkgname#python-}
 pkgver=0.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Easy operate OFD"
 arch=($CARCH)
 license=('MIT')
