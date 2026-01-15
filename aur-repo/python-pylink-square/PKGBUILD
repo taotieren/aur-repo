@@ -3,7 +3,7 @@
 pkgname=python-pylink-square
 _name=${pkgname#python-}
 pkgver=2.0.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Python interface for the SEGGER J-Link"
 arch=(any)
 # url="https://github.com/Square/pylink"
@@ -39,7 +39,7 @@ options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
   "0001-fix-import-mock.patch")
 sha512sums=('cd4994326924f1f3e875af0d9af1cead5a016140b00d80262090965836eac6f6218fb8f04f82f0a3866e86cfc77e596993dc2413bba50362ac934fdb899470f5'
-  'c65ff3103e3937a0233434861857279d2e2bf5f15c4011121b46661fac9a6773b8ab20f7d8f9b8bfedeb1118b2db0b1f8dc65cd7be02b1d7dd78f727a80bacc0')
+            'b61584eccd29d9087bf668377cd4220b0c45d00039b46bcfa1454b244a36eecaa3f5643f31adbc4c575ebe815fb119bbb92a4b926a918647bb03f0adbd49c64b')
 
 prepare() {
   cd $_name-$pkgver
