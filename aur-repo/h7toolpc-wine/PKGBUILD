@@ -2,7 +2,7 @@
 
 pkgname=h7toolpc-wine
 pkgver=2.29
-pkgrel=1
+pkgrel=2
 pkgdesc="Wine H7-TOOL 的 PC 上位机，支持串口、CAN、示波器、CMSIS-DAP、DS18B20、RTT Viewer、脱机烧录等"
 arch=('x86_64')
 url="http://www.armbbs.cn/forum.php?mod=viewthread&tid=95468"
@@ -122,7 +122,7 @@ EOF
 
     install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/${pkgname%-wine}" <<EOF
 #!/bin/bash
-export WINEARCH=win64 WINEPREFIX="\$HOME/.${pkgname%-wine}/wine"
+export WINEARCH=wow64 WINEPREFIX="\$HOME/.${pkgname%-wine}/wine"
 
 if [ ! -d "\$HOME"/.${pkgname%-wine} ] ; then
     mkdir -p "\$HOME"/.${pkgname%-wine}/wine || exit 1
