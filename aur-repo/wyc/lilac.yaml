@@ -8,7 +8,7 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: https://xiaomy.net/download/
-    regex: 'V(\d+.\d+.\d+)'
+    url: https://wangyunchuan.com/down
+    regex: 'V(\d+.\d+)'
 # - source: manual
 #   manual: 1
