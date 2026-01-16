@@ -61,16 +61,10 @@ EOF
     chown wangyunchuan:wangyunchuan "$log_dir"
     chmod 755 "$log_dir"
 
-    # 创建实例名的符号链接
-    instance_link="/var/log/wangyunchuan/$instance"
-    rm -f "$instance_link" 2>/dev/null || true
-    ln -sfn "$log_dir" "$instance_link"
-
     echo "✅ 配置已保存: $config_file"
     echo "📋 实例: $instance"
     echo "🔐 令牌前缀: $token_prefix"
     echo "📁 日志目录: $log_dir"
-    echo "🔗 符号链接: $instance_link -> $log_dir"
     echo "👤 文件所有者: $(stat -c "%U:%G" "$config_file")"
     echo "🔒 文件权限: $(stat -c "%a" "$config_file")"
 
@@ -89,10 +83,10 @@ EOF
 }
 
 # 参数检查
-if [[ $# -lt 1 ]]; then
+if [[ $$# -lt 1 ]]; then
     echo "用法: sudo $0 <实例名称> [令牌]"
     echo "示例: sudo $0 ssh"
-    echo "       sudo $0 web token12345678"
+    echo "       sudo $0 web token1234567890"
     exit 1
 fi
 
