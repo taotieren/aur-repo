@@ -2,7 +2,7 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 pre_build_script: |
-  aur_pre_build(maintainers='insmtr')
+  aur_pre_build(maintainers='kpn')
   run_cmd(['updpkgsums'])
 post_build: aur_post_build
 update_on:
