@@ -27,13 +27,31 @@ main() {
         exit 1
     }
     
+    # 计算令牌前缀
+    token_prefix="${token:0:8}"
+    
     # 写入配置
-    echo "WYC_TOKEN=$token" > "$config_file"
+    cat > "$config_file" <<EOF
+WYC_TOKEN=$token
+WYCLOG_PREFIX=$token_prefix
+INSTANCE=$instance
+EOF
+    
     chmod 600 "$config_file"
+    
+    # 创建日志目录
+    log_dir="/var/log/wangyunchuan/$token_prefix"
+    mkdir -p "$log_dir"
+    chmod 755 "$log_dir"
     
     echo "✅ 配置已保存: $config_file"
     echo "📋 实例: $instance"
-    echo "🔐 令牌: ${token:0:8}..."
+    echo "🔐 令牌前缀: $token_prefix"
+    echo "📁 日志目录: $log_dir"
+    
+    # 清理锁文件
+    flock -u 9
+    rm -f "$lock_file"
 }
 
 # 参数检查

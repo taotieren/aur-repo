@@ -15,8 +15,8 @@ EnvironmentFile=-/etc/wangyunchuan/token_%i
 
 ExecStart=/usr/bin/wyc -token=${WYC_TOKEN} -run
 
-StandardOutput=append:/var/log/wangyunchuan/output_%i.log
-StandardError=append:/var/log/wangyunchuan/error_%i.log
+StandardOutput=append:/var/log/wangyunchuan/${WYCLOG_PREFIX}/output.log
+StandardError=append:/var/log/wangyunchuan/${WYCLOG_PREFIX}/error.log
 SyslogIdentifier=wangyunchuan-%i
 
 # 安全设置
