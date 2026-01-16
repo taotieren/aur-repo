@@ -9,6 +9,6 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://wangyunchuan.com/down
-    regex: 'V(\d+.\d+)'
+    regex: 'V([\d.]+)'
 # - source: manual
 #   manual: 1
