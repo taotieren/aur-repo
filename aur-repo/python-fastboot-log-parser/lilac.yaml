@@ -5,5 +5,5 @@ pre_build_script: aur_pre_build(maintainers='TingPing')
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: ppython-fastboot-log-parser
+    aur: python-fastboot-log-parser
   - alias: python
