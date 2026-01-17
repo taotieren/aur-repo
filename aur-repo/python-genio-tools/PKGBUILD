@@ -16,6 +16,7 @@ _pydeps=(
     pyudev
     pyusb
 
+    fastboot-log-parser
     genio-bootrom
     gpiod
     pyftdi)
