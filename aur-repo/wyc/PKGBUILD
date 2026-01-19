@@ -3,7 +3,7 @@
 pkgbase=wyc
 pkgname=wyc
 pkgver=7
-pkgrel=14
+pkgrel=15
 pkgdesc="网云穿最便捷的端口映射"
 license=('LicenseRef-scancode-commercial-license')
 url="https://wangyunchuan.com"
