@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-store-minimalist-bin
-_pkgname=OpenList.Desktop
+# _pkgname=
 pkgver=1.1.8
 pkgrel=1
 pkgdesc="Linyaps Store Minimalist"
