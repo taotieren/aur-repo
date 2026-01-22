@@ -19,7 +19,9 @@ optdepends=()
 backup=()
 options=('!strip' '!debug')
 #install=${pkgname}.install
-source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}"
+    thunder{16,24,32,48,64,72,256}.png
+    )
 sha256sums=('7f1b9ad1ffd7f269468e0b9d877be10c4b219ae381787cf25241e185ec7db7c7')
 
 prepare() {
@@ -45,4 +47,20 @@ package() {
 
     install -Dm755 build/${pkgname%-bin} -t ${pkgdir}/usr/bin/
     install -Dm0644 "${srcdir}/${pkgname}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    local _icon
+    for _icon in 16 24 32 48 64 256; do
+        install -Dm0644 ${srcdir}/thunder${_icon}.png \
+            ${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps/${pkgname%-bin}.png
+    done
+    install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop <<EOF
+[Desktop Entry]
+Categories=
+Comment=${pkgdesc}
+Exec=${pkgname%-bin}
+Icon=${pkgname%-bin}.png
+Name=${pkgname%-bin}
+Terminal=false
+Type=Application
+
+EOF
 }
