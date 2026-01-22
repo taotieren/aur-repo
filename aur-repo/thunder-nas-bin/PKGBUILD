@@ -18,15 +18,15 @@ backup=()
 options=('!strip' '!debug')
 install=${pkgname}.install
 source=(
-    "xlp-amd64-${pkgver}.tar.gz::${url}/releases/download/v${pkgver}/xlp-amd64.tar.gz"
+    "xlp-amd64-${pkgver}.tar.gz::${url}/releases/download/v${_tagname}/xlp-amd64.tar.gz"
     "https://github.com/cnk3x/xunlei/raw/refs/heads/main/LICENSE"
     thunder-nas.{sysusers,tmpfiles,service}
 )
 sha256sums=('5ed2af4bfea6a98e655bc80cf58d2617b64c9a0086e0ddf898b826580848ac1f'
-            'eabe4ae8a7885a2d00da4bbfb18e9a55b8fba68bb8d0d06d3701a6bf6726faef'
-            '86ef730efbb7ab007c0b65e3c54bf641241e8a85fdc70a274b80d40c239e76f3'
-            '0ccb638b7dddf17112bc533ab8e8d38f53efe64db3c78a54259481d823501c50'
-            '90656d7ea9795d84858ba2bf4cbedc8e546f7fde4cecd851637181d54d64a93a')
+    'eabe4ae8a7885a2d00da4bbfb18e9a55b8fba68bb8d0d06d3701a6bf6726faef'
+    '86ef730efbb7ab007c0b65e3c54bf641241e8a85fdc70a274b80d40c239e76f3'
+    '0ccb638b7dddf17112bc533ab8e8d38f53efe64db3c78a54259481d823501c50'
+    '90656d7ea9795d84858ba2bf4cbedc8e546f7fde4cecd851637181d54d64a93a')
 
 package() {
     install -Dm755 "${srcdir}/xlp" ${pkgdir}/usr/bin/${pkgname%-bin}
