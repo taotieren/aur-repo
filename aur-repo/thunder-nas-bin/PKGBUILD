@@ -5,70 +5,38 @@ _tagname=3.20.2
 pkgver=${_tagname//-/_}
 pkgrel=0
 pkgdesc="Thunder (Xunlei) remote download service program extracted from thunder Synology suite for other devices"
-arch=($CARCH)
+arch=(x86_64)
 url="https://github.com/cnk3x/xunlei"
 license=('MIT')
-provides=(${pkgname})
-conflicts=(${pkgname})
+provides=(${pkgname%-bin})
+conflicts=(${pkgname%-bin})
 #replaces=(${pkgname})
-depends=(glibc)
-makedepends=(
-    git
-    go
-)
+depends=()
+makedepends=()
 optdepends=()
 backup=()
 options=('!strip' '!debug')
-#install=${pkgname}.install
-source=("${pkgname}::git+${url}.git#tag=v${pkgver}"
-    thunder{16,24,32,48,64,72,256}.png
-    )
-sha256sums=('d81916c9fbb96dec281949383b51da913df2fa615a4cb468cdbecb3d177b034a'
-            '8e8924bff727740ef9c97df0ad906f609a99dd39a7c8da7e1bdc2d3fb03ef384'
-            '058501994577bd1f0b1706a2e91bc089452ab64b5021a22c4fb3a9842931ebfb'
-            '85305ff0580b7ff35b39b92757c6405d22516499db926f5d92bba9284c7e049a'
-            'aa604445375c73acf76b209d7376e5eaf4d9fdea192825ad533fa962c952effb'
-            '9bd7cfc27c42c3d42b770051dcf6a3fba989e99635da5ddfbccb1df684a28fb6'
-            '3866302a07d90dd308edf3537b4e2025ebbfd6408c446a6609936afe29dd633f'
-            '16eb994e36706a5bb539d23c6618145089312da9f1d5001a15c60985ef89f083')
-
-prepare() {
-    git -C "${srcdir}/${pkgname}" clean -dfx
-}
-
-build() {
-    cd "${srcdir}/${pkgname}"
-    export CGO_CPPFLAGS="${CPPFLAGS}"
-    export CGO_CFLAGS="${CFLAGS}"
-    export CGO_CXXFLAGS="${CXXFLAGS}"
-    export CGO_LDFLAGS="${LDFLAGS}"
-    export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
-    export GO111MODULE=on
-    export GOPROXY=https://goproxy.cn,direct
-
-    mkdir -pv build/
-    go build -o build/${pkgname%-bin} ./cmd/
-}
+install=${pkgname}.install
+source=(
+    "xlp-amd64-${pkgver}.tar.gz::${url}/releases/download/v${pkgver}/xlp-amd64.tar.gz"
+    "https://github.com/cnk3x/xunlei/raw/refs/heads/main/LICENSE"
+    thunder-nas.{sysusers,tmpfiles,service}
+)
+sha256sums=('5ed2af4bfea6a98e655bc80cf58d2617b64c9a0086e0ddf898b826580848ac1f'
+            'eabe4ae8a7885a2d00da4bbfb18e9a55b8fba68bb8d0d06d3701a6bf6726faef'
+            '86ef730efbb7ab007c0b65e3c54bf641241e8a85fdc70a274b80d40c239e76f3'
+            '0ccb638b7dddf17112bc533ab8e8d38f53efe64db3c78a54259481d823501c50'
+            '90656d7ea9795d84858ba2bf4cbedc8e546f7fde4cecd851637181d54d64a93a')
 
 package() {
-    cd "${srcdir}/${pkgname}"
+    install -Dm755 "${srcdir}/xlp" ${pkgdir}/usr/bin/${pkgname%-bin}
+    install -Dm0644 "${srcdir}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-    install -Dm755 build/${pkgname%-bin} -t ${pkgdir}/usr/bin/
-    install -Dm0644 "${srcdir}/${pkgname}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    local _icon
-    for _icon in 16 24 32 48 64 256; do
-        install -Dm0644 ${srcdir}/thunder${_icon}.png \
-            ${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps/${pkgname%-bin}.png
-    done
-    install -Dvm644 /dev/stdin ${pkgdir}/usr/share/applications/${pkgname%-bin}.desktop <<EOF
-[Desktop Entry]
-Categories=
-Comment=${pkgdesc}
-Exec=${pkgname%-bin}
-Icon=${pkgname%-bin}.png
-Name=${pkgname%-bin}
-Terminal=false
-Type=Application
+    install -dm755 "${pkgdir}/usr/syno/synoman/webman/modules" \
+        "${pkgdir}/xunlei" \
+        "${pkgdir}/var/packages/pan-xunlei-com/"
 
-EOF
+    install -Dvm644 "${srcdir}/thunder-nas.sysusers" "${pkgdir}/usr/lib/sysusers.d/thunder-nas.conf"
+    install -Dvm644 "${srcdir}/thunder-nas.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/thunder-nas.conf"
+    install -vDm644 "${srcdir}/thunder-nas.service" -t "${pkgdir}/usr/lib/systemd/system/"
 }
