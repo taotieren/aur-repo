@@ -49,6 +49,13 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
+    
+    # Remove any existing cargo config that might use problematic mirrors
+    rm -f .cargo/config.toml .cargo/config
+    
+    # Use official crates.io registry
+    export CARGO_REGISTRIES_CRATES_IO_INDEX="https://github.com/rust-lang/crates.io-index"
+    
     cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
@@ -58,8 +65,11 @@ build() {
 
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/entity.rs
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/mapper.rs
+    
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
+    export CARGO_REGISTRIES_CRATES_IO_INDEX="https://github.com/rust-lang/crates.io-index"
+    
     cargo build --release --all-features
 }
 
