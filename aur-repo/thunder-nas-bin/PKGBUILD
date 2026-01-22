@@ -18,7 +18,7 @@ backup=()
 options=('!strip' '!debug')
 install=${pkgname}.install
 source=(
-    "xlp-amd64-${pkgver}.tar.gz::${url}/releases/download/v${_tagname}/xlp-amd64.tar.gz"
+    "xlp-${_tagname//-/}-linux-amd64.tar.gz::${url}/releases/download/v${_tagname}/xlp-${_tagname//-/}-linux-amd64.tar.gz"
     "https://github.com/cnk3x/xunlei/raw/refs/heads/main/LICENSE"
     thunder-nas.{sysusers,tmpfiles,service}
 )
@@ -29,10 +29,10 @@ sha256sums=('5ed2af4bfea6a98e655bc80cf58d2617b64c9a0086e0ddf898b826580848ac1f'
     '90656d7ea9795d84858ba2bf4cbedc8e546f7fde4cecd851637181d54d64a93a')
 
 package() {
-    install -Dm755 "${srcdir}/xlp" ${pkgdir}/usr/bin/${pkgname%-bin}
-    install -Dm0644 "${srcdir}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm755 "${srcdir}/xlp" ${pkgdir}/usr/bin/${pkgname%-bin}
+    install -vDm0644 "${srcdir}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-    install -dm755 "${pkgdir}/usr/syno/synoman/webman/modules" \
+    install -vdm755 "${pkgdir}/usr/syno/synoman/webman/modules" \
         "${pkgdir}/xunlei" \
         "${pkgdir}/var/packages/pan-xunlei-com/"
 
