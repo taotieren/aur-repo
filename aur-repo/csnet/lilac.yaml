@@ -7,9 +7,8 @@ pre_build_script: |
       line = f"_tagname={_G.newver}"
     print(line)
 
-  clean_ver = _G.newver.replace('_', '.')
-  update_pkgver_and_pkgrel(clean_ver)
-  # update_pkgver_and_pkgrel(_G.newver.replace('-', '.'))
+  clean_ver = _G.newver.replace('-', '.')
+  update_pkgver_and_pkgrel(clean_ver))
 # update_pkgrel()
 # update_pkgver_and_pkgrel(_G.newver.replace('-', '.'))
 
