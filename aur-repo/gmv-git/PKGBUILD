@@ -28,6 +28,7 @@ depends=(
 makedepends=(
     rust
     cmake
+    ffmpeg
     git
     pkgconf
 )
