@@ -3,7 +3,7 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers='root-core')
   # aur_pre_build(maintainers='root-core')
-  # run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=minilpa-git'])
+  # run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=minilpa'])
 
   # run_cmd(['sed', '-i', 's|powershell-bin|powershell|', 'PKGBUILD'])
 
@@ -13,5 +13,5 @@ repo_depends:
   - powershell-bin
 update_on:
   - source: aur
-    aur: minilpa-git
+    aur: minilpa
   # - alias: python
