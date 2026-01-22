@@ -1,16 +1,16 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: |
-  aur_pre_build(maintainers='root-core')
-  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=minilpa-git'])
+pre_build_script: aur_pre_build(maintainers='root-core')
+  # aur_pre_build(maintainers='root-core')
+  # run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=minilpa-git'])
 
-  run_cmd(['sed', '-i', 's|powershell-bin|powershell|', 'PKGBUILD'])
+  # run_cmd(['sed', '-i', 's|powershell-bin|powershell|', 'PKGBUILD'])
 
-  run_cmd(['updpkgsums'])
+  # run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
-  - powershell
+  - powershell-bin
 update_on:
   - source: aur
     aur: minilpa-git
