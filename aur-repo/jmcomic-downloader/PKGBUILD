@@ -45,6 +45,10 @@ build() {
     cd "${srcdir}/${pkgname}/"
 
     export CARGO_HOME="${srcdir}/.cargo"
+    
+    # Disable Vue devtools in production build
+    export NODE_ENV=production
+    export VITE_DISABLE_DEVTOOLS=true
     {
         echo -e '\n'
         #echo 'build_from_source=true'
@@ -56,8 +60,8 @@ build() {
         echo "virtual-store-dir-max-length=80"
     } >>.npmrc
 
-    NODE_ENV=development pnpm install --force
-    NODE_ENV=production pnpm tauri build -b deb
+    pnpm install --force
+    pnpm tauri build 
 }
 
 # check() {
