@@ -37,7 +37,8 @@ prepare() {
 build() {
     cd "${pkgname%-zh-cn}"
     export PATH="/usr/lib/jvm/java-${_jdkver}-openjdk/bin:$PATH"
-    ./gradlew assemble
+    export JAVA_HOME="/usr/lib/jvm/java-${_jdkver}-openjdk"
+    ./gradlew --no-configuration-cache assemble
 }
 
 package() {
