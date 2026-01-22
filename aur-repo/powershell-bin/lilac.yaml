@@ -1,9 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='yataro')
+pre_build_script: aur_pre_build(maintainers=['kylesferrazza', 'carsme'])
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: powershell
+    aur: powershell-bin
   # - alias: python
