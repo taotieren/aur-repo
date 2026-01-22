@@ -23,7 +23,14 @@ options=('!strip' '!debug')
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}"
     thunder{16,24,32,48,64,72,256}.png
     )
-sha256sums=('7f1b9ad1ffd7f269468e0b9d877be10c4b219ae381787cf25241e185ec7db7c7')
+sha256sums=('d81916c9fbb96dec281949383b51da913df2fa615a4cb468cdbecb3d177b034a'
+            '8e8924bff727740ef9c97df0ad906f609a99dd39a7c8da7e1bdc2d3fb03ef384'
+            '058501994577bd1f0b1706a2e91bc089452ab64b5021a22c4fb3a9842931ebfb'
+            '85305ff0580b7ff35b39b92757c6405d22516499db926f5d92bba9284c7e049a'
+            'aa604445375c73acf76b209d7376e5eaf4d9fdea192825ad533fa962c952effb'
+            '9bd7cfc27c42c3d42b770051dcf6a3fba989e99635da5ddfbccb1df684a28fb6'
+            '3866302a07d90dd308edf3537b4e2025ebbfd6408c446a6609936afe29dd633f'
+            '16eb994e36706a5bb539d23c6618145089312da9f1d5001a15c60985ef89f083')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
