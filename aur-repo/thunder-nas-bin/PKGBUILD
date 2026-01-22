@@ -1,7 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=thunder-nas-bin
-pkgver=3.20.2
+_tagname=3.20.2
+pkgver=${_tagname//-/_}
 pkgrel=0
 pkgdesc="Thunder (Xunlei) remote download service program extracted from thunder Synology suite for other devices"
 arch=($CARCH)
