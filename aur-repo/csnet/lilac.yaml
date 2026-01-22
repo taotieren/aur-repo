@@ -21,7 +21,7 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://aite.xyz/product/csnet/client
-    regex: '(\d+-\d+-\d+)'
+    regex: '(\d{4}-\d{2}-\d{2})'
     # include_regex: ".*-*-*"
 #   - source: manual
 #     manual: 1
