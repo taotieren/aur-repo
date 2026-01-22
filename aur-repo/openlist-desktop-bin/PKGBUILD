@@ -27,15 +27,15 @@ depends=(
 makedepends=('libarchive')
 backup=()
 options=('!strip' '!debug')
-source=("${url}/releases/download/v${pkgver}/${_pkgname}_${pkgver}_amd64.deb")
+source=("${url}/releases/download/v${pkgver}/${_pkgname}_${pkgver}_amd64_linux.deb")
 sha256sums=('aa650927760fc4095fe4867169962fc1dfbe5e769705277e48a24c2e5ebdcc18')
 noextract=("${_pkgname}_${pkgver}_amd64.deb")
 
 package() {
     cd "$srcdir"/
-    mkdir -pv ${_pkgname}_${pkgver}_amd64
-    bsdtar -xf ${_pkgname}_${pkgver}_amd64.deb -C ${_pkgname}_${pkgver}_amd64
-    cd ${_pkgname}_${pkgver}_amd64
+    mkdir -pv ${_pkgname}_${pkgver}_amd64_linux
+    bsdtar -xf ${_pkgname}_${pkgver}_amd64_linux.deb -C ${_pkgname}_${pkgver}_amd64_linux
+    cd ${_pkgname}_${pkgver}_amd64_linux
     bsdtar -xf data.tar.gz --numeric-owner -C ${pkgdir}/
     chown -R root:root ${pkgdir}
     rm -rf ${pkgdir}/usr/bin/{openlist,rclone}
