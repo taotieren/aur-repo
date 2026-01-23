@@ -27,6 +27,7 @@ makedepends=(
     cargo-tauri
     git
     pnpm
+    nodejs
 )
 backup=()
 options=(!debug !strip !lto)
@@ -45,7 +46,7 @@ build() {
     cd "${srcdir}/${pkgname}/"
 
     export CARGO_HOME="${srcdir}/.cargo"
-    
+
     # Disable Vue devtools in production build
     export NODE_ENV=production
     export VITE_DISABLE_DEVTOOLS=true
@@ -61,7 +62,7 @@ build() {
     } >>.npmrc
 
     pnpm install --force
-    pnpm tauri build 
+    pnpm tauri build
 }
 
 # check() {
