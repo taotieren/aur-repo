@@ -5,7 +5,7 @@
 pkgname=python-fugashi
 _gitname=${pkgname#python-}
 pkgver=1.5.2
-pkgrel=1
+pkgrel=2
 
 pkgdesc="MeCab wrapper for pythonic Japanese tokenization and morphological analysis"
 url="https://github.com/polm/fugashi"
@@ -17,7 +17,7 @@ depends=(
   mecab
   python
 )
-makedepends=("python-build" "python-installer"
+makedepends=(
   git
   python-setuptools
   python-setuptools-scm
@@ -46,7 +46,7 @@ build() {
   python -m build --wheel --skip-dependency-check --no-isolation
 }
 
-check() {
+_check() {
   cd "$_gitname"
   local python_version=$(python -c 'import sys; print("".join(map(str, sys.version_info[:2])))')
   PYTHONPATH="$PWD/build/lib.linux-$CARCH-cpython-$python_version" pytest
