@@ -2,7 +2,7 @@
 
 pkgname=probe-go-git
 pkgver=r28.779d56b
-pkgrel=1
+pkgrel=2
 pkgdesc="A full-platform NAT type detection tool written in pure Go language"
 arch=($CARCH)
 url="https://github.com/xiaoqidun/probe"
