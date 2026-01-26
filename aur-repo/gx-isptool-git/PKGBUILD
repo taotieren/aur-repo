@@ -14,6 +14,7 @@ replaces=()
 depends=(
     glibc
     gcc-libs
+    hicolor-icon-theme
     hidapi
     # fonts depends
     #     noto-fonts-cjk
@@ -41,6 +42,7 @@ pkgver() {
 
 build() {
     cd "${srcdir}/${pkgname}"
+    git cherry-pick -n badf1cfbd4d1c06e8be656f84c1168eecfd49fe8
     qmake ${_pkgname}.pro
     make
 }
