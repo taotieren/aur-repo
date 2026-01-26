@@ -5,7 +5,6 @@ pre_build_script: aur_pre_build(maintainers=['xiota'])
 post_build: aur_post_build
 repo_depends:
   - python-fusepy
-  - python-mock
 update_on:
   - source: aur
     aur: mtkclient-git
