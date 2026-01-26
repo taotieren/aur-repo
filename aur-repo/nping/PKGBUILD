@@ -43,6 +43,6 @@ build() {
 package() {
     cd "${srcdir}/${_name}-${pkgver}/"
 
-    install -Dvm755 target/release/nbping ${pkgdir}/usr/bin/nbping
-    install -Dvm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+    install -vDm755 target/release/nbping -t ${pkgdir}/usr/bin/
+    install -vDm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
 }
