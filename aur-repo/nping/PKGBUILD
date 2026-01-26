@@ -8,8 +8,8 @@ pkgdesc="🏎 Nping mean NB Ping, A Ping Tool in Rust with Real-Time Data and Vi
 arch=($CARCH)
 url="https://github.com/hanshuaikang/Nping"
 license=('MIT')
-provides=(${pkgname})
-conflicts=(${pkgname})
+provides=(${pkgname} nbping-rs nbping)
+conflicts=(${pkgname} nbping-rs nbping)
 # replaces=(${pkgname})
 depends=(
     gcc-libs
@@ -43,5 +43,6 @@ build() {
 package() {
     cd "${srcdir}/${_name}-${pkgver}/"
 
-    install -Dvm755 target/release/${pkgname} ${pkgdir}/usr/bin/${pkgname}-rs
+    install -Dvm755 target/release/nbping ${pkgdir}/usr/bin/nbping-rs
+    install -Dvm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
 }
