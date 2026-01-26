@@ -17,10 +17,13 @@ _pydeps=(
     kicadmodtree)
 depends=('python'
     "${_pydeps[@]/#/python-}")
-makedepends=(python-build
+makedepends=(
+    python-hatchling
+    python-build
     python-installer
     python-wheel
-    python-setuptools)
+    python-setuptools
+)
 options=('!strip')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/${_name}-$pkgver.tar.gz")
 noextract=()
