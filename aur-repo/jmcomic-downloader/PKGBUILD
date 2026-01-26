@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=jmcomic-downloader
-pkgver=0.16.0
+pkgver=0.16.2
 pkgrel=1
 pkgdesc="禁漫天堂 18comic.vip jmcomic 18comic 的多线程下载器，带图形界面，带收藏夹，免费下载收费的漫画，下载速度飞快"
 arch=($CARCH)
@@ -33,7 +33,7 @@ backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('b7785a11e518422cccd1a22a2e82ad8c4997cf106d6bce283630eb83946231a7')
+sha256sums=('3cec093e40c9d9d589bb1ba7df68c86b0b41e3d79547af6177dfb123e921b3bf')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
@@ -46,13 +46,8 @@ build() {
     cd "${srcdir}/${pkgname}/"
 
     export CARGO_HOME="${srcdir}/.cargo"
-
-    # Disable Vue devtools in production build
-    export NODE_ENV=production
-    export VITE_DISABLE_DEVTOOLS=true
     {
         echo -e '\n'
-        #echo 'build_from_source=true'
         echo 'link-workspace-packages=true'
         echo 'fetch-retry-maxtimeout=10000'
         echo "cache-dir="${srcdir}"/.pnpm_cache"
@@ -61,8 +56,13 @@ build() {
         echo "virtual-store-dir-max-length=80"
     } >>.npmrc
 
-    pnpm install --force
-    pnpm tauri build
+    export NODE_ENV=production
+
+    pnpm install --force --prod
+
+    pnpm build
+
+    pnpm tauri build -b deb
 }
 
 # check() {
