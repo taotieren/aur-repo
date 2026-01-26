@@ -22,7 +22,7 @@ makedepends=(
     sed
     docbook2x
     libxslt)
-backup=()
+backup=('etc/flashmq/flashmq.conf')
 options=('!strip' '!emptydirs')
 install=
 source=("${pkgname%-git}::git+${url}.git")
