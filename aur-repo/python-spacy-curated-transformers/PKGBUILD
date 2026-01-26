@@ -3,7 +3,7 @@
 pkgname=python-spacy-curated-transformers
 _name=${pkgname#python-}
 pkgver=2.1.2
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Curated transformer models for spaCy pipelines"
 arch=('any')
