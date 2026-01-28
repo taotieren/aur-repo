@@ -9,7 +9,10 @@ arch=($CARCH)
 url="https://github.com/jclehner/nmrpflash"
 license=('GPL-3.0-or-later')
 depends=('libpcap' 'libnl>=3')
-makedepends=('make')
+makedepends=(
+  make
+  git
+)
 source=("${_pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
