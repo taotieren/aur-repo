@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['Nik014'])
+pre_build_script: |
+  aur_pre_build(maintainers=['Nik014'])
+  add_makedepends(['boost'])
 post_build: aur_post_build
 update_on:
   - source: aur
