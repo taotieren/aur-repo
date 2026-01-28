@@ -35,13 +35,13 @@ pkgver() {
 }
 
 build() {
-  cd "${_pkgname}"
+  cd "${srcdir}/${_pkgname}"
 
   make
 }
 
 package() {
-  cd "${_pkgname}"
+  cd "${srcdir}/${_pkgname}"
 
   make install PREFIX="${pkgdir}/usr"
   install -vDm0644 ${_pkgname}.svg -t "${pkgdir}/usr/share/icons/hicolor/scalable/apps/"
