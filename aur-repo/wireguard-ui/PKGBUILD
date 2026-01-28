@@ -21,7 +21,7 @@ options=(!debug)
 backup=(usr/bin/wgiptables)
 install=$pkgname.install
 source=(
-  "${pkgname}::git+$url.git$tag=v$pkgver"
+  "${pkgname}::git+$url.git#tag=v$pkgver"
   $pkgname.service
   99-wg.conf
   wgui.path
