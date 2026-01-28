@@ -9,6 +9,10 @@ post_build_script: |
 repo_depends:
   - python-altgraph
 update_on:
-  - source: pypi
-    pypi: macholib
+  - source: github
+    github: ronaldoussoren/macholib
+    use_max_tag: true
+    prefix: v
+  # - source: pypi
+  #   pypi: macholib
   - alias: python
