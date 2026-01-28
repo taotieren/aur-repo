@@ -1,0 +1,9 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers=['Nik014'])
+post_build: aur_post_build
+update_on:
+  - source: aur
+    aur: bcm2-utils-git
+  # - alias: python
