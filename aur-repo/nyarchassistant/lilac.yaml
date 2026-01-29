@@ -11,6 +11,8 @@ repo_depends:
   - python-speechrecognition
   - python-voicevox-client
   - python-wordllama
+  - python-model2vec
+  - python-mcp
 update_on:
   - source: aur
     aur: nyarchassistant
