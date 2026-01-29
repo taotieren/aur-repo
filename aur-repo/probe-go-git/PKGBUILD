@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=probe-go-git
-pkgver=r28.779d56b
-pkgrel=2
+pkgver=r30.106bced
+pkgrel=1
 pkgdesc="A full-platform NAT type detection tool written in pure Go language"
 arch=($CARCH)
 url="https://github.com/xiaoqidun/probe"
