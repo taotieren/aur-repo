@@ -2,15 +2,17 @@
 
 pkgname=groonga
 pkgdesc="An open-source fulltext search engine and column store."
-pkgver=15.1.7
+pkgver=15.2.4
 pkgrel=1
 arch=('i686' 'x86_64')
 url="https://groonga.org/"
 license=('LGPL2.1-or-later')
 depends=(
   arrow
+  blas
   blosc2
   gcc
+  lapack
   libedit
   libevent
   libstemmer
@@ -23,7 +25,7 @@ depends=(
   xxhash
   zeromq
 )
-makedepends=(
+makedepends=("xsimd"
   cmake
   ninja
   pkgconf
@@ -41,7 +43,7 @@ source=(
   "https://github.com/groonga/groonga/releases/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz.asc"
 )
 sha512sums=(
-  "ded60e2736fd4b4d44046525041101978b47896ec5c0619ea3d10a7042e6cc6fdd544c0dd0e7006ca9f384fc2198ce32659eb446b1b8ee5a6bb4e8ad8f9f5b87"
+  "0ebee91d27154b1237704115b1ed47e2b8700ebe02a3c34469af7d9b6fdfa8f9cd57698cbe5a3e4189a89b254bfa497029f79dc803a036122e97b2a4eb54c9fc"
   "SKIP"
 )
 validpgpkeys=(2701F317CFCCCB975CADE9C2624CF77434839225)
