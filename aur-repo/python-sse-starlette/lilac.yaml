@@ -5,6 +5,7 @@ pre_build_script: aur_pre_build(maintainers=['envolution'])
 post_build: aur_post_build
 repo_depends:
   - python-async-timeout
+  - python-asgi-lifespan
 update_on:
   - source: aur
     aur: python-sse-starlette
