@@ -2,8 +2,8 @@
 
 pkgname=easyeda2kicad
 _name=${pkgname}
-pkgver=0.8.0
-pkgrel=2
+pkgver=0.6.5
+pkgrel=1
 pkgdesc="Convert any LCSC components (including EasyEDA) to KiCad library"
 provides=(${pkgname})
 conflicts=(${pkgname})
@@ -22,7 +22,7 @@ makedepends=(
     'python-wheel')
 license=('AGPL-3.0-or-later')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('a781be6d1076f6e06886a4292373eb930c9921de4c709d6dd91bb6ea104f4a4b')
+sha256sums=('1fb8f593db668ebfe6c819a36a16c7505817b1d5b716a3a7017bf53694db626d')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
