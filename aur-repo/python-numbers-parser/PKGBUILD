@@ -1,0 +1,47 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgname=python-numbers-parser
+_name=${pkgname#python-}
+pkgver=3.0.0
+pkgrel=1
+pkgdesc="Read and write Apple Numbers spreadsheets"
+provides=(${pkgname})
+conflicts=(${pkgname})
+arch=('any')
+url="https://github.com/masaccio/numbers-parser"
+_pydeps=(
+    compact-json
+    enum-tools
+    sigfig
+
+    dateutil
+    importlib-resources
+    protobuf
+    snappy
+)
+depends=('python'
+    "${_pydeps[@]/#/python-}")
+makedepends=(
+    git
+    'python-build'
+    'python-installer'
+    'python-setuptools'
+    'python-wheel')
+license=('MIT')
+source=("${_name}::git+${url}.git#tag=v$pkgver")
+sha256sums=('2482acf73c8340032dbb86ac200bab62a8f5a5a6cd0bd928886877bdcba29912')
+
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
+build() {
+    cd "${srcdir}/${_name}"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "${srcdir}/${_name}"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+    install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
