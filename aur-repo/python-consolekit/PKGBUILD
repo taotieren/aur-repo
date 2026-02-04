@@ -2,7 +2,7 @@
 
 pkgname=python-consolekit
 _name=${pkgname#python-}
-pkgver=1.9.0
+pkgver=1.12.0
 pkgrel=1
 pkgdesc='Additional utilities for click'
 arch=(any)
@@ -29,7 +29,7 @@ optdepends=(
   'python-psutil: better terminal support'
 )
 source=("$_name::git+https://github.com/domdfcoding/consolekit#tag=v$pkgver")
-sha512sums=('0166897671d83fc08be64e575a2799bede98ac4a3d0e1f90e5e9c6a4d6c5829346a5791f7479031b6911673bdf2fb5a0052e3b18a1c64d7d5c9f6e233d1fd5a1')
+sha512sums=('4d948742b6ef04dc53296f0aaf69c1e8e63412ee73382f33f67cc697733fd70ed9c70c58b2e4bb4095cd54d576c0f70e80659aa760cc98817045ac729c2a008f')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
