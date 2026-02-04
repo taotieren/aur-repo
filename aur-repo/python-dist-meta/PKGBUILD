@@ -25,7 +25,7 @@ makedepends=(
 )
 #checkdepends=('')
 #optdepends=('')
-source=("$_name::git+https://github.com/repo-helper/dist-meta.git#tag=v$pkgver")
+source=("${_name}::git+https://github.com/repo-helper/dist-meta.git#tag=v$pkgver")
 sha512sums=('d5c780be311d0e19d144b8fa207250caf369720e85829f2c1bbd263ecaecad4c302d3c03aef1ea2ca619a97d68b22e045b93428bd8aeea0819420f5b66ada5db')
 
 prepare() {
