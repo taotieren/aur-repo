@@ -2,7 +2,7 @@
 
 pkgname=python-pyproject-parser
 _name=${pkgname#python-}
-pkgver=0.13.0
+pkgver=0.14.0
 pkgrel=1
 pkgdesc="Parser for pyproject.toml"
 provides=(${pkgname})
@@ -36,7 +36,7 @@ optdepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha512sums=('35d5f6544728c11da35e7405f9dbf582a18bc113f46ca91e7aa90902673d87b1756c8ab5d86e77cbfb30b40066b223927913aa3427f01180c5a0dbfa16e6bc4f')
+sha512sums=('6eef1ee28a1c0ee37d47bb4849617daf92b2ead7f142fd781b9a862a2be79ac3eb88d9d7c2afdce38623f40fc81226504da92458baff0f1fd06da51814875d2b')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
