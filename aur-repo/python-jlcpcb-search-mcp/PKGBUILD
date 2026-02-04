@@ -3,7 +3,7 @@
 pkgname=python-jlcpcb-search-mcp
 _name=${pkgname#python-}
 pkgver=1.1.4
-pkgrel=1
+pkgrel=2
 pkgdesc="MCP server for searching JLCPCB components with live stock and pricing"
 provides=(${pkgname})
 conflicts=(${pkgname})
