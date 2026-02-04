@@ -3,7 +3,7 @@
 pkgname=python-handy-archives
 _name=${pkgname#python-}
 pkgver=0.2.0
-pkgrel=4
+pkgrel=5
 pkgdesc='Handy archive helpers for Python'
 provides=(${pkgname})
 conflicts=(${pkgname})
@@ -20,7 +20,7 @@ makedepends=(
 )
 license=('MIT')
 source=("${_name}::git+https://github.com/domdfcoding/handy-archives.git#tag=v$pkgver")
-sha256sums=('cbc779a8d7d3c489dcf3442e710469a5272e55c308ff1f6e832510ab71cd6b9a')
+sha256sums=('65f8449e6863bd0ba87d85b1291866226edbf15324d4200da4fc69773fcec1ef')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
