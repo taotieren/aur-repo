@@ -3,7 +3,7 @@
 pkgname=python-apeye
 _name=${pkgname#python-}
 pkgver=1.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Handy tools for working with URLs and APIs"
 provides=(${pkgname})
 conflicts=(${pkgname})
