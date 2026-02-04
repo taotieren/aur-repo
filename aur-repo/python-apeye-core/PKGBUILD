@@ -3,7 +3,7 @@
 pkgname=python-apeye-core
 _name=${pkgname#python-}
 pkgver=1.1.5
-pkgrel=1
+pkgrel=2
 pkgdesc="Core (offline) functionality for the apeye library"
 provides=(${pkgname})
 conflicts=(${pkgname})
@@ -25,7 +25,7 @@ makedepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('cbc779a8d7d3c489dcf3442e710469a5272e55c308ff1f6e832510ab71cd6b9a')
+sha256sums=('1f5c85184c4c9846a7ec395ffe73fd9c17c2e939f6c191578d96aa17172cc7a6')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
