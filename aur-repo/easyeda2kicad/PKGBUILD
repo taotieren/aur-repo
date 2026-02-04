@@ -3,7 +3,7 @@
 pkgname=easyeda2kicad
 _name=${pkgname}
 pkgver=0.6.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Convert any LCSC components (including EasyEDA) to KiCad library"
 provides=(${pkgname})
 conflicts=(${pkgname})
