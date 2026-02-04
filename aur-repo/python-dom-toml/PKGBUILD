@@ -1,0 +1,42 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgname=python-dom-toml
+_name=${pkgname#python-}
+pkgver=2.1.0
+pkgrel=1
+pkgdesc="Dom's tools for Tom's Obvious, Minimal Language"
+provides=(${pkgname})
+conflicts=(${pkgname})
+arch=('any')
+url='https://dom-toml.readthedocs.io/en/latest/'
+depends=(
+    python
+    python-domdf-python-tools
+    python-toml
+)
+makedepends=(
+    'git'
+    'python-build'
+    'python-installer'
+    'python-setuptools'
+    'python-wheel'
+    'python-flit-core'
+)
+license=('MIT')
+source=("${_name}::git+https://github.com/domdfcoding/dom_toml.git#tag=v$pkgver")
+sha512sums=('63ab4f2aa34d3c72285335d4a7cfb988c37ea06be9d0deae56aa115ae8710ba0f4789eb85e12da5ca0d0d14117a3e520bb34c93ae9e8c2ad1ccc0188f58f7a25')
+
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
+build() {
+    cd "${srcdir}/${_name}"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "${srcdir}/${_name}"
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+    install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
