@@ -3,7 +3,7 @@
 pkgname=python-deprecation-alias
 _name=${pkgname#python-}
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc='A wrapper around deprecation providing support for deprecated aliases'
 arch=(any)
 url='https://github.com/domdfcoding/deprecation-alias'
