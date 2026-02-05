@@ -27,6 +27,7 @@ makedepends=(
     git
     cargo-tauri
     pnpm
+    nodejs-lts
 )
 backup=()
 options=(!debug !strip !lto)
@@ -56,7 +57,7 @@ build() {
     } >>.npmrc
 
     sed -i 's|vue-tsc --noEmit && ||g' package.json
-    
+
     NODE_ENV=development pnpm install --force
     NODE_ENV=production pnpm tauri build -b deb
 
