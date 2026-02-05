@@ -13,7 +13,10 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
 depends=("java-runtime=${_jrever}")
-makedepends=('git' "java-environment-openjdk=${_jdkver}")
+makedepends=(
+    'git'
+    'gradle'
+    "java-environment-openjdk=${_jdkver}")
 optdepends=(
     'eagle'
     'easyeda'
