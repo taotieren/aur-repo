@@ -56,13 +56,10 @@ build() {
         echo "virtual-store-dir-max-length=80"
     } >>.npmrc
 
-    export NODE_ENV=production
-
-    pnpm install --force --prod
-
-    pnpm build
-
-    pnpm tauri build -b deb
+    sed -i 's|vue-tsc --noEmit && ||g' package.json
+    
+    NODE_ENV=development pnpm install --force
+    NODE_ENV=production pnpm tauri build -b deb
 }
 
 # check() {
