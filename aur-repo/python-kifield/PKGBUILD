@@ -23,7 +23,8 @@ md5sums=('56d5bf271d2674ed22aa0fa3544a5dda')
 
 build() {
     cd "$srcdir/${_name}-${pkgver}/"
-    sed -i '/^[[:space:]]*"future >= 0\.15\.0",[[:space:]]*\(#.*\)\?$/d' setup.py
+    
+    sed -i '/.*"future >= 0\.15\.0",.*/d' setup.py
     python setup.py build
 }
 
