@@ -2,7 +2,7 @@
 
 _pkgname=nmrpflash
 pkgname=${_pkgname}-git
-pkgver=0.9.26.r11.g4ed728a
+pkgver=0.9.26.r16.g2594885
 pkgrel=1
 pkgdesc="Netgear Unbrick Utility"
 arch=($CARCH)
