@@ -3,7 +3,7 @@
 pkgname=python-whey
 _name=${pkgname#python-}
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc='A simple Python wheel builder for simple projects'
 arch=('any')
 url='https://whey.readthedocs.io/'
