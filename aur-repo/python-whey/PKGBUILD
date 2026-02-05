@@ -41,6 +41,10 @@ sha512sums=('2d2de412ec4b9d6441b6ecc603335f29bfaa7c4a32e7692a4d80be80a3fc1badcd3
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}"
+    sed \
+    -e 's/^requires = \[.*/requires = \[ "setuptools", "wheel" \]/' \
+    -i pyproject.toml
 }
 
 build() {
