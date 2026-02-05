@@ -7,9 +7,6 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: github
-    github: uPesy/easyeda2kicad.py
-    use_max_tag: true
-    # use_latest_release: true
-    prefix: v
+  - source: pypi
+    pypi: easyeda2kicad
   - alias: python
