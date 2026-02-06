@@ -3,7 +3,7 @@
 pkgname=python-toctree-plus
 _name=${pkgname#python-}
 pkgver=0.8.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Enhanced Sphinx TocTree which shows classes, functions etc. as if they were sections'
 arch=('any')
 url='https://github.com/sphinx-toolbox/toctree_plus'
