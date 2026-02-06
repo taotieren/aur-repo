@@ -3,7 +3,7 @@
 pkgname=python-whey-pth
 _name=${pkgname#python-}
 pkgver=0.0.6
-pkgrel=1
+pkgrel=2
 pkgdesc='Extension to whey to support .pth files'
 arch=('any')
 url='https://whey-pth.readthedocs.io/'
