@@ -3,7 +3,7 @@
 pkgname=python-coincidence
 _name=${pkgname#python-}
 pkgver=0.6.6
-pkgrel=1
+pkgrel=2
 pkgdesc='Helper functions for pytest'
 arch=('any')
 url='https://github.com/python-coincidence/coincidence'
