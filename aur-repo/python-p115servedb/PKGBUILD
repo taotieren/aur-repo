@@ -14,12 +14,12 @@ provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
     python
+    python-a2wsgi
     python-orjson
     python-urllib3
     python-yaml
     uvicorn
     #AUR
-    python-a2wsgi
     python-blacksheep
     python-blacksheep-rich-log
     python-cachedict

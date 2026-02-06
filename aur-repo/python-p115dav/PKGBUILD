@@ -15,12 +15,12 @@ conflicts=(${pkgname})
 depends=(
     uvicorn
     python
+    python-a2wsgi
     python-rich
     python-sqlitedict
     python-orjson
     python-yaml
     #AUR
-    python-a2wsgi
     python-blacksheep
     python-cachedict
     python-dictattr
