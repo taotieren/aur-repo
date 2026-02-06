@@ -1,0 +1,24 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-whey
+  - python-apeye
+  - python-autodocsumm
+  - python-coincidence
+  - python-dict2css
+  - python-domdf-python-tools
+  - python-toctree-plus
+  - python-typing-inspect
+update_on:
+  - source: github
+    github: sphinx-toolbox/sphinx-toolbox
+    use_max_tag: true
+    prefix: v
+  - alias: python
