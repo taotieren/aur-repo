@@ -33,6 +33,7 @@ makedepends=(
     pnpm
     rust
     cargo-tauri
+    nodejs-lts
 )
 optdepends=()
 checkdepends=()
