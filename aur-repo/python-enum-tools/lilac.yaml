@@ -9,6 +9,8 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-whey
+  - python-sphinx-jinja2-compat
+  - python-sphinx-toolbox
 update_on:
   - source: github
     github: domdfcoding/enum_tools
