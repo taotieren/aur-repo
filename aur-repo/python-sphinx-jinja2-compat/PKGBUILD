@@ -10,7 +10,7 @@ url='https://github.com/sphinx-toolbox/sphinx-jinja2-compat'
 license=('MIT')
 depends=(
   'python'
-  'python-jinja2'
+  'python-jinja'
   'python-markupsafe'
   'python-sphinx-prompt'
 )
