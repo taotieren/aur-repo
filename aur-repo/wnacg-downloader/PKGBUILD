@@ -27,6 +27,7 @@ makedepends=(
     rust
     cargo-tauri
     pnpm
+    nodejs-lts
 )
 backup=()
 options=(!debug !strip !lto)
@@ -57,7 +58,6 @@ build() {
 
     NODE_ENV=development pnpm install --force
     NODE_ENV=production pnpm tauri build -b deb
-
 }
 
 # check() {
