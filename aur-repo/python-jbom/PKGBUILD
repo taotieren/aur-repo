@@ -25,6 +25,7 @@ makedepends=(
     'python-installer'
     'python-setuptools'
     'python-wheel')
+optdepends=('kicad')
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
 sha256sums=('f590056b153f83aceb954c79bd7f596dcc67ccd813125baf01dcc6194f911aff')
