@@ -3,7 +3,7 @@
 pkgname=python-jbom
 _name=${pkgname#python-}
 pkgver=6.3.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Intelligent KiCad Bill of Materials generator with inventory matching"
 provides=(${pkgname})
 conflicts=(${pkgname})
