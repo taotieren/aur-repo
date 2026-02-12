@@ -3,7 +3,7 @@
 pkgname=python-bitsandbytes
 _name=${pkgname#python-}
 pkgver=0.49.1
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="k-bit optimizers and matrix multiplication routines."
 arch=($CARCH)
