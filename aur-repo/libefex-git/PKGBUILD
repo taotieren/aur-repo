@@ -2,7 +2,7 @@
 
 pkgname=libefex-git
 pkgver=r54.8af6723
-pkgrel=1
+pkgrel=2
 pkgdesc="library and cli for embedded firmware exchange protocol, support fel and fes protocol"
 arch=($CARCH)
 url="https://github.com/YuzukiTsuru/libefex"
