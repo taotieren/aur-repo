@@ -5,7 +5,7 @@
 # Contributor: Panagiotis Mavrogiorgos <pmav99@gmail.com>
 
 pkgname=nuitka
-pkgver=2.8.10
+pkgver=4.0.1
 pkgrel=1
 pkgdesc='Python compiler with full language support and CPython compatibility'
 arch=(any)
@@ -18,6 +18,7 @@ depends=(
   patchelf
   python
   python-appdirs
+  python-certifi
   python-jinja
   python-ordered-set
   python-pyyaml
@@ -41,7 +42,7 @@ checkdepends=(
 optdepends=('ccache: for caching builds')
 options=(!debug lto)
 source=("https://github.com/Nuitka/Nuitka/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('f362e6bdcb1dcdf31884fa3238c471ed0e44b1116d30ec6e957a9230daac4f71')
+sha256sums=('c50646b5ac005c8c6f437b997d2549f0381269d42cd9b0fc19d29bac05172e37')
 
 build() {
   cd ${pkgname^}-${pkgver}
