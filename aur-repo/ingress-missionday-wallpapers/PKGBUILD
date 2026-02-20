@@ -2,7 +2,7 @@
 
 pkgname=ingress-missionday-wallpapers
 pkgver=r2.ad3ff09
-pkgrel=1
+pkgrel=2
 pkgdesc="Ingress MissionDay Wallpapers (Ingress 任务天壁纸)"
 arch=(any)
 url="https://github.com/taotieren/ingress-missionday-wallpapers"
