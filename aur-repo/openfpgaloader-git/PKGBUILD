@@ -4,7 +4,7 @@
 
 pkgname=openfpgaloader-git
 pkgver=1.0.0.r100.ga9af6cd
-pkgrel=2
+pkgrel=3
 pkgdesc="Universal utility for programming FPGA"
 arch=($CARCH)
 url="https://github.com/trabucayre/openFPGALoader"
