@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=moltis
-pkgver=0.9.7
+pkgver=0.9.8
 pkgrel=1
 pkgdesc="A personal AI gateway written in Rust. One binary, no runtime, no npm."
 arch=($CARCH)
@@ -30,7 +30,7 @@ backup=()
 options=(!lto !debug)
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('59dce1b90249e3526b770b6137259f866504df8506299ee3f7076de550b69aa2')
+sha256sums=('2795b009a7b7433ce18ceecb4a8c1034023ed36be77da1055ada5371d569022e')
 
 prepare() {
     cd "${srcdir}/${pkgname}"
