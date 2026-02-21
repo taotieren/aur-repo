@@ -3,7 +3,7 @@
 pkgname=serial-studio
 _pkgname=Serial-Studio
 pkgver=3.2.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Multi-purpose serial data visualization & processing program"
 arch=($CARCH)
 url="https://github.com/Serial-Studio/Serial-Studio"
@@ -102,5 +102,13 @@ build() {
 
 package() {
     DESTDIR="$pkgdir" cmake --install "${srcdir}"/${pkgname}/build
+    install -Dm644 "${srcdir}/${kgname}/LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -Dm0644 -d ${pkgdir}/usr/share/applications/ \
+        ${pkgdir}/usr/share/metainfo/ \
+        ${pkgdir}/usr/share/pixmaps/
+
+    ln -sf /usr/share/serial-studio/share/applications/serial-studio-gpl3.desktop "${pkgdir}"/usr/share/applications/serial-studio-gpl3.desktop
+    ln -sf /usr/share/serial-studio/share/metainfo/serial-studio.metainfo.xml "${pkgdir}"/usr/share/metainfo/serial-studio.metainfo.xml
+    ln -sf /usr/share/serial-studio/share/pixmaps/serial-studio-gpl3.svg "${pkgdir}"/usr/share/pixmaps/serial-studio-gpl3.svg
 }
 
