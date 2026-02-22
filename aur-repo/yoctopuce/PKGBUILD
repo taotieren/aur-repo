@@ -14,7 +14,10 @@ depends=(
 	glibc
 	libusb
 )
-makedepends=(java-runtime)
+makedepends=(
+	java-runtime
+	mbedtls
+)
 provides=('libyocto.so' 'libyapi.so')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
 	'LICENSE'
