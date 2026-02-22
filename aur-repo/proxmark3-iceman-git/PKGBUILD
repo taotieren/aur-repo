@@ -16,9 +16,11 @@ _pydeps=(
 depends=(
   'bash'
   'bzip2'
-  'gcc-libs'
   'glibc'
   'readline'
+  'libgcc'
+  'libstdc++'
+  'lua'
   'lz4'
   'jansson'
   'perl'
