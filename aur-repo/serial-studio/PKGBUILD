@@ -102,7 +102,7 @@ build() {
 
 package() {
     DESTDIR="$pkgdir" cmake --install "${srcdir}"/${pkgname}/build
-    install -Dm644 "${srcdir}/${kgname}/LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -Dm644 "${srcdir}/${pkgname}/LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm0644 -d ${pkgdir}/usr/share/applications/ \
         ${pkgdir}/usr/share/metainfo/ \
         ${pkgdir}/usr/share/pixmaps/
