@@ -20,6 +20,7 @@ makedepends=(
   'libxinerama'
   'libxrandr'
   'ninja'
+  'mold'
 )
 source=("${pkgname}::git+https://github.com/deepmind/mujoco.git#tag=$pkgver")
 sha256sums=('56fc16f7609da92a802762e30bd09d1f032ca4289391bbfd419be15ae9d0504d')
