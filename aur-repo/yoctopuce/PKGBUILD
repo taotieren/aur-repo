@@ -33,7 +33,7 @@ build() {
 package() {
 	# 	local x86_64=64bits i686=32bits armv7h=armhf
 	install -Dm644 ${srcdir}/$pkgname/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
-	cd "${srcdir}/yoctolib_cpp-$pkgver"
+	cd "${srcdir}/$pkgname"
 	# 	install -Dm644 "Binaries/linux/${CARCH}/"libyocto.so.* -t "$pkgdir/usr/lib/"
 	# 	install -Dm644 "Binaries/linux/${CARCH}/yapi/"libyapi.so.* -t "$pkgdir/usr/lib/"
 	declare -A libs
