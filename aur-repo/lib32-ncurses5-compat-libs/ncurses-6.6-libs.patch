@@ -1,0 +1,58 @@
+diff -up ncurses-6.6/c++/Makefile.in.libs ncurses-6.6/c++/Makefile.in
+--- ncurses-6.6/c++/Makefile.in.libs	2025-10-18 15:33:46.000000000 +0200
++++ ncurses-6.6/c++/Makefile.in	2026-02-03 13:44:52.804086419 +0100
+@@ -120,7 +120,7 @@ SHLIB_LIST	= $(SHLIB_DIRS) \
+ 		-l@FORM_NAME@@ABI_SUFFIX@ \
+ 		-l@MENU_NAME@@ABI_SUFFIX@ \
+ 		-l@PANEL_NAME@@ABI_SUFFIX@ \
+-		-lncurses@ABI_SUFFIX@ @SHLIB_LIST@
++		-lncurses@ABI_SUFFIX@ #@SHLIB_LIST@
+ 
+ LIBROOT		= ncurses++
+ 
+@@ -159,8 +159,7 @@ LDFLAGS_SHARED	= $(TEST_LDFLAGS) $(CFLAG
+ LDFLAGS_DEFAULT	= $(LINK_@DFT_UPR_MODEL@) $(LDFLAGS_@DFT_UPR_MODEL@)
+ 
+ # flags for library built by this makefile
+-LDFLAGS		= $(TEST_ARGS) @LDFLAGS@ \
+-	@LD_MODEL@ $(TEST_LIBS) @LIBS@ $(CXXLIBS)
++LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@ $(CXXLIBS)
+ 
+ AUTO_SRC	= \
+ 		etip.h
+diff -up ncurses-6.6/form/Makefile.in.libs ncurses-6.6/form/Makefile.in
+--- ncurses-6.6/form/Makefile.in.libs	2025-10-25 19:58:52.000000000 +0200
++++ ncurses-6.6/form/Makefile.in	2026-02-03 13:44:22.436830350 +0100
+@@ -115,7 +115,7 @@ LINK		= $(LIBTOOL_LINK)
+ LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@
+ 
+ SHLIB_DIRS	= -L../lib
+-SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ @SHLIB_LIST@
++SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ #@SHLIB_LIST@
+ 
+ RPATH_LIST	= @RPATH_LIST@
+ RESULTING_SYMS	= @RESULTING_SYMS@
+diff -up ncurses-6.6/menu/Makefile.in.libs ncurses-6.6/menu/Makefile.in
+--- ncurses-6.6/menu/Makefile.in.libs	2025-10-25 19:59:51.000000000 +0200
++++ ncurses-6.6/menu/Makefile.in	2026-02-03 13:44:37.181954688 +0100
+@@ -115,7 +115,7 @@ LINK		= $(LIBTOOL_LINK)
+ LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@
+ 
+ SHLIB_DIRS	= -L../lib
+-SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ @SHLIB_LIST@
++SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ #@SHLIB_LIST@
+ 
+ RPATH_LIST	= @RPATH_LIST@
+ RESULTING_SYMS	= @RESULTING_SYMS@
+diff -up ncurses-6.6/panel/Makefile.in.libs ncurses-6.6/panel/Makefile.in
+--- ncurses-6.6/panel/Makefile.in.libs	2025-10-25 20:00:30.000000000 +0200
++++ ncurses-6.6/panel/Makefile.in	2026-02-03 13:43:46.943531054 +0100
+@@ -117,7 +117,7 @@ LINK		= $(LIBTOOL_LINK)
+ LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@
+ 
+ SHLIB_DIRS	= -L../lib
+-SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ @SHLIB_LIST@
++SHLIB_LIST	= $(SHLIB_DIRS) -lncurses@ABI_SUFFIX@ #@SHLIB_LIST@
+ 
+ RPATH_LIST	= @RPATH_LIST@
+ RESULTING_SYMS	= @RESULTING_SYMS@
