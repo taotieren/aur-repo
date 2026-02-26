@@ -17,6 +17,7 @@ depends=(
 )
 makedepends=(
     gettext
+    git
     openssl
     cmake
     ninja
@@ -26,15 +27,20 @@ checkdepends=(
 )
 optdepends=()
 options=('!debug')
-source=("${pkgname#td-}-${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgname}-${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tags=${pkgname}-${pkgver}")
 sha256sums=('6f46c0fe5825f91fb71ff9cc6fb63125696f175158d933493f1fbe45e0d3772b')
+
+prepare()
+{
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
 
 build() {
     export CFLAGS+=" ${CPPFLAGS}"
     export CXXFLAGS+=" ${CPPFLAGS}"
     export LDFLAGS+=" ${LDFLAGS}"
 
-    cd "${srcdir}/${pkgname#td-}-${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
 
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -DCMAKE_BUILD_TYPE=None \
@@ -47,6 +53,6 @@ build() {
 }
 
 package() {
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname#td-}-${pkgname}-${pkgver}/build install
-    install -Dm644 "${srcdir}/${pkgname#td-}-${pkgname}-${pkgver}/COPYING" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
+    install -Dm644 "${srcdir}/${pkgname}/COPYING" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
