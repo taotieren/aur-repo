@@ -2,7 +2,7 @@
 
 pkgname=mtk-uartboot-rs
 pkgver=0.1.1
-pkgrel=5
+pkgrel=6
 pkgdesc="A third-party tool to load and execute binaries over UART for Mediatek SoCs."
 arch=($CARCH)
 url="https://github.com/981213/mtk_uartboot"
@@ -22,7 +22,7 @@ backup=()
 options=('!strip' '!debug' '!lto')
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('aabff77ccd52ca5bc32cad03aa1d64e3568418f9c94883f8e8043a50f05ac65c')
+sha256sums=('0be22d626212cd844d79647738a0c000c705d677afc22b40f852f048e20dbe68')
 
 prepare() {
     cd "${srcdir}/${pkgname}/"
