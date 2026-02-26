@@ -30,6 +30,8 @@ build() {
 
   cmake -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_C_FLAGS="-Wno-error=discarded-qualifiers" \
+    -DCMAKE_CXX_FLAGS="-Wno-error=discarded-qualifiers" \
     -B build \
     -G Ninja \
     -Wno-dev
