@@ -23,14 +23,16 @@ provides=('libyocto.so' 'libyapi.so')
 source=("$pkgname::git+$url.git#tag=v$pkgver")
 sha256sums=('7dbe35f15029750247b8d175e64fc21f6577f72446a039ae684f85081157feab')
 
+prepare() {
+	git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
 	export CFLAGS+=" ${CPPFLAGS}"
 	export CXXFLAGS+=" ${CPPFLAGS}"
 	export LDFLAGS+=" ${LDFLAGS}"
 
-	# make -C "${srcdir}/$pkgname/Binaries"
-	cd "${srcdir}/$pkgname/"
-	./build.sh
+	make -C "${srcdir}/$pkgname/Binaries"
 }
 
 package() {
