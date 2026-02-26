@@ -25,6 +25,10 @@ source=("${pkgname}::git+${url}.git#tag=${_tagname}")
 sha256sums=('e1db7e29d34bb88177b30f81d7f4a079ae0c33f3ea130de9482c1d324bb1858d')
 options=()
 
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
     cd "${srcdir}/${pkgname}/"
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines

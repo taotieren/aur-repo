@@ -11,6 +11,7 @@ license=('Apache-2.0')
 groups=()
 depends=(glibc)
 makedepends=(
+    git
     gtest
     meson
     ninja
@@ -25,13 +26,17 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 sha256sums=('8c742ca0d2c31facb9522d69e93302b980d81915f08726020ad67039fde442cd')
 #validpgpkeys=()
 
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
-    arch-meson ${pkgname}-${pkgver} build -Dabi=deprecated,stable
+    arch-meson ${srcdir}/${pkgname} build -Dabi=deprecated,stable
     ninja -C build
 }
 

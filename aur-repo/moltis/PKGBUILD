@@ -35,7 +35,7 @@ sha256sums=('3ffa9be25e60f0ca19e301fd5ee7b24aa6f43a3680bb73e5777424fe4b7dd4bf')
 prepare() {
     cd "${srcdir}/${pkgname}"
     export RUSTUP_TOOLCHAIN=stable
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 

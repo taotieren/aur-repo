@@ -38,7 +38,7 @@ sha256sums=('6ff5927c4aa1e137649d48fbf6ada08c15df0d7ee2a48d44d146d1edf34843d3')
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}/src-tauri"
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 

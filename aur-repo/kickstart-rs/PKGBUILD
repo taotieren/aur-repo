@@ -16,34 +16,36 @@ depends=(
     glibc
 )
 makedepends=(
+    git
     cargo
 )
 backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
-source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${_name}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('0888ca59bc11e2c9531957047973b3f4d28e4270c03d1272f29d8b73f12bb142')
 
 prepare() {
-    cd "${srcdir}/${_name}-${pkgver}/"
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}/"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
     export RUSTUP_TOOLCHAIN=stable
     export CARGO_TARGET_DIR=target
-    cd "${srcdir}/${_name}-${pkgver}/"
+    cd "${srcdir}/${_name}/"
     cargo build --release --all-features
 }
 
 # check() {
-#     cd "${srcdir}/${_name}-${pkgver}/"
+#     cd "${srcdir}/${_name}/"
 #     cargo test --release --all-features
 # }
 
 package() {
-    cd "${srcdir}/${_name}-${pkgver}/"
+    cd "${srcdir}/${_name}/"
     export RUSTUP_TOOLCHAIN=stable
     cargo install --no-track --features=cli --root "$pkgdir/usr/" --path .
     #     --all-features --features=cli

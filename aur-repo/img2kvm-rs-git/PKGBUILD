@@ -39,6 +39,9 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}"
+    cargo fetch --locked --target host-tuple
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {

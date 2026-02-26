@@ -2,11 +2,11 @@
 
 pkgname=wlink
 pkgver=0.1.1
-pkgrel=3
+pkgrel=4
 pkgdesc="wlink - WCH-Link(RV) command line tool"
 arch=($CARCH)
 url="https://github.com/ch32-rs/wlink"
-license=('Apache-2.0' 'MIT')
+license=('Apache-2.0 AND MIT')
 provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
@@ -23,28 +23,29 @@ makedepends=(
 backup=()
 options=('!strip' '!debug')
 install=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tags=v${pkgver}")
 sha256sums=('817adff68df1883d489cfe698ab8b05495ed666bd5cab4d2df67a5198b55a9a3')
 
 prepare() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}/"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
     cargo build --release --all-features
 }
 
 check() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
     # Tests need nightly features
     RUSTC_BOOTSTRAP=1 cargo test --release
 }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/50-wlink.rules" <<EOF
 SUBSYSTEM=="usb" ATTR{idVendor}="1a86" ATTR{idProduct}=="8010" MODE:="0666"

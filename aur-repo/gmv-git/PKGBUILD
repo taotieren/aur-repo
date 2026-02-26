@@ -55,9 +55,9 @@ prepare() {
     rm -f .cargo/config.toml .cargo/config
     
     # Use official crates.io registry
-    export CARGO_REGISTRIES_CRATES_IO_INDEX="https://github.com/rust-lang/crates.io-index"
+    # export CARGO_REGISTRIES_CRATES_IO_INDEX="https://github.com/rust-lang/crates.io-index"
     
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 

@@ -7,7 +7,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: cratesio
-    cratesio: wchisp
-    # use_max_tag: true
-    # prefix: v
+  - source: github
+    github: ch32-rs/wchisp
+    use_max_tag: true
+    prefix: v

@@ -43,7 +43,7 @@ sha256sums=('2bdfc69d1b6c5b78bbcec89579cc5588eb06c6386464a0c59f806be1a97af547')
 
 prepare() {
     cd "${srcdir}/${_name}-${pkgver}/src-tauri"
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 

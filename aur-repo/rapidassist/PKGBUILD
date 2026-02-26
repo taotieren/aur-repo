@@ -18,6 +18,7 @@ depends=(
     glibc
 )
 makedepends=(
+    git
     cmake
     doxygen
     gtest
@@ -26,9 +27,13 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
-source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('b1ad891e59ff57049bdfa434b3a7b28a8103d3747206fb2e4b95886f2c42c701')
 options=(!strip !lto !debug)
+
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
 
 build() {
     #     export LDFLAGS="-L/lib64"
@@ -37,7 +42,7 @@ build() {
     #     else
     #         export LD_LIBRARY_PATH=/lib64
     #     fi
-    cd "${srcdir}/${_name}-${pkgver}/"
+    cd "${srcdir}/${pkgname}/"
 
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -DCMAKE_BUILD_TYPE=Release \
@@ -52,6 +57,6 @@ build() {
 }
 
 package() {
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${_name}-${pkgver}/build install
-    install -Dm0644 "${srcdir}"/${_name}-${pkgver}/LICENSE -t ${pkgdir}/usr/share/licenses/${pkgname}/
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
+    install -Dm0644 "${srcdir}"/${pkgname}/LICENSE -t ${pkgdir}/usr/share/licenses/${pkgname}/
 }
