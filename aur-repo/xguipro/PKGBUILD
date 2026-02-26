@@ -58,12 +58,13 @@ optdepends=('webkit2gtk-hvml: to support two HVML-specific attributes hvml-handl
 backup=()
 options=()
 install=
-source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/ver-${pkgver}.tar.gz"
+source=("${pkgbase}::git+${url}.git#tag=ver-${pkgver}"
     #         "001-fix.patch::https://github.com/HVML/xGUI-Pro/commit/a6e4022fa599e5e98d92d8d2feb56fe689e16f1a.patch"
 )
 sha256sums=('24cfb6367ffabf0e5a852aa69c77c93d325db4d32d35ca22c9d1c6b24c0f3dd7')
 
 prepare() {
+    git -C "${srcdir}/${pkgbase}" clean -dfx
     install -Dm644 /dev/stdin ${srcdir}/xguipro.csh <<EOF
 if (! \$?WEBKIT_WEBEXT_DIR ) then
     set WEBKIT_WEBEXT_DIR=/usr/lib/xguipro/
@@ -119,7 +120,7 @@ package_xguipro-gtk3() {
         export LD_LIBRARY_PATH=/lib64
     fi
 
-    cd "${srcdir}/xGUI-Pro-ver-${pkgver}/"
+    cd "${srcdir}/${pkgbase}/"
 
     # # Ninja build
     # # see：https://wiki.archlinux.org/title/CMake_package_guidelines
@@ -158,7 +159,7 @@ package_xguipro-gtk3() {
     ninja -C build-gtk3
 
     # ninja install
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/xGUI-Pro-ver-${pkgver}/build-gtk3 install
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase}/build-gtk3 install
 
     install -Dm644 ${srcdir}/xguipro.csh ${pkgdir}/etc/profile.d/xguipro.csh
     install -Dm644 ${srcdir}/xguipro.sh ${pkgdir}/etc/profile.d/xguipro.sh
@@ -174,7 +175,7 @@ package_xguipro-gtk3() {
 #         libsoup3)
 #     options=('!strip')
 #
-#     cd "${srcdir}/xGUI-Pro-ver-${pkgver}/"
+#     cd "${srcdir}/${pkgbase}/"
 #
 # # Ninja build
 # # see：https://wiki.archlinux.org/title/CMake_package_guidelines
@@ -213,7 +214,7 @@ package_xguipro-gtk3() {
 #     ninja -C build-gtk4
 #
 # # ninja install
-#     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/xGUI-Pro-ver-${pkgver}/build-gtk4 install
+#     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase}/build-gtk4 install
 #
 #     install -Dm644 ${srcdir}/xguipro.csh ${pkgdir}/etc/profile.d/xguipro.csh
 #     install -Dm644 ${srcdir}/xguipro.sh ${pkgdir}/etc/profile.d/xguipro.sh
