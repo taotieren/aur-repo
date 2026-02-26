@@ -15,6 +15,7 @@ depends=(
 	libusb
 )
 makedepends=(
+	cmake
 	git
 	java-runtime
 )
@@ -27,7 +28,9 @@ build() {
 	export CXXFLAGS+=" ${CPPFLAGS}"
 	export LDFLAGS+=" ${LDFLAGS}"
 
-	make -C "${srcdir}/$pkgname/Binaries"
+	# make -C "${srcdir}/$pkgname/Binaries"
+	cd "${srcdir}/$pkgname/"
+	./build.sh
 }
 
 package() {
