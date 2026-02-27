@@ -21,7 +21,7 @@ makedepends=(
 backup=()
 options=()
 install=
-source=("${pkgname}-${_tagname}.tar.gz::${url}/archive/refs/tags/v${_tagname}.tar.gz")
+source=("${pkgname}-${_tagname}.tar.gz::${url}/tar.gz/refs/tags/v${_tagname}")
 sha256sums=('37c55279b0e7681e0a226a953390b72cd5767897a27fafc87a1f648c39f2666e')
 noextract=("${pkgname}-${_tagname}.tar.gz")
 
