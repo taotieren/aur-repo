@@ -35,6 +35,8 @@ pkgver() {
 prepare() {
     cd "${srcdir}/${pkgname}"
     git pull --recurse-submodules
+    cargo fetch --locked --target host-tuple
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
