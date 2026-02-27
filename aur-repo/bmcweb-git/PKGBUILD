@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=bmcweb-git
-pkgver=r3421.8f04d17
-pkgrel=2
+pkgver=r3423.4d06667
+pkgrel=1
 epoch=
 pkgdesc="This is a library which deals with the encoding and decoding of PLDM messages."
 arch=($CARCH)
