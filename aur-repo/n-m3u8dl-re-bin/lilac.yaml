@@ -1,8 +1,30 @@
+# maintainers:
+#   - github: taotieren
+#     email: admin@taotieren.com
+# pre_build_script: aur_pre_build(maintainers='taotieren')
+# post_build: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: n-m3u8dl-re-bin
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='taotieren')
-post_build: aur_post_build
+pre_build_script: |
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+
+  # Extract version part before '_rasc' and convert underscores to dots
+  clean_ver = _G.newver.split('_rasc')[0].replace('_', '.')
+  update_pkgver_and_pkgrel(clean_ver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
 update_on:
-  - source: aur
-    aur: n-m3u8dl-re-bin
+  - source: regex
+    url: https://github.com/nilaoda/N_m3u8DL-RE/releases/
+    regex: 'N_m3u8DL-RE_v([a-zA-Z0-9_-]+).tar.gz'
+# time_limit_hours: 3
