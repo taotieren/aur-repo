@@ -15,8 +15,8 @@ pre_build_script: |
       line = f"_tagname={_G.newver}"
     print(line)
 
-  # Extract version part before '_rasc' and convert underscores to dots
-  clean_ver = _G.newver.split('_rasc')[0].replace('_', '.')
+  # Extract version part before '_linux' and convert underscores to dots
+  clean_ver = _G.newver.split('_linux')[0].replace('_', '.')
   update_pkgver_and_pkgrel(clean_ver)
 post_build_script: |
   git_pkgbuild_commit()
