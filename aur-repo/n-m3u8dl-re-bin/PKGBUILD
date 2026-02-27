@@ -18,7 +18,7 @@ depends=(
 makedepends=()
 backup=()
 options=('!strip' '!debug' '!lto')
-source=("${pkgname%-bin}-${_tagname}.tar.gz::${url}/releases/download/v${pkgver/_/-}/N_m3u8DL-RE_v${_tagname}.tar.gz")
+source=("${pkgname%-bin}-${_tagname}.tar.gz::${url}/releases/download/v${_pkgver}/N_m3u8DL-RE_v${_tagname}.tar.gz")
 sha256sums=('35205154911e8505a7031999b0e35120cda4e2433d964f3a66d6ee9f322398ba')
 
 package() {
