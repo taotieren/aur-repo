@@ -17,7 +17,8 @@ pre_build_script: |
 
   # Extract version part before '_linux' and convert underscores to dots
   clean_ver = _G.newver.split('_linux')[0].replace('-', '_')
-  update_pkgver_and_pkgrel(clean_ver)
+  update_pkgver(clean_ver)
+  # update_pkgver_and_pkgrel(clean_ver)
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
