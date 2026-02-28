@@ -27,5 +27,5 @@ update_on:
   - source: regex
     url: https://github.com/nilaoda/N_m3u8DL-RE/releases/
     regex: 'N_m3u8DL-RE_v([a-zA-Z0-9._-]+).tar.gz'
-    include_regex: "linux-x64"
+    # include_regex: "linux-x64"
 # time_limit_hours: 3
