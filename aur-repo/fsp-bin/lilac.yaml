@@ -3,16 +3,17 @@ maintainers:
     email: admin@taotieren.com
 # pre_build_script: |
 #   update_pkgver_and_pkgrel(_G.newver)
+
 pre_build_script: |
+  oldver, oldrel = get_pkgver_and_pkgrel()
   for line in edit_file('PKGBUILD'):
     if line.startswith('_tagname='):
       line = f"_tagname={_G.newver}"
     print(line)
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
+  run_protected(["updpkgsums"])
 
-  # Extract version part before '_rasc' and convert underscores to dots
-  clean_ver = _G.newver.split('_rasc')[0].replace('_', '.')
-  update_pkgver_and_pkgrel(clean_ver)
-# update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
