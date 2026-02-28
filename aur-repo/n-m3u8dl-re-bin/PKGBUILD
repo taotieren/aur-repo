@@ -2,7 +2,8 @@
 
 pkgname=n-m3u8dl-re-bin
 _tagname=0.5.0-beta_linux-x64_20251027
-_pkgver=${_tagname%%_linux*}
+_tagver=${_tagname//osx-x64/linux-x64}
+_pkgver=${_tagver%%_linux*}
 pkgver="${_pkgver//-/_}"
 pkgrel=1
 epoch=
@@ -18,7 +19,7 @@ depends=(
 makedepends=()
 backup=()
 options=('!strip' '!debug' '!lto')
-source=("${pkgname%-bin}-${_tagname}.tar.gz::${url}/releases/download/v${_pkgver}/N_m3u8DL-RE_v${_tagname}.tar.gz")
+source=("${pkgname%-bin}-${_tagver}.tar.gz::${url}/releases/download/v${_pkgver}/N_m3u8DL-RE_v${_tagver}.tar.gz")
 sha256sums=('35205154911e8505a7031999b0e35120cda4e2433d964f3a66d6ee9f322398ba')
 
 package() {

@@ -15,8 +15,8 @@ pre_build_script: |
       line = f"_tagname={_G.newver}"
     print(line)
 
-  # Extract version part before '_linux' and convert underscores to dots
-  clean_ver = _G.newver.split('_linux')[0].replace('-', '_')
+  # Extract version part before '_osx' and convert underscores to dots
+  clean_ver = _G.newver.split('_osx')[0].replace('-', '_')
   update_pkgver_and_pkgrel(clean_ver)
 post_build_script: |
   git_pkgbuild_commit()
@@ -27,5 +27,4 @@ update_on:
   - source: regex
     url: https://github.com/nilaoda/N_m3u8DL-RE/releases/
     regex: 'N_m3u8DL-RE_v([a-zA-Z0-9._-]+).tar.gz'
-    include_regex: ".*linux-x64"
 # time_limit_hours: 3
