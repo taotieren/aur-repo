@@ -8,8 +8,7 @@ pre_build_script: |
     print(line)
 
   clean_ver = _G.newver.replace('-', '.')
-  update_pkgver(clean_ver)
-  # update_pkgver_and_pkgrel(clean_ver)
+  update_pkgver_and_pkgrel(clean_ver)
 # update_pkgrel()
 # update_pkgver_and_pkgrel(_G.newver.replace('-', '.'))
 

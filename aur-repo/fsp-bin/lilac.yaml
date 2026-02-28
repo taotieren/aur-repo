@@ -11,8 +11,7 @@ pre_build_script: |
 
   # Extract version part before '_rasc' and convert underscores to dots
   clean_ver = _G.newver.split('_rasc')[0].replace('_', '.')
-  update_pkgver(clean_ver)
-  # update_pkgver_and_pkgrel(clean_ver)
+  update_pkgver_and_pkgrel(clean_ver)
 # update_pkgver_and_pkgrel(_G.newver.replace('-', '_'))
 post_build_script: |
   git_pkgbuild_commit()
