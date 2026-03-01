@@ -22,7 +22,6 @@ depends=(
     python-undefined
     python-yarl
     # AUR
-    python-aiofile
     python-asynctools
     python-encode-uri
     python-dicttools
