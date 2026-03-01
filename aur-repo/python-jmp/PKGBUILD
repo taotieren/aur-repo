@@ -3,7 +3,7 @@
 pkgname='python-jmp'
 _pkgname=${pkgname#python-}
 pkgver=0.0.4
-pkgrel=3
+pkgrel=4
 pkgdesc='A mixed precision library for JAX'
 arch=('x86_64')
 url='https://github.com/deepmind/jmp'
