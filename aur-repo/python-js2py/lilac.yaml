@@ -4,8 +4,8 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers='xiota')
 post_build: aur_post_build
-# repo_depends:
-#   - python-pyjsparser
+repo_depends:
+  - python-jsparser
 update_on:
   - source: aur
     aur: python-js2py
