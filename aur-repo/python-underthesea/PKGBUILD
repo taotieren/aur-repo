@@ -23,11 +23,11 @@ depends=(
     python-joblib
     python-huggingface-hub
     python-librosa
-    python-nltk
+    # python-nltk
     python-numpy
     python-matplotlib
     python-scipy
-    python-scikit-learn
+    # python-scikit-learn
     python-soundfile
     python-regex
     python-requests
@@ -43,7 +43,7 @@ depends=(
     python-einops
     python-crfsuite
     python-dm-haiku
-    python-fasttext
+    # python-fasttext
     python-jax
     python-playsound
     python-seqeval
