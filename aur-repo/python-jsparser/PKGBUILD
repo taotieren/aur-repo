@@ -3,7 +3,7 @@
 pkgname=python-jsparser
 _name=${pkgname#python-}
 pkgver=2.7.3
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Fast javascript parser (based on esprima.js). Python 3 fork of pyjsparser"
 arch=('any')
