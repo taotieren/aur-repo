@@ -4,8 +4,10 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers='marmis')
 post_build: aur_post_build
-# repo_depends:
-#   -
+repo_depends:
+  - python-google-cloud-speech
+  - python-groq
+  - python-pocketsphinx
 update_on:
   - source: aur
     aur: python-speechrecognition
