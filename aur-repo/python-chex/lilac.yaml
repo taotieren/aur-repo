@@ -5,6 +5,12 @@ build_prefix: aur-repo-x86_64
 pre_build_script: |
   aur_pre_build(maintainers='daskol')
   add_makedepends(['python-flit-core'])
+
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-chex'])
+
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
   - python-jax
