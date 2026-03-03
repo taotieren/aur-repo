@@ -2,7 +2,7 @@
 
 pkgname=svgtopng-git
 pkgver=1.0.r1.g8d66691
-pkgrel=1
+pkgrel=2
 pkgdesc="SVG to PNG Converter"
 arch=($CARCH)
 url="https://github.com/tonglingcn/svgtopng"
