@@ -3,7 +3,6 @@
 pkgname=sigma-file-manager
 _tagname=2.0.0-beta.1
 pkgver="${_tagname//-/_}"
-# pkgver=1.7.0
 pkgrel=6
 pkgdesc="\"Sigma File Manager\" is a free, open-source, quickly evolving, modern file manager (explorer / finder) app for Windows and Linux."
 arch=($CARCH)
