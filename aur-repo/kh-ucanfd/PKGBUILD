@@ -3,7 +3,7 @@
 pkgbase=kh-ucanfd
 pkgname=(kh-ucanfd kh-ucanfd-dkms)
 pkgver=1.3.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="KunHong UCANFD Linux driver"
 arch=($CARCH)
