@@ -18,7 +18,11 @@ depends=(
 makedepends=(
     libarchive
 )
-optdepends=("can-utils: Linux-CAN / SocketCAN user space applications")
+optdepends=(
+    "can-utils: Linux-CAN / SocketCAN user space applications"
+    "python-can: Controller Area Network support for Python"
+    ""
+)
 backup=()
 options=()
 install=
