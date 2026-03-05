@@ -11,9 +11,9 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
+    glibc
     libgcc
     libstdc++
-    gcc-libs
     hicolor-icon-theme
     qt6-base
     qt6-multimedia
