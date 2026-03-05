@@ -2,7 +2,7 @@
 
 pkgname=network-scanner-git
 pkgver=2.0.0.r0.ga280834
-pkgrel=1
+pkgrel=2
 pkgdesc="Scan local network for IP addresses"
 arch=($CARCH)
 url="https://github.com/tonglingcn/network-scanner"
