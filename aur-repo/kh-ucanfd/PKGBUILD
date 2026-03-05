@@ -13,6 +13,7 @@ depends=(
     sh
     dkms
     glibc
+    python
     popt
 )
 makedepends=(
@@ -21,7 +22,6 @@ makedepends=(
 optdepends=(
     "can-utils: Linux-CAN / SocketCAN user space applications"
     "python-can: Controller Area Network support for Python"
-    ""
 )
 backup=()
 options=()
@@ -58,6 +58,7 @@ package_kh-ucanfd() {
     depends=(
         sh
         glibc
+        python
     )
     arch=($CARCH)
 
