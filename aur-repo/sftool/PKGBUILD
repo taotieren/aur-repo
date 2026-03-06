@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sftool
-pkgver=0.2.1
+pkgver=0.2.2
 pkgrel=1
 pkgdesc="A command-line utility for SiFli SoC serial tool."
 arch=($CARCH)
@@ -29,7 +29,7 @@ backup=()
 options=(!lto !debug)
 install=
 source=("${pkgname}::git+${url}.git#tag=${pkgver}")
-sha256sums=('858f09d823a8bedd562de9276c37b6e68ff776d83e2c6239163fef790e3e672f')
+sha256sums=('78efddf127f8af70d95f45ad6e1bff91b343901aaef27cbe4036d396f1be8c9e')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
