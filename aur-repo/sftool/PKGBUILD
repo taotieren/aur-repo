@@ -25,6 +25,9 @@ makedepends=(
     git
     rust
 )
+optdepends=(
+    "sftool-gui: A user-friendly graphical serial port operation tool for SIFLI series SoC chips."
+)
 backup=()
 options=(!lto !debug)
 install=
