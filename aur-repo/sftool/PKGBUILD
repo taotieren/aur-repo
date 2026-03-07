@@ -2,7 +2,7 @@
 
 pkgname=sftool
 pkgver=0.2.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A command-line utility for SiFli SoC serial tool."
 arch=($CARCH)
 url="https://github.com/OpenSiFli/sftool"
@@ -70,5 +70,6 @@ package() {
         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
     
     install -vDm0644 README* -t "$pkgdir/usr/share/doc/${pkgname}/"
+    install -vDm0644 skills/sftool/* -t "$pkgdir/usr/share/doc/${pkgname}/"
     install -vDm0644 LICENSE -t "$pkgdir/usr/share/licenses/${pkgname}/"
 }
