@@ -2,13 +2,11 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['sven-to'])
+pre_build_script: aur_pre_build(maintainers=['medaminezghal'])
 post_build: aur_post_build
-repo_depends:
-  - python-mcp
-  - python-openapi-pydantic
-  - python-uncalled-for
+# repo_depends:
+#   - 
 update_on:
   - source: aur
-    aur: python-fastmcp
+    aur: python-uncalled-for
   - alias: python
