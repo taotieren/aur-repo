@@ -30,13 +30,13 @@ options=()
 install=
 _name=KH-UCANFD_Linux_SDK
 source=(
-    "${_name}-v${pkgver}.zip::${url}/releases/download/v${pkgver}/${_name}.zip"
+    "${_name}-${pkgver}.zip::${url}/releases/download/v${pkgver}/${_name}.zip"
 )
 sha256sums=('4b4b1064e0de5d872f30ee7561df780c531946a3b9c85211f34d04f8a3da23d6')
 noextract=()
 
 build() {
-    cd ${srcdir}/${_name}-v${pkgver}
+    cd ${srcdir}/${_name}-${pkgver}
     sed -i -e 's|sudo ||g' \
         -e 's|$(INSTALL_DIR)|$(DESTDIR)$(INSTALL_DIR)|g' \
         -e 's|$(SCRIPT_DIR)|$(DESTDIR)$(SCRIPT_DIR)|g' \
@@ -64,7 +64,7 @@ package_kh-ucanfd() {
     )
     arch=($CARCH)
 
-    cd ${srcdir}/${_name}-v${pkgver}
+    cd ${srcdir}/${_name}-${pkgver}
 
     make -C tools/fw_tool/ PREFIX="/usr" DESTDIR="$pkgdir" install
     make -C KH-socket-can-test INSTALL_DIR="/usr/bin" DESTDIR="$pkgdir" install
@@ -85,7 +85,7 @@ package_kh-ucanfd-dkms() {
     )
     arch=(any)
 
-    cd ${srcdir}/${_name}-v${pkgver}/driver
+    cd ${srcdir}/${_name}-${pkgver}/driver
 
     install -Dm0755 kcanosdiag.sh -t ${pkgdir}/usr/bin/
     install -Dm0755 lskcan -t ${pkgdir}/usr/bin/
@@ -139,5 +139,5 @@ DEST_MODULE_LOCATION[0]="/updates"
 AUTOINSTALL="yes"
 EOF
 
-    install -Dm644 "${srcdir}"/${_name}-v${pkgver}/LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}"
+    install -Dm644 "${srcdir}"/${_name}-${pkgver}/LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}"
 }
