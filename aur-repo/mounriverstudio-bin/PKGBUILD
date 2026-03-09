@@ -71,11 +71,12 @@ options=('!strip' '!debug')
 # automatic version detection & download via MounRiver API
 prepare() {
     msg "Querying MounRiver API for the latest Linux version..."
-    local _info_json=$(curl -s "https://api.mounriver.com/mountriver/api/version/fetchRecent?swType=2&osType=LINUX&lang=en")
+    local _info_json=$(curl -s "https://api.mounriver.com/mountriver/api/version/fetchRecent2?swType=2&osType=LINUX&lang=en")
 
-    local _soft_id=$(echo "${_info_json}" | jq -r '.result.softId')
-    local _filename=$(echo "${_info_json}" | jq -r '.result.softFileName')
-    local _api_version=$(echo "${_info_json}" | jq -r '.result.version')
+    local _tar_entry=$(echo "${_info_json}" | jq -r '.result[0].upgradeRelationBoList[] | select(.softFileType == 1)')
+    local _soft_id=$(echo "${_tar_entry}" | jq -r '.result.softId')
+    local _filename=$(echo "${_tar_entry}" | jq -r '.result.softFileName')
+    local _api_version=$(echo "${_tar_entry}" | jq -r '.result.version')
 
     if [[ "${_soft_id}" == "null" || -z "${_soft_id}" ]]; then
         error "Failed to retrieve software ID from API."
