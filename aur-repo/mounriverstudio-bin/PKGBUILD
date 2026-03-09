@@ -76,7 +76,7 @@ prepare() {
     local _tar_entry=$(echo "${_info_json}" | jq -r '.result[0].upgradeRelationBoList[] | select(.softFileType == 1)')
     local _soft_id=$(echo "${_tar_entry}" | jq -r '.result.softId')
     local _filename=$(echo "${_tar_entry}" | jq -r '.result.softFileName')
-    local _api_version=$(echo "${_tar_entry}" | jq -r '.result.version')
+    local _api_version=$(echo "${_info_json}" | jq -r '.result.version')
 
     if [[ "${_soft_id}" == "null" || -z "${_soft_id}" ]]; then
         error "Failed to retrieve software ID from API."
