@@ -35,6 +35,7 @@ makedepends=(
 checkdepends=()
 optdepends=(
   "dm-tools: DM-USB2FDCAN (Damiao 达妙) host computer software supports DM-USB2FDCAN series CAN cards"
+  "kh-ucanfd: KunHong UCANFD Linux driver"
 )
 source=("${pkgbase}::git+${url}.git#tag=${pkgver}")
 sha256sums=('48ba51cac67e61ec62ba409fd86595aa844881bb1b47703fc97d506a9ab5ac60')
