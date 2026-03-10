@@ -3,7 +3,7 @@
 pkgbase=sftool-gui
 pkgname=sftool-gui
 pkgver=1.1.3
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A user-friendly graphical serial port operation tool for SIFLI series SoC chips."
 arch=($CARCH)
