@@ -36,7 +36,7 @@ prepare() {
     cd ${srcdir}
     chmod a+x ${pkgbase}-${pkgver}-${CARCH}.AppImage
     "./${pkgbase}-${pkgver}-${CARCH}.AppImage" --appimage-extract > /dev/null
-    sed -i -e 's|Exec=serial-port-assistant|Exec=env QT_QPA_PLATFORM=xcb /opt/appimages/dm-tools-appimage.AppImage|g' \
+    sed -i -e 's|Exec=serial-port-assistant|Exec=env QT_QPA_PLATFORM=xcb QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/qt6/plugins QT_PLUGIN_PATH=/usr/lib/qt6/plugins /opt/appimages/dm-tools-appimage.AppImage|g' \
         -e 's|Name=serial-port-assistant|Name=DMTool|g' \
         -e 's|Icon=send|Icon=dm-tools.png|g' \
          "${srcdir}/squashfs-root/DMTool.desktop"
