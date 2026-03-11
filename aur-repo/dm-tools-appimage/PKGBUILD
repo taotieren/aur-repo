@@ -36,13 +36,29 @@ prepare() {
     cd ${srcdir}
     chmod a+x ${pkgbase}-${pkgver}-${CARCH}.AppImage
     "./${pkgbase}-${pkgver}-${CARCH}.AppImage" --appimage-extract > /dev/null
-    sed -i -e 's|Exec=serial-port-assistant|Exec=env QT_QPA_PLATFORM=xcb QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/qt6/plugins QT_PLUGIN_PATH=/usr/lib/qt6/plugins /opt/appimages/dm-tools-appimage.AppImage|g' \
+    sed -i -e 's|Exec=serial-port-assistant|Exec=/usr/bin/dm-tools|g' \
         -e 's|Name=serial-port-assistant|Name=DMTool|g' \
         -e 's|Icon=send|Icon=dm-tools.png|g' \
          "${srcdir}/squashfs-root/DMTool.desktop"
 }
 
 package() {
+    install -Dm755 /dev/stdin ${pkgdir}/usr/bin/dm-tools <<EOF
+#!/bin/bash
+# /usr/bin/dm-tools
+
+export QT_QPA_PLATFORM=xcb
+export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/qt6/plugins
+export QT_PLUGIN_PATH=/usr/lib/qt6/plugins
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export DISPLAY=:0
+
+if [[ -z "\$DISPLAY" ]] || [[ "\$DISPLAY" == "wayland-0" ]]; then
+    export DISPLAY=:0
+fi
+
+exec /${_install_path}/${pkgname}.AppImage "\$@"
+EOF
     install -Dm755 "${srcdir}"/${pkgbase}-${pkgver}-${CARCH}.AppImage "${pkgdir}"/${_install_path}/${pkgname}.AppImage
 
     # local _icon
