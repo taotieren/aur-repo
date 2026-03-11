@@ -6,7 +6,7 @@
 pkgname=python-tatsu
 _name="tatsu"
 pkgver=5.13.2
-pkgrel=1
+pkgrel=2
 pkgdesc="TatSu takes a grammar in a variation of EBNF as input, and outputs a memoizing PEG/Packrat parser in Python"
 arch=("any")
 url="https://github.com/neogeny/TatSu"
