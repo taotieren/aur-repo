@@ -3,7 +3,7 @@
 
 pkgname=python-ics
 pkgver=0.7.2
-pkgrel=2
+pkgrel=3
 pkgdesc='Pythonic and easy iCalendar library'
 arch=('any')
 url='http://pypi.python.org/pypi/ics/'
