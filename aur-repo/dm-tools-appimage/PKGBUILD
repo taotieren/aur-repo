@@ -71,4 +71,3 @@ EOF
     install -Dm644 "${srcdir}/squashfs-root/DMTool.desktop" "${pkgdir}/usr/share/applications/${pkgbase%-appimage}.desktop"
     install -Dm644 "${srcdir}/squashfs-root/LGPLv3.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
-
