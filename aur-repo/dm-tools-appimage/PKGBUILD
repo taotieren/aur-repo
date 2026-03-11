@@ -99,7 +99,7 @@ if ! xhost >/dev/null 2>&1; then
     exit 1
 fi
 
-xhost +SI:localuser:$USER >/dev/null 2>&1 || true
+xhost +SI:localuser:\$USER >/dev/null 2>&1 || true
 
 if [[ ! -f "/usr/lib/qt6/plugins/platforms/libqxcb.so" ]]; then
     echo "警告: 未找到 Qt xcb 插件"
