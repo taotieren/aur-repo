@@ -21,7 +21,7 @@ depends=(
     systemd-libs)
 makedepends=(
     clang
-    cargo
+    cargo-nightly
     cmake
     cuda
     git
@@ -34,7 +34,7 @@ sha256sums=('3ffa9be25e60f0ca19e301fd5ee7b24aa6f43a3680bb73e5777424fe4b7dd4bf')
 
 prepare() {
     cd "${srcdir}/${pkgname}"
-    export RUSTUP_TOOLCHAIN=stable
+    export RUSTUP_TOOLCHAIN=nightly
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
@@ -42,7 +42,7 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    export RUSTUP_TOOLCHAIN=nightly
     export CARGO_TARGET_DIR=target
     cargo build --release --all-features
 
@@ -51,14 +51,14 @@ build() {
 # check() {
 #     cd "${srcdir}/${pkgname}/"
 #
-#     export RUSTUP_TOOLCHAIN=stable
+#     export RUSTUP_TOOLCHAIN=nightly
 #     cargo test --all-features
 # }
 
 package() {
     cd "${srcdir}/${pkgname}/"
 
-    export RUSTUP_TOOLCHAIN=stable
+    export RUSTUP_TOOLCHAIN=nightly
     #     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm0644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
     install -Dm0644 LICENSE.md -t ${pkgdir}/usr/share/licenses/${pkgname}/
