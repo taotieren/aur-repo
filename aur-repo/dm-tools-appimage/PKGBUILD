@@ -3,7 +3,7 @@
 pkgbase=dm-tools-appimage
 pkgname=(dm-tools-appimage)
 pkgver=2.1.5.3
-pkgrel=5
+pkgrel=4
 pkgdesc="DM-USB2FDCAN (Damiao 达妙) host computer software supports DM-USB2FDCAN series CAN cards"
 arch=('x86_64')
 url="https://gitee.com/kit-miao/dm-tools"
@@ -16,6 +16,7 @@ depends=(
     glibc
     hicolor-icon-theme
     zlib
+    qt6-base
 )
 makedepends=(libarchive)
 optdepends=(
@@ -54,8 +55,55 @@ export QT_PLUGIN_PATH=/usr/lib/qt6/plugins
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export DISPLAY=:0
 
-if [[ -z "\$DISPLAY" ]] || [[ "\$DISPLAY" == "wayland-0" ]]; then
+if [[ "\$XDG_SESSION_TYPE" == "wayland" ]]; then
+    # 检查 Xwayland 是否运行
+    if pgrep -x Xwayland >/dev/null; then
+        # 通常 Xwayland 使用 :0
+        export DISPLAY=:0
+    else
+        # 如果 Xwayland 未运行，尝试启动
+        echo "警告: 检测到 Wayland 会话，但 Xwayland 未运行"
+        echo "尝试启动 Xwayland..."
+        if command -v Xwayland >/dev/null; then
+            Xwayland :1 &
+            sleep 1
+            export DISPLAY=:1
+        else
+            echo "错误: 未找到 Xwayland，请安装 xorg-xwayland"
+            echo "运行: sudo pacman -S xorg-xwayland"
+            exit 1
+        fi
+    fi
+fi
+
+# 如果 DISPLAY 未设置，设置为默认值
+if [[ -z "\$DISPLAY" ]]; then
     export DISPLAY=:0
+fi
+
+# 如果 DISPLAY 是 wayland-0，改为 :0
+if [[ "\$DISPLAY" == "wayland-0" ]]; then
+    export DISPLAY=:0
+fi
+
+if ! xhost >/dev/null 2>&1; then
+    echo "错误: 无法连接到 X11 服务器 (DISPLAY=\$DISPLAY)"
+    echo ""
+    echo "可能的解决方案:"
+    echo "1. 确保 X11 服务器正在运行"
+    echo "2. 如果您使用 Wayland，请安装 xorg-xwayland:"
+    echo "   sudo pacman -S xorg-xwayland"
+    echo "3. 检查 DISPLAY 环境变量是否正确"
+    echo "4. 尝试设置 DISPLAY=:0 或 DISPLAY=:1"
+    echo ""
+    exit 1
+fi
+
+xhost +SI:localuser:$USER >/dev/null 2>&1 || true
+
+if [[ ! -f "/usr/lib/qt6/plugins/platforms/libqxcb.so" ]]; then
+    echo "警告: 未找到 Qt xcb 插件"
+    echo "请确保已安装 qt6-base 和 qt6-wayland"
 fi
 
 exec /${_install_path}/${pkgname}.AppImage "\$@"
