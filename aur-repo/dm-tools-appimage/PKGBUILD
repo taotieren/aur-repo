@@ -3,7 +3,7 @@
 pkgbase=dm-tools-appimage
 pkgname=(dm-tools-appimage)
 pkgver=2.1.5.3
-pkgrel=4
+pkgrel=5
 pkgdesc="DM-USB2FDCAN (Damiao 达妙) host computer software supports DM-USB2FDCAN series CAN cards"
 arch=('x86_64')
 url="https://gitee.com/kit-miao/dm-tools"
@@ -37,11 +37,11 @@ _install_path="/opt/appimages"
 prepare() {
     cd ${srcdir}
     chmod a+x ${pkgbase}-${pkgver}-${CARCH}.AppImage
-    "./${pkgbase}-${pkgver}-${CARCH}.AppImage" --appimage-extract > /dev/null
+    "./${pkgbase}-${pkgver}-${CARCH}.AppImage" --appimage-extract >/dev/null
     sed -i -e 's|Exec=serial-port-assistant|Exec=/usr/bin/dm-tools|g' \
         -e 's|Name=serial-port-assistant|Name=DMTool|g' \
         -e 's|Icon=send|Icon=dm-tools.png|g' \
-         "${srcdir}/squashfs-root/DMTool.desktop"
+        "${srcdir}/squashfs-root/DMTool.desktop"
 }
 
 package() {
@@ -124,7 +124,7 @@ EOF
     #                 -t  "${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps"
     # done
     install -Dm0644 "${srcdir}/squashfs-root/send.png" \
-                 "${pkgdir}/usr/share/icons/hicolor/24x24/apps/${pkgbase%-appimage}.png"
+        "${pkgdir}/usr/share/icons/hicolor/24x24/apps/${pkgbase%-appimage}.png"
     install -Dm644 "${srcdir}/squashfs-root/DMTool.desktop" "${pkgdir}/usr/share/applications/${pkgbase%-appimage}.desktop"
     install -Dm644 "${srcdir}/squashfs-root/LGPLv3.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
