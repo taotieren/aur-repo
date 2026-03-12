@@ -17,7 +17,7 @@ post_build_script: |
 update_on:
   - source: regex
     url: http://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh
-    regex: 'FileName":"MRS_Toolchain_Linux_x64_V([\d.]+)\.tar\.xz'
+    regex: 'fileName":"MRS_Toolchain_Linux_x64_V([\d.]+)\.tar\.xz'
 
 # maintainers:
 #   - github: taotieren
@@ -70,4 +70,4 @@ update_on:
 # update_on:
 #   - source: regex
 #     url: https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh
-#     regex: 'softFileName":"MRS_Toolchain_Linux_x64_V([\d.]+)\.tar\.xz'
+#     regex: 'fileName":"MRS_Toolchain_Linux_x64_V([\d.]+)\.tar\.xz'
