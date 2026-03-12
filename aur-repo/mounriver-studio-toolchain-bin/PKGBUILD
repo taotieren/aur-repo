@@ -31,9 +31,9 @@ prepare() {
     msg "Querying MounRiver API for the latest Linux version..."
     local _info_json=$(curl -s "hhttp://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh")
 
-    local _soft_id=$(echo "${_info_json}" | jq -r '.result.softReId')
-    local _filename=$(echo "${_info_json}" | jq -r '.result.softFileName')
-    local _api_version=$(echo "${_info_json}" | jq -r '.result.version')
+    local _soft_id=$(echo "${_info_json}" | jq -r '.result[0].softResId')
+    local _filename=$(echo "${_info_json}" | jq -r '.result[0].fileName')
+    local _api_version=$(echo "${_info_json}" | jq -r '.result[0].version')
 
     if [[ "${_soft_id}" == "null" || -z "${_soft_id}" ]]; then
         error "Failed to retrieve software ID from API."
