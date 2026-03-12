@@ -33,13 +33,13 @@ update_on:
 #       info_url = "https://api.mounriver.com/mountriver/api/version/fetchRecentOpenOcd?osType=LINUX&lang=zh"
 #       with urllib.request.urlopen(info_url) as r:
 #           data = json.loads(r.read().decode())
-#           soft_id = data['result']['softReId']
+#           soft_id = data['result[0]']['softResId']
 
 #       # get dl
 #       dl_api = f"https://api.mounriver.com/mountriver/api/version/getDownloadUrl?resourceId={soft_id}"
 #       with urllib.request.urlopen(dl_api) as r:
 #           dl_data = json.loads(r.read().decode())
-#           return dl_data.get('data') or dl_data.get('result')
+#           return dl_data.get('data') or dl_data.get('result[0]')
 
 #   # get URL
 #   full_url = get_real_url()
