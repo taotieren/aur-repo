@@ -2,7 +2,7 @@
 _name=canalystii
 pkgname=python-canalystii
 pkgver=0.1
-pkgrel=5
+pkgrel=6
 pkgdesc='Canalyst-II USB CAN probe Driver for Python'
 arch=('any')
 url="https://github.com/projectgus/python-canalystii"
