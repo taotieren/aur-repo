@@ -3,7 +3,7 @@
 pkgbase=magiskboot-git
 pkgname=magiskboot-git
 pkgver=30700.45db7f7c481157a0b4306fd30c05ff111d7d8b65.r1.gfbf449d
-pkgrel=2
+pkgrel=3
 pkgdesc="Magiskboot_ndk"
 arch=($CARCH)
 url="https://github.com/xiaoxindada/magiskboot_ndk_on_linux"
