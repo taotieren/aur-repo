@@ -8,7 +8,7 @@ arch=('x86_64')
 url='http://www.mounriver.com/'
 license=('LicenseRef-custom')
 provides=('MRS-Toolchain')
-makedepends=('tar')
+makedepends=('tar' 'jq' 'curl')
 optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
     'i2c-ch341-dkms: CH341 USB-I2C adapter driver'
     'spi-ch341-usb-dkms: SPI/GPIO driver for CH341'
