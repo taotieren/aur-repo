@@ -28,7 +28,10 @@ source=(
     "${pkgname}::git+${url}.git"
     "libusb-cmake::git+https://github.com/libusb/libusb-cmake.git"
 )
-sha256sums=('SKIP')
+sha256sums=(
+    'SKIP'
+    'SKIP'
+)
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
