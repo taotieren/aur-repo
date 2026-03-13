@@ -32,7 +32,7 @@ makedepends=(
     pkgconfig
     make
 )
-source=("${pkgname}::git+${url}.git#tags=${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 sha256sums=('3b4fd7ed4c47dbbeeff6b2f16d3bd853d189bc802d1bc655122854be77701f3e')
 
 prepare() {
