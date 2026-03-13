@@ -21,15 +21,17 @@ depends=(
   sh
   curl
   fmt
-  gcc-libs
   glib2
   glibc
   hicolor-icon-theme
   libcap
   libelf
+  libgcc
+  libstdc++
   linyaps-box
   ${_qt}-base
   systemd-libs
+  util-linux-libs
   ostree
   yaml-cpp
 )
