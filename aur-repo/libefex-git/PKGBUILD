@@ -12,6 +12,7 @@ conflicts=(${pkgname%-git})
 depends=(
     glibc
     libusb
+    systemd-libs
 )
 makedepends=(
     #clang
