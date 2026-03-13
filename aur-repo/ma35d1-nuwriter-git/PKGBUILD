@@ -7,9 +7,14 @@ epoch=
 pkgdesc="MA35D1 NuWriter"
 arch=($CARCH)
 url="https://gitee.com/OpenNuvoton/MA35D1_NuWriter"
-license=('GPL3-Only')
+license=('GPL-3.0-only')
 groups=()
-depends=('python-pyusb' 'python' 'python-crcmod' 'python-pyqt5')
+depends=(
+    'sh'
+    'python-pyusb' 
+    'python' 
+    'python-crcmod' 
+    'python-pyqt5')
 makedepends=("git")
 checkdepends=()
 optdepends=()
