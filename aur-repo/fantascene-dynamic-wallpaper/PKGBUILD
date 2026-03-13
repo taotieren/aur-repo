@@ -9,35 +9,43 @@ url="https://github.com/dependon/fantascene-dynamic-wallpaper"
 license=('GPL-3.0-only')
 provides=(${pkgname})
 conflicts=(${pkgname} ${pkgname}-git)
+_qt=qt6
 depends=(
-    gcc-libs
     glib2
     glibc
+    libstdc++
+    libgcc
+    libglvnd
     libx11
     libxcb
     libxext
     xcb-util-wm
     mpv
-    qt5-charts
-    qt5-base
-    qt5-multimedia
-    qt5-webengine
+    ${_qt}-charts
+    ${_qt}-base
+    ${_qt}-multimedia
 )
 makedepends=(
+    git
+    ${_qt}-tools
+    ${_qt}-webengine
     pkgconfig
-    qt5-tools
     make
 )
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tags=${pkgver}")
 sha256sums=('3b4fd7ed4c47dbbeeff6b2f16d3bd853d189bc802d1bc655122854be77701f3e')
 
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-    qmake ./${pkgname}.pro -spec linux-g++ CONFIG+=qtquickcompiler -o build/
+    cd "${srcdir}/${pkgname}"
+    qmake6 ./${pkgname}.pro -spec linux-g++ CONFIG+=qtquickcompiler -o build/
     make -C ./build
 }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
     make INSTALL_ROOT="$pkgdir" -C ./build install
 }
