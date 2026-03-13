@@ -59,6 +59,11 @@ build() {
     cmake --build "${srcdir}/build"
 }
 
+check() {
+    cd "${srcdir}/${pkgname}"
+    ctest --test-dir build --output-on-failure
+}
+
 package() {
     # DESTDIR="${pkgdir}" cmake --install "${srcdir}/build"
     install -Dm0755 "${srcdir}/build/efex-cli" -t "${pkgdir}/usr/bin"
