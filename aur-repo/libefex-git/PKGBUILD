@@ -81,6 +81,6 @@ package() {
     # install -Dm0755 "${srcdir}/build/fel_test" "${pkgdir}/usr/bin/fel-test"
     # install -Dm0755 "${srcdir}/build/fes_test" "${pkgdir}/usr/bin/fes-test"
     # install -Dm0755 "${srcdir}/build/fes_flash" "${pkgdir}/usr/bin/fes-flash"
-    install -Dm0644 "${srcdir}/build/src/libefex.so" -t "${pkgdir}/usr/lib"
+    install -Dm0644 "${srcdir}/build/src/libefex.a" -t "${pkgdir}/usr/lib"
     install -Dm0644 "${srcdir}/${pkgname}/LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}"
 }
