@@ -3,8 +3,8 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers='zxp19821005')
 post_build_script: aur_post_build
-# repo_depends:
-#   - electron22-bin
+repo_depends:
+  - electron40-bin
 update_on:
   - source: aur
     aur: zyfun-bin
