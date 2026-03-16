@@ -18,13 +18,16 @@ depends=(
     gcc-libs
     glibc
     openssl
-    systemd-libs)
+    systemd-libs
+)
 makedepends=(
     clang
     cargo-nightly
     cmake
     cuda
     git
+    just
+    nodejs
 )
 backup=()
 options=(!lto !debug)
@@ -47,10 +50,14 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/"
 
+    # just build-css
+    # just build-release 
+    just build-release-with-wasm
+
     export RUSTUP_TOOLCHAIN=nightly
     export CARGO_TARGET_DIR=target
-    cargo build --release --all-features
-
+    # cargo build --release --all-features
+    cargo run --release --bin moltis
 }
 
 # check() {
