@@ -36,6 +36,11 @@ prepare() {
     cd "${srcdir}/${pkgname}"
     export RUSTUP_TOOLCHAIN=nightly
     cargo fetch --locked --target host-tuple
+
+    find "${srcdir}/.cargo/registry/src" -path "*/wacore-binary-0.2.0/src/encoder.rs" 2>/dev/null | \
+    while read file; do
+        sed -i '1i use std::simd::Select;' "$file"
+    done
 }
 
 build() {
