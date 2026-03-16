@@ -28,6 +28,7 @@ makedepends=(
     git
     just
     nodejs
+    rust-wasm
 )
 backup=()
 options=(!lto !debug)
