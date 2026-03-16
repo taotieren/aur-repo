@@ -35,6 +35,7 @@ sha256sums=('3ffa9be25e60f0ca19e301fd5ee7b24aa6f43a3680bb73e5777424fe4b7dd4bf')
 prepare() {
     cd "${srcdir}/${pkgname}"
     export RUSTUP_TOOLCHAIN=nightly
+    export CARGO_HOME="$srcdir/.cargo"
     cargo fetch --locked --target host-tuple
 
     find "${srcdir}/.cargo/registry/src" -path "*/wacore-binary-0.2.0/src/encoder.rs" 2>/dev/null | \
