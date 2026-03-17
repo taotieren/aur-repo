@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=imsprog-git
-pkgver=1.8.1.r0.g653c64e
+pkgver=1.8.1.r16.g31a2d08
 pkgrel=1
 pkgdesc="MSProg - software for CH341A-based programmers to work with I2C, SPI and MicroWire EEPROM/Flash chips"
 arch=($CARCH)
