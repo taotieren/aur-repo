@@ -3,7 +3,7 @@
 pkgname=python-nixnet
 _name=${pkgname#python-}
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Communicate over CAN or LIN via NI-XNET hardware with Python"
 provides=(${pkgname})
 conflicts=(${pkgname})
