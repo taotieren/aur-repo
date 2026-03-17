@@ -22,7 +22,8 @@ depends=(
 )
 makedepends=(
     clang
-    cargo-nightly
+    # cargo-nightly
+    cargo
     cmake
     cuda
     git
