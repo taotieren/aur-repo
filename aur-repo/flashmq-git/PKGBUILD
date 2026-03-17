@@ -2,7 +2,7 @@
 
 pkgname=flashmq-git
 pkgver=1.26.0.r5.gbb39617
-pkgrel=1
+pkgrel=2
 pkgdesc="FlashMQ is a light-weight MQTT broker/server, designed to take good advantage of multi-CPU environments"
 arch=($CARCH)
 url="https://github.com/halfgaar/FlashMQ"
