@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='william341')
+pre_build_script: |
+  aur_pre_build(maintainers='william341')
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
   - cargo-cntp-bundle-git
