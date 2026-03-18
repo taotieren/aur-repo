@@ -11,8 +11,9 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
   sh
-  gcc-libs
   glibc
+  libgcc
+  libstdc++
   libusb
   qt5-base
 )
