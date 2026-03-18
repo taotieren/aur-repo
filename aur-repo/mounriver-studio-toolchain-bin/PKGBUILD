@@ -6,7 +6,7 @@ pkgname=($pkgbase
     mounriver-studio-toolchain-arm-none-eabi-gcc-bin
     mounriver-studio-toolchain-riscv-gcc-bin
     mounriver-studio-toolchain-riscv-gcc12-bin
-    mounriver-studio-toolchain-riscv-gcc12-bin)
+    mounriver-studio-toolchain-riscv-gcc15-bin)
 pkgver=210
 pkgrel=1
 arch=('x86_64')
