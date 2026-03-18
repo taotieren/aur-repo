@@ -9,7 +9,11 @@ arch=($CARCH)
 url="https://github.com/openbmc/libpldm"
 license=('Apache-2.0')
 groups=()
-depends=(glibc)
+depends=(
+    glibc
+    libgcc
+    libstdc++
+)
 makedepends=(
     git
     gtest
