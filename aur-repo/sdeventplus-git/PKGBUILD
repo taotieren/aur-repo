@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sdeventplus-git
-pkgver=r158.c3fb820
+pkgver=r159.857171a
 pkgrel=1
 pkgdesc="sdeventplus is a c++ wrapper around the systemd sd_event apis meant to provide c++ ergonomics to their usage."
 url="https://github.com/openbmc/sdeventplus"
