@@ -1,8 +1,8 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['zxp19821005', 'yurikoles'])
+pre_build_script: aur_pre_build(maintainers=['zhaoth'])
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: electron39-bin
+    aur: trae-cn-bin
