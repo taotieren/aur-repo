@@ -19,12 +19,12 @@ depends=(
     python-huggingface-hub
     python-pytorch
     python-pytest
+    python-safetensors
     python-requests
     python-typing_extensions
     # AUR
     python-catalogue
     python-curated-tokenizers
-    python-safetensors
     python-transformers
     python-tokenizers
 )
