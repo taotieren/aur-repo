@@ -73,8 +73,9 @@ prepare() {
         rm -rf "$_old_dir"
     fi
 
+    mkdir -pv ${srcdir}/${_pkgbase}
     msg "Extracting ${_filename}..."
-    tar -xf "${_filename}"
+    tar -xf "${_filename}" -C ${srcdir}/${_pkgbase}
 }
 
 package_mounriver-studio-toolchain-bin() {
