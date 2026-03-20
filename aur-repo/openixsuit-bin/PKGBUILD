@@ -21,7 +21,11 @@ depends=(
     webkit2gtk-4.1
 )
 makedepends=(libarchive)
-provides=(${pkgname%-bin})
+optdepends=(
+    "openixcard: Open Source Version of Allwinner PhoenixCard on Linux"
+    "openiximg: A comprehensive toolset for handling Allwinner IMAGEWTY format firmware images"
+)
+provides=(${pkgname%-bin} openixcard)
 conflicts=(${pkgname%-bin})
 replaces=()
 pkgdesc="Tools to Flash Allwinner Firmware to Devices like PhoenixSuit and LiveSuit"
