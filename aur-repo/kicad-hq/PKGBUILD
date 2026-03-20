@@ -14,14 +14,15 @@ depends=(
   curl
   freetype2
   fontconfig
-  gcc-libs
   glib2
   glibc
   glu
   gtk3
+  libgcc
   libglvnd
   libgit2
   libsecret
+  libstdc++
   harfbuzz
   hicolor-icon-theme
   nng
@@ -31,7 +32,6 @@ depends=(
   python
   python-wxpython
   wayland
-  webkit2gtk-4.1
   wxwidgets-gtk3
   wxwidgets-common
   unixodbc
