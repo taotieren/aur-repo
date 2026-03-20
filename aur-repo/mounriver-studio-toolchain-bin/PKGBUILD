@@ -85,6 +85,7 @@ package_mounriver-studio-toolchain-bin() {
         mounriver-studio-toolchain-riscv-gcc-bin
         mounriver-studio-toolchain-riscv-gcc12-bin
         mounriver-studio-toolchain-riscv-gcc12-bin)
+}
 
 package_mounriver-studio-toolchain-openocd-bin() {
     depends=('bash'
