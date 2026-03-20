@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sdbusplus-git
-pkgver=r900.cb6dc93
-pkgrel=2
+pkgver=r902.842d8fc
+pkgrel=1
 pkgdesc="C++ bindings for systemd dbus APIs"
 url="https://github.com/openbmc/sdbusplus"
 arch=($CARCH)
