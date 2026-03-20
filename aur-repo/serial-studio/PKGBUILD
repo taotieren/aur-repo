@@ -11,18 +11,41 @@ license=('GPL-3.0-only')
 groups=()
 _qt=qt6
 depends=(
+    abseil-cpp
+    aom
     brotli
     bzip2
+    cairo
     curl
+    dav1d
+    duktape
     e2fsprogs
     expat
-    duktape
+    ffmpeg
+    fontconfig
+    freetype2
+    fribidi
+    gdk-pixbuf2
     glib2
     glibc
+    glycin
+    gnutls
+    gmp
+    gsm
     graphite
-    freetype2
+    harfbuzz
+    highway
     icu
+    jbigkit
+    lame
+    lcms2
+    leancrypto
+    libbluray
+    libdatrie
+    libdeflate
     libdrm
+    libdvdnav
+    libdvdread
     libevdev
     libffi
     libgcc
@@ -30,26 +53,56 @@ depends=(
     libgomp
     libgudev
     libice
+    libjpeg-turbo
+    libjxl
+    libp11-kit
+    libpgm
     libpng
     libpsl
     libidn2
     libnghttp2
     libnghttp3
     libngtcp2
+    libmodplug
+    librsvg
+    libseccomp
+    libssh
+    libsodium
+    libsoxr
     libstdc++
     libssh2
+    libogg
+    libopenmpt
+    libtasn1
+    libthai
+    libtheora
     libunistring
+    libva
+    libvdpau
+    libvpl
+    libvpx
+    libvorbis
     libwacom
+    libwebp
     libx11
     libxau
     libxcb
     libxdmcp
+    libxext
+    libxfixes
     libxkbcommon
+    libxml2
+    libxrender
     lua
     keyutils
     krb5
+    rav1e
     systemd-libs
+    mpg123
     mtdev
+    nettle
+    nss
+    nspr
     $_qt-base
     $_qt-5compat
     $_qt-declarative
@@ -57,14 +110,29 @@ depends=(
     $_qt-graphs
     $_qt-serialport
     $_qt-svg
+    $_qt-webview
+    ocl-icd
+    opencore-amr
+    openjpeg2
     openssl
+    opus
+    pango
     pcre2
+    pixman
+    snappy
+    speex
+    srt
+    svt-av1
     util-linux-libs
+    x264
+    x265
     xcb-util
     xcb-util-image
     xcb-util-renderutil
-    vulkan-headers
+    xvidcore
+    xz
     zlib
+    zeromq
     zstd
 )
 makedepends=(
@@ -79,8 +147,8 @@ makedepends=(
     $_qt-positioning
     $_qt-translations
     $_qt-tools
-    $_qt-webview
     pkgconf
+    vulkan-headers
 )
 provides=(${_pkgname} ${pkgname})
 conflicts=(${_pkgname} ${pkgname})
