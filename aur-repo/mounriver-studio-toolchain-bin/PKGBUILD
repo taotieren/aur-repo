@@ -7,7 +7,7 @@ pkgname=($pkgbase
     mounriver-studio-toolchain-riscv-gcc-bin
     mounriver-studio-toolchain-riscv-gcc12-bin
     mounriver-studio-toolchain-riscv-gcc15-bin)
-pkgver=210
+pkgver=240
 pkgrel=1
 arch=('x86_64')
 url='http://www.mounriver.com/'
@@ -26,7 +26,7 @@ optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
 # the content hash is guaranteed to be immutable
 # the real source file is downloaded dynamically in prepare() due to short-lived URL signatures
 source=('https://ipfs.io/ipfs/QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH')
-sha256sums=('5431c040cb67cf619fd18d003ed9497a1995f59329b7f51d985dcc8013eff236')
+sha256sums=('e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
 options=('!strip')
 noextract=()
 _pkgbase=MRS_Toolchain_Linux_X64_V${pkgver}
