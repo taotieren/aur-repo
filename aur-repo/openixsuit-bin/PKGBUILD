@@ -3,7 +3,7 @@
 pkgbase=openixsuit-bin
 pkgname=openixsuit-bin
 _pkgname=OpenixSuit
-pkgver=0.3.13
+pkgver=0.3.14
 pkgrel=1
 arch=('x86_64')
 _name=${_pkgname}_${pkgver}_amd64
@@ -32,7 +32,7 @@ pkgdesc="Tools to Flash Allwinner Firmware to Devices like PhoenixSuit and LiveS
 license=('LicenseRef-scancode-commercial-license')
 url="https://github.com/YuzukiTsuru/OpenixSuit"
 source=("${url}/releases/download/v${pkgver}/${_name}.deb")
-sha256sums=('6daa6cd028163b5da3b5d2ab0799fa426a0ff257edfc964d5e282bd8a70a45af')
+sha256sums=('be2775023b4c3e5728111c4c6a02e9f74ee7146cc02244a2cfb870ded09c6570')
 # noextract=()
 
 # prepare() {
