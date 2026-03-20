@@ -126,7 +126,7 @@ package_mounriver-studio-toolchain-arm-none-eabi-gcc-bin() {
         'python'
     )
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}/${_pkgbase}/arm-none-eabi-gcc/"
+    cd "${srcdir}/${_pkgbase}/Toolchain/arm-none-eabi-gcc/"
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
@@ -143,7 +143,7 @@ package_mounriver-studio-toolchain-riscv-gcc-bin() {
         'glibc'
         'python')
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}/${_pkgbase}/RISC-V Embedded GCC/"
+    cd "${srcdir}/${_pkgbase}/Toolchain/RISC-V Embedded GCC/"
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
@@ -160,7 +160,7 @@ package_mounriver-studio-toolchain-riscv-gcc12-bin() {
         'glibc'
         'python')
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}/${_pkgbase}/RISC-V Embedded GCC12/"
+    cd "${srcdir}/${_pkgbase}/Toolchain/RISC-V Embedded GCC12/"
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
@@ -177,7 +177,7 @@ package_mounriver-studio-toolchain-riscv-gcc15-bin() {
         'glibc'
         'python')
     install -dm0755 "${pkgdir}/opt/wch/${pkgname%-bin}"
-    cd "${srcdir}/${_pkgbase}/RISC-V Embedded GCC15/"
+    cd "${srcdir}/${_pkgbase}/Toolchain/RISC-V Embedded GCC15/"
     cp -a * "${pkgdir}/opt/wch/${pkgname%-bin}"
 
     install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-bin}.sh" <<EOF
