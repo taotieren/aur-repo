@@ -9,11 +9,13 @@ arch=('x86_64')
 url='https://github.com/RfidResearchGroup/proxmark3'
 license=('GPL-3.0-or-later')
 _pydeps=(
+  colorama
   cryptography
   bitarray
   bitstring
   pyaudio
-  pycryptodome
+  pycryptodomex
+  pyscard
   pyserial
   requests
   numpy
