@@ -63,6 +63,7 @@ depends=(
     xcb-util
     xcb-util-image
     xcb-util-renderutil
+    vulkan-headers
     zlib
     zstd
 )
@@ -78,6 +79,8 @@ makedepends=(
     $_qt-positioning
     $_qt-translations
     $_qt-tools
+    $_qt-webview
+    pkgconf
 )
 provides=(${_pkgname} ${pkgname})
 conflicts=(${_pkgname} ${pkgname})
