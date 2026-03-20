@@ -27,8 +27,8 @@ makedepends=(
     git
     cargo-tauri
     pnpm
-    nodejs
-    # nodejs-lts
+    # nodejs
+    nodejs-lts
 )
 backup=()
 options=(!debug !strip !lto)
