@@ -22,7 +22,6 @@ depends=(
 )
 makedepends=(libarchive)
 optdepends=(
-    "openixcard: Open Source Version of Allwinner PhoenixCard on Linux"
     "openiximg: A comprehensive toolset for handling Allwinner IMAGEWTY format firmware images"
 )
 provides=(${pkgname%-bin} openixcard)
