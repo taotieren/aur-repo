@@ -1,15 +1,17 @@
 [Unit]
-Description=ZeroClaw autonomous AI agent runtime
+Description=ZeroClaw gateway server (webhooks/WebSocket only, no channels or scheduler)
 Documentation=https://github.com/zeroclaw-labs/zeroclaw
 After=network-online.target
 Wants=network-online.target
+# zeroclaw.service (daemon) already embeds the gateway — do not run both
+Conflicts=zeroclaw.service
 
 [Service]
 Type=simple
 User=zeroclaw
 Group=zeroclaw
 WorkingDirectory=/var/lib/zeroclaw
-ExecStart=/usr/bin/zeroclaw daemon
+ExecStart=/usr/bin/zeroclaw gateway
 Restart=on-failure
 RestartSec=5s
 Environment=RUST_LOG=info
@@ -19,7 +21,7 @@ Environment=ZEROCLAW_WORKSPACE=/var/lib/zeroclaw/workspace
 # ── Logging ───────────────────────────────────────────────────────
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=zeroclaw
+SyslogIdentifier=zeroclaw-gateway
 
 # ── Identity & Privilege ──────────────────────────────────────────
 NoNewPrivileges=yes
