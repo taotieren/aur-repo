@@ -25,8 +25,8 @@ optdepends=(
     "openiximg: A comprehensive toolset for handling Allwinner IMAGEWTY format firmware images"
     "openixcli: Open Source CLI Tools for Flash Allwinner Firmware to Devices"
 )
-provides=(${pkgname%-bin} openixcard)
-conflicts=(${pkgname%-bin} openixcard)
+provides=(${pkgname%-bin} openixcard sunxi-livesuite)
+conflicts=(${pkgname%-bin} openixcard sunxi-livesuite)
 replaces=(sunxi-livesuite)
 pkgdesc="Tools to Flash Allwinner Firmware to Devices like PhoenixSuit and LiveSuit"
 license=('LicenseRef-scancode-commercial-license')
