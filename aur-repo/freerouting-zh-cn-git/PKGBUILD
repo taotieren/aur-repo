@@ -55,7 +55,7 @@ build() {
     
     # Use wrapper with specific Gradle version to avoid compatibility issues
     chmod +x gradlew
-    ./gradlew --no-configuration-cache assemble
+    ./gradlew assemble
 }
 
 package() {
