@@ -21,6 +21,7 @@ depends=(
   libgcc
   libglvnd
   libgit2
+  libspnav
   libsecret
   libstdc++
   harfbuzz
