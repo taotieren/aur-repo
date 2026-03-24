@@ -16,6 +16,7 @@ depends=(
   fontconfig
   glib2
   glibc
+  glm
   glu
   gtk3
   libgcc
@@ -26,14 +27,16 @@ depends=(
   libstdc++
   harfbuzz
   hicolor-icon-theme
+  ngspice
   nng
   opencascade
   openssl
   protobuf
-  poppler
+  poppler-glib
   python
   python-wxpython
   wayland
+  webkit2gtk-4.1
   wxwidgets-gtk3
   wxwidgets-common
   unixodbc
@@ -45,13 +48,10 @@ makedepends=(
   cmake
   doxygen
   glew
-  glm
   git
-  ngspice
   mesa
   boost
   swig
-  ngspice
   ninja
   pkgconf
 )
