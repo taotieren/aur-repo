@@ -30,6 +30,7 @@ depends=(
   opencascade
   openssl
   protobuf
+  poppler
   python
   python-wxpython
   wayland
