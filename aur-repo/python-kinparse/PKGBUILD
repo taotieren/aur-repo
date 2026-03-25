@@ -3,7 +3,7 @@
 
 pkgname=python-kinparse
 pkgver=1.2.4
-pkgrel=3
+pkgrel=4
 pkgdesc="Parser for KiCad schematic netlists."
 arch=(any)
 url="https://github.com/devbisme/kinparse"
