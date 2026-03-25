@@ -164,7 +164,9 @@ build() {
     cd "$srcdir/${pkgname}"
 
     cmake -DCMAKE_BUILD_TYPE=Release \
-        -DPRODUCTION_OPTIMIZATION=ON \
+        -DPRODUCTION_OPTIMIZATION=OFF \
+        -DUSE_SYSTEM_ZLIB=ON \
+        -DUSE_SYSTEM_EXPAT=ON \
         -DCMAKE_INSTALL_PREFIX=/usr/share/serial-studio \
         -DCMAKE_INSTALL_BINDIR=/usr/bin \
         -B build \
