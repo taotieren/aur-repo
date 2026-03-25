@@ -54,4 +54,5 @@ package() {
     install -Dm0644 examples/node_config_example/scripts/* -t "${pkgdir}/usr/share/${pkgname}/node_config_example/scripts/"
     install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}/docs/"
     install -Dm0644 README* -t "${pkgdir}/usr/share/doc/${pkgname}/"
+    install -Dm0644 LICENSE -t ${pkgdir}/usr/share/licenses/${pkgname}/
 }
