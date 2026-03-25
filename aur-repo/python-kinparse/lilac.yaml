@@ -11,5 +11,5 @@ post_build_script: |
 #   -
 update_on:
   - source: pypi
-    pypi: kinet2pcb
+    pypi: kinparse
   - alias: python
