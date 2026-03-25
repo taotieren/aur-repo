@@ -1,7 +1,14 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['AngryUbuntuNerd', 'andit'])
+pre_build_script: |
+  aur_pre_build(maintainers=['AngryUbuntuNerd', 'andit'])
+
+  oldver, oldrel = get_pkgver_and_pkgrel()
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
+  run_protected(["updpkgsums"])
+  
 post_build: aur_post_build
 update_on:
   - source: aur
