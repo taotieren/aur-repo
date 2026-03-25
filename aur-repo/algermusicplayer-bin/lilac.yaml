@@ -7,4 +7,4 @@ repo_depends:
   - electron40-bin
 update_on:
   - source: aur
-    github: algermusicplayer-bin
+    aur: algermusicplayer-bin
