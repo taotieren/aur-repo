@@ -15,9 +15,10 @@ depends=(
     glibc)
 makedepends=(git
     sed
-    libnatpmp
-    miniupnpc
-    zlib)
+    # libnatpmp
+    # miniupnpc
+    # zlib
+)
 optdepends=()
 backup=()
 options=('!makeflags')
@@ -58,4 +59,5 @@ package() {
     install -Dm0644 examples/node_config_example/*.conf -t "${pkgdir}/usr/share/${pkgname}/node_config_example/"
     install -Dm0644 examples/node_config_example/scripts/* -t "${pkgdir}/usr/share/${pkgname}/node_config_example/scripts/"
     install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}/docs/"
+    install -Dm0644 README* -t "${pkgdir}/usr/share/doc/${pkgname}/"
 }
