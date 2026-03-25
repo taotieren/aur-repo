@@ -19,6 +19,7 @@ makedepends=(
     ninja
     git
     tinyxml2
+    pkgconf
 )
 optdepends=(
 
