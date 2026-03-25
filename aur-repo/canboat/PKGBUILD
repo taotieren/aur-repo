@@ -31,26 +31,30 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 sha256sums=('afc8c92cb6f5fadbe549ce2bb0261c484f550df5b128f6c8648cb9b61c44c055')
 #validpgpkeys=()
 
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
     #     export LDFLAGS="-z relro -z now -z shstk"
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
 
     make
     make generated
 }
 
 check() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
     make tests
 }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
+    cd "${srcdir}/${pkgname}"
     make DESTDIR="$pkgdir" PREFIX=/usr install
     install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}"
     install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/60-canboat-actisense.rules" <<EOF

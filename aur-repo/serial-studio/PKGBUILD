@@ -160,6 +160,10 @@ source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('e172f571a5a37e2b9d38f8374ed48698e18b91f0af6037bcddaab1770240632e')
 noextract=()
 
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
 build() {
     cd "$srcdir/${pkgname}"
 
