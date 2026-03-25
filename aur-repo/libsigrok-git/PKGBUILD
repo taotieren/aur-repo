@@ -30,6 +30,7 @@ sha512sums=('SKIP')
 pkgver() {
   cd "${srcdir}/${_gitname}"
   git describe --exclude 'libsigrok-unreleased' --long | sed 's/^libsigrok-//;s/\([^-]*-g\)/r\1/;s/-/./g'
+  find . -name "*.cpp" -type f -exec sed -i 's/return nullptr;/return 0;/g' {} \;
 }
 
 build() {
