@@ -1,4 +1,6 @@
+# Maintainer: taotieren <admin@taotieren.com>
 # Contributor: Caleb Jamison <cbjamo@gmail.com>
+
 pkgname=python-kinparse
 pkgver=1.2.4
 pkgrel=3
@@ -30,7 +32,7 @@ build() {
 package() {
   cd "$srcdir/$_name-$pkgver"
   python -m installer --destdir="${pkgdir}" dist/*.whl
-  install -D -m644 LICENSE \
-    "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+  install -Dm644 LICENSE -t \
+    "$pkgdir"/usr/share/licenses/$pkgname/
 }
 
