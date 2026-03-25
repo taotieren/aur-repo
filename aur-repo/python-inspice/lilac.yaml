@@ -9,6 +9,8 @@ post_build_script: |
 repo_depends:
   - python-diskcache
 update_on:
-  - source: pypi
-    pypi: inspice
+  - source: github
+    github: insim-ai/InSpice
+    use_max_tag: true
+    prefix: v
   - alias: python
