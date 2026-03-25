@@ -10,4 +10,4 @@ update_on:
   - source: github
     github: gnbdev/opengnb
     use_latest_release: true
-    prefix: ver
+    # prefix: ver
