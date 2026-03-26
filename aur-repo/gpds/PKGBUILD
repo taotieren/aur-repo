@@ -13,12 +13,13 @@ depends=(
     glibc
     libgcc
     libstdc++
+    tinyxml2
+    yaml-cpp
 )
 makedepends=(
     cmake
     ninja
     git
-    tinyxml2
     pkgconf
 )
 optdepends=(
