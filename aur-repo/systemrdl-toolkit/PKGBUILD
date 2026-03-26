@@ -2,7 +2,7 @@
 
 pkgname=systemrdl-toolkit
 pkgver=0.2.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A pure C++ toolkit for parsing and elaborating SystemRDL files"
 arch=($CARCH)
@@ -22,8 +22,11 @@ makedepends=(
     nlohmann-json
     inja
     pkgconf
+    python
 )
-optdepends=()
+optdepends=(
+
+)
 checkdepends=()
 optdepends=()
 provides=(${pkgname})
@@ -50,7 +53,7 @@ build() {
         -D USE_SYSTEM_ANTLR4=ON \
         -D USE_SYSTEM_NLOHMANN_JSON=ON \
         -D USE_SYSTEM_INJA=ON \
-        -D SYSTEMRDL_BUILD_STATIC=OFF \
+        -D SYSTEMRDL_BUILD_STATIC=ONls  \
         -B build \
         -G Ninja
 
@@ -60,5 +63,7 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}"
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
+    install -Dm644 "systemrdl_version.h" "${pkgdir}/usr/include/systemrdl/"
     install -Dm644 LICENSE -t ${pkgdir}/usr/share/licenses/${pkgname}/
+    mv ${pkgdir}/usr/bin/example ${pkgdir}/usr/bin/systemrdl_example
 }
