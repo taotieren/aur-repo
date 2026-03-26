@@ -20,6 +20,7 @@ repo_depends:
   - python-pyopenjtalk
   - python-jamo
   - python-cn2an
+  - python-phonemizer-fork
   - python-pypinyin-dict
   - python-underthesea
   # - python-mishkal-hebrew
