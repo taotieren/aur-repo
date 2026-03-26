@@ -2,7 +2,7 @@
 
 pkgname=gpds
 pkgver=1.10.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A general purpose data serializer"
 arch=($CARCH)
@@ -48,6 +48,7 @@ build() {
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
         -D OPTION_BUILD_SHARED_DEFAULT=ON \
         -D GPDS_BUILD_STATIC=OFF \
+        -D GPDS_DEPENDENCY_TINYXML2_PKGCONFIG=ON \
         -B build \
         -G Ninja
 
