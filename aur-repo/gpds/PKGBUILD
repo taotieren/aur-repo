@@ -2,7 +2,7 @@
 
 pkgname=gpds
 pkgver=1.10.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A general purpose data serializer"
 arch=($CARCH)
