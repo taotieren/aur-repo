@@ -3,7 +3,7 @@
 pkgbase=sv-lang
 pkgname=(sv-lang python-pysvlang)
 pkgver=10.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="SystemVerilog compiler and language services"
 arch=($CARCH)
