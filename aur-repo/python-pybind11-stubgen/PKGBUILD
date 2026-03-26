@@ -2,7 +2,7 @@
 _pyname="pybind11-stubgen"
 pkgname="python-${_pyname}"
 pkgver=2.5.5
-pkgrel=2
+pkgrel=3
 pkgdesc="PEP 561 type stubs generator for pybind11 modules"
 arch=(x86_64)
 url="https://github.com/sizmailov/pybind11-stubgen"
