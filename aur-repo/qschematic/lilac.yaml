@@ -10,6 +10,6 @@ repo_depends:
   - gpds
 update_on:
   - source: github
-    github: simulton//QSchematic
+    github: simulton/QSchematic
     use_max_tag: true
     # prefix: v
