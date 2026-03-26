@@ -1,7 +1,7 @@
 # Maintainer: Andrew Shark <ashark on linuxcomp.ru>
 pkgname=amd-vulkan-prefixes
 pkgver=3
-pkgrel=2
+pkgrel=3
 pkgdesc="Select needed vulkan implementation with vk_radv, vk_amdvlk or vk_pro prefix"
 arch=('any')
 license=('GPL')
