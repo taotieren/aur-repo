@@ -2,7 +2,7 @@
 
 pkgname=qsoc-git
 pkgver=r772.2eb7c33
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="QSoC - Quick System on Chip Studio"
 arch=($CARCH)
