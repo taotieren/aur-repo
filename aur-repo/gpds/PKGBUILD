@@ -60,7 +60,7 @@ package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
     install -Dm644 license.txt -t ${pkgdir}/usr/share/licenses/${pkgname}/
 
-    install -Dm0644 /dev/stdin > "${pkgdir}/usr/lib/pkgconfig/gpds.pc" << EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/pkgconfig/gpds.pc" << EOF
 prefix=/usr
 exec_prefix=\${prefix}
 includedir=\${prefix}/include
