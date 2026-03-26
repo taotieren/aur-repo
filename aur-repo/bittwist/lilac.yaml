@@ -8,6 +8,6 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: git
-    git: https://git.code.sf.net/p/bittwist/git
+    git: git.code.sf.net/p/bittwist/git
     branch: master
     use_commit: true
