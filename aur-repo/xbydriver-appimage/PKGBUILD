@@ -64,7 +64,7 @@ Comment=小白羊云盘
 Categories=Network;
 EOF
     local _icon
-    for _icon in 24 64 256; do
+    for _icon in 30 64 256; do
         install -Dm0644 "${pkgdir}/opt/alixby/resources/images/icon_${_icon}x${_icon}.png" \
                     "${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps/xbyyunpan.png"
     done
