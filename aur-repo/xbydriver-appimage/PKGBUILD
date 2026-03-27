@@ -2,9 +2,9 @@
 
 pkgbase=xbydriver-appimage
 pkgname=(xbydriver-{bin,appimage})
-_tagname=3.13.5
+_tagname=4.0.0-beta
 pkgver=${_tagname//-/_}
-pkgrel=6
+pkgrel=7
 pkgdesc="小白羊网盘 - 多网盘统一管理 + 智能媒体库 + 高速下载"
 arch=('x86_64' 'aarch64')
 url="https://github.com/gaozhangmin/aliyunpan"
@@ -22,10 +22,10 @@ source_x86_64=("${pkgbase}-${_tagname}-x86_64.AppImage::${url}/releases/download
     "${pkgbase%-appimage}-${_tagname}-x86_64.deb::${url}/releases/download/v${_tagname}/alixby-${_tagname}-linux-amd64.deb")
 source_aarch64=("${pkgbase}-${_tagname}-aarch64.AppImage::${url}/releases/download/v${_tagname}/alixby-${_tagname}-linux-arm64.AppImage"
     "${pkgbase%-appimage}-${_tagname}-aarch64.deb::${url}/releases/download/v${_tagname}/alixby-${_tagname}-linux-arm64.deb")
-sha256sums_x86_64=('f38a9c2ca3ebc23ca1a507f958f95f919e6ada72568df35980dcf9667108620e'
-                   '59dc465b59d149922278db38a78a1140921b37b312ae7f31640af99c261d7e3a')
-sha256sums_aarch64=('c575ecfd682169fad89ae8b87cdfe44550a06eb1c57a21ce67c929f215f75994'
-                    '3420171837cecec3880114a4868351a1c29f429575429c43f5a9b94a98551426')
+sha256sums_x86_64=('8b4efda1a0593f905b319c0351b626b9dc0f087512c1bdd0f18f6e85d85d062b'
+                   'aea5c2349d0d3a77c628d17bc0a84f227b8e1cdaaceef82ea840e0ff3a114d44')
+sha256sums_aarch64=('2458060bbdebd17a6de150e4efc595278852d19d00824ba3ccc288368bfdf3f1'
+                    '0f0d41f79ae4480b95d2b949d65f14e20fe13affb7644f76d247bac10d682117')
 noextract=(
     ${pkgbase%-appimage}-${_tagname}-x86_64.deb
     ${pkgbase%-appimage}-${_tagname}-aarch64.deb)
