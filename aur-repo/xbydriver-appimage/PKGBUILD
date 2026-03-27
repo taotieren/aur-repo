@@ -72,7 +72,7 @@ EOF
     rm -rf "${pkgdir}/usr/share/icons/hicolor/0x0/apps/alixby.png"
 
     #修复下载时 aria2c 连接失败的问题
-    sed -i 's|async-dns=false|async-dns=true|g' "${pkgdir}"/opt/${pkgbase%-appimage}/resources/engine/aria2.conf
+    sed -i 's|async-dns=false|async-dns=true|g' "${pkgdir}"/opt/alixby/resources/engine/aria2.conf
 }
 
 package_xbydriver-appimage() {
