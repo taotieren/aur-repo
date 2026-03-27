@@ -68,8 +68,8 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}/"
     install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -Dm644 src/server/gui/icons/server.ico "${pkgdir}/usr/share/pixmaps/${pkgname%-git}-server.ico"
-    install -Dm644 src/client/gui/icons/client.ico "${pkgdir}/usr/share/pixmaps/${pkgname%-git}-client.ico"
+    install -Dm644 src/server/gui/icons/mbserver.ico "${pkgdir}/usr/share/pixmaps/${pkgname%-git}-server.ico"
+    install -Dm644 src/client/gui/icons/mbclient.ico "${pkgdir}/usr/share/pixmaps/${pkgname%-git}-client.ico"
 
     cd build
     install -dm755 "${pkgdir}/usr/lib/"
