@@ -73,7 +73,7 @@ package() {
 
     cd build
     install -dm755 "${pkgdir}/usr/lib/"
-    cp -rv libcore.so* "${pkgdir}/usr/lib/"
+    cp -rv libmbcore.so* "${pkgdir}/usr/lib/"
 
     install -Dm755 $(ls mbclient-*) "${pkgdir}/usr/bin/mbclient"
     install -Dm755 $(ls mbserver-*) "${pkgdir}/usr/bin/mbserver"
