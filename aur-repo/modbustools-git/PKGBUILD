@@ -75,8 +75,8 @@ package() {
     install -dm755 "${pkgdir}/usr/lib/"
     cp -rv libcore.so* "${pkgdir}/usr/lib/"
 
-    install -Dm755 $(ls client-*) "${pkgdir}/usr/bin/${pkgname%-git}-client"
-    install -Dm755 $(ls server-*) "${pkgdir}/usr/bin/${pkgname%-git}-server"
+    install -Dm755 $(ls mbclient-*) "${pkgdir}/usr/bin/${pkgname%-git}-client"
+    install -Dm755 $(ls mbserver-*) "${pkgdir}/usr/bin/${pkgname%-git}-server"
 
     install -Dm644 /dev/stdin ${pkgdir}/usr/share/applications/io.github.serhmarch.${pkgname%-git}-client.desktop <<EOF
 [Desktop Entry]
