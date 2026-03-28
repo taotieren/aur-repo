@@ -80,13 +80,13 @@ package() {
         app_name="mb${app}"
         
         ico_path="src/${app}/gui/icons/${app_name}.ico"
-        install -vdm644 ${pkgdir}/usr/share/icons/hicolor/256x256/apps/
+        install -vdm755 ${pkgdir}/usr/share/icons/hicolor/256x256/apps/
         if [ -f "$ico_path" ]; then
             magick "${ico_path}[0]" -resize 256x256 \
                 "${pkgdir}/usr/share/icons/hicolor/256x256/apps/${app_name}.png"
         fi
         
-        install -vdm644 ${pkgdir}/usr/share/doc/${pkgname}/${app}
+        install -vdm755 ${pkgdir}/usr/share/doc/${pkgname}/${app}
         if [ -d "build/doc/output/${app}" ]; then
             cp -R "build/doc/output/${app}/" "${pkgdir}/usr/share/doc/${pkgname}/${app}/"
         fi
@@ -113,7 +113,7 @@ EOF
     install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm0755 src/server/python/*.py -t "${pkgdir}/usr/bin/"
     install -vDm0755 build/libmbcore.* -t "${pkgdir}/usr/lib"
-    install -vDm0755 build/libmodbus.* -t "${pkgdir}/usr/lib"
+    install -vDm0644 build/libmodbus.* -t "${pkgdir}/usr/lib"
 
     cd "${pkgdir}/usr/lib"
     find . -maxdepth 1 -name "lib*.so.*.*.*" -type f | while read -r file; do
