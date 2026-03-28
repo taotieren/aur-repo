@@ -43,6 +43,7 @@ prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
 
     cd "${srcdir}/${pkgname}"
+    git cherry-pick -n 4d0a7408e12d28930d4aedb9356f8a42bb47685a
     git submodule init
     git config submodule.modbus.url "$srcdir/modbus"
     git -c protocol.file.allow=always submodule update
@@ -50,7 +51,6 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}/"
-    git cherry-pick -n 4d0a7408e12d28930d4aedb9356f8a42bb47685a
 
     cmake -S . \
         -DCMAKE_BUILD_TYPE=None \
