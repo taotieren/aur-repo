@@ -87,7 +87,7 @@ package() {
     cd build
     cp -R doc/output/client/* ${pkgdir}/usr/share/doc/${pkgname}/client/
     cp -R doc/output/server/* -t ${pkgdir}/usr/share/doc/${pkgname}/server/
-    install -vDm0644 libmbcore.* -t "${pkgdir}/usr/lib"
+    install -vDm0755 libmbcore.* -t "${pkgdir}/usr/lib"
     install -vDm0755 $(ls mbclient-*) "${pkgdir}/usr/bin/mbclient"
     install -vDm0755 $(ls mbserver-*) "${pkgdir}/usr/bin/mbserver"
     install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/io.github.serhmarch.mbclient.desktop <<EOF
