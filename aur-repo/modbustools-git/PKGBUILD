@@ -2,7 +2,7 @@
 
 pkgname=modbustools-git
 pkgver=0.5.0.r1.g4d0a740
-pkgrel=4
+pkgrel=5
 pkgdesc="ModbusTools are cross-platform Modbus simulator tools with GUI to work with Modbus protocol (TCP,RTU,ASCII)"
 arch=($CARCH)
 url="https://github.com/serhmarch/ModbusTools"
