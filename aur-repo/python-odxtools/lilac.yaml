@@ -15,4 +15,5 @@ repo_depends:
 update_on:
   - source: github
     github: mercedes-benz/odxtools
+    use_latest_release: true
   - alias: python
