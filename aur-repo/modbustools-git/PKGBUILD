@@ -76,12 +76,12 @@ package() {
     install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm0755 src/server/python/*.py -t "${pkgdir}/usr/bin/"
     
-    install -vdm644 ${pkgdir}/usr/share/doc/${pkgname}/client \
+        install -vdm644 ${pkgdir}/usr/share/doc/${pkgname}/client \
                     ${pkgdir}/usr/share/doc/${pkgname}/server \
-                    ${pkgdir}/usr/share/pixmaps/
+                    ${pkgdir}/usr/share/icons/hicolor/256x256/apps/
 
-    magick src/server/gui/icons/mbserver.ico "${pkgdir}/usr/share/pixmaps/mbserver.png"
-    magick src/client/gui/icons/mbclient.ico "${pkgdir}/usr/share/pixmaps/mbclient.png"
+    magick src/server/gui/icons/mbserver.ico "${pkgdir}/usr/share/icons/hicolor/256x256/apps/mbserver.png"
+    magick src/client/gui/icons/mbclient.ico "${pkgdir}/usr/share/icons/hicolor/256x256/apps/mbclient.png"
     
     cd build
     cp -R doc/output/client/* ${pkgdir}/usr/share/doc/${pkgname}/client/
