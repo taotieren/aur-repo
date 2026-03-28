@@ -2,7 +2,7 @@
 
 pkgname=modbustools-git
 pkgver=0.5.0.r1.g4d0a740
-pkgrel=3
+pkgrel=4
 pkgdesc="ModbusTools are cross-platform Modbus simulator tools with GUI to work with Modbus protocol (TCP,RTU,ASCII)"
 arch=($CARCH)
 url="https://github.com/serhmarch/ModbusTools"
@@ -83,11 +83,9 @@ package() {
     cd build
     cp -R doc/output/client/* ${pkgdir}/usr/share/doc/${pkgname}/client/
     cp -R doc/output/server/* -t ${pkgdir}/usr/share/doc/${pkgname}/server/
-    install -vDm0755 libmbcore.* -t "${pkgdir}/usr/lib"
-    install -vDm0755 libmodbus.* -t "${pkgdir}/usr/lib"
+    install -vDm0644 libmbcore.* -t "${pkgdir}/usr/lib"
     install -vDm0755 $(ls mbclient-*) "${pkgdir}/usr/bin/mbclient"
     install -vDm0755 $(ls mbserver-*) "${pkgdir}/usr/bin/mbserver"
-
     install -Dm0644 /dev/stdin ${pkgdir}/usr/share/applications/io.github.serhmarch.mbclient.desktop <<EOF
 [Desktop Entry]
 Name=mbclient
@@ -109,4 +107,15 @@ Terminal=false
 Type=Application
 EOF
 
+    cd "${pkgdir}/usr/lib"
+    find . -maxdepth 1 -name "lib*.so.*.*.*" -type f | while read -r file; do
+        file="${file#./}"
+        if [[ "$file" =~ ^(lib[^.]+\.[^.]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            base="${BASH_REMATCH[1]}"
+            major="${BASH_REMATCH[2]}"
+            
+            ln -sf "$file" "${base}.${major}"
+            ln -sf "$file" "$base"
+        fi
+    done
 }
