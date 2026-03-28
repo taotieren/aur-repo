@@ -50,6 +50,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}/"
+    git cherry-pick -n 4d0a7408e12d28930d4aedb9356f8a42bb47685a
 
     cmake -S . \
         -DCMAKE_BUILD_TYPE=None \
