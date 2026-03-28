@@ -13,8 +13,10 @@ replaces=()
 depends=(
     sh
     electron
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
+    java-runtime
     python
 )
 makedepends=(
@@ -27,6 +29,7 @@ makedepends=(
 )
 optdepends=(
     "python-doipclient: A Diagnostic over IP (DoIP) client implementing ISO-13400-2."
+    "python-odxtools: Utilities to work with the ODX standard for automotive diagnostics"
     "python-udsoncan: Implementation of the Unified Diagnostic Service (UDS) protocol (ISO-14229) used in the automotive industry."
 )
 backup=()
