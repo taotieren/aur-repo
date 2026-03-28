@@ -25,6 +25,7 @@ makedepends=(
     git
     doxygen
     graphviz
+    imagemagick
 )
 optdepends=()
 backup=()
@@ -74,12 +75,15 @@ package() {
     cd "${srcdir}/${pkgname}/"
 
     install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -vDm0644 src/server/gui/icons/mbserver.ico -t "${pkgdir}/usr/share/pixmaps/"
-    install -vDm0644 src/client/gui/icons/mbclient.ico -t "${pkgdir}/usr/share/pixmaps/"
     install -vDm0755 src/server/python/*.py -t "${pkgdir}/usr/bin/"
     
     install -vdm644 ${pkgdir}/usr/share/doc/${pkgname}/client \
-                    ${pkgdir}/usr/share/doc/${pkgname}/server
+                    ${pkgdir}/usr/share/doc/${pkgname}/server \
+                    ${pkgdir}/usr/share/pixmaps/
+
+    magick src/server/gui/icons/mbserver.ico "${pkgdir}/usr/share/pixmaps/mbserver.png"
+    magick src/client/gui/icons/mbclient.ico "${pkgdir}/usr/share/pixmaps/mbclient.png"
+    
     cd build
     cp -R doc/output/client/* ${pkgdir}/usr/share/doc/${pkgname}/client/
     cp -R doc/output/server/* -t ${pkgdir}/usr/share/doc/${pkgname}/server/
