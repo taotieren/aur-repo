@@ -61,7 +61,6 @@ build() {
 
     cmake -S . \
         -DCMAKE_BUILD_TYPE=None \
-        -DCMAKE_INSTALL_PREFIX=dist \
         -DBUILD_SHARED_LIBS=OFF \
         -Wdeprecated-declarations \
         -Wno-dev \
