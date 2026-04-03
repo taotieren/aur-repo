@@ -10,7 +10,7 @@ post_build_script: |
 #   -
 update_on:
   - source: github
-    github: BIRLab/jia-xie/python-damiao-driver
+    github: jia-xie/python-damiao-driver
     use_max_tag: true
     prefix: v
   - alias: python
