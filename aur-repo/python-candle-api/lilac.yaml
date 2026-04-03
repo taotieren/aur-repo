@@ -10,7 +10,7 @@ repo_depends:
   - python-cmake
 update_on:
   - source: github
-    github: BIRLab/BIRLab/candle_api
+    github: BIRLab/candle_api
     use_max_tag: true
     prefix: v
   - alias: python
