@@ -22,6 +22,7 @@ optdepends=()
 provides=(${_name})
 conflicts=(${_name})
 replaces=(${_name})
+_name=${_name//-/_}
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 sha512sums=('607cb189b8360f516860abafe2a6f2a0f9efaf1a3cd12dd525cd5b5bd4612860807871715ceaee6bf7c5b9c10a9c5d3617e833865909e42049487c2568288970')
 
