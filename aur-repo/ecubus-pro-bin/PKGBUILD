@@ -1,9 +1,9 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ecubus-pro-bin
-_tagname=0.8.61
+_tagname=0.8.63
 pkgver=${_tagname//-/_}
-pkgrel=10
+pkgrel=11
 pkgdesc="A powerful automotive ECU development tool Easy of use, Cross platform, Multi dongle, Powerful script ability, CLI support"
 arch=(x86_64)
 url="https://github.com/ecubus/EcuBus-Pro"
@@ -37,7 +37,7 @@ options=(!debug !strip)
 install=
 _pkgname=EcuBus-Pro
 source=("${_pkgname}_${pkgver}_amd64.deb::${url}/releases/download/v${pkgver}/${_pkgname}_${pkgver}_amd64.deb")
-sha256sums=('6b5f49bfc660acf3b3ad350033b2fa8642deafc40bd5db12767616c5ad99b40f')
+sha256sums=('1a603caeaabe1689f901e111dad9ebaf156794f01936554986049c2d4911f948')
 noextract=("${_pkgname}_${pkgver}_amd64.deb")
 
 package() {
