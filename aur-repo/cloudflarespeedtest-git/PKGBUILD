@@ -10,9 +10,15 @@ license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
-depends=(go)
+depends=(
+    sh
+    glibc   
+)
 optdepends=()
-makedepends=('git')
+makedepends=(
+    git
+    go
+)
 backup=()
 options=()
 #install=${pkgname}.install
