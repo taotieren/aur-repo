@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['AurelienDuval6'])
+pre_build_script: aur_pre_build(maintainers=['glek'])
 post_build: aur_post_build
 update_on:
   - source: aur
