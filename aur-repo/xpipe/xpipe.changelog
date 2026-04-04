@@ -1,5 +1,7 @@
-- Add more documentation links and content
-- Fix bundled executables, e.g. hcloud, not taking priority over existing installed ones
-- Fix bitwarden sync button not showing proper error message when bw CLI was not installed
-- Fix terminal logging failing with generic error on Windows when powershell was unavailable
-- Fix various NullPointers
+- Add automatic fallback to disable hardware acceleration on Linux when the graphics driver had issues
+- Fix password manager agent option not working and not showing key list when used for git SSH auth
+- Fix rare concurrent modification exception on initial startup
+- Scripts and script categories can now be moved
+- The sample scripts category can now be deleted
+- Fix run script menu not showing nested categories
+- The latest Warp Terminal update broke opening scripts. It is currently unusable and is marked as not-recommended anymore
