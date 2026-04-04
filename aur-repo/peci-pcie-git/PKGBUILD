@@ -10,15 +10,16 @@ license=('Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
-    boost-libs
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
     systemd-libs
     #AUR
     libpeci-git
     sdbusplus-git
 )
 makedepends=(
+    boost-libs
     boost
     cmake
     git
