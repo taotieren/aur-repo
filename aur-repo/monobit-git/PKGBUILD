@@ -1,7 +1,7 @@
 # Maintainer: taotieren <cadmin@taotieren.com>
 
 pkgname=monobit-git
-pkgver=0.48.0.r2.g832d8142
+pkgver=0.48.0.r16.g899e979b
 pkgrel=1
 pkgdesc='Tools for working with monochrome bitmap fonts'
 url='https://github.com/robhagemans/monobit'
