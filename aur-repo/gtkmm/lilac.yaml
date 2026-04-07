@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['City-busz'])
+pre_build_script: aur_pre_build(maintainers=['polr', 'City-busz'])
 post_build: aur_post_build
 repo_depends:
   - gtk2
