@@ -5,6 +5,9 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
+repo_depends:
+  - python-mcp
+  - python-toon
 update_on:
   - source: github
     github: DreamSourceLab/DSView

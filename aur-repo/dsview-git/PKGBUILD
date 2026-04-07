@@ -20,19 +20,22 @@ replaces=()
 # Upstream added VCS dependency to libsigrokdecode :/
 _qt=qt6
 depends=(
-  boost-libs
   hicolor-icon-theme
-  gcc-libs
   glib2
   glibc
+  libgcc
   libusb
   ${_qt}-base
   fftw
   python
   zlib
+  # AUR
+  python-mcp
+  python-toon
 )
 makedepends=(
   boost
+  boost-libs
   cmake
   git
   ${_qt}-tools
