@@ -146,6 +146,7 @@ makedepends=(
     $_qt-quick3d
     $_qt-quickeffectmaker
     $_qt-positioning
+    $_qt-webengine
     $_qt-translations
     $_qt-tools
     pkgconf
