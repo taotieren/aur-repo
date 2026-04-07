@@ -140,6 +140,7 @@ makedepends=(
     git
     ninja
     $_qt-charts
+    $_qt-canvaspainter
     $_qt-location
     $_qt-shadertools
     $_qt-quick3d
