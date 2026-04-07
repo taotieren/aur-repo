@@ -2,7 +2,7 @@
 
 pkgname=libdamiao-motor-control-git 
 pkgver=r10.e1e508e
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Damiao (达妙) Motor Linux-C++ Driver Library"
 arch=($CARCH)
