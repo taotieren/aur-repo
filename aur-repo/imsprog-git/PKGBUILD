@@ -3,7 +3,7 @@
 pkgname=imsprog-git
 pkgver=1.8.2.r35.g3d08ab2
 pkgrel=1
-pkgdesc="MSProg - software for CH341A-based programmers to work with I2C, SPI and MicroWire EEPROM/Flash chips"
+pkgdesc="I2C, MicroWire and SPI EEPROM/Flash chip Programmer - is a program to read, write EEPROM chips use the CH341A programmer device and CH347T programmer device"
 arch=($CARCH)
 url="https://github.com/bigbigmdm/IMSProg"
 license=('GPL-3.0-only')
