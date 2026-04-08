@@ -89,7 +89,7 @@ package() {
 
     export RUSTUP_TOOLCHAIN=stable
     #     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
-    install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
+    install -Dm644 LICENSE* -t "${pkgdir}"/usr/share/licenses/${pkgname}/
     find target/release \
         -maxdepth 1 \
         -executable \
