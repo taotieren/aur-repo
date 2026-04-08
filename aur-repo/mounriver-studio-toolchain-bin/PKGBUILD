@@ -1,4 +1,5 @@
 # Maintainer: taotieren <admin@taotieren.com>
+# Maintainer: yjun <jerrysteve1101 at gmail dot com>
 
 pkgbase=mounriver-studio-toolchain-bin
 pkgname=($pkgbase
