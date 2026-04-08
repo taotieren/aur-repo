@@ -179,11 +179,13 @@ build() {
         -G Ninja \
         -Wno-dev
 
-    cmake --build build
+    # cmake --build build
+    ninja -C build
 }
 
 package() {
-    DESTDIR="$pkgdir" cmake --install "${srcdir}"/${pkgname}/build
+    # DESTDIR="$pkgdir" cmake --install "${srcdir}"/${pkgname}/build
+    DESTDIR="${pkgdir}" ninja -C ${srcdir}/${pkgname}/build install
     install -Dm644 "${srcdir}/${pkgname}/LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm0644 -d ${pkgdir}/usr/share/applications/ \
         ${pkgdir}/usr/share/metainfo/ \
