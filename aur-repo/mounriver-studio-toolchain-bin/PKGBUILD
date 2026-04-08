@@ -24,6 +24,7 @@ optdepends=(
     'ch343ser-dkms: USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch9103/ch9104, etc (dkms).'
     'wchisp: WCH ISP Tool in Rust'
     'imsprog: MSProg - software for CH341A-based programmers to work with I2C, SPI and MicroWire EEPROM/Flash chips'
+    'sfp-master: SFP-module programmer for CH341a devices'
 )
 # empty dummy file hosted on IPFS to satisfy updpkgsums/lilac checks
 # the content hash is guaranteed to be immutable
