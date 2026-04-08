@@ -34,7 +34,7 @@ makedepends=(
 backup=()
 options=(!lto !debug)
 install=
-source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 sha256sums=('3ffa9be25e60f0ca19e301fd5ee7b24aa6f43a3680bb73e5777424fe4b7dd4bf')
 
 prepare() {
