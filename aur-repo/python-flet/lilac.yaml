@@ -4,12 +4,13 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: |
   aur_pre_build(maintainers=['patlefort'])
-  add_makedepends(['llvm', 'python-csxcad'])
+  add_makedepends(['llvm', 'python-csxcad', 'csxcad'])
 post_build: aur_post_build
 repo_depends:
   - python-copier
   - python-repath
   - python-csxcad-git
+  - csxcad-git
 update_on:
   - source: aur
     aur: python-flet
