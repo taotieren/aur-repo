@@ -8,27 +8,32 @@ pkgdesc="A Python script that convert any electronic components from LCSC or Eas
 provides=(${pkgname})
 conflicts=(${pkgname})
 arch=('any')
-url="https://pypi.org/project/easyeda2kicad"
+url="https://github.com/uPesy/easyeda2kicad.py"
 _pydeps=(
     requests
     pydantic)
 depends=('python'
     "${_pydeps[@]/#/python-}")
 makedepends=(
+    'git'
     'python-build'
     'python-installer'
     'python-setuptools'
     'python-wheel')
 license=('AGPL-3.0-or-later')
-source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+source=("${_name}::git+${url}.git#tag=v$pkgver")
 sha256sums=('122a48fafa3b918e730185c973dd342183928b8a0dbe24436d13d58b90290e84')
 
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
 build() {
-    cd "${srcdir}/${_name}-${pkgver}"
+    cd "${srcdir}/${_name}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${_name}-${pkgver}"
+    cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
