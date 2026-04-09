@@ -9,7 +9,7 @@ pre_build_script: |
 
   run_cmd(['sed', '-i', 's/^pkgname=.*/pkgname=("csxcad-git" "python-csxcad-git")/', 'PKGBUILD'])
 
-  run_cmd(['sed', '-i', 's/^[[ "${_build_python::1}".*/[[ "${_build_python::1}" == "t" ]]/', 'PKGBUILD'])
+  run_cmd(['sed', '-i', 's/^\[\[ "${_build_python::1}".*/\[\[ "${_build_python::1}" == "t" \]\]/', 'PKGBUILD'])
 
   run_cmd(['updpkgsums'])
 post_build: aur_post_build
