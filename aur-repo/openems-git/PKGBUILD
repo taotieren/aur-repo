@@ -5,7 +5,7 @@
 
 _pkgname="openems"
 pkgbase="$_pkgname-git"
-pkgver=0.0.36.r123.g02cf7de
+pkgver=0.0.36.r145.g8ee535b
 pkgrel=1
 pkgdesc="A free and open source EC-FDTD solver"
 url="https://github.com/thliebig/openEMS"
@@ -39,7 +39,7 @@ _makedeps_python=(
 )
 
 depends=(${_depends_openems[@]})
-makedepends=(
+makedepends=("csxcad" "python-csxcad"
   'boost'
   'cmake'
   'fast_float'
