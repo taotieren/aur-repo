@@ -30,6 +30,7 @@ makedepends=(
     git
     ninja
     openssl
+    $_qt-5compat
     $_qt-quick3d
     $_qt-tools
     pkgconf
