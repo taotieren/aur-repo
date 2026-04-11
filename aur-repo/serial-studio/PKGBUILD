@@ -2,7 +2,7 @@
 
 pkgname=serial-studio
 _pkgname=Serial-Studio
-pkgver=3.2.5
+pkgver=3.2.6
 pkgrel=1
 pkgdesc="Multi-purpose serial data visualization & processing program"
 arch=($CARCH)
@@ -11,98 +11,10 @@ license=('GPL-3.0-only')
 groups=()
 _qt=qt6
 depends=(
-    abseil-cpp
-    aom
-    brotli
-    bzip2
-    cairo
-    curl
-    dav1d
-    duktape
-    e2fsprogs
     expat
-    ffmpeg
-    fontconfig
-    freetype2
-    fribidi
-    gdk-pixbuf2
-    glib2
     glibc
-    glycin
-    gnutls
-    gmp
-    gsm
-    graphite
-    harfbuzz
-    highway
-    icu
-    jbigkit
-    lame
-    lcms2
-    leancrypto
-    libbluray
-    libdatrie
-    libdeflate
-    libdrm
-    libdvdnav
-    libdvdread
-    libevdev
-    libffi
     libgcc
-    libglvnd
-    libgomp
-    libgudev
-    libice
-    libjpeg-turbo
-    libjxl
-    libp11-kit
-    libpgm
-    libpng
-    libpsl
-    libidn2
-    libnghttp2
-    libnghttp3
-    libngtcp2
-    libmodplug
-    librsvg
-    libseccomp
-    libssh
-    libsodium
-    libsoxr
     libstdc++
-    libssh2
-    libogg
-    libopenmpt
-    libtasn1
-    libthai
-    libtheora
-    libunistring
-    libva
-    libvdpau
-    libvpl
-    libvpx
-    libvorbis
-    libwacom
-    libwebp
-    libx11
-    libxau
-    libxcb
-    libxdmcp
-    libxext
-    libxfixes
-    libxkbcommon
-    libxml2
-    libxrender
-    lua
-    keyutils
-    krb5
-    rav1e
-    systemd-libs
-    mpg123
-    mtdev
-    nettle
-    nss
-    nspr
     $_qt-base
     $_qt-5compat
     $_qt-declarative
@@ -110,44 +22,15 @@ depends=(
     $_qt-graphs
     $_qt-serialport
     $_qt-svg
-    $_qt-webview
-    ocl-icd
-    opencore-amr
-    openjpeg2
-    openssl
-    opus
-    pango
-    pcre2
-    pixman
-    snappy
-    speex
-    srt
-    svt-av1
-    util-linux-libs
-    x264
-    x265
-    xcb-util
-    xcb-util-image
-    xcb-util-renderutil
-    xvidcore
-    xz
+    $_qt-webengine
     zlib
-    zeromq
-    zstd
 )
 makedepends=(
     cmake
     git
     ninja
-    $_qt-charts
-    $_qt-canvaspainter
-    $_qt-location
-    $_qt-shadertools
+    openssl
     $_qt-quick3d
-    $_qt-quickeffectmaker
-    $_qt-positioning
-    $_qt-webengine
-    $_qt-translations
     $_qt-tools
     pkgconf
     vulkan-headers
@@ -159,7 +42,7 @@ backup=()
 options=()
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('e172f571a5a37e2b9d38f8374ed48698e18b91f0af6037bcddaab1770240632e')
+sha256sums=('c92a9bf800cfa28e4b23a87fc18884669e3d80d4dbbd86d1f3735d8416a4267d')
 noextract=()
 
 prepare() {
@@ -170,29 +53,25 @@ build() {
     cd "$srcdir/${pkgname}"
 
     cmake -DCMAKE_BUILD_TYPE=Release \
-        -DPRODUCTION_OPTIMIZATION=OFF \
+        -DPRODUCTION_OPTIMIZATION=ON \
         -DUSE_SYSTEM_ZLIB=ON \
         -DUSE_SYSTEM_EXPAT=ON \
-        -DCMAKE_INSTALL_PREFIX=/usr/share/serial-studio \
-        -DCMAKE_INSTALL_BINDIR=/usr/bin \
+        -DCMAKE_SKIP_RPATH=OFF \
         -B build \
         -G Ninja \
         -Wno-dev
 
-    # cmake --build build
     ninja -C build
 }
 
 package() {
-    # DESTDIR="$pkgdir" cmake --install "${srcdir}"/${pkgname}/build
-    DESTDIR="${pkgdir}" ninja -C ${srcdir}/${pkgname}/build install
-    install -Dm644 "${srcdir}/${pkgname}/LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -Dm0644 -d ${pkgdir}/usr/share/applications/ \
-        ${pkgdir}/usr/share/metainfo/ \
-        ${pkgdir}/usr/share/pixmaps/
-
-    ln -sf /usr/share/serial-studio/share/applications/serial-studio-gpl3.desktop "${pkgdir}"/usr/share/applications/serial-studio-gpl3.desktop
-    ln -sf /usr/share/serial-studio/share/metainfo/serial-studio.metainfo.xml "${pkgdir}"/usr/share/metainfo/serial-studio.metainfo.xml
-    ln -sf /usr/share/serial-studio/share/pixmaps/serial-studio-gpl3.svg "${pkgdir}"/usr/share/pixmaps/serial-studio-gpl3.svg
+    cd "$srcdir/${pkgname}"
+    install -vDm644 /LICENSE.* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm644 LICENSES/* -t "${pkgdir}/usr/share/licenses/${pkgname}/LICENSES/"
+    install -vDm755 build/app/serial-studio-gpl3 -t "${pkgdir}/usr/bin/"
+    install -vDm644 app/deploy/linux/serial-studio-gpl3.desktop -t "${pkgdir}/usr/share/applications/"
+    install -vDm644 app/deploy/linux/serial-studio-gpl3.svg -t "${pkgdir}/usr/share/pixmaps/"
+    install -vDm644 app/deploy/linux/serial-studio.metainfo.xml -t "${pkgdir}/usr/share/metainfo/"
+    install -vDm644 app/deploy/linux/serial-studio-ssproj.xml -t "${pkgdir}/usr/share/metainfo/"
 }
 
