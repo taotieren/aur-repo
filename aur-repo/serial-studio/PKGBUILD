@@ -67,7 +67,7 @@ build() {
 
 package() {
     cd "$srcdir/${pkgname}"
-    install -vDm644 /LICENSE.* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm644 LICENSE.* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm644 LICENSES/* -t "${pkgdir}/usr/share/licenses/${pkgname}/LICENSES/"
     install -vDm755 build/app/serial-studio-gpl3 -t "${pkgdir}/usr/bin/"
     install -vDm644 app/deploy/linux/serial-studio-gpl3.desktop -t "${pkgdir}/usr/share/applications/"
