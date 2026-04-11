@@ -16,7 +16,6 @@ depends=(
     libgcc
     libstdc++
     $_qt-base
-    $_qt-5compat
     $_qt-declarative
     $_qt-canvaspainter 
     $_qt-connectivity
