@@ -3,10 +3,9 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers='patlefort')
 post_build: aur_post_build
-repo_depends:
-  - python-sphinx_rtd_dark_mode
-  - python-pygame-sdl2
+# repo_depends:
+#  -
 update_on:
   - source: aur
-    aur: renpy
+    aur: python-pygame-sdl2
   - alias: python
