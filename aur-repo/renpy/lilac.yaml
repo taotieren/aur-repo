@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers='patlefort')
+post_build: aur_post_build
+repo_depends:
+  - python-sphinx_rtd_dark_mode
+update_on:
+  - source: aur
+    aur: renpy
+  - alias: python
