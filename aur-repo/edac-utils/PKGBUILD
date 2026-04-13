@@ -64,4 +64,5 @@ StandardOutput=journal
 [Install]
 WantedBy=multi-user.target
 EOF
+    rm -rf "${pkgdir}/etc/init.d"
 }
