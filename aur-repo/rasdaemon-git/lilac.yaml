@@ -3,7 +3,8 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: |
   aur_pre_build(maintainers=['pmattern'])
-  add_makedepends(['autoconf', 'automake'])
+  add_depends(['pciutils'])
+  add_makedepends(['autoconf', 'automake', 'pkgconf'])
 post_build: aur_post_build
 # repo_depends:
 #   -
