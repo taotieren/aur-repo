@@ -12,6 +12,7 @@ _qt=qt6
 groups=()
 depends=(
     sh
+    glibc
     hicolor-icon-theme
     libgcc
     libstdc++
