@@ -25,6 +25,8 @@ sha256sums=('7dbe35f15029750247b8d175e64fc21f6577f72446a039ae684f85081157feab')
 
 prepare() {
 	git -C "${srcdir}/${pkgname}" clean -dfx
+	cd "${srcdir}/${pkgname}"
+	sed -i "s|ssl_debug_helpers_generated.c|ssl_debug_helpers.c|g" Sources/yapi/mbedtls/library/CMakeLists.txt
 }
 
 build() {
