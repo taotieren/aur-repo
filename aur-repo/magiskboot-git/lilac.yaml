@@ -5,8 +5,8 @@ pre_build: vcs_update
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-repo_depends:
-  - python-wget
+# repo_depends:
+#   -
 update_on:
   - source: github
-    github: xiaoxindada/magiskboot_ndk_on_linux
+    github: Uevo001/magiskboot-linux
