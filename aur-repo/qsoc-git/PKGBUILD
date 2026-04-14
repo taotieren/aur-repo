@@ -11,9 +11,11 @@ license=('Apache-2.0')
 _qt=qt6
 groups=()
 depends=(
+    fmt
     glibc
     libgcc
     libstdc++
+    hicolor-icon-theme
     $_qt-base
     yaml-cpp
     # AUR
