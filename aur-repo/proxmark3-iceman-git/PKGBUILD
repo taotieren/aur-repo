@@ -9,7 +9,6 @@ arch=('x86_64')
 url='https://github.com/RfidResearchGroup/proxmark3'
 license=('GPL-3.0-or-later')
 _pydeps=(
-  colorama
   cryptography
   bitarray
   bitstring
@@ -28,7 +27,7 @@ depends=(
   'libatomic'
   'libgcc'
   'libstdc++'
-  'lua'
+  'lua54'
   'lz4'
   'jansson'
   'perl'
