@@ -9,9 +9,10 @@ arch=($CARCH)
 license=('GPL-3.0-only')
 _qt=qt6
 depends=(
-    gcc-libs
     glibc
     hicolor-icon-theme
+    libgcc
+    libstdc++
     $_qt-base
     $_qt-multimedia
 )
