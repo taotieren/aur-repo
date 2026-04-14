@@ -9,7 +9,7 @@
 _pkgname="libsigrok"
 pkgname="$_pkgname-git"
 pkgver=0.5.2.r1862.g0bc2487
-pkgrel=1
+pkgrel=2
 pkgdesc="Client software that supports various hardware logic analyzers, core library"
 url="https://www.sigrok.org/wiki/Libsigrok"
 license=('GPL-3.0-or-later')
