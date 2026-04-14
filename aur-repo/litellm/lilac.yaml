@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['AlphaJack', 'medaminezghal', 'Dominiquini'])
+pre_build_script: |
+  aur_pre_build(maintainers=['AlphaJack', 'medaminezghal', 'Dominiquini'])
+  add_depends(['python-packaging', 'python-pydantic-core', 'python-typing_extensions', 'python-dateutil', 'sh', 'python-cryptography', 'python-botocore', 'python-certifi', 'python-backoff'])
 post_build: aur_post_build
 repo_depends:
   - python-aioboto3
