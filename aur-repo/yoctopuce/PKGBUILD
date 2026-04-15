@@ -20,8 +20,14 @@ makedepends=(
 	java-runtime
 )
 provides=('libyocto.so' 'libyapi.so')
-source=("${pkgname}::git+$url.git#tag=v$pkgver")
-sha256sums=('7dbe35f15029750247b8d175e64fc21f6577f72446a039ae684f85081157feab')
+source=(
+	"${pkgname}::git+$url.git#tag=v$pkgver"
+	LICENSE
+)
+sha256sums=(
+	'7dbe35f15029750247b8d175e64fc21f6577f72446a039ae684f85081157feab'
+	'2b22a5342677bd71e40e9fadab57146a8662ded89e97ac98b8726fb9a0e22e30'
+)
 
 prepare() {
 	git -C "${srcdir}/${pkgname}" clean -dfx
