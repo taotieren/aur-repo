@@ -19,6 +19,7 @@ makedepends=(
     curl
     git
     #     dotnet-core-bin
+    dotnet-host
     'dotnet-runtime>=9.0.0'
     'dotnet-sdk>=9.0.0'
 )
