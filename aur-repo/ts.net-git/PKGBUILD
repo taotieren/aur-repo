@@ -11,24 +11,22 @@ license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(bash
-    gcc-libs
+depends=(
+    sh
     glibc
-    zlib)
+    libgcc
+    libstdc++
+    # AUR
+    libtslitex
+)
 makedepends=(
     curl
     git
-    #     dotnet-core-bin
-    'dotnet-host>=9.0.0'
-    'dotnet-runtime>=9.0.0'
-    'dotnet-sdk>=9.0.0'
-    python
-    python-build
-    python-installer
-    python-wheel
-    python-setuptools
+    dotnet-host
+    dotnet-runtime
+    dotnet-sdk
 )
-optdepends=('scopehal-apps: glscopeclient and other client applications for libscopehal')
+optdepends=()
 backup=()
 options=('!strip' '!debug' '!lto')
 source=("${pkgname}::git+${url}.git")
@@ -50,20 +48,41 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}/build-scripts"
-    exec ./"TS.NET.Engine.cs"
+    ./TS.NET.Engine.cs -p:PublishTrimmed=false
+    # if [ "$CARCH" == "aarch64" ]; then
+    #     msg2 "build for arm64"
+    #     dotnet publish source/TS.NET.Engine -r linux-arm64 -c Release -p:-p:SysRoot=/crossrootfs/arm64 -p:PublishTrimmed=true --self-contained true -p:DebugType=None -p:DebugSymbols=false -o artifact
+    # else
+    #     msg2 "build for x64"
+    #     dotnet publish source/TS.NET.Engine -r linux-x64 -c Release -p:PublishTrimmed=true --self-contained true -p:DebugType=None -p:DebugSymbols=false -o artifact
+    # fi
+    # cd artifact/
+    # ./TS.NET.Engine
 }
 
 package() {
-    install -dm755 ${pkgdir}/usr/share/${pkgname%-git} \
-        ${pkgdir}/usr/bin
-    cd "${srcdir}/${pkgname}/build-scripts"
-    version=$(cat ../source/TS.NET.Engine/TS.NET.Engine.csproj | grep -oPm1 "(?<=<Version>)[^<]+")
-    cp -rv ${srcdir}/${pkgname}/builds/TS.NET.Engine/linux-x64/* ${pkgdir}/usr/share/${pkgname%-git}/
-    install -Dm755 /dev/stdin ${pkgdir}/usr/bin/${pkgname%-git} <<EOF
+    cd "${srcdir}/${pkgname}/"
+    if [ "$CARCH" == "aarch64" ]; then
+        msg2 "install for arm64"
+        cd build/TS.NET.Engine/linux-arm64
+        install -vDm755 TS.NET.Engine -t ${pkgdir}/usr/share/${pkgname}/
+        install -vDm644 thunderscope* -t ${pkgdir}/usr/share/${pkgname}/
+    else
+        msg2 "install for x64"
+        cd build/TS.NET.Engine/linux-x64
+        install -vDm755 TS.NET.Engine -t ${pkgdir}/usr/share/${pkgname}/
+        install -vDm644 thunderscope* -t ${pkgdir}/usr/share/${pkgname}/
+    fi
+    
+    install -vDm755 /dev/stdin ${pkgdir}/usr/bin/${pkgname%-git} <<EOF
 #!/bin/env bash
-
-cd /usr/share/${pkgname%-git}
-./TS.NET.Engine
+cd /usr/share/${pkgname}/
+./TS.NET.Engine "\$@"
 EOF
-
+    cd "${srcdir}/${pkgname}/"
+    install -vDm644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+    install -vDm644 README.md ${pkgdir}/usr/share/doc/${pkgname}/README.md
+    install -vDm644 docs/*.md -t ${pkgdir}/usr/share/doc/${pkgname}/docs/
+    install -vDm644 docs/*.drawio -t ${pkgdir}/usr/share/doc/${pkgname}/docs/
+    install -vDm644 docs/simulations/*.asc -t ${pkgdir}/usr/share/doc/${pkgname}/docs/simulations/
 }
