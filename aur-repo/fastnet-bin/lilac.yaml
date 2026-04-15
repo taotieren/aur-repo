@@ -20,4 +20,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://fw.koolcenter.com/binary/fastnet/
-    regex: 'fastnet-binary-([\d.]+)\.tar\.gz'
+    regex: 'fastnet-binary-raw-([\d.]+)\.tar\.gz'

@@ -14,12 +14,12 @@ conflicts=(${pkgbase%-bin})
 depends=()
 makedepends=()
 optdepends=()
-source=("https://fw0.koolcenter.com/binary/fastnet/${_name}-binary-${pkgver}.tar.gz")
+source=("https://fw0.koolcenter.com/binary/fastnet/${_name}-binary-raw-${pkgver}.tar.gz")
 sha256sums=('23cdfb1421ca446952974c644c02f24c234f0782b5f021dab3ca3114707bc7fc')
 options=(!debug !strip)
 
 package() {
-    cd "${srcdir}/${_name}-binary-${pkgver}/"
+    cd "${srcdir}/${_name}-binary-raw-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
         install -vDm755 ${_name}.x86_64 ${pkgdir}/usr/bin/${_name}
     elif [ ${CARCH} = "aarch64" ]; then
