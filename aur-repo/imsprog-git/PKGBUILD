@@ -2,7 +2,7 @@
 
 pkgname=imsprog-git
 pkgver=1.8.2.r56.g9c487e3
-pkgrel=1
+pkgrel=2
 pkgdesc="I2C, MicroWire and SPI EEPROM/Flash chip Programmer - is a program to read, write EEPROM chips use the CH341A programmer device and CH347T programmer device"
 arch=($CARCH)
 url="https://github.com/bigbigmdm/IMSProg"
