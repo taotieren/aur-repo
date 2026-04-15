@@ -22,6 +22,11 @@ makedepends=(
     'dotnet-host>=9.0.0'
     'dotnet-runtime>=9.0.0'
     'dotnet-sdk>=9.0.0'
+    python
+    python-build
+    python-installer
+    python-wheel
+    python-setuptools
 )
 optdepends=('scopehal-apps: glscopeclient and other client applications for libscopehal')
 backup=()
