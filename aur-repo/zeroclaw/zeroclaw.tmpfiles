@@ -1,3 +1,0 @@
-#Type  Path                            Mode  User      Group     Age  Argument
-d      /var/lib/zeroclaw               0750  zeroclaw  zeroclaw  -    -
-d      /var/lib/zeroclaw/workspace     0750  zeroclaw  zeroclaw  -    -
