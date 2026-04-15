@@ -10,8 +10,9 @@ url="https://github.com/yoctopuce/yoctolib_cpp"
 license=('LicenseRef-custom')
 groups=('yoctopuce-libs')
 depends=(
-	gcc-libs
 	glibc
+	libgcc
+	libstdc++
 	libusb
 )
 makedepends=(
