@@ -27,6 +27,7 @@ depends=(
 )
 makedepends=(
     rust
+    clang
     cmake
     ffmpeg
     git

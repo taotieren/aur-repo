@@ -26,6 +26,7 @@ depends=(
     systemd-libs)
 makedepends=(
     cargo
+    clang
     cmake
     ffmpeg
     pkgconf)
