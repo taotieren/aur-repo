@@ -45,7 +45,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}/build-scripts"
-    bash ./"TS.NET.Engine.cs"
+    exec ./"TS.NET.Engine.cs"
 }
 
 package() {
