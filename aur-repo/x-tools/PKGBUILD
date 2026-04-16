@@ -11,20 +11,21 @@ url="https://github.com/x-tools-author/x-tools"
 license=('LGPL-3.0-or-later')
 provides=(${pkgname} xtools)
 conflicts=(${pkgname} xtools)
+_qt=qt6
 depends=(
     bash
-    gcc-libs
     glibc
     hicolor-icon-theme
-    libiconv
-    libunwind
-    vulkan-headers
-    qt6-charts
-    qt6-connectivity
-    qt6-base
-    qt6-serialbus
-    qt6-serialport
-    qt6-websockets
+    libgcc
+    libstdc++
+    $_qt-charts
+    $_qt-connectivity
+    $_qt-base
+    $_qt-declarative
+    $_qt-serialbus
+    $_qt-serialport
+    $_qt-websockets
+    systemd-libs
     #     google-glog
     #     libusb
     #     hidapi
@@ -38,8 +39,11 @@ makedepends=(
     git
     cmake
     ninja
-    qt6-svg
-    qt6-tools
+    libiconv
+    libunwind
+    vulkan-headers
+    $_qt-svg
+    $_qt-tools
     pkgconf
 )
 checkdepends=(
