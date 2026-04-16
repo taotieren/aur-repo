@@ -7,7 +7,6 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - libtslitex-git
-  - ts-litex-driver-git
 update_on:
   - source: github
-    github: EEVengers/TS.NET
+    github: EEVengers/ts_litex_driver_linux

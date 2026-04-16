@@ -18,6 +18,7 @@ depends=(
     libstdc++
     # AUR
     libtslitex
+    ts-litex-driver
 )
 makedepends=(
     curl
