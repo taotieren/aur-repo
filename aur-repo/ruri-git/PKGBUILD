@@ -2,8 +2,8 @@
 
 pkgbase=ruri-git
 pkgname=ruri-git
-pkgver=3.9.3.r45.g777e35f
-pkgrel=2
+pkgver=3.9.3.r51.g5f40adb
+pkgrel=1
 pkgdesc="A zipped Linux container runtime that zips (Lightweight User-friendly Linux-container Implementation)"
 arch=($CARCH)
 url="https://github.com/RuriOSS/ruri"
