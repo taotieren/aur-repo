@@ -28,6 +28,7 @@ depends=(
 makedepends=(
     antlr4-runtime
     cmake
+    cppcheck
     boost
     ninja
     git
