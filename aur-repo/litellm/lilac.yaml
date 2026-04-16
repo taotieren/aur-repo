@@ -8,6 +8,7 @@ post_build: aur_post_build
 repo_depends:
   - python-aioboto3
   - python-backoff
+  - python-fastapi-sso
   - python-fastuuid
   - python-tokenizers
 update_on:
