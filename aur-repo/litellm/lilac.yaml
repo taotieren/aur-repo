@@ -4,6 +4,7 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers=['AlphaJack', 'medaminezghal', 'Dominiquini'])
   add_depends(['python-packaging', 'python-pydantic-core', 'python-typing_extensions', 'python-dateutil', 'sh', 'python-cryptography', 'python-botocore', 'python-certifi', 'python-backoff'])
+  add_makedepends(['python-uv'])
 post_build: aur_post_build
 repo_depends:
   - python-aioboto3
