@@ -5,7 +5,7 @@ pkgver=r636.092ce57
 pkgrel=1
 epoch=
 pkgdesc="Thunderscope-compatible PC-host software written in C# using high-performing primitives & SIMD."
-arch=($CARCH)
+arch=(x86_64)
 url="https://github.com/EEVengers/TS.NET"
 license=('MIT')
 provides=(${pkgname%-git})
@@ -49,31 +49,13 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/build-scripts"
     ./TS.NET.Engine.cs
-    # if [ "$CARCH" == "aarch64" ]; then
-    #     msg2 "build for arm64"
-    #     dotnet publish source/TS.NET.Engine -r linux-arm64 -c Release -p:-p:SysRoot=/crossrootfs/arm64 -p:PublishTrimmed=true --self-contained true -p:DebugType=None -p:DebugSymbols=false -o artifact
-    # else
-    #     msg2 "build for x64"
-    #     dotnet publish source/TS.NET.Engine -r linux-x64 -c Release -p:PublishTrimmed=true --self-contained true -p:DebugType=None -p:DebugSymbols=false -o artifact
-    # fi
-    # cd artifact/
-    # ./TS.NET.Engine
 }
 
 package() {
-    cd "${srcdir}/${pkgname}/"
-    if [ "$CARCH" == "aarch64" ]; then
-        msg2 "install for arm64"
-        cd build/TS.NET.Engine/linux-arm64
-        install -vDm755 TS.NET.Engine -t ${pkgdir}/usr/share/${pkgname}/
-        install -vDm644 thunderscope* -t ${pkgdir}/usr/share/${pkgname}/
-    else
-        msg2 "install for x64"
-        cd build/TS.NET.Engine/linux-x64
-        install -vDm755 TS.NET.Engine -t ${pkgdir}/usr/share/${pkgname}/
-        install -vDm644 thunderscope* -t ${pkgdir}/usr/share/${pkgname}/
-    fi
-    
+    cd ${srcdir}/${pkgname}/build/TS.NET.Engine/linux-x64
+    install -vDm755 TS.NET.Engine -t ${pkgdir}/usr/share/${pkgname}/
+    install -vDm644 thunderscope* -t ${pkgdir}/usr/share/${pkgname}/
+    ln -sf /usr/lib/libtslitex.so ${pkgdir}/usr/share/${pkgname}/libtslitex.so
     install -vDm755 /dev/stdin ${pkgdir}/usr/bin/${pkgname%-git} <<EOF
 #!/bin/env bash
 cd /usr/share/${pkgname}/
