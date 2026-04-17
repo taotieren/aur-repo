@@ -12,6 +12,8 @@ pre_build_script: |
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
+repo_depends:
+  - liblxi
 update_on:
   - source: github
     github: ngscopeclient/scopehal-apps
