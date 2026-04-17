@@ -39,9 +39,12 @@ makedepends=(
     catch2
     fftw
     lsb-release
+    nvtx
+    openmp
+    pkgconf
     shaderc
     vulkan-headers
-    pkgconf
+    wayland
 )
 checkdepends=()
 optdepends=(
