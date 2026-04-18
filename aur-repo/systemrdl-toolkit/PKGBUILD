@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=systemrdl-toolkit
-pkgver=0.2.1
-pkgrel=3
+pkgver=0.2.2
+pkgrel=1
 epoch=
 pkgdesc="A pure C++ toolkit for parsing and elaborating SystemRDL files"
 arch=($CARCH)
@@ -38,7 +38,7 @@ install=
 changelog=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('4f50f39c2cd3592253cda031f335cc04c5dc5b2cc60ae08662c76118892efa32')
+sha256sums=('ca9c5dd21025e6f3333d781685e657c6be75c101a7e1fa93f5a92466a2c57272')
 validpgpkeys=()
 
 prepare() {
