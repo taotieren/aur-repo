@@ -12,8 +12,9 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
     lksctp-tools
 )
 makedepends=(
