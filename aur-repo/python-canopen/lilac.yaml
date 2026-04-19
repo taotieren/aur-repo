@@ -3,8 +3,8 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers='Jona')
 post_build: aur_post_build
-# repo_depends:
-#   -
+repo_depends:
+  - python-pytest-curio
 update_on:
   - source: aur
     aur: python-canopen
