@@ -2,7 +2,7 @@
 
 pkgname=python-pytest-curio
 _name=${pkgname#python-}
-pkgver=1.0.1
+pkgver=1.1.0
 pkgrel=1
 pkgdesc='Launch pytest with curio'
 arch=('any')
@@ -24,7 +24,7 @@ makedepends=(
 )
 options=('!strip' '!debug')
 source=("${_name}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('6b9d3b065d10223a3bcd9fbc76a10f41452d13d61c0eeaca9ba5e9600d32c898')
+sha256sums=('b524371d4d4b4a96a36fd1d62d822c9697f5d24024bd9bfb700c2186252841da')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
