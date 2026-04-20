@@ -22,6 +22,7 @@ depends=(
     python-openpyxl
     python-yaml
     # AUR
+    python-canmatrix
     python-doipclient
     python-odxtools
     python-udsoncan
@@ -38,7 +39,7 @@ optdepends=(
     # "python-doipclient: A Diagnostic over IP (DoIP) client implementing ISO-13400-2."
     # "python-odxtools: Utilities to work with the ODX standard for automotive diagnostics"
     # "python-udsoncan: Implementation of the Unified Diagnostic Service (UDS) protocol (ISO-14229) used in the automotive industry."
-    "python-canmatrix: Canmatrix is a python package to read and write several CAN (Controller Area Network) database formats"
+    # "python-canmatrix: Canmatrix is a python package to read and write several CAN (Controller Area Network) database formats"
 )
 backup=()
 options=(!debug !strip)
@@ -66,6 +67,7 @@ build() {
     npm run worker
     npm run api
     npm run cli:build:linux
+    npm run build:sdk
     npm run build:unpack
 }
 
