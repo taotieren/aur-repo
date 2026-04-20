@@ -89,6 +89,7 @@ package_motorbridge() {
   depends=(
     glibc
     libgcc
+    python
   )
   arch=($CARCH)
 
