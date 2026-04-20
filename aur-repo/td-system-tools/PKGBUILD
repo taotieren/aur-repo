@@ -27,7 +27,7 @@ checkdepends=(
 )
 optdepends=()
 options=('!debug')
-source=("${pkgname}::git+${url}.git#tags=${pkgname}-${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=${pkgname}-${pkgver}")
 sha256sums=('6f46c0fe5825f91fb71ff9cc6fb63125696f175158d933493f1fbe45e0d3772b')
 
 prepare()
