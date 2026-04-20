@@ -100,7 +100,7 @@ package_motorbridge() {
       -type f \
       -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
   rm -rf ${pkgdir}/usr/bin/*.so
-  install -vDm644 *.md "${pkgdir}/usr/share/doc/${pkgname}/"
+  install -vDm644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
   cp -R docs "${pkgdir}/usr/share/doc/${pkgname}/"
   cp -R examples "${pkgdir}/usr/share/doc/${pkgname}/"
   install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
