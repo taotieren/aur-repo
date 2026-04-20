@@ -102,6 +102,7 @@ package_motorbridge() {
   rm -rf ${pkgdir}/usr/bin/*.so
   install -vDm644 *.md "${pkgdir}/usr/share/doc/${pkgname}/"
   cp -R docs "${pkgdir}/usr/share/doc/${pkgname}/"
+  cp -R examples "${pkgdir}/usr/share/doc/${pkgname}/"
   install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
 
