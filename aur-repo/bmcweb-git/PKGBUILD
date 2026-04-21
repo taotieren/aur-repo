@@ -17,9 +17,10 @@ depends=(
     openssl
     tinyxml2
     pam
-    sdbusplus-git
     systemd-libs
     zlib
+# AUR
+    sdbusplus-git
 )
 makedepends=(
     cmake
