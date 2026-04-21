@@ -1,0 +1,23 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+
+# pre_build_script: |
+#   oldver, oldrel = get_pkgver_and_pkgrel()
+#   for line in edit_file('PKGBUILD'):
+#     if line.startswith('_tagname='):
+#       line = f"_tagname={_G.newver}"
+#     print(line)
+#   newver, newrel = get_pkgver_and_pkgrel()
+#   update_pkgrel(1 if newver != oldver else None)
+#   run_protected(["updpkgsums"])
+
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: regex
+    url: https://fw.koolcenter.com/binary/ddnsto/
+    regex: 'ddnsto-binary-([\d.]+)\.tar\.gz'
