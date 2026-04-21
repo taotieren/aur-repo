@@ -2,7 +2,7 @@
 
 pkgname=phosphor-dbus-interfaces-git
 pkgver=r934.a12cc29
-pkgrel=1
+pkgrel=2
 pkgdesc="YAML descriptors of standard dbus interfaces (in OpenBMC)"
 url="https://github.com/openbmc/phosphor-dbus-interfaces"
 arch=($CARCH)
