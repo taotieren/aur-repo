@@ -29,9 +29,9 @@ makedepends=(
     rust
     clang
     cmake
-    ffmpeg
     git
     pkgconf
+    yasm
 )
 backup=()
 options=(!lto !debug)
@@ -53,7 +53,7 @@ prepare() {
     cd "${srcdir}/${_name}"
     
     # Remove any existing cargo config that might use problematic mirrors
-    rm -f .cargo/config.toml .cargo/config
+    # rm -f .cargo/config.toml .cargo/config
     
     # Use official crates.io registry
     # export CARGO_REGISTRIES_CRATES_IO_INDEX="https://github.com/rust-lang/crates.io-index"
@@ -64,6 +64,9 @@ prepare() {
 
 build() {
     cd "${srcdir}/${_name}/"
+
+    ./stream/build_ffmpeg_min_bootstrap.sh
+    source stream/env_ffmpeg.sh
 
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/entity.rs
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/mapper.rs
