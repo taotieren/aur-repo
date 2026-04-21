@@ -10,3 +10,5 @@ repo_depends:
 update_on:
   - source: aur
     aur: phosphor-dbus-interfaces-git
+  - source: github
+    github: openbmc/phosphor-dbus-interfaces
