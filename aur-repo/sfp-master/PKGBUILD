@@ -10,8 +10,9 @@ license=('GPL-3.0-or-later AND LGPL-2.1-or-later')
 provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
-  gcc-libs
   glibc
+  libgcc
+  libstdc++
   libusb
   qt6-base
 )
