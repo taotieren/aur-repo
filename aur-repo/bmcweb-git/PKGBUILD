@@ -10,15 +10,16 @@ url="https://github.com/openbmc/bmcweb"
 license=('Apache-2.0')
 groups=()
 depends=(
-    boost-libs
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
     libnghttp2
     openssl
     tinyxml2
     pam
     systemd-libs
     zlib
+    zstd
 # AUR
     sdbusplus-git
 )
@@ -26,6 +27,7 @@ makedepends=(
     cmake
     cli11
     boost
+    boost-libs
     git
     gtest
     ninja
