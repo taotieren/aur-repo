@@ -6,6 +6,7 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
+  - scopehal-apps
   - libtslitex-git
   - ts-litex-driver-git
 update_on:

@@ -2,7 +2,7 @@
 
 pkgname=ts.net-git
 pkgver=r652.c181cd8
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Thunderscope-compatible PC-host software written in C# using high-performing primitives & SIMD."
 arch=(x86_64)
@@ -17,6 +17,7 @@ depends=(
     libgcc
     libstdc++
     # AUR
+    scopehal-apps
     libtslitex
     ts-litex-driver
 )
@@ -28,7 +29,7 @@ makedepends=(
     dotnet-sdk
 )
 optdepends=(
-    "scopehal-apps: ngscopeclient and other client applications for libscopehal"
+    # "scopehal-apps: ngscopeclient and other client applications for libscopehal"
 )
 backup=()
 options=('!strip' '!debug' '!lto')
