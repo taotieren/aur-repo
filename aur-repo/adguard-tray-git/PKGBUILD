@@ -38,9 +38,6 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    sed -i "s|usr/local/bin|/usr/bin|g" adguard-tray.desktop
-    rm -rf contrib
 }
 
 build() {
@@ -52,6 +49,5 @@ package() {
     cd "${srcdir}/${pkgname}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
     install -vDm644 adguard-tray.desktop -t "$pkgdir/usr/share/applications/"
-    install -vDm755 adguard-tray.py "$pkgdir/usr/bin/${pkgname%-git}"
     install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
