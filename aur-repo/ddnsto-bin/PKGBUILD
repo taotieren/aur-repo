@@ -4,7 +4,7 @@ pkgbase=ddnsto-bin
 pkgname=ddnsto-bin
 _name=${pkgname%-bin}
 pkgver=4.0.7
-pkgrel=6
+pkgrel=7
 pkgdesc="DDNSTO is a stable, fast and easy-to-use intranet penetration tool"
 arch=(
     x86_64
