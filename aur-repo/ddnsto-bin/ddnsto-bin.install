@@ -6,7 +6,7 @@ DDNSTO 快速使用
 
 1. 配置
 sudo vim /etc/ddnsto/config.yaml
-# 修改: userToken 和 webdav.password
+# 修改: userToken routerName 和 webdav.password
 
 2. 启动
 sudo systemctl enable --now ddnsto

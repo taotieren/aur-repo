@@ -32,7 +32,7 @@ sha256sums=('e6244ac8fd8930a023c77246a2baf0e7aa1adf0d4af9193b115ec60fbe8c41ce'
             '54fd70cb726ce1d0ae67d9ffa31c992da8637d453b958999104ccab5c254cd8b'
             '538d3fd7bb980cffb5464b4ecf2618aa27b8a86c1e4c2800f833e0ae1768c559'
             'b068dcd630d7ce9a3b0bf904340f9438572d84cd4c75ad49102a274a4be37dd6'
-            '56e51e561e18e9c38ac928763af2d04702e044cc132ab4970a3dbb3c029e43f9')
+            'cc6e3ffc32bec088bc5c22e5fe5f0552a423fc441cd6613c575eb8939dac277e')
 options=(!debug !strip emptydirs)
 
 package() {
