@@ -34,7 +34,7 @@ checkdepends=(
 # disable LTO until ring can be built with it: https://github.com/briansmith/ring/issues/1444
 options=(!lto)
 source=(
-  "${_name}::git+$url.git#tag=${pkgver}"
+  "${_name}::git+$url.git#tag=v${pkgver}"
 )
 sha512sums=('SKIP')
 
