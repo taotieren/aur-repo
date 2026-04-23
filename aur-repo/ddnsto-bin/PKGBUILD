@@ -20,6 +20,7 @@ depends=()
 makedepends=()
 optdepends=()
 backup=('etc/ddnsto/config.yaml')
+install=${pkgname}.install
 source=(
     "https://fw0.koolcenter.com/binary/ddnsto/${_name}-binary-${pkgver}.tar.gz"
     "ddnsto.service"
