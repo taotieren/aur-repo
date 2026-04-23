@@ -3,8 +3,8 @@
 pkgbase=ddnsto-bin
 pkgname=ddnsto-bin
 _name=${pkgname%-bin}
-pkgver=4.0.6
-pkgrel=0
+pkgver=4.0.7
+pkgrel=1
 pkgdesc="DDNSTO is a stable, fast and easy-to-use intranet penetration tool"
 arch=(
     x86_64
@@ -28,7 +28,7 @@ source=(
     "${pkgname}.sysusers"
     "${pkgname}.install"
 )
-sha256sums=('e6244ac8fd8930a023c77246a2baf0e7aa1adf0d4af9193b115ec60fbe8c41ce'
+sha256sums=('d6a33d0878dcc41dc65fb65b62fbe655365f9839418ec71e0cf520dfcdab8a4d'
             '99d7c3c20776645a08de44062cea1b32fd37288e35d61821e90c45e132dd5f14'
             '8269ed5fd739199ca3daba3aed8d775a26e883d33f561d396cf23fb7255caff7'
             'b068dcd630d7ce9a3b0bf904340f9438572d84cd4c75ad49102a274a4be37dd6'
