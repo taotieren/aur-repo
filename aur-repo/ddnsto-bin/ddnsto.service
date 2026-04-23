@@ -13,9 +13,9 @@ Group=ddnsto
 
 PrivateTmp=yes
 ProtectSystem=no
-ProtectHome=yes
+ProtectHome=no
 
-ExecStart=/usr/bin/ddnsto --config /etc/ddnsto/config.yaml
+ExecStart=/usr/bin/ddnsto --config /var/lib/ddnsto/config.yaml
 Restart=always
 RestartSec=10
 
