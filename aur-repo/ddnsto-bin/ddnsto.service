@@ -13,7 +13,7 @@ Group=ddnsto
 
 PrivateTmp=yes
 ProtectSystem=no
-ProtectHome=no
+ProtectHome=yes
 
 ExecStart=/usr/bin/ddnsto --config /etc/ddnsto/config.yaml
 Restart=always
