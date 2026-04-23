@@ -24,6 +24,10 @@ sudo journalctl -u ddnsto -f
 在浏览器打开 / Open in browser:
 xdg-open http://localhost:18088
 
+5. SSH 访问权限 / SSH Access Permission
+sudo gpasswd -a ddnsto \$USER
+newgrp ddnsto
+
 ================================
 EOF
 }
