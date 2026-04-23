@@ -3,7 +3,7 @@
 
 pkgname=python-cmsis-pack-manager
 _name=cmsis_pack_manager
-pkgver=0.5.3
+pkgver=0.6.0
 pkgrel=1
 pkgdesc="A Rust and Python module for handling CMSIS Pack files"
 arch=($CARCH)
@@ -36,7 +36,7 @@ options=(!lto)
 source=(
   "${_name}::git+$url.git#tag=v${pkgver}"
 )
-sha512sums=('SKIP')
+sha512sums=('1e5c29781e0b61a8ef3412316ef9f8dcf421c211208e0cf4dd15b186b046964865c58f0e8df2db83ee1b313029992a0179c62abae1bf042aa795f17d1b287551')
 
 prepare() {
   # https://github.com/pyocd/cmsis-pack-manager/pull/219
