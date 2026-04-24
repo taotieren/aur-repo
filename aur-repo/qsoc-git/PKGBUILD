@@ -39,6 +39,7 @@ makedepends=(
     $_qt-tools
     pkgconf
     inja
+    mbedtls
     nlohmann-json
     sqlite
     vulkan-headers
