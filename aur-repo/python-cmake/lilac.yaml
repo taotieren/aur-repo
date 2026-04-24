@@ -9,6 +9,8 @@ post_build_script: |
 # repo_depends:
 #   -
 update_on:
-  - source: pypi
-    pypi: cmake
+  - source: github
+    github: scikit-build/cmake-python-distributions
+    use_max_tag: true
+    # prefix: v
   - alias: python
