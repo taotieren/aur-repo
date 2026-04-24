@@ -15,8 +15,9 @@ conflicts=(${pkgname})
 depends=(
     sh
     cmake
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
     libidn2
     openssl
     ncurses
