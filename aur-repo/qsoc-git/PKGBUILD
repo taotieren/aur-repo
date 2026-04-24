@@ -33,6 +33,7 @@ makedepends=(
     ninja
     git
     fmt
+    libssh2
     $_qt-5compat
     $_qt-svg
     $_qt-tools
