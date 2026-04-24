@@ -115,11 +115,11 @@ prepare() {
     git config submodule.tf-psa-crypto.url "$srcdir/tf-psa-crypto"
     git -c protocol.file.allow=always submodule update
 
-    cd "${srcdir}/${pkgname}/external/mbedtls/tf-psa-crypto"
-    git submodule init
-    git config submodule.framework.url "$srcdir/framework"
-    git config submodule.mldsa-native.url "$srcdir/mldsa-native"
-    git -c protocol.file.allow=always submodule update
+    # cd "${srcdir}/${pkgname}/external/mbedtls/tf-psa-crypto"
+    # git submodule init
+    # git config submodule.framework.url "$srcdir/framework"
+    # git config submodule.mldsa-native.url "$srcdir/mldsa-native"
+    # git -c protocol.file.allow=always submodule update
 }
 
 build() {
@@ -127,6 +127,7 @@ build() {
 
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
         -D ENABLE_UNIT_TEST=OFF \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-deprecated-declarations \
         -Wno-dev \
         -B build \
