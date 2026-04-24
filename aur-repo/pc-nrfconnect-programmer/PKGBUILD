@@ -7,9 +7,11 @@ epoch=
 pkgdesc="Programmer app for nRF Connect for Desktop"
 arch=('any')
 url="https://github.com/NordicSemiconductor/pc-nrfconnect-programmer"
-license=('Nordic-4-Clause')
+license=('LicenseRef-Nordic-4-Clause')
 groups=()
-depends=()
+depends=(
+    sh
+)
 makedepends=('npm')
 checkdepends=()
 optdepends=("nrf-udev: udev rules for nRF (Nordic Semiconductor) development kits"
