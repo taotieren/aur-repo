@@ -62,7 +62,11 @@ source=(
     "libssh2::git+https://github.com/libssh2/libssh2.git"
 )
 noextract=()
-sha256sums=('SKIP')
+sha256sums=(
+    'SKIP'
+    'SKIP'
+    'SKIP'
+)
 validpgpkeys=()
 
 pkgver() {
