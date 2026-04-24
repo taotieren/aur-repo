@@ -44,6 +44,8 @@ prepare() {
 build() {
     cd "${srcdir}/${_name}"
     python -m build --wheel --no-isolation
+        # -Ccmake.define.BUILD_CMAKE_FROM_SOURCE=ON \
+        # -Ccmake.define.CMakePythonDistributions_ARCHIVE_DOWNLOAD_DIR=${srcidr}/cmake
 }
 
 package() {
