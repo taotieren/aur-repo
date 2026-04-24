@@ -58,7 +58,7 @@ source=(
     "mbedtls::git+https://github.com/Mbed-TLS/mbedtls.git"
     "framework::git+https://github.com/Mbed-TLS/mbedtls-framework.git"
     "tf-psa-crypto::git+https://github.com/Mbed-TLS/TF-PSA-Crypto.git"
-    "mldsa-native::git+https://github.com/Mbed-TLS/mldsa-native"
+    "mldsa-native::git+https://github.com/Mbed-TLS/mldsa-native.git"
 )
 sha256sums=(
     'SKIP'
