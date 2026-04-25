@@ -53,7 +53,7 @@ package() {
     install -vdm0755 "${pkgdir}/${_stc}/${pkgname%-wine}"
     install -vDm6644 "${srcdir}/icon.svg" "${pkgdir}/usr/share/pixmaps/${pkgname%-wine}.svg"
 
-    cp -ra "${srcdir}/${_name}-v${pkgver}.exe" "${pkgdir}/${_stc}/${pkgname%-wine}"
+    install -vDm0755 "${srcdir}/${_name}-v${pkgver}.exe" -t "${pkgdir}/${_stc}/${pkgname%-wine}"
 
     find "${pkgdir}/${_stc}" -type f -exec chmod 644 "{}" \;
     find "${pkgdir}/${_stc}" -type d -exec chmod 755 "{}" \;
@@ -135,7 +135,7 @@ if [ ! -d "\$HOME"/.${pkgname%-wine} ] ; then
 
     cp -r /${_stc}/${pkgname%-wine}/regpatch.reg "\$HOME"/.${pkgname%-wine}/wine || exit 1
 
-    ln -s /${_stc}/${pkgname%-wine}/${pkgname%-wine}-v${pkgver}.exe "\$HOME"/.${pkgname%-wine}/${pkgname%-wine} || exit 1
+    ln -s /${_stc}/${pkgname%-wine}/${_name}-v${pkgver} "\$HOME"/.${pkgname%-wine}/${_name}.exe || exit 1
 fi
 
 if [ ! -f "\$HOME"/.${pkgname%-wine}/regpatchok ] ; then
@@ -144,7 +144,7 @@ if [ ! -f "\$HOME"/.${pkgname%-wine}/regpatchok ] ; then
     winetricks -q mfc42
 fi
 
-wine "\$HOME"/.${pkgname%-wine}/${pkgname%-wine} "\$@"
+wine "\$HOME"/.${pkgname%-wine}/${_name}.exe "\$@"
 EOF
 
     install -vDm0644 /dev/stdin "${pkgdir}/usr/share/applications/${pkgname%-wine}.desktop" << EOF
