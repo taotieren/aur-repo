@@ -1,0 +1,24 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+
+pre_build_script: |
+  oldver, oldrel = get_pkgver_and_pkgrel()
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
+  run_protected(["updpkgsums"])
+
+post_build_script: |
+  git_pkgbuild_commit()
+#  update_aur_repo()
+update_on:
+  - source: regex
+    url: https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js
+    regex: 'AiCube-ISP-v([0-9]+\.[0-9]+[A-Z](-[a-z]+)?)\.zip'
+    # include_regex: ".*-*-*"
+#   - source: manual
+#     manual: 1
