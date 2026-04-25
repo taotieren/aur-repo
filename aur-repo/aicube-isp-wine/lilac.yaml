@@ -18,8 +18,9 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js
+    http_headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     regex: 'AiCube-ISP-v([\w\.\-]+)\.zip'
-    use_agent: true
     # include_regex: ".*-*-*"
 #   - source: manual
 #     manual: 1
