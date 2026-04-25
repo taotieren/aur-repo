@@ -3,7 +3,7 @@
 pkgbase=ts-litex-driver-git
 pkgname=ts-litex-driver-git
 pkgver=r24.0414118
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Linux Driver for the LiteX-based Thunderscope"
 arch=(any)
