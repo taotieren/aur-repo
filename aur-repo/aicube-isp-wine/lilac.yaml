@@ -18,7 +18,7 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js
-    regex: 'AiCube-ISP-v([0-9]+\.[0-9]+[A-Z](-[a-z]+)?)\.zip'
+    regex: 'AiCube-ISP-v([^.]+)\.zip'
     # include_regex: ".*-*-*"
 #   - source: manual
 #     manual: 1
