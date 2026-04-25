@@ -3,7 +3,7 @@
 pkgbase=ch34x-mphsi-master-git
 pkgname=(ch34x-mphsi-master-dkms-git)
 pkgver=r15.da22601
-pkgrel=1
+pkgrel=2
 pkgdesc="CH341A/B/C/F/H/T | CH347F/T | CH339W Linux USB to SPI/I2C/GPIO Controller Driver"
 arch=('any')
 url="https://github.com/WCHSoftGroup/ch34x_mphsi_master_linux"
