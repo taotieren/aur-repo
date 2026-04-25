@@ -3,7 +3,7 @@
 pkgbase=kh-ucanfd
 pkgname=(kh-ucanfd kh-ucanfd-dkms)
 pkgver=1.3.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="KunHong UCANFD Linux driver"
 arch=($CARCH)
@@ -139,6 +139,8 @@ BUILT_MODULE_LOCATION[0]="."
 DEST_MODULE_LOCATION[0]="/updates"
 AUTOINSTALL="yes"
 EOF
-
+    install -Dm644 /dev/stdin "${pkgdir}/etc/modules-load.d/${pkgname}.conf" <<EOF
+${pkgname}
+EOF
     install -Dm644 "${srcdir}"/${_name}-${pkgver}/LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}"
 }
