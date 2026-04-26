@@ -81,7 +81,7 @@ build() {
   export DESTDIR="build"
   export PREFIX="/usr"
   export UDEV_PREFIX="/usr/lib/udev/rules.d"
-  export CXXFLAGS="-Wall -Wextra"
+  export CXXFLAGS="-Wall -Wextra -fPIC"
 
   cd "${srcdir}/${pkgname}"
 
