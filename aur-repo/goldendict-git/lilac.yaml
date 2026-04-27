@@ -4,6 +4,8 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['aksr', 'MarsSeed'])
 post_build: aur_post_build
+repo_depends:
+  - qt5-sensors
 update_on:
   - source: aur
     github: goldendict-git
