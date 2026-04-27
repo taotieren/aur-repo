@@ -12,8 +12,13 @@ license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
-depends=("java-runtime=${_jrever}")
-makedepends=('git' "java-environment-openjdk=${_jdkver}")
+depends=(
+    sh
+    "java-runtime=${_jrever}"
+)
+makedepends=(
+    'git' 
+    "java-environment-openjdk=${_jdkver}")
 optdepends=(
     'eagle'
     'easyeda'
