@@ -34,7 +34,7 @@ makedepends=(
   nuitka
 )
 # checkdepends=()
-source=("${pkgbase}::git+${url}.git#tag=v${pkgver}")
+source=("${pkgbase}::git+${url}.git#tag=${pkgver}")
 sha512sums=('c56f26484a38dde007382ae0ce01fa0ca1ebc4cfb045a0ed574fc3e89c1b457930b6786190aa32cdd7dd07c3bdbed2d2ac9e655c3415afaa7fd3f1cbdf40d1aa')
 
 prepare() {

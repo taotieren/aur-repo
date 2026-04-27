@@ -11,4 +11,4 @@ update_on:
   - source: github
     github: renoyuan/easyofd
     use_max_tag: true
-    prefix: v
+    # prefix: v
