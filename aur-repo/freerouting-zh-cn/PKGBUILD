@@ -43,7 +43,7 @@ build() {
 
 package() {
     cd "${pkgname%-zh-cn}"
-    install -Dm0644 design/icon/freerouting_icon_256x256_v2.png "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
+    install -Dm0644 assets/icon/freerouting_icon_256x256_v2.png "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
     install -Dm0644 build/libs/freerouting-executable.jar "${pkgdir}/usr/lib/freerouting/freerouting-executable-zh-cn.jar"
     install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/${pkgname}" <<EOF
 #!/usr/bin/bash
