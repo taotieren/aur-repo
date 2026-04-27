@@ -3,8 +3,8 @@
 pkgname=freerouting-zh-cn
 pkgver=2.1.0
 pkgrel=1
-_jrever=21
-_jdkver=21
+_jrever=26
+_jdkver=26
 pkgdesc="Advanced PCB autorouter"
 arch=('any')
 url="https://github.com/freerouting/freerouting"
