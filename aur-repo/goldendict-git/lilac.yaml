@@ -1,0 +1,13 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['aksr', 'MarsSeed'])
+post_build: aur_post_build
+update_on:
+  - source: aur
+    github: goldendict-git
+  - source: alpm
+    alpm: opencc
+    provided: libopencc.so
+    strip_release: true
