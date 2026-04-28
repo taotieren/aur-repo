@@ -3,7 +3,7 @@
 pkgname=gui.for.singbox
 _name=GUI.for.SingBox
 pkgver=1.23.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Modern, lightweight desktop app built with Wails (Go) and Vue 3. Efficient, cross-platform, and fast"
 arch=($CARCH)
 url="https://github.com/GUI-for-Cores/GUI.for.SingBox"
