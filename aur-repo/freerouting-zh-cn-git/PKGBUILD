@@ -2,7 +2,7 @@
 
 pkgname=freerouting-zh-cn-git
 pkgver=2.2.0.r0.g6688a42
-pkgrel=2
+pkgrel=3
 _jrever=25
 _jdkver=25
 pkgdesc="Advanced PCB autorouter"
