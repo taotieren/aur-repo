@@ -3,7 +3,7 @@
 pkgname=gui.for.clash
 _name=GUI.for.Clash
 pkgver=1.23.2
-pkgrel=1
+pkgrel=2
 pkgdesc="GUI.for.Clash Modern A GUI program developed by vue3 + wails."
 arch=($CARCH)
 url="https://github.com/GUI-for-Cores/GUI.for.Clash"
