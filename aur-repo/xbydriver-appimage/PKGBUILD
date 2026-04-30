@@ -84,9 +84,9 @@ package_xbydriver-appimage() {
     install -Dm755 "${srcdir}"/${pkgbase}-${_tagname}-${CARCH}.AppImage "${pkgdir}"/${_install_path}/xbyboxplayer.AppImage
 
     local _icon
-    for _icon in 16 32 64 128 256; do
-        install -Dm0644 "${srcdir}/squashfs-root/usr/share/icons/hicolor/0x0/apps/xbyboxplayer.png" \
-                    -t  "${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps"
+    for _icon in 30 64 256; do
+        install -Dm0644 "${srcdir}/squashfs-root/resources/images/icon_${_icon}x${_icon}.png" \
+                    -t  "${pkgdir}/usr/share/icons/hicolor/${_icon}x${_icon}/apps/xbyboxplayer.png"
     done
 
     install -Dm644 "${srcdir}/squashfs-root/boxplayer.desktop" -t "${pkgdir}/usr/share/applications"
