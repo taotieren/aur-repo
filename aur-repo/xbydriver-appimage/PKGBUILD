@@ -50,7 +50,7 @@ package_xbydriver-bin() {
     bsdtar -xf "${srcdir}"/${pkgbase%-appimage}-${_tagname}-${CARCH}.deb -C "${srcdir}"/${pkgbase%-appimage}-${_tagname}-${CARCH}
     bsdtar -xf "${srcdir}"/${pkgbase%-appimage}-${_tagname}-${CARCH}/data.tar.xz --strip-components=1 -C ${pkgdir}/
 
-    mv "${pkgdir}/opt/小白羊 BoxPlayer" "${pkgdir}"/opt/xbyboxplayer
+    mv "${pkgdir}/opt/BoxPlayer" "${pkgdir}"/opt/xbyboxplayer
     install -Dm0644 /dev/stdin "${pkgdir}/usr/share/applications/xbyboxplayer.desktop" << EOF
 [Desktop Entry]
 Name=xbyboxplayer
