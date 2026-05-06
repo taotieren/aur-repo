@@ -45,7 +45,7 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    sed -i '/^#include <stdio.h>$/a #include <unistd.h>' "${srcdir}/${pkgname}/tests/fuzz/fd-fuzz.cpp"
+    sed -i '/^#include <cstdarg>$/a #include <unistd.h>' "${srcdir}/${pkgname}/tests/fuzz/fd-fuzz.cpp"
 }
 
 build() {
