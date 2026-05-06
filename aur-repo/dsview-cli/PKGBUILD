@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="Scriptable DSLogic Plus capture and protocol decoding without the DSView GUI"
 arch=($CARCH)
 url="https://github.com/LISTENAI/dsview-cli"
-license=('Apache-2.0')
+license=('Apache-2.0 AND GPL-3.0-only')
 provides=(
     ${pkgname}
     ${pkgname%-cli}
