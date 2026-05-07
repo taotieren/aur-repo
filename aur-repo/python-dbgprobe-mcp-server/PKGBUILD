@@ -34,6 +34,7 @@ makedepends=(
 optdepends=(
     'jlink-software-and-documentation: Segger JLink software & documentation pack for Linux'
     'openocd: Debugging, in-system programming and boundary-scan testing for embedded target devices'
+    'stlink: Open source STM32 MCU programming toolset'
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
