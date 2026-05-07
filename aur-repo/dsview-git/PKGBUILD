@@ -12,9 +12,11 @@ url='http://www.dreamsourcelab.com/'
 license=('GPL-3.0-only')
 provides=(
   ${pkgname%-git}
+  ${pkgname%-git}-cli
 )
 conflicts=(
   ${pkgname%-git}
+  ${pkgname%-git}-cli
 )
 replaces=()
 # Upstream added VCS dependency to libsigrokdecode :/
