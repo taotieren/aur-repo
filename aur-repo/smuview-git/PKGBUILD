@@ -1,4 +1,4 @@
-# Maintainer: Shayne Hartford <shayneehartford@gmail.com>
+# Maintainer: taotieren <admin@taotieren.com>
 
 _pkgname=smuview
 pkgname=${_pkgname}-git
