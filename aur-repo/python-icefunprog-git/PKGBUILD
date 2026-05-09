@@ -2,7 +2,7 @@
 
 pkgname=python-icefunprog-git
 pkgver=r1.99e6abc
-pkgrel=1
+pkgrel=2
 pkgdesc='Programmer for the iceFUN FPGAs https://www.robot-electronics.co.uk/icefun.html)'
 url='https://github.com/pitrz/icefunprog'
 license=('GPL-3.0-only')
