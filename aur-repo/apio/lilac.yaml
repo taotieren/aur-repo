@@ -10,6 +10,7 @@ post_build: aur_post_build
 
 repo_depends:
   - python-blackiceprog-git
+  - python-tinyfpgab-git
 
 update_on:
   - source: aur
