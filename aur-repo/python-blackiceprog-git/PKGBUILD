@@ -2,7 +2,7 @@
 
 pkgname=python-blackiceprog-git
 pkgver=r4.8b6667d
-pkgrel=1
+pkgrel=2
 pkgdesc='Programmer for the blackice FPGAs by myStorm (https://mystorm.uk/)'
 url='https://github.com/jpenalbae/black-iceprog'
 license=('GPL-3.0-only')
