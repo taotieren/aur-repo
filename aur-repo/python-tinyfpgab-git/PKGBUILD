@@ -2,7 +2,7 @@
 
 pkgname=python-tinyfpgab-git
 pkgver=r80.e8f9150
-pkgrel=1
+pkgrel=2
 pkgdesc="Programmer for the TinyFPGA B2 boards"
 arch=(any)
 url="https://github.com/tinyfpga/TinyFPGA-B-Series"
