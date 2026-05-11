@@ -8,15 +8,20 @@ def pre_build():
         lines = f.readlines()
     
     new_lines = []
-    for i, line in enumerate(lines):
+    for line in lines:
         if '.AppImage --appimage-extract' in line:
-            indent = len(line) - len(line.lstrip())
-            new_lines.append(' ' * indent + 'chmod +x ${_pkgname}-${CARCH}-${pkgver}-${pkgrel}.AppImage\n')
+            new_lines.append('    chmod +x ${_pkgname}-${CARCH}-${pkgver}-${pkgrel}.AppImage\n')
             new_lines.append(line)
+        
         elif 'install -dm644' in line:
             new_lines.append(line.replace('install -dm644', 'install -dm755'))
+        
+        elif 'ln -s "${pkgdir}/opt/' in line:
+            fixed_line = line.replace('"${pkgdir}/opt/', '"/opt/')
+            new_lines.append(fixed_line)
+        
         else:
             new_lines.append(line)
     
-    with open('PKGBUILD', 'w') as f:
+    with open('PKGBUILD', 'w', newline='\n') as f:
         f.writelines(new_lines)
