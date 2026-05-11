@@ -11,9 +11,9 @@ repo_depends:
 update_on:
   - source: aur
     aur: easylpac
-  - source: github
-    github: creamlike1024/EasyLPAC
-    use_latest_release: true
-    # prefix: v
-    # exclude_regex: "*.*-*"
+  # - source: github
+  #   github: creamlike1024/EasyLPAC
+  #   use_latest_release: true
+  # prefix: v
+  # exclude_regex: "*.*-*"
 # - alias: python
