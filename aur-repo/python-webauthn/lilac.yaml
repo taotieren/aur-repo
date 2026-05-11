@@ -12,7 +12,7 @@ post_build_script: |
 update_on:
   - source: github
     github: duo-labs/py_webauthn
+    prefix: v
     exclude_regex: "*.*-*"
     use_latest_release: true
-    prefix: v
   - alias: python
