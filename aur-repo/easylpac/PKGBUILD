@@ -1,7 +1,7 @@
 # Maintainer: Root-Core <aur at root-core dot net>
 pkgname=easylpac
 pkgver=0.7.8.4
-pkgrel=8
+pkgrel=9
 pkgdesc="lpac GUI Frontend"
 arch=('x86_64')
 url="https://github.com/creamlike1024/EasyLPAC"
