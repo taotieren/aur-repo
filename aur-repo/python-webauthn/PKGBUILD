@@ -10,9 +10,9 @@ conflicts=(${pkgname})
 arch=('any')
 url="https://github.com/duo-labs/py_webauthn"
 _pydeps=(
-    asn1crypto
     cbor2
     cryptography
+    pyasn1
     pyopenssl
 )
 depends=('python'
