@@ -2,10 +2,10 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 
-pre_build_script: aur_pre_build(maintainers='Universebenzene')
+pre_build_script: aur_pre_build(maintainers='Hill-98')
 
 post_build: aur_post_build
 
 update_on:
   - source: aur
-    aur: baidunetdisk-bin
+    aur: wsl2-ssh-agent
