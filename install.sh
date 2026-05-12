@@ -517,7 +517,7 @@ do_remove() {
     check_root
 
     echo -e "${BOLD}${CYAN}╔══════════════════════════════════════╗${NC}"
-    echo -e "${BOLD}${CYAN}║   aur-repo & archlinuxcn 源移除       ║${NC}"
+    echo -e "${BOLD}${CYAN}║   aur-repo & archlinuxcn 源移除     ║${NC}"
     echo -e "${BOLD}${CYAN}╚══════════════════════════════════════╝${NC}"
 
     # 先移除 aur-repo（依赖方先移除）
@@ -532,7 +532,7 @@ do_remove() {
 
 do_status() {
     echo -e "${BOLD}${CYAN}╔══════════════════════════════════════╗${NC}"
-    echo -e "${BOLD}${CYAN}║        源配置状态检查                  ║${NC}"
+    echo -e "${BOLD}${CYAN}║        源配置状态检查                ║${NC}"
     echo -e "${BOLD}${CYAN}╚══════════════════════════════════════╝${NC}"
 
     # ---- archlinuxcn ----
