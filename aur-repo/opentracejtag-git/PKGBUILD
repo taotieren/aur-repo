@@ -3,7 +3,7 @@
 pkgbase=opentracejtag-git
 pkgname=opentracejtag-git
 pkgver=r30.63ae884
-pkgrel=1
+pkgrel=2
 pkgdesc="A unified Go toolkit for PCB design analysis and JTAG boundary scan testing."
 arch=($CARCH)
 url="https://github.com/OpenTraceLab/OpenTraceJTAG"
