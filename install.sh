@@ -621,34 +621,32 @@ do_status() {
 # ==================== 帮助 ====================
 
 usage() {
-    cat <<EOF
-${BOLD}aur-repo & archlinuxcn 源管理脚本${NC}
-
-${BOLD}用法:${NC} $(basename "$0") <命令>
-
-${BOLD}命令:${NC}
-  install   安装 archlinuxcn + aur-repo 源（含 keyring、mirrorlist 包）
-  remove    交互式移除所有源配置
-  status    查看源配置状态（无需 root）
-  help      显示此帮助信息
-
-${BOLD}说明:${NC}
-  aur-repo 中的包依赖 archlinuxcn 源，因此安装时按以下顺序处理：
-    1. archlinuxcn  → 先添加源，再安装 archlinuxcn-keyring
-    2. aur-repo     → 导入 GPG 密钥，安装 aur-repo-mirrorlist-git 等
-
-  两个源均使用 pacman.conf Include 规范：
-    [archlinuxcn]
-    Include = /etc/pacman.d/archlinuxcn-mirrorlist
-
-    [aur-repo]
-    Include = /etc/pacman.d/aur-repo-mirrorlist
-
-${BOLD}示例:${NC}
-  sudo $(basename "$0") install    # 一键安装所有源
-  sudo $(basename "$0") remove     # 交互式移除
-  $(basename "$0") status           # 查看状态
-EOF
+    echo -e "${BOLD}aur-repo & archlinuxcn 源管理脚本${NC}"
+    echo ""
+    echo -e "${BOLD}用法:${NC} $(basename "$0") <命令>"
+    echo ""
+    echo -e "${BOLD}命令:${NC}"
+    echo -e "  ${CYAN}install${NC}   安装 archlinuxcn + aur-repo 源（含 keyring、mirrorlist 包）"
+    echo -e "  ${CYAN}remove${NC}    交互式移除所有源配置"
+    echo -e "  ${CYAN}status${NC}    查看源配置状态（无需 root）"
+    echo -e "  ${CYAN}help${NC}      显示此帮助信息"
+    echo ""
+    echo -e "${BOLD}说明:${NC}"
+    echo -e "  aur-repo 中的包依赖 archlinuxcn 源，因此安装时按以下顺序处理："
+    echo -e "    ${GREEN}1${NC}. archlinuxcn  → 先添加源，再安装 ${CYAN}archlinuxcn-keyring${NC}"
+    echo -e "    ${GREEN}2${NC}. aur-repo     → 导入 GPG 密钥，安装 ${CYAN}aur-repo-mirrorlist-git${NC} 等"
+    echo ""
+    echo -e "  两个源均使用 ${BOLD}pacman.conf Include${NC} 规范："
+    echo -e "    ${YELLOW}[archlinuxcn]${NC}"
+    echo -e "    ${CYAN}Include = /etc/pacman.d/archlinuxcn-mirrorlist${NC}"
+    echo ""
+    echo -e "    ${YELLOW}[aur-repo]${NC}"
+    echo -e "    ${CYAN}Include = /etc/pacman.d/aur-repo-mirrorlist${NC}"
+    echo ""
+    echo -e "${BOLD}示例:${NC}"
+    echo -e "  sudo $(basename "$0") ${CYAN}install${NC}    # 一键安装所有源"
+    echo -e "  sudo $(basename "$0") ${CYAN}remove${NC}     # 交互式移除"
+    echo -e "  $(basename "$0") ${CYAN}status${NC}           # 查看状态"
 }
 
 # ==================== 入口 ====================
