@@ -31,7 +31,7 @@ options=()
 install=
 _name=KH-UCANFD_Linux_SDK
 source=(
-    "${_name}-${pkgver}.zip::${url}/releases/download/v${pkgver}/${_name}.zip"
+    "${_name}-${pkgver}.zip::${url}/releases/download/${pkgver}/${_name}.zip"
 )
 sha256sums=('057096569c687502d59049f5722551addba52f1d24b0f88bac48ef6ce44bfff5')
 noextract=()
