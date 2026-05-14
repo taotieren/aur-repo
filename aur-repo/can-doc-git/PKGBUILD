@@ -2,7 +2,7 @@
 
 pkgbase=can-doc-git
 pkgname=can-doc-git
-pkgver=r12.a50c2c0
+pkgver=r13.07a413e
 pkgrel=1
 groups=()
 pkgdesc="Linux-CAN / SocketCAN documentation"
