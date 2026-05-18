@@ -9,3 +9,4 @@ post_build_script: |
 update_on:
   - source: github
     github: normaldotcom/cangaroo
+    use_latest_tag: true
