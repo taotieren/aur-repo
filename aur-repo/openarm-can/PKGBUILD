@@ -19,6 +19,7 @@ depends=(
   python-numpy
 )
 makedepends=(
+  cli11
   cmake
   git
   gtest
