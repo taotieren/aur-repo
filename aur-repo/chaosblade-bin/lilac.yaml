@@ -12,7 +12,7 @@ update_on:
     use_latest_release: true
     prefix: v
     include_regex: "v.*"
-    exclude_regex: "blade-ai-v.*"
+    exclude_regex: "blade-.*"
 
 # use_max_tag: true
 # prefix: v
