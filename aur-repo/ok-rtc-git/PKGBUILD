@@ -33,7 +33,10 @@ depends=(
     openh264
     openssl
     opus
-    protobuf)
+    protobuf
+# AUR
+    google-crc32c
+)
 makedepends=(
     cmake
     gcc
