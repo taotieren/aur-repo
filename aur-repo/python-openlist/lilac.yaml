@@ -7,21 +7,21 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - python-argtools
-  - python-asynctools
-  - python-ed2k
+  - python-aiofile
   - python-dictattr
   - python-download
   - python-filewrap
+  - python-errno2
   - python-glob-pattern
   - python-httpfile
   - python-http-request
   - python-http-response
+  - python-httpx-request
   - python-iterutils
-  - python-path-ignore-pattern
-  - python-p115qrcode
+  - python-property
   - python-undefined
+
 update_on:
   - source: pypi
-    pypi: python_alist
+    pypi: python-openlist
   - alias: python
