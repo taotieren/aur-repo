@@ -3,7 +3,7 @@
 pkgbase=scopehal-apps
 pkgname=scopehal-apps
 _tagname=0.1.1
-pkgver=${_tagname//-/_}
+pkgver=${_tagname//-/+}
 pkgrel=4
 epoch=
 pkgdesc="ngscopeclient and other client applications for libscopehal"
