@@ -12,6 +12,7 @@ repo_depends:
   - python-blackiceprog-git
   - python-icefunprog-git
   - python-tinyfpgab-git
+  - python-vcdvcd
 
 update_on:
   - source: aur
