@@ -9,7 +9,6 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-whey
-  - python-cssutils
 update_on:
   - source: github
     github: sphinx-toolbox/dict2css
