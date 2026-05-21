@@ -11,6 +11,7 @@ update_on:
     github: chaosblade-io/chaosblade
     use_latest_release: true
     prefix: v
+    exclude_regex: "blade-ai.*"
 
 # use_max_tag: true
 # prefix: v
