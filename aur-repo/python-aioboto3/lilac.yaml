@@ -11,7 +11,7 @@ pre_build_script: |
   run_cmd(['updpkgsums'])
 post_build: aur_post_build
 repo_depends:
-  - chalice
+  - python-chalice
 update_on:
   - source: aur
     aur: python-aioboto3
