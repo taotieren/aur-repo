@@ -34,8 +34,6 @@ depends=(
     openssl
     opus
     protobuf
-# AUR
-    google-crc32c
 )
 makedepends=(
     cmake
