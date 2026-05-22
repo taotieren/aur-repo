@@ -2,7 +2,7 @@
 
 pkgname=rockutil-git
 pkgver=r36.123597f
-pkgrel=1
+pkgrel=2
 pkgdesc="Most feature complete Rockchip SoC Flashing Utility"
 arch=($CARCH)
 url="https://github.com/mkschreder/rockutil"
