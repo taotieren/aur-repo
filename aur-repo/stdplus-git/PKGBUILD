@@ -20,6 +20,7 @@ depends=(
 makedepends=(
     cmake
     git
+    gtest
     function2
     ninja
     meson
