@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=flashmq-git
-pkgver=1.26.2.r0.g128a1ff
+pkgver=1.26.2.r11.g1367d54
 pkgrel=1
 pkgdesc="FlashMQ is a light-weight MQTT broker/server, designed to take good advantage of multi-CPU environments"
 arch=($CARCH)
