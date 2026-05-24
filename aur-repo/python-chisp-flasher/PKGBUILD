@@ -3,7 +3,7 @@
 pkgname=python-chisp-flasher
 _name=${pkgname#python-}
 pkgver=1.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Cross-platform ISP flasher for WCH CH32, CH5x and CH6x families"
 provides=(${pkgname})
 conflicts=(${pkgname})
