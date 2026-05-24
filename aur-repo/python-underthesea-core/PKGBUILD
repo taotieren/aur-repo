@@ -19,6 +19,7 @@ depends=(
     python
 )
 makedepends=(
+    bstring
     maturin
     python-maturin
     python-build
