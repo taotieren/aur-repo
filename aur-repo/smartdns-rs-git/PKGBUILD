@@ -11,15 +11,17 @@ provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
 depends=(
-    cargo
-    systemd)
+    glibc
+    libgcc
+)
 makedepends=(
     clang
     git
     llvm-libs
     llvm
-    rust)
-backup=()
+    rust
+)
+backup=(etc/smartdns/smartdns.conf)
 options=('!lto')
 install=
 source=("${pkgname%-git}::git+${url}.git")
