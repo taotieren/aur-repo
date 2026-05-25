@@ -27,6 +27,9 @@ depends=(
     python-pyyaml
     python-redis
     uvicorn
+# AUR
+    python-ibmcloudant
+    python-pyjson5
 )
 makedepends=(
     git
