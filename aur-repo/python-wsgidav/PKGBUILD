@@ -58,11 +58,9 @@ package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 
-    install -Dm644 README.md "${pkgdir}/usr/share/doc/python-wsgidav/README.md"
-    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/python-wsgidav/LICENSE"
-    install -Dm644 "${srcdir}/uwsgi.py" "${pkgdir}/usr/share/python-wsgidav/uwsgi.py"
-    install -Dm644 "${srcdir}/uwsgi.ini" "${pkgdir}/usr/share/python-wsgidav/uwsgi.ini"
-    install -Dm644 "${srcdir}/config.example.json" "${pkgdir}/usr/share/python-wsgidav/config.example.json"
-    install -Dm644 "${srcdir}/config.example.json5" "${pkgdir}/usr/share/python-wsgidav/config.example.json5"
-    install -Dm644 "sample_wsgidav.yaml" "${pkgdir}/usr/share/python-wsgidav/config.example.yaml"
+    install -Dm644 *.md -t "${pkgdir}/usr/share/doc/python-wsgidav/"
+    install -Dm644 "sample_wsgidav.yaml" -t "${pkgdir}/usr/share/python-wsgidav/"
+    install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/python-wsgidav/"
+    install -Dm644 ${srcdir}/uwsgi.* -t "${pkgdir}/usr/share/python-wsgidav/"
+    install -Dm644 ${srcdir}/config.example.* -t "${pkgdir}/usr/share/python-wsgidav/"
 }
