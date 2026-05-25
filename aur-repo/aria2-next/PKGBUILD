@@ -11,25 +11,28 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
 depends=(
-    c-ares
+    boost-libs
+    curl
     glibc
     libgcc
     libstdc++
-    libssh2
     libtorrent-rasterbar
-    libxml2
-    sqlite
     openssl
     zlib
 )
 makedepends=(
     git
+    boost
+    c-ares
     ca-certificates
     cmake
     cppunit
     gnutls
     gzip
+    libssh2
+    libxml2
     ninja
+    sqlite
     pkgconf
 )
 optdepends=('motrix-next: A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust')
