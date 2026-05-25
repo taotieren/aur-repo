@@ -14,12 +14,12 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
-    gcc-libs
     glibc
-    python
+    libgcc
 )
 makedepends=(
     maturin
+    python-pydantic
     python-maturin
     python-build
     python-installer
