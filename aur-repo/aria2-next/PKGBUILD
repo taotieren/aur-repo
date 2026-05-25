@@ -16,6 +16,7 @@ depends=(
     libgcc
     libstdc++
     libssh2
+    libtorrent-rasterbar
     libxml2
     sqlite
     openssl
