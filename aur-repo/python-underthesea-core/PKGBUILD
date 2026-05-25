@@ -31,11 +31,14 @@ source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/sour
 noextract=()
 sha256sums=('b22e20309cc53ceafedbee344d85367e08d566c4d497cb6e75a19a1b1c4a8259')
 
+prepare() {
+    cd "${srcdir}/${_name}-${pkgver}"
+    cargo fetch --target host-tuple
+    cargo fetch --target "$CARCH-unknown-linux-gnu"
+}
+
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
-    #     sed -i 's|0.15.0|0.25.1|g' Cargo.toml
-    #     sed -i -e 's|PyModule)|Bound<PyModule>)|' \
-    #         -e '/use pyo3\s*::.*;/a use pyo3::types::PyModule;' src/lib.rs
     python -m build --wheel --no-isolation
 }
 
