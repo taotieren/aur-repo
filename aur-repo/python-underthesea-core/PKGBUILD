@@ -19,7 +19,6 @@ depends=(
 )
 makedepends=(
     maturin
-    python-pydantic
     python-maturin
     python-build
     python-installer
