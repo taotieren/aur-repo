@@ -14,18 +14,25 @@ _pydeps=(
     sexpdata
 
     openpyxl
+    pydantic
     requests
+    wxpython
     yaml
 )
-depends=('python'
-    "${_pydeps[@]/#/python-}")
+depends=(
+    'python'
+    "${_pydeps[@]/#/python-}"
+)
 makedepends=(
     git
     'python-build'
     'python-installer'
     'python-setuptools'
-    'python-wheel')
-optdepends=('kicad')
+    'python-wheel'
+)
+optdepends=(
+    'kicad: Electronic schematic and printed circuit board (PCB) design tools'
+)
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
 sha256sums=('3f67bce0330f25a358cc361f1135cad44b67a1fc984cae82e53c9f665bdc6730')
