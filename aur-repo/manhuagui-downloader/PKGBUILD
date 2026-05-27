@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=manhuagui-downloader
-pkgver=0.4.2
-pkgrel=5
+pkgver=0.5.0
+pkgrel=1
 pkgdesc="漫画柜 manhuagui 看漫画 下载器，带图形界面，支持下载隐藏内容、导出PDF"
 arch=($CARCH)
 url="https://github.com/lanyeeee/manhuagui-downloader"
@@ -34,7 +34,7 @@ backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('abcfc58a4281c0d02d9ba7554affc652c7bfe5a19137798876c3fcc915f86269')
+sha256sums=('9df27a8d17c8f30df1942e6cefc45d7c84349c5922e4163e638790cf7c71ac88')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
