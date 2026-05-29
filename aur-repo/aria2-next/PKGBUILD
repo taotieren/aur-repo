@@ -13,6 +13,7 @@ conflicts=(${pkgname})
 depends=(
     boost-libs
     curl
+    fmt
     glibc
     libgcc
     libstdc++
