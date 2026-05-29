@@ -2,7 +2,7 @@
 
 pkgname=wine-cn-font
 pkgver=0.0.1
-pkgrel=3
+pkgrel=4
 pkgdesc="a gtk+ calendar widget for chinese lunar library."
 arch=(x86_64)
 url="https://github.com/yetist/wine-cn-fonts"
