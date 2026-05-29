@@ -18,6 +18,7 @@ depends=(
     libstdc++
     libtorrent-rasterbar
     openssl
+    spdlog
     zlib
 )
 makedepends=(
