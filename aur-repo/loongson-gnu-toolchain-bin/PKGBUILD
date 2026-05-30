@@ -2,7 +2,7 @@
 
 pkgbase=loongson-gnu-toolchain-bin
 pkgname=(${pkgbase})
-_tagname=8.3-x86_64-loongarch64-linux-gnu-rc1.5
+_tagname=8.3-x86_64-loongarch64-linux-gnu-rc1.6
 _base_ver=$(echo "$_tagname" | cut -d'-' -f1)
 _rc_ver=$(echo "$_tagname" | rev | cut -d'-' -f1 | rev)
 pkgver=${_base_ver}_${_rc_ver}
@@ -23,7 +23,7 @@ depends=(
 makedepends=()
 _pkg_file=${pkgbase%-bin}-${_base_ver}-${CARCH}-loongarch64-linux-gnu-${_rc_ver}.tar.xz
 source=("${_pkg_file}::${url}/${_pkg_file}")
-sha256sums=('2ae1d6efc506f86fcfb1cde73320ca8f7c96f192206a401d39aed53fc65d345f')
+sha256sums=('fb39d178b6760f49852e8452c092bfc176a98c3166ce13b7d700e3da9e99e237')
 options=(!strip !emptydirs !debug)
 install=${pkgname}.install
 noextract=(${_pkg_file})
