@@ -4,7 +4,7 @@
 pkgname=sonix-flasher-git
 _name=${pkgname%-git}
 pkgver=0.2.5.r10.ga0baa68
-pkgrel=2
+pkgrel=3
 pkgdesc="Sonix Keyboard Flasher"
 arch=('any')
 url="https://github.com/SonixQMK/sonix-flasher"
