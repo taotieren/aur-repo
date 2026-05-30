@@ -21,7 +21,7 @@ makedepends=('git')
 source=("sonix-flasher.sh"
         "sonix-flasher.desktop"
         "0001-fix-Wayland-taskbar-icon.patch"
-        "sonix-flasher::git+https://github.com/SonixQMK/sonix-flasher")
+        "sonix-flasher::git+${url}.git")
 provides=("sonix-flasher")
 conflicts=("sonix-flasher")
 sha256sums=('68d7641d8a903b9044ceb5bd38f71080f3e3b5c88312f3cd16a2fe4fb9c45077'
