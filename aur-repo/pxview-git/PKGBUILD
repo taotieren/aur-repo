@@ -7,7 +7,7 @@
 
 pkgname=pxview-git
 pkgver=1.4.9.r14.11ea4f8
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc='GUI program for supporting various instruments from PXLogic, including logic analyzers, oscilloscopes, etc.'
 arch=(i686 x86_64)
