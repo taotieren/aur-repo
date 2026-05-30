@@ -17,7 +17,7 @@ license=(GPL-3.0-or-later)
 depends=(hicolor-icon-theme glib2 python fftw
         libusb zlib qt5-base qt5-svg boost-libs)
 makedepends=("boost" "cmake" "git" "librsvg" "qt5-svg")
-source=("${pkgname}::git+https://github.com/PXLogic/PXView"
+source=("${pkgname}::git+${url}.git"
         "0001-make-glibc-happy.patch"
         "0002-simplify-qt-version-detection.patch")
 sha1sums=('SKIP'
