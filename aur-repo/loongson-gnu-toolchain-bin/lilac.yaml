@@ -29,4 +29,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/
-    regex: "loongson-gnu-toolchain-[\\w.\\-]+\\.tar.xz"
+    regex: 'loongson-gnu-toolchain-(\d+\.\d+-x86_64-loongarch64-linux-gnu-rc\d+\.\d+)\.tar\.xz'
