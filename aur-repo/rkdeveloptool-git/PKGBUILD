@@ -15,7 +15,7 @@ provides=($_pkgname)
 conflicts=($_pkgname)
 makedepends=('git')
 depends=('glibc' 'libgcc' 'libstdc++' 'libusb')
-source=('git+${url}.git'
+source=("git+${url}.git"
 				'0001-add-RK3588-to-udev-rules.patch')
 sha256sums=('SKIP'
             'cc2bff09638e4c3beef539aaab9ee3af43c06c522efbc2dd59b71ef8c226655c')
