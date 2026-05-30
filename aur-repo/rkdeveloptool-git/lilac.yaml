@@ -1,8 +1,20 @@
+# maintainers:
+#   - github: taotieren
+#     email: admin@taotieren.com
+# pre_build_script: aur_pre_build(maintainers=['yjun'])
+# post_build_script: aur_post_build
+# update_on:
+#   - source: aur
+#     aur: rkdeveloptool-git
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['yjun'])
-post_build_script: aur_post_build
+pre_build: vcs_update
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   -
 update_on:
-  - source: aur
-    aur: rkdeveloptool-git
+  - source: github
+    github: rockchip-linux/rkdeveloptool
