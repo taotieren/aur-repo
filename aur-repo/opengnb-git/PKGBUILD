@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=opengnb-git
-pkgver=1.6.4.8.g038e32d
+pkgver=1.6.4.9.gebd3e32
 pkgrel=1
 pkgdesc="GNB is open source de-centralized VPN to achieve layer3 network via p2p with the ultimate capability of NAT Traversal."
 arch=($CARCH)
