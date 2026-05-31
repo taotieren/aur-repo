@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-test-git
-pkgver=1.12.5_1.r1.c96ff74
+pkgver=1.12.5_2.r1.d3eb77b
 pkgrel=1
 pkgdesc='Next-Gen Universal Package Manager for Linux (linglong)'
 arch=($CARCH)
