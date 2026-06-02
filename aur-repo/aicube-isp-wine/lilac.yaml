@@ -16,8 +16,9 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
+  # 从 https://www.stcai.com/gjrj 页面引用的 JS 文件中提取 AiCube-ISP 最新版本 tag
   - source: cmd
-    cmd: "curl -sL -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' -H 'Referer: https://www.stcai.com/' -H 'Accept: */*' -H 'Sec-Fetch-Dest: script' -H 'Sec-Fetch-Mode: no-cors' -H 'Sec-Fetch-Site: cross-site' 'https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js' | grep -oP 'AiCube-ISP-v[\\w.\\-]+\\.zip' | head -1 | sed 's/AiCube-ISP-v//;s/\\.zip$//'"
+    cmd: "curl -sL -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' -H 'Referer: https://www.stcai.com/gjrj' -H 'Accept: */*' 'https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js' | grep -oP 'AiCube-ISP-v[\\w.\\-]+\\.zip' | head -1 | sed 's/AiCube-ISP-v//;s/\\.zip$//'"
 #   - source: manual
 #     manual: 1
 
