@@ -7,6 +7,7 @@ post_build: aur_post_build
 repo_depends:
   - python-chroma-hnswlib
   - python-mmh3
+  - python-opentelemetry-instrumentation-fastapi
   - python-posthog
   - python-pybase64
   - python-pypika
