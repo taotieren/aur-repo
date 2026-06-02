@@ -11,7 +11,7 @@ post_build_script: |
 #   -
 update_on:
   - source: github
-    github: plocher/pypika
+    github: kayak/pypika
     use_max_tag: true
     prefix: v
   - alias: python
