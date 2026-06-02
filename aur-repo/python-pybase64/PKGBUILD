@@ -5,7 +5,7 @@
 pkgname=python-pybase64
 _pkgname=pybase64
 pkgver=1.4.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast Base64 encoding/decoding in Python"
 arch=(x86_64)
 url="https://github.com/mayeut/pybase64"
