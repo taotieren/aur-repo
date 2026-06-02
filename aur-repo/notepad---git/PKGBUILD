@@ -38,6 +38,8 @@ build() {
     cd "${srcdir}/${pkgname}"
 
     cp -rv how_build/* .
+    sed -i 's/\bintptr_t\b/__intptr_t/g' src/qscint/src/xmlMatchedTagsHighlighter.cpp
+    sed -i 's/\bintptr_t\b/__intptr_t/g' src/qscint/src/xmlMatchedTagsHighlighter.h
     sed -i 's/NotePad--/notepad--/g' CMakeLists.txt
     sed -i '7s/NotePad--/notepad--/' src/linux/usr/share/applications/NotePad--.desktop
 
