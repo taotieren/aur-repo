@@ -1,14 +1,14 @@
 # Maintainer: Peter Mattern <pmattern at arcor dot de>
 
 _pkgname=rasdaemon
-pkgname=${_pkgname}-git
+pkgname="${_pkgname}"-git
 pkgver=0.8.4.r34.ga4620eb
-pkgrel=2
+pkgrel=3
 pkgdesc="A RAS (Reliability, Availability and Serviceability) logging tool using the EDAC tracing events"
-arch=('x86_64' 'i686')
+arch=('x86_64' 'i686' 'aarch64')
 url=https://github.com/mchehab/rasdaemon
 license=('GPL-2.0-only')
-depends=("dmidecode" "hwdata" "libtraceevent" "pciutils" "perl-dbd-sqlite")
+depends=("dmidecode" "glibc" "hwdata" "libtraceevent" "pciutils" "perl" "perl-dbd-sqlite" "sh" "sqlite")
 makedepends=("autoconf" "automake" "git" "pkgconf")
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
