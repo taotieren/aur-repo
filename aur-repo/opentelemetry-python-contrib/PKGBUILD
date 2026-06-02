@@ -8,29 +8,16 @@ pkgrel=1
 arch=("any")
 _url="https://github.com/open-telemetry/${pkgbase}"
 license=("Apache-2.0")
-makedepends=(
-    'git'
-    'python-build' 
-    'python-hatchling' 
-    'python-installer' 
-    'python-wheel'
-)
+makedepends=('git' 'python-build' 'python-hatchling' 'python-installer' 'python-setuptools' 'python-wheel')
 source=("${pkgbase}::git+${_url}.git#tag=v${pkgver}")
-b2sums=('ce1e95d2cc7038911d99c1b1d96569d089f9f39eee43327550656158ed21a74499742bccb77f2389510754ae4cffa5c8cf49b21428b7bd7293d819ae62824dc8')
+b2sums=('393fb8298507e7ed40fae25801736ce0d9035fd4d39c44bbc529e6c449adc02a1277b23826c83d4ad9d8576f181421eeab4dd899dff12809b2d52365b89bb4e1')
 
-# run './geninfo.sh' to generate following variables
 pkgname=(
-    "python-opentelemetry-exporter-credential-provider-gcp"
     "python-opentelemetry-exporter-prometheus-remote-write"
     "python-opentelemetry-exporter-richconsole"
-    "python-opentelemetry-instrumentation-anthropic"
-    "python-opentelemetry-instrumentation-claude-agent-sdk"
     "python-opentelemetry-instrumentation-google-genai"
-    "python-opentelemetry-instrumentation-langchain"
-    "python-opentelemetry-instrumentation-openai-agents-v2"
     "python-opentelemetry-instrumentation-openai-v2"
     "python-opentelemetry-instrumentation-vertexai"
-    "python-opentelemetry-instrumentation-weaviate"
     "python-opentelemetry-instrumentation-aiohttp-client"
     "python-opentelemetry-instrumentation-aiohttp-server"
     "python-opentelemetry-instrumentation-aiokafka"
@@ -91,21 +78,14 @@ pkgname=(
     "python-opentelemetry-resource-detector-azure"
     "python-opentelemetry-resource-detector-containerid"
     "python-opentelemetry-sdk-extension-aws"
-    "python-opentelemetry-util-genai"
     "python-opentelemetry-util-http"
 )
 _pkgdescs=(
-    "GCP OTLP Exporter Credential Provider for OpenTelemetry"
     "Prometheus Remote Write Metrics Exporter for OpenTelemetry"
     "Rich Console Exporter for OpenTelemetry"
-    "OpenTelemetry Anthropic instrumentation"
-    "OpenTelemetry Claude Agent SDK instrumentation"
     "OpenTelemetry"
-    "OpenTelemetry Official Langchain instrumentation"
-    "OpenTelemetry Official OpenAI Agents instrumentation"
     "OpenTelemetry Official OpenAI instrumentation"
     "OpenTelemetry Official VertexAI instrumentation"
-    "OpenTelemetry Official Weaviate Client Instrumentation"
     "OpenTelemetry aiohttp client instrumentation"
     "Aiohttp server instrumentation for OpenTelemetry"
     "OpenTelemetry aiokafka instrumentation"
@@ -166,21 +146,14 @@ _pkgdescs=(
     "Azure Resource Detector for OpenTelemetry"
     "Container Resource Detector for OpenTelemetry"
     "AWS SDK extension for OpenTelemetry"
-    "OpenTelemetry GenAI Utils"
     "Web util for OpenTelemetry"
 )
 _urls=(
-    "${_url}/tree/main/exporter/opentelemetry-exporter-credential-provider-gcp"
     "${_url}/tree/main/exporter/opentelemetry-exporter-prometheus-remote-write"
     "${_url}/tree/main/exporter/opentelemetry-exporter-richconsole"
-    "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-anthropic"
-    "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-claude-agent-sdk"
     "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-google-genai"
-    "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-langchain"
-    "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-openai-agents-v2"
     "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-openai-v2"
     "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-vertexai"
-    "${_url}/tree/main/instrumentation-genai/opentelemetry-instrumentation-weaviate"
     "${_url}/tree/main/instrumentation/opentelemetry-instrumentation-aiohttp-client"
     "${_url}/tree/main/instrumentation/opentelemetry-instrumentation-aiohttp-server"
     "${_url}/tree/main/instrumentation/opentelemetry-instrumentation-aiokafka"
@@ -241,96 +214,82 @@ _urls=(
     "${_url}/tree/main/resource/opentelemetry-resource-detector-azure"
     "${_url}/tree/main/resource/opentelemetry-resource-detector-containerid"
     "${_url}/tree/main/sdk-extension/opentelemetry-sdk-extension-aws"
-    "${_url}/tree/main/util/opentelemetry-util-genai"
     "${_url}/tree/main/util/opentelemetry-util-http"
 )
 _depends=(
-    "python python-google-auth python-grpcio python-requests"
-    "python python-opentelemetry-api python-opentelemetry-sdk python-protobuf python-requests python-snappy"
-    "python python-opentelemetry-api python-opentelemetry-sdk python-opentelemetry-semantic-conventions python-rich"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-instrumentation"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-genai"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-typing_extensions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
-    "python python-asgiref python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-typing_extensions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-instrumentation python-opentelemetry-propagator-aws-xray python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-propagator-aws-xray python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-packaging"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-asgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-packaging"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-packaging python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-packaging python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-asgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-psutil"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
-    "python python-opentelemetry-instrumentation-aiohttp-client python-opentelemetry-instrumentation-aiohttp-server python-opentelemetry-instrumentation-aiokafka python-opentelemetry-instrumentation-aiopg python-opentelemetry-instrumentation-aio-pika python-opentelemetry-instrumentation-asgi python-opentelemetry-instrumentation-asyncclick python-opentelemetry-instrumentation-asyncio python-opentelemetry-instrumentation-asyncpg python-opentelemetry-instrumentation-aws-lambda python-opentelemetry-instrumentation-boto python-opentelemetry-instrumentation-boto3sqs python-opentelemetry-instrumentation-botocore python-opentelemetry-instrumentation-cassandra python-opentelemetry-instrumentation-celery python-opentelemetry-instrumentation-click python-opentelemetry-instrumentation-confluent-kafka python-opentelemetry-instrumentation-dbapi python-opentelemetry-instrumentation-django python-opentelemetry-instrumentation-elasticsearch python-opentelemetry-instrumentation-falcon python-opentelemetry-instrumentation-fastapi python-opentelemetry-instrumentation-flask python-opentelemetry-instrumentation-grpc python-opentelemetry-instrumentation-httpx python-opentelemetry-instrumentation-jinja2 python-opentelemetry-instrumentation-kafka-python python-opentelemetry-instrumentation-logging python-opentelemetry-instrumentation-mysql python-opentelemetry-instrumentation-mysqlclient python-opentelemetry-instrumentation-pika python-opentelemetry-instrumentation-psycopg python-opentelemetry-instrumentation-psycopg2 python-opentelemetry-instrumentation-pymemcache python-opentelemetry-instrumentation-pymongo python-opentelemetry-instrumentation-pymssql python-opentelemetry-instrumentation-pymysql python-opentelemetry-instrumentation-pyramid python-opentelemetry-instrumentation-redis python-opentelemetry-instrumentation-remoulade python-opentelemetry-instrumentation-requests python-opentelemetry-instrumentation-sqlalchemy python-opentelemetry-instrumentation-sqlite3 python-opentelemetry-instrumentation-starlette python-opentelemetry-instrumentation-system-metrics python-opentelemetry-instrumentation-threading python-opentelemetry-instrumentation-tornado python-opentelemetry-instrumentation-tortoiseorm python-opentelemetry-instrumentation-urllib python-opentelemetry-instrumentation-urllib3 python-opentelemetry-instrumentation-wsgi"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-sdk"
-    "python python-opentelemetry-api python-opentelemetry-semantic-conventions python-packaging python-wrapt"
-    "python python-opentelemetry-api python-opentelemetry-sdk python-wrapt"
-    "python python-opentelemetry-api"
-    "python python-opentelemetry-api python-opentelemetry-sdk"
-    "python python-opentelemetry-instrumentation python-opentelemetry-sdk"
-    "python python-opentelemetry-sdk"
-    "python python-fsspec python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-sdk python-opentelemetry-semantic-conventions python-requests"
-    "python python-fsspec python-typing_extensions python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
-    "python python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-sdk python-protobuf python-requests python-snappy"
+    "python-opentelemetry-api python-opentelemetry-sdk python-opentelemetry-semantic-conventions python-rich"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-typing_extensions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
+    "python-asgiref python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-typing_extensions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-instrumentation python-opentelemetry-propagator-aws-xray python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-propagator-aws-xray python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-packaging"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-asgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-packaging"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-packaging python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-wsgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-packaging python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-dbapi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-instrumentation-asgi python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-psutil"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-semantic-conventions python-opentelemetry-util-http"
+    "python-opentelemetry-instrumentation-aiohttp-client python-opentelemetry-instrumentation-aiohttp-server python-opentelemetry-instrumentation-aiokafka python-opentelemetry-instrumentation-aiopg python-opentelemetry-instrumentation-aio-pika python-opentelemetry-instrumentation-asgi python-opentelemetry-instrumentation-asyncclick python-opentelemetry-instrumentation-asyncio python-opentelemetry-instrumentation-asyncpg python-opentelemetry-instrumentation-aws-lambda python-opentelemetry-instrumentation-boto python-opentelemetry-instrumentation-boto3sqs python-opentelemetry-instrumentation-botocore python-opentelemetry-instrumentation-cassandra python-opentelemetry-instrumentation-celery python-opentelemetry-instrumentation-click python-opentelemetry-instrumentation-confluent-kafka python-opentelemetry-instrumentation-dbapi python-opentelemetry-instrumentation-django python-opentelemetry-instrumentation-elasticsearch python-opentelemetry-instrumentation-falcon python-opentelemetry-instrumentation-fastapi python-opentelemetry-instrumentation-flask python-opentelemetry-instrumentation-grpc python-opentelemetry-instrumentation-httpx python-opentelemetry-instrumentation-jinja2 python-opentelemetry-instrumentation-kafka-python python-opentelemetry-instrumentation-logging python-opentelemetry-instrumentation-mysql python-opentelemetry-instrumentation-mysqlclient python-opentelemetry-instrumentation-pika python-opentelemetry-instrumentation-psycopg python-opentelemetry-instrumentation-psycopg2 python-opentelemetry-instrumentation-pymemcache python-opentelemetry-instrumentation-pymongo python-opentelemetry-instrumentation-pymssql python-opentelemetry-instrumentation-pymysql python-opentelemetry-instrumentation-pyramid python-opentelemetry-instrumentation-redis python-opentelemetry-instrumentation-remoulade python-opentelemetry-instrumentation-requests python-opentelemetry-instrumentation-sqlalchemy python-opentelemetry-instrumentation-sqlite3 python-opentelemetry-instrumentation-starlette python-opentelemetry-instrumentation-system-metrics python-opentelemetry-instrumentation-threading python-opentelemetry-instrumentation-tornado python-opentelemetry-instrumentation-tortoiseorm python-opentelemetry-instrumentation-urllib python-opentelemetry-instrumentation-urllib3 python-opentelemetry-instrumentation-wsgi"
+    "python-opentelemetry-api python-opentelemetry-instrumentation python-opentelemetry-sdk"
+    "python-opentelemetry-api python-opentelemetry-semantic-conventions python-packaging python-wrapt"
+    "python-opentelemetry-api python-opentelemetry-sdk python-wrapt"
+    "python-opentelemetry-api"
+    "python-opentelemetry-api python-opentelemetry-sdk"
+    "python-opentelemetry-instrumentation python-opentelemetry-sdk"
+    "python-opentelemetry-sdk"
+    "python-opentelemetry-sdk"
+    "python"
 )
 _optdepends=(
     ""
     ""
-    ""
-    "python-anthropic"
-    "python-claude-agent-sdk"
     "python-google-genai"
-    "python-langchain"
-    "python-openai-agents"
     "python-openai"
     "python-google-cloud-aiplatform"
-    "python-weaviate-client"
     "python-aiohttp"
     "python-aiohttp"
     "python-aiokafka"
@@ -391,42 +350,140 @@ _optdepends=(
     ""
     ""
     ""
-    "python-pytest"
     ""
 )
 
 prepare() {
-    git -C "${srcdir}/${pkgbase}" clean -dfx
+    cd "$pkgbase"
+
+    python3 - "$_url" << 'PYEOF' > "$srcdir/_pkginfo.sh"
+import tomllib
+import glob
+import re
+import sys
+
+_url = sys.argv[1]
+blacklist = {".git", "_template"}
+
+tomls = []
+for t in sorted(glob.glob("**/pyproject.toml", recursive=True)):
+    parts = t.split("/")
+    if blacklist & set(parts):
+        continue
+    subdir = "/".join(parts[:-1])
+    tomls.append((subdir, t))
+
+print("# Generated by prepare() -- do not edit manually\n")
+
+print("pkgname=(")
+pkg_names = []
+for subdir, toml_path in tomls:
+    with open(toml_path, "rb") as f:
+        data = tomllib.load(f)
+    name = data.get("project", {}).get("name", parts[-2].lower())
+    pn = f"python-{name}"
+    pkg_names.append(pn)
+    print(f'    "{pn}"')
+print(")\n")
+
+print("_pkgdescs=(")
+for subdir, toml_path in tomls:
+    with open(toml_path, "rb") as f:
+        data = tomllib.load(f)
+    desc = data.get("project", {}).get("description", "")
+    print(f'    "{desc}"')
+print(")\n")
+
+print("_urls=(")
+for subdir, toml_path in tomls:
+    print(f'    "${{_url}}/tree/main/{subdir}"')
+print(")\n")
+
+print("_src_dirs=(")
+for subdir, toml_path in tomls:
+    print(f'    "{subdir}"')
+print(")\n")
+
+print("_depends=(")
+for subdir, toml_path in tomls:
+    with open(toml_path, "rb") as f:
+        data = tomllib.load(f)
+    deps_raw = data.get("project", {}).get("dependencies", [])
+    deps = []
+    for d in deps_raw:
+        m = re.match(r"^([a-zA-Z0-9_-]+)", d)
+        if m:
+            dep = m.group(1).lower()
+            dep = f"python-{dep}"
+            dep = dep.replace("python-python", "python")
+            deps.append(dep)
+    if not deps:
+        deps = ["python"]
+    deps = sorted(set(deps))
+    print(f'    "{" ".join(deps)}"')
+print(")\n")
+
+print("_optdepends=(")
+for subdir, toml_path in tomls:
+    with open(toml_path, "rb") as f:
+        data = tomllib.load(f)
+    optdeps_raw = data.get("project", {}).get("optional-dependencies", {})
+    optdeps = []
+    for vals in optdeps_raw.values():
+        for d in vals:
+            m = re.match(r"^([a-zA-Z0-9_-]+)", d)
+            if m:
+                dep = m.group(1).lower()
+                dep = f"python-{dep}"
+                dep = dep.replace("-python", "")
+                dep = dep.replace("_", "-")
+                dep = dep.replace("psycopg2-binary", "psycopg2")
+                dep = dep.replace("jinja2", "jinja")
+                optdeps.append(dep)
+    optdeps = sorted(set(optdeps))
+    print(f'    "{" ".join(optdeps)}"')
+print(")\n")
+PYEOF
+
+    source "$srcdir/_pkginfo.sh"
+
+    _create_package_functions
 }
 
 build() {
     for ((i=0; i<${#pkgname[@]}; i++)); do
-        _pkgname="${pkgname[i]#*-}"
-        _dirname=$(echo "${_urls[i]}" | sed -e "s|^${_url}/tree/main/||g" -e "s|${_pkgname}$||g")
-        python -m build --wheel --no-isolation "${pkgbase}/${_dirname}${_pkgname}"
+        local _src_dir="${_src_dirs[i]}"
+        [[ -d "${pkgbase}/${_src_dir}" ]] || continue
+        python -m build --wheel --no-isolation "${pkgbase}/${_src_dir}"
     done
 }
 
-main() {
+_create_package_functions() {
+    local i _pkg
     for ((i=0; i<${#pkgname[@]}; i++)); do
-        _pkgname="${pkgname[i]#*-}"
-        _dirname=$(echo "${_urls[i]}" | sed -e "s|^${_url}/tree/main/||g" -e "s|${_pkgname}$||g")
-        eval "package_python-${_pkgname}() {
-            pkgdesc=\"${_pkgdescs[i]}\"
-            url=\"${_urls[i]}\"
-            depends=(${_depends[i]})
-            optdepends=(${_optdepends[i]})
+        _pkg="${pkgname[i]}"
+        eval "package_${_pkg}() {
+            local _i
+            for ((_i=0; _i<\${#pkgname[@]}; _i++)); do
+                [[ \"\${pkgname[_i]}\" == \"${_pkg}\" ]] && break
+            done
+            [[ \$_i -ge \${#pkgname[@]} ]] && return 0
 
-            cd \"${pkgbase}/${_dirname}${_pkgname}\"
+            pkgdesc=\"\${_pkgdescs[\$_i]}\"
+            url=\"\${_urls[\$_i]}\"
+            depends=(\${_depends[\$_i]})
+            optdepends=(\${_optdepends[\$_i]})
+
+            cd \"${pkgbase}/\${_src_dirs[\$_i]}\"
             python -m installer --destdir=\"\${pkgdir}\" dist/*.whl
             if [[ -f README.rst ]]; then
-                install -Dm644 README.rst \"\${pkgdir}/usr/share/doc/python-${_pkgname}/README.rst\"
+                install -Dm644 README.rst \"\${pkgdir}/usr/share/doc/${_pkg}/README.rst\"
             fi
             if [[ -f CHANGELOG.md ]]; then
-                install -Dm644 CHANGELOG.md \"\${pkgdir}/usr/share/doc/python-${_pkgname}/CHANGELOG.md\"
+                install -Dm644 CHANGELOG.md \"\${pkgdir}/usr/share/doc/${_pkg}/CHANGELOG.md\"
             fi
         }"
     done
 }
 
-main
+_create_package_functions
