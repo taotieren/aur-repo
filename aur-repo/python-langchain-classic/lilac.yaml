@@ -1,0 +1,14 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['Smoolak'])
+post_build: aur_post_build
+repo_depends:
+  - python-langchain-core
+  - python-langchain-text-splitters
+  - python-langsmith
+update_on:
+  - source: aur
+    aur: python-langchain-classic
+  - alias: python
