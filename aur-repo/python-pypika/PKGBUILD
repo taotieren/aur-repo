@@ -5,7 +5,7 @@
 _pkgname=pypika
 pkgname="python-${_pkgname}"
 pkgver=0.51.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A SQL query builder API for Python"
 arch=("any")
 url="https://github.com/kayak/${_pkgname}"
