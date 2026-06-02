@@ -11,16 +11,20 @@ provides=(${pkgname%-git} notepadplugin)
 conflicts=(${pkgname%-git})
 _qt=qt5
 depends=(
-    glibc
     gcc-libs
     hicolor-icon-theme
-    $_qt-base)
-makedepends=(cmake
+    libgcc
+    libstdc++
+    $_qt-base
+)
+makedepends=(
+    cmake
     ninja
     git
     $_qt-tools
     $_qt-xmlpatterns
-    qscintilla-$_qt)
+    qscintilla-$_qt
+)
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
