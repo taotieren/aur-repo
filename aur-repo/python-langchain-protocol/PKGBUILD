@@ -3,7 +3,7 @@
 _name=langchain-protocol
 pkgname=python-$_name
 pkgver=0.0.16
-pkgrel=1
+pkgrel=2
 pkgdesc="Python bindings for the LangChain agent streaming protocol."
 arch=('any')
 url="https://github.com/langchain-ai/agent-protocol/tree/main/streaming/py"
