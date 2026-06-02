@@ -2,7 +2,13 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['stiermid'])
+pre_build_script: |
+  aur_pre_build(maintainers=['stiermid'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-uuid-utils'])
+
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 # repo_depends:
 #   -
