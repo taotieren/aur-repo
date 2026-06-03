@@ -16,9 +16,5 @@ post_build_script: |
   update_aur_repo()
 
 update_on:
-  - source: regex
-    url: https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js
-    regex: 'AiCube-ISP-v([\w.\-]+)\.zip'
-    headers:
-      User-Agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
-      Referer: "https://www.stcai.com/"
+  - source: cmd
+    cmd: 'python3 -c "import urllib.request,re;req=urllib.request.Request(\"https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js\",headers={\"User-Agent\":\"Mozilla/5.0\",\"Referer\":\"https://www.stcai.com/\"});m=re.search(r\"AiCube-ISP-v([\w.\-]+)\.zip\",urllib.request.urlopen(req).read().decode());m and print(m.group(1))"'
