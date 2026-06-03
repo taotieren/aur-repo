@@ -3,12 +3,13 @@ maintainers:
     email: admin@taotieren.com
 
 pre_build_script: |
+  oldver, oldrel = get_pkgver_and_pkgrel()
   for line in edit_file('PKGBUILD'):
     if line.startswith('_tagname='):
       line = f"_tagname={_G.newver}"
     print(line)
-  # PKGBUILD 中 pkgver=${_tagname//-/+} 会将 - 转 +，故同步处理
-  update_pkgver_and_pkgrel(_G.newver.replace('-', '+'))
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
   run_protected(["updpkgsums"])
 
 post_build_script: |
