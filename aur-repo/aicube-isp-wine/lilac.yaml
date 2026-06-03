@@ -17,15 +17,9 @@ post_build_script: |
 
 update_on:
   - source: cmd
-    cmd: >
+    cmd: >-
       curl -sL
       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
       -H "Referer: https://www.stcai.com/"
       "https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js"
-      | python3 -c "
-      import sys, html, re
-      raw = html.unescape(sys.stdin.read())
-      m = re.search(r'AiCube-ISP-v([\w.\-]+)\.zip', raw)
-      if m:
-          print(m.group(1))
-      "
+      | python3 -c "import sys,html,re;m=re.search(r'AiCube-ISP-v([\w.\-]+)\.zip',html.unescape(sys.stdin.read()));m and print(m.group(1))"
