@@ -3,7 +3,7 @@
 pkgname=python-zlgcan
 _name=zlgcan-driver
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Python wrapper for zlgcan driver"
 provides=(${pkgname} zlgcan)
 conflicts=(${pkgname} zlgcan)
