@@ -20,4 +20,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://fw.koolcenter.com/binary/ddnsto/linux-binary/
-    regex: 'ddnsto-standard-([\d.]+)\.tar\.gz'
+    regex: 'ddnsto-lite-([\d.]+)\.tar\.gz'
