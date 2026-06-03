@@ -16,5 +16,9 @@ post_build_script: |
   update_aur_repo()
 
 update_on:
-  - source: cmd
-    cmd: 'curl -sL --connect-timeout 30 --max-time 60 -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" -H "Referer: https://www.stcai.com/" "https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js" | grep -o "AiCube-ISP-v[.a-zA-Z0-9_-]*[.]zip" | head -1 | sed "s/AiCube-ISP-v//;s/[.]zip$//"'
+  - source: regex
+    url: https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js
+    regex: 'AiCube-ISP-v([\w.\-]+)\.zip'
+    headers:
+      User-Agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+      Referer: "https://www.stcai.com/"
