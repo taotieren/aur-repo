@@ -22,7 +22,7 @@ optdepends=()
 backup=('etc/ddnsto/config.yaml')
 install=${pkgname}.install
 source=(
-    "https://fw0.koolcenter.com/binary/ddnsto/linux-binary/${_name}-binary-${pkgver}.tar.gz"
+    "https://fw0.koolcenter.com/binary/ddnsto/linux-binary/${_name}-standard-${pkgver}.tar.gz"
     "ddnsto.service"
     "${pkgname}.tmpfiles"
     "${pkgname}.sysusers"
@@ -36,7 +36,7 @@ sha256sums=('be066e16409da44cee04607c02e2ebdb9e4a89c2b2c0de2a03981d169ed5b3df'
 options=(!debug !strip emptydirs)
 
 package() {
-    cd "${srcdir}/${_name}-binary-${pkgver}/"
+    cd "${srcdir}/${_name}-standard-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
         ./${_name}.x86_64 example-config > config.yaml
         install -vDm755 ${_name}.x86_64 ${pkgdir}/usr/bin/${_name}
