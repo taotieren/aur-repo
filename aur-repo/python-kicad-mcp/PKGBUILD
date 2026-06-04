@@ -57,5 +57,6 @@ package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
     install -Dm644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
+    cp -R docs "${pkgdir}/usr/share/doc/${pkgname}/"
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
