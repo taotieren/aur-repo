@@ -11,6 +11,7 @@ update_on:
     github: cloud-fs/cloud-fs.github.io
     use_latest_release: true
     prefix: v
+    exclude_regex: '.app-([\d.]+)'
 
 # use_max_tag: true
 # prefix: v
