@@ -17,4 +17,5 @@ update_on:
     # use_max_tag: true
     use_latest_release: true
     prefix: v
+    exclude_regex: '.mcp-npm-v([\d.]+)'
   - alias: python
