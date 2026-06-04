@@ -3,7 +3,7 @@
 pkgname=python-kicad-mcp
 _name=${pkgname#python-}
 pkgver=0.1.6
-pkgrel=0
+pkgrel=1
 pkgdesc="KiCad MCP integrated with the KiCad IPC API."
 provides=(${pkgname})
 conflicts=(${pkgname})
