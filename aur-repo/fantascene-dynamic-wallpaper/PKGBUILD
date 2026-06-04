@@ -41,6 +41,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}"
+    export CXXFLAGS="${CXXFLAGS} -fpermissive"
     qmake6 ./${pkgname}.pro -spec linux-g++ CONFIG+=qtquickcompiler -o build/
     make -C ./build
 }
