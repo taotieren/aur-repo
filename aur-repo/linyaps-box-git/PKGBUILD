@@ -26,6 +26,7 @@ makedepends=(
   gtest
   ninja
   nlohmann-json
+  numactl
   pkgconf
 )
 checkdepends=()
