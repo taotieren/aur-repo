@@ -50,6 +50,7 @@ pkgver() {
 
 package() {
     cd "${srcdir}/${pkgname%-git}"
+    export PUPPETEER_SKIP_DOWNLOAD=true
     npm install -g --prefix "${pkgdir}/usr" $(npm pack)
 
     # Non-deterministic race in npm gives 777 permissions to random directories.
