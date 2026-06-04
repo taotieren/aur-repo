@@ -16,6 +16,5 @@ update_on:
     github: oaslananka/kicad-mcp
     # use_max_tag: true
     use_latest_release: true
-    prefix: v
-    exclude_regex: '.mcp-npm-v([\d.]+)'
+    prefix: mcp-server-v
   - alias: python
