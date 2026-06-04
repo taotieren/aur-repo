@@ -6,7 +6,8 @@ pre_build_script: aur_pre_build(maintainers=['medaminezghal'])
 post_build: aur_post_build
 repo_depends:
   - python-mcp
-  - python-sentencepiece
+  # sentencepiece
+  # - python-sentencepiece
 update_on:
   - source: aur
     aur: python-google-genai
