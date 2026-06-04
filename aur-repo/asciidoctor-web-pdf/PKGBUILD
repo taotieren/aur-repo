@@ -40,6 +40,7 @@ sha256sums=('d19863999545af3e7adfef1630c045058e4751134e03eda93fdecd6377366ef2')
 # noextract=("${pkgname}-${_tagname}.tar.gz")
 
 package() {
+    export PUPPETEER_SKIP_DOWNLOAD=true
     npm install -g --prefix "${pkgdir}/usr" "${srcdir}/${pkgname}-${_tagname}.tar.gz"
 
     # Non-deterministic race in npm gives 777 permissions to random directories.
