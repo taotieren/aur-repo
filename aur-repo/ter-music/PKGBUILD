@@ -2,7 +2,7 @@
 
 pkgname=ter-music
 pkgver=2.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="This is a music player that can be used in the terminal~"
 arch=($CARCH)
 url="https://github.com/YXZL985/ter-music"
@@ -26,6 +26,8 @@ depends=(
     ncurses
     libpng
     libjpeg
+    libxml2
+    sqlite
 # ter-music-server
     impacket
     python
