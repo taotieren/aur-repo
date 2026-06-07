@@ -65,8 +65,9 @@ pkgver() {
 prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
     git -C "${srcdir}/mfgtools-doc-git" clean -dfx
-    #     cd "${srcdir}/${pkgbase}"
-    #     git submodule update --init --recursive
+
+    git -C "${srcdir}/${pkgbase}" tag -d master 2>/dev/null || true
+    git -C "${srcdir}/${pkgbase}" fetch --tags 2>/dev/null || true
 }
 
 build() {
