@@ -38,7 +38,8 @@ noextract=()
 _install_path="/opt/appimages"
 
 prepare() {
-    cd ${srcdir}/motor-debugging-tool/Linux/x86_64
+    git -C "${srcdir}/motor-debugging-tool" clean -dfx
+    cd ${srcdir}/motor-debugging-tool/USB2FDCAN/Linux/x86_64
     chmod +x ${_name}
     "./${_name}" --appimage-extract >/dev/null
     sed -i -e 's|Exec=serial-port-assistant|Exec=/usr/bin/dm-tools|g' \
@@ -119,7 +120,7 @@ KERNEL=="ttyUSB*", ATTRS{idVendor}=="34b7", ATTRS{idProduct}=="6877", MODE="0666
 KERNEL=="ttyACM*", ATTRS{idVendor}=="34b7", ATTRS{idProduct}=="6877", MODE="0666", SYMLINK+="ttyDM_FDCAN_%n"
 EOF
     
-    cd ${srcdir}/motor-debugging-tool/Linux/x86_64
+    cd ${srcdir}/motor-debugging-tool/USB2FDCAN/Linux/x86_64
     install -vDm755 ${_name} "${pkgdir}"/${_install_path}/${pkgname}.AppImage
 
     # local _icon

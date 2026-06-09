@@ -10,4 +10,4 @@ post_build_script: |
 #   -
 update_on:
   - source: cmd
-    cmd: "curl -sL 'https://api.github.com/repos/dmBots/motor-debugging-tool/contents/Linux/x86_64' | grep -oE 'v[0-9.]+' | head -1 | tr -d 'v'"
+    cmd: "curl -sL 'https://api.github.com/repos/dmBots/motor-debugging-tool/contents/USB2FDCAN/Linux/x86_64' | grep -oE 'v[0-9.]+' | head -1 | tr -d 'v'"
