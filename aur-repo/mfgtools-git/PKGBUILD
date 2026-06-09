@@ -144,7 +144,6 @@ package_python-libuuu-git() {
     conflicts=(${pkgname%-git})
     depends=(
         python
-        python-setuptools-scm
         bzip2
         glibc
         libgcc
