@@ -10,4 +10,4 @@ post_build_script: |
 #   -
 update_on:
   - source: cmd
-    cmd: "curl -sL 'https://api.github.com/repos/dmBots/motor-debugging-tool/contents/Linux/x86_64' | grep -oE 'DMTool-v[0-9.]+-x86_64\\.AppImage' | grep -oE 'v[0-9.]+' | tr -d 'v'"
+    cmd: "curl -sL 'https://api.github.com/repos/dmBots/motor-debugging-tool/contents/Linux/x86_64' | grep -oE 'v[0-9.]+' | head -1 | tr -d 'v'"
