@@ -7,8 +7,8 @@ pkgdesc="The first and best Office suite designed for AI agents"
 arch=($CARCH)
 url="https://github.com/iOfficeAI/OfficeCLI"
 license=('Apache-2.0')
-provides=(${pkgname})
-conflicts=(${pkgname})
+provides=(${pkgname} ${pkgname}-sdk)
+conflicts=(${pkgname} ${pkgname}-sdk)
 replaces=()
 depends=(
     glibc
