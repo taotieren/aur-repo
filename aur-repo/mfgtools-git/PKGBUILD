@@ -13,8 +13,9 @@ license=('BSD-3-Clause')
 groups=()
 depends=(
     bzip2
-    gcc-libs
     glibc
+    libgcc
+    libstdc++
     libusb
     tinyxml2
     openssl
@@ -99,8 +100,9 @@ package_mfgtools-git() {
     conflicts=('uuu' ${pkgname%-git})
     depends=(
         bzip2
-        gcc-libs
         glibc
+        libgcc
+        libstdc++
         libusb
         tinyxml2
         openssl
@@ -118,12 +120,7 @@ package_mfgtools-git() {
 
 package_mfgtools-doc-git() {
     pkgdesc+=" (doc)"
-    depends=(
-        asciidoc
-        dblatex
-        findutils
-        coreutils
-    )
+    depends=()
     provides=(${pkgname%-git})
     conflicts=(${pkgname%-git})
 
@@ -149,8 +146,9 @@ package_python-libuuu-git() {
         python
         python-setuptools-scm
         bzip2
-        gcc-libs
         glibc
+        libgcc
+        libstdc++
         libusb
         tinyxml2
         openssl
