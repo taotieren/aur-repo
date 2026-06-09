@@ -3,7 +3,7 @@
 pkgbase=dm-tools-appimage
 pkgname=(dm-tools-appimage)
 pkgver=2.1.6.7
-pkgrel=0
+pkgrel=1
 pkgdesc="DM-USB2FDCAN (Damiao 达妙) host computer software supports DM-USB2FDCAN series CAN cards"
 arch=('x86_64')
 url="https://github.com/dmBots/motor-debugging-tool"
