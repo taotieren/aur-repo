@@ -25,10 +25,11 @@ makedepends=(
     git
     ninja
     asciidoc
+    coreutils
     dblatex
     doxygen
     findutils
-    coreutils
+    graphviz
     texlive-fontutils
     meson
     python
@@ -67,7 +68,6 @@ prepare() {
     git -C "${srcdir}/mfgtools-doc-git" clean -dfx
 
     git -C "${srcdir}/${pkgbase}" tag -d master 2>/dev/null || true
-    git -C "${srcdir}/${pkgbase}" fetch --tags 2>/dev/null || true
 }
 
 build() {
