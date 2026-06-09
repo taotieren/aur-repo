@@ -7,8 +7,8 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 # repo_depends:
-#   - 
+#   -
 update_on:
   - source: regex
-    url: https://gitee.com/kit-miao/dm-tools/releases/
+    url: https://github.com/dmBots/motor-debugging-tool/tree/master/Linux/x86_64
     regex: 'DMTool%20v([\d.]+)-x86_64.AppImage'
