@@ -10,8 +10,8 @@ update_on:
   - source: github
     github: cloud-fs/cloud-fs.github.io
     use_latest_release: true
+    include_regex: '^v\d[\d.]*$'
     prefix: v
-    exclude_regex: '.app-v([\d.]+)'
 
 # use_max_tag: true
 # prefix: v
