@@ -76,5 +76,5 @@ EOF
 ch34x_mphsi_master
 EOF
 
-    install -Dm644 README.md "${pkgdir}/usr/src/${pkgbase%-git}-${pkgver}/README.md"
+    install -Dm644 ../README.md "${pkgdir}/usr/src/${pkgbase%-git}-${pkgver}/README.md"
 }
