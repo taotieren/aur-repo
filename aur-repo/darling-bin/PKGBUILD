@@ -40,7 +40,7 @@ install=$pkgname.install
 
 package() {
   cd $srcdir
-  for deb in debs/*_*.deb; do
+  for deb in debs*/*_*.deb; do
     rm -f data.tar.zst
     bsdtar xf "$deb"
     (cd "$pkgdir"
