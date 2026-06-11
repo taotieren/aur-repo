@@ -10,7 +10,6 @@ update_on:
   - source: github
     github: hpmicro/hpm_manufacturing_tool
     use_latest_release: true
-    include_regex: '^v[\d.]+$'
     prefix: v
 
 # use_max_tag: true
