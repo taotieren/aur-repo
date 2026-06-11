@@ -3,7 +3,7 @@
 
 _pkgname=darling
 pkgname=$_pkgname-bin
-pkgver=0.1.20260222
+pkgver=0.1.20260608
 pkgrel=1
 pkgdesc="Darwin/macOS emulation layer for Linux"
 arch=('x86_64')
@@ -34,7 +34,7 @@ depends=(
   libxrandr)
 optdepends=('libtiff5: Library for manipulation of TIFF images')
 source=("${url}/releases/download/v${pkgver}/debs_${pkgver#0.1.}.zip")
-sha256sums=('9bc64151f10b005d46af2565714d07f7f2ccdc95100ccf75b4b2f65ba94dc821')
+sha256sums=('27469ef3932da2e91dd7fb34b70e3628a3e54b7af9fb5480051f44af35eca1fd')
 options=('!strip')
 install=$pkgname.install
 
