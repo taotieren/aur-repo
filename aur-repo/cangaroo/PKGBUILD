@@ -39,7 +39,7 @@ build() {
 	cd "$srcdir/$pkgname"
 	qmake-qt5
 	make
-	cd canifconfig
+	cd ../canifconfig
 	qmake-qt5
 	make
 }
