@@ -37,12 +37,21 @@ source=("${url}/releases/download/v${pkgver}/debs_${pkgver#0.1.}.zip")
 sha256sums=('27469ef3932da2e91dd7fb34b70e3628a3e54b7af9fb5480051f44af35eca1fd')
 options=('!strip')
 install=$pkgname.install
+noextract=(debs_${pkgver#0.1.}.zip)
+
+prepare() {
+  cd $srcdir
+  for dir in debs*/; do
+    [ -d "$dir" ] && rm -rf "$dir"
+  done
+  bsdtar -xf debs_${pkgver#0.1.}.zip
+}
 
 package() {
   cd $srcdir
   for deb in debs*/*_*.deb; do
     rm -f data.tar.zst
-    bsdtar xf "$deb"
+    bsdtar -xf "$deb"
     (cd "$pkgdir"
     tar xf "${srcdir}/data.tar.zst")
   done
