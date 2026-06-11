@@ -7,6 +7,7 @@ post_build: aur_post_build
 repo_depends:
   - python-docstring-parser
   - python-pytest-http-snapshot
+  - python-standardwebhooks
 update_on:
   - source: aur
     aur: python-anthropic
