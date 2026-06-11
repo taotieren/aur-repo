@@ -18,9 +18,10 @@ conflicts=(${pkgname%-bin}
     hpm-manufacturing-gui)
 replaces=()
 depends=(
-    gcc-libs
     glibc
+    libgcc
     libgpg-error
+    libstdc++
     perl
     systemd-libs
     zlib)
