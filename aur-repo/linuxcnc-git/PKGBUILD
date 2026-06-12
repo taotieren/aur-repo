@@ -68,6 +68,7 @@ depends=(
 )
 makedepends=(
   asciidoc
+  asciidoctor
   bc
   boost
   dblatex
