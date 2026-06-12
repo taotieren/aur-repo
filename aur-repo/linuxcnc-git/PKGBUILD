@@ -38,8 +38,6 @@ depends=(
   libxinerama
   libxmu
   libxss
-  #   readline
-  #   editline
   systemd-libs
   pango
   python
@@ -52,20 +50,13 @@ depends=(
   python-opengl
   python-numpy
   python-matplotlib
-  #   python-poppler-qt5
-  #   python-psycopg
-  #   python-pillow
   python-pyqt5
   python-pyserial
   python-pyzmq
   python-xlib
-  #   python-validate-pyproject
   tk
   tcl
   zlib
-  #   gtksourceview2
-  #   python-pyodbc
-  # python-espeak
 )
 makedepends=(
   asciidoc
@@ -91,7 +82,6 @@ makedepends=(
   #AUR
   # bwidget
   python-yapps2
-  #   tclx
   linkchecker
   termcap
 )
