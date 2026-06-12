@@ -3,7 +3,7 @@
 pkgbase=libethercat
 pkgname=(libethercat{,-tools})
 _tagname=0.8.0-rev1
-pkgver="${_tagname//-/_}"
+pkgver="${_tagname//-/+}"
 pkgrel=4
 pkgdesc="EtherCAT master library. This library is used to build a deterministic fieldbus network with EtherCAT components."
 arch=($CARCH)
