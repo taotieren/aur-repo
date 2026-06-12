@@ -21,9 +21,16 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
-source=("${pkgbase}::git+${url}.git#tag=${_tagname}")
-sha256sums=('7f5c6974195ad9134bfb55f5179f3e74a1c61145dcadf7edcd2b1de88682ee3b')
+source=("${pkgbase}::git+${url}.git#tag=${_tagname}"
+        "add-missing-sources.patch")
+sha256sums=('7f5c6974195ad9134bfb55f5179f3e74a1c61145dcadf7edcd2b1de88682ee3b'
+            'SKIP')
 options=()
+
+prepare() {
+    cd "${srcdir}/${pkgbase}"
+    patch -Np1 -i "${srcdir}/add-missing-sources.patch"
+}
 
 build() {
     cd "${srcdir}/${pkgbase}/"
@@ -34,7 +41,7 @@ build() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_SHARED_LIBS=ON \
-        -DECAT_DEVICE="sock_raw+sock_raw_mmaped" \
+        -DECAT_DEVICE="sock_raw+sock_raw_mmaped+veth" \
         -Wno-dev \
         -B build
 

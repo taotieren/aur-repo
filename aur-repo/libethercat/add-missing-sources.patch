@@ -1,0 +1,30 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -98,6 +98,7 @@ set(SRC_ETHERCAT
+     src/hw.c
+     src/idx.c
+     src/mbx.c
++    src/mbx_gateway.c
+     src/mii.c
+     src/pool.c
+     src/slave.c
+@@ -105,6 +106,7 @@ set(SRC_ETHERCAT
+ 
+ list(FIND ECAT_DEVICE "sock_raw" HAS_SOCK_RAW)
+ list(FIND ECAT_DEVICE "sock_raw_mmaped" HAS_SOCK_RAW_MMAPED)
++list(FIND ECAT_DEVICE "veth" HAS_SOCK_VETH)
+ list(FIND ECAT_DEVICE "file" HAS_SOCK_FILE)
+ list(FIND ECAT_DEVICE "pikeos" HAS_SOCK_PIKEOS)
+ list(FIND ECAT_DEVICE "bpf" HAS_SOCK_BPF)
+@@ -119,6 +121,11 @@ if (${HAS_SOCK_RAW_MMAPED} GREATER -1)
+     list(APPEND SRC_HW_LAYER src/hw_sock_raw_mmaped.c)
+     set(LIBETHERCAT_BUILD_DEVICE_SOCK_RAW_MMAPED 1)
+ endif()
++if (${HAS_SOCK_VETH} GREATER -1)
++    message("Include device veth")
++    list(APPEND SRC_HW_LAYER src/veth.c)
++    set(LIBETHERCAT_BUILD_DEVICE_VETH 1)
++endif()
+ if (${HAS_SOCK_FILE} GREATER -1)
+     message("Include device file")
+     list(APPEND SRC_HW_LAYER src/hw_file.c)
