@@ -12,16 +12,23 @@ license=('Custom')
 groups=()
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(bzip2
-    zlib
-    confuse
-    curl
+depends=(
+    glibc
     libftdi
     libyaml
     libusb
+)
+makedepends=(
+    'cmake' 
+    'git' 
+    'ninja'
+    bzip2
+    confuse
+    curl
     libzip
-    openssl)
-makedepends=('cmake' 'git' 'ninja')
+    openssl
+    zlib
+    )
 checkdepends=()
 optdepends=("mfgtools-git: uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools.")
 replaces=()
