@@ -8,8 +8,9 @@ arch=($CARCH)
 license=('GPL-2.0-only')
 depends=(
 	bash
-	gcc-libs
 	glibc
+	libgcc
+	libstdc++
 	libnl
 	qt5-charts
 	qt5-base
