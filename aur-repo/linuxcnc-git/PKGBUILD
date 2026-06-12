@@ -12,19 +12,24 @@ depends=(
   cairo
   bash
   boost-libs
+  fmt
   freetype2
   fontconfig
-  gcc-libs
   gdk-pixbuf2
   glib2
   glibc
   gstreamer
   gtk3
   harfbuzz
+  libcap
+  libedit
   libepoxy
+  libgcc
+  libglvnd
   libmodbus
   #   libgpiod
   librsvg
+  libstdc++
   libtirpc
   libusb
   libx11
@@ -55,13 +60,12 @@ depends=(
   python-pyzmq
   python-xlib
   #   python-validate-pyproject
-  readline
   tk
   tcl
   zlib
   # AUR
-  bwidget
-  python-yapps2
+  # bwidget
+  # python-yapps2
   #   gtksourceview2
   #   python-pyodbc
   # python-espeak
