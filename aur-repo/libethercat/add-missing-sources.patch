@@ -36,3 +36,14 @@
  if (${HAS_SOCK_FILE} GREATER -1)
      message("Include device file")
      list(APPEND SRC_HW_LAYER src/hw_file.c)
+--- a/cmake/cmake_config.h.in
++++ b/cmake/cmake_config.h.in
+@@ -41,6 +41,9 @@
+ /* Define to 1 if you have the <netinet/in.h> header file. */
+ #cmakedefine LIBETHERCAT_HAVE_NETINET_IN_H ${LIBETHERCAT_HAVE_NETINET_IN_H}
+ 
++/* Define to 1 if you have the <netinet/udp.h> header file. */
++#cmakedefine LIBETHERCAT_HAVE_NETINET_UDP_H ${LIBETHERCAT_HAVE_NETINET_UDP_H}
++
+ /* Define if you have POSIX threads libraries and header files. */
+ #cmakedefine LIBETHERCAT_HAVE_PTHREAD ${LIBETHERCAT_HAVE_PTHREAD}
