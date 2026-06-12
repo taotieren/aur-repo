@@ -23,7 +23,7 @@ backup=()
 options=()
 #install=${pkgname}.install
 source=(
-    "${pkgname}::git+${url}.git#tag=${pkgname}-${pkgver}")
+    "${pkgname}::git+${url}.git#tag=${pkgver}")
 
 sha256sums=('e802fc40339c0628db25be853a30d8c401ea5c40d9d2ece8c804e6257ea0d260')
 
