@@ -6,16 +6,11 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  # - bwidget
   - tclx
   - tkimg
   - python-yapps2
   - linkchecker
   - termcap
-  # - python-pyodbc
-  # - gtksourceview2
-  # - python-espeak
-  # - libmodbus
 update_on:
   - source: github
     github: LinuxCNC/linuxcnc
