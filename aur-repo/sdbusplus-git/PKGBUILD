@@ -50,7 +50,7 @@ pkgver() {
 
 build() {
     arch-meson ${pkgname} build \
-        -D examples=false
+        -D examples=disabled
     meson compile -C build
 
     # Python tools
