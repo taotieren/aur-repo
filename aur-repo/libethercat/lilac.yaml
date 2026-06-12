@@ -19,7 +19,7 @@ repo_depends:
 update_on:
   - source: github
     github: robert-burger/libethercat
-    use_max_tag: true
-    # use_latest_tag: true
+    # use_max_tag: true
+    use_latest_tag: true
     # 8.0.6-hq
     # include_regex: \d+\..*
