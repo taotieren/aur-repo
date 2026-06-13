@@ -35,6 +35,7 @@ depends=(
     python-httpfile
     python-http-response
     python-http-request
+    python-id2dirnode
     python-integer-tool
     python-iterdir
     python-iterutils
