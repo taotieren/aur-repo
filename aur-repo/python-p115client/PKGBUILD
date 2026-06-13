@@ -20,9 +20,11 @@ depends=(
     #AUR
     python-argtools
     python-asynctools
+    python-concurrenttools
     python-cookietools
     python-dictattr
     python-dicttools
+    python-download
     python-ed2k
     python-encode-uri
     python-ensure
@@ -32,14 +34,18 @@ depends=(
     python-http-response
     python-http-request
     python-integer-tool
+    python-iterdir
     python-iterutils
     python-iter-collect
+    python-sqlitetools
     python-startfile
     python-p115cipher
+    python-p115pickcode
     python-p115oss
     python-property
     python-posixpatht
     python-undefined
+    python-urllib3-request
 )
 makedepends=(
     python-poetry
