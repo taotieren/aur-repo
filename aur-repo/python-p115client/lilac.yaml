@@ -9,6 +9,7 @@ post_build_script: |
 repo_depends:
   - python-argtools
   - python-asynctools
+  - python-cachedict
   - python-concurrenttools
   - python-cookietools
   - python-dictattr
@@ -17,6 +18,7 @@ repo_depends:
   - python-ed2k
   - python-encode-uri
   - python-ensure
+  - python-errno2
   - python-filewrap
   - python-hashtools
   - python-httpfile
@@ -33,6 +35,7 @@ repo_depends:
   - python-p115oss
   - python-property
   - python-posixpatht
+  - python-temporary
   - python-undefined
   - python-urllib3-request
 update_on:
