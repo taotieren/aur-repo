@@ -4,6 +4,11 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers=['lapsus'])
   add_makedepends(['python-hatchling'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-arabic-reshaper'])
+
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 update_on:
   - source: aur
