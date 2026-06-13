@@ -14,6 +14,8 @@ conflicts=(${pkgname} ${pkgname#td-})
 depends=(
     bash
     glibc
+    python
+    python-netifaces
 )
 makedepends=(
     gettext
