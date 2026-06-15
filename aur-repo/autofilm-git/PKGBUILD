@@ -50,7 +50,10 @@ prepare() {
     git submodule init
     git config submodule.alist-client-rs.url "$srcdir/alist-client-rs"
     git -c protocol.file.allow=always submodule update
-  
+    sed -i -e 's|/fonts/ch.ttf|/usr/share/fonts/TTF/FZFengYaSongS-GB.ttf|g' \
+        -e 's|/fonts/en.otf|/usr/share/fonts/OTF/Melete-UltraLight.otf|g' \
+        config/config.example.yaml
+
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
@@ -69,8 +72,8 @@ package() {
    
     install -vDm755 "target/release/${pkgname%-git}" -t "$pkgdir/usr/bin/"
     install -vDm644 "config/config.example.yaml" "${pkgdir}/etc/${pkgname%-git}/config.yaml"
-    install -vDm644 fonts/ch.ttf -t ${pkgdir}/usr/share/fonts/TTF/
-    install -vDm644 fonts/en.otf -t ${pkgdir}/usr/share/fonts/OTF/
+    install -vDm644 fonts/ch.ttf ${pkgdir}/usr/share/fonts/TTF/FZFengYaSongS-GB.ttf
+    install -vDm644 fonts/en.otf ${pkgdir}/usr/share/fonts/OTF/Melete-UltraLight.otf
     install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm644 "${srcdir}/${pkgname%-git}.service" -t "${pkgdir}/usr/lib/systemd/system/"
 }
