@@ -6,7 +6,6 @@ After=network-online.target
 [Service]
 Type=simple
 User=autofilm
-WorkingDirectory=/usr/share/autofilm
 ExecStart=/usr/bin/autofilm
 Restart=on-failure
 
