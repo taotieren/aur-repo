@@ -69,6 +69,8 @@ package() {
    
     install -vDm755 "target/release/${pkgname%-git}" -t "$pkgdir/usr/bin/"
     install -vDm644 "config/config.example.yaml" "${pkgdir}/etc/${pkgname%-git}/config.yaml"
+    install -vDm644 fonts/ch.ttf -t ${pkgdir}/usr/share/fonts/TTF/
+    install -vDm644 fonts/en.otf -t ${pkgdir}/usr/share/fonts/OTF/
     install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm644 "${srcdir}/${pkgname%-git}.service" -t "${pkgdir}/usr/lib/systemd/system/"
 }
