@@ -50,7 +50,7 @@ prepare() {
     git submodule init
     git config submodule.alist-client-rs.url "$srcdir/alist-client-rs"
     git -c protocol.file.allow=always submodule update
-    sed -i 's|../config/config.example.yaml|/etc/autofilm/config.yaml|g' src/config.rs
+    # sed -i 's|../config/config.example.yaml|/etc/autofilm/config.yaml|g' src/config.rs
   
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
