@@ -3,7 +3,7 @@
 pkgname=autofilm
 _tagname=1.5.1
 pkgver="${_tagname//-/+}"
-pkgrel=0
+pkgrel=1
 pkgdesc="A small project to provide Strm direct-link playback for Emby and Jellyfin servers, recommended for use with MediaWarp."
 arch=($CARCH)
 url="https://github.com/Akimio521/AutoFilm"
@@ -34,7 +34,7 @@ source=(
 )
 sha256sums=('SKIP'
             'SKIP'
-            'SKIP')
+            '17a27a4544f1b7db4a14c971425ae2be9c48db57e8410513e5df187070ebe7f3')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
