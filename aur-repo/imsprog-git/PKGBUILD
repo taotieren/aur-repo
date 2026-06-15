@@ -9,19 +9,19 @@ url="https://github.com/bigbigmdm/IMSProg"
 license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
+_qt=qt6
 depends=(
-  sh
   glibc
   libgcc
   libstdc++
   libusb
-  qt5-base
+  $_qt-base
 )
 makedepends=(
   cmake
   git
   ninja
-  qt5-tools
+  $_qt-tools
 )
 optdepends=(
   "ezp-chip-data-editor: QT based editor chip database for EZP2019, EZP2019+, EZP2020, EZP2023, EZP2025, MinPro programmer devices"
