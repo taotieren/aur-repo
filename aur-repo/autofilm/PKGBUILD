@@ -62,5 +62,6 @@ package() {
    
     install -vDm755 "target/release/${pkgname}" -t "$pkgdir/usr/bin/"
     install -vDm644 "config/config.example.yaml" "${pkgdir}/etc/${pkgname}/config.yaml"
+     install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm644 "${srcdir}/${pkgname}.service" -t "${pkgdir}/usr/lib/systemd/system/"
 }
