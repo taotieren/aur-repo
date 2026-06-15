@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
 User=autofilm
-ExecStart=/usr/bin/autofilm --config /etc/autofilm/config.toml
+ExecStart=/usr/bin/autofilm --config /etc/autofilm/config.yaml
 Restart=on-failure
 
 [Install]
