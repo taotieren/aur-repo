@@ -73,7 +73,7 @@ pkgver() {
     commit_count=$(git rev-list --count "${latest_tag}..HEAD")
     commit_hash=$(git rev-parse --short=7 HEAD)
 
-    printf "%s.r%s.%s" "${latest_tag//-/_}" "${commit_count}" "${commit_hash}" ||
+    printf "%s.r%s.%s" "${latest_tag//-/+}" "${commit_count}" "${commit_hash}" ||
       printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
   )
 }
