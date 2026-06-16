@@ -6,7 +6,6 @@ pre_build_script: aur_pre_build(maintainers=['Rainbowu'])
 post_build: aur_post_build
 repo_depends:
   - python-langchain-protocol
-  - python-langsmith
 update_on:
   - source: aur
     aur: python-langchain-core
