@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers=['RubenKelevra'])
+post_build: aur_post_build
+repo_depends:
+  - python-tree-sitter
+update_on:
+  - source: aur
+    aur: python-tree-sitter-c
+  - alias: python
