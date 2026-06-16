@@ -21,7 +21,6 @@ depends=(
   sh
   curl
   fmt
-  gcc-libs
   glib2
   glibc
   hicolor-icon-theme
@@ -95,6 +94,8 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DCPM_LOCAL_PACKAGES_ONLY=ON \
+    -DENABLE_LINGLONG_INSTALLER=ON \
+    -DLINGLONG_EXPORT_PATH=apps/share \
     -DLINGLONG_VERSION="${pkgver%%+}" \
     -Wno-dev \
     -B build \
