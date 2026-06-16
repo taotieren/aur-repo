@@ -3,7 +3,7 @@
 pkgname=python-damiao-motor
 _name=${pkgname#python-}
 pkgver=1.0.7b2
-pkgrel=2
+pkgrel=3
 pkgdesc="Python driver for DaMiao (达妙) brushless motors over CAN with a unified CLI, web GUI, and library API"
 provides=(${pkgname})
 conflicts=(${pkgname})
