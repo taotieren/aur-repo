@@ -96,7 +96,6 @@ build() {
     -DCPM_LOCAL_PACKAGES_ONLY=ON \
     -DENABLE_LINGLONG_INSTALLER=ON \
     -DLINGLONG_EXPORT_PATH=apps/share \
-    -DLINGLONG_VERSION="${pkgver%%.r}" \
     -Wno-dev \
     -B build \
     -G Ninja
