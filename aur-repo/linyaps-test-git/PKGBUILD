@@ -93,7 +93,6 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DCPM_LOCAL_PACKAGES_ONLY=ON \
-    -DLINGLONG_VERSION="$pkgver" \
     -Wno-dev \
     -B build \
     -G Ninja
