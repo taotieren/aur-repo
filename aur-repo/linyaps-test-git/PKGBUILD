@@ -27,6 +27,8 @@ depends=(
   hicolor-icon-theme
   libcap
   libelf
+  libgcc
+  libstdc++
   linyaps-box
   ${_qt}-base
   systemd-libs
