@@ -20,6 +20,8 @@ _qt=qt6
 depends=(
   sh
   curl
+  erofs-utils
+  erofsfuse
   fmt
   glib2
   glibc
@@ -27,6 +29,7 @@ depends=(
   libcap
   libelf
   libgcc
+  libseccomp
   libstdc++
   linyaps-box
   ${_qt}-base
@@ -38,16 +41,15 @@ depends=(
 makedepends=(
   cli11
   cmake
-  fmt
   git
   gtest
-  libseccomp
   ${_qt}-tools
   ninja
   nlohmann-json
   openssl
   pkgconf
   tl-expected
+  util-linux
   vulkan-headers
 )
 optdepends=(
