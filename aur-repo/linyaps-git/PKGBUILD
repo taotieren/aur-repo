@@ -108,7 +108,7 @@ build() {
 
 check() {
   cd "${srcdir}"/${pkgname}/
-  ninja -C build test --rerun-failed --output-on-failure
+  ninja -C build test
 }
 
 package() {
