@@ -101,10 +101,10 @@ build() {
   ninja -C build
 }
 
-# check() {
-#   cd "${srcdir}"/${pkgname}/
-#   ctest --test-dir build --output-on-failure
-# }
+check() {
+  cd "${srcdir}"/${pkgname}/
+  ninja -C build test
+}
 
 package() {
   DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
