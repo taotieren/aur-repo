@@ -31,6 +31,7 @@ depends=(
   linyaps-box
   ${_qt}-base
   systemd-libs
+  util-linux-libs
   ostree
   yaml-cpp
 )
