@@ -21,6 +21,7 @@ repo_depends:
   - python-ensure
   - python-errno2
   - python-filewrap
+  - python-glob-pattern
   - python-hashtools
   - python-httpfile
   - python-http-response
