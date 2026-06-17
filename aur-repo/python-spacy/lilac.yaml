@@ -5,7 +5,6 @@ pre_build_script: aur_pre_build(maintainers='jnphilipp')
 post_build: aur_post_build
 repo_depends:
   - python-catalogue
-  - python-langcodes
   - python-murmurhash
   - python-preshed
   - python-spacy-loggers
