@@ -14,13 +14,17 @@ depends=(
     expat
     glibc
     libgcc
+    libglvnd
     libstdc++
+    $_qt-5compat
     $_qt-base
     $_qt-declarative
-    $_qt-canvaspainter 
     $_qt-connectivity
     $_qt-graphs
+    $_qt-positioning
+    $_qt-quick3d
     $_qt-serialport
+    $_qt-shadertools
     $_qt-svg
     $_qt-webengine
     zlib
@@ -30,8 +34,7 @@ makedepends=(
     git
     ninja
     openssl
-    $_qt-5compat
-    $_qt-quick3d
+    $_qt-canvaspainter 
     $_qt-tools
     pkgconf
     vulkan-headers
