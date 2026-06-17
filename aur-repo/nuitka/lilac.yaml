@@ -17,9 +17,9 @@ post_build: aur_post_build
 # repo_depends:
 #   -
 update_on:
-  - source: aur
-    aur: nuitka
   - source: github
     github: Nuitka/Nuitka
     use_max_tag: true
+  - source: aur
+    aur: nuitka
   - alias: python
