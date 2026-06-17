@@ -50,17 +50,6 @@ package() {
     cd "${srcdir}/${pkgname}/"
     install -vDm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm755 "dist/rkdevtoolgui.bin" "${pkgdir}/usr/bin/${pkgname}"
-    install -vDm644 /dev/stdin "${pkgdir}/usr/share/applications/${pkgname}.desktop" <<EOF
-[Desktop Entry]
-Name=${pkgname}
-Comment=${pkgdesc}
-GenericName=${pkgdesc}
-Exec=${pkgname}
-StartupNotify=false
-Terminal=false
-Type=Application
-Categories=Utility;
-Icon=${pkgname}.png
-EOF
-    install -vDm644 "${srcdir}/${pkgname}.png" "${pkgdir}/usr/share/icons/hicolor/256x256/apps/${pkgname}.png"
+    install -vDm644 "packaging/rkdeveloptool-gui.desktop" -t "${pkgdir}/usr/share/applications/"
+    install -vDm644 "${srcdir}/${pkgname}.png" -t "${pkgdir}/usr/share/icons/hicolor/256x256/apps/"
 }
