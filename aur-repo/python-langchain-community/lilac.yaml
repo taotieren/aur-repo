@@ -7,7 +7,6 @@ post_build: aur_post_build
 repo_depends:
   - python-httpx-sse
   - python-langchain-classic
-  - python-langchain-core
   - python-langchain-text-splitters
 update_on:
   - source: aur
