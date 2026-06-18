@@ -1,0 +1,13 @@
+post_install() {
+    systemctl daemon-reload
+    systemctl enable numlockd.service
+}
+
+post_upgrade() {
+    systemctl restart numlockd.service
+}
+
+pre_remove() {
+    systemctl stop numlockd.service
+    systemctl disable numlockd.service
+}
