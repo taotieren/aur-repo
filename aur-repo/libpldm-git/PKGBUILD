@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=libpldm-git
-pkgver=0.16.0.r2.g84cb5ad
+pkgver=0.16.0.r4.g035419d
 pkgrel=1
 epoch=
 pkgdesc="This is a library which deals with the encoding and decoding of PLDM messages."
