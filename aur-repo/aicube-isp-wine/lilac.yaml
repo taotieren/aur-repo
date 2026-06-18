@@ -18,4 +18,4 @@ post_build_script: |
 
 update_on:
   - source: cmd
-    cmd: 'python3 -c "import urllib.request,re;req=urllib.request.Request(\"https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js\",headers={\"User-Agent\":\"Mozilla/5.0\",\"Referer\":\"https://www.stcai.com/\"});m=re.search(r\"AiCube-ISP-v([\w.\-]+)\.zip\",urllib.request.urlopen(req).read().decode());m and print(m.group(1))"'
+    cmd: 'python3 -c "import urllib.request,re;req=urllib.request.Request(\"https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js\",headers={\"User-Agent\":\"Mozilla/5.0\",\"Referer\":\"https://www.stcai.com/\"});data=urllib.request.urlopen(req).read().decode();vers=re.findall(r\"AiCube-ISP-v([\w.\-]+)\.zip\",data);vers=[v for v in vers if re.match(r\"^\d+\.\d+[A-Za-z]?$\",v)];def p(v):m=re.match(r\"(\d+)\.(\d+)([A-Za-z])?\",v);return(int(m.group(1)),int(m.group(2)),m.group(3)or\"\");vers and print(max(vers,key=p))"'
