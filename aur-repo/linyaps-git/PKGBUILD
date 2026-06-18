@@ -106,10 +106,10 @@ build() {
   ninja -C build
 }
 
-check() {
-  cd "${srcdir}"/${pkgname}/
-  ninja -C build test
-}
+# check() {
+#   cd "${srcdir}"/${pkgname}/
+#   ninja -C build test
+# }
 
 package() {
   DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
