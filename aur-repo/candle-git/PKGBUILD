@@ -35,7 +35,7 @@ source=(
 	${pkgname%-git}.install
 )
 sha256sums=('SKIP'
-            'ee4886ef8598ea195751a25505224eb5d51cb16a6354b3493576504415b7b413')
+            '793ed3c3dcecf1c583dd8928b37fbfe9beb4078934aad1a82eda97b801ca7e6f')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
