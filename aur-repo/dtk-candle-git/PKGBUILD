@@ -2,7 +2,7 @@
 
 pkgname=dtk-candle-git
 pkgver=r19.602608d
-pkgrel=1
+pkgrel=2
 pkgdesc="An elegant automatic screen extinguishing stopper"
 arch=($CARCH)
 url="https://github.com/HuanSoft-Open-Source-Community/candle"
