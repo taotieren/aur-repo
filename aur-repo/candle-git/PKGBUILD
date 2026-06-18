@@ -68,7 +68,7 @@ build() {
 package() {
 	cd "${srcdir}"/${pkgname%-git}/
 	DESTDIR="${pkgdir}" ninja -C build install
-	install -vdm ${pkgdir}/usr/bin/
+	install -vdm755 ${pkgdir}/usr/bin/
 	ln -sf /usr/share/candle/candle ${pkgdir}/usr/bin/candle
 	install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 	install -vDm644 src/candle/images/icon.svg "$pkgdir"/usr/share/icons/hicolor/scalable/apps/candle.svg
