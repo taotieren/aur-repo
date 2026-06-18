@@ -2,7 +2,7 @@
 
 pkgname=officecli
 pkgver=1.0.115
-pkgrel=1
+pkgrel=2
 pkgdesc="The first and best Office suite designed for AI agents"
 arch=($CARCH)
 url="https://github.com/iOfficeAI/OfficeCLI"
