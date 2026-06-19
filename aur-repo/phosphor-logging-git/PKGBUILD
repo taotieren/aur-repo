@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=phosphor-logging-git
-pkgver=r1182.6e956b1
+pkgver=r1183.383e9c1
 pkgrel=1
 epoch=
 pkgdesc="Libraries for common event and logging creation."
