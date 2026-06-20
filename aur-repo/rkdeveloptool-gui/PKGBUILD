@@ -38,8 +38,6 @@ sha256sums=('99e792f008f1dfd5be62a115258d636da905356eabaedf8894079d551fadfa74'
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}" 
-    git cherry-pick -n 62f2cde9ae1938afd0620e39f94cdfab775ae894
 }
 
 build() {
