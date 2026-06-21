@@ -19,7 +19,6 @@ repo_depends:
   - python-property
   - python-posixpatht
   - python-pysubs2
-  - python-wsgidav
 update_on:
   - source: pypi
     pypi: p115dav

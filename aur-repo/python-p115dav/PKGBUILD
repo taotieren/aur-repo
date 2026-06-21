@@ -18,6 +18,7 @@ depends=(
     python-a2wsgi
     python-rich
     python-sqlitedict
+    python-wsgidav
     python-orjson
     python-yaml
     #AUR
@@ -32,7 +33,6 @@ depends=(
     python-property
     python-posixpatht
     python-pysubs2
-    python-wsgidav
 )
 makedepends=(
     python-poetry

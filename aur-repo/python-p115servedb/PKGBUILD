@@ -15,6 +15,7 @@ conflicts=(${_name} ${pkgname})
 depends=(
     python
     python-a2wsgi
+    python-wsgidav
     python-orjson
     python-urllib3
     python-yaml
@@ -34,7 +35,6 @@ depends=(
     python-property
     python-posixpatht
     python-pysubs2
-    python-wsgidav
 )
 makedepends=(
     python-poetry
