@@ -9,7 +9,6 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-cmsis-svd-git
-  - python-mcp
 update_on:
   - source: github
     github: es617/dbgprobe-mcp-server
