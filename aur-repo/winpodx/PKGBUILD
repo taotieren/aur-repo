@@ -1,0 +1,63 @@
+# Maintainer: Kim DaeHyun <kernalix7@kodenet.io>
+#
+# This PKGBUILD is a template. The __PKGVER__ / __SHA256__ placeholders are
+# stamped by .github/workflows/aur-publish.yml on tag push (v*.*.*) before
+# the file is pushed to ssh://aur@aur.archlinux.org/winpodx.git. Do not hand-
+# edit the placeholders in-tree.
+
+pkgname=winpodx
+pkgver=0.7.3
+pkgrel=1
+pkgdesc="Windows app integration for Linux desktop (Podman/FreeRDP RemoteApp)"
+arch=('any')
+url="https://github.com/kernalix7/winpodx"
+license=('MIT')
+# Arch's `python` is rolling and already >= 3.13, so tomllib is stdlib and
+# the tomli fallback is a no-op here (marker-gated in pyproject.toml).
+depends=(
+  'python'
+  'freerdp'
+)
+optdepends=(
+  'podman: default container backend'
+  'docker: alternative container backend'
+  'pyside6: Qt6 GUI and system tray'
+)
+makedepends=(
+  'python-build'
+  'python-installer'
+  'python-hatchling'
+  'python-wheel'
+)
+source=("$pkgname-$pkgver.tar.gz::https://github.com/kernalix7/winpodx/archive/v$pkgver.tar.gz")
+sha256sums=('5ebe0864a477fc0b62ebbd002b60e147a5e80ae8d91eec5a3a0ccd13294577e2')
+install=winpodx.install
+
+build() {
+  cd "$pkgname-$pkgver"
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  python -m installer --destdir="$pkgdir" dist/*.whl
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 THIRD_PARTY_LICENSES.md "$pkgdir/usr/share/licenses/$pkgname/THIRD_PARTY_LICENSES.md"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+  install -Dm644 CHANGELOG.md "$pkgdir/usr/share/doc/$pkgname/CHANGELOG.md"
+  install -Dm644 data/winpodx.desktop \
+    "$pkgdir/usr/share/applications/winpodx.desktop"
+  install -Dm644 data/winpodx-icon.svg \
+    "$pkgdir/usr/share/icons/hicolor/256x256/apps/winpodx.svg"
+  install -Dm644 data/winpodx.toml.example \
+    "$pkgdir/usr/share/winpodx/winpodx.toml.example"
+  # #255 PR 4: post-remove cleanup helper, called from winpodx.install's
+  # post_remove(). Shared with debian/postrm and the rpm %postun.
+  install -Dm755 packaging/scripts/postrm-common.sh \
+    "$pkgdir/usr/share/winpodx/packaging/postrm-common.sh"
+  # #255 consolidation: canonical uninstaller. Same bash script ships
+  # via deb, rpm, aur, pip wheel, and the curl install bundle so the
+  # behaviour is identical regardless of install source.
+  install -Dm755 uninstall.sh \
+    "$pkgdir/usr/share/winpodx/uninstall.sh"
+}
