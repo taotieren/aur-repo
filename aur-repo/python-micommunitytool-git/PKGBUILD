@@ -61,6 +61,7 @@ package_python-micommunitytool-git() {
     depends=(
         python
         # AUR
+        miunlocktool
         python-micommunity
         python-miapply
         python-migate
