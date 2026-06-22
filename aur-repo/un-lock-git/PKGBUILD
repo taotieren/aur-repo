@@ -12,11 +12,8 @@ provides=(${pkgname%-git} ${basename%-git})
 conflicts=(${pkgname%-git} ${basename%-git})
 replaces=()
 _pydeps=(
-    colorama
     requests
-    urllib3
-    pycryptodomex
-    termcolor
+    rich
     # AUR
     migate
 )
