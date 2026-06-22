@@ -56,8 +56,8 @@ build() {
 }
 
 package_python-micommunitytool-git() {
-    provides=(${pkgname})
-    conflicts=(${pkgname})
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
     depends=(
         python
         # AUR
