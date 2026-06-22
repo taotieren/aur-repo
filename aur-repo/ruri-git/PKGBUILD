@@ -47,6 +47,7 @@ build() {
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_C_FLAGS="-Wno-error=format-security -Wno-error=unused-result" \
         -Wno-dev \
         -B build \
         -G Ninja
