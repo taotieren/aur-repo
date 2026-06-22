@@ -116,9 +116,6 @@ prepare() {
     git config submodule.external/lexbor.url "$srcdir/lexbor"
     git -c protocol.file.allow=always submodule update
 
-    sed -i '1i #include <stdint.h>' \
-        external/yaml/src/emitterutils.cpp
-
     cd "${srcdir}/${pkgname}/external/mbedtls"
     git submodule init
     git config submodule.framework.url "$srcdir/framework"
