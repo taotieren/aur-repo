@@ -1,3 +1,0 @@
-# Type   Path                            Mode    User       Group    Age     Argument
-d       /var/lib/reader-pro             0755    reader-pro reader-pro -       -
-d       /var/log/reader-pro             0755    reader-pro reader-pro -       -
