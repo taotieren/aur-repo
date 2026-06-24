@@ -2,7 +2,9 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['robertmercier', 'tippfehlr'])
+pre_build_script: |
+  aur_pre_build(maintainers=['robertmercier', 'tippfehlr'])
+  add_makedepends(['python-setuptools', 'python-wheel', 'python-build', 'python-installer', 'python-hatchling', 'python-uv-dynamic-versioning'])
 post_build: aur_post_build
 repo_depends:
   - python-anthropic
