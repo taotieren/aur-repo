@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['piernov'])
+post_build: aur_post_build
+repo_depends:
+  - python-pdm-pep517
+update_on:
+  - source: aur
+    aur: python-jsonref
+  - alias: python

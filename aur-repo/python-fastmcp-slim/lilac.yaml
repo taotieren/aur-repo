@@ -1,0 +1,18 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['robertmercier', 'tippfehlr'])
+post_build: aur_post_build
+repo_depends:
+  - python-anthropic
+  - python-cyclopts
+  - python-google-genai
+  - python-jsonref
+  - python-openapi-pydantic
+  - python-py-key-value-aio
+  - python-uncalled-for
+update_on:
+  - source: aur
+    aur: python-fastmcp-slim
+  - alias: python
