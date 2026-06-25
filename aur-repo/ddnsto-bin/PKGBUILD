@@ -65,8 +65,8 @@ package_ddnsto-bin() {
 
     install -vdm775 ${pkgdir}/srv/ddnsto
 
-    install -Dvm644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/ddnsto.conf"
-    install -Dvm644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/ddnsto.conf"
+    install -Dvm644 "${srcdir}/ddnsto.sysusers" "${pkgdir}/usr/lib/sysusers.d/ddnsto.conf"
+    install -Dvm644 "${srcdir}/ddnsto.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/ddnsto.conf"
 }
 
 package_ddnsto-lite-bin() {
@@ -100,6 +100,6 @@ package_ddnsto-lite-bin() {
 
     install -vdm775 ${pkgdir}/srv/ddnsto
 
-    install -Dvm644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/ddnsto.conf"
-    install -Dvm644 "${srcdir}/${pkgname}.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/ddnsto.conf"
+    install -Dvm644 "${srcdir}/ddnsto.sysusers" "${pkgdir}/usr/lib/sysusers.d/ddnsto.conf"
+    install -Dvm644 "${srcdir}/ddnsto.tmpfiles" "${pkgdir}/usr/lib/tmpfiles.d/ddnsto.conf"
 }
