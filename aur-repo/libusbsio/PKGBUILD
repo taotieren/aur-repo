@@ -58,7 +58,7 @@ package_python-libusbsio() {
   python -m installer --destdir="$pkgdir" dist/*.whl
   install -vdm 755 "$pkgdir/$_site_packages/$pkgbase/bin/linux_$CARCH"
   ln -fsv /usr/lib/$pkgbase.so "$pkgdir/$_site_packages/$pkgbase/bin/linux_$CARCH/$pkgbase.so"
-  install -vDm 644 license/*.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
+  install -vDm 644 *.txt -t "$pkgdir/usr/share/licenses/$pkgname/"
   install -vDm 644 README.md -t "$pkgdir/usr/share/doc/$pkgname/"
   install -vDm 644 examples/*.py -t "$pkgdir/usr/share/doc/$pkgname/"
 }
