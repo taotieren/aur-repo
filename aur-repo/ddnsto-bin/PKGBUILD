@@ -17,20 +17,21 @@ license=('LicenseRef-ddnsto')
 depends=()
 makedepends=()
 optdepends=()
-install=${pkgname}.install
 source=(
     "https://fw0.koolcenter.com/binary/ddnsto/linux-binary/${_name}-standard-${pkgver}.tar.gz"
     "https://fw0.koolcenter.com/binary/ddnsto/linux-binary/${_name}-lite-${pkgver}.tar.gz"
     "ddnsto.service"
-    "${pkgname}.tmpfiles"
-    "${pkgname}.sysusers"
-    "${pkgname}.install"
+    "ddnsto.tmpfiles"
+    "ddnsto.sysusers"
+    "ddnsto-bin.install"
+    "ddnsto-lite-bin.install"
 )
 sha256sums=('be066e16409da44cee04607c02e2ebdb9e4a89c2b2c0de2a03981d169ed5b3df'
             'be066e16409da44cee04607c02e2ebdb9e4a89c2b2c0de2a03981d169ed5b3df'
             '99d7c3c20776645a08de44062cea1b32fd37288e35d61821e90c45e132dd5f14'
             '57f54bcf6013b0a2fe03923d4119a36cb8c6584f70b07dbd6d0c1d31f4fe8d72'
             'b068dcd630d7ce9a3b0bf904340f9438572d84cd4c75ad49102a274a4be37dd6'
+            '113b1efa3502b9a62272cdf3f747f9ef39f452829e9f079b3975086d233f25aa'
             '113b1efa3502b9a62272cdf3f747f9ef39f452829e9f079b3975086d233f25aa')
 options=(!debug !strip emptydirs)
 
@@ -39,6 +40,8 @@ package_ddnsto-bin() {
     provides=(${pkgbase%-bin})
     conflicts=(${pkgbase%-bin})
     backup=('etc/ddnsto/config.yaml')
+    install=${pkgname}.install
+
     cd "${srcdir}/${_name}-standard-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
         ./${_name}.x86_64 example-config > config.yaml
@@ -74,6 +77,8 @@ package_ddnsto-lite-bin() {
     provides=(${pkgbase%-bin})
     conflicts=(${pkgbase%-bin})
     backup=('etc/ddnsto/config.yaml')
+    install=${pkgname}.install
+
     cd "${srcdir}/${_name}-lite-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
         ./${_name}.x86_64 example-config > config.yaml
