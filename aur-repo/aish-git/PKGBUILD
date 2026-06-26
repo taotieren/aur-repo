@@ -2,7 +2,7 @@
 
 pkgname=aish-git
 pkgver=0.3.5.r3.g31939c4
-pkgrel=1
+pkgrel=2
 pkgdesc='Empower the Shell to think. Evolve Operations. '
 arch=($CARCH)
 url='https://github.com/AI-Shell-Team/aish'
