@@ -48,9 +48,11 @@ depends=(
   python-gobject
   python-opencv
   python-opengl
+  python-qtpy
   python-numpy
   python-matplotlib
   python-pyqt5
+  python-pyqt6
   python-pyserial
   python-pyzmq
   python-xlib
