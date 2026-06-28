@@ -24,7 +24,6 @@ depends=(
   'bzip2'
   'glibc'
   'readline'
-  'libatomic'
   'libgcc'
   'libstdc++'
   'lua54'
