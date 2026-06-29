@@ -15,16 +15,18 @@ depends=(
     alsa-lib
     at-spi2-core
     bash
+    bzip2
     cairo
     dbus
     expat
-    gcc-libs
     glib2
     glibc
+    gmp
     gtk3
     hidapi
     libcups
     libdrm
+    libgcc
     libjaylink
     libsecret
     libusb
@@ -38,14 +40,18 @@ depends=(
     libxkbfile
     libxrandr
     libudev.so
+    java-runtime
+    ncurses
+    mpfr
     nspr
     nss
     mesa
     pango
+    perl
     python
     python-pygments
-    # AUR
-    #     ncurses5-compat-libs
+    xz
+    zlib
 )
 makedepends=('tar' 'jq' 'curl')
 optdepends=('ch34x-dkms-git: CH341SER driver with fixed bug'
