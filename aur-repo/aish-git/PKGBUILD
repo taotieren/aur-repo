@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=aish-git
-pkgver=0.3.5.r3.g31939c4
-pkgrel=2
+pkgver=0.3.5.r10.g18aee29
+pkgrel=1
 pkgdesc='Empower the Shell to think. Evolve Operations. '
 arch=($CARCH)
 url='https://github.com/AI-Shell-Team/aish'
