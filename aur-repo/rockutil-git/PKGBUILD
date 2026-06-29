@@ -14,7 +14,10 @@ depends=(
   libusb
 )
 makedepends=(
+  aarch64-linux-gnu-binutils
   git
+  # AUR
+  arm-linux-gnueabihf-binutils
 )
 optdepends=()
 source=("${pkgname}::git+${url}.git")
