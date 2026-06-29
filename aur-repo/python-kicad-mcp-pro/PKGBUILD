@@ -10,21 +10,25 @@ conflicts=(${pkgname})
 arch=('any')
 url="https://github.com/oaslananka/kicad-mcp"
 _pydeps=(
-    authlib
     anyio
+    cairosvg
     click
+    dotenv
+    httpx
     opentelemetry-api
-    opentelemetry-exporter-otlp
     opentelemetry-sdk
+    packaging
+    pillow
     pydantic
     pydantic-settings
+    pystray
     rich
     starlette
     structlog
-    urllib3
     typer
+    watchfiles
     yaml
-
+    
     # AUR
     kicad
     kicad-sch-api
