@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=rockutil-git
-pkgver=r36.123597f
-pkgrel=2
+pkgver=r46.96b14c6
+pkgrel=1
 pkgdesc="Most feature complete Rockchip SoC Flashing Utility"
 arch=($CARCH)
 url="https://github.com/mkschreder/rockutil"
