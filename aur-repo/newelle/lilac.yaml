@@ -8,6 +8,8 @@ repo_depends:
   - python-gpt4all
   - python-newspaper
   - python-speechrecognition
+  - python-pysilero-vad
+  - python-webrtcvad-wheels
 update_on:
   - source: aur
     aur: newelle
