@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['begin-theadventu'])
+pre_build_script: |
+  aur_pre_build(maintainers=['begin-theadventu'])
+  add_makedepends(['python-scikit-build-core', 'cmake'])
 post_build: aur_post_build
 # repo_depends:
 #   -
