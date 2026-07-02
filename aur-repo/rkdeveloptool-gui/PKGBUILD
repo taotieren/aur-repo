@@ -14,7 +14,6 @@ depends=(
     hicolor-icon-theme
     pyside6
     python
-    python-dbus 
     # AUR
     rkdeveloptool
 )
