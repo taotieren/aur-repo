@@ -1,7 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='cassafrass')
+pre_build_script: |
+  aur_pre_build(maintainers='cassafrass')
+  add_makedepends(['qt5-svg'])
 post_build: aur_post_build
 # repo_depends:
 #   -
