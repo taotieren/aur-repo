@@ -19,7 +19,6 @@ repo_depends:
   - python-ed2k
   - python-ensure
   - python-errno2
-  - python-filelock
   - python-filewrap
   - python-glob-pattern
   - python-hashtools

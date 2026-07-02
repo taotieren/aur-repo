@@ -14,6 +14,7 @@ provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
     python
+    python-filelock
     python-qrcode
     python-orjson
     python-yarl
@@ -29,7 +30,6 @@ depends=(
     python-ed2k
     python-ensure
     python-errno2
-    python-filelock
     python-filewrap
     python-glob-pattern
     python-hashtools
