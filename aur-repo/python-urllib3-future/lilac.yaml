@@ -1,0 +1,12 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers=['txtsd'])
+post_build: aur_post_build
+repo_depends:
+  - python-jh2
+  - python-qh3
+update_on:
+  - source: aur
+    aur: python-urllib3-future
+  - alias: python

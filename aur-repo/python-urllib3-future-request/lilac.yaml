@@ -1,0 +1,20 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+repo_depends:
+  - python-asynctools
+  - python-cookietools
+  - python-dicttools
+  - python-filewrap
+  - python-http-response
+  - python-http-request
+  - python-urllib3-future
+update_on:
+  - source: pypi
+    pypi: urllib3_future_request
+  - alias: python

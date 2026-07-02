@@ -17,9 +17,9 @@ repo_depends:
   - python-dicttools
   - python-download
   - python-ed2k
-  - python-encode-uri
   - python-ensure
   - python-errno2
+  - python-filelock
   - python-filewrap
   - python-glob-pattern
   - python-hashtools
@@ -40,7 +40,7 @@ repo_depends:
   - python-posixpatht
   - python-temporary
   - python-undefined
-  - python-urllib3-request
+  - python-urllib3-future-request
 update_on:
   - source: pypi
     pypi: p115client

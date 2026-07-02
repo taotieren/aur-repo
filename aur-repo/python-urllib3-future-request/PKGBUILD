@@ -1,56 +1,29 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
-pkgname=python-p115client
+pkgname=python-urllib3-future-request
 _name=${pkgname#python-}
-pkgver=0.0.9.3.5
+_name=${_name//-/_}
+pkgver=0.0.1.4
 pkgrel=1
 epoch=
-pkgdesc="Python 115 webdisk client."
+pkgdesc="urllib3.future request extension."
 arch=('any')
 url="https://pypi.org/project/${_name}"
 license=(MIT)
 groups=()
-provides=(${_name} ${pkgname})
-conflicts=(${_name} ${pkgname})
+provides=(${pkgname})
+conflicts=(${pkgname})
 depends=(
     python
-    python-qrcode
-    python-orjson
     python-yarl
     #AUR
-    python-argtools
     python-asynctools
-    python-cachedict
-    python-concurrenttools
     python-cookietools
-    python-dictattr
     python-dicttools
-    python-download
-    python-ed2k
-    python-ensure
-    python-errno2
-    python-filelock
     python-filewrap
-    python-glob-pattern
-    python-hashtools
-    python-httpfile
     python-http-response
     python-http-request
-    python-id2dirnode
-    python-integer-tool
-    python-iterdir
-    python-iterutils
-    python-iter-collect
-    python-sqlitetools
-    python-startfile
-    python-p115cipher
-    python-p115pickcode
-    python-p115oss
-    python-property
-    python-posixpatht
-    python-temporary
-    python-undefined
-    python-urllib3-future-request
+    python-urllib3-future
 )
 makedepends=(
     python-poetry
@@ -61,7 +34,7 @@ makedepends=(
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
-sha256sums=('2bc526dedc97b86af709e815059b4267ea0f4dfd9de76e9a1f4aa8f7df868a9a')
+sha256sums=('77a3ba79f41bcae9273cbbafeed3cd15b73e919478d0a5b34255b626fda2274c')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
