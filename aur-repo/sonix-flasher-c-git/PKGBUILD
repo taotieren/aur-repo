@@ -3,7 +3,7 @@
 
 pkgname=sonix-flasher-c-git
 _gitname=SonixFlasherC
-pkgver=2.0.8.r0.gd94d3e9
+pkgver=2.0.8.r2.gb41694c
 pkgrel=1
 pkgdesc="A CLI-based Flasher for Sonix 24x/26x MCUs."
 arch=('x86_64' 'aarch64')
