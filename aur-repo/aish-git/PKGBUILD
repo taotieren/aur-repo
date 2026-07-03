@@ -15,6 +15,7 @@ conflicts=(
 )
 replaces=()
 depends=(
+  sh
   glibc
   libgcc
 )
