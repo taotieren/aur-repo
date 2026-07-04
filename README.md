@@ -32,6 +32,12 @@ Server = https://fun.ie8.pub:2443/aur-repo/$arch
 
 ```ini
 [aur-repo]
+## China Unicom Network (100Mbps) (ipv4, ipv6, http, https)
+Server = https://atz-mirror.teamos.vip:60000/aur-repo/$arch
+```
+
+```ini
+[aur-repo]
 ## CloudFlare Preferred CDN (ipv4, ipv6, http, https)
 Server = https://mirrors.kicad.online/aur-repo/$arch
 ```
