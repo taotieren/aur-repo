@@ -3,7 +3,7 @@
 pkgname=python-sphinx-toolbox
 _name=${pkgname#python-}
 pkgver=4.2.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Box of handy tools for Sphinx 🧰 📔'
 arch=('any')
 url='https://github.com/sphinx-toolbox/sphinx-toolbox'
