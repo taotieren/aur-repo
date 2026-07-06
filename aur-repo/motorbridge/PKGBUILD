@@ -12,6 +12,7 @@ replaces=()
 depends=(
   glibc
   libgcc
+  libstdc++
   python
 )
 makedepends=(
@@ -89,6 +90,7 @@ package_motorbridge() {
   depends=(
     glibc
     libgcc
+    libstdc++
     python
   )
   arch=($CARCH)
@@ -118,6 +120,7 @@ package_libmotorbridge() {
   depends=(
     glibc
     libgcc
+    libstdc++
   )
   arch=($CARCH)
 
@@ -139,6 +142,7 @@ package_python-motorbridge() {
   depends=(
     glibc
     libgcc
+    libstdc++
     python
   )
   arch=($CARCH)
