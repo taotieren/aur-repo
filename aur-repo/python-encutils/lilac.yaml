@@ -3,10 +3,9 @@ maintainers:
     email: admin@taotieren.com
 pre_build_script: aur_pre_build(maintainers=['a821'])
 post_build: aur_post_build
-repo_depends:
-  - python-encutils
-  # - python-mock
+# repo_depends:
+#   -
 update_on:
   - source: aur
-    aur: python-cssutils
+    aur: python-encutils
   - alias: python
