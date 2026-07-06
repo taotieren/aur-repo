@@ -29,7 +29,7 @@ optdepends=(
 backup=()
 install=
 source=(
-    "git+${url}.git#tag=${pkgver}"
+    "${pkgname}::git+${url}.git#tag=${pkgver}"
     "${pkgname}.png"
 )
 sha256sums=('d49179207b7a66cdf0f7b98cf17281dc313fd2565e3006c2890a464ae7a1f980'
