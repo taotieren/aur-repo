@@ -36,6 +36,7 @@ optdepends=(
     "clang: C language family frontend for LLVM"
     "dtc: Device Tree Compiler"
     "kicad: Electronic schematic and printed circuit board (PCB) design tools"
+    "python-dt-schema: Tooling for devicetree validation using YAML and jsonschema"
     "rkdeveloptool-gui: RKDevelopTool GUI is a graphical front-end for Rockchip's official rkdeveloptool"
 )
 license=('MIT')
