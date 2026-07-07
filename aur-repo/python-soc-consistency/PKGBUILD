@@ -3,8 +3,8 @@
 pkgname=python-soc-consistency
 _name=${pkgname#python-}
 pkgver=1.6.0
-pkgrel=1
-pkgdesc="Intelligent KiCad Bill of Materials generator with inventory matching"
+pkgrel=2
+pkgdesc="SoC Device-Tree Consistency Checker"
 provides=(${pkgname})
 conflicts=(${pkgname})
 arch=('any')
