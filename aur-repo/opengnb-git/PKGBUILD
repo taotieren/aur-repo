@@ -21,7 +21,7 @@ makedepends=(git
 )
 optdepends=()
 backup=()
-options=('!makeflags')
+options=('!makeflags' '!debug')
 install=
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')

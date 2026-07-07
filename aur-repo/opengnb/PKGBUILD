@@ -22,7 +22,7 @@ makedepends=(
     # zlib
 )
 backup=()
-options=('!makeflags')
+options=('!makeflags' '!debug')
 install=
 source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 sha256sums=('0b23564da173dd2cc0dc8c73e6ca53153d004a93c0fdf2a512fa648468b9a8df')
