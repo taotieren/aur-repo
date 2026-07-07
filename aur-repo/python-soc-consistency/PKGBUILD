@@ -11,11 +11,11 @@ arch=('any')
 url="https://github.com/gahingwoo/SoC-Consistency"
 _pydeps=(
     click
-    dataclasses-json
     openpyxl
     rich
     yaml
 # AUR
+    dataclasses-json
     pyvis
 )
 depends=(
@@ -34,6 +34,7 @@ checkdepends=(
     'python-pytest'
 )
 optdepends=(
+    "bitbake: Build tool executing tasks and managing metadata"
     "clang: C language family frontend for LLVM"
     "dtc: Device Tree Compiler"
     "kicad: Electronic schematic and printed circuit board (PCB) design tools"
