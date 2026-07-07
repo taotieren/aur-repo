@@ -11,11 +11,11 @@ arch=('any')
 url="https://github.com/gahingwoo/SoC-Consistency"
 _pydeps=(
     click
+    dataclasses-json
     openpyxl
     rich
     yaml
 # AUR
-    dataclasses-json
     pyvis
 )
 depends=(
