@@ -15,6 +15,7 @@ depends=(
     libstdc++
 )
 makedepends=(
+    doxygen
     git
     gtest
     meson
