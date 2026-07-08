@@ -21,7 +21,6 @@ _pydeps=(
     rich
     typing_extensions 
     # AUR
-    argparse-addons
     bincopy 
     bitstruct 
     inquirerpy

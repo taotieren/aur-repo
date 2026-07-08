@@ -8,9 +8,8 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
-  - python-argparse-addons
-  - python-bincopy 
-  - python-bitstruct 
+  - python-bincopy
+  - python-bitstruct
   - python-inquirerpy
 update_on:
   - source: github
