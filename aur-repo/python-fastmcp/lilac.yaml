@@ -12,7 +12,7 @@ repo_depends:
   - python-uncalled-for
 update_on:
   - source: github
-    github: jlowin/fastmcp
+    github: PrefectHQ/fastmcp
     use_max_tag: true
     prefix: v
   - alias: python
