@@ -8,4 +8,4 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: github
-    github: OwO-Network/DeepLX
+    github: OwO-Network/DLX
