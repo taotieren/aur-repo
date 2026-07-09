@@ -1,6 +1,9 @@
 .*
 !.git*
 */*/
+!*/LICENSES/*
+!*/LICENSE
+!*/REUSE.toml
 pkg/
 src/
 *.xz
