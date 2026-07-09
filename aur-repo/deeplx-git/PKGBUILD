@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=deeplx-git
-pkgver=1.2.2.r6.g88a0087
+pkgver=1.2.2.r8.g770f63b
 pkgrel=1
 pkgdesc="DLX - Self-hosted translation API server. Unofficial; not affiliated with DeepL SE"
 arch=($CARCH)
