@@ -1,7 +1,7 @@
 .*
 !.git*
 */*/
-!*/LICENSES/*
+!*/LICENSES/
 !*/LICENSE
 !*/REUSE.toml
 pkg/
