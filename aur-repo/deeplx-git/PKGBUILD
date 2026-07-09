@@ -19,7 +19,7 @@ install=${pkgname}.install
 source=("${pkgname}::git+${url}.git"
     ${pkgname}.install)
 sha256sums=('SKIP'
-            'e8544a1bf2c25684212a7f55cca88748636bacedadf7e2ac7bb0d55285f96f1f')
+            '436441a707b5f22b730ebb378f80d828d1b490b5db1b09219ba961ff4238c9c3')
 
 export CGO_CPPFLAGS="${CPPFLAGS}"
 export CGO_CFLAGS="${CFLAGS}"
