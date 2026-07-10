@@ -86,9 +86,9 @@ _pkg_file_name="SetupSTM32CubeProgrammer_linux_64.zip"
 _download_path="https://www.st.com/cloudfront/publish/stm32cubeprg-lin-v${pkgver//./-}/${pkgver}/en/${_pkg_file_name}"
 # 本地文件名带版本号，防止上游同名文件导致 makepkg 跳过新版本下载
 _source_filename="SetupSTM32CubeProgrammer_linux_64-${pkgver}.zip"
-# DLAGENTS=("https::/usr/bin/curl \
-#               -gqb '' --retry 3 --retry-delay 3 \
-#               -o %o --compressed %u")
+DLAGENTS=("https::/usr/bin/curl \
+              -gqb '' --retry 3 --retry-delay 3 \
+              -o %o --compressed %u")
 
 source=("${_source_filename}::$_download_path"
   "AnalyticsPanelsConsoleHelper.java"
