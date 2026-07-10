@@ -140,6 +140,7 @@ package_serverstatus-server-git() {
     arch=($CARCH)
     provides=(${pkgname%-git})
     conflicts=(${pkgname%-git})
+    backup=(usr/share/serverstatus/server/config.json)
 
     cd "${srcdir}/${pkgbase}"
 
