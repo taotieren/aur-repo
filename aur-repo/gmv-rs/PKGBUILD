@@ -51,6 +51,7 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/"
 
+    mkdir -pv third_party
     ./stream/build_ffmpeg_min_bootstrap.sh
     source stream/env_ffmpeg.sh
 
