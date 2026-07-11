@@ -15,7 +15,7 @@ makedepends=('git' 'rust')
 backup=()
 options=()
 #install=${pkgname}.install
-source=("${pkgname}::git+${url}.git#tags=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('66e5c4481da5894278a8d52617f912c376988c19a1f0aabcf671b22722adf680')
 
 prepare() {
