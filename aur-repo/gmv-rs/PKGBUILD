@@ -51,7 +51,9 @@ prepare() {
 build() {
     cd "${srcdir}/${pkgname}/"
 
-    bash ./scripts/bootstrap_dev.sh
+    # bash ./scripts/bootstrap_dev.sh
+    bash ./stream/build_ffmpeg_min_bootstrap.sh
+    bash ./session/build_pjsip_bootstrap.sh
     source stream/env_ffmpeg.sh
 
     sed -i 's|/home/ubuntu20/code/rs/mv/github/epimore/gmv/session/config.yml|/etc/gmv/session/config.yml|g' session/src/storage/entity.rs
