@@ -48,7 +48,7 @@ package_sunxi-livesuite-git() {
     cp -r "${srcdir}/${pkgbase%-git}/x86" "${pkgdir}/opt/sunxi/${pkgbase%-git}"
     cp -r "${srcdir}/${pkgbase%-git}/x86-64" "${pkgdir}/opt/sunxi/${pkgbase%-git}"
     cp -r "${srcdir}/${pkgbase%-git}/LiveSuit.sh" "${pkgdir}/opt/sunxi/${pkgbase%-git}"
-    chmod 777 "${pkgdir}/opt/sunxi/${pkgbase%-git}/x86*"
+    chmod 777 "${pkgdir}/opt/sunxi/${pkgbase%-git}"/x86*
 
     install -Dm0755 /dev/stdin "${pkgdir}/usr/bin/${pkgbase%-git}" <<EOF
 #!/bin/env bash
