@@ -12,5 +12,5 @@ repo_depends:
   - python-darabonba-core
 update_on:
   - source: pypi
-    pypi: p115client
+    pypi: alibabacloud-esa20240910
   - alias: python
