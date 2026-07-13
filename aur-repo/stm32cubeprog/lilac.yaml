@@ -1,25 +1,25 @@
-# maintainers:
-#   - github: taotieren
-#     email: admin@taotieren.com
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
-# update_on:
-#   - source: regex
-#     url: https://www.st.com/content/st_com_cx/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog/_jcr_content/get-software/getsw-table-nli.nocache.html/st-site-cx/components/containers/product/get-software-table-body.html
-#     regex: 'stm32cubeprogrammer_([\d.]+)_arm64.deb.zip'
-# - source: manual
-#   manual: 1
-
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['taotieren', 'akumaexs', 'CloverGit'])
-post_build: aur_post_build
-# repo_depends:
-#   -
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
 update_on:
-  - source: aur
-    aur: stm32cubeprog
+  - source: regex
+    url: https://www.st.com/content/st_com_cx/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog/_jcr_content/get-software/getsw-table-nli.nocache.html/st-site-cx/components/containers/product/get-software-table-body.html
+    regex: 'stm32cubeprogrammer_([\d.]+)_arm64.deb.zip'
+# - source: manual
+#   manual: 1
+
+# maintainers:
+#   - github: taotieren
+#     email: admin@taotieren.com
+# pre_build_script: aur_pre_build(maintainers=['taotieren', 'akumaexs', 'CloverGit'])
+# post_build: aur_post_build
+# # repo_depends:
+# #   -
+# update_on:
+#   - source: aur
+#     aur: stm32cubeprog
