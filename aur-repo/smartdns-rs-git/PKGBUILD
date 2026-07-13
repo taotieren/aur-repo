@@ -11,7 +11,6 @@ provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
 depends=(
-    glibc
     libgcc
 )
 makedepends=(

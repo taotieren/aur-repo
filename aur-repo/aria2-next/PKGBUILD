@@ -12,7 +12,6 @@ conflicts=(${pkgname})
 #replaces=(${pkgname})
 depends=(
     c-ares
-    glibc
     libgcc
     libstdc++
     libxml2

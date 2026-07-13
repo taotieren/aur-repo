@@ -13,7 +13,6 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    glibc
     libcap
     libseccomp
 )

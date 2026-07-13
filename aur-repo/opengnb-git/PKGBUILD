@@ -11,8 +11,8 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    bash
-    glibc)
+    sh
+)
 makedepends=(git
     sed
     # libnatpmp

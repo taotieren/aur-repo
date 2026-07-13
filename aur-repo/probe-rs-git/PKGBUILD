@@ -27,7 +27,6 @@ conflicts=(
 )
 replaces=()
 depends=(
-    glibc
     libgcc
     libusb
     libftdi

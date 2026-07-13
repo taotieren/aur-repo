@@ -15,7 +15,6 @@ depends=(
   freetype2
   fontconfig
   glib2
-  glibc
   glm
   glu
   gtk3

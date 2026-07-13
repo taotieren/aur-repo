@@ -17,7 +17,6 @@ depends=(
   fontconfig
   gdk-pixbuf2
   glib2
-  glibc
   gstreamer
   gtk3
   harfbuzz

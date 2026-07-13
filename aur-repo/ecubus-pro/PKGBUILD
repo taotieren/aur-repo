@@ -13,7 +13,6 @@ replaces=()
 depends=(
     sh
     electron
-    glibc
     libgcc
     libstdc++
     java-runtime

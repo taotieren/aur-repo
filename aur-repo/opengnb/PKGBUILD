@@ -11,8 +11,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    bash
-    glibc)
+    sh
+)
 optdepends=()
 makedepends=(
     git

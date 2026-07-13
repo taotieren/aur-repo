@@ -22,7 +22,6 @@ _pydeps=(
 depends=(
   'bash'
   'bzip2'
-  'glibc'
   'readline'
   'libgcc'
   'libstdc++'

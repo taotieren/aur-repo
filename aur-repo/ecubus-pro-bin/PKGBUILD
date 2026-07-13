@@ -16,7 +16,6 @@ depends=(
     dbus
     expat
     glib2
-    glibc
     libgcc
     libstdc++
     hicolor-icon-theme

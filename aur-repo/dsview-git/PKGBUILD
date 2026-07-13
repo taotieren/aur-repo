@@ -24,7 +24,6 @@ _qt=qt6
 depends=(
   hicolor-icon-theme
   glib2
-  glibc
   libgcc
   libstdc++
   libusb
