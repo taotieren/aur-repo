@@ -10,8 +10,7 @@ url="https://github.com/peak-system/pcanflash"
 license=('GPL-2.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(glibc
-    linux-api-headers)
+depends=(linux-api-headers)
 makedepends=(git)
 optdepends=('iproute2: IP Routing Utilities')
 source=("${pkgname}::git+${url}.git")

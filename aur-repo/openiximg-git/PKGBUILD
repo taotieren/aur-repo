@@ -9,10 +9,7 @@ url="https://github.com/YuzukiTsuru/OpenixIMG"
 license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(
-    gcc-libs
-    glibc
-)
+depends=()
 makedepends=(
     #clang
     #llvm

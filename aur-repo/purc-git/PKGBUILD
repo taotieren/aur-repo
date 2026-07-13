@@ -25,9 +25,7 @@ conflicts=(${pkgbase%-git})
 replaces=(domruler
     purc-fetcher)
 depends=(
-    gcc-libs
     glib2
-    glibc
     libgcrypt
     libsoup3
     libxml2
@@ -35,7 +33,8 @@ depends=(
     sqlite
     openssl
     python
-    zlib)
+    zlib
+)
 makedepends=(
     #     avahi
     bison

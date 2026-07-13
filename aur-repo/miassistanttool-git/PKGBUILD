@@ -14,7 +14,6 @@ conflicts=(${pkgbase%-git})
 replaces=()
 depends=(
     curl
-    glibc
     libusb
     openssl
     tiny-json)

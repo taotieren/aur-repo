@@ -11,9 +11,7 @@ license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(
-    glibc
-)
+depends=()
 makedepends=(
     curl
     zlib

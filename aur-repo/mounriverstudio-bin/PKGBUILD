@@ -20,7 +20,6 @@ depends=(
     dbus
     expat
     glib2
-    glibc
     gmp
     gtk3
     hidapi

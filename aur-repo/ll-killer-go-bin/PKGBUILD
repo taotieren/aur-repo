@@ -12,9 +12,7 @@ license=('MIT')
 provides=(${pkgname%-bin})
 conflicts=(${pkgname%-bin})
 #replaces=(${pkgname%-bin})
-depends=(
-    glibc
-)
+depends=()
 optdepends=(
     'linyaps: Linglong is the container application toolkit of deepin.'
     'apt: Command-line package manager used on Debian-based systems'

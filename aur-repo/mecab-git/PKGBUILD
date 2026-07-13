@@ -9,8 +9,6 @@ pkgdesc="Yet another part-of-speech and morphological analyzer."
 arch=($CARCH)
 url="https://taku910.github.io/mecab"
 depends=(
-	gcc-libs
-	glibc
 	sh
 )
 makedepends=(

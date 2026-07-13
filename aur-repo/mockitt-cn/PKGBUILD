@@ -14,7 +14,7 @@ depends=(
     dbus
     gcc-libs
     glib2
-    glibc)
+)
 makedepends=(
     libarchive)
 license=('LicenseRef-scancode-commercial-license')

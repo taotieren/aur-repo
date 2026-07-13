@@ -50,7 +50,6 @@ package_mounriver-studio-community-bin() {
         'libudev.so'
         gcc-libs
         glib2
-        glibc
         libsecret
         java-runtime
         perl

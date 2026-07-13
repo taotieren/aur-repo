@@ -11,8 +11,6 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    gcc-libs
-    glibc
     gnutls
     libsasl
     libyaml

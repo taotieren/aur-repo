@@ -11,8 +11,6 @@ url="https://gitee.com/OpenNuvoton/NuTool-USB-to-Serial-Port"
 license=('GPL-3.0-only')
 groups=()
 depends=(
-  gcc-libs
-  glibc
   qt5-base
   qt5-serialport)
 makedepends=('qt5-tools' 'git')

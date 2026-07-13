@@ -8,9 +8,6 @@ url="https://github.com/openbmc/phosphor-dbus-interfaces"
 arch=($CARCH)
 license=('Apache-2.0')
 depends=(
-    glibc
-    libgcc
-    libstdc++
     systemd-libs
 # AUR
     sdbusplus-git

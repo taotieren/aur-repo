@@ -10,9 +10,6 @@ license=('Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
-    glibc
-    libgcc
-    libstdc++
     systemd-libs
     #AUR
     libpeci-git

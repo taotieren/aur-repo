@@ -11,10 +11,8 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
     sh
-    gcc-libs
     glfw
     glib2
-    glibc
     gtk3
     libglvnd
     libusb

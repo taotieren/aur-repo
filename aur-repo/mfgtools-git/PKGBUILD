@@ -13,14 +13,14 @@ license=('BSD-3-Clause')
 groups=()
 depends=(
     bzip2
-    glibc
     libgcc
     libstdc++
     libusb
     tinyxml2
     openssl
     zlib
-    zstd)
+    zstd
+)
 makedepends=(
     cmake
     git
@@ -100,7 +100,6 @@ package_mfgtools-git() {
     conflicts=('uuu' ${pkgname%-git})
     depends=(
         bzip2
-        glibc
         libgcc
         libstdc++
         libusb
@@ -145,7 +144,6 @@ package_python-libuuu-git() {
     depends=(
         python
         bzip2
-        glibc
         libgcc
         libstdc++
         libusb

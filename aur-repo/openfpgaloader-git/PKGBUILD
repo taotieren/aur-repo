@@ -10,7 +10,6 @@ arch=($CARCH)
 url="https://github.com/trabucayre/openFPGALoader"
 license=('Apache-2.0')
 depends=(
-  'glibc'
   'libftdi'
   'libgcc'
   'libhidapi-libusb.so'

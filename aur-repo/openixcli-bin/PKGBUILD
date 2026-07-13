@@ -9,7 +9,6 @@ arch=('x86_64')
 _name=${_pkgname}-v${pkgver}-x86_64-unknown-linux-gnu
 options=(!strip !debug)
 depends=(
-    glibc
     hicolor-icon-theme
     libgcc
     libusb

@@ -12,7 +12,6 @@ conflicts=(${pkgname} ${pkgname}-sdk)
 replaces=()
 depends=(
     sh
-    glibc
     libgcc
     libstdc++
     python

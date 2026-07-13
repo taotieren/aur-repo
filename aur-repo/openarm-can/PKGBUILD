@@ -13,7 +13,6 @@ depends=(
   sh
   libgcc
   libstdc++
-  glibc
   python
   python-can
   python-numpy

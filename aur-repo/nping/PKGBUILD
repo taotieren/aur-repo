@@ -11,10 +11,7 @@ license=('MIT')
 provides=(${pkgname} nbping)
 conflicts=(${pkgname} nbping)
 # replaces=(${pkgname})
-depends=(
-    gcc-libs
-    glibc
-)
+depends=()
 makedepends=(
     git
     rust

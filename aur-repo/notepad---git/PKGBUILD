@@ -11,7 +11,6 @@ provides=(${pkgname%-git} notepadplugin)
 conflicts=(${pkgname%-git})
 _qt=qt5
 depends=(
-    gcc-libs
     hicolor-icon-theme
     libgcc
     libstdc++

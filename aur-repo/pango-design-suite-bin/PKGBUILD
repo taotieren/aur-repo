@@ -12,9 +12,7 @@ provides=(${pkgname%-bin})
 conflicts=(${pkgname%-bin})
 replaces=()
 depends=(
-  bash
-  gcc-libs
-  glibc
+  sh
   python
   zlib
 )

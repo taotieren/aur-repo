@@ -10,7 +10,7 @@ license=('MIT')
 provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
-depends=(glibc)
+depends=()
 makedepends=(
     git
     go

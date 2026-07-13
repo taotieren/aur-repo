@@ -7,8 +7,8 @@ repo_depends:
 update_on:
   - source: aur
     aur: libsigrok-git
-  - source: github
-    github: sigrokproject/libsigrok
+  # - source: github
+  #   github: sigrokproject/libsigrok
   - alias: python
 
 # maintainers:

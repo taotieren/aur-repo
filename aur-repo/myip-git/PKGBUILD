@@ -11,13 +11,10 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    glibc
     gc
-    gcc-libs
     libevent
     openssl
     pcre2
-    zlib
 )
 makedepends=(
     cmake

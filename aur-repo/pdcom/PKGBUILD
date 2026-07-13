@@ -13,8 +13,6 @@ conflicts=(${pkgname})
 replaces=()
 depends=(
     expat
-    gcc-libs
-    glibc
     gnutls
     libsasl
     python

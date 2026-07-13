@@ -12,10 +12,8 @@ conflicts=(${pkgname%-bin})
 license=('GPL-3.0-only')
 depends=(
     'cairo'
-    'gcc-libs'
     'gdk-pixbuf2'
     'glibc'
-    'glib2'
     'gtk3'
     'rclone'
     'hicolor-icon-theme'

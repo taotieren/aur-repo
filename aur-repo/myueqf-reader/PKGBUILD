@@ -12,7 +12,6 @@ groups=()
 depends=(
     dconf
     glib2
-    glibc
     gtk4
     gdk-pixbuf2
     hicolor-icon-theme

@@ -13,7 +13,6 @@ provides=(${pkgbase%-git})
 conflicts=(${pkgbase%-git})
 replaces=()
 depends=(
-    glibc
     libglvnd
     libusb
     libx11

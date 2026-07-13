@@ -10,9 +10,7 @@ license=('BSL-1.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
-depends=('boost-libs'
-    'glibc'
-    'gcc-libs')
+depends=('boost-libs')
 makedepends=('cmake' 'boost' 'git')
 backup=()
 options=()

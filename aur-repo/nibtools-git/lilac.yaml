@@ -7,4 +7,4 @@ repo_depends:
   - opencbm
 update_on:
   - source: aur
-    github: nibtools-git
+    aur: nibtools-git

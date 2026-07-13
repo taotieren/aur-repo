@@ -10,7 +10,7 @@ license=('Apache-2.0')
 provides=(${pkgname%-git} ${pkgname%-go-git})
 conflicts=(${pkgname%-git} ${pkgname%-go-git})
 #replaces=(${pkgname})
-depends=(glibc)
+depends=()
 optdepends=()
 makedepends=(
     git

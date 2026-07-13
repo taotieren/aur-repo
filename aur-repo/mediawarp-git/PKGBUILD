@@ -12,8 +12,8 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 #replaces=(${pkgname})
 depends=(
-    glibc
-    sh)
+    sh
+)
 optdepends=(
     'alist: File list program that supports multiple storage'
     'autofilm: A small project to provide Strm direct-link playback for Emby and Jellyfin servers, recommended for use with MediaWarp.'

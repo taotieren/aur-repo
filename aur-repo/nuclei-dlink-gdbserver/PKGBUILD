@@ -11,8 +11,6 @@ license=('Apache-2.0')
 # provides=(${pkgname})
 # conflicts=(${pkgname})
 depends=(
-	gcc-libs
-	glibc
 	qt6-base
 	qt6-serialport
 )
