@@ -44,7 +44,7 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 noextract=()
 sha256sums=('752ee3e4e2d822174a0dbc49d6b5db55023f663e2d6e824905b1f64c44decc4b')
 validpgpkeys=()

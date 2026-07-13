@@ -20,9 +20,9 @@ depends=(
     glibc
     gtk3
     hicolor-icon-theme
-    libsoup
+    libsoup3
     protobuf-c
-    webkit2gtk
+    webkit2gtk-4.1
     # AUR
     #     tinyget
 )
