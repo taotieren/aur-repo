@@ -3,7 +3,7 @@
 pkgname=python-alibabacloud-credentials-api
 _name=${pkgname#python-}
 _name=${_name//-/_}
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 epoch=
 pkgdesc="Alibaba Cloud Gateway SPI SDK Library for Python"
