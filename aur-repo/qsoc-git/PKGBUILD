@@ -135,11 +135,10 @@ build() {
     cmake -D CMAKE_INSTALL_PREFIX=/usr \
         -D ENABLE_UNIT_TEST=OFF \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-        -Wno-deprecated-declarations \
         -Wno-dev \
         -B build \
         -G Ninja
-
+        # -Wno-deprecated-declarations \
     ninja -C build
 }
 
