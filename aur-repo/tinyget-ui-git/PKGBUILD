@@ -15,9 +15,7 @@ depends=(
     cairo
     dbus
     gdk-pixbuf2
-    gcc-libs
     glib2
-    glibc
     gtk3
     hicolor-icon-theme
     libsoup3
