@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linglong-tools-git
-pkgver=2.3.1.r0.g6e9400b
+pkgver=2.3.2.r0.g04f0e4f
 pkgrel=1
 pkgdesc='A command line helper for linglong.'
 arch=($CARCH)
