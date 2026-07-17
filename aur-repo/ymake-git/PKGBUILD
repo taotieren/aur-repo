@@ -1,6 +1,6 @@
 # Maintainer: taotieren <admin@taotieren.com>
 pkgname=ymake-git
-pkgver=0.8.9.21.gf62408b
+pkgver=0.8.9.24.g90fb6e9
 pkgrel=1
 pkgdesc="ymake"
 arch=('any')
