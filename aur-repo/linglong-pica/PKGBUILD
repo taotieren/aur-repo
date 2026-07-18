@@ -17,7 +17,6 @@ conflicts=(
 )
 replaces=()
 depends=(
-  sh
   linyaps
 )
 makedepends=(

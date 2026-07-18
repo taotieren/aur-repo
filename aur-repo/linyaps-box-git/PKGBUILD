@@ -15,10 +15,7 @@ conflicts=(
 )
 replaces=()
 depends=(
-  glibc
   libcap
-  libgcc
-  libstdc++
 )
 makedepends=(
   cli11

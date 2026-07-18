@@ -18,19 +18,15 @@ conflicts=(
 replaces=(linglong-git)
 _qt=qt6
 depends=(
-  sh
   curl
   erofs-utils
   erofsfuse
   fmt
   glib2
-  glibc
   hicolor-icon-theme
   libcap
   libelf
-  libgcc
   libseccomp
-  libstdc++
   linyaps-box
   ${_qt}-base
   systemd-libs

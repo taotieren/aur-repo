@@ -15,8 +15,6 @@ conflicts=(
 )
 replaces=()
 depends=(
-  sh
-  glibc
   linyaps
 )
 makedepends=(

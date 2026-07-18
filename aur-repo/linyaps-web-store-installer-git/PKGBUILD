@@ -17,8 +17,6 @@ conflicts=(
 replaces=()
 _qt=qt6
 depends=(
-  gcc-libs
-  glibc
   linyaps
   ${_qt}-base
   xdg-utils
