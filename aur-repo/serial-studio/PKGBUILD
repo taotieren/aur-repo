@@ -10,6 +10,7 @@ license=('GPL-3.0-only')
 groups=()
 _qt=qt6
 depends=(
+    abseil-cpp
     expat
     grpc
     protobuf
