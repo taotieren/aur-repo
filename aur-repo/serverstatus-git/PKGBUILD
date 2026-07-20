@@ -7,7 +7,7 @@ pkgname=(
     serverstatus-clients-psutil-git
     serverstatus-server-git
 )
-pkgver=2.0.0.r2.gd923d67
+pkgver=2.0.0.r3.g5295ac0
 pkgrel=1
 groups=()
 pkgdesc="云探针、多服务器探针、云监控、多服务器云监控"
