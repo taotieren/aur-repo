@@ -32,6 +32,7 @@ prepare() {
 
 build() {
     cd "${srcdir}/${pkgname}"
+    sed -i 's|str >> (char \*) target;|{ std::string _tok; str >> _tok; ((char *) target)[_tok.copy((char *) target, _tok.size())] = 0; }|' tool/DataTypeHandler.cpp
     sed -i 's|sbindir|bindir|g' script/ethercat.service.in
     sed -i 's|sbin|bin|g' script/ethercatctl.in
     sed -i 's|sbin|bin|g' script/ifup-eoe.sh
