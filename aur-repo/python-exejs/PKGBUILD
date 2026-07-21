@@ -14,7 +14,6 @@ provides=(${_name} ${pkgname})
 conflicts=(${_name} ${pkgname})
 depends=(
     python
-    #AUR
 )
 makedepends=(
     python-build
