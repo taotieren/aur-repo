@@ -1,0 +1,5 @@
+[python-pox]
+source = "git"
+git = "https://github.com/uqfoundation/pox.git"
+prefix = "pox-"
+include_regex = "\\d+\\.\\d+\\.\\d+"
