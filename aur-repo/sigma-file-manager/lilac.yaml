@@ -25,4 +25,4 @@ update_on:
     use_latest_tag: true
     # use_max_tag: true
     prefix: v
-    # exclude_regex: ".*alpha*"
+    exclude_regex: ".*ms-store*"
