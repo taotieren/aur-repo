@@ -2,6 +2,7 @@
 
 pkgname=python-bflb-flash-command-uart
 _name=${pkgname#python-}
+_name=${_name//-/_}
 pkgver=1.0.0
 pkgrel=3
 pkgdesc="BOUFFALOLAB IOT TOOL"
