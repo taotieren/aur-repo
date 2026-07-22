@@ -32,7 +32,7 @@ makedepends=(
     poppler
     ghostscript
     node-gyp
-    nodejs
+    nodejs-lts-jod 
 )
 optdepends=()
 backup=()
