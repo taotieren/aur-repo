@@ -62,7 +62,6 @@ build() {
     cmake -S . \
         -DCMAKE_BUILD_TYPE=None \
         -DBUILD_SHARED_LIBS=OFF \
-        -Wdeprecated-declarations \
         -Wno-dev \
         -Bbuild \
         -GNinja
