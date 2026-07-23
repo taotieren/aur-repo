@@ -22,6 +22,7 @@ depends=(
     glibc
     libjpeg-turbo
     libpipewire
+    libsrtp
     libvpx
     libx11
     libxcomposite
