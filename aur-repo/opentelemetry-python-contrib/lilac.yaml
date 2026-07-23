@@ -14,8 +14,7 @@ post_build_script: |
 update_on:
   - source: github
     github: open-telemetry/opentelemetry-python-contrib
-    # use_max_tag: true
-    use_latest_release: true
-    exclude_regex: "^opentelemetry-resourcedetector-gcp.*"
+    use_max_tag: true
+    include_regex: '^v?\d+\.\d+(\.\d+)?([abrc]\d+)?$'
     prefix: v
   - alias: python
