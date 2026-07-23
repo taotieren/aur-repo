@@ -24,5 +24,5 @@ update_on:
     github: aleksey-hoffman/sigma-file-manager
     use_latest_tag: true
     # use_max_tag: true
+    exclude_regex: ".*ms-store*"
     prefix: v
-    exclude_regex: ".*ms-store-v*"
