@@ -26,6 +26,7 @@ makedepends=(
 )
 optdepends=(
     'motrix: A full-featured download manager (release version)'
+    'motrix-next: A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust'
     'gopeed-bin: High speed downloader that supports all platforms.(Prebuilt version)'
 )
 backup=()
