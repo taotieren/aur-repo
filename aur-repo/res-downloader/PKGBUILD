@@ -51,6 +51,8 @@ build() {
     export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
+    # npm 12 默认 allow-remote=none，会拒绝 lockfile 中 resolved 为完整 URL 的“远程”tarball（如 npmmirror 镜像），需显式放开
+    export npm_config_allow_remote=all
 
     wails build
 }

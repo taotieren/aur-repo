@@ -45,6 +45,8 @@ sha256sums=('0453b77c65de8a3e05e1b196afcb5ad384382016b1dddabcc3be48aa1b2e1905')
 _pkgname=EcuBus-Pro
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    # npm 12 默认 allow-remote=none，会拒绝 lockfile 中 resolved 为完整 URL 的“远程”tarball（如 npmmirror 镜像），需显式放开
+    export npm_config_allow_remote=all
     cd ${srcdir}/${pkgname}/
     HOME="${srcdir}/.electron-gyp"
     {
@@ -56,6 +58,8 @@ prepare() {
 }
 
 build() {
+    # npm 12 默认 allow-remote=none，会拒绝 lockfile 中 resolved 为完整 URL 的“远程”tarball（如 npmmirror 镜像），需显式放开
+    export npm_config_allow_remote=all
     cd ${srcdir}/${pkgname}/
     npm run native
     npm run worker
