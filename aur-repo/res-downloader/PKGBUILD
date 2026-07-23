@@ -14,10 +14,9 @@ depends=(
     ca-certificates-utils
     gdk-pixbuf2
     glib2
-    glibc
     gtk3
     hicolor-icon-theme
-    webkit2gtk
+    webkit2gtk-4.1
 )
 makedepends=(
     pnpm
