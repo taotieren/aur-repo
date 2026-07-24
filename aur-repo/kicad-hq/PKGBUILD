@@ -54,8 +54,11 @@ makedepends=(
   ninja
   pkgconf
 )
-optdepends=('kicad-library: KiCad symbol, footprint and template libraries'
-  'kicad-library: KiCad 3D model libraries')
+optdepends=(
+  'kicad-demos: Demo projects for KiCad'
+  'kicad-library: KiCad symbol, footprint and template libraries'
+  'kicad-library-3d: KiCad 3D model libraries'
+)
 conflicts=(${pkgname} 'kicad' 'kicad-bzr')
 provides=(${pkgname} 'kicad' 'kicad-bzr')
 source=("${pkgname}::git+https://gitlab.com/kicad-hq/kicad.git#tag=${pkgver}")
