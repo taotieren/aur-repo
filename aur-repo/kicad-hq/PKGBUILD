@@ -81,8 +81,7 @@ build() {
     -DKICAD_UPDATE_CHECK=OFF \
     -Wno-author \
     -Bbuild \
-    -GNinja \
-    -Wno-dev
+    -GNinja
 
   ninja -C build
 }
