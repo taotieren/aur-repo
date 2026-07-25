@@ -1,9 +1,18 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='rtucker85')
-post_build: aur_post_build
+build_prefix: aur-repo-x86_64
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   - 
 update_on:
-  - source: aur
-    aur: python-textparser
+  - source: github
+    github: cantools/textparser
+    # use_max_tag: true
+    use_latest_release: true
+    # prefix: v
   - alias: python
