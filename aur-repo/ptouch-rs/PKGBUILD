@@ -19,6 +19,7 @@ makedepends=(
 )
 optdepends=(
     "noto-fonts-emoji:  Google Noto Color Emoji font"
+    "ttf-dejavu: Font family based on the Bitstream Vera Fonts with a wider range of characters"
     "ttf-droid: General-purpose fonts released by Google as part of Android"
 )
 backup=()
