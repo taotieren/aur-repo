@@ -11,7 +11,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    libusb
+    hicolor-icon-theme
+    systemd-libs
 )
 makedepends=(
     git
