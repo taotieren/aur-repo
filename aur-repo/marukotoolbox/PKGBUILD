@@ -23,6 +23,8 @@ makedepends=(
     tkdnd
 )
 optdepends=(
+    "amf-amdgpu-pro: AMDGPU Pro Advanced Multimedia Framework"
+    "nvidia-utils: NVIDIA drivers utilities"
     "faac: Freeware Advanced Audio Coder"
     "ffmpeg: Complete solution to record, convert and stream audio and video"
     "libvpx: VP8 and VP9 codec"
