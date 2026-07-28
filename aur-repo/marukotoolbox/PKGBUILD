@@ -18,11 +18,12 @@ makedepends=(
     ffmpeg
     git
     nuitka
-    tk
     tcl
+    tk
+    tkdnd
 )
 optdepends=(
-    "tkdnd: add native drag'n'drop capabilities to Tk toolkit"
+    "ffmpeg: Complete solution to record, convert and stream audio and video"
 )
 backup=()
 options=('!strip' '!debug' '!lto')

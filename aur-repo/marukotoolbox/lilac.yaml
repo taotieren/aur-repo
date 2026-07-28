@@ -8,6 +8,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - nuitka
+  - tkdnd
 update_on:
   - source: github
     github: arenascats/MarukoToolbox-Rewrite
