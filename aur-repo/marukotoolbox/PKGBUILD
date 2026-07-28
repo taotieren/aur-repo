@@ -61,6 +61,7 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}/"
     # install -vDm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
     install -vDm755 "dist/marukotoolbox" -t "${pkgdir}/usr/bin/"
     install -vDm644 /dev/stdin -t "${pkgdir}/usr/share/applications/marukotoolbox.desktop" <<EOF
 [Desktop Entry]
