@@ -15,6 +15,7 @@ depends=(
     hicolor-icon-theme
 )
 makedepends=(
+    ffmpeg
     git
     nuitka
     tk
@@ -31,8 +32,6 @@ sha256sums=('73e9df3e81dd196a1095cb693de4fc2c1b31a5cf57365f54932d2d4293b803ba')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    sed -i "s|D:|~|g" data/app_settings.json
 }
 
 build() {
