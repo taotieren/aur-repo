@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=fantascene-dynamic-wallpaper-git
-pkgver=2.1.2.r1.g9459dbd
+pkgver=2.1.2.r2.gf1d7886
 pkgrel=1
 pkgdesc=" dynamic wallpaper. A very nice animated wallpaper on X11 systems.Support Movie and Web animated wallpaper."
 arch=($CARCH)
