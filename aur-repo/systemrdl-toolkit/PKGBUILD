@@ -63,7 +63,6 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}"
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
-    install -Dm644 "systemrdl_version.h" "${pkgdir}/usr/include/systemrdl/"
     install -Dm644 LICENSE -t ${pkgdir}/usr/share/licenses/${pkgname}/
     mv ${pkgdir}/usr/bin/example ${pkgdir}/usr/bin/systemrdl_example
 }
