@@ -16,6 +16,7 @@ depends=(
     python-tomli
     python-tomli-w
     python-numpy
+    python-typing_extensions
 )
 makedepends=(
     'git'

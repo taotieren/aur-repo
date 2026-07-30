@@ -16,6 +16,9 @@ conflicts=(
 replaces=()
 depends=(
   libcap
+  libgcc_s.so
+  libstdc++.so
+  libsystemd.so
 )
 makedepends=(
   cli11
