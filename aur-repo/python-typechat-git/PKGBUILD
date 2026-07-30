@@ -3,7 +3,7 @@
 pkgname=python-typechat-git
 _name=${pkgname%-git}
 _name=${_name#python-}
-pkgver=r422.948712c
+pkgver=r423.1703725
 pkgrel=1
 pkgdesc="TypeChat is a library that makes it easy to build natural language interfaces using types."
 provides=(${pkgname%-git})
