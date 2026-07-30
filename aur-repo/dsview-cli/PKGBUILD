@@ -22,10 +22,12 @@ depends=(
     expat
     gdbm
     glib2
-    glibc
-    libgcc
+    libgcc_s.so
     libffi
+    liblzma.so
     libusb
+    libz.so
+    libzstd.so
     mpdecimal
     ncurses
     openssl
@@ -33,9 +35,6 @@ depends=(
     readline
     sqlite
     util-linux-libs
-    xz
-    zlib
-    zstd
 )
 makedepends=(
     git

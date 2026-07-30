@@ -10,8 +10,8 @@ license=('GPL-3.0-only')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
-  gcc-libs
-  glibc
+  libgcc_s.so
+  libstdc++.so
   qt5-base
 )
 makedepends=(

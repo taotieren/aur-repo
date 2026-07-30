@@ -13,7 +13,6 @@ options=()
 depends=(
   sh
   dtc
-  glibc
   jansson
   libarchive
   libatomic
@@ -22,6 +21,7 @@ depends=(
   libelf
   libpcap
   libxdp
+  libz.so
   isa-l
   numactl
   rdma-core
@@ -31,7 +31,6 @@ depends=(
   python-pefile
   python-pkg_resources
   python-pyelftools
-  zlib
 )
 makedepends=(
   doxygen

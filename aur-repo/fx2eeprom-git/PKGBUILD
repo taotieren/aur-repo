@@ -12,9 +12,7 @@ license=('GPL-2.0-or-later')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(
-    glibc
-    libusb)
+depends=(libusb)
 makedepends=(git)
 optdepends=('fxload: fxload firmware loader. Used with udev or devfs/hotplug.')
 backup=()

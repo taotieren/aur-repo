@@ -10,9 +10,11 @@ license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=()
-makedepends=(git
+makedepends=(
+    git
     cmake
-    ninja)
+    ninja
+)
 backup=()
 options=('!strip')
 source=("${pkgname}::git+${url}.git")

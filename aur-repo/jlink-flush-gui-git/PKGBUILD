@@ -14,8 +14,8 @@ conflicts=(${pkgname%-git})
 _qt=qt6
 depends=(
     sh
-    gcc-libs
-    glibc
+    libgcc_s.so
+    libstdc++.so
     ${_qt}-base
     # AUR
     jlink-software-and-documentation

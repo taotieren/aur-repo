@@ -9,8 +9,7 @@ url="http://www.repo.hu/projects/genht"
 license=('0BSD')
 provides=(${pkgname%-svn})
 conflicts=(${pkgname%-svn})
-depends=(
-    glibc)
+depends=()
 makedepends=(
     subversion)
 source=("svn://repo.hu/genht/trunk")

@@ -16,12 +16,12 @@ depends=(
     at-spi2-core
     sh
     fontconfig
-    gcc-libs
     glib2
-    glibc
     gtk3
     hicolor-icon-theme
     libepoxy
+    libgcc_s.so
+    libstdc++.so
     pango
 )
 makedepends=(

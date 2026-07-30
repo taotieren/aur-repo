@@ -11,10 +11,11 @@ url="https://github.com/CANopenNode/CANopenLinux"
 license=('Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(glibc)
+depends=()
 makedepends=(
     git
-    doxygen)
+    doxygen
+)
 optdepends=(
     "can-utils: Linux-CAN / SocketCAN user space applications"
     "can-doc: Linux-CAN / SocketCAN documentation"

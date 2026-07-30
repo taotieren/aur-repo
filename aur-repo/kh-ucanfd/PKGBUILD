@@ -12,7 +12,6 @@ license=("GPL-2.0-only AND LGPL-2.0-only")
 depends=(
     sh
     dkms
-    glibc
     python
     popt
 )
@@ -60,7 +59,6 @@ package_kh-ucanfd() {
     conflicts=(${pkgname})
     depends=(
         sh
-        glibc
         python
     )
     arch=($CARCH)

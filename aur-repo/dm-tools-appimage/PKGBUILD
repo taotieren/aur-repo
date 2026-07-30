@@ -13,9 +13,8 @@ conflicts=(${pkgname%-appimage})
 replaces=()
 depends=(
     sh
-    glibc
     hicolor-icon-theme
-    zlib
+    libz.so
 )
 makedepends=(
     git

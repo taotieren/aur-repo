@@ -12,11 +12,14 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    glibc
-    gcc-libs
-    qt5-base)
-makedepends=(git
-    qt5-tools)
+    libgcc_s.so
+    libstdc++.so
+    qt5-base
+)
+makedepends=(
+    git
+    qt5-tools
+)
 backup=()
 options=()
 install=

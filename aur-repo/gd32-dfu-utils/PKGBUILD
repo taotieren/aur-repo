@@ -10,7 +10,6 @@ url="https://github.com/riscv-mcu/gd32-dfu-utils"
 license=('GPL-2.0-only')
 groups=()
 depends=(
-  glibc
   libusb
   python
 )

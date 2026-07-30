@@ -10,9 +10,7 @@ license=('MIT AND Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(
-    libgcc
-)
+depends=()
 makedepends=(
     git
     cargo

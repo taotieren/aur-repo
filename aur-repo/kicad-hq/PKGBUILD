@@ -10,37 +10,38 @@ url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
   abseil-cpp
-  cairo
-  curl
-  freetype2
-  fontconfig
   glib2
   glm
   glu
-  gtk3
-  libgcc
+  libcairo.so
+  libcurl.so
+  libgcc_s.so
+  libgtk-3.so
+  libstdc++.so
+  libfreetype.so
+  libfontconfig.so
+  libharfbuzz.so
   libglvnd
   libgit2
+  libcrypto.so
+  libssl.so
   libspnav
   libsecret
-  libstdc++
-  harfbuzz
+  libodbc.so
+  libprotobuf.so
+  libpoppler-glib.so
+  libwebkit2gtk-4.1.so
+  libz.so
+  libzstd.so
   hicolor-icon-theme
   ngspice
   nng
   opencascade
-  openssl
-  protobuf
-  poppler-glib
   python
   python-wxpython
   wayland
-  webkit2gtk-4.1
   wxwidgets-gtk3
   wxwidgets-common
-  unixodbc
-  zlib
-  zstd
 )
 makedepends=(
   boost-libs

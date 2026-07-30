@@ -10,9 +10,9 @@ url="https://github.com/sifive/freedom-devicetree-tools"
 license=('Apache-2.0 AND MIT')
 groups=()
 depends=(
-    gcc-libs
-    glibc
     dtc
+    libgcc_s.so
+    libstdc++.so
 )
 makedepends=(
     autoconf

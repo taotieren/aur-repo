@@ -12,12 +12,12 @@ conflicts=(${pkgname%-bin})
 #replaces=(${pkgname})
 depends=(
     dbus
-    gcc-libs
     glib2
-    glibc
+    libgcc_s.so
+    libstdc++.so
+    libz.so
     libusb
     openssl
-    zlib
 )
 makedepends=(libarchive)
 backup=()

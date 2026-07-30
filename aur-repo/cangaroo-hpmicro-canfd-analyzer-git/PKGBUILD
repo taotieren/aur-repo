@@ -10,8 +10,8 @@ provides=(${pkgname%-git} cangaroo)
 conflicts=(${pkgname%-git} cangaroo)
 depends=(
 	bash
-	gcc-libs
-	glibc
+    libgcc_s.so
+    libstdc++.so
 	libnl
 	qt5-charts
 	qt5-base

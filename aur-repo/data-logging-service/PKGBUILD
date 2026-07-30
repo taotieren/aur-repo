@@ -15,10 +15,10 @@ _qt=qt5
 depends=(
     fftw
     fltk
-    gcc-libs
-    glibc
     hicolor-icon-theme
     hdf5
+    libgcc_s.so
+    libstdc++.so
     libxml2
     pcre
     perl

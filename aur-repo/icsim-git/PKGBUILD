@@ -12,7 +12,6 @@ conflicts=(${pkgname%-git})
 replaces=()
 options=()
 depends=(
-    glibc
     can-utils
     sdl2-compat
     sdl2_gfx

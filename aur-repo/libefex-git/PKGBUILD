@@ -10,7 +10,6 @@ license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
-    glibc
     libusb
     systemd-libs
 )

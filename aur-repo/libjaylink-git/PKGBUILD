@@ -10,8 +10,7 @@ pkgdesc='Library for accessing SEGGER J-Link and compatible devices'
 arch=($CARCH)
 url='https://gitlab.zapb.de/libjaylink/libjaylink'
 license=('GPL-3.0-or-later')
-depends=('glibc'
-    'libusb')
+depends=('libusb')
 makedepends=('git' 'meson')
 optdepends=('doxygen: Required for API documentation')
 provides=("$_pkg.so" "$_pkg")

@@ -10,12 +10,11 @@ license=('LicenseRef-Commercial')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(
-    gcc-libs
-    glibc)
+depends=()
 makedepends=(
     git
-    rust)
+    rust
+)
 optdepends=('clouddrive: CloudDrive - Unlocking the Unlimited Possibilities of Cloud Storage')
 backup=()
 options=('!lto' '!debug')

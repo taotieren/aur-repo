@@ -11,11 +11,11 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 url="https://github.com/WCHSoftGroup/ch9344ser_linux"
 license=('GPL-2.0-or-later')
-depends=(
-	dkms)
+depends=(dkms)
 makedepends=(
 	git
-    patch)
+    patch
+)
 optdepends=(
     'linux-headers: build the module against Arch kernel'
     'linux-ck-headers: build the module against Linux-ck kernel'

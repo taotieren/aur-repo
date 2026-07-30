@@ -27,10 +27,10 @@ depends=(
   libgcc
   libstdc++
   libusb
+  libz.so
   ${_qt}-base
   fftw
   python
-  zlib
   # AUR
   python-mcp
   python-toon

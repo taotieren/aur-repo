@@ -12,9 +12,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    glibc
     hicolor-icon-theme
-    zlib
+    libz.so
 )
 makedepends=()
 backup=()

@@ -11,13 +11,15 @@ url="https://github.com/Keidan/hex2bin"
 license=('GPL-3.0-only')
 replaces=('hex2bin')
 depends=(
-    glibc
-    gcc-libs)
+    libgcc_s.so
+    libstdc++.so
+)
 makedepends=(
     git
     cmake
     ninja
-    python)
+    python
+)
 checkdepends=()
 source=("$pkgname::git+${url}.git")
 md5sums=('SKIP')

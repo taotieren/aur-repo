@@ -17,11 +17,11 @@ replaces=(hslinkupper)
 depends=(
     cairo
     gdk-pixbuf2
-    gcc-libs
     glib2
-    glibc
     gtk3
     hicolor-icon-theme
+    libgcc_s.so
+    libstdc++.so
     libsoup3
     pango
     systemd-libs

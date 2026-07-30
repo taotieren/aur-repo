@@ -11,10 +11,7 @@ license=('MIT')
 provides=(${pkgname} ${_name})
 conflicts=(${pkgname} ${_name})
 # replaces=(${pkgname} ${_name})
-depends=(
-    gcc-libs
-    glibc
-)
+depends=()
 makedepends=(
     git
     cargo

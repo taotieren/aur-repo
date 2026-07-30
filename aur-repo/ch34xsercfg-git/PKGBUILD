@@ -11,9 +11,9 @@ conflicts=(${pkgname%-git})
 url="https://github.com/WCHSoftGroup/ch343ser_linux"
 license=('GPL-2.0-or-later')
 depends=(
-    glibc
     libch343ser
-    libch9344ser)
+    libch9344ser
+)
 makedepends=('git')
 source=("${pkgbase}::git+${url}.git")
 sha256sums=('SKIP')
@@ -36,6 +36,7 @@ build() {
     cd "$srcdir/${pkgbase}/demo/param_config"
     gcc ch34x_demo_param_config.c -lch34xcfg -lch343 -lch9344 -o ch34xsercfg
 }
+
 package() {
     cd "$srcdir/${pkgbase}/demo/param_config"
     install -Dm755 ch34xsercfg -t "${pkgdir}/usr/bin/"

@@ -12,10 +12,9 @@ license=('GPL-3.0-or-later AND LGPL-3.0-or-later AND MIT')
 provides=(${pkgname} ${pkgname}-avalon)
 conflicts=(${pkgname} ${pkgname}-avalon)
 depends=(
-    glibc
     hicolor-icon-theme
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     libusb
     qt6-base
 )

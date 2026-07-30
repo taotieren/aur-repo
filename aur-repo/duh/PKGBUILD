@@ -10,15 +10,15 @@ url="https://github.com/sifive/duh"
 license=('Apache-2.0')
 groups=()
 depends=(
-    gcc-libs
-    glibc
+    libgcc_s.so
+    libstdc++.so
+    libz.so
     sh
     python
     python-cffi
     python-setuptools
     python-platformdirs
     nodejs
-    zlib
 )
 makedepends=(
     npm

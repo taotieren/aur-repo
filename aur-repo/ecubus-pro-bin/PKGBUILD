@@ -16,8 +16,8 @@ depends=(
     dbus
     expat
     glib2
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     hicolor-icon-theme
     java-runtime
     systemd-libs

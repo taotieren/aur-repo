@@ -12,8 +12,7 @@ groups=()
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
-depends=(
-)
+depends=()
 makedepends=(
     cmake
     dlpack

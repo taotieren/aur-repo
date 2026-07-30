@@ -9,22 +9,22 @@ arch=('x86_64')
 url="http://srf.xunfei.cn/"
 license=("custom AND LGPL-3.0-or-later")
 depends=(
-        sh
-        curl
-        fcitx
-        gcc-libs
-        glibc
-        grpc
-        hicolor-icon-theme
-        # "dtkwidget"
-        libx11
-        libxtst
-        qt5-base
-        protobuf
-        sqlite
-        opencc
-        xdg-utils
-        zlib
+    sh
+    curl
+    fcitx
+    grpc
+    hicolor-icon-theme
+    # "dtkwidget"
+    libgcc_s.so
+    libstdc++.so
+    libx11
+    libxtst
+    libz.so
+    qt5-base
+    protobuf
+    sqlite
+    opencc
+    xdg-utils
 )
 makedepends=()
 optdepends=()

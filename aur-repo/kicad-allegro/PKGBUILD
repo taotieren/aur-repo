@@ -10,10 +10,7 @@ license=("unkown")
 provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
-depends=(
-    glibc
-    gcc-libs
-)
+depends=()
 makedepends=(
     rust
     git

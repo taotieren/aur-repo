@@ -11,10 +11,9 @@ depends=(
 	dtk6core
 	dtk6log
 	dtk6widget
-	glibc
 	hicolor-icon-theme
-	libgcc
-	libstdc++
+	libgcc_s.so
+    libstdc++.so
 	qt6-base
 )
 makedepends=(

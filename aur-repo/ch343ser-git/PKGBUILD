@@ -8,8 +8,7 @@ pkgdesc="USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch91
 arch=($CARCH)
 url="https://github.com/WCHSoftGroup/ch343ser_linux"
 license=('GPL-2.0-or-later')
-depends=(dkms
-    glibc)
+depends=(dkms)
 makedepends=('git')
 source=("${pkgbase}::git+${url}.git"
     "ch343ser-dkms-git.install")
@@ -131,7 +130,7 @@ package_libch343ser-git() {
     pkgdesc+=" (dynamic lib)."
     provides=(${pkgname%-git} libch9344ser)
     conflicts=(${pkgname%-git} libch9344ser)
-    depends=(glibc)
+    depends=()
     arch=($CARCH)
 
     cd "$srcdir/${pkgbase}/lib"

@@ -12,15 +12,18 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    glibc
-    gcc-libs
     hicolor-icon-theme
     hidapi
+    libgcc_s.so
+    libstdc++.so
     # fonts depends
     #     noto-fonts-cjk
-    qt5-base)
-makedepends=(git
-    qt5-tools)
+    qt5-base
+)
+makedepends=(
+    git
+    qt5-tools
+)
 backup=()
 options=()
 install=

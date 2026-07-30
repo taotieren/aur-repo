@@ -14,10 +14,7 @@ conflicts=(
     ${pkgname}
 )
 replaces=()
-depends=(
-    libgcc
-    glibc
-)
+depends=()
 makedepends=(
     git
     rust

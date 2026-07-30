@@ -13,9 +13,11 @@ provides=(${pkgbase%-git})
 conflicts=(${pkgbase%-git})
 replaces=()
 depends=(systemd)
-makedepends=(git
+makedepends=(
+    git
     wget
-    sed)
+    sed
+)
 checkdepends=()
 optdepends=()
 source=(remove-github520-hosts.service

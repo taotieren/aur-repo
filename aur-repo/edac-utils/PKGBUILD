@@ -12,7 +12,6 @@ conflicts=(${pkgname})
 replaces=()
 depends=(
     sh
-    glibc
     perl
     sysfsutils
 )

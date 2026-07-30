@@ -11,8 +11,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
 depends=(
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     openssl
 )
 makedepends=(

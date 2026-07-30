@@ -13,3 +13,4 @@ update_on:
     github: sifive/esdk-settings-generator
     use_max_tag: true
     prefix: v
+  - alias: python

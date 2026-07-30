@@ -11,13 +11,14 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    glibc
     qt5-base
 )
-makedepends=(git
+makedepends=(
+    git
     qt5-tools
     cmake
-    ninja)
+    ninja
+)
 backup=()
 options=()
 install=

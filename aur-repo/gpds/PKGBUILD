@@ -10,9 +10,8 @@ url="https://github.com/simulton/gpds"
 license=('LicenseRef-SimultonGmbH')
 groups=()
 depends=(
-    glibc
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     tinyxml2
     yaml-cpp
 )

@@ -9,9 +9,7 @@ arch=($CARCH)
 license=('Apache-2.0')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(
-    glibc
-)
+depends=()
 makedepends=(
     cmake
     git
