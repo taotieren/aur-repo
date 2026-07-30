@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ymake-git
-pkgver=0.8.9.29.g5d617bd
+pkgver=0.8.9.30.g233266d
 pkgrel=1
 pkgdesc="A cross build dsl make tool"
 arch=('any')
