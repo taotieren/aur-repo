@@ -13,6 +13,7 @@ repo_depends:
 update_on:
   - source: github
     github: PrefectHQ/fastmcp
-    use_max_tag: true
+    use_latest_release: true
+    # use_max_tag: true
     prefix: v
   - alias: python
