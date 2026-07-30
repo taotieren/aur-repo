@@ -3,7 +3,7 @@
 pkgname=python-consolekit
 _name=${pkgname#python-}
 pkgver=2.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Additional utilities for click'
 arch=(any)
 url='https://consolekit.readthedocs.io/'
