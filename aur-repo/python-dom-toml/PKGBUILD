@@ -29,10 +29,7 @@ sha512sums=('7ec94f3a22f90463b6f3d9f1db942b4d3065f315cee333e290b0cb1d1518a635988
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
-    sed -i \
-        -e '/^requires = \[/,/^\]/ s/"\([^"]*\)[<>=!~][^"]*"/"\1"/' \
-        -e '/^dependencies = \[/,/^\]/ s/"\([^"]*\)[<>=!~][^"]*"/"\1"/' \
-        pyproject.toml
+    sed -i 's/"\([a-zA-Z0-9_.-]*\)[<>=!~][^"]*"/"\1"/g' pyproject.toml
 }
 
 build() {
