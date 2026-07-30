@@ -10,16 +10,15 @@ url="https://github.com/openbmc/bmcweb"
 license=('Apache-2.0')
 groups=()
 depends=(
-    glibc
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     libnghttp2
+    libz.so
+    libzstd.so
     openssl
     tinyxml2
     pam
     systemd-libs
-    zlib
-    zstd
 # AUR
     sdbusplus-git
 )

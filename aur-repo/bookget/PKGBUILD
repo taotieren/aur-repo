@@ -10,7 +10,7 @@ license=('GPL-3.0-only')
 provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
-depends=(glibc)
+depends=()
 optdepends=('dezoomify-rs: Zoomable image downloader for Google Arts & Culture, Zoomify, IIIF, and others')
 makedepends=(
     git

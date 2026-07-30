@@ -17,9 +17,9 @@ conflicts=(
 )
 replaces=()
 depends=(
-    glibc
-    gcc-libs
     hicolor-icon-theme
+    libgcc_s.so
+    libstdc++.so
 )
 makedepends=('gcc')
 source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")

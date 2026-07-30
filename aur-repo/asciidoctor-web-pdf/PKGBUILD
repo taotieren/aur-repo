@@ -16,10 +16,10 @@ depends=(
     cairo
     dbus
     expat
-    gcc-libs
     glib2
-    glibc
     libcups
+    libgcc_s.so
+    libstdc++.so
     libx11
     libxcb
     libxext

@@ -14,8 +14,8 @@ replaces=()
 depends=(
     bash
     qt5-base
-    gcc-libs
-    glibc
+    libgcc_s.so
+    libstdc++.so
     libusb
 )
 makedepends=('unzip')

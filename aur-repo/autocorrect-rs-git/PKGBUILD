@@ -11,8 +11,11 @@ license=('MIT')
 provides=(${pkgbase%-git} ${pkgbase%-rs-git})
 conflicts=(${pkbase%-git} ${pkgbase%-rs-git})
 replaces=()
-depends=('rust')
-makedepends=('git')
+depends=()
+makedepends=(
+    'git'
+    'rust'
+)
 backup=()
 options=('!strip' '!lto')
 install=

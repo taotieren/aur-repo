@@ -13,8 +13,8 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    gcc-libs
-    glibc
+    libgcc_s.so
+    libstdc++.so
 )
 makedepends=(
     cmake

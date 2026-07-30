@@ -13,11 +13,12 @@ provides=(${pkgname})
 conflicts=()
 replaces=()
 depends=(
-    bash
-    gcc-libs
+    sh
     glib2
-    glibc
-    zlib)
+    libgcc_s.so
+    libstdc++.so
+    libz.so
+)
 makedepends=(
     desktop-file-utils
     libarchive

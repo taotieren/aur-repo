@@ -16,8 +16,7 @@ conflicts=(
 replaces=()
 depends=(
   sh
-  glibc
-  libgcc
+  libgcc_s.so
 )
 makedepends=(
   git

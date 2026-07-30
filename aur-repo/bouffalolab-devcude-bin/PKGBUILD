@@ -7,14 +7,18 @@ pkgdesc="Dev Cube 是博流提供的芯片集成开发工具，包含 IOT 程序
 arch=('x86_64')
 url="https://dev.bouffalolab.com/download"
 license=('LicenseRef-custom')
-provides=(Bouffalo-Lab-Dev-Cube
-    bflb-iot-tool)
+provides=(
+    Bouffalo-Lab-Dev-Cube
+    bflb-iot-tool
+)
 conflicts=(python-bflb-iot-tool)
 #replaces=(${pkgname})
-depends=(libusb
+depends=(
+    libusb
     libftdi
     hidapi
-    openocd)
+    openocd
+)
 makedepends=(libarchive)
 optdepends=("jlink-software-and-documentation: Segger JLink software & documentation pack for Linux")
 install=${pkgname}.install

@@ -12,9 +12,10 @@ provides=(at32-openocd AT32OpenOCD)
 conflicts=(at32-openocd AT32OpenOCD)
 replaces=()
 depends=(
-  bash
-  glibc
+  sh
   hidapi
+  libgcc_s.so
+  libstdc++.so
   libusb
 )
 makedepends=(

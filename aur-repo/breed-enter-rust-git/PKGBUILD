@@ -10,11 +10,14 @@ license=('MIT')
 provides=(${pkgname%-git} breed-enter breedenter-rust)
 conflicts=(${pkgname%-git} breed-enter breedenter-rust)
 replaces=()
-depends=(glibc
-    gcc-libs)
+depends=(
+    libgcc_s.so
+    libstdc++.so
+)
 makedepends=(
     git
-    rust)
+    rust
+)
 backup=()
 options=()
 install=

@@ -11,7 +11,7 @@ pkgrel=1
 pkgdesc="Adds new commands and widgets to the Tcl interpreter."
 url="http://blt.sourceforge.net"
 license=("LicenseRef-custom")
-depends=('glibc' 'expat' 'tcl' 'tk' 'libnsl' 'libx11' 'libxau' 'libxcomposite' 'libxcursor' 'libxdmcp' 'libxext' 'libxft' 'libxpm' 'libxrandr' 'libxrender' 'libtiff' 'libjpeg-turbo' 'libpng' 'libssh2' 'freetype2' 'fontconfig' 'sqlite' 'zlib')
+depends=('expat' 'tcl' 'tk' 'libnsl' 'libx11' 'libxau' 'libxcomposite' 'libxcursor' 'libxdmcp' 'libxext' 'libxft' 'libxpm' 'libxrandr' 'libxrender' 'libtiff' 'libjpeg-turbo' 'libpng' 'libssh2' 'freetype2' 'fontconfig' 'sqlite' 'libz.so')
 # 'postgresql-libs'
 # 'libmariadbclient'
 makedepends=('git' 'pkgconf')

@@ -10,10 +10,10 @@ options=(!strip !debug)
 depends=(
     dbus
     expat
-    gcc-libs
     glib2
-    glibc
+    libgcc_s.so
     libidn2
+    libstdc++.so
     sh
     zlib
 )

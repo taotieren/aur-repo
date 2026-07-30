@@ -12,8 +12,7 @@ url="https://github.com/linux-can/can-utils"
 license=('GPL-2.0-only' 'BSD-3-Clause')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(glibc
-    bash)
+depends=(sh)
 makedepends=(git
     cmake
     ninja)

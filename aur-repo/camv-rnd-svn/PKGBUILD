@@ -10,7 +10,6 @@ license=('LGPL-2.0-or-later')
 provides=(${pkgname%-svn})
 conflicts=(${pkgname%-svn})
 depends=(
-    glibc
     # AUR
     librnd4
 )

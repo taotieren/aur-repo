@@ -12,8 +12,7 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 #replaces=(${pkgname})
 depends=(
-    glibc
-    libgcc
+    libgcc_s.so
 )
 makedepends=(
     git

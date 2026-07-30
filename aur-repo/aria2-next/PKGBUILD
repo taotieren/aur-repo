@@ -12,12 +12,13 @@ conflicts=(${pkgname})
 #replaces=(${pkgname})
 depends=(
     c-ares
-    libgcc
-    libstdc++
-    libxml2
+    expat
+    libgcc_s.so
+    libstdc++.so
+    libssh2
+    libz.so
     openssl
     sqlite
-    zlib
 )
 makedepends=(
     git

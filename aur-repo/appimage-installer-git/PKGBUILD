@@ -15,9 +15,8 @@ depends=(
     dtkcore
     dtkwidget
     dtkgui
-    gcc-libs
-    glibc
     hicolor-icon-theme
+    libgcc_s.so
     qt5-base
     qt5-svg
     python)

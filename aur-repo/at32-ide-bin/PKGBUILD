@@ -15,14 +15,14 @@ replaces=()
 depends=(
   #   java-runtime
   bash
-  gcc-libs
-  glibc
   hidapi
+  libgcc_s.so
+  libstdc++.so
   libusb
+  libz.so
   java-runtime
   perl
   python
-  zlib
 )
 makedepends=(
   libarchive

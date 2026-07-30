@@ -13,7 +13,6 @@ groups=()
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
-    glibc
     libftdi
     libyaml
     libusb
@@ -28,7 +27,7 @@ makedepends=(
     libzip
     openssl
     zlib
-    )
+)
 checkdepends=()
 optdepends=("mfgtools-git: uuu (Universal Update Utility), mfgtools 3.0. Freescale/NXP I.MX Chip image deploy tools.")
 replaces=()

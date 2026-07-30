@@ -9,11 +9,12 @@ arch=($CARCH)
 url="https://github.com/canboat/canboat"
 license=('Apache-2.0')
 groups=()
-depends=(bash
-    glibc
+depends=(
+    sh
     perl
     php
-    ksh)
+    ksh
+)
 makedepends=(
     #     help2man
     git

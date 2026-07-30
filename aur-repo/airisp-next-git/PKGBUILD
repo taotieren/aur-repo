@@ -12,11 +12,11 @@ conflicts=(${pkgname%-git})
 replaces=()
 depends=(
     cairo
-    gcc-libs
     gdk-pixbuf2
-    glibc
     glib2
     gtk3
+    libgcc_s.so
+    libstdc++.so
     libsoup
     pango
     systemd-libs
