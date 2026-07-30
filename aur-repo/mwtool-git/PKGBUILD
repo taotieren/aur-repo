@@ -9,11 +9,14 @@ url="https://gitee.com/xish-cc/MWTool"
 license=('MIT')
 provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
-depends=(sh
-    yad)
+depends=(
+    sh
+    yad
+)
 makedepends=(
     git
-    dos2unix)
+    dos2unix
+)
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 options=('!strip' '!debug')

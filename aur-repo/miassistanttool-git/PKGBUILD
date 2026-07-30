@@ -16,7 +16,8 @@ depends=(
     curl
     libusb
     openssl
-    tiny-json)
+    tiny-json
+)
 makedepends=(
     git
 )

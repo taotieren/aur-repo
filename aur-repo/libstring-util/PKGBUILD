@@ -13,8 +13,8 @@ provides=(${pkgname} ${pkgname//-/_}.so)
 conflicts=(${pkgname} ${pkgname//-/_}.so)
 replaces=()
 depends=(
-	glibc
-	gcc-libs
+    libgcc_s.so
+    libstdc++.so
 )
 makedepends=(
     git

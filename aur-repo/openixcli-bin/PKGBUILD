@@ -10,7 +10,7 @@ _name=${_pkgname}-v${pkgver}-x86_64-unknown-linux-gnu
 options=(!strip !debug)
 depends=(
     hicolor-icon-theme
-    libgcc
+    libgcc_s.so
     libusb
 )
 makedepends=(libarchive)

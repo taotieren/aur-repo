@@ -12,8 +12,9 @@ depends=(
     bash
     expat
     dbus
-    gcc-libs
     glib2
+    libgcc_s.so
+    libstdc++.so
 )
 makedepends=(
     libarchive)

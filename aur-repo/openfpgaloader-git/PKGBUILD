@@ -11,13 +11,13 @@ url="https://github.com/trabucayre/openFPGALoader"
 license=('Apache-2.0')
 depends=(
   'libftdi'
-  'libgcc'
+  'libgcc_s.so'
+  'libstdc++.so'
   'libhidapi-libusb.so'
   'libgpiod'
-  'libstdc++'
   'libudev.so'
   'libusb'
-  'zlib'
+  'libz.so'
 )
 makedepends=(
   'cmake'

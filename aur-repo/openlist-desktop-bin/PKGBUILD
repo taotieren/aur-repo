@@ -13,15 +13,15 @@ license=('GPL-3.0-only')
 depends=(
     'cairo'
     'gdk-pixbuf2'
-    'glibc'
     'gtk3'
     'rclone'
     'hicolor-icon-theme'
     'libsoup3'
     'openssl'
-    'webkit2gtk-4.1'
+    'libwebkit2gtk-4.1.so'
     #AUR
-    'openlist')
+    'openlist'
+)
 makedepends=('libarchive')
 backup=()
 options=('!strip' '!debug')

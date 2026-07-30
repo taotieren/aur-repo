@@ -11,9 +11,9 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 depends=(
-    libgcc
-    libstdc++
     hicolor-icon-theme
+    libgcc_s.so
+    libstdc++.so
     qt5-base
     qt5-tools
     python

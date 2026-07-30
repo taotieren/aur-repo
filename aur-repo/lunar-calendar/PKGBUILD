@@ -11,7 +11,6 @@ url="https://github.com/yetist/lunar-calendar"
 license=('LGPL-2.1-or-later')
 depends=(
     glib2
-    glibc
     gtk3
     pango
 # AUR

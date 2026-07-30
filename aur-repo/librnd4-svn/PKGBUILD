@@ -10,7 +10,6 @@ license=('LGPL-2.0-or-later')
 provides=('librnd4=4.1.1' 'librnd3' 'librnd')
 conflicts=('librnd4=4.1.1' 'librnd3' 'librnd')
 depends=(
-    glibc
     sh
     #     fungw
 )

@@ -10,10 +10,13 @@ url="https://gitee.com/OpenNuvoton/NUC980_NuWriter_CMD"
 license=('GPL-3.0-only')
 groups=()
 depends=(
-    libusb)
-makedepends=(git
+    libusb
+)
+makedepends=(
+    git
     automake
-    pkgconf)
+    pkgconf
+)
 checkdepends=()
 optdepends=()
 provides=('NUC980_NuWriter_CMD')

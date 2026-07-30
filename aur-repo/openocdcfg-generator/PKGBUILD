@@ -9,12 +9,14 @@ arch=('any')
 url="https://github.com/sifive/openocdcfg-generator"
 license=('Apache-2.0')
 groups=()
-depends=(python
+depends=(
+    python
     openocd 
     python-jinja-time
     python-markupsafe
     python-pylint
-    python-pydevicetree)
+    python-pydevicetree
+)
 makedepends=()
 checkdepends=()
 optdepends=()

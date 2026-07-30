@@ -11,8 +11,8 @@ license=('Apache-2.0')
 replaces=()
 depends=(
   sh
-  libgcc
-  libstdc++
+  libgcc_s.so
+  libstdc++.so
   python
   python-can
   python-numpy

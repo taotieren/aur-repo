@@ -8,8 +8,8 @@ arch=($CARCH)
 url="https://www.mujoco.org"
 license=('Apache-2.0')
 depends=(
-  'libgcc'
-  'libstdc++'
+  libgcc_s.so
+  libstdc++.so
 )
 makedepends=(
   'cmake'

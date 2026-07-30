@@ -10,8 +10,8 @@ url='https://github.com/tianrking/motorbridge'
 license=('MIT')
 replaces=()
 depends=(
-  libgcc
-  libstdc++
+  libgcc_s.so
+  libstdc++.so
   python
 )
 makedepends=(
@@ -87,9 +87,8 @@ package_motorbridge() {
     ${pkgname}
   )
   depends=(
-    glibc
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     python
   )
   arch=($CARCH)
@@ -117,9 +116,8 @@ package_libmotorbridge() {
     ${pkgname}
   )
   depends=(
-    glibc
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
   )
   arch=($CARCH)
 
@@ -139,9 +137,8 @@ package_python-motorbridge() {
     ${pkgname}
   )
   depends=(
-    glibc
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     python
   )
   arch=($CARCH)

@@ -12,8 +12,8 @@ conflicts=(${pkgname} ${pkgname}-sdk)
 replaces=()
 depends=(
     sh
-    libgcc
-    libstdc++
+    libgcc_s.so
+    libstdc++.so
     python
 )
 makedepends=(

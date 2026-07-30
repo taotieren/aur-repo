@@ -14,7 +14,7 @@ replaces=()
 depends=(
   sh
   python
-  zlib
+  libz.so
 )
 makedepends=(
   libarchive

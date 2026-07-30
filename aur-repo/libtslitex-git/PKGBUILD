@@ -10,9 +10,8 @@ url='https://github.com/EEVengers/libtslitex'
 license=('BSD-2-Clause')
 replaces=()
 depends=(
-  glibc
   json-c
-  zlib
+  libz.so
 )
 makedepends=(
   cmake

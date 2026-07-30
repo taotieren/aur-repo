@@ -11,9 +11,11 @@ url="https://github.com/gusmanb/logicanalyzer"
 license=('GPL-3.0-only')
 replaces=()
 depends=()
-makedepends=(git
+makedepends=(
+    git
     dotnet-sdk
-    ttf-dejavu)
+    ttf-dejavu
+)
 backup=()
 options=(!strip !debug)
 install=

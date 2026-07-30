@@ -14,10 +14,10 @@ depends=(
     glib2
     gtk3
     hicolor-icon-theme
-    libgcc
+    libgcc_s.so
     libsoup3
     libusb
-    webkit2gtk-4.1
+    libwebkit2gtk-4.1.so
 )
 makedepends=(libarchive)
 optdepends=(
