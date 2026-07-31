@@ -1,22 +1,66 @@
-maintainers:
-  - github: taotieren
-    email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: gd32-isp-console-bin
-
 # maintainers:
 #   - github: taotieren
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
+#     email: admin@taotieren.com
+# pre_build_script: aur_pre_build(maintainers=['taotieren'])
+# post_build: aur_post_build
 # update_on:
-#   - source: regex
-#     url: https://appversion.115.com/1/web/1.0/api/getMultiVer
-#     regex: '115br_v([\d.]+).deb'
+#   - source: aur
+#     aur: gd32-isp-console-bin
+
+maintainers:
+  - github: taotieren
+pre_build_script: |
+  oldver, oldrel = get_pkgver_and_pkgrel()
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
+  run_protected(["updpkgsums"])
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+update_on:
+  - source: cmd
+    cmd: |
+      python3 << 'PYEOF'
+      import urllib.request, re
+
+      def extract(url):
+          req = urllib.request.Request(
+              url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"}
+          )
+          try:
+              r = urllib.request.urlopen(req, timeout=30)
+          except Exception:
+              r = urllib.request.urlopen(url, timeout=30)
+          final = r.geturl()
+          m = re.search(r"GD32_ISP_CLI_Linux_V([\d.]+)\.tar\.gz", final)
+          return m.group(1) if m else None
+
+      # document_id/530 is the GD32 ISP Console(Linux) download entry; it
+      # redirects to the versioned tarball URL, which carries the latest version.
+      ver = extract("https://www.gd32mcu.com/download/down/document_id/530/path_type/1")
+
+      # anti-downgrade: keep the currently packaged pkgver as a candidate so a
+      # transient gap on the vendor side never reports a false downgrade.
+      try:
+          with open("PKGBUILD") as f:
+              for line in f:
+                  if line.startswith("pkgver="):
+                      cur = line.split("=", 1)[1].strip().strip('"').strip("'")
+                      if re.match(r"^\d+(\.\d+)+$", cur):
+                          cands = [cur]
+                          if ver:
+                              cands.append(ver)
+                          ver = max(cands, key=lambda v: tuple(int(x) for x in v.split(".")))
+                      break
+      except FileNotFoundError:
+          pass
+
+      if ver:
+          print(ver)
+      PYEOF
 # - source: manual
 #   manual: 1
