@@ -36,7 +36,7 @@ package() {
         "${pkgdir}/usr/bin"
 
     #     unar -e GBK "${srcdir}/GD32_ISP_CLI_Linux_V${pkgver}.tar.gz" -o "${pkgdir}/opt/GD32"
-    bsdtar -xf "${srcdir}/GD32_ISP_CLI_Linux_V${pkgver}.tar.gz" -C "${pkgdir}/opt/GD32"
+    bsdtar -xf "${srcdir}/GD32_ISP_CLI_Linux_V${pkgver}.tar.gz" --strip-components=1 -C "${pkgdir}/opt/GD32"
 
     cd "${pkgdir}/opt/GD32/GD32_ISP_CLI/bin"
     chmod 0755 GD32_ISP_CLI
