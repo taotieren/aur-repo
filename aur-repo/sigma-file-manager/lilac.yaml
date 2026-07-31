@@ -22,7 +22,11 @@ repo_depends:
 update_on:
   - source: github
     github: aleksey-hoffman/sigma-file-manager
-    use_latest_tag: true
-    # use_max_tag: true
+    use_max_tag: true
+    # use_latest_tag never applies exclude_regex/prefix filtering, so the newest
+    # tag (ms-store-v2.2.0) leaked through as the version. use_max_tag + prefix
+    # requires the tag to actually start with "v", which structurally excludes
+    # the ms-store-* tags (they start with "ms"), so the highest real vX.Y.Z
+    # release is picked instead.
+    exclude_regex: "^ms-store"
     prefix: v
-    exclude_regex: "^ms-store.*"
