@@ -20,7 +20,7 @@ update_on:
   - source: cmd
     cmd: |
       python3 << 'PYEOF'
-      import urllib.request, re, json
+      import urllib.request, re
 
       req = urllib.request.Request(
           "https://img.wanwang.xin/pubsf/10287/10287325/cdn-static-pages/pages/pc/1519083_zh-cn.html.Body.js",
@@ -34,21 +34,6 @@ update_on:
       def parse(v):
           m = re.match(r"(\d+)\.(\d+)([A-Za-z])?(\.(\d+))?$", v)
           return (int(m.group(1)), int(m.group(2)), m.group(3) or "", int(m.group(5) or 0))
-
-      # Lower bound from the currently published AUR version. The vendor page can
-      # transiently omit the newest release (CDN/generation gap), in which case
-      # the page-only max would report an older version and lilac raises
-      # DowngradingError. This only reads AUR and never touches PKGBUILD.
-      try:
-          api = "https://aur.archlinux.org/rpc/v2/info?arg=aicube-isp-wine"
-          with urllib.request.urlopen(api, timeout=15) as resp:
-              res = json.load(resp)
-          published = res["results"][0]["Version"]  # e.g. "6.96Z-1"
-          m = re.match(r"(\d+\.\d+[A-Za-z]?(?:\.\d+)?)", published)
-          if m:
-              vers.append(m.group(1))
-      except Exception:
-          pass
 
       if vers:
           print(max(vers, key=parse))
