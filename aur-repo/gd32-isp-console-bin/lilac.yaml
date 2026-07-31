@@ -29,40 +29,20 @@ update_on:
       python3 << 'PYEOF'
       import urllib.request, re
 
-      def extract(url):
-          req = urllib.request.Request(
-              url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"}
-          )
-          try:
-              r = urllib.request.urlopen(req, timeout=30)
-          except Exception:
-              r = urllib.request.urlopen(url, timeout=30)
-          final = r.geturl()
-          m = re.search(r"GD32_ISP_CLI_Linux_V([\d.]+)\.tar\.gz", final)
-          return m.group(1) if m else None
-
-      # document_id/530 is the GD32 ISP Console(Linux) download entry; it
-      # redirects to the versioned tarball URL, which carries the latest version.
-      ver = extract("https://www.gd32mcu.com/download/down/document_id/530/path_type/1")
-
-      # anti-downgrade: keep the currently packaged pkgver as a candidate so a
-      # transient gap on the vendor side never reports a false downgrade.
+      url = "https://www.gd32mcu.com/download/down/document_id/530/path_type/1"
+      req = urllib.request.Request(
+          url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"}
+      )
       try:
-          with open("PKGBUILD") as f:
-              for line in f:
-                  if line.startswith("pkgver="):
-                      cur = line.split("=", 1)[1].strip().strip('"').strip("'")
-                      if re.match(r"^\d+(\.\d+)+$", cur):
-                          cands = [cur]
-                          if ver:
-                              cands.append(ver)
-                          ver = max(cands, key=lambda v: tuple(int(x) for x in v.split(".")))
-                      break
-      except FileNotFoundError:
-          pass
-
-      if ver:
-          print(ver)
+          r = urllib.request.urlopen(req, timeout=30)
+      except Exception:
+          r = urllib.request.urlopen(url, timeout=30)
+      # document_id/530 is the GD32 ISP Console(Linux) download entry; it
+      # redirects to the versioned tarball URL carrying the latest version.
+      final = r.geturl()
+      m = re.search(r"GD32_ISP_CLI_Linux_V([\d.]+)\.tar\.gz", final)
+      if m:
+          print(m.group(1))
       PYEOF
 # - source: manual
 #   manual: 1
