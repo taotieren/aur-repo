@@ -14,7 +14,9 @@ post_build_script: |
 update_on:
   - source: github
     github: open-telemetry/opentelemetry-python-contrib
-    # use_max_tag: true
-    use_latest_release: true
+    use_max_tag: true
+    # use_latest_release: true
+    exclude_regex: ".*==*"
+    exclude_regex: "v1.16.0"
     prefix: v
   - alias: python
