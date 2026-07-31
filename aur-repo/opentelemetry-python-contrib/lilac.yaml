@@ -16,7 +16,6 @@ update_on:
     github: open-telemetry/opentelemetry-python-contrib
     use_max_tag: true
     # use_latest_release: true
-    exclude_regex: ".*==*"
-    exclude_regex: "v1.16.0"
+    exclude_regex: ".*==*|v1.16.0"
     prefix: v
   - alias: python
