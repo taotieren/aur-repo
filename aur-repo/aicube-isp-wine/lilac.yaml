@@ -35,19 +35,6 @@ update_on:
           m = re.match(r"(\d+)\.(\d+)([A-Za-z])?(\.(\d+))?$", v)
           return (int(m.group(1)), int(m.group(2)), m.group(3) or "", int(m.group(5) or 0))
 
-      # include the currently packaged version so a transient gap in the vendor page
-      # (where the latest is momentarily missing) never reports a downgrade
-      try:
-          with open("PKGBUILD") as f:
-              for line in f:
-                  if line.startswith("_tagname="):
-                      cur = line.split("=", 1)[1].strip().strip('"').strip("'")
-                      if re.match(r"^\d+\.\d+[A-Za-z]?(\.\d+)?$", cur):
-                          vers.append(cur)
-                      break
-      except FileNotFoundError:
-          pass
-
       if vers:
           print(max(vers, key=parse))
       PYEOF
