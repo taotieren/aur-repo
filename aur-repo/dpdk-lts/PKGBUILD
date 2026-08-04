@@ -1,3 +1,5 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
 pkgname=dpdk-lts
 pkgver=26.07
 pkgrel=1
