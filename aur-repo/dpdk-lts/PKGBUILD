@@ -9,7 +9,7 @@ license=(
 )
 provides=(${pkgname%-lts})
 conflicts=(${pkgname%-lts})
-options=()
+options=('!strip')
 depends=(
   sh
   dtc
@@ -29,7 +29,6 @@ depends=(
   python
   python-scapy
   python-pefile
-  python-pkg_resources
   python-pyelftools
 )
 makedepends=(
