@@ -62,7 +62,7 @@ optdepends=(
 )
 conflicts=(${pkgname} 'kicad' 'kicad-bzr')
 provides=(${pkgname} 'kicad' 'kicad-bzr')
-options=('!strip')
+options=('!strip' 'debug')
 source=("${pkgname}::git+https://gitlab.com/kicad-hq/kicad.git#tag=${pkgver}")
 sha256sums=('686252c893c5564ee8493cd27fb461b13503d7b055f2cc348ff16dde9942839a')
 

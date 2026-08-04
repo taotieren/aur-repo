@@ -11,7 +11,7 @@ license=(
 )
 provides=(${pkgname%-lts})
 conflicts=(${pkgname%-lts})
-options=('!strip')
+options=('!strip' 'debug')
 depends=(
   sh
   dtc
