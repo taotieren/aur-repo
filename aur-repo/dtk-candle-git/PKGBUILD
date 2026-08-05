@@ -31,13 +31,11 @@ conflicts=("${pkgname%-git}")
 replaces=()
 backup=()
 options=()
-install=${pkgname%-git}.install
+install=
 source=(
     "${pkgname}::git+${url}.git"
-	${pkgname%-git}.install
 )
-sha256sums=('SKIP'
-            '5bb6f0512a8c2359ae037344266bb6e47c6b149b716ec8c05895009e548c4d09')
+sha256sums=('SKIP')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
