@@ -10,22 +10,18 @@ post_install() {
     _color_msg "1;32" "    sudo usermod -aG input \$USER"
     _color_msg "1;32" "    newgrp input"
     echo
-    systemctl daemon-reload
-    systemctl enable numlockd.service
-    _color_msg "1;32" "==> numlockd.service enabled. Starting..."
-    systemctl start numlockd.service
 }
 
 post_upgrade() {
     systemctl daemon-reload
-    systemctl restart numlockd.service
-    _color_msg "1;32" "==> numlockd.service restarted."
+    systemctl restart org.yxzl.candle.service
+    _color_msg "1;32" "==> org.yxzl.candle.service restarted."
 }
 
 pre_remove() {
-    _color_msg "1;33" "==> Stopping and disabling numlockd.service..."
-    systemctl stop numlockd.service
-    systemctl disable numlockd.service
+    _color_msg "1;33" "==> Stopping and disabling org.yxzl.candle.service..."
+    systemctl stop org.yxzl.candle.service
+    systemctl disable org.yxzl.candle.service
 }
 
 post_remove() {

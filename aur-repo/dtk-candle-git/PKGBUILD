@@ -11,10 +11,13 @@ depends=(
 	dtk6core
 	dtk6log
 	dtk6widget
+	glib2
 	hicolor-icon-theme
 	libgcc_s.so
     libstdc++.so
+	libxcb
 	qt6-base
+	libwayland-client.so
 )
 makedepends=(
 	cmake
@@ -34,7 +37,7 @@ source=(
 	${pkgname%-git}.install
 )
 sha256sums=('SKIP'
-            '2e19fa4604a34ad14b8db58b3e36927c2f4df945b112d256a1de96bdd4883a10')
+            '2ff5a57a17cea3fb78a7eafe0a2508e2484ebd1a2e3c855164bdbff659cd9d64')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -47,7 +50,6 @@ pkgver() {
 
 prepare() {
 	cd "${srcdir}/${pkgname}"
-	sed -i 's|/opt/apps/org.yxzl.candle|/usr|g' config/numlockd.service
 	sed -i 's|/opt/apps/org.yxzl.candle|/usr|g' CMakeLists.txt
 }
 
@@ -71,8 +73,6 @@ build() {
 package() {
 	cd "${srcdir}"/${pkgname}/
 	DESTDIR="${pkgdir}" ninja -C build install
-	install -vdm755 ${pkgdir}/opt/apps/org.yxzl.candle/
-	mv ${pkgdir}/usr/bin ${pkgdir}/opt/apps/org.yxzl.candle/
 	install -vDm644 docs/*.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
 	install -vDm644 LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 	install -vDm644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/99-candle.rules" << EOF
@@ -84,7 +84,7 @@ Name=Candle
 Name[zh_CN]=秉烛
 Comment=Prevent screen dimming and system sleep
 Comment[zh_CN]=防止屏幕变暗和系统休眠
-Exec=/opt/apps/org.yxzl.candle/bin/candle
+Exec=candle
 Icon=org.yxzl.candle
 Type=Application
 Categories=Utility;System;
