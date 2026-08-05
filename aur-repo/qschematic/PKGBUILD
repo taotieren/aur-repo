@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=qschematic
-pkgver=3.0.3
+pkgver=3.1.0
 pkgrel=1
 epoch=
 pkgdesc="A library that allows creating diagrams such as flowcharts or even proper engineering schematics within a Qt application"
@@ -40,7 +40,7 @@ install=
 changelog=
 source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 noextract=()
-sha256sums=('dae99032872ebdf69adf67485303c3b521fc9f4d4a743d2a00e059d698df3fa3')
+sha256sums=('20c9301e41a28b381e80541e92a9fa4b838e8caf8ea014ce651c6b99452e87db')
 validpgpkeys=()
 
 prepare() {
