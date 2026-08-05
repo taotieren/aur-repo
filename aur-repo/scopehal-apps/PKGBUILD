@@ -24,7 +24,6 @@ depends=(
     libsigc++-3.0
     libstdc++
     libtirpc
-    libx11
     glfw
     glslang 
     hicolor-icon-theme
