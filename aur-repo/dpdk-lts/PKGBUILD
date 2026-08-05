@@ -65,4 +65,5 @@ build() {
 
 package() {
   DESTDIR="${pkgdir}" ninja -C ${srcdir}/dpdk-$pkgver/build install
+  install -Dm644 ${srcdir}/dpdk-$pkgver/license/* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
