@@ -12,19 +12,8 @@ post_install() {
     echo
 }
 
-post_upgrade() {
-    systemctl daemon-reload
-    systemctl restart org.yxzl.candle.service
-    _color_msg "1;32" "==> org.yxzl.candle.service restarted."
-}
+post_upgrade() {}
 
-pre_remove() {
-    _color_msg "1;33" "==> Stopping and disabling org.yxzl.candle.service..."
-    systemctl stop org.yxzl.candle.service
-    systemctl disable org.yxzl.candle.service
-}
+pre_remove() {}
 
-post_remove() {
-    systemctl daemon-reload
-    _color_msg "1;31" "==> Candle (秉烛) removed."
-}
+post_remove() {}

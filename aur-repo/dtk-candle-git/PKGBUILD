@@ -37,7 +37,7 @@ source=(
 	${pkgname%-git}.install
 )
 sha256sums=('SKIP'
-            '2ff5a57a17cea3fb78a7eafe0a2508e2484ebd1a2e3c855164bdbff659cd9d64')
+            '2aaa0be5e0176ab443975227be5cd151c05cb013cd4c818f9870e4dfae1ebad3')
 
 pkgver() {
     cd "${srcdir}/${pkgname}"
@@ -76,7 +76,7 @@ package() {
 	install -vDm644 docs/*.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
 	install -vDm644 LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 	install -vDm644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/99-candle.rules" << EOF
-KERNEL=="uinput", MODE="0660", GROUP="input"
+KERNEL=="uinput", MODE="0660", GROUP="input", TAG+="uaccess"
 EOF
 	install -vDm644 /dev/stdin "${pkgdir}/usr/share/applications/org.yxzl.candle.desktop" << EOF
 [Desktop Entry]
