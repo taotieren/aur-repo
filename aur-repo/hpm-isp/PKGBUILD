@@ -12,7 +12,6 @@ conflicts=(${pkgname})
 replaces=()
 depends=(
     libgcc_s.so
-    libstdc++.so
     systemd-libs
 )
 makedepends=(
