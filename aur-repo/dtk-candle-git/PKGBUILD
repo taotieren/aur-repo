@@ -2,7 +2,7 @@
 
 pkgname=dtk-candle-git
 pkgver=r28.acf33ab
-pkgrel=2
+pkgrel=3
 pkgdesc="A DTK6/Qt6 desktop application for temporarily preventing automatic screen dimming, locking, and system sleep by simulating NumLock key presses"
 arch=($CARCH)
 url="https://github.com/HuanSoft-Open-Source-Community/candle"
