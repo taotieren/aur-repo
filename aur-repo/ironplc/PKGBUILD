@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ironplc
-pkgver=0.235.0
-pkgrel=3
+pkgver=0.236.0
+pkgrel=1
 pkgdesc="Prototype Rust-based SoftPLC"
 arch=($CARCH)
 url="https://github.com/ironplc/ironplc"
@@ -24,7 +24,7 @@ backup=()
 options=(!lto !debug)
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('7970a14609c96deb84e516f30937edbf3a07c9f948683f6ee1cc1e248f5b5b68')
+sha256sums=('4167f512d1331fd2d0e875f01c025b628c77999748988d8268cfac664604b4d8')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
