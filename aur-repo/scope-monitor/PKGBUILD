@@ -12,7 +12,6 @@ conflicts=(${pkgname} ${pkgname%-monitor})
 replaces=()
 depends=(
     libgcc_s.so
-    openssl
     systemd-libs
 )
 makedepends=(
@@ -22,7 +21,7 @@ makedepends=(
 )
 optdepends=()
 backup=()
-options=(!lto !debug)
+options=(!lto)
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('5819846536f4d3616ac19ea09d89972960f37a50b0d51d6b0fc151012959b493')
