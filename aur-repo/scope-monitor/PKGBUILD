@@ -22,7 +22,7 @@ makedepends=(
 )
 optdepends=()
 backup=()
-options=(!lto)
+options=(!lto !debug)
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('d948dabb8807ed14a733aaeda8ebac4879fa7068a60f9b826dbf7d6fd3f557a3')
