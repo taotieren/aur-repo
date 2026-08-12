@@ -51,13 +51,13 @@ package() {
     install -Dm0644 "LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -dm0755 ${pkgdir}/usr/share/bash-completion/completions/ \
         ${pkgdir}/usr/share/zsh/site-functions/ \
-        ${pkgdir}/usr/share/fish/completions/ \
+        ${pkgdir}/usr/share/fish/vendor_completions.d/ \
         ${pkgdir}/usr/share/elvish/lib/
 
     cd $pkgdir/usr/bin/
 
     ./cargo-thanku completions bash >${pkgdir}/usr/share/bash-completion/completions/cargo-thanku
     ./cargo-thanku completions zsh >${pkgdir}/usr/share/zsh/site-functions/_cargo-thanku
-    ./cargo-thanku completions fish >${pkgdir}/usr/share/fish/completions/cargo-thanku.fish
+    ./cargo-thanku completions fish >${pkgdir}/usr/share/fish/vendor_completions.d/cargo-thanku.fish
     ./cargo-thanku completions elvish >${pkgdir}/usr/share/elvish/lib/cargo-thanku.elv
 }
