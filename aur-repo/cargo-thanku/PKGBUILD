@@ -49,12 +49,8 @@ package() {
     export RUSTUP_TOOLCHAIN=stable
     cargo install --no-track --all-features --root "$pkgdir/usr/" --path .
     install -Dm0644 "LICENSE.md" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -dm0755 ${pkgdir}/usr/share/bash-completion/completions/ \
-        ${pkgdir}/usr/share/zsh/site-functions/ \
-        ${pkgdir}/usr/share/fish/vendor_completions.d/ \
-        ${pkgdir}/usr/share/elvish/lib/
 
-    cd $pkgdir/usr/bin/
+    cd target/release/
 
     local _sh _compdest
     for _sh in bash zsh fish elvish; do
