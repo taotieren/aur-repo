@@ -2,7 +2,7 @@
 
 pkgbase=ok-gloox-git
 pkgname=ok-gloox-git
-pkgver=r271.5e3040e
+pkgver=r272.4c18c47
 pkgrel=1
 arch=($CARCH)
 pkgdesc="OkStar - OkGloox 对Gloox的拓展，上游主页：https://camaya.net/gloox"
