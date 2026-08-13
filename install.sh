@@ -366,20 +366,20 @@ create_aur_mirrorlist() {
 # aur-repo mirrorlist
 # 安装 aur-repo-mirrorlist-git 包可自动更新此文件
 
-## China Telecom Network (200Mbps) (ipv4, http, https)
-Server = https://rom.ie8.pub:2443/aur-repo/$arch
+## China Telecom Network (200Mbps) (ipv4, https)
+Server = https://mirror.ie8.pub:2443/aur-repo/$arch
 
-## China Telecom Network (100Mbps) (ipv4, ipv6, http, https)
-Server = https://fun.ie8.pub:2443/aur-repo/$arch
+## China Telecom Network (200Mbps) (ipv4, ipv6, http)
+Server = http://mirror.ie8.pub:60000/aur-repo/$arch
 
-## China Unicom Network (100Mbps) (ipv4, ipv6, http, https)
-Server = https://atz-mirror.teamos.vip:60000/aur-repo/$arch
+## China Unicom Network (100Mbps) (ipv4, ipv6, http)
+Server = http://atz-mirror.teamos.vip:60000/aur-repo/$arch
 
 ## CloudFlare Preferred CDN (ipv4, ipv6, http, https)
 Server = https://mirrors.kicad.online/aur-repo/$arch
 
 ## CloudFlare Free CDN (ipv4, ipv6, http, https)
-#Server = https://aur-repo.taotieren.com/aur-repo/$arch
+Server = https://aur-repo.taotieren.com/aur-repo/$arch
 
 ## China Mobile Network (50Mbps) (ipv6, http, https)
 #Server = https://aur-repo6.taotieren.com/aur-repo/$arch
