@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=cargo-packager-git
-pkgver=0.11.8.r17.gcdb9801
+pkgver=0.11.8.r19.g66e56a8
 pkgrel=1
 pkgdesc="A cli tool and library to generate installers or app bundles for your executables"
 arch=($CARCH)
