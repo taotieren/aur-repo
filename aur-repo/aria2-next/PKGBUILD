@@ -2,7 +2,7 @@
 
 pkgname=aria2-next
 pkgver=2.5.5
-pkgrel=2
+pkgrel=3
 pkgdesc="Maintained aria2 fork with extensive bug fixes and modernized architecture"
 arch=($CARCH)
 url="https://github.com/AnInsomniacy/aria2-next"
