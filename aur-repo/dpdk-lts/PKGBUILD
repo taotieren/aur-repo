@@ -39,7 +39,6 @@ makedepends=(
   meson
   man-db
   python-sphinx
-
 )
 checkdepends=()
 source=(
