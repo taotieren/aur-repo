@@ -1,16 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: |
-  aur_pre_build(maintainers=['micwoj92', 'redponike'])
-  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=python-beartype'])
-
-  for line in edit_file('PKGBUILD'):
-    if line.startswith('check() {'):
-      line = "_check() {"
-    print(line)
-
-  run_cmd(['updpkgsums'])
+pre_build_script: aur_pre_build(maintainers=['RubenKelevra'])
 post_build: aur_post_build
 # repo_depends:
 #   -
