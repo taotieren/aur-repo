@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=asciidoctor-web-pdf-git
-pkgver=1.0.0.r1.g8a0bd7b
+pkgver=1.0.1.r0.g4c9ba6c
 pkgrel=1
 pkgdesc="A PDF converter for AsciiDoc based on web technologies. It allows complex layouts to be defined with CSS and JavaScript, while writing the content in AsciiDoc."
 arch=($CARCH)
