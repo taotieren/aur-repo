@@ -2,10 +2,10 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
-pre_build_script: aur_pre_build(maintainers=['mattski', 'carsme'])
+pre_build_script: aur_pre_build(maintainers=['xiota', 'chaotic-aur'])
 post_build: aur_post_build
-repo_depends:
-  - python-js2py 
+# repo_depends:
+#   -
 update_on:
   - source: aur
     aur: python-cloudscraper
