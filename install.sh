@@ -369,9 +369,6 @@ create_aur_mirrorlist() {
 ## China Telecom Network (200Mbps) (ipv4, https)
 Server = https://mirror.ie8.pub:2443/aur-repo/$arch
 
-## China Telecom Network (200Mbps) (ipv4, ipv6, http)
-Server = http://mirror.ie8.pub:60000/aur-repo/$arch
-
 ## China Unicom Network (100Mbps) (ipv4, ipv6, http)
 Server = http://atz-mirror.teamos.vip:60000/aur-repo/$arch
 
