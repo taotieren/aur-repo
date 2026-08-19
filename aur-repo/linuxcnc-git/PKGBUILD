@@ -39,6 +39,7 @@ depends=(
   libxss
   systemd-libs
   pango
+  pybind11
   python
   python-cairo
   python-configobj
