@@ -2,7 +2,7 @@
 
 pkgname=linyaps-box-rust-git
 pkgver=2.3.0.rust.1.r4.g7cbcb6c
-pkgrel=2
+pkgrel=3
 pkgdesc="Linyaps OCI runtime implemented in Rust A command-compatible Rust implementation of the Linyaps OCI runtime"
 arch=($CARCH)
 url="https://github.com/guanzi008/linyaps-box-rust"
