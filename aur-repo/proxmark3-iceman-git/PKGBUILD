@@ -23,6 +23,7 @@ depends=(
   'bash'
   'bzip2'
   'readline'
+  'libatomic'
   'libgcc'
   'libstdc++'
   'lua54'
