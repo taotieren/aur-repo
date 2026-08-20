@@ -24,7 +24,7 @@ options=()
 install=
 source=("${pkgname}-${_tagname}.tar.gz::${url}/archive/refs/tags/v${_tagname}.tar.gz")
 sha256sums=('e6cee377923ef27d66871f86ae0b3b2181192bcfa5159fd70641c3d8c9d94aba')
-noextract=("${pkgname}-${_tagname}.tar.gz")
+# noextract=("${pkgname}-${_tagname}.tar.gz")
 
 package() {
     export PUPPETEER_SKIP_DOWNLOAD=true
