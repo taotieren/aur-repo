@@ -78,9 +78,8 @@ package() {
     install -vDm0755 target/release/ll-driver-detect -t $pkgdir/usr/libexec/linglong/
     install -vDm0755 target/release/ll-package-manager -t $pkgdir/usr/libexec/linglong/
     install -vDm0755 target/release/ll-system-helper -t $pkgdir/usr/libexec/linglong/
-    install -vDm0644 packaging/debian/linglong.conf -t ${pkgdir}/usr/lib/sysctl.d/
-    # install -vDm0644 debian/linglong.conf -t ${pkgdir}/usr/lib/sysctl.d/
-    # install -vDm0644 debian/*.1 -t ${pkgdir}/usr/share/man/man1/
+    install -vDm0644 debian/linglong.conf -t ${pkgdir}/usr/lib/sysctl.d/
+    install -vDm0644 debian/*.1 -t ${pkgdir}/usr/share/man/man1/
     cp -rv misc/etc ${pkgdir}/
     cp -rv misc/{lib,share} ${pkgdir}/usr
     install -vDm0644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
