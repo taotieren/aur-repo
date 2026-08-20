@@ -3,7 +3,7 @@
 pkgname=asciidoctor-web-pdf
 _tagname=1.0.2
 pkgver=${_tagname//-/_}
-pkgrel=1
+pkgrel=2
 pkgdesc="A PDF converter for AsciiDoc based on web technologies. It allows complex layouts to be defined with CSS and JavaScript, while writing the content in AsciiDoc."
 arch=('any')
 url="https://github.com/Mogztter/asciidoctor-web-pdf"
@@ -12,20 +12,7 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    sh
-    cairo
-    dbus
-    expat
-    glib2
-    libcups
-    libgcc_s.so
-    libstdc++.so
-    libx11
-    libxcb
-    libxext
     nodejs
-    nspr
-    nss
 )
 makedepends=(
     npm
@@ -37,7 +24,7 @@ options=()
 install=
 source=("${pkgname}-${_tagname}.tar.gz::${url}/archive/refs/tags/v${_tagname}.tar.gz")
 sha256sums=('e6cee377923ef27d66871f86ae0b3b2181192bcfa5159fd70641c3d8c9d94aba')
-# noextract=("${pkgname}-${_tagname}.tar.gz")
+noextract=("${pkgname}-${_tagname}.tar.gz")
 
 package() {
     export PUPPETEER_SKIP_DOWNLOAD=true
