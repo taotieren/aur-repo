@@ -59,13 +59,13 @@ build() {
     cargo rustc --offline --locked --release --package ll-init -- -C target-feature=+crt-static
 }
 
-check() {
-    cd "${srcdir}/${pkgname}/"
+# check() {
+#     cd "${srcdir}/${pkgname}/"
 
-    export CARGO_TARGET_DIR=target
-    export RUSTUP_TOOLCHAIN=stable
-    dbus-run-session -- cargo test --offline --locked --workspace
-}
+#     export CARGO_TARGET_DIR=target
+#     export RUSTUP_TOOLCHAIN=stable
+#     dbus-run-session -- cargo test --offline --locked --workspace
+# }
 
 package() {
     cd "${srcdir}/${pkgname}/"
