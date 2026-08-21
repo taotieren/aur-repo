@@ -1,23 +1,62 @@
+# Maintainer: taotieren <admin@taotieren.com>
+#
+# 上游：玄铁 RISC-V 资源中心 (xrvm.cn)，C-Sky Debugger Server。
+# 该站为 JS 单页应用，每个版本的 OSS 下载链接（occ-oss-prod.oss-cn-hangzhou.aliyuncs.com/resource//<TS>/...）
+# 均不相同且随版本变动，<TS> 无法从公开数据推导，须经登录态 API /api/resource/res/download 获取。
+# 因此：
+#   - 版本号：脚本调用公开 API 自动解析（check_debugserver_version.py，无需登录）；
+#   - OSS 链接：脚本用 ~/.lilac/xrvm.toml 中的登录 JWT（Authorization cookie）调 res/download 自动获取，
+#     pre_build 自动改写 PKGBUILD source。JWT 约 8 小时过期，过期时脚本会提示重新复制一次即可。
+
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['taotieren'])
-post_build: aur_post_build
-update_on:
-  - source: aur
-    aur: csky-debugserver-bin
 
-# maintainers:
-#   - github: taotieren
-# pre_build_script: |
-#   update_pkgver_and_pkgrel(_G.newver)
-# post_build_script: |
-#   git_pkgbuild_commit()
-#   update_aur_repo()
-#
-# update_on:
-#   - source: regex
-#     url: https://appversion.115.com/1/web/1.0/api/getMultiVer
-#     regex: '115br_v([\d.]+).deb'
-# - source: manual
-#   manual: 1
+pre_build_script: |
+  import re
+  import subprocess
+  with open('PKGBUILD') as _f:
+      _pkgbuild = _f.read()
+  # source 已含 -V<新版本>-（防止 5.18.1 误匹配 5.18.10 等前缀冲突）则无需改 URL
+  if f'-V{_G.newver}-' not in _pkgbuild:
+      # 用 JWT 自动获取新版本真实 OSS 下载链接（工作沙箱的包目录内运行）
+      try:
+          _out = subprocess.check_output(
+              ['python3', 'check_debugserver_version.py', '--fetch-url'],
+              text=True, stderr=subprocess.STDOUT)
+      except subprocess.CalledProcessError as e:
+          raise SystemExit('获取 xrvm 下载链接失败，请检查 ~/.lilac/xrvm.toml 的 JWT：\n'
+                           + (e.output or ''))
+      _urls = {}
+      for _line in _out.splitlines():
+          if '\t' in _line:
+              _name, _url = _line.split('\t', 1)
+              if 'linux-x86_64' in _name:
+                  _urls['x86'] = _url
+              elif 'User Guide' in _name:
+                  _urls['ug'] = _url
+      if not _urls.get('x86'):
+          raise SystemExit('未取到 x86_64 下载链接（' + _out.strip() + '），'
+                           '可本地运行 check_debugserver_version.py --token-test 排查')
+      with open('PKGBUILD') as _f:
+          _lines = _f.readlines()
+      with open('PKGBUILD', 'w') as _f:
+          for _l in _lines:
+              if '::http' in _l and 'linux-x86_64' in _l:
+                  _l = re.sub(r'(::)https?://[^\s"\']+',
+                              lambda m: m.group(1) + _urls['x86'], _l)
+              elif '::http' in _l and ('User Guide' in _l or 'User+Guide' in _l) \
+                      and _urls.get('ug'):
+                  _l = re.sub(r'(::)https?://[^\s"\']+',
+                              lambda m: m.group(1) + _urls['ug'], _l)
+              _f.write(_l)
+  update_pkgver_and_pkgrel(_G.newver)
+
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+
+update_on:
+  # cmd 以 lilac 仓库根目录为工作目录运行
+  - source: cmd
+    cmd: python3 csky-debugserver-bin/check_debugserver_version.py
