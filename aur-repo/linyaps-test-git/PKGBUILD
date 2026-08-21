@@ -22,6 +22,7 @@ depends=(
   erofs-utils
   erofsfuse
   fmt
+  fuse-overlayfs
   glib2
   hicolor-icon-theme
   libcap
