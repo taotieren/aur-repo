@@ -2,7 +2,7 @@
 
 pkgname=csky-debugserver-bin
 pkgver=5.18.10
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="C-Sky Debugger Server"
 arch=('x86_64')
@@ -11,8 +11,8 @@ license=('BSD')
 groups=()
 depends=(
     sh
-    gcc-libs
-    glibc
+    libgcc_s.so
+    libstdc++.so
     libusb
 )
 makedepends=(libarchive)
