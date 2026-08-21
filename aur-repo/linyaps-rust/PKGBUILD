@@ -3,7 +3,7 @@
 pkgname=linyaps-rust
 _tagname=1.14.0-rust.1
 pkgver=${_tagname//-/+}
-pkgrel=5
+pkgrel=6
 pkgdesc="Linyaps package manager implemented in Rust A command-compatible Rust implementation of the Linyaps package manager"
 arch=($CARCH)
 url="https://github.com/guanzi008/linyaps-rust"
