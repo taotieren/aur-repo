@@ -1,0 +1,273 @@
+# lilac 配置速查（lilac.yaml + lilac.py + update_on sources）
+
+# LAST_VERIFIED: 2026-08-20 | lilac@update-skills
+权威来源：`lilac2/lilacyaml.py`、`lilac2/typing.py`、`lilac2/api.py`、`lilac2/aliases.yaml`、
+`lilac2/nvchecker.py`（`update_on` 经 `**config` 透传 nvchecker，所有 nvchecker source 均可用）、`schema-docs/`。
+**本文只写规则与字段契约，不含具体包/版本快照**（那些会随上游变化，需按 SKILL 步骤 2 实查上游 tag 后生成）。
+已用 aur-repo(1245) 与 archlinuxcn(2646) 两个真实仓库抽样校验覆盖度。
+
+---
+
+## 1. `lilac.yaml` 字段（LilacInfo）
+
+| 字段 | 类型 | 默认 | 说明 |
+|---|---|---|---|
+| `maintainers` | list[{github,email}] | `[]` | 构建失败通知对象；**AUR 场景是同步白名单**（aur_pre_build 必填）。为空加载不报错，但强烈建议填写 |
+| `update_on` | list[dict] | `[]` | 上游版本检测（source 见 §4；条目键留空则用 pkgbase 名） |
+| `update_on_build` | list[{pkgbase,from_pattern,to_pattern}] | `[]` | 依赖包更新时连带重建（需 db） |
+| `repo_depends` | list[str 或 `{pkgbase: pkgname}`] | `[]` | **本仓库内**构建顺序依赖（非 Arch/AUR 依赖）；str 形式则 pkgbase=pkgname |
+| `repo_makedepends` | list | `[]` | 同上，仅影响构建期顺序 |
+| `time_limit_hours` | float | `1` | 构建时限；`< 0` 抛 ValueError（=0 合法） |
+| `staging` | bool | `false` | 是否暂存 |
+| `managed` | bool | `true` | `false` 则 lilac 不管理该包 |
+| `allowed_workers` | list[str] | `[]` | 限定构建机 |
+| `throttle_info` | dict[int,timedelta] | `{}` | 按 source 下标限频（由 `lilac_throttle` 生成，不手写） |
+| `pre_build`/`post_build`/`post_build_always` | str(函数名) | — | **引用 `lilac2/api.py` 函数名**，加载时 `getattr(api, name)` 自动解析（lilacyaml.py FUNCTIONS） |
+| `pre_build_script`/`post_build_script`/`post_build_always_script` | str(python 代码) | — | 内联脚本，与对应函数名**二选一** |
+
+> 两种钩子写法等价：`post_build: aur_post_build`（函数名，archlinuxcn 主流）vs `post_build_script: |`（内联，aur-repo 主流）。内联脚本命名空间自动注入 api 全部公开符号（含 `_G`），无需 `from lilaclib import *`。`post_build_always(_script)` 签名必须是 `def post_build_always(success)`，脚本内可直接用 `success`。
+> 其他 yaml 键（如 `build_prefix`）会原样注入 lilac.py 模块（lilacpy.py `setattr(mod, k, v)`），由 worker 以模块变量读取——即**同一字段既可在 lilac.yaml 顶层写，也可在 lilac.py 里赋值**。
+
+### 打包目录特殊文件（schema-docs/special-files.md）
+- `package.list`：split 包名无法用正则确定时每行一个包名，**防止被自动清理**。
+- `.gitignore`：git 忽略；**不会被清理，也不会被内建 AUR 下载器覆盖**。
+
+---
+
+## 2. `lilac.py` 可用 API
+
+函数由 `lilac2/api.py` 提供。两种使用方式：lilac.py 里 `from lilaclib import *`（=`lilac2/api.py` 全量导出）；lilac.yaml 通过 `pre_build`/`post_build` 引用函数名（lilacyaml.py 自动解析）。
+
+**版本与 PKGBUILD 编辑**
+- `update_pkgver_and_pkgrel(newver, *, updpkgsums=True)` — 更新 pkgver/pkgrel 并重算 sha256（最常用）。
+- `update_pkgrel(rel=None)` — 只 bump pkgrel。
+- `get_pkgver_and_pkgrel()` → `(pkgver, pkgrel)`。
+- `edit_file(filename)` — 逐行 yield，改写后 `print(line)` 回写。
+- `add_into_array(which, extra)` / `add_depends`/`add_makedepends`/`add_checkdepends`/`add_conflicts`/`add_replaces`/`add_provides`/`add_groups`/`add_arch` — 向数组追加。
+- `obtain_array(name)` / `obtain_depends()` / `obtain_makedepends()` / `obtain_optdepends()` — 读数组。
+- `run_protected(cmd)` / `run_cmd(cmd)` — bwrap 沙箱内执行（updpkgsums/makepkg 自动走沙箱）。
+- `vcs_update()` — 更新 VCS 源。
+
+**AUR 同步**
+- `aur_pre_build(name=None, *, do_vcs_update=None, maintainers=())` — 拉 AUR 上游覆盖；`maintainers` 必填（白名单校验）。
+- `aur_post_build()` — 提交 AUR 变更。
+- `update_aur_repo()` — 推送本包到 AUR（需 lilac 有 co-maintainer 权限；VCS 包仅 pkgver/pkgrel 变化时自动跳过）。
+- `git_pkgbuild_commit()` — `git add PKGBUILD`+commit；`git_add_files(files, *, force=False)` / `git_commit()` / `git_rm_files()`。
+- `git_pull()` / `git_push()` — 同步仓库（push 失败自动 rebase 重试）。
+
+**源生成器**
+- `pypi_pre_build(depends=None, pypi_name=None, arch=None, makedepends=None, ...)` / `pypi_post_build()`（不再支持 python2）。
+- `mediawiki_pre_build(name, mwver, desc, license)` / `mediawiki_post_build()`。
+- `download_official_pkgbuild(name)` — 从 Arch 官方下载 PKGBUILD（返回文件列表）。
+- `single_main(build_prefix='makepkg')` — 手动单包构建入口。
+
+**校验 / 清理**
+- `check_library_provides()` — 检测未带版本的 `.so` provides。
+- `clean_directory()` — 删除非特殊文件的 git 跟踪内容。
+
+**联动更新（OnBuild）**
+- `update_on_build: [{pkgbase, from_pattern, to_pattern}]`（写 yaml）：列表内 pkgbase 更新时本包连带重建。
+- `_G.on_build_vers`（list[tuple[str,str]]）：对应项目（旧,新）版本，查不到为空串；**需 db.py 数据库**。
+
+**密钥**：`recv_gpg_keys` 不是 api 函数（是独立脚本），**worker 构建管线自动执行**，无需在配置里调用。
+
+**安全**：所有函数在 bwrap 沙箱（`UNTRUSTED_PREFIX`）内运行不可信 PKGBUILD；不写任意网络/shell，用 `run_protected` 封装。
+
+---
+
+## 3. 模块级控制变量（lilac.yaml 顶层或 lilac.py 均可）
+
+| 变量 | 作用 |
+|---|---|
+| `build_prefix` | chroot 前缀，默认 `extra-<arch>`；自定义如 `extra-testing-x86_64`、`aur-repo-x86_64`（两仓库实测高频使用） |
+| `time_limit_hours` | 覆盖构建时限 |
+| `build_args` | makepkg 参数（如 `['--noconfirm']`） |
+| `makechrootpkg_args` / `makepkg_args` | chroot/打包器参数 |
+| `prepare()` | pre_build 前执行的函数（返回 str 则 SkipBuild） |
+| `_G.newver` | nvchecker 抓到的新版本号（pre_build 里取用；git 类 source 可能是 `version@commit`） |
+| `_G.oldver` / `_G.oldvers` / `_G.newvers` | 旧版本/多 source 时旧新版本列表 |
+
+---
+
+## 4. `update_on` source 全量 + tag 策略
+
+### 4.1 通用 tag 处理顺序（对 tag 类 source 生效）
+`include_regex`(白名单) → `exclude_regex`(黑名单) → `prefix` 剥前缀 → `from_pattern`→`to_pattern` 映射 → 按版本选最大（`use_max_tag`/`use_latest_tag`/`use_latest_release`）。
+
+| 字段 | 作用 |
+|---|---|
+| `use_max_tag: true` | tag 按版本号语义取最大（最常用） |
+| `use_latest_tag: true` | 取最新 tag（按 Git 顺序，慎用） |
+| `use_latest_release: true` | 取最新 GitHub/Gitea **Release**（适合只在 Releases 发版的上游） |
+| `use_commit: true` | 取指定 `branch` 的最新 commit（配 `branch:`，VCS 类包跟踪 commit 用） |
+| `prefix: v` / `prefix: pkg-v` | 剥掉版本前的固定前缀 |
+| `include_regex: 'v\d+\.\d+'` | 只保留匹配的 tag（白名单，配合 `from_pattern` 去前缀） |
+| `exclude_regex: '[-_](rc|beta|alpha|dev)'` | 剔除预发布/无关 tag（黑名单） |
+| `from_pattern` / `to_pattern` | 版本字符串映射（如 `'-'`→`'_'`） |
+| `use_sorted_tags: true` | 按排序取最大 tag（bitbucket 等场景） |
+| `lilac_throttle: 7d` | 限制该 source 检查频率（防 regex 源被封） |
+
+### 4.2 source 全量写法
+
+**git 托管**
+```yaml
+# GitHub（最常见）
+- source: github
+  github: owner/repo
+  use_max_tag: true
+  prefix: v
+
+# 任意 git 仓库（自建等）
+- source: git
+  git: https://git.example.com/o/r.git
+  use_max_tag: true
+
+# GitLab（需 host）
+- source: gitlab
+  host: invent.kde.org
+  gitlab: owner/repo
+  branch: master
+
+# Gitea（自建托管，需 host）
+- source: gitea
+  gitea: o/r
+  host: https://git.example.com
+  use_max_tag: true
+
+# Bitbucket
+- source: bitbucket
+  bitbucket: o/r
+  use_sorted_tags: true
+
+# VCS 包（-git 等，构建时拉 HEAD；无 use_max_tag 时版本为 commit 计数）
+- source: vcs
+  vcs: https://github.com/o/r.git
+```
+
+**生态源**
+```yaml
+- source: pypi
+  pypi: package-name        # 无此键则用 pkgname
+- source: npm
+  npm: package-name
+- source: cpan
+  cpan: Module::Name
+- source: gem
+  gem: package-name
+- source: hackage
+  hackage: package-name
+- source: crates
+  crates: crate-name
+- source: go
+  go: module/path           # Go module（可带 /v3 后缀）
+```
+
+**官方包/系统**
+```yaml
+# Arch 官方仓库（跟随官方包版本）
+- source: archpkg
+  archpkg: package-name
+
+# Arch 官方 alpm 依赖的 soname/ABI
+- source: alpm
+  alpm: libssl
+  provided: libssl.so        # 可选：取该 provided 版本
+  strip_release: true        # 去掉 release 段只比版本号
+
+# alpmfiles：取包内某文件的版本
+- source: alpmfiles
+  alpmfiles: package-name
+  regex: 'lib(\d+)'
+
+# apt（Debian 系版本）
+- source: apt
+  apt: package-name
+```
+
+**AUR / 命令 / 手工**
+```yaml
+# 跟随 AUR 包版本（同步 AUR 包标配，aur-repo 近半包在用）
+- source: aur
+  aur: pkgname
+
+# 正则抓网页版本
+- source: regex
+  url: https://example.com/ver
+  regex: 'name_v([\d.]+).deb'
+  lilac_throttle: 7d
+
+# 任意 shell 命令输出作为版本
+- source: cmd
+  cmd: curl -sS https://... | grep -oP 'v([\d.]+)'
+
+# Go module proxy 拉取版本
+- source: go
+  go: github.com/o/r
+
+# 无法自动检测：N 自增触发一次重建
+- source: manual
+  manual: N
+```
+其他低频但存在的 nvchecker 原生 source：`jq`(url+jq 表达式)、`htmlparser`、`httpheader`。需要时查 nvchecker 文档，不凭空写。
+
+**别名（aliases.yaml 内置，需手写追加，无自动绑定）**
+```yaml
+- alias: python      # 等价 source: alpm, alpm: python（取官方包版本）
+```
+完整目录（20 个）：python, ruby, perl, r, lua, boost, icu, readline, clang, mediawiki, qt6-base, protobuf, jsoncpp, grpc, libssl, libcrypto, spdlog, fmt, openmpi, libgit2。
+两类型：**版本归一型**（python/ruby/perl/r/lua/boost/icu/readline/clang/mediawiki/qt6-base，用 from_pattern 比主版本号）vs **soname 提供型**（protobuf/jsoncpp/grpc/libssl/libcrypto/spdlog/fmt/openmpi/libgit2，用 provided+strip_release 比 `.so` 版本）。
+实测：`alias: python` 是绝对主流（两仓库约 970 次）。特殊别名 `alpm-lilac`：取本仓库自己 alpm 数据库中的包版本（lilac 自动填 `dbpath`/`repo`，依赖本仓库内包时用）。
+
+### 4.3 repo_depends / repo_makedepends（本仓库内构建顺序）
+- 作用：声明**仅目标仓库提供**、Arch/AUR 无此包的依赖，控制构建拓扑顺序。
+- 写法：`- <pkg>`（pkgbase=pkgname）或 `- <pkgbase>: <pkgname>`（dict 的 value 是**包名**，不是版本）；`repo_makedepends` 只影响构建期顺序。
+```yaml
+repo_depends:
+  - <pkg-in-this-repo>
+```
+> 注意：这是「本仓库包间依赖」，不是 Arch/AUR 依赖；Arch 依赖照常写在 PKGBUILD 的 depends。
+
+### 4.4 选型表（按上游形态）
+
+| 上游形态 | 推荐 source | 备注 |
+|---|---|---|
+| GitHub 有版本 tag | `github` + `use_max_tag` + `prefix` | 最常用 |
+| GitHub 只在 Releases 发版 | `github` + `use_latest_release` | 不用 use_max_tag |
+| GitLab | `gitlab` + `host` | branch 可选 |
+| 自建 git / Gitea / Bitbucket | `git` / `gitea`+`host` / `bitbucket` | |
+| 生态包（PyPI/crates/npm/cpan/gem/hackage/go） | 对应 source | 版本即发布版 |
+| Arch 官方包 / soname | `archpkg` / `alpm`(+provided+strip_release) | |
+| 跟随 AUR 包 | `aur`（可加 `alias`） | 同步 AUR 标配 |
+| 网页版本 | `regex` + `lilac_throttle` | 防封 |
+| 命令输出版本 | `cmd` | 输出须为干净版本串 |
+| 无法自动检测 | `manual: N` | |
+| VCS 包（-git 等） | `vcs` | 需要语义版本再加 use_max_tag |
+
+---
+
+## 5. 自纠错表（生成后逐条核对）
+
+| 检查项 | 错误表现 | 修正 |
+|---|---|---|
+| `maintainers` 为空 | AUR 白名单/通知缺失 | 至少 1 个 {github,email} |
+| `source` 非法 | nvchecker 报错 | 限 §4.2 列出的类型或别名 |
+| `github:` 非 `owner/repo` | 解析失败 | 两段式；`gitlab`/`gitea` 需 `host:` |
+| `pre_build`/`post_build` 引用的函数不存在 | AttributeError（加载时 getattr(api,name)） | 仅用 lilac2/api.py 导出函数 |
+| `post_build_always` 函数签名缺 `success` | 构建报错 | 写 `def post_build_always(success)` |
+| `prefix` 与实际 tag 不符 | 版本带多余前缀 | 去掉或修正 prefix |
+| `time_limit_hours < 0` | ValueError | 改正数（=0 合法） |
+| `pre_build` 与 `pre_build_script` 同时写 | 行为歧义 | 二选一 |
+| 取数规则产出版本 ≤ 仓库现有 | 构建前降级检查拒绝 | 修正 tag 策略/prefix 保证单调递增 |
+| PKGBUILD groups/replaces 命中官方包 | 构建前冲突检查拒绝 | 与官方协商或改名 |
+| `repo_depends` 名非本仓库包 | 构建顺序/触发失败 | 只列本仓库提供的包 |
+| AUR 上游覆盖未填 `maintainers` 白名单 | aur_pre_build 抛错 | 填 AUR 维护者 github |
+| `manual` 误用于可自动检测版本 | 冗余重建 | 优先自动 source |
+| VCS 包误加 `use_max_tag` 或误以为必须 | 版本语义变化 | 默认 commit 计数即可，要语义版本再加 |
+
+---
+
+# 扩展 SOP
+- `update_on` 新增 source / tag 策略变更 → 在 §4.2/§4.1 追加写法，更新选型表 §4.4。
+- `LilacInfo` 字段变更（lilacyaml.py/typing.py）→ 更新 §1。
+- `api.py` 新增函数 → 在 §2 追加签名与用途。
+- 每次更新改 `# LAST_VERIFIED`。
