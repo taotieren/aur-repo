@@ -21,6 +21,9 @@ lilac 是**两阶段**编排器：`git pull` → **nvchecker** 实时抓每个�
 - **跳过构建**：`prepare()` 内 `raise SkipBuild('原因')` 可中止本次构建（状态 `skipped`）；其余异常→`failed` 并生成失败报告。
 - **本地验证**：`single_main(build_prefix)` 可在本机直接按当前目录 `lilac.yaml`/`lilac.py` 跑一遍构建管线（不依赖调度器），用于上线前自检。
 - 配置两层：包级 `lilac.yaml`/`lilac.py`（单包）vs 仓库级 `config.toml`（环境）。**secret 绝不进包级配置**（走 `~/.lilac/nvchecker_keyfile.toml` 与 `config.toml`）。
+- **CLI 手动运维**：顶层 `lilac` 脚本**无 argparse**，命令行参数即包名**位置参数**——`lilac <pkg>` 构建指定包（连带 `repo_depends` 依赖一起进构建集），`lilac <pkg>:<runner>` 指定远程 runner；**不存在 `-p`/`--full` 等 flag**。无参数运行 = 全仓库调度。
+- **构建产物收尾**：lilac **只把包签名后放进仓库目录**（`sign_and_copy`：`gpg --pinentry-mode loopback --passphrase '' --detach-sign` + 硬链接到 `destdir`；`staging: true` 进 `destdir/staging` 并邮件 `package-staged`），**不更新 pacman 仓库数据库**（`repo-add`/`archrepo2` 由外部处理，或经 config.toml `postrun` 上传）——「构建成功但仓库没更新」优先查这条链路。
+- **构建历史 db**：`db.py` 基于 **PostgreSQL**（`config.toml` 的 `dburl`/`schema`，默认 schema `lilac`，需手动跑 `scripts/dbsetup.sql` 初始化一次）；驱动 `lilac_throttle`、`update_on_build`（`OnBuild`）、`UpdatedFailed`/`FailedByDeps`（`pkglog` 表）判定——**无 db 时 throttle 与失败重构建因不生效**。
 
 > 沙箱细节见上方信任边界：source PKGBUILD 的命令在 `bwrap`（`UNTRUSTED_PREFIX`，`cmd.py`）内跑，**PKGBUILD 视为不可信代码**；生产默认构建走 devtools chroot，bwrap 用于 `build_prefix='makepkg'` 路径。
 
@@ -39,7 +42,7 @@ lilac 是**两阶段**编排器：`git pull` → **nvchecker** 实时抓每个�
 ## 配置生成工作流
 
 ### 步骤 0：收集上下文
-确认：① `PKGBUILD`（必需，无则停下询问；split 包注意 `package()` 多 `pkgname`，推断失败需 `package.list`）；② 维护者 `github`+`email`；③ 是否同步 AUR（决定 post_build 钩子）；④ 目标仓库现有包列表（探测 `repo_depends`）；⑤ 有无生态依赖需锁定（决定 `alias`）；⑥ 上游版本是否在多个位置需联合判断（决定多 source）。
+确认：① `PKGBUILD`（必需，无则停下询问；split 包注意 `package()` 多 `pkgname`，推断失败需 `package.list`）；② 维护者 `github`+`email`；③ 是否同步 AUR（决定 post_build 钩子）；④ 目标仓库现有包列表（探测 `repo_depends`）；⑤ 依赖中的解释器/库（决定 `alias` 条目，见步骤 2.3）；⑥ 上游版本是否在多个位置需联合判断（决定多 source）。
 
 ### 步骤 1：提取 PKGBUILD 信号
 
@@ -54,7 +57,7 @@ lilac 是**两阶段**编排器：`git pull` → **nvchecker** 实时抓每个�
 | `pkgname` 以 `-git/-hg/-svn/-bzr` 结尾 | **VCS 包** → `source: vcs` + `vcs: <git url>`（构建时拉 HEAD；要语义版本才加 `use_max_tag`） |
 | 上游只在 Releases 发版 | `use_latest_release: true`（非 use_max_tag） |
 | 跟随 AUR 已有包 | `source: aur` + `aur: <pkgname>`（同步 AUR 标配） |
-| `depends`/`makedepends` 命中别名目录 | 追加 `- alias: <名>`（手写，无自动绑定） |
+| `depends`/`makedepends` 含解释器/库 | 生成 `- alias: <别名键>`（§4.2 判定操作；键≠包名：openssl→libssl/libcrypto、boost-libs→boost） |
 | 依赖官方包 soname/ABI 版 | **优先 `- alias: <名>`（§4.2 目录命中即禁用 alpm 写法）**；目录外冷门 so 才手写 `source: alpm`(+`provided`+`strip_release`) 或 `alpmfiles` |
 | 依赖**本仓库自产包**版本 | `alpm-lilac`（非 `alpm`） |
 | 版本无法自动检测 | `manual: N`（固定版本占位，非每次重建） |
@@ -68,7 +71,12 @@ lilac 是**两阶段**编排器：`git pull` → **nvchecker** 实时抓每个�
 1. **选 source**（步骤1 + references 选型表）。上游版本需**多位置联合判断**（主程序 tag + 子模块/数据版本）时，列多个 `update_on` 条目（多 source）。
 2. **判定版本取法**：`use_max_tag` / `use_latest_tag` / `use_latest_release` / `use_commit` / `prefix` / `include_regex` / `exclude_regex` / `from_pattern`→`to_pattern`。
    **必须主动验证**：对 git/github 上游执行 `git ls-remote --tags <url>`（或 Releases API）确认真实 tag 形态再定规则，确保模拟后产出 Arch 合规 `x.y.z`（无 `v` 前缀、无预发布后缀）。**拿不准必须实查，不靠猜**。
-3. **别名探测（命中优先用 alias，禁手写 alpm）**：扫 `depends`/`makedepends` 命中 §4.2 别名目录 → 直接 `- alias: <名>`，**禁止手写 `source: alpm` + `provided` + `strip_release`**（alias 是 alpm 的封装，已含仓库验证过的参数，手写易错且冗余）。注意区分**官方包**（`alpm`/`alias`）与**本仓库自产包**（`alpm-lilac`）。
+3. **别名探测（生成配置的核心步骤；命中优先用 alias，禁手写 alpm）**：扫 PKGBUILD 的 `depends`/`makedepends`，识别两类目标：
+   - **① 解释器/运行时**（python/ruby/perl/lua/r 生态的模块包）→ **惯例必配**对应 `alias`（解释器主.次版本升级时模块包全量重建；如 `- alias: python`）。
+   - **② 链接的库**：so 名或库包命中 §4.2 的 20 个别名目录 → 配对应别名。
+   - 命中后直接在 `update_on` 列表写 `- alias: <别名键>`；**别名键≠包名时用键**（`openssl`→`libssl`+`libcrypto`、`boost-libs`→`boost`；其余 18 个键即包名）。
+   - **禁止手写 `source: alpm` + `provided` + `strip_release`**（alias 是 alpm 的封装，已含仓库验证过的参数，手写易错且冗余）。目录外冷门 so 才退回手写；本仓库自产包用 `alpm-lilac`。
+   - **不配**：纯可选运行时、不链接该 so、无 ABI 跟随需求（避免无谓重建）。
    **soname 版本化 provides（见 references §4.7）**：若本包**自己提供 `.so`**（库包），PKGBUILD/lilac.py 的 `provides` 应写**版本化**（`libfoo.so=1`）；`add_provides()` 同样传版本化串。注意 `check_library_provides()`（`api.py:632`）是 **opt-in 校验函数**，worker 不会自动调用——仅在包的 `post_build` 里显式调用时才拦截未版本化 `.so`；未启用则不报错，但版本化是 Arch 规范良好实践。下游用 `alias` 触发重建与此独立。
 4. **repo_depends 探测**：仅目标仓库提供、Arch/AUR 无此包的依赖 → `repo_depends`（仅构建期则 `repo_makedepends`）；split 包精确指定产出用 `- <pkgbase>: <pkgname>`。
 5. **AUR 发布探测（仅当需同步 AUR）**：需同步 AUR → post_build 钩子选一：内联 `git_pkgbuild_commit()+update_aur_repo()` 或引用 `post_build: aur_post_build`；AUR 上游覆盖 → `aur_pre_build()`（填相符的 `maintainers` 白名单）。
@@ -130,7 +138,7 @@ post_build: aur_post_build   # 或 pre_build: pypi_pre_build 等
 **根因**：依赖包升主版本致 so 版本号变化（如 `boost-libs` 1.91→1.92），下游 `<pkg>` 仍链接旧 `.so=N.M.0-64`，未跟随重建。
 **处理**：
 1. 确认 `<pkg>` 的 `lilac.yaml` 声明了对应 `alias`（boost/icu/protobuf/libssl 等，见 config.md §4.2 别名目录）。`alias` 展开为 `update_on` 的 `source: alpm`，使 lilac 在依赖版本变化时把 `<pkg>` 纳入重建集合。
-2. 漏加 → 补 `alias: <x>` 重跑 lilac，自动触发重建；已加仍报则手动 `lilac -p <pkg>` 强制重建（进仓库顺序/时机问题）。
+2. 漏加 → 补 `alias: <x>` 重跑 lilac，自动触发重建；已加仍报则手动 `lilac <pkg>`（位置参数即包名，无 `-p`）强制重建（进仓库顺序/时机问题）。
 3. 库包 `provides = libxxx.so` 应带版本号（`libxxx.so=1`）；`check_library_provides` 是 opt-in（需在 post_build 显式调用才校验），但版本化是良好实践。
 **例外**：纯运行时可选依赖、或不链接该 so 的下游，不必加 alias（避免无谓重建）。
 
