@@ -1,10 +1,7 @@
 # lilac 配置速查（lilac.yaml + lilac.py + update_on sources）
-
-# LAST_VERIFIED: 2026-08-20 | lilac@update-skills
 权威来源：`lilac2/lilacyaml.py`、`lilac2/typing.py`、`lilac2/api.py`、`lilac2/aliases.yaml`、
 `lilac2/nvchecker.py`（`update_on` 经 `**config` 透传 nvchecker，所有 nvchecker source 均可用）、`schema-docs/`。
 **本文只写规则与字段契约，不含具体包/版本快照**（那些会随上游变化，需按 SKILL 步骤 2 实查上游 tag 后生成）。
-已用 aur-repo(1245) 与 archlinuxcn(2646) 两个真实仓库抽样校验覆盖度。
 
 ---
 
@@ -14,7 +11,7 @@
 |---|---|---|---|
 | `maintainers` | list[{github,email}] | `[]` | 构建失败通知对象；**AUR 场景是同步白名单**（aur_pre_build 必填）。为空加载不报错，但强烈建议填写 |
 | `update_on` | list[dict] | `[]` | 上游版本检测（source 见 §4；条目键留空则用 pkgbase 名） |
-| `update_on_build` | list[{pkgbase,from_pattern,to_pattern}] | `[]` | 依赖包更新时连带重建（需 db） |
+| `update_on_build` | list[{pkgbase,from_pattern?,to_pattern?}] | `[]` | 依赖包更新时连带重建（需 db）；`from_pattern`/`to_pattern` 必须成对出现 |
 | `repo_depends` | list[str 或 `{pkgbase: pkgname}`] | `[]` | **本仓库内**构建顺序依赖（非 Arch/AUR 依赖）；str 形式则 pkgbase=pkgname |
 | `repo_makedepends` | list | `[]` | 同上，仅影响构建期顺序 |
 | `time_limit_hours` | float | `1` | 构建时限；`< 0` 抛 ValueError（=0 合法） |
@@ -25,8 +22,8 @@
 | `pre_build`/`post_build`/`post_build_always` | str(函数名) | — | **引用 `lilac2/api.py` 函数名**，加载时 `getattr(api, name)` 自动解析（lilacyaml.py FUNCTIONS） |
 | `pre_build_script`/`post_build_script`/`post_build_always_script` | str(python 代码) | — | 内联脚本，与对应函数名**二选一** |
 
-> 两种钩子写法等价：`post_build: aur_post_build`（函数名，archlinuxcn 主流）vs `post_build_script: |`（内联，aur-repo 主流）。内联脚本命名空间自动注入 api 全部公开符号（含 `_G`），无需 `from lilaclib import *`。`post_build_always(_script)` 签名必须是 `def post_build_always(success)`，脚本内可直接用 `success`。
-> 其他 yaml 键（如 `build_prefix`）会原样注入 lilac.py 模块（lilacpy.py `setattr(mod, k, v)`），由 worker 以模块变量读取——即**同一字段既可在 lilac.yaml 顶层写，也可在 lilac.py 里赋值**。
+> 两种钩子写法等价：`post_build: aur_post_build`（引用 api 函数名）vs `post_build_script: |`（内联脚本）。内联脚本命名空间自动注入 api 全部公开符号（含 `_G`），无需 `from lilaclib import *`。`post_build_always(_script)` 签名必须是 `def post_build_always(success)`，脚本内可直接用 `success`。
+> yaml 顶层键（如 `build_prefix`/`time_limit_hours`）会原样注入 lilac.py 模块（lilacpy.py `setattr(mod, k, v)`），由 worker 以模块变量读取——即**同一字段既可在 lilac.yaml 顶层写，也可在 lilac.py 里赋值**（完整清单见 §3）。
 
 ### 打包目录特殊文件（schema-docs/special-files.md）
 - `package.list`：split 包名无法用正则确定时每行一个包名，**防止被自动清理**。
@@ -49,11 +46,13 @@
 - `vcs_update()` — 更新 VCS 源。
 
 **AUR 同步**
-- `aur_pre_build(name=None, *, do_vcs_update=None, maintainers=())` — 拉 AUR 上游覆盖；`maintainers` 必填（白名单校验）。
+- `aur_pre_build(name=None, *, do_vcs_update=None, maintainers=())` — 拉 AUR 上游覆盖；`maintainers` 必填：lilac 取该 AUR 包网页上的 **Last Packager**（若该包已由 lilac 接管则 Last Packager=lilac，比对通过）作可信校验，且不在 `AUR_BLACKLIST`，否则抛异常——**填的是 AUR 页面 Last Packager 栏的账号，不是你自己的账号，也不是 Maintainer 栏**。
 - `aur_post_build()` — 提交 AUR 变更。
 - `update_aur_repo()` — 推送本包到 AUR（需 lilac 有 co-maintainer 权限；VCS 包仅 pkgver/pkgrel 变化时自动跳过）。
 - `git_pkgbuild_commit()` — `git add PKGBUILD`+commit；`git_add_files(files, *, force=False)` / `git_commit()` / `git_rm_files()`。
 - `git_pull()` / `git_push()` — 同步仓库（push 失败自动 rebase 重试）。
+
+**运行时上下文对象 `_G`**：lilac 注入的命名空间，钩子/脚本内可用，完整字段见 §3 `_G` 条目（含 `_G.oldver`/`_G.newver`/`_G.oldvers`/`_G.newvers`/`_G.on_build_vers`/`_G.reponame`/`_G.built_version`/`_G.commit_msg_template`/`_G.mod`/`_G.add_report()`）。
 
 **源生成器**
 - `pypi_pre_build(depends=None, pypi_name=None, arch=None, makedepends=None, ...)` / `pypi_post_build()`（不再支持 python2）。
@@ -65,13 +64,11 @@
 - `check_library_provides()` — 检测未带版本的 `.so` provides。
 - `clean_directory()` — 删除非特殊文件的 git 跟踪内容。
 
-**联动更新（OnBuild）**
-- `update_on_build: [{pkgbase, from_pattern, to_pattern}]`（写 yaml）：列表内 pkgbase 更新时本包连带重建。
-- `_G.on_build_vers`（list[tuple[str,str]]）：对应项目（旧,新）版本，查不到为空串；**需 db.py 数据库**。
+**联动更新（OnBuild）**：机制与约束见 §4.5 `update_on_build`（按依赖包构建触发重建、需 `repo_depends` + 构建历史库）；上下文字段 `_G.on_build_vers` 见 §3。
 
 **密钥**：`recv_gpg_keys` 不是 api 函数（是独立脚本），**worker 构建管线自动执行**，无需在配置里调用。
 
-**安全**：所有函数在 bwrap 沙箱（`UNTRUSTED_PREFIX`）内运行不可信 PKGBUILD；不写任意网络/shell，用 `run_protected` 封装。
+**安全**：source PKGBUILD 的命令经 `run_protected`（拼 `UNTRUSTED_PREFIX`，定义于 `lilac2/cmd.py`）进 bwrap 沙箱；`run_cmd` 仅对精确 `['updpkgsums']` 或以 `makepkg ` 开头的参数自动走沙箱，其余裸跑——故钩子里**统一用 `run_protected` 封装外部命令**，勿直接 `run_cmd` 执行不可信内容，勿拼 exec PKGBUILD 变量。
 
 ---
 
@@ -79,13 +76,19 @@
 
 | 变量 | 作用 |
 |---|---|
-| `build_prefix` | chroot 前缀，默认 `extra-<arch>`；自定义如 `extra-testing-x86_64`、`aur-repo-x86_64`（两仓库实测高频使用） |
+| `build_prefix` | chroot 前缀，默认 `extra-<arch>`（即 devtools 的 `extra-<arch>-build`，非 bwrap）；`makepkg` 则脱离 chroot 在本地直接跑 makepkg（single_main 默认）；其余任意前缀会被拼成 `<prefix>-build` 命令执行（常见如 `multilib`/`archlinuxcn-x86_64`，具体值取决于目标仓库约定）。**AUR 推送走 `update_aur_repo()`，与 build_prefix 无关** |
 | `time_limit_hours` | 覆盖构建时限 |
 | `build_args` | makepkg 参数（如 `['--noconfirm']`） |
 | `makechrootpkg_args` / `makepkg_args` | chroot/打包器参数 |
 | `prepare()` | pre_build 前执行的函数（返回 str 则 SkipBuild） |
-| `_G.newver` | nvchecker 抓到的新版本号（pre_build 里取用；git 类 source 可能是 `version@commit`） |
-| `_G.oldver` / `_G.oldvers` / `_G.newvers` | 旧版本/多 source 时旧新版本列表 |
+| `_G.newver` | nvchecker 抓到的新版本号（单 source；pre_build 里取用；git 类 source 可能是 `version@commit`） |
+| `_G.oldver` / `_G.oldvers` / `_G.newvers` | 单 source 旧版本 / 多 source 时旧新版本列表 |
+| `_G.on_build_vers` | list[tuple[str,str]]；被依赖包（pkgbase）的（旧,新）版本，来自构建历史库 db.py，查不到为空串 |
+| `_G.reponame` | 仓库名（运行环境填充） |
+| `_G.built_version` | 构建成功后填充，pre_build 时为 None |
+| `_G.commit_msg_template` | commit 模板 |
+| `_G.mod` | 当前 lilac 模块 |
+| `_G.add_report()` | 追加构建报告（无返回值） |
 
 ---
 
@@ -186,7 +189,7 @@
 
 **AUR / 命令 / 手工**
 ```yaml
-# 跟随 AUR 包版本（同步 AUR 包标配，aur-repo 近半包在用）
+# 跟随 AUR 包版本（同步 AUR 包标配）
 - source: aur
   aur: pkgname
 
@@ -204,10 +207,11 @@
 - source: go
   go: github.com/o/r
 
-# 无法自动检测：N 自增触发一次重建
+# 无法自动检测：用固定版本号 N 占位（版本恒为 N，不随上游变化）
 - source: manual
   manual: N
 ```
+> `manual` 是 nvchecker 原生 source：版本永远等于 N，**不会每次都重建**；要触发更新须人工改 N。它只用于上游无任何可自动检测的取数手段时。
 其他低频但存在的 nvchecker 原生 source：`jq`(url+jq 表达式)、`htmlparser`、`httpheader`。需要时查 nvchecker 文档，不凭空写。
 
 **别名（aliases.yaml 内置，需手写追加，无自动绑定）**
@@ -216,7 +220,8 @@
 ```
 完整目录（20 个）：python, ruby, perl, r, lua, boost, icu, readline, clang, mediawiki, qt6-base, protobuf, jsoncpp, grpc, libssl, libcrypto, spdlog, fmt, openmpi, libgit2。
 两类型：**版本归一型**（python/ruby/perl/r/lua/boost/icu/readline/clang/mediawiki/qt6-base，用 from_pattern 比主版本号）vs **soname 提供型**（protobuf/jsoncpp/grpc/libssl/libcrypto/spdlog/fmt/openmpi/libgit2，用 provided+strip_release 比 `.so` 版本）。
-实测：`alias: python` 是绝对主流（两仓库约 970 次）。特殊别名 `alpm-lilac`：取本仓库自己 alpm 数据库中的包版本（lilac 自动填 `dbpath`/`repo`，依赖本仓库内包时用）。
+> 别名清单以 `lilac2/aliases.yaml` 为权威源，上列为常见快照；新增/调整别名时先查该文件。
+特殊别名 `alpm-lilac`：取本仓库自己 alpm 数据库中的包版本（lilac 自动填 `dbpath`/`repo`，依赖本仓库内包时用）。
 
 ### 4.3 repo_depends / repo_makedepends（本仓库内构建顺序）
 - 作用：声明**仅目标仓库提供**、Arch/AUR 无此包的依赖，控制构建拓扑顺序。
@@ -243,9 +248,44 @@ repo_depends:
 | 无法自动检测 | `manual: N` | |
 | VCS 包（-git 等） | `vcs` | 需要语义版本再加 use_max_tag |
 
+### 4.5 `update_on_build`（按其他包构建触发重建）
+当本包需要「依赖包一旦重新构建就跟着重建」时（如 A 提供头文件但 so 未变、或版本归一型依赖），用此字段而非 `alias`/`update_on`。
+- 机制：查构建数据库里 `pkgbase` 最近两次构建版本，若不同（=该依赖刚被重建）则触发本包重建；可选 `from_pattern`/`to_pattern` 对版本做变换后再比较。
+- **约束**：被引用的 `pkgbase` 必须同时出现在 `repo_depends`（lilac 靠 `repo_depends` 定位依赖目录）。
+- 需构建历史库（db）已启用，否则仅告警不触发。
+```yaml
+update_on_build:
+  - pkgbase: boost          # 该包重建时本包跟着重建（同时 boost 须在 repo_depends）
+  - pkgbase: qt5-webkit
+    from_pattern: ^(\d+)\.\d+
+    to_pattern: \1
+```
+
+### 4.6 多 source、split 包与别名边界（易错点）
+
+**多 source**：`update_on` 是 list，可同时写多个条目（如一个 git tag + 一个 submodule 的 aur 跟随）。多 source 时版本以列表传递：
+- `_G.newver` / `_G.oldver`：仅取 **第一个** source 的版本（单值快捷方式）。
+- `_G.newvers` / `_G.oldvers`：list，**与 `update_on` 条目顺序一一对应**——pre_build 里需逐源处理时用它而非 `_G.newver`。
+- 决策树补充分支：上游版本在**多个位置**需联合判断（如主程序 tag + 数据版本）时，列多个 source，并在 pre_build 里用 `_G.newvers[i]` 逐源改写对应 PKGBUILD 段。
+
+**split 包（一个 PKGBUILD 产多个 pkgname）**：
+- 默认从 PKGBUILD 的 `package()` / `package_<name>()` 正则推断 pkgname；推断失败（动态/条件性 split）时，建 `package.list` 文件每行一个包名（见 §1 特殊文件），**防止被自动化清理**。
+- lilac 的包标识是 `(pkgbase, pkgname)` 二元组；`repo_depends` 的 dict 形式 `<pkgbase>: <pkgname>` 正是在 split 场景下精确指定依赖哪个产出包。
+
+**别名边界**：`alpm` 系列别名探测的是**官方仓库（Arch/alpm db）**版本；若依赖的是**本仓库自己打的包**（不是 Arch 官方包），要用 `alpm-lilac`（取本仓库 alpm 数据库），而非 `alpm`——这是别名目录里最容易选错的一类。
+
 ---
 
-## 5. 自纠错表（生成后逐条核对）
+## 5. 仓库级配置（config.toml，非 lilac.yaml）
+lilac.yaml 是**包级**；以下在仓库根 `config.toml`（或控制仓库）配置，对所有包生效，不写进单个包：
+- `[bindmounts]`：devtools 构建环境内绑定挂载（如 `~/.cargo` → `/build/.cargo`），用于缓存；源目录不存在会自动创建。
+- `tmpfs`（[misc] 段）：在 chroot 内挂 tmpfs 的路径列表（如 bazel 缓存）。
+- `[nvchecker] proxy` 与 `~/.lilac/nvchecker_keyfile.toml`：取数密钥（GitHub token 等）走独立 keyfile，**不进 lilac.yaml/config.toml**。
+- `max_concurrency`、`remoteworker`、`rebuild_failed_pkgs` 等运行参数同理为仓库级。
+
+---
+
+## 6. 自纠错表（生成后逐条核对）
 
 | 检查项 | 错误表现 | 修正 |
 |---|---|---|
@@ -261,13 +301,48 @@ repo_depends:
 | PKGBUILD groups/replaces 命中官方包 | 构建前冲突检查拒绝 | 与官方协商或改名 |
 | `repo_depends` 名非本仓库包 | 构建顺序/触发失败 | 只列本仓库提供的包 |
 | AUR 上游覆盖未填 `maintainers` 白名单 | aur_pre_build 抛错 | 填 AUR 维护者 github |
-| `manual` 误用于可自动检测版本 | 冗余重建 | 优先自动 source |
+| 可自动检测版本却用 `manual` | 版本永不自动更新，须人工改 N | 优先自动 source；仅上游无取数手段才用 `manual` |
 | VCS 包误加 `use_max_tag` 或误以为必须 | 版本语义变化 | 默认 commit 计数即可，要语义版本再加 |
+| 依赖 soname/ABI 破坏事务（典型：boost/icu/protobuf/libssl 升级后下游链接旧 so） | `:: 安装 <dep> (<newver>) 破坏依赖 'libxxx.so=N.M.0-64'（<pkg> 需要）` → `无法准备事务处理`/`更新已中止` | 下游 `<pkg>` 链接旧 so 版本；在其 `lilac.yaml` 加 `alias: <x>`（见 §4.2 别名目录）随依赖版本变化触发重建；已加 alias 仍报则手动 `lilac -p <pkg>` 重构建并检查进仓库顺序；详见 §7 |
+| 下游包漏加 `alias` 致未重建 | 同上事务错误，且 `alias` 缺失 | 依赖属 §4.2 别名目录的 soname 提供型/版本归一型包时，下游必须声明对应 `alias` 才能被 lilac 探测到需重建 |
 
 ---
 
-# 扩展 SOP
-- `update_on` 新增 source / tag 策略变更 → 在 §4.2/§4.1 追加写法，更新选型表 §4.4。
-- `LilacInfo` 字段变更（lilacyaml.py/typing.py）→ 更新 §1。
-- `api.py` 新增函数 → 在 §2 追加签名与用途。
-- 每次更新改 `# LAST_VERIFIED`。
+## 7. 故障速查（按构建生命周期）
+
+统一诊断模板：**先读 lilac 邮件/日志的失败类型**（邮件模板来自 `lilac2/l10n/*/mail.ftl`，文案随版本，关键看**类型**而非逐字），再定位「生命周期阶段」。下表为高频类型与处置；具体文案以实际邮件为准。
+
+| # | 阶段 | 失败类型（语义） | 典型触发 | 处置方向 |
+|---|---|---|---|---|
+| 1 | 版本探查 | nvchecker 取数失败 / 无新版本 | token 失效、源 404、正则不匹配 | 查 `update_on` 配置与 keyfile；`lilac -p <pkg>` 重探查 |
+| 2 | 版本探查 | 版本非单调递增（降级） | tag 策略产版本 ≤ 仓库现有 | 修正 `prefix`/`use_max_tag`；必要时 `updpkgsums` |
+| 3 | 构建前 | 重建被跳过（无需重建） | 依赖未变 / alias 未声明 | 确认是否真需重建；缺失则补 `alias`/`update_on_build` |
+| 4 | 构建前 | 包冲突（与官方包重名/provides 冲突） | `groups`/`replaces` 命中官方包 | 改名或与官方协商 |
+| 5 | 构建前 | 依赖环 / 依赖不存在 | `repo_depends` 指向本仓库不存在的包 | 修正 `repo_depends`/`repo_makedepends` |
+| 6 | 构建前 | 触发原因判定异常 | `_G` 上下文未填充或 source 配置错 | 检查 `update_on` 与钩子取 `_G` 方式 |
+| 7 | 构建前 | 超时（time_limit） | 构建超 `time_limit_hours` | 调大时限或优化构建 |
+| 8 | 构建中 | 构建失败 | PKGBUILD 错、patch 失败、编译错 | 本地 `single_main` 复现；改 PKGBUILD/钩子 |
+| 9 | 构建中 | 依赖事务破坏（soname/ABI） | 依赖升级 so 版本，下游未重建 | 见 §6 末两行 + 下游加 `alias` 或 `update_on_build` |
+| 10 | 构建后 | 推送/commit 失败 | git push 冲突、AUR 推送无权限 | rebase 重试；确认 co-maintainer 权限 |
+| 11 | 构建后 | AUR 提交校验失败 | `maintainers` 与实际 AUR 打包者不符 / 入黑名单 | 修正 `aur_pre_build` 的 `maintainers` |
+| 12 | 全周期 | 限频（throttle）致漏检 | `lilac_throttle` 周期内不复查 | 等待周期过或临时调整 |
+
+> 扩展阅读：`lilac2/l10n/zh_CN/mail.ftl` 是失败邮件模板的权威源；排查时以实际邮件「类型字段」为准，不在本表逐字对照。
+
+---
+
+## 8. 扩展 SOP（随 lilac 升级维护本技能）
+
+lilac 自身会演进；本技能遇到下列变化时按图更新，避免快照失效：
+
+| 变化 | 去哪改 | 动作 |
+|---|---|---|
+| 新增/调整 `update_on` source 或别名 | §4.2、§4.6 | 先查 `lilac2/aliases.yaml` 与 nvchecker 文档，补写法与分类 |
+| 新增 LilacInfo 字段或钩子 | §1、§2 | 对照 `lilac2/lilacyaml.py` FUNCTIONS / `lilac2/typing.py` |
+| API 签名/行为变化 | §2、§3 | 对照 `lilac2/api.py` 与各 api 小节函数 |
+| 构建管线/触发原因变化 | SKILL 运行原理、§7 | 对照 `lilac2/worker.py` / `cmd.py` / `nomypy.py` |
+| 失败类型文案变化 | §7 | 以 `lilac2/l10n/*/mail.ftl` 的**类型**为准，不逐字抄 |
+| 仓库级配置项变化 | §5 | 对照 `config.toml.sample` |
+
+原则：本技能写「规则与字段契约」，**不写具体包版本/快照**；一切易变量以 `lilac2/*` 源码与 `schema-docs/` 为权威源，生成配置时按 SKILL 步骤 2 实查上游。
+
