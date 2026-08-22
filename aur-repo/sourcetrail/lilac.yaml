@@ -7,18 +7,8 @@ post_build: aur_post_build
 update_on:
   - source: aur
     aur: sourcetrail
-  # 基于 soname 的自动触发：boost-libs 升级改变 libboost_*.so 的 ABI 版本号时自动重建，
-  # 避免 libboost_*.so=1.91.0-64 这类依赖冲突。aur 触发只看版本号、对纯 ABI 破坏性升级
-  # 无感，故额外监听 boost-libs 提供的 soname（strip_release 去掉 -64 只看主版本）。
-  - source: alpm
-    alpm: boost-libs
-    provided: libboost_filesystem.so
-    strip_release: true
-  - source: alpm
-    alpm: boost-libs
-    provided: libboost_locale.so
-    strip_release: true
-  - source: alpm
-    alpm: boost-libs
-    provided: libboost_program_options.so
-    strip_release: true
+  # 基于 boost ABI 主版本的自动触发：alias 命中 lilac2/aliases.yaml 的 boost（版本归一型），
+  # boost-libs 主版本 1.91 -> 1.92 变化时自动重建，避免 libboost_*.so=1.91.0-64 这类依赖冲突。
+  # aur 触发只看版本号、对纯 ABI 破坏性升级无感，故叠加 alias: boost。
+  # 铁律：依赖命中别名目录（boost 在列）一律用 alias，禁止手写 alpm + provided（lilac 技能 §4.2/§4.7）。
+  - alias: boost
