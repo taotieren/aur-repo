@@ -18,7 +18,7 @@
 | `staging` | bool | `false` | 是否暂存 |
 | `managed` | bool | `true` | `false` 则 lilac 不管理该包 |
 | `allowed_workers` | list[str] | `[]` | 限定构建机 |
-| `throttle_info` | dict[int,timedelta] | `{}` | 按 source 下标限频（由 `lilac_throttle` 生成，不手写） |
+| `throttle_info` | dict[int,timedelta] | `{}` | 按 source 下标**抑制触发**（由 `lilac_throttle` 生成，不手写；需构建历史 db 才生效） |
 | `pre_build`/`post_build`/`post_build_always` | str(函数名) | — | **引用 `lilac2/api.py` 函数名**，加载时 `getattr(api, name)` 自动解析（lilacyaml.py FUNCTIONS） |
 | `pre_build_script`/`post_build_script`/`post_build_always_script` | str(python 代码) | — | 内联脚本，与对应函数名**二选一** |
 
@@ -28,6 +28,9 @@
 ### 打包目录特殊文件（schema-docs/special-files.md）
 - `package.list`：split 包名无法用正则确定时每行一个包名，**防止被自动清理**。
 - `.gitignore`：git 忽略；**不会被清理，也不会被内建 AUR 下载器覆盖**。
+
+> **配置容错边界（重要）**：lilac 对 `lilac.yaml` 顶层**多余/拼错的键不会报错**，也不会进任何 "unknown" 集合——它们会被原样 `setattr` 进 lilac 模块并静默忽略。真正会在**加载期**报错的只有：YAML 语法错误、钩子函数名 `getattr` 失败、`time_limit_hours < 0`、以及 `update_on_build` 条目含非 `{pkgbase,from_pattern,to_pattern}` 的键（解包抛 `TypeError`）。这些以**包为单位**整体落入 `errors`（该包不参与本轮构建）。
+> 另：`pkgbase` **不是 lilac.yaml 字段**，lilac 强制取包**目录名**；yaml 里写 `pkgbase` 会被静默覆盖为目录名（冗余写法）。
 
 ---
 
@@ -61,14 +64,14 @@
 - `single_main(build_prefix='makepkg')` — 手动单包构建入口。
 
 **校验 / 清理**
-- `check_library_provides()` — 检测未带版本的 `.so` provides。
+- `check_library_provides()` — **opt-in 校验函数**（`api.py:632`，全仓库仅定义、无自动调用点）：检测产物 `.PKGINFO` 里未带版本的 `.so` provides。worker 管线**不会自动调用它**；要启用需在包的 `post_build`/`post_build_script` 里显式调用（很多仓库放在共享 post_build 中）。
 - `clean_directory()` — 删除非特殊文件的 git 跟踪内容。
 
 **联动更新（OnBuild）**：机制与约束见 §4.5 `update_on_build`（按依赖包构建触发重建、需 `repo_depends` + 构建历史库）；上下文字段 `_G.on_build_vers` 见 §3。
 
 **密钥**：`recv_gpg_keys` 不是 api 函数（是独立脚本），**worker 构建管线自动执行**，无需在配置里调用。
 
-**安全**：source PKGBUILD 的命令经 `run_protected`（拼 `UNTRUSTED_PREFIX`，定义于 `lilac2/cmd.py`）进 bwrap 沙箱；`run_cmd` 仅对精确 `['updpkgsums']` 或以 `makepkg ` 开头的参数自动走沙箱，其余裸跑——故钩子里**统一用 `run_protected` 封装外部命令**，勿直接 `run_cmd` 执行不可信内容，勿拼 exec PKGBUILD 变量。
+**安全**：source PKGBUILD 的命令经 `run_protected`（拼 `UNTRUSTED_PREFIX`，定义于 `lilac2/cmd.py`）进 bwrap 沙箱；`run_cmd` 仅当完整命令**恰为 `['updpkgsums']`**、或某参数是**以 `'makepkg '`（带尾随空格）开头的单字符串**（如 `'makepkg --holdver'`）时才自动走沙箱；`['makepkg', ...]` 列表形式不命中、其余一律裸跑——故钩子里**统一用 `run_protected` 封装外部命令**，勿直接 `run_cmd` 执行不可信内容，勿拼 exec PKGBUILD 变量。
 
 ---
 
@@ -108,7 +111,7 @@
 | `exclude_regex: '[-_](rc|beta|alpha|dev)'` | 剔除预发布/无关 tag（黑名单） |
 | `from_pattern` / `to_pattern` | 版本字符串映射（如 `'-'`→`'_'`） |
 | `use_sorted_tags: true` | 按排序取最大 tag（bitbucket 等场景） |
-| `lilac_throttle: 7d` | 限制该 source 检查频率（防 regex 源被封） |
+| `lilac_throttle: 7d` | **抑制触发而非抑制检查**：周期内 nvchecker 照常检查，仅该 source 不加入构建触发原因（间隔按包上次成功构建时间计，需构建历史 db 生效） |
 
 ### 4.2 source 全量写法
 
@@ -214,10 +217,21 @@
 > `manual` 是 nvchecker 原生 source：版本永远等于 N，**不会每次都重建**；要触发更新须人工改 N。它只用于上游无任何可自动检测的取数手段时。
 其他低频但存在的 nvchecker 原生 source：`jq`(url+jq 表达式)、`htmlparser`、`httpheader`。需要时查 nvchecker 文档，不凭空写。
 
-**别名（aliases.yaml 内置，需手写追加，无自动绑定）**
+**别名（aliases.yaml 内置 —— 优先于手写 alpm/provided）**
 ```yaml
-- alias: python      # 等价 source: alpm, alpm: python（取官方包版本）
+- alias: libssl      # 推荐写法：命中别名目录直接用，lilac 自动展开为下方 alpm 等价体
+# 等价手写（不推荐，易错且冗余）：
+# - source: alpm
+#   alpm: libssl
+#   provided: libssl.so
+#   strip_release: true
 ```
+> **封装关系（关键）**：`alias` 就是 `alpm`/`alpmfiles` 的**预封装**——lilac 解析时把 `alias` 取出，再拿 `aliases.yaml` 里该名预定义好的字典（含 `source: alpm` + `alpm:` + `provided:` + `strip_release:` 等）回填到 `update_on` 条目（`lilacyaml.py` `parse_update_on`）。所以 `alias: libssl` 与手写上述 alpm 块**完全等价**，但别名写法更短、不会写错 `provided`/`strip_release`。
+
+**修复优先级铁律**：下游包被某 so 库破坏 / 需跟随其版本时，**先查 aliases.yaml 的 20 个别名**——
+- 若命中（常用 soname 库：protobuf/jsoncpp/grpc/libssl/libcrypto/spdlog/fmt/openmpi/libgit2 等 soname 提供型；python/ruby/perl/r/lua/boost/icu/readline/clang/mediawiki/qt6-base 等版本归一型）→ **一律用 `alias: <名>`，禁止手写 `source: alpm` + `provided` + `strip_release`**（alias 已封装且经仓库验证，手写易错、参数不全）。
+- 仅当**不在别名目录**的冷门 so 依赖，才退回到手写 `source: alpm` + `provided`/`strip_release`（且需自己确认 provided 名与 strip 规则）。
+
 完整目录（20 个）：python, ruby, perl, r, lua, boost, icu, readline, clang, mediawiki, qt6-base, protobuf, jsoncpp, grpc, libssl, libcrypto, spdlog, fmt, openmpi, libgit2。
 两类型：**版本归一型**（python/ruby/perl/r/lua/boost/icu/readline/clang/mediawiki/qt6-base，用 from_pattern 比主版本号）vs **soname 提供型**（protobuf/jsoncpp/grpc/libssl/libcrypto/spdlog/fmt/openmpi/libgit2，用 provided+strip_release 比 `.so` 版本）。
 > 别名清单以 `lilac2/aliases.yaml` 为权威源，上列为常见快照；新增/调整别名时先查该文件。
@@ -243,7 +257,7 @@ repo_depends:
 | 生态包（PyPI/crates/npm/cpan/gem/hackage/go） | 对应 source | 版本即发布版 |
 | Arch 官方包 / soname | `archpkg` / `alpm`(+provided+strip_release) | |
 | 跟随 AUR 包 | `aur`（可加 `alias`） | 同步 AUR 标配 |
-| 网页版本 | `regex` + `lilac_throttle` | 防封 |
+| 网页版本 | `regex` + `lilac_throttle` | 抑制触发（不防检查） |
 | 命令输出版本 | `cmd` | 输出须为干净版本串 |
 | 无法自动检测 | `manual: N` | |
 | VCS 包（-git 等） | `vcs` | 需要语义版本再加 use_max_tag |
@@ -274,6 +288,31 @@ update_on_build:
 
 **别名边界**：`alpm` 系列别名探测的是**官方仓库（Arch/alpm db）**版本；若依赖的是**本仓库自己打的包**（不是 Arch 官方包），要用 `alpm-lilac`（取本仓库 alpm 数据库），而非 `alpm`——这是别名目录里最容易选错的一类。
 
+### 4.7 soname 自动触发规范与 lilac 护栏（关键）
+
+lilac 对 soname 有**两端互补**的规范，配置 soname 触发时**两端都要做对**（注意：`check_library_provides()` 是 **opt-in 校验函数**，worker 不会自动调用，需各包在 `post_build` 里显式启用）：
+
+**(A) 提供方（打包含 `.so` 的库）必须写「版本化 provides」**
+- `lilac2/api.py:check_library_provides()` 是**可选校验函数**，worker 管线**不会自动调用**（全仓库无自动调用点）。它扫描产物 `.PKGINFO`，凡 `provides = ...*.so$`（**未带版本号**，如 `libfoo.so`）一律**抛异常中断构建**——但仅在包的 `post_build`/`post_build_script` 里**显式调用**时才生效；很多仓库把它放在共享 post_build 中统一启用。
+- 因此：PKGBUILD 里 `provides=('libfoo.so')` 必须写成**版本化**形式：`provides=('libfoo.so=1'` 或 `libfoo.so=1.2.3`），否则一旦该包启用了 `check_library_provides()` 就会失败。
+- 钩子里 `add_provides('libfoo.so')` 同理——**务必传版本化字符串**（`add_provides('libfoo.so=1')`），纯 `libfoo.so` 会在调用校验时触发拒绝。
+- 未版本化 provides **不在自动护栏范围**：未启用该函数的包不会因此失败；但作为良好实践（且 Arch 打包规范要求），库包应始终写版本化 provides。
+
+**(B) 消费方（链接别人 so 的下游包）用 `alias` 探版本变化**
+- 下游在 `lilac.yaml` 加 `- alias: <名>`（名取自 §4.2 别名目录，**与 (A) 的修复优先级铁律一致：命中别名目录一律用 `alias`，禁手写 alpm**）。lilac 通过对应上游的 `provided: libxxx.so` + `strip_release` 探到 so 版本变化，从而触发下游重建。下游**自身也应写版本化 provides**（若它同时也是提供方）。
+- 只有别名目录列出的 so 提供型/版本归一型包能用 `alias` 自动触发；**不在别名目录的 so 依赖**不会自动触发，需手动 `lilac -p <pkg>` 或改用 `repo_depends`/`update_on_build`（此时才退回手写 `source: alpm` + `provided`/`strip_release`）。
+
+**(C) 判定流程**
+```
+包是否提供 .so？
+├─ 是（提供方）→ PKGBUILD/lilac.py 的 provides 必须版本化（'=N'），否则 check_library_provides 中断
+└─ 否（消费方）→ 依赖的 so 在 §4.2 别名目录？
+                 ├─ 是 → 加 alias: <名> 自动触发重建
+                 └─ 否 → 不在目录则无自动触发；用 repo_depends / update_on_build / 手动重建
+```
+
+> 权威源：`lilac2/aliases.yaml`（so 提供型别名 + `provided:` + `strip_release`）与 `lilac2/api.py:check_library_provides()`。新增 so 提供型别名时按 §8 扩展 SOP 同步更新 §4.2。
+
 ---
 
 ## 5. 仓库级配置（config.toml，非 lilac.yaml）
@@ -281,7 +320,7 @@ lilac.yaml 是**包级**；以下在仓库根 `config.toml`（或控制仓库）
 - `[bindmounts]`：devtools 构建环境内绑定挂载（如 `~/.cargo` → `/build/.cargo`），用于缓存；源目录不存在会自动创建。
 - `tmpfs`（[misc] 段）：在 chroot 内挂 tmpfs 的路径列表（如 bazel 缓存）。
 - `[nvchecker] proxy` 与 `~/.lilac/nvchecker_keyfile.toml`：取数密钥（GitHub token 等）走独立 keyfile，**不进 lilac.yaml/config.toml**。
-- `max_concurrency`、`remoteworker`、`rebuild_failed_pkgs` 等运行参数同理为仓库级。
+- `max_concurrency`、`remoteworker`、`rebuild_failed_pkgs` 等运行参数同理为仓库级。注意 `rebuild_failed_pkgs` 的真实语义是**控制 nvtake（oldver 记录）范围**：`true`（默认）时所有构建成功的包都记录新版本；`false` 时仅 NvChecker 原因触发且实际构建过的包才记录——它**不是**「失败自动重试」开关（config.toml.sample 注释有误导）。失败包重试依赖 `UpdatedFailed`（目录有 git 变更）与 `FailedByDeps`（上次缺的依赖已补齐）。
 
 ---
 
@@ -305,6 +344,7 @@ lilac.yaml 是**包级**；以下在仓库根 `config.toml`（或控制仓库）
 | VCS 包误加 `use_max_tag` 或误以为必须 | 版本语义变化 | 默认 commit 计数即可，要语义版本再加 |
 | 依赖 soname/ABI 破坏事务（典型：boost/icu/protobuf/libssl 升级后下游链接旧 so） | `:: 安装 <dep> (<newver>) 破坏依赖 'libxxx.so=N.M.0-64'（<pkg> 需要）` → `无法准备事务处理`/`更新已中止` | 下游 `<pkg>` 链接旧 so 版本；在其 `lilac.yaml` 加 `alias: <x>`（见 §4.2 别名目录）随依赖版本变化触发重建；已加 alias 仍报则手动 `lilac -p <pkg>` 重构建并检查进仓库顺序；详见 §7 |
 | 下游包漏加 `alias` 致未重建 | 同上事务错误，且 `alias` 缺失 | 依赖属 §4.2 别名目录的 soname 提供型/版本归一型包时，下游必须声明对应 `alias` 才能被 lilac 探测到需重建 |
+| 提供方写未版本化 `provides: libfoo.so` | `check_library_provides()` 抛「unversioned library "provides"」中断 | PKGBUILD/lilac.py 的 provides 必须版本化（`libfoo.so=1`）；`add_provides()` 同样传版本化串（见 §4.7） |
 
 ---
 
@@ -324,8 +364,9 @@ lilac.yaml 是**包级**；以下在仓库根 `config.toml`（或控制仓库）
 | 8 | 构建中 | 构建失败 | PKGBUILD 错、patch 失败、编译错 | 本地 `single_main` 复现；改 PKGBUILD/钩子 |
 | 9 | 构建中 | 依赖事务破坏（soname/ABI） | 依赖升级 so 版本，下游未重建 | 见 §6 末两行 + 下游加 `alias` 或 `update_on_build` |
 | 10 | 构建后 | 推送/commit 失败 | git push 冲突、AUR 推送无权限 | rebase 重试；确认 co-maintainer 权限 |
+| 10b | post_build 校验（仅启用该函数的包） | 未版本化 `.so` provides 被 `check_library_provides()` 拒绝 | 提供方 `provides=('libfoo.so')` 无版本 / `add_provides('libfoo.so')` 无版本，且该包 post_build 显式调用了校验 | 改为版本化 `libfoo.so=1`（§4.7） |
 | 11 | 构建后 | AUR 提交校验失败 | `maintainers` 与实际 AUR 打包者不符 / 入黑名单 | 修正 `aur_pre_build` 的 `maintainers` |
-| 12 | 全周期 | 限频（throttle）致漏检 | `lilac_throttle` 周期内不复查 | 等待周期过或临时调整 |
+| 12 | 全周期 | 限频（throttle）抑制触发 | `lilac_throttle` 周期内**照常检查**但该 source 不加入触发原因（非漏检） | 确认是否真需立即重建；必要时移除/缩短 `lilac_throttle` |
 
 > 扩展阅读：`lilac2/l10n/zh_CN/mail.ftl` 是失败邮件模板的权威源；排查时以实际邮件「类型字段」为准，不在本表逐字对照。
 
