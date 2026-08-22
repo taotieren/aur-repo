@@ -27,14 +27,22 @@ update_on:
           headers={"User-Agent": "Mozilla/5.0", "Referer": "https://www.stcai.com/"},
       )
       data = urllib.request.urlopen(req).read().decode()
-      vers = re.findall(r"AiCube-ISP-v([\w.\-]+)\.zip", data)
-      # keep the main release line (e.g. 6.96Z, 6.96Z.1) and skip "-plus" variants
-      vers = [v for v in vers if re.match(r"^\d+\.\d+[A-Za-z]?(\.\d+)?$", v)]
 
-      def parse(v):
-          m = re.match(r"(\d+)\.(\d+)([A-Za-z])?(\.(\d+))?$", v)
-          return (int(m.group(1)), int(m.group(2)), m.group(3) or "", int(m.group(5) or 0))
+      # 上游页面语义：主下载按钮（class="w-button"）指向当前最新版本（如 6.97），
+      # 下方历史版本列表（如 6.96Q~6.96Z）是旧版归档，不得作为最新版来源。
+      # 否则按字母后缀排序会误把 6.96Z 当新于 6.97，触发 DowngradingError。
+      m = re.search(r'href="[^"]*AiCube-ISP-v([\w.\-]+)\.zip"[^>]*class="w-button', data)
+      if not m:
+          # 兜底：主按钮缺失时从全部链接取最大版本（数字段优先，遵循 vercmp 语义）
+          vers = re.findall(r"AiCube-ISP-v([\w.\-]+)\.zip", data)
+          vers = [v for v in vers if re.match(r"^\d+\.\d+[A-Za-z]?(\.\d+)?$", v)]
 
-      if vers:
-          print(max(vers, key=parse))
+          def key(v):
+              m = re.match(r"(\d+)\.(\d+)([A-Za-z])?(\.(\d+))?$", v)
+              return (int(m.group(1)), int(m.group(2)), m.group(3) or "", int(m.group(5) or 0))
+
+          if vers:
+              print(max(vers, key=key))
+      else:
+          print(m.group(1))
       PYEOF
