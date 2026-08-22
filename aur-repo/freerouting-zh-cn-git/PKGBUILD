@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=freerouting-zh-cn-git
-pkgver=2.3.0.r252.g141eccd
+pkgver=2.3.0.r253.g1c85a95
 pkgrel=1
 _jrever=25
 _jdkver=25
