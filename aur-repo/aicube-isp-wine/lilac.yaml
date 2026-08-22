@@ -28,21 +28,45 @@ update_on:
       )
       data = urllib.request.urlopen(req).read().decode()
 
-      # 上游页面语义：主下载按钮（class="w-button"）指向当前最新版本（如 6.97），
-      # 下方历史版本列表（如 6.96Q~6.96Z）是旧版归档，不得作为最新版来源。
-      # 否则按字母后缀排序会误把 6.96Z 当新于 6.97，触发 DowngradingError。
-      m = re.search(r'href="[^"]*AiCube-ISP-v([\w.\-]+)\.zip"[^>]*class="w-button', data)
-      if not m:
-          # 兜底：主按钮缺失时从全部链接取最大版本（数字段优先，遵循 vercmp 语义）
-          vers = re.findall(r"AiCube-ISP-v([\w.\-]+)\.zip", data)
-          vers = [v for v in vers if re.match(r"^\d+\.\d+[A-Za-z]?(\.\d+)?$", v)]
+      # 上游把 HTML 以 JS 转义字符串内嵌（href=\"...\"、\u003c 等），
+      # 不还原则 href=" 永远匹配不到主按钮，须先还原为真实 HTML。
+      data = re.sub(r'\\u([0-9a-fA-F]{4})', lambda m: chr(int(m.group(1), 16)), data)
+      data = data.replace('\\"', '"').replace('\\n', '\n').replace('\\t', '\t')
 
-          def key(v):
-              m = re.match(r"(\d+)\.(\d+)([A-Za-z])?(\.(\d+))?$", v)
-              return (int(m.group(1)), int(m.group(2)), m.group(3) or "", int(m.group(5) or 0))
+      # Arch vercmp 语义：数字段按数值、字母段按字典序交替比较；
+      # 一端耗尽时对方剩余为数字则己方小、为字母则己方大（6.96Z < 6.97）。
+      # 不能用字符串/字母序 max，否则会把字母后缀 6.96Z 误判新于 6.97，触发 DowngradingError。
+      def vercmp(a, b):
+          pa, pb = re.findall(r'\d+|[a-zA-Z]+', a), re.findall(r'\d+|[a-zA-Z]+', b)
+          i = 0
+          while i < len(pa) and i < len(pb):
+              x, y = pa[i], pb[i]
+              if x.isdigit() and y.isdigit():
+                  if int(x) != int(y):
+                      return -1 if int(x) < int(y) else 1
+              elif x.isdigit() != y.isdigit():
+                  return 1 if x.isdigit() else -1
+              elif x != y:
+                  return -1 if x < y else 1
+              i += 1
+          if i < len(pa):
+              return 1 if pa[i].isdigit() else -1
+          if i < len(pb):
+              return -1 if pb[i].isdigit() else 1
+          return 0
 
-          if vers:
-              print(max(vers, key=key))
-      else:
-          print(m.group(1))
+      # 主下载按钮（class 含 w-button）指向当前最新版（6.97），
+      # 历史归档 6.96Q~6.96Z 也以 zip 链接存在，故取全部 zip 链接中 vercmp 最大者。
+      btn = re.search(r'href="[^"]*AiCube-ISP-v([\w.\-]+?)\.zip"[^>]*class="[^"]*w-button', data)
+      vers = [v for v in re.findall(r'AiCube-ISP-v([\w.\-]+?)\.zip', data) if re.match(r'^\d', v)]
+
+      if vers:
+          best = vers[0]
+          for v in vers[1:]:
+              if vercmp(v, best) > 0:
+                  best = v
+          print(best)
+      elif btn:
+          # 兜底：链接解析失败但主按钮可用时
+          print(btn.group(1))
       PYEOF
