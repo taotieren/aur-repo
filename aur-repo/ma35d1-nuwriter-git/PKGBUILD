@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ma35d1-nuwriter-git
-pkgver=1.08_20260515.r3.g1923533
+pkgver=1.08_20260515.r4.ga1823f4
 pkgrel=1
 epoch=
 pkgdesc="MA35D1 NuWriter"
