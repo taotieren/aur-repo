@@ -82,7 +82,11 @@ sudo pacman -Syu devtools-aur-repo-git
 ## Only IPv6
 ## Status: OK
 rsync rsync://aur-repo6.taotieren.com
-rsync -avzP --bwlimit=30720 --timeout=120 --contimeout=120  --exclude-from=/opt/rsync/exclude.list rsync://aur-repo6.taotieren.com/aur-repo /opt/sync/aur-repo
+rsync -avzP --bwlimit=30720 \
+    --timeout=600 --contimeout=600 \
+    --exclude='*.zst' --exclude='*.gz' --exclude='*.bz2' --exclude='*.xz' --exclude='*.deb' \
+    --exclude-from=/opt/rsync/exclude.list \
+    rsync://aur-repo6.taotieren.com/aur-repo /opt/sync/aur-repo
 
 ## Only IPv4
 ## Status: FAILED
