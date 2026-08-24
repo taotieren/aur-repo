@@ -17,7 +17,6 @@ depends=(
     gtk3
     hicolor-icon-theme
     libgcc_s.so
-    libstdc++.so
     libsoup3
     openssl
     webkit2gtk-4.1
