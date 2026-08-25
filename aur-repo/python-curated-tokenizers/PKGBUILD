@@ -36,7 +36,7 @@ makedepends=(
 optdepends=()
 options=('!debug')
 source=(
-    "${_name}::git+${url}.git#tag=v$pkgver"
+    "${_name}::git+${url}.git#tag=release-v$pkgver"
     "sentencepiece::git+https://github.com/google/sentencepiece.git"
 )
 noextract=()
