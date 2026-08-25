@@ -30,12 +30,16 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
-source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+source=("${pkgbase}::git+${url}.git#tag=${pkgver}")
 sha256sums=('d267a3ff3f6c030f127a8066d3cae0545497de901185765635c045df6fa7059e')
 options=()
 
+prepare() {
+    git -C "${srcdir}/${pkgbase}" clean -dfx
+}
+
 build() {
-    cd "${srcdir}/${pkgbase}-${pkgver}/"
+    cd "${srcdir}/${pkgbase}/"
 
     # see：https://wiki.archlinux.org/title/CMake_package_guidelines
     cmake -DCMAKE_BUILD_TYPE=None \
@@ -46,7 +50,7 @@ build() {
 
     ninja -C build
 
-    cd "${srcdir}/${pkgbase}-${pkgver}/python"
+    cd "${srcdir}/${pkgbase}/python"
     python -m build --wheel --no-isolation
 }
 
@@ -58,7 +62,7 @@ package_treelite() {
         gcc-libs
         glibc
     )
-    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase}-${pkgver}/build install
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase}/build install
 }
 
 package_python-treelite() {
@@ -72,6 +76,6 @@ package_python-treelite() {
         python-scipy
         python-packaging
     )
-    cd "${srcdir}/${pkgbase}-${pkgver}/python"
+    cd "${srcdir}/${pkgbase}/python"
     python -m installer --destdir="${pkgdir}" dist/*.whl
 }
