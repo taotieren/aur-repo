@@ -9,6 +9,8 @@ post_build_script: |
 # repo_depends:
 #   -
 update_on:
-  - source: pypi
-    pypi: curated-tokenizers
+  - source: github
+    github: explosion/curated-tokenizers
+    use_max_tag: true
+    prefix: v
   - alias: python
