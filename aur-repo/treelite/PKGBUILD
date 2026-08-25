@@ -22,7 +22,7 @@ makedepends=(
     python-numpy
     python-scipy
     python-packaging
-    python-hatchling
+    python-scikit-build-core
     python-build
     python-installer
     python-wheel
