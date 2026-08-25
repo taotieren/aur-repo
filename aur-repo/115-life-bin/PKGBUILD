@@ -15,7 +15,6 @@ depends=(
 )
 makedepends=(
     libarchive
-    util-linux
 )
 optdepends=(
     "115-browser: 115 Browser / 115 浏览器"
