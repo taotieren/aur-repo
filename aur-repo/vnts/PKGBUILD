@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=vnts
-pkgver=2.0.2
+pkgver=2.0.2.r0.g6ef1451
 pkgrel=1
 pkgdesc="vnt server"
 arch=($CARCH)
@@ -30,12 +30,6 @@ source=(
 )
 sha256sums=('d378e8a18c9c360991a3ac1481438655f9d1053d8ef78dad2e174f48f6d22a46'
             '5d3129ee455c0180ebd1ff15bd6765080db0206f01cc2a6559fc06c2704ff318')
-
-pkgver() {
-    cd "${srcdir}/${pkgname}/"
-
-    git describe --exclude=nightly --long --tags | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g'
-}
 
 prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
