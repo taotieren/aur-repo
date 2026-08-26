@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=aish-git
-pkgver=0.3.11.r5.ge4a498d
+pkgver=0.3.11.r6.g486ed35
 pkgrel=1
 pkgdesc='Empower the Shell to think. Evolve Operations. '
 arch=($CARCH)
