@@ -2,7 +2,7 @@
 
 pkgname=vnts-git
 pkgver=2.0.2.r0.g6ef1451
-pkgrel=1
+pkgrel=2
 pkgdesc="vnt server"
 arch=($CARCH)
 url="https://github.com/vnt-dev/vnts"
