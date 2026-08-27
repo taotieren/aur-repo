@@ -3,7 +3,7 @@
 pkgbase=i3c-sdr-decoder-git
 pkgname=i3c-sdr-decoder-git
 pkgver=r3.05739f7
-pkgrel=1
+pkgrel=2
 pkgdesc="An I3C SDR (Single Data Rate) protocol decoder based on the DSView platform"
 arch=(any)
 url="https://github.com/ccchenji/i3c-sdr-decoder"
