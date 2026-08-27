@@ -24,6 +24,8 @@ sha256sums=('65f8449e6863bd0ba87d85b1291866226edbf15324d4200da4fc69773fcec1ef')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}"
+    sed -i -E 's/"([a-zA-Z0-9_.-]+)[^"]*"/"\1"/g' pyproject.toml
 }
 
 build() {
@@ -34,5 +36,5 @@ build() {
 package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
-    install -Dm0644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+    install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
