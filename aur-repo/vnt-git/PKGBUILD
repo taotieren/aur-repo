@@ -85,6 +85,8 @@ package() {
         -type f \
         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
 
+    install -Dvm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+
     # systemd 服务: vnt2_cli 组网客户端（核心守护进程）
     install -Dvm644 /dev/stdin "${pkgdir}/usr/lib/systemd/system/vnt2-cli.service" <<EOF
 [Unit]
