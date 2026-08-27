@@ -89,6 +89,7 @@ prepare() {
 
   sed -i \
     -e 's|\(DESTINATION \${MAC_RES_PREFIX}share\)/libsigrokdecode|\1/PXView/libsigrokdecode|g' \
+    -e 's|\(DESTINATION \)share/sigrok-firmware|\1share/PXView/sigrok-firmware|g' \
     CMake/install_packaging.cmake
   
   sed -i \
