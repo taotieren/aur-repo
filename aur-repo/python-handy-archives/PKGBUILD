@@ -3,7 +3,7 @@
 pkgname=python-handy-archives
 _name=${pkgname#python-}
 pkgver=0.3.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Handy archive helpers for Python'
 provides=(${pkgname})
 conflicts=(${pkgname})
