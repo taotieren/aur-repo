@@ -3,7 +3,7 @@
 pkgbase=dsview-arinc429-decoder-git
 pkgname=dsview-arinc429-decoder-git
 pkgver=r28.d19f65c
-pkgrel=1
+pkgrel=2
 pkgdesc="Decoder (ARINC 429) plugin for DSView"
 arch=(any)
 url="https://github.com/Aleksandr-Kai/DSView_ARINC429_Decoder"
