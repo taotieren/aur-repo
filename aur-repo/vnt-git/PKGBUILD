@@ -12,7 +12,6 @@ conflicts=(${pkgname%-git})
 replaces=()
 depends=(
     libgcc
-    glibc
 )
 makedepends=(
     git
