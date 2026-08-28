@@ -2,7 +2,7 @@
 
 pkgname=all-logic
 pkgver=1.4.0
-pkgrel=2
+pkgrel=3
 pkgdesc='ALL LOGIC is an unofficial multi-vendor logic analyzer host'
 arch=($CARCH)
 url='https://github.com/Doukeyi-X/ALL-LOGIC'
