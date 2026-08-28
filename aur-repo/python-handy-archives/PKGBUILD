@@ -28,8 +28,8 @@ sha256sums=('b3054aa2f2ad87d2a545d4e5d34431d355b1fbbfd2511b1ef2948e5ff24b52b9')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
-    cd "${srcdir}/${_name}"
-    sed -i -E 's/"([a-zA-Z][a-zA-Z0-9_.-]*)[><!=~][0-9][^"]*"/"\1"/g' pyproject.toml
+    # cd "${srcdir}/${_name}"
+    # sed -i -E 's/"([a-zA-Z][a-zA-Z0-9_.-]*)[><!=~][0-9][^"]*"/"\1"/g' pyproject.toml
 }
 
 build() {
