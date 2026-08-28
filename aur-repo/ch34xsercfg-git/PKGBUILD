@@ -39,6 +39,6 @@ build() {
 
 package() {
     cd "$srcdir/${pkgbase}/demo/param_config"
-    install -Dm755 ch34xsercfg -t "${pkgdir}/usr/bin/"
-
+    install -vDm755 ch34xsercfg -t "${pkgdir}/usr/bin/"
+    install -vDm644 CONFIG.INI -t "${pkgdir}/etc/${pkgname%-git}/"
 }
