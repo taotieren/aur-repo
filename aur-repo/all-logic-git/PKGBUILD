@@ -73,8 +73,6 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
-    -DHAVE_ATKLOGIC_DEVICE=1 \
-    -DHAVE_FX2LAFW_DEVICE=1 \
     -Wno-dev \
     -B build \
     -G Ninja
