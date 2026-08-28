@@ -3,7 +3,7 @@
 pkgbase=dsview-abz-decoder-git
 pkgname=dsview-abz-decoder-git
 pkgver=r4.6f30c68
-pkgrel=1
+pkgrel=2
 pkgdesc="incremental rotary encoder, protocal decodes of DSView 增量式旋转编码器的协议解码"
 arch=(any)
 url="https://github.com/Ging-H/DSView_PD_Encoder"
