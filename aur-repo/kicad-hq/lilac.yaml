@@ -15,11 +15,11 @@ update_on:
     # include_regex: '(8.[\d.]+)'
     exclude_regex: ".*(?:rc|99).*"
   - source: alpmfiles
-    alpm: abseil-cpp
+    pkgname: abseil-cpp
     strip_dir: true
     filename: libabsl_log_internal_check_op\.so\.(.*)
   - source: alpmfiles
-    alpm: abseil-cpp
+    pkgname: abseil-cpp
     strip_dir: true
     filename: libabsl_log_internal_message\.so\.(.*)
   # - alias: abseil-cpp
