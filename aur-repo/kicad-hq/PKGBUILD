@@ -10,6 +10,7 @@ url="https://gitlab.com/kicad-hq/kicad"
 license=('GPL-3.0-or-later')
 depends=(
   abseil-cpp
+  boost-libs
   glib2
   glm
   glu
@@ -20,9 +21,9 @@ depends=(
   libstdc++.so
   libfreetype.so
   libfontconfig.so
-  libharfbuzz.so
   libglvnd
   libgit2
+  libharfbuzz.so
   libcrypto.so
   libssl.so
   libspnav
@@ -44,13 +45,12 @@ depends=(
   wxwidgets-common
 )
 makedepends=(
-  boost-libs
+  boost
   cmake
   doxygen
   glew
   git
   mesa
-  boost
   swig
   ninja
   pkgconf
