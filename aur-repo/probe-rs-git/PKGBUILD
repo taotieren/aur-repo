@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=probe-rs-git
-pkgver=0.32.0.r100.g2255eba
+pkgver=0.32.0.r102.g67856fa
 pkgrel=1
 pkgdesc="A collection of on chip debugging tools to communicate with microchips."
 arch=($CARCH)
