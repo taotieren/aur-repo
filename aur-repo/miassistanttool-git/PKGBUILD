@@ -2,7 +2,7 @@
 
 pkgbase=miassistanttool-git
 pkgname=miassistanttool-git
-pkgver=1.2.r4.g10bb8af
+pkgver=1.3.r2.g852befd
 pkgrel=1
 pkgdesc="MiAssistantTool"
 arch=($CARCH)
