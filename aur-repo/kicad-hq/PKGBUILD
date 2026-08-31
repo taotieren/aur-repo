@@ -83,10 +83,6 @@ build() {
     -Bbuild \
     -GNinja
 
-  # 修复 Python 3.14 兼容性
-  sed -i 's/\bPyInt_FromLong\b/PyLong_FromLong/g' build/pcbnew/pcbnew_wrap.cxx
-  sed -i 's/\bPyString_Check\b/PyUnicode_Check/g' build/pcbnew/pcbnew_wrap.cxx
-
   ninja -C build
 }
 
