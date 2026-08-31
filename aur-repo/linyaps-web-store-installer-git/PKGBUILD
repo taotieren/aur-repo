@@ -1,7 +1,6 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-web-store-installer-git
-_tagname=1.6.8
 pkgver=1.6.8.r4.a88302e
 pkgrel=1
 pkgdesc='玲珑（Linglong）linyaps-web-store-installer is a package installer for the Linyaps Web store.'
