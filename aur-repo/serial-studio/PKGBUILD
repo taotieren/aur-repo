@@ -22,6 +22,7 @@ depends=(
     $_qt-serialport
     $_qt-svg
     $_qt-webengine
+    $_qt-websockets
     zlib
 )
 makedepends=(
