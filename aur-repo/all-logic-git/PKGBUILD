@@ -53,12 +53,6 @@ pkgver() {
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}/${pkgname}"
-  # Fix linux PR #1
-  git cherry-pick -n b911499058d4da2eec4a7747ce73bc604058de17
-  git cherry-pick -n e4ced0bcd015ef6ae3268efcdc2b9fd3287c3ae3
-  git cherry-pick -n f59ed75dae2466518392f04e50fdb7b2d13245b9
-  git cherry-pick -n 366471d0e8693af3f4292268960ab087b4129ea1
-
   sed -i 's#MODE="0666"#TAG+="uaccess"#' DSView/DreamSourceLab.rules
 }
 
