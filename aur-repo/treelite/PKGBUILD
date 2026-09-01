@@ -15,9 +15,6 @@ makedepends=(
     ninja
     git
     doxygen
-    libgcc
-    libgomp
-    libstdc++
     pkgconf
     nlohmann-json
     rapidjson
@@ -64,8 +61,9 @@ package_treelite() {
     provides=(${pkgname})
     conflicts=(${pkgname})
     depends=(
-        gcc-libs
-        glibc
+        libgcc
+        libgomp
+        libstdc++
     )
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgbase}/build install
 }
@@ -76,6 +74,9 @@ package_python-treelite() {
     provides=(${pkgname})
     conflicts=(${pkgname})
     depends=(
+        libgcc
+        libgomp
+        libstdc++
         python
         python-numpy
         python-scipy
