@@ -17,6 +17,9 @@ makedepends=(
     git
     protobuf
     rust
+    npm
+    pnpm
+    nodejs
 )
 optdepends=('vnt: A virtual network tool (or VPN),简便高效的异地组网、内网穿透工具')
 backup=(
@@ -42,6 +45,10 @@ prepare() {
 }
 
 build() {
+    cd "${srcdir}/${pkgname}/frontend"
+    pnpm install
+    pnpm build
+
     cd "${srcdir}/${pkgname}/"
 
     export RUSTUP_TOOLCHAIN=stable
