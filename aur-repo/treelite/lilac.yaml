@@ -8,6 +8,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - mdspan
+  - python-scikit-base
 update_on:
   - source: github
     github: dmlc/treelite
