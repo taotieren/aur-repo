@@ -39,7 +39,7 @@ makedepends=(
   pkgconf
   vulkan-headers
 )
-source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
+source=("git+${url}.git#tag=v${pkgver}")
 sha256sums=('b7d043385acf6486affb3e9a0cbda270efa541a51938c2e96ee2ea57c42f6383')
 
 prepare() {
