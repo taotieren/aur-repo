@@ -49,7 +49,7 @@ build() {
         -DBUILD_SHARED_LIBS=OFF \
         -B build \
         -G Ninja \
-        -Wno-dev
+        -Wno-author
 
     ninja -C build
 }

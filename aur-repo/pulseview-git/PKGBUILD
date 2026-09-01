@@ -40,7 +40,7 @@ build() {
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_CXX_FLAGS=-fext-numeric-literals \
         -DDISABLE_WERROR=TRUE \
-        -Wno-dev
+        -Wno-author
   cmake --build build
 }
 

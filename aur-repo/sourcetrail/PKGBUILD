@@ -89,7 +89,7 @@ build() (
     -DBUILD_UNIT_TESTS_PACKAGE=OFF
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     -DCMAKE_VERBOSE_MAKEFILE=OFF
-    -Wno-dev
+    -Wno-author
   )
 
   cmake "${_cmake_options[@]}"

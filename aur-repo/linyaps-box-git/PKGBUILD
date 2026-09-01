@@ -55,7 +55,7 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -Dlinyaps-box_CPM_LOCAL_PACKAGES_ONLY=ON \
-    -Wno-dev \
+    -Wno-author \
     -B build \
     -G Ninja
 

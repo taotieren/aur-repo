@@ -57,7 +57,7 @@ build() {
     cmake -S ${pkgname} \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -Wno-dev \
+        -Wno-author \
         -B build \
         -G Ninja
 

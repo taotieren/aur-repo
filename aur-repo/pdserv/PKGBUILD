@@ -42,7 +42,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DPAM_SERVICE_DIR=/etc/security \
 	 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-        -Wno-dev \
+        -Wno-author \
         -B build \
         -G Ninja
 

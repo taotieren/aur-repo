@@ -125,7 +125,7 @@ build() {
         -Bbuild -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -GNinja \
-        -Wno-dev
+        -Wno-author
         # -DBUILD_DOC=ON \
 
     ninja -C ${srcdir}/build

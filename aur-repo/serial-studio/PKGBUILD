@@ -67,7 +67,7 @@ build() {
         -DCMAKE_SKIP_RPATH=OFF \
         -B build \
         -G Ninja \
-        -Wno-dev
+        -Wno-author
 
     ninja -C build
 }

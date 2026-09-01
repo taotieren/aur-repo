@@ -38,7 +38,7 @@ build() {
     -G Ninja
     -DCMAKE_BUILD_TYPE=None
     -DCMAKE_INSTALL_PREFIX='/usr'
-    -Wno-dev
+    -Wno-author
   )
 
   cmake "${_cmake_options[@]}"

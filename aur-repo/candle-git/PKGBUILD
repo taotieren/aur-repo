@@ -52,7 +52,7 @@ build() {
 	# see：https://wiki.archlinux.org/title/CMake_package_guidelines
 	cmake -DCMAKE_BUILD_TYPE=None \
 		-DCMAKE_INSTALL_PREFIX=/usr/share/candle \
-		-Wno-dev \
+		-Wno-author \
 		-B build \
 		-G Ninja
 

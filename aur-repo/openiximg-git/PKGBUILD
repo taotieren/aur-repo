@@ -51,7 +51,7 @@ build() {
     cmake -S "${srcdir}/${pkgname}" \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -Wno-dev \
+        -Wno-author \
         -B build
 
     cmake --build "${srcdir}/build"

@@ -71,7 +71,7 @@ build() {
         -DCMAKE_C_FLAGS="${CFLAGS} -Wno-error=calloc-transposed-args -Wno-error=discarded-qualifiers" \
         -B build \
         -G Ninja \
-        -Wno-dev
+        -Wno-author
 
     ninja -C build
 
@@ -81,7 +81,7 @@ build() {
     -DCMAKE_C_FLAGS="${CFLAGS} -Wno-error=calloc-transposed-args -Wno-error=discarded-qualifiers" \
     -B build_avalon \
     -G Ninja \
-    -Wno-dev
+    -Wno-author
 
     ninja -C build_avalon
 }

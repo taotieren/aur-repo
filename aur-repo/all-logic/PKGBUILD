@@ -59,7 +59,7 @@ build() {
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
-    -Wno-dev \
+    -Wno-author \
     -B build \
     -G Ninja
   

@@ -49,7 +49,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DRAPIDASSIST_BUILD_TEST=OFF \
         -DBUILD_SHARED_LIBS=OFF \
-        -Wno-dev \
+        -Wno-author \
         -B build \
         -G Ninja
 

@@ -61,7 +61,7 @@ build() {
         -DWXT_GENERATE_MSIX:BOOL=OFF \
         -B build \
         -G Ninja \
-        -Wno-dev
+        -Wno-author
 
     ninja -C build
 }

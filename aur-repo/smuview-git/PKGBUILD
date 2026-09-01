@@ -65,13 +65,13 @@ build() {
         -DENABLE_TESTS=TRUE \
         -B build \
         -G Ninja \
-        -Wno-dev
+        -Wno-author
     ninja -C build
 
     cd manual
     cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -Wno-dev
+        -Wno-author
     make manual
     make manual-publish
 

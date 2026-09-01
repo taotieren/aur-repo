@@ -158,7 +158,7 @@ package() {
         -Wno-deprecated-declarations \
         -B build-gtk3 \
         -G Ninja
-    #        -Wno-dev \
+    #        -Wno-author \
 
     ninja -C build-gtk3
 
@@ -225,7 +225,7 @@ package() {
 #         -Wno-deprecated-declarations \
 #         -B build-gtk4 \
 #         -G Ninja
-#     #         -Wno-dev \
+#     #         -Wno-author \
 #
 #     ninja -C build-gtk4
 #

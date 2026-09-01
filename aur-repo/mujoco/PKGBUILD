@@ -34,7 +34,7 @@ build() {
     -DCMAKE_CXX_FLAGS="-Wno-error=discarded-qualifiers" \
     -B build \
     -G Ninja \
-    -Wno-dev
+    -Wno-author
 
   ninja -C build
 }

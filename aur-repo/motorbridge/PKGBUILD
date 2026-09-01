@@ -63,7 +63,7 @@ build() {
     -DMOTORBRIDGE_ABI_LIBRARY=$ABI_LIB \
     -DMOTORBRIDGE_ABI_HEADER="motor_abi/include/motor_abi.h" \
     -DMOTORBRIDGE_CPP_BUILD_EXAMPLES=OFF \
-    -Wno-dev \
+    -Wno-author \
     -B bindings/cpp/build
 
   cmake --build bindings/cpp/build

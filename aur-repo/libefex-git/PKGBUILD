@@ -57,7 +57,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DLIBEFEX_USE_SHARED_LIBUSB=ON \
         -DBUILD_SHARED_LIBS=ON \
-        -Wno-dev \
+        -Wno-author \
         -B build
 
     cmake --build "${srcdir}/build"

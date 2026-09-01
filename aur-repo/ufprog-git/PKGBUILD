@@ -43,7 +43,7 @@ build() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DBUILD_PORTABLE=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -Wno-dev \
+        -Wno-author \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -B build \
         -G Ninja

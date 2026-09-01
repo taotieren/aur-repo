@@ -38,7 +38,7 @@ build() {
   cmake -B build -S "$srcdir/$_pkgname" \
     -DENABLE_SHARED=ON \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -Wno-dev
+    -Wno-author
   cmake --build build
 }
 

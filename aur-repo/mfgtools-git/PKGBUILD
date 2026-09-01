@@ -82,14 +82,14 @@ build() {
         -DCMAKE_BUILD_TYPE=None \
         -DBUILD_DOC=ON \
         -GNinja \
-        -Wno-dev
+        -Wno-author
 
     ninja -C build
 
     cd "${srcdir}/${pkgbase}/wrapper"
     cmake -DCMAKE_BUILD_TYPE=None \
         -B build \
-        -Wno-dev
+        -Wno-author
     cmake --build build
     mkdir -p libuuu/lib
     cp -rv build/libuuu.so libuuu/lib

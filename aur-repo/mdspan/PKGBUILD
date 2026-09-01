@@ -31,7 +31,7 @@ build() {
     -DMDSPAN_ENABLE_HIP=OFF \
     -DMDSPAN_ENABLE_OPENMP=OFF \
     -DMDSPAN_USE_SYSTEM_GTEST=ON \
-    -Wno-dev
+    -Wno-author
   cmake --build build --target all
 }
 

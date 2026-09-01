@@ -23,7 +23,7 @@ build() {
         -DCMAKE_SKIP_INSTALL_RPATH:BOOL=TRUE \
         -DLPAC_DYNAMIC_DRIVERS:BOOL=TRUE \
         -DLPAC_DYNAMIC_LIBEUICC:BOOL=TRUE \
-        -Wno-dev
+        -Wno-author
     cmake --build build
 }
 

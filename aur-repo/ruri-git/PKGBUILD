@@ -47,7 +47,7 @@ build() {
     cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_C_FLAGS="-Wno-error=format-security -Wno-error=unused-result" \
-        -Wno-dev \
+        -Wno-author \
         -B build \
         -G Ninja
 

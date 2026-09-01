@@ -24,7 +24,7 @@ build() {
   # Sane defaults for Arch package guidelines. Commented if unused by project.
   # https://wiki.archlinux.org/title/CMake_package_guidelines
   local cmakeopts=(
-    -Wno-dev
+    -Wno-author
     -D 'CMAKE_BUILD_TYPE=None'
     #-D 'CMAKE_INSTALL_LIBDIR=lib'
     #-D "CMAKE_INSTALL_LIBEXECDIR=lib/$pkgname"

@@ -54,7 +54,7 @@ build() {
           -DENABLE_QT_WEBENGINE=ON \
           -DCMAKE_INSTALL_PREFIX=/usr \
           -G Ninja \
-          -Wno-dev
+          -Wno-author
 
     ninja -C build
 }

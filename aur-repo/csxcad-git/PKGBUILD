@@ -70,7 +70,7 @@ _build_csxcad() {
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     -DENABLE_RPATH=OFF
     -DBUILD_TESTING=OFF
-    -Wno-dev
+    -Wno-author
   )
 
   cmake "${_cmake_options[@]}"

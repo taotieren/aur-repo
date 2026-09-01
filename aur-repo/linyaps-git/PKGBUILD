@@ -95,7 +95,7 @@ build() {
     -DCMAKE_INSTALL_LIBEXECDIR=lib \
     -DCPM_LOCAL_PACKAGES_ONLY=ON \
     -DLINGLONG_EXPORT_PATH=apps/share \
-    -Wno-dev \
+    -Wno-author \
     -B build \
     -G Ninja
     # -DLINGLONG_VERSION="${pkgver%%.r}" \

@@ -42,7 +42,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_SHARED_LIBS=ON \
         -DECAT_DEVICE="sock_raw+sock_raw_mmaped+veth" \
-        -Wno-dev \
+        -Wno-author \
         -B build
 
      cmake --build build
