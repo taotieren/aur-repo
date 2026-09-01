@@ -32,7 +32,6 @@ makedepends=(
     python-setuptools
     # AUR
     mdspan
-    python-scikit-base
 )
 checkdepends=()
 optdepends=()
