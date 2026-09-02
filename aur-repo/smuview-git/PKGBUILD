@@ -2,7 +2,7 @@
 
 _pkgname=smuview
 pkgname=${_pkgname}-git
-pkgver=0.0.4.r408.g3cc7064
+pkgver=0.0.4.r420.g0927de3
 pkgrel=1
 pkgdesc="SmuView is a Qt-based source measurement unit GUI for sigrok."
 arch=($CARCH)
