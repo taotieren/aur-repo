@@ -2,7 +2,7 @@
 
 pkgname=serial-studio
 pkgver=4.1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Multi-purpose serial data visualization & processing program"
 arch=($CARCH)
 url="https://github.com/Serial-Studio/Serial-Studio"
