@@ -61,7 +61,7 @@ prepare() {
     cd "${srcdir}/${pkgname}"
     sed -i -e 's/^X-AppImage.*//g' app/deploy/linux/serial-studio-gpl3.desktop
 
-    git cheryy-pick -n 7678839b8c835fb9a5be7d2573b4cee550aba23c
+    git cherry-pick -n 7678839b8c835fb9a5be7d2573b4cee550aba23c
 }
 
 build() {
