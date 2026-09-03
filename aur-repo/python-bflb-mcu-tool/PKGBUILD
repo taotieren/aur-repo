@@ -3,13 +3,15 @@
 pkgname=python-bflb-mcu-tool
 _name=${pkgname#python-}
 pkgver=1.10.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="BOUFFALOLAB MCU TOOL"
 arch=('any')
 url="https://pypi.org/project/bflb-mcu-tool"
 license=(MIT)
 groups=()
+provides=(${pkgname} ${_name})
+conflicts=(${pkgname} ${_name})
 _pydeps=(
     ecdsa
     six
