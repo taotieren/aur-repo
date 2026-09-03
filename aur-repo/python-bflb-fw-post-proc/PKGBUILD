@@ -32,7 +32,9 @@ options=('!strip')
 optdepends=(
     "python-bflb-flash-command-uart: Bouffalolab Flash Command Tool"
     "python-bflb-mcu-tool: BOUFFALOLAB MCU TOOL"
+	"python-bflb-mcu-tool-uart: Bouffalolab Iot Tool uart"
 	"python-bflb-iot-tool: BOUFFALOLAB IOT TOOL"
+    "python-bflb-iot-tool-uart: Bouffalolab Mcu Tool uart"
 )
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
