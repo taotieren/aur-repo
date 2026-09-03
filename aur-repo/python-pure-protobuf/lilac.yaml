@@ -1,11 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['willker'])
+pre_build_script: aur_pre_build(maintainers=['Universebenzene'])
 post_build: aur_post_build
-repo_depends:
-  - python-pure-protobuf
 update_on:
   - source: aur
-    aur: bilihud
+    aur: python-pure-protobuf
   - alias: python
