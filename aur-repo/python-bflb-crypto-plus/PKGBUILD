@@ -24,7 +24,8 @@ _pymakedeps=(
     wheel
 )
 makedepends=(
-    "${_pymakedeps[@]/#/python-}")
+    "${_pymakedeps[@]/#/python-}"
+)
 checkdepends=()
 optdepends=()
 provides=()
