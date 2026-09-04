@@ -1,0 +1,30 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+
+pre_build_script: |
+  oldver, oldrel = get_pkgver_and_pkgrel()
+  for line in edit_file('PKGBUILD'):
+    if line.startswith('_tagname='):
+      line = f"_tagname={_G.newver}"
+    print(line)
+  newver, newrel = get_pkgver_and_pkgrel()
+  update_pkgrel(1 if newver != oldver else None)
+  run_protected(["updpkgsums"])
+
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+
+update_on:
+  # The listing endpoint returns JSON metadata for the whole directory:
+  #   {"file_name":"sigrok-bridge","file_size":"4.30 MB","file_type":1,
+  #    "file_url":"SLogic/ngscopeclient/sigrok-bridge",
+  #    "last_update":"2026-04-23 17:40:05"}
+  # There is no versioned URL, so the release date is used as the version.
+  # The regex is anchored on the file_name/file_url pair so that the Windows
+  # build ("sigrok-bridge.exe"), which carries its own last_update, can never
+  # be picked up by mistake. Exactly one capture group -> the date.
+  - source: regex
+    url: https://dl.sipeed.com/fileList/SLogic/ngscopeclient/
+    regex: '"file_name":"sigrok-bridge","file_size":"[^"]*","file_type":1,"file_url":"SLogic/ngscopeclient/sigrok-bridge","last_update":"(\d{4}-\d{2}-\d{2})'
