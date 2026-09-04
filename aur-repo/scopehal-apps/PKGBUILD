@@ -19,6 +19,7 @@ depends=(
     gtk3
     libgcc
     libgomp
+    liblxi
     libpng
     libsigc++-3.0
     libstdc++
