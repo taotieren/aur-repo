@@ -52,7 +52,7 @@ build() {
 package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
-    # install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    install -Dm0644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
-    cp -R docs "${pkgdir}/usr/share/doc/${pkgname}/"
+    install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm0644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
+    cp -rv docs "${pkgdir}/usr/share/doc/${pkgname}/"
 }
