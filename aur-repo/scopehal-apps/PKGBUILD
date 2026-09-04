@@ -19,11 +19,11 @@ depends=(
     gtk3
     libgcc
     libgomp
-    liblxi
     libpng
     libsigc++-3.0
     libstdc++
-    libtirpc
+    libwayland-client.so
+    libz.so
     glfw
     glslang 
     hicolor-icon-theme
