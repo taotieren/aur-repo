@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=socketcan-rs-git
-pkgver=3.6.2.r48.ge1a7ed1
+pkgver=3.6.2.r52.g1f26c75
 pkgrel=1
 pkgdesc="Linux SocketCAN access in Rust"
 arch=($CARCH)
