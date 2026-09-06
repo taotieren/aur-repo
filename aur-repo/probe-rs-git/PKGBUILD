@@ -2,7 +2,7 @@
 
 pkgname=probe-rs-git
 pkgver=0.32.0.r114.gbe471a2
-pkgrel=1
+pkgrel=2
 pkgdesc="A collection of on chip debugging tools to communicate with microchips."
 arch=($CARCH)
 url="https://github.com/probe-rs/probe-rs"
