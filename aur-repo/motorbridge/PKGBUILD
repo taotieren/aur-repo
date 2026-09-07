@@ -36,8 +36,7 @@ prepare() {
   git -C "${srcdir}/${pkgbase}" clean -dfx
   cd "${srcdir}/${pkgbase}"
   export RUSTUP_TOOLCHAIN=stable
-  cargo fetch --offline --target host-tuple
-  cargo fetch --target "$CARCH-unknown-linux-gnu"
+  cargo fetch --locked --target host-tuple
 }
 
   ABI_LIB="${srcdir}/${pkgbase}/target/release/libmotor_abi.so"
@@ -52,9 +51,7 @@ build() {
   export RUSTUP_TOOLCHAIN=stable
   export CARGO_TARGET_DIR=target
 
-  cargo build \
-      --offline \
-      --release
+  cargo build --frozen --release --all-features
 
   cmake -S bindings/cpp \
     -DCMAKE_BUILD_TYPE=None \
