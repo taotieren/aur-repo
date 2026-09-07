@@ -36,7 +36,7 @@ prepare() {
   git -C "${srcdir}/${pkgbase}" clean -dfx
   cd "${srcdir}/${pkgbase}"
   export RUSTUP_TOOLCHAIN=stable
-  cargo fetch --locked --target host-tuple
+  cargo fetch --offline --locked --target host-tuple
   cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
