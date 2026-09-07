@@ -36,7 +36,7 @@ prepare() {
   git -C "${srcdir}/${pkgbase}" clean -dfx
   cd "${srcdir}/${pkgbase}"
   export RUSTUP_TOOLCHAIN=stable
-  cargo fetch --offline --locked --target host-tuple
+  cargo fetch --offline --target host-tuple
   cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
@@ -54,7 +54,6 @@ build() {
 
   cargo build \
       --offline \
-      --locked \
       --release
 
   cmake -S bindings/cpp \
