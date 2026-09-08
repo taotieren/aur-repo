@@ -18,6 +18,8 @@ _pydeps=(
     rich
 )
 depends=(
+    android-tools
+    android-udev
     python
     "${_pydeps[@]/#/python-}"
 )
