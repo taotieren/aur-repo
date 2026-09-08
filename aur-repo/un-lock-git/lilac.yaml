@@ -9,5 +9,5 @@ repo_depends:
   - python-migate
 update_on:
   - source: github
-    github: offici5l/MiUnlockTool
+    github: MiForge/MiUnlockTool
   - alias: python
