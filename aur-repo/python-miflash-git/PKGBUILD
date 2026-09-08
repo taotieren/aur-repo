@@ -59,5 +59,6 @@ build() {
 package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
+    install -vDm644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
     install -vDm644 LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
