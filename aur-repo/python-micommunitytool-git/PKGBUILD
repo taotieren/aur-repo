@@ -12,7 +12,7 @@ pkgver=1.5.4.r16.g5dd342a
 pkgrel=1
 pkgdesc="Submitting a request for bootloader unlocking permission from the Mi Community automatically"
 arch=(any)
-url="https://github.com/offici5l/MiCommunityTool"
+url="https://github.com/MiForge/MiCommunityTool"
 _pydeps=(
     requests
     # AUR

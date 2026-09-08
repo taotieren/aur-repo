@@ -11,5 +11,5 @@ repo_depends:
   - python-ntplib
 update_on:
   - source: github
-    github: offici5l/MiCommunityTool
+    github: MiForge/MiCommunityTool
   - alias: python

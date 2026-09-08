@@ -8,7 +8,7 @@ pkgdesc="migate is a simplified Xiaomi authentication gateway for Python project
 provides=(${pkgname})
 conflicts=(${pkgname})
 arch=('any')
-url="https://github.com/offici5l/migate"
+url="https://github.com/MiForge/migate"
 _pydeps=(
     qrcode
     requests
