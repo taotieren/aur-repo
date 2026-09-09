@@ -7,8 +7,10 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 repo_depends:
+  - python-cmsis-svd-git
   - python-setuptools-git-versioning-git
 update_on:
-  - source: pypi
-    pypi: arm-gdb
+  - source: github
+    github: pengi/arm_gdb
+    use_max_tag: true
   - alias: python
