@@ -25,6 +25,7 @@ sha256sums=('cbfce8d7b808c90d8a1fde68b542bbb7048e2b306c6ee91d00a12c329b09f0e9')
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}/"
+    cargo update -w
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
