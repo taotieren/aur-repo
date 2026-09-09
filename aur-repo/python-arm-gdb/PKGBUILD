@@ -3,7 +3,7 @@
 pkgname=python-arm-gdb
 _name=${pkgname#python-}
 pkgver=0.9.10
-pkgrel=5
+pkgrel=6
 epoch=
 pkgdesc="Python module for GDB to analyze ARM core registers"
 arch=('any')
