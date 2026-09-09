@@ -1,7 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['dringsim'])
+pre_build_script: aur_pre_build(maintainers='dringsim')
 post_build: aur_post_build
 update_on:
   - source: aur
