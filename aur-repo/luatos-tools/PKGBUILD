@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=luatos-tools
-pkgver=0.2.0
-pkgrel=2
+pkgver=0.3.0
+pkgrel=1
 pkgdesc="A CLI for building, flashing, and debugging LuatOS firmware on EC618 / EC7xx modules"
 arch=($CARCH)
 url="https://github.com/yuzhan-tech/luatos-tools"
@@ -28,7 +28,7 @@ backup=()
 options=('!lto')
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('c054fcfe9a5a38965aeb08cc65bb2b5afc605f7999911286f4ef956142b1e70c')
+sha256sums=('010b1496c539bee4d28ec8fef84f6896b1312a2c5e729a25c3a6b98363092da1')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
