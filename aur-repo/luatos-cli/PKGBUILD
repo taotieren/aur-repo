@@ -92,8 +92,8 @@ package_luatos-mcp() {
 
 package_luatos-log-ffi() {
     pkgdesc="C ABI export of luatos-log SOC binary log decoder (Air1601/CCM4211)"
-    provides=(${pkgname})
-    conflicts=(${pkgname})
+    provides=(libluatos_log_ffi.so)
+    conflicts=(libluatos_log_ffi.so)
     replaces=()
     depends=(
         glibc
