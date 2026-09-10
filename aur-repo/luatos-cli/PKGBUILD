@@ -71,6 +71,7 @@ package_luatos-cli() {
     export RUSTUP_TOOLCHAIN=stable
     install -Dm0644 LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm0644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
+    cp -rv docs "${pkgdir}/usr/share/doc/${pkgname}/"
     install -Dm0755 "target/release/${pkgname}" -t "${pkgdir}/usr/bin/"
 }
 
