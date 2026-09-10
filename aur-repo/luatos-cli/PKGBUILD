@@ -3,7 +3,7 @@
 pkgbase=luatos-cli
 pkgname=(luatos-cli luatos-mcp luatos-log-ffi)
 pkgver=1.11.0
-pkgrel=1
+pkgrel=2
 pkgdesc="LuatOS command-line toolset (pure Rust)-brushing, logging, project management, firmware resources and builds"
 arch=($CARCH)
 url="https://github.com/wendal/luatos-cli"
@@ -92,8 +92,8 @@ package_luatos-mcp() {
 
 package_luatos-log-ffi() {
     pkgdesc="C ABI export of luatos-log SOC binary log decoder (Air1601/CCM4211)"
-    provides=("libluatos_log_ffi.so=${pkgver}")
-    conflicts=("libluatos_log_ffi.so=${pkgver}")
+    provides=(libluatos_log_ffi.so)
+    conflicts=(libluatos_log_ffi.so)
     replaces=()
     depends=(
         glibc
