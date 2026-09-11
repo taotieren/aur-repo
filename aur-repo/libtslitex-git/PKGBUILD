@@ -2,7 +2,7 @@
 
 pkgbase=libtslitex-git
 pkgname=(libtslitex-git python-libtslitex-git)
-pkgver=0.1.0.r13.g9422df6
+pkgver=0.1.0.r16.gcfbbd45
 pkgrel=1
 pkgdesc='This is a C library to interface with the LiteX Firmware on Thunderscope over PCIe'
 arch=($CARCH)
