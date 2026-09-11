@@ -61,7 +61,6 @@ prepare() {
   cd "${srcdir}"/${pkgname}/
 
   # Add some new decoders from sigrok # 539
-  git cherry-pick -n 8bc228ebb58ea709e981287a57a0864f914fb4e0
   git cherry-pick -n 93d7e092473deeaee12c1b840faea21a2248ab9c
   git cherry-pick -n 625e61480f400a92a0fa912e96de979f4bbd6f15
   git cherry-pick -n 882369cf47f9c0d18ee32590047c4f1f38e3920c
