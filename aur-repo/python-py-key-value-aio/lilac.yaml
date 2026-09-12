@@ -16,6 +16,6 @@ repo_depends:
   - python-opensearch
 update_on:
   - source: pypi
-    pypi: py-key-value-aio
+    pypi: py_key_value_aio
   - alias: python
 
