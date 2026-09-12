@@ -3,15 +3,10 @@ maintainers:
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
 pre_build_script: |
-  # 1) bump pkgver/pkgrel from the version nvchecker detected
   update_pkgver_and_pkgrel(_G.newver)
-  # 2) fetch the NEW sdist and refresh its checksum first. This leaves
-  #    py_key_value_aio-<ver>.tar.gz next to the PKGBUILD (makepkg downloads
-  #    to $SRCDEST / $startdir), so step 3 never needs the network.
-  run_protected(["updpkgsums"])
-  # 3) regenerate the backend meta-packages from the local sdist. Must happen
-  #    before the real build so the pkgname array is final when makepkg starts.
   run_cmd(['python', 'gen_meta.py'])
+  run_protected(["updpkgsums"])
+  
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
