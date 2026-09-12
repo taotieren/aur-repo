@@ -1,6 +1,6 @@
 # Maintainer: taotieren <admin@taotieren.com>
 # Contributor: Anatol Pomozov
-# Co-Maintainer: Abdelhak Bougouffa <abougouffa@fedoraproject.org>
+# Contributor: Abdelhak Bougouffa <abougouffa@fedoraproject.org>
 # Contributor: Thomas Krug <t.krug@elektronenpumpe.de>
 
 pkgname=dsview-git
