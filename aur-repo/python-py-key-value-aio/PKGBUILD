@@ -11,17 +11,18 @@ arch=('any')
 url="https://pypi.org/project/py-key-value-aio"
 license=('Apache-2.0')
 _py_deps=(
-  # aerospike
   anyio
   aioboto3
   aiobotocore
   aiofile
   aiomcache
   asyncpg
+  azure-core
   cachetools
   cryptography
   beartype
   botocore
+  dbus
   diskcache
   duckdb
   elastic-transport
@@ -41,7 +42,14 @@ depends=(
   python
   "${_py_deps[@]/#/python-}"
 )
-optdepends=()
+optdepends=(
+  "python-aerospike"
+  "python-azure-data-tables"
+  "python-chdb"
+  "python-google-cloud-firestore"
+  "python-rocksdict"
+  "python-types-aiobotocore-dynamodb"
+)
 makedepends=(
   'python-build' 
   'python-installer' 
