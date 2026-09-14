@@ -2,7 +2,7 @@
 
 pkgname=mcp-gitee-git
 pkgver=1.0.0.r10.g2c585e2
-pkgrel=1
+pkgrel=2
 pkgdesc="Gitee MCP Server is a Model Context Protocol (MCP) server implementation for Gitee."
 arch=($CARCH)
 url="https://gitee.com/oschina/mcp-gitee"
