@@ -3,7 +3,7 @@
 pkgname=python-aiomcache
 _name="${pkgname#python-}"
 pkgver=0.8.2
-pkgrel=2
+pkgrel=3
 pkgdesc='Minimal pure python memcached client'
 arch=('any')
 url='https://github.com/aio-libs/aiomcache'
