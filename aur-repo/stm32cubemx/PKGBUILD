@@ -4,7 +4,7 @@
 pkgbase=stm32cubemx
 pkgname=(stm32cubemx stm32cubemx-jre)
 pkgver=6.18.1
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url="https://www.st.com/en/development-tools/stm32cubemx.html"
 license=('custom')
