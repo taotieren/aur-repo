@@ -1,7 +1,7 @@
 # Maintainer: Jesus Alvarez <jesusalv@rez.codes>
 pkgname=python-cyclopts
 pkgver=4.21.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A modern, intuitive command line interface framework for Python"
 arch=('any')
 url="https://github.com/BrianPugh/cyclopts"
