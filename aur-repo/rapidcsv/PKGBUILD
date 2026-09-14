@@ -1,6 +1,6 @@
 pkgname=rapidcsv
 pkgver=8.99
-pkgrel=1
+pkgrel=2
 pkgdesc="C++ CSV parser library"
 arch=('any')
 url="https://github.com/d99kris/rapidcsv"
