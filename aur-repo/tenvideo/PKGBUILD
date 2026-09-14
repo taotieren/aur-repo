@@ -6,7 +6,7 @@ _appname=TencentVideo
 _zhsname='腾讯视频'
 pkgver=11.164.9775.0
 _electronversion=41
-pkgrel=1
+pkgrel=2
 pkgdesc="China's leading online video media platform.(Prebuilt version.Use system-wide electron)"
 arch=(
     'aarch64'
