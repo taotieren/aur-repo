@@ -6,7 +6,7 @@
 pkgname=adguard-cli-bin
 pkgver=1.4.13
 _pkgstatus=release
-pkgrel=1
+pkgrel=2
 pkgdesc='Surf the Web ad-free and safely. Shields up'
 arch=('x86_64')
 url='https://github.com/AdguardTeam/AdGuardCLI'
