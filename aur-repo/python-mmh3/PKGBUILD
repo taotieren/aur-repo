@@ -5,7 +5,7 @@
 _pkgname=mmh3
 pkgname="python-${_pkgname}"
 pkgver=5.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Python extension for MurmurHash (MurmurHash3), a set of fast and robust hash functions."
 arch=("x86_64" "aarch64" "i686")
 url="https://github.com/hajimes/${_pkgname}"
