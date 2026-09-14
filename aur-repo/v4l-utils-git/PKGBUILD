@@ -1,7 +1,7 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=v4l-utils-git
-pkgver=1.32.0.r39.gbd0aabb9
+pkgver=1.32.0.r92.gf341ed8e
 pkgrel=1
 pkgdesc="Userspace tools and conversion library for Video 4 Linux"
 arch=('i686' 'x86_64')
