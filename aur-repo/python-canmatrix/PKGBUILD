@@ -3,7 +3,7 @@
 pkgname=python-canmatrix
 _name=${pkgname#python-}
 pkgver=1.2
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Canmatrix is a python package to read and write several CAN (Controller Area Network) database formats"
 arch=('any')
