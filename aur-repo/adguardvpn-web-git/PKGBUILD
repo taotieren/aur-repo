@@ -2,7 +2,7 @@
 
 pkgname=adguardvpn-web-git
 pkgver=r5.6a17fde
-pkgrel=2
+pkgrel=3
 pkgdesc="AdGuard VPN Web Controller"
 arch=($CARCH)
 url="https://github.com/xaoyao/adguardvpn-web"
