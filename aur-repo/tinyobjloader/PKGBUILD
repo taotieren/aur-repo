@@ -2,7 +2,7 @@
 
 pkgname=tinyobjloader
 pkgver=2.0.0rc13
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Tiny but powerful single file wavefront obj loader "
 arch=('x86_64')
