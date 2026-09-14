@@ -3,7 +3,7 @@ pkgname=algermusicplayer-bin
 _pkgname=AlgerMusicPlayer
 pkgver=5.1.0
 _electronversion=40
-pkgrel=1
+pkgrel=2
 pkgdesc="An music player based on Electron, TypeScript, and Vue 3.(Prebuilt version.Use system-wide electron)支持网易云音乐"
 arch=(
     'aarch64'
