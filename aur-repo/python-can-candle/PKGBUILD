@@ -3,7 +3,7 @@
 pkgname=python-can-candle
 _name=${pkgname#python-}
 pkgver=1.2.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Full featured CAN driver for Geschwister Schneider USB/CAN devices"
 provides=(${pkgname})
 conflicts=(${pkgname})
