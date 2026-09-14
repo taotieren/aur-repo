@@ -4,7 +4,7 @@
 
 pkgname=python-pynng
 pkgver=0.9.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Ergonomic bindings for nanomsg next generation (nng), in Python'
 arch=('x86_64' 'aarch64')
 url='https://github.com/codypiersall/pynng'
