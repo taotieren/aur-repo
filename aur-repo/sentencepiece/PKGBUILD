@@ -3,7 +3,7 @@ _name=sentencepiece
 pkgbase="${_name}"
 pkgname=("${pkgbase}" "python-${pkgbase}")
 pkgver=0.2.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Unsupervised text tokenizer for Neural Network-based text generation"
 arch=('x86_64')
 url="https://github.com/google/sentencepiece"
@@ -64,7 +64,7 @@ build() {
     -DSPM_DISABLE_EMBEDDED_DATA=OFF \
     -DSPM_PROTOBUF_PROVIDER=package \
     -DSPM_ABSL_PROVIDER=package \
-    -Wno-author
+    -Wno-dev
   cmake --build build --parallel "$(nproc)"
 
   mkdir build/root
