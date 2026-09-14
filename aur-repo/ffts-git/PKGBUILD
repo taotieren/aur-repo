@@ -3,7 +3,7 @@
 pkgname=ffts-git
 _pkgname=ffts
 pkgver=r800.b22d839b61c
-pkgrel=8
+pkgrel=9
 pkgdesc="The Fastest Fourier Transform in the South"
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
@@ -38,7 +38,8 @@ build() {
   cmake -B build -S "$srcdir/$_pkgname" \
     -DENABLE_SHARED=ON \
     -DCMAKE_INSTALL_PREFIX=/usr \
-    -Wno-author
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+    -Wno-dev
   cmake --build build
 }
 
