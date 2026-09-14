@@ -3,7 +3,7 @@
 pkgbase=lpac
 pkgname=(lpac libeuicc)
 pkgver=2.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="C-based eUICC LPA"
 arch=('x86_64')
 url=https://github.com/estkme-group/lpac
@@ -23,7 +23,7 @@ build() {
         -DCMAKE_SKIP_INSTALL_RPATH:BOOL=TRUE \
         -DLPAC_DYNAMIC_DRIVERS:BOOL=TRUE \
         -DLPAC_DYNAMIC_LIBEUICC:BOOL=TRUE \
-        -Wno-author
+        -Wno-dev
     cmake --build build
 }
 
