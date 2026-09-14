@@ -3,7 +3,7 @@
 pkgname=python-jamo
 _name=${pkgname#python-}
 pkgver=0.4.1
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="A Hangul syllable and jamo analyzer."
 arch=('any')
