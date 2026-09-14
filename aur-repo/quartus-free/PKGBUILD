@@ -9,7 +9,7 @@ pkgname=(${pkgbase} ${_components[@]})
 # Keep dot in _patchver
 _mainver=25.1; _patchver=.0; _buildver=1129; _litever=${_mainver}std${_patchver}.${_buildver}
 pkgver=${_mainver}${_patchver}.${_buildver}
-pkgrel=1
+pkgrel=2
 pkgdesc="Quartus Prime Lite design software for Intel FPGAs"
 arch=('x86_64')
 url="http://fpgasoftware.intel.com/?edition=lite"
