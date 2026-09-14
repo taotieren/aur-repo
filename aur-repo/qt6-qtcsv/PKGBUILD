@@ -2,7 +2,7 @@
 
 pkgname=qt6-qtcsv
 pkgver=1.7
-pkgrel=8
+pkgrel=9
 pkgdesc="Library for reading and writing csv-files in Qt."
 arch=($CARCH)
 url="https://github.com/iamantony/qtcsv"
