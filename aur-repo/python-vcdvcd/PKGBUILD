@@ -3,7 +3,7 @@
 pkgname=python-vcdvcd
 pkgver=2.6.0
 _name=vcdvcd
-pkgrel=2
+pkgrel=3
 pkgdesc="Python Verilog value change dump (VCD) parser library + the nifty vcdcat VCD command line viewer"
 arch=('x86_64')
 url="https://github.com/cirosantilli/vcdvcd"
