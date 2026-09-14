@@ -3,7 +3,7 @@
 pkgname=python-asteval-git
 _name=asteval
 pkgver=1.0.10.r15.g5288a42
-pkgrel=1
+pkgrel=2
 pkgdesc="Minimalistic evaluator of python expression using ast module"
 url="https://github.com/lmfit/asteval"
 license=('MIT')
