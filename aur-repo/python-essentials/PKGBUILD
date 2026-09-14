@@ -3,7 +3,7 @@
 pkgname=python-essentials
 _name=${pkgname#python-}
 pkgver=1.1.9
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="General purpose classes and functions, reusable in any kind of Python application"
 arch=('any')
