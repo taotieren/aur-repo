@@ -3,7 +3,7 @@
 
 pkgname=ttf-wps-fonts
 pkgver=2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Symbol fonts required by wps-office."
 arch=(any)
 license=("custom:EULA")
