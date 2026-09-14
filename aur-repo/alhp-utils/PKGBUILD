@@ -3,7 +3,7 @@
 pkgname=alhp-utils
 _name=alhp.utils
 pkgver=1.0.7
-pkgrel=2
+pkgrel=3
 pkgdesc='Collection of ALHP utils'
 arch=(x86_64)
 url="https://somegit.dev/ALHP/$_name"
