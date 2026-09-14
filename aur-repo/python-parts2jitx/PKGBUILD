@@ -3,7 +3,7 @@
 pkgname=python-parts2jitx
 _name=${pkgname#python-}
 pkgver=0.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Import electronic part data (LCSC, KiCad, EasyEDA) and convert to JITX component code"
 provides=(${pkgname})
 conflicts=(${pkgname})
