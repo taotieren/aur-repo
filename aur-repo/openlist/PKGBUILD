@@ -3,7 +3,7 @@
 
 pkgname=openlist
 pkgver=4.2.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A new AList Fork to Anti Trust Crisis"
 arch=($CARCH)
 url="https://github.com/OpenListTeam/OpenList"
