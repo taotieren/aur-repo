@@ -3,7 +3,7 @@
 pkgname='python-pyjson5'
 _name='pyjson5'
 pkgver=1.6.9
-pkgrel=1
+pkgrel=2
 pkgdesc="A JSON5 serializer and parser library for Python 3 written in Cython."
 url="https://github.com/Kijewski/pyjson5"
 depends=('cython' 'python-more-itertools')
