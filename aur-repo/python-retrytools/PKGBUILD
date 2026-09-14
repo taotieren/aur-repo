@@ -3,7 +3,7 @@
 pkgname=python-retrytools
 _name=${pkgname//-/_}
 pkgver=0.0.2
-pkgrel=5
+pkgrel=6
 epoch=
 pkgdesc="Python retry tools."
 arch=('any')
