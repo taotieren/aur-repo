@@ -1,7 +1,7 @@
 # Maintainer: zhullyb <zhullyb [at] outlook [dot] com>
 pkgname=wechat-devtools-bin
 pkgver=2.01.2510290_2
-pkgrel=1
+pkgrel=2
 epoch=2
 pkgdesc="WeChat Devtools For Linux."
 license=("MIT")
