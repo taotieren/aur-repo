@@ -3,7 +3,7 @@
 pkgname=netassistant-git
 _pkgname=NetAssistant
 pkgver=1.1.0.r2.g34749cd
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A network debugging assistant based on Qt GUI."
 arch=($CARCH)
