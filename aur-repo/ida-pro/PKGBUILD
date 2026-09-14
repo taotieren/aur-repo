@@ -9,7 +9,7 @@
 
 pkgver=9.4.0
 pkgname="ida-pro"
-pkgrel=2
+pkgrel=3
 pkgdesc="Hex-Rays IDA Pro"
 url="https://hex-rays.com/ida-pro"
 license=('custom')
