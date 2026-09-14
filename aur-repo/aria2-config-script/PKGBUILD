@@ -1,7 +1,7 @@
 # Maintainer: xmengnet <my@liyp.cc>
 pkgname=aria2-config-script
 pkgver=0.5
-pkgrel=2
+pkgrel=3
 pkgdesc="一个自动配置Aria2的脚本，自动创建、启动服务，可直接搭配浏览器插件使用。"
 arch=(any)
 license=('GPL')
