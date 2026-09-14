@@ -4,7 +4,7 @@ pkgname=linglong-pica
 _tagname=1.2.4-1
 pkgver="${_tagname//-/_}"
 # pkgver=1.2.4
-pkgrel=2
+pkgrel=3
 pkgdesc='deb package to Linglong package tool.'
 arch=($CARCH)
 url='https://github.com/linuxdeepin/linglong-pica'
@@ -29,7 +29,7 @@ makedepends=(
 # )
 optdepends=()
 source=("${pkgname}::git+${url}.git#tag=${_tagname}")
-sha256sums=('7440c177ab608542fd0f079f9994c2f6230d5f82')
+sha256sums=('cf8603706c140a8df4f78c0569f5586b0c859b3becc71576bf6369fe89740cbc')
 
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
