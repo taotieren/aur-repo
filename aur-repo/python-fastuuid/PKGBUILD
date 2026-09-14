@@ -3,7 +3,7 @@
 _name=fastuuid
 pkgname=python-$_name
 pkgver=0.14.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Python bindings to Rust's UUID library."
 arch=(any)
 url="https://github.com/fastuuid/fastuuid"
