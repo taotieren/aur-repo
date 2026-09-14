@@ -2,7 +2,7 @@
 
 pkgname=brunsli
 pkgver=0.1
-pkgrel=13
+pkgrel=14
 pkgdesc='Lossless JPEG repacker'
 arch=('x86_64')
 url='https://github.com/google/brunsli/'
@@ -32,7 +32,7 @@ build() {
         -DCMAKE_BUILD_TYPE:STRING='None' \
         -DCMAKE_INSTALL_PREFIX:PATH='/usr' \
         -DCMAKE_POLICY_VERSION_MINIMUM:STRING="3.5.0" \
-        -Wno-author
+        -Wno-dev
     cmake --build build
 }
 
