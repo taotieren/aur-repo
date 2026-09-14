@@ -3,7 +3,7 @@
 pkgname=python-ldfparser
 _name=${pkgname#python-}
 pkgver=0.26.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="LIN Description File parser written in Python"
 arch=('any')
