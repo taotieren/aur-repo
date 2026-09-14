@@ -8,7 +8,7 @@ pkgname=(
     lckfb-dqx-ra6e2-meta
 )
 pkgver=0.0.10
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="立创开发板元包 / LCKFB Development Board meta package"
 arch=(any)
