@@ -2,7 +2,7 @@
 
 pkgname=ma35d1-nuwriter-git
 pkgver=1.08_20260515.r7.g2823170
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="MA35D1 NuWriter"
 arch=($CARCH)
