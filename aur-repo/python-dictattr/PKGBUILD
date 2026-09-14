@@ -3,7 +3,7 @@
 pkgname=python-dictattr
 _name=${pkgname/-/_}
 pkgver=0.0.5
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="Python dictattr."
 arch=('any')
