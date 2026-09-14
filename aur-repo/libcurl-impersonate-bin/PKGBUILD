@@ -2,7 +2,7 @@
 
 pkgname=libcurl-impersonate-bin
 pkgver=1.5.6
-pkgrel=1
+pkgrel=2
 pkgdesc='libcurl-impersonate prebuilt libraries'
 arch=('x86_64')
 url='https://github.com/lexiforest/curl-impersonate'
