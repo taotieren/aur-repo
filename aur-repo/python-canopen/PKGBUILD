@@ -2,7 +2,7 @@
 pkgname=python-canopen
 _name=${pkgname#python-}
 pkgver=2.3.0
-pkgrel=3
+pkgrel=4
 pkgdesc="A Python implementation of the CANopen standard."
 arch=('any')
 url="https://github.com/christiansandberg/canopen"
