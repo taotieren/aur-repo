@@ -2,7 +2,7 @@
 
 pkgname=csky-debugserver-bin
 pkgver=5.18.10
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="C-Sky Debugger Server"
 arch=('x86_64')
