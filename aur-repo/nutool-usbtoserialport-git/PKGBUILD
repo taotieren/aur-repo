@@ -3,7 +3,7 @@
 pkgname=nutool-usbtoserialport-git
 _pkgname=NuTool-USBtoSerialPort
 pkgver=1.02.r1.g5e0bd8f
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="NuTool-USB to Serial Port is a host-side software, it passes through and montiors I2C, SPI and CAN data of Nu-Link2-Pro® adapter"
 arch=($CARCH)
