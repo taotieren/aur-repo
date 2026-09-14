@@ -2,7 +2,7 @@
 
 pkgname=qucs-rflayout
 pkgver=2.1.2
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="Export Qucs RF schematics to KiCad layouts & OpenEMS scripts"
 arch=($CARCH)
