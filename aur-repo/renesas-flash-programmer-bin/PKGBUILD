@@ -2,7 +2,7 @@
 
 pkgname=renesas-flash-programmer-bin
 pkgver=3.24.00
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Renesas Flash Programmer"
 arch=(x86_64)
