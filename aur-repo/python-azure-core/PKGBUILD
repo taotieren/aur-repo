@@ -4,7 +4,7 @@
 _projectname='azure-core'
 pkgname="python-$_projectname"
 pkgver='1.41.0'
-pkgrel='1'
+pkgrel=2
 pkgdesc='Microsoft Azure Core Shared Client Library for Python'
 arch=('any')
 url='https://github.com/Azure/azure-sdk-for-python'
