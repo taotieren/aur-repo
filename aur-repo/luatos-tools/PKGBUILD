@@ -2,7 +2,7 @@
 
 pkgname=luatos-tools
 pkgver=0.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A CLI for building, flashing, and debugging LuatOS firmware on EC618 / EC7xx modules"
 arch=($CARCH)
 url="https://github.com/yuzhan-tech/luatos-tools"
