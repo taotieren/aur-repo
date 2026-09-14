@@ -1,8 +1,8 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=qt5-serialbus-git
-pkgver=5.15.16.r0.g9dfba421
-pkgrel=2
+pkgver=5.15.19.r0.g6734222b
+pkgrel=1
 pkgdesc="Qt5 serial bus module"
 arch=('i686' 'x86_64')
 url="https://www.qt.io/"
