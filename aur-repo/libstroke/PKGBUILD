@@ -3,7 +3,7 @@
 
 pkgname=libstroke
 pkgver=0.5.1
-pkgrel=13
+pkgrel=14
 pkgdesc="A stroke (mouse gesture) translation library"
 arch=('i486' 'i686' 'pentium4' 'x86_64')
 url="https://sources.archlinux.org/other/packages/libstroke/"
