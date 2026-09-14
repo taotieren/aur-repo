@@ -2,7 +2,7 @@
 
 pkgname=gd32-isp-console-bin
 pkgver=5.1.0.39154
-pkgrel=1
+pkgrel=2
 pkgdesc="GigaDevice MCU ISP Console for Linux"
 arch=('x86_64')
 url="https://www.gd32mcu.com"
