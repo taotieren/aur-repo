@@ -3,7 +3,7 @@
 
 pkgname=zx
 pkgver=8.8.5
-pkgrel=1
+pkgrel=2
 pkgdesc='A tool for writing better scripts'
 arch=(any)
 url=https://github.com/google/zx
