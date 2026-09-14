@@ -3,7 +3,7 @@
 pkgname=python-id2dirnode
 _name=${pkgname#python-}
 pkgver=0.0.2
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Implementation of id_to_dirnode."
 arch=('any')
