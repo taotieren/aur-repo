@@ -2,7 +2,7 @@
 
 pkgname=ptouch-rs
 pkgver=0.7.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Brother P-Touch label printer driver and tools for Linux"
 arch=($CARCH)
 url="https://github.com/vowstar/ptouch-rs"
