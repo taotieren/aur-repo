@@ -2,7 +2,7 @@
 
 pkgname=monobit-git
 pkgver=0.54.0.r4.g040b1738
-pkgrel=2
+pkgrel=3
 pkgdesc='Tools for working with monochrome bitmap fonts'
 url='https://github.com/robhagemans/monobit'
 license=('MIT')
