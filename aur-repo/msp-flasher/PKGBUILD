@@ -2,7 +2,7 @@
 
 pkgname=msp-flasher
 pkgver=1.03.20.00
-pkgrel=3
+pkgrel=4
 pkgdesc="Flasher for TI MSP430 processor"
 arch=('i686' 'x86_64')
 url="http://www.ti.com/tool/msp430-flasher"
