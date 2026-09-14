@@ -2,7 +2,7 @@
 
 pkgname=pts-tiny-7z-sfx
 pkgver=9.22_pts7
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="pts-tiny-7z-sfx is a tiny 7-Zip (.7z archive) extractor and self-extractor(SFX) written in standard C. It's Unix-only, actively tested on Linux."
 arch=(x86_64
@@ -11,7 +11,7 @@ arch=(x86_64
 url="https://github.com/pts/pts-tiny-7z-sfx"
 license=('GPL v2')
 groups=()
-depends=()
+depends=(glibc)
 makedepends=(libarchive)
 checkdepends=()
 optdepends=()
