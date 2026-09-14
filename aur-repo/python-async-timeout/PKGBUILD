@@ -7,7 +7,7 @@
 _name=async-timeout
 pkgname=python-$_name
 pkgver=5.0.1
-pkgrel=4
+pkgrel=5
 pkgdesc='Timeout context manager for asyncio programs.'
 arch=('any')
 url='https://github.com/aio-libs/async-timeout'
