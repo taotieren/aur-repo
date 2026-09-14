@@ -3,7 +3,7 @@
 pkgname=python-weasel
 _pkg="${pkgname#python-}"
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="A small and easy workflow system"
 url="https://github.com/explosion/weasel/"
 depends=(
