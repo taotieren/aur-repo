@@ -5,7 +5,7 @@ _srcname=CJK-character-count
 
 pkgname=cjk-character-count
 pkgver=0.50
-pkgrel=1
+pkgrel=2
 pkgdesc='Program that counts the amount of CJK characters based on Unicode ranges and Chinese encoding standards 字体汉字计数软件'
 arch=('any')
 url='https://github.com/NightFurySL2001/CJK-character-count'
