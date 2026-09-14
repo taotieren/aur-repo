@@ -3,7 +3,7 @@
 pkgname=python-ctf-dl
 _name=${pkgname#python-}
 pkgver=0.3.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Command-line tool to download CTF challenges"
 provides=(${pkgname})
 conflicts=(${pkgname})
