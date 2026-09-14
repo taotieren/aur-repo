@@ -5,7 +5,7 @@
 pkgname='tio-git'
 _pkgname="${pkgname%%-git}"
 pkgver=3.9.r19.g6fb3a64
-pkgrel=1
+pkgrel=2
 pkgdesc='A serial device I/O tool'
 url='https://github.com/tio/tio'
 arch=('x86_64' 'i686')
