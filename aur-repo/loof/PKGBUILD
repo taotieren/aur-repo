@@ -2,7 +2,7 @@
 
 pkgname=loof
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A modern, cross-platform replacement for lsof written in Rust, featuring an interactive TUI mode with fuzzy search"
 arch=($CARCH)
 url="https://github.com/uk0/lsof"
