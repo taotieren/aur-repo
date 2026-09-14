@@ -3,7 +3,7 @@
 _name=groq
 pkgname=python-$_name
 pkgver=1.6.0
-pkgrel=2
+pkgrel=3
 pkgdesc='The official Python library for the groq API.'
 arch=('any')
 url='https://github.com/groq/groq-python'
