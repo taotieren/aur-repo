@@ -3,7 +3,7 @@
 pkgname=osu-mime
 pkgdesc='Provides MIME types for osu! file formats'
 pkgver=0.1
-pkgrel=3
+pkgrel=4
 arch=(any)
 license=(AGPL3)
 depends=(xdg-utils shared-mime-info desktop-file-utils)
