@@ -2,7 +2,7 @@
 
 pkgname=xbltools-git
 pkgver=r1.dd62298
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Tools for manipulating Qualcomm XBL images."
 arch=($CARCH)
