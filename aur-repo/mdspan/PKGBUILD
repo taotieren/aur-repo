@@ -1,7 +1,7 @@
 # Maintainer: Carlos Aznarán <caznaranl@uni.pe>
 pkgname=mdspan
 pkgver=0.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Reference implementation of mdspan targeting C++23"
 arch=(x86_64)
 url="https://github.com/kokkos/${pkgname}"
@@ -31,7 +31,7 @@ build() {
     -DMDSPAN_ENABLE_HIP=OFF \
     -DMDSPAN_ENABLE_OPENMP=OFF \
     -DMDSPAN_USE_SYSTEM_GTEST=ON \
-    -Wno-author
+    -Wno-dev
   cmake --build build --target all
 }
 
