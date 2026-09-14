@@ -9,7 +9,7 @@
 _name=standardwebhooks
 pkgname=python-${_name}
 pkgver=1.0.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Python library for Standard Webhooks"
 url="https://github.com/standard-webhooks/standard-webhooks/tree/main/libraries/python"
 license=('MIT')
