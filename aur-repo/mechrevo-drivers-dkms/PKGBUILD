@@ -2,7 +2,7 @@
 _pkgname=mechrevo-drivers
 pkgname=mechrevo-drivers-dkms
 pkgver=4.22.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Kernel modules for MECHREVO devices. Drivers for several platform devices for MECHREVO notebooks meant for DKMS. Modified from TUXEDO drivers.'
 arch=('x86_64')
 url='https://gitlab.com/tuxedocomputers/development/packages/tuxedo-drivers'
