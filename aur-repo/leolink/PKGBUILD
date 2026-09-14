@@ -1,7 +1,7 @@
 # Maintainer: Thomas Büngener <tombueng@gmail.com>
 pkgname=leolink
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Native Linux client for Reolink cameras: live view, motion alerts, recording"
 arch=('x86_64' 'aarch64')
 url="https://github.com/tombueng/leolink"
