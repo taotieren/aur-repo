@@ -3,7 +3,7 @@
 _pkgname='bcm2-utils'
 pkgname="${_pkgname}-git"
 pkgver=0.9.8.r64.g451a842
-pkgrel=2
+pkgrel=3
 pkgdesc="Utilities for Broadcom-based cable modems"
 arch=('x86_64')
 url="https://github.com/jclehner/bcm2-utils"
