@@ -6,7 +6,7 @@
 
 pkgname=webots-bin
 pkgver=2025a
-pkgrel=2
+pkgrel=3
 pkgdesc="Mobile robot simulation software."
 arch=('x86_64')
 url="https://cyberbotics.com/"
