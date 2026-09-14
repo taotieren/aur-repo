@@ -3,7 +3,7 @@
 _name=google-genai
 pkgname=python-$_name
 pkgver=2.23.0
-pkgrel=2
+pkgrel=3
 pkgdesc="GenAI Python SDK."
 arch=('any')
 url='https://github.com/googleapis/python-genai'
