@@ -3,7 +3,7 @@
 pkgname=easyeda2kicad
 _name=${pkgname}
 pkgver=1.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A Python script that convert any electronic components from LCSC or EasyEDA to a Kicad library"
 provides=(${pkgname})
 conflicts=(${pkgname})
