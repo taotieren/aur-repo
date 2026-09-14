@@ -2,8 +2,8 @@
 
 _pkgname="fparser"
 pkgname="$_pkgname-git"
-pkgver=r19.e625e26
-pkgrel=2
+pkgver=r20.4b9c845
+pkgrel=1
 pkgdesc="Function Parser for C++, Fork from http://warp.povusers.org/FunctionParser/"
 url="https://github.com/thliebig/fparser"
 arch=('i686' 'x86_64')
@@ -38,7 +38,7 @@ build() {
     -G Ninja
     -DCMAKE_BUILD_TYPE=None
     -DCMAKE_INSTALL_PREFIX='/usr'
-    -Wno-author
+    -Wno-dev
   )
 
   cmake "${_cmake_options[@]}"
