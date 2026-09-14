@@ -2,7 +2,7 @@
 
 pkgname=file-manager-preview-git
 pkgver=r7.964ed88
-pkgrel=1
+pkgrel=2
 pkgdesc="Modern file manager with preview support"
 arch=($CARCH)
 url="https://github.com/tonglingcn/file-manager"
