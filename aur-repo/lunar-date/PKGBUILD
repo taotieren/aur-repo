@@ -3,7 +3,7 @@
 
 pkgname=lunar-date
 pkgver=3.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Chinese lunar date library."
 arch=("i686" "x86_64")
 url="https://github.com/yetist/lunar-date"
