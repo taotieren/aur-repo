@@ -2,7 +2,7 @@
 
 pkgname=cargo-thanku
 pkgver=0.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="A command-line tool for generating acknowledgments for your Rust project dependencies."
 arch=($CARCH)
 url="https://github.com/YuniqueUnic/cargo-thanku"
@@ -19,7 +19,7 @@ backup=()
 options=('!lto' '!debug')
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('979e6a26b519ee87a30cc725214141037dc1c7ead85713411c98d4bcfdb5b2cb')
+sha256sums=('2a33b2c4725c58172eb522ff658b9928fa58f43d12a23eaf5f3560e4784e9c6a')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
