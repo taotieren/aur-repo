@@ -3,7 +3,7 @@
 pkgname=python-lauterbach-trace32-rcl
 _name=${pkgname#python-}
 pkgver=1.1.6
-pkgrel=2
+pkgrel=3
 pkgdesc="Lauterbach TRACE32 Python Remote Control Library"
 arch=(any)
 url="https://pypi.org/project/${_name}"
