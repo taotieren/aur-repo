@@ -1,6 +1,6 @@
 pkgname=python-pylibftdi
 pkgver=0.22.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Pythonic interface to FTDI devices using libftdi"
 arch=(any)
 url="https://github.com/codedstructure/pylibftdi/"
