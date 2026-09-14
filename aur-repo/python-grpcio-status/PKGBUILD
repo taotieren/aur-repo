@@ -3,7 +3,7 @@
 _name=grpcio_status
 pkgname=python-grpcio-status
 pkgver=1.76.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Status proto mapping for gRPC"
 url=https://grpc.io
 arch=(any)
