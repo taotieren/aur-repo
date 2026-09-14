@@ -4,7 +4,7 @@
 pkgname=python-pox
 _pkgname="${pkgname#python-}"
 pkgver=0.3.7
-pkgrel=1
+pkgrel=2
 pkgdesc='Utilities for filesystem exploration and automated builds'
 url='https://github.com/uqfoundation/pox'
 arch=(any)
