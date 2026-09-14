@@ -5,7 +5,7 @@
 
 pkgname=execstack
 pkgver=20130503
-pkgrel=11
+pkgrel=12
 pkgdesc="set the executable stack flag of ELF binaries and libraries"
 depends=(glibc libelf elfutils)
 makedepends=(automake)
