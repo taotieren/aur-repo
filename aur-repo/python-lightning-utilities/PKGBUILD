@@ -5,7 +5,7 @@
 pkgname=python-lightning-utilities
 _pkgname=lightning_utilities
 pkgver=0.15.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Common Python utilities and GitHub Actions in Lightning Ecosystem"
 arch=('any')
 url='https://github.com/Lightning-AI/utilities'
