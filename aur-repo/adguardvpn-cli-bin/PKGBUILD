@@ -2,7 +2,7 @@
 
 pkgname=adguardvpn-cli-bin
 pkgver=1.7.12
-pkgrel=1
+pkgrel=2
 pkgdesc='Fast, flexible and reliable VPN solution for command-line enthusiasts.'
 arch=('x86_64')
 url='https://adguard-vpn.com/'
