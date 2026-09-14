@@ -3,7 +3,7 @@
 
 _pkgname="appcsxcad"
 pkgname="$_pkgname-git"
-pkgver=0.2.3.r19.g8ce79ae
+pkgver=0.2.3.r20.g9249ab7
 pkgrel=1
 pkgdesc="Minimal GUI Application using the QCSXCAD library"
 url="https://github.com/thliebig/AppCSXCAD"
