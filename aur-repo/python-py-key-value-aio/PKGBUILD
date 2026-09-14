@@ -4,8 +4,8 @@
 pkgbase=python-py-key-value-aio
 _name=${pkgbase#python-}
 _name=${_name//-/_}
-pkgver=0.4.5
-pkgrel=3
+pkgver=0.4.4
+pkgrel=1
 pkgdesc="Async key-value store with pluggable backends"
 arch=('any')
 url="https://pypi.org/project/py-key-value-aio"
@@ -18,8 +18,6 @@ license=('Apache-2.0')
 pkgname=(
   ${pkgbase}
   ${pkgbase}-aerospike
-  ${pkgbase}-azure-tables
-  ${pkgbase}-chdb
   ${pkgbase}-disk
   ${pkgbase}-duckdb
   ${pkgbase}-dynamodb
@@ -54,8 +52,6 @@ depends=(
 )
 optdepends=(
   "${pkgbase}-aerospike: aerospike backend (python-aerospike)"
-  "${pkgbase}-azure-tables: azure-tables backend (python-azure-core python-azure-data-tables)"
-  "${pkgbase}-chdb: chdb backend (python-chdb)"
   "${pkgbase}-disk: disk backend (python-diskcache python-pathvalidate)"
   "${pkgbase}-duckdb: duckdb backend (python-duckdb python-pytz)"
   "${pkgbase}-dynamodb: dynamodb backend (python-aioboto3 python-types-aiobotocore-dynamodb)"
@@ -89,7 +85,7 @@ source=(
   "${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
   gen_meta.sh
 )
-sha256sums=('c6563a2c6abe5da5e20f4f9e875c2a9b425a2244a54fadbf46cf140a9eea45d7'
+sha256sums=('e3012e6243ed7cc09bb05457bd4d03b1ba5c2b1ca8700096b3927db79ffbbe55'
             'b8bb5be18f65be5ef76618a710f402590d8e3d993587b6015cb958f9258c62b8')
 
 prepare() {
@@ -115,23 +111,6 @@ package_python-py-key-value-aio-aerospike() {
   depends=(
     "${pkgbase}"
     python-aerospike
-  )
-}
-
-package_python-py-key-value-aio-azure-tables() {
-  pkgdesc+=" - azure-tables backend"
-  depends=(
-    "${pkgbase}"
-    python-azure-core
-    python-azure-data-tables
-  )
-}
-
-package_python-py-key-value-aio-chdb() {
-  pkgdesc+=" - chdb backend"
-  depends=(
-    "${pkgbase}"
-    python-chdb
   )
 }
 
