@@ -12,7 +12,7 @@ _llvm_ver_maj=$(LC_ALL=C pacman -Si "llvm${_ver_clang:-}" | grep -Pom1 '^Version
 _pkgname="sourcetrail"
 pkgname="$_pkgname"
 pkgver=2026.6
-pkgrel=2
+pkgrel=3
 pkgdesc='Interactive source explorer for C/C++ and Java'
 url="https://github.com/petermost/Sourcetrail"
 license=('GPL-3.0-only')
@@ -89,7 +89,7 @@ build() (
     -DBUILD_UNIT_TESTS_PACKAGE=OFF
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     -DCMAKE_VERBOSE_MAKEFILE=OFF
-    -Wno-author
+    -Wno-dev
   )
 
   cmake "${_cmake_options[@]}"
