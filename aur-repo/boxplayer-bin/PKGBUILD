@@ -3,7 +3,7 @@ pkgname=boxplayer-bin
 _pkgname=BoxPlayer
 pkgver=5.0.29
 _electronversion=40
-pkgrel=1
+pkgrel=2
 pkgdesc="Unified cloud drive management, smart media library, media servers, and high-speed downloads.多网盘文件管理、媒体库、媒体服务器、AI Agent、音乐播放器和电子书阅读器，放在同一个跨平台桌面App里."
 arch=(
     'aarch64'
