@@ -3,7 +3,7 @@
 
 pkgname=python-codegen
 pkgver=1.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Extension to ast that allow ast -> python code generation."
 arch=(any)
 url="http://github.com/andreif/codegen"
