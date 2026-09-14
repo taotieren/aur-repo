@@ -6,7 +6,7 @@
 
 pkgname=baidunetdisk-bin
 pkgver=8.7.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Baidu Netdisk - a cloud storage client (Linux Version)'
 arch=('x86_64')
 url='https://pan.baidu.com'
