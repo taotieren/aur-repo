@@ -4,7 +4,7 @@
 pkgname=saribbon
 _gitname=SARibbon
 pkgver=2.9.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A Ribbon control under the Qt framework, which provides an interface similar to that of Microsoft Office software."
 arch=('x86_64' 'aarch64')
 url="https://github.com/czyt1988/SARibbon"
@@ -20,7 +20,7 @@ build() {
   cmake -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DSARIBBON_BUILD_EXAMPLES=OFF \
-        -Wno-author \
+        -Wno-dev \
         -B build
   cmake --build build
 }
