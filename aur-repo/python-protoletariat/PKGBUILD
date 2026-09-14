@@ -3,7 +3,7 @@
 pkgname=python-protoletariat
 _name=${pkgname#python-}
 pkgver=3.3.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Python protocol buffers for the rest of us"
 provides=(${pkgname})
 conflicts=(${pkgname})
