@@ -3,7 +3,7 @@
 
 pkgname=lzfse
 pkgver=1.0
-pkgrel=5
+pkgrel=6
 _srcname="${pkgname}-${pkgname}-${pkgver}"
 pkgdesc='LZFSE compression library and command line tool'
 arch=('x86_64' 'aarch64')
