@@ -3,7 +3,7 @@
 _pkgname=kicad-skip
 pkgname="python-$_pkgname"
 pkgver=0.2.5
-pkgrel=15
+pkgrel=16
 pkgdesc="S-expression KiCad file Python parser"
 arch=(any)
 url=https://github.com/psychogenic/${_pkgname}
