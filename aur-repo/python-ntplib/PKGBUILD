@@ -2,7 +2,7 @@
 pkgname=python-ntplib
 _pkgname=${pkgname/python-/}
 pkgver=0.4.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Simple interface to query NTP servers from Python"
 url="https://github.com/cf-natali/ntplib"
 depends=('python')
