@@ -3,7 +3,7 @@
 
 _pkgname=gnucap
 pkgname=$_pkgname-git
-pkgver=20250301.dev.r86.g28914f11
+pkgver=20260729.dev.r46.g476926c3
 pkgrel=1
 pkgdesc="GNU Circuit Analysis Package (develop branch)"
 arch=('x86_64')
@@ -24,7 +24,7 @@ pkgver() {
 build() {
     cd $_pkgname
     ./configure --prefix=/usr --sysconfdir=/etc
-    make
+    make LIBREADLINE=-lreadline
 }
 
 package() {
