@@ -2,7 +2,7 @@
 
 pkgname=stdexec-git
 pkgver=nvhpc.26.05.r296.g6bac4e1
-pkgrel=1
+pkgrel=2
 pkgdesc="Senders - A Standard Model for Asynchronous Execution in C++"
 url="https://github.com/NVIDIA/stdexec"
 arch=(any)
