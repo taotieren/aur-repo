@@ -3,7 +3,7 @@
 pkgname=wifiassist
 _pkgname=WifiAssist
 pkgver=0.8
-pkgrel=3
+pkgrel=4
 pkgdesc="The easy way to use Wifi through PC."
 arch=('any')
 url="https://github.com/lzjqsdd/WifiAssist"
