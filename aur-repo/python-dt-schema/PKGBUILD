@@ -3,7 +3,7 @@
 pkgname=python-dt-schema
 _name=${pkgname#python-}
 pkgver=2026.06
-pkgrel=1
+pkgrel=2
 pkgdesc="Tooling for devicetree validation using YAML and jsonschema"
 arch=('any')
 url="https://github.com/devicetree-org/dt-schema"
