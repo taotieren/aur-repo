@@ -2,7 +2,7 @@
 
 pkgname=dsview-cli
 pkgver=1.2.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Scriptable DSLogic Plus capture and protocol decoding without the DSView GUI"
 arch=($CARCH)
 url="https://github.com/LISTENAI/dsview-cli"
