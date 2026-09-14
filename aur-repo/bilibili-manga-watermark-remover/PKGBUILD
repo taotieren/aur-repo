@@ -2,7 +2,7 @@
 
 pkgname=bilibili-manga-watermark-remover
 pkgver=0.10.0
-pkgrel=1
+pkgrel=2
 pkgdesc="bilibili漫画 哔哩哔哩漫画 B漫 去水印工具(无痕 无损)，带图形界面"
 arch=($CARCH)
 url="https://github.com/lanyeeee/bilibili-manga-watermark-remover"
@@ -33,7 +33,7 @@ backup=()
 options=(!debug !strip !lto)
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('70513ce755573604db2df5e158035bdea5ba0520b30c125344ec0dc326538b2d')
+sha256sums=('166d1dabf3065a43343e20878a0b20fa8a254a251323d4106a965c934732bc91')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
