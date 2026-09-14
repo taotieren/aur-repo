@@ -2,7 +2,7 @@
 
 pkgname=transfer.sh
 pkgver=1.6.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Easy and fast file sharing from the command-line'
 arch=('x86_64')
 url='https://transfer.sh/'
