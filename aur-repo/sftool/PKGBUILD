@@ -2,7 +2,7 @@
 
 pkgname=sftool
 pkgver=0.2.5
-pkgrel=1
+pkgrel=2
 pkgdesc="A command-line utility for SiFli SoC serial tool."
 arch=($CARCH)
 url="https://github.com/OpenSiFli/sftool"
