@@ -3,7 +3,7 @@
 pkgname=python-apeye-core
 _name=${pkgname#python-}
 pkgver=1.1.5
-pkgrel=3
+pkgrel=4
 pkgdesc="Core (offline) functionality for the apeye library"
 provides=(${pkgname})
 conflicts=(${pkgname})
