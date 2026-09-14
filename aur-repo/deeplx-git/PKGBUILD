@@ -2,7 +2,7 @@
 
 pkgname=deeplx-git
 pkgver=1.2.4.r0.g66090ba
-pkgrel=1
+pkgrel=2
 pkgdesc="DLX - Self-hosted translation API server. Unofficial; not affiliated with DeepL SE"
 arch=($CARCH)
 url="https://github.com/OwO-Network/DLX"
