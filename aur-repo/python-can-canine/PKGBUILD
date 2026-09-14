@@ -3,7 +3,7 @@
 pkgname=python-can-canine
 # _name=${pkgname#python-}
 pkgver=0.2.5
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Python-can CANine"
 arch=('any')
