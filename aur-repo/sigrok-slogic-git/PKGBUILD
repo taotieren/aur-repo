@@ -3,7 +3,7 @@
 pkgbase=sigrok-slogic-git
 pkgname=(sigrok-slogic-git)
 pkgver=r6107.4397c41
-pkgrel=1
+pkgrel=2
 pkgdesc="sigrok_slogic"
 arch=($CARCH)
 url="https://wiki.sipeed.com/hardware/zh/logic_analyzer/combo8/index.html"
