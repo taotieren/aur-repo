@@ -3,7 +3,7 @@ _commit=60aeaddfb3ecdb6a132e8da7569a6c442e6bb217
 
 pkgname=fcitx5-themes-candlelight
 pkgver=0.1.1.60aead
-pkgrel=1
+pkgrel=2
 url='https://github.com/thep0y/fcitx5-themes-candlelight'
 pkgdesc='fcitx5的简约风格皮肤——烛光'
 arch=('any')
