@@ -3,7 +3,7 @@
 pkgbase=github520-git
 pkgname=github520-git
 pkgver=r8
-pkgrel=7
+pkgrel=8
 pkgdesc="😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。"
 arch=(any)
 url="https://github.com/521xueweihan/GitHub520"
@@ -13,11 +13,9 @@ provides=(${pkgbase%-git})
 conflicts=(${pkgbase%-git})
 replaces=()
 depends=(systemd)
-makedepends=(
-    git
+makedepends=(git
     wget
-    sed
-)
+    sed)
 checkdepends=()
 optdepends=()
 source=(remove-github520-hosts.service
