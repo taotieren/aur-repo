@@ -3,7 +3,7 @@
 
 pkgname=ast-firmware
 pkgver=501
-pkgrel=1
+pkgrel=2
 pkgdesc="Aspeed VGA module from the IPMI"
 url="https://www.supermicro.com/support/faqs/faq.cfm?faq=26876"
 license=('custom')
