@@ -3,7 +3,7 @@
 pkgname=python-webauthn
 _name=${pkgname#python-}
 pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Pythonic WebAuthn"
 provides=(${pkgname})
 conflicts=(${pkgname})
