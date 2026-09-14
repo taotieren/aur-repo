@@ -5,7 +5,7 @@ pkgbase=python-py-key-value-aio
 _name=${pkgbase#python-}
 _name=${_name//-/_}
 pkgver=0.4.5
-pkgrel=4
+pkgrel=3
 pkgdesc="Async key-value store with pluggable backends"
 arch=('any')
 url="https://pypi.org/project/py-key-value-aio"
@@ -87,12 +87,10 @@ makedepends=(
 )
 source=(
   "${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
-  gen_meta.py
+  gen_meta.sh
 )
-sha256sums=(
-  'c6563a2c6abe5da5e20f4f9e875c2a9b425a2244a54fadbf46cf140a9eea45d7'
-  '1cbb5a870495b44eeb89d587b596b0946ede7cc95907951fcd39f711b4687728'
-)
+sha256sums=('c6563a2c6abe5da5e20f4f9e875c2a9b425a2244a54fadbf46cf140a9eea45d7'
+            'b8bb5be18f65be5ef76618a710f402590d8e3d993587b6015cb958f9258c62b8')
 
 prepare() {
   cd "${_name}-${pkgver}"
