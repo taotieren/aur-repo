@@ -2,7 +2,7 @@
 
 pkgname=python-autodocsumm
 pkgver=0.2.15
-pkgrel=2
+pkgrel=3
 pkgdesc='Extending your autodoc API docs with a summary'
 arch=('any')
 url='https://github.com/Chilipp/autodocsumm'
