@@ -2,7 +2,7 @@
 
 _pkgname=rasdaemon
 pkgname="${_pkgname}"-git
-pkgver=0.9.92.r14.g78f462c
+pkgver=0.9.92.r19.gf9ce171
 pkgrel=1
 pkgdesc="A RAS (Reliability, Availability and Serviceability) logging tool using the EDAC tracing events"
 arch=('x86_64' 'i686' 'aarch64')
