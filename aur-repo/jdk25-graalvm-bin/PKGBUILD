@@ -20,7 +20,7 @@ _build=+7.1
 
 pkgname="jdk${_major}-graalvm-bin"
 pkgver="${_major}.${_minor}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Advanced JDK with ahead-of-time Native Image compilation"
 arch=('x86_64' 'aarch64')
 url='https://www.graalvm.org/'
