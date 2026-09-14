@@ -5,8 +5,8 @@
 
 _pkgname="csxcad"
 pkgbase="$_pkgname-git"
-pkgver=0.6.3.r102.gf5e4764
-pkgrel=9
+pkgver=0.7.0.rc2.r0.g0458ee1
+pkgrel=1
 pkgdesc="A C++ library to describe geometrical objects and their properties"
 url="https://github.com/thliebig/CSXCAD"
 license=('LGPL-3.0-or-later')
@@ -70,7 +70,7 @@ _build_csxcad() {
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     -DENABLE_RPATH=OFF
     -DBUILD_TESTING=OFF
-    -Wno-author
+    -Wno-dev
   )
 
   cmake "${_cmake_options[@]}"
