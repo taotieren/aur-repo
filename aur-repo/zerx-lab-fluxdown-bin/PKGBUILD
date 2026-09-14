@@ -3,7 +3,7 @@
 
 pkgname=zerx-lab-fluxdown-bin
 pkgver=0.4.7
-pkgrel=2
+pkgrel=3
 pkgdesc="FluxDown - Rust 驱动的多协议下载管理器（HTTP/FTP/BitTorrent）"
 arch=('x86_64')
 url="https://fluxdown.zerx.dev"
