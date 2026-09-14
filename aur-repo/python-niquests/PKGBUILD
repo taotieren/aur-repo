@@ -3,7 +3,7 @@
 pkgname=python-niquests
 _pkgname="${pkgname/python-/}"
 pkgver=3.21.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Drop-in replacement for Requests. Automatic HTTP/1.1, HTTP/2, and HTTP/3. WebSocket, and SSE included.'
 arch=('any')
 url='https://github.com/jawah/niquests'
