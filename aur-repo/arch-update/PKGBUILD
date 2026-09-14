@@ -2,7 +2,7 @@
 
 pkgname=arch-update
 pkgver=4.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="An interactive update notifier & applier that assists you with important pre / post update tasks"
 url="https://github.com/Antiz96/arch-update"
 arch=('x86_64' 'aarch64')
