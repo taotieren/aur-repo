@@ -3,7 +3,7 @@
 pkgname=python-fastboot-log-parser
 _name=${pkgname#python-}
 pkgver=0.1.1
-pkgrel=5
+pkgrel=6
 epoch=
 pkgdesc="A parser for Fastboot logs"
 arch=('any')
