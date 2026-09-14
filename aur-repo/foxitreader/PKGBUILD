@@ -5,7 +5,7 @@
 pkgname=foxitreader
 pkgver=2.4.5.0727
 _foxitrevision=rb70e8df
-pkgrel=2
+pkgrel=3
 pkgdesc="A fast, secure and complete PDF viewer"
 arch=('x86_64')
 url="https://www.foxitsoftware.com/products/pdf-reader/"
