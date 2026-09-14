@@ -2,7 +2,7 @@
 
 pkgname=sunxi-fw-git
 pkgver=r27.2e2aaf4
-pkgrel=1
+pkgrel=2
 pkgdesc="Allwinner firmware images decoding and extraction tool"
 arch=($CARCH)
 url="https://github.com/apritzel/sunxi-fw"
