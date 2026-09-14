@@ -3,7 +3,7 @@
 pkgname=python-kicad-snapshot
 _name=${pkgname#python-}
 pkgver=1.0.6
-pkgrel=2
+pkgrel=3
 pkgdesc="Snapshot and visual diff tool for KiCad projects"
 provides=(${pkgname})
 conflicts=(${pkgname})
