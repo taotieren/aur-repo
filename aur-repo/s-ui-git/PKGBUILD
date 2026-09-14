@@ -3,8 +3,8 @@
 
 pkgname=s-ui-git
 _pkgname=s-ui
-pkgver=1.4.1.r0.g1f393fc
-pkgrel=12
+pkgver=1.6.2.r0.g79df629
+pkgrel=1
 pkgdesc='Advanced web panel, built for SagerNet/Sing-Box'
 arch=(aarch64 armv7h i686 x86_64 loong64)
 url='https://github.com/alireza0/s-ui'
