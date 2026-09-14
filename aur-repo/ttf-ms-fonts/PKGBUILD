@@ -6,7 +6,7 @@
 
 pkgname=ttf-ms-fonts
 pkgver=2.0
-pkgrel=12
+pkgrel=13
 pkgdesc='Core TTF Fonts from Microsoft'
 arch=('any')
 url="http://corefonts.sourceforge.net"
