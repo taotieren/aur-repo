@@ -3,7 +3,7 @@
 pkgname=python-encutils
 _name="${pkgname#python-}"
 pkgver=1.0.0
-pkgrel=2
+pkgrel=3
 pkgdesc="encoding detection collection for Python"
 arch=(any)
 url="https://github.com/coherent-oss/encutils"
