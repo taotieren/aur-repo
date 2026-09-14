@@ -3,7 +3,7 @@
 pkgname=snow-git
 groups=(snow-lang-git)
 pkgver=0.13.0.r1.g1c32691
-pkgrel=1
+pkgrel=2
 _java=25
 pkgdesc="AI-friendly programming language inspired by the LLM era. Its design goal is to make it easier for LLMs to generate and understand programming code."
 arch=($CARCH)
