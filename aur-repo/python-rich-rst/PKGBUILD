@@ -3,7 +3,7 @@
 pkgname=python-rich-rst
 _name=rich_rst
 pkgver=2.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A reStructuredText renderer for rich "
 arch=('any')
 url="https://github.com/wasi-master/rich-rst"
