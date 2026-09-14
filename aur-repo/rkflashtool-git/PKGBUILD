@@ -3,7 +3,7 @@
 pkgbase=rkflashtool-git
 pkgname=rkflashtool-git
 pkgver=r220.fc2181c
-pkgrel=1
+pkgrel=2
 pkgdesc="Tools for flashing Rockchip devices"
 arch=($CARCH)
 url="https://github.com/linux-rockchip/rkflashtool"
