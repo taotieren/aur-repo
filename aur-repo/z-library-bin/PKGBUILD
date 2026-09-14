@@ -1,7 +1,7 @@
 # Maintainer: Maciej Dems <macdems@gmail.com>
 pkgname=z-library-bin
 pkgver=3.2.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Z-library application"
 arch=('x86_64')
 url="https://z-lib.fm/z-access  "
