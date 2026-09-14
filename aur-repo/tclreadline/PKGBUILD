@@ -1,7 +1,7 @@
 # Maintainer: Ivan Kanis
 pkgname=tclreadline
 pkgver=2.4.1
-pkgrel=1
+pkgrel=2
 pkgdesc="GNU readline for interactive tcl shells"
 url="https://github.com/flightaware/tclreadline"
 arch=('x86_64' 'i686')
