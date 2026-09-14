@@ -2,7 +2,7 @@
 
 pkgname=python-toon
 pkgver=0.1.3
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="TOON (Token-Oriented Object Notation) encoder/decoder for Python - Bidirectional JSON-to-TOON converter optimized for LLMs"
 arch=('any')
