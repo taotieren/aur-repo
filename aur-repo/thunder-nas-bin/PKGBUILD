@@ -3,7 +3,7 @@
 pkgname=thunder-nas-bin
 _tagname=4.0.0-beta
 pkgver=${_tagname//-/+}
-pkgrel=3
+pkgrel=4
 pkgdesc="Thunder (Xunlei) remote download service program extracted from thunder Synology suite for other devices"
 arch=($CARCH)
 url="https://github.com/cnk3x/xunlei"
