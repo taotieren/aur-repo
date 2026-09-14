@@ -4,7 +4,7 @@
 
 pkgname=python-httpagentparser
 pkgver=1.9.9
-pkgrel=2
+pkgrel=3
 pkgdesc='Extracts OS browser information from the user agent string.'
 arch=('any')
 url='https://github.com/shon/httpagentparser/tree/master'
