@@ -85,8 +85,14 @@ makedepends=(
   'python-wheel'
   'python-uv-build'
 )
-source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
-sha256sums=('c6563a2c6abe5da5e20f4f9e875c2a9b425a2244a54fadbf46cf140a9eea45d7')
+source=(
+  "${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz"
+  gen_meta.py
+)
+sha256sums=(
+  'c6563a2c6abe5da5e20f4f9e875c2a9b425a2244a54fadbf46cf140a9eea45d7'
+  '1cbb5a870495b44eeb89d587b596b0946ede7cc95907951fcd39f711b4687728'
+)
 
 prepare() {
   cd "${_name}-${pkgver}"
