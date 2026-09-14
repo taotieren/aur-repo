@@ -3,7 +3,7 @@
 pkgname=python-dbgprobe-mcp-server
 _name=${pkgname#python-}
 pkgver=0.1.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Model Context Protocol (MCP) server that lets AI agents interact with on-chip debug probes (J-Link, CMSIS-DAP, ST-Link, etc.)"
 provides=(${pkgname})
 conflicts=(${pkgname})
