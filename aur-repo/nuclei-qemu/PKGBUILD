@@ -3,7 +3,7 @@
 pkgbase=nuclei-qemu
 pkgname=(nuclei-qemu)
 pkgver=2025.10
-pkgrel=1
+pkgrel=2
 pkgdesc="nuclei-qemu 是 Nuclei Studio IDE 的仿真工具。"
 arch=("x86_64")
 makedepends=()
