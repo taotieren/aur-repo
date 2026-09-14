@@ -6,7 +6,7 @@
 
 pkgname=python-pptx
 pkgver=1.0.2
-pkgrel=10
+pkgrel=11
 pkgdesc="A Python library for creating and updating PowerPoint (.pptx) files"
 url="https://github.com/scanny/python-pptx"
 arch=('any')
