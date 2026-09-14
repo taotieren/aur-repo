@@ -10,7 +10,7 @@
 _pkgname=autopxd
 pkgname=python-$_pkgname
 pkgver=3.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="automatically generate Cython pxd files from C headers"
 arch=(any)
 url=https://github.com/elijahr/$_pkgname
