@@ -1,7 +1,7 @@
 # Maintainer: Edvin Nilsson  <aur at edvinnilsson dot se>
 pkgname=davinci-ffmpeg-encoder-plugin
 pkgver=1.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="FFmpeg Encoder Plugin for DaVinci Resolve Studio"
 arch=('x86_64')
 url="https://github.com/EdvinNilsson/ffmpeg_encoder_plugin"
