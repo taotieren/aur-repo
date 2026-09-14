@@ -8,7 +8,7 @@ _pypi_package='ollama'
 
 pkgname="python-${_pypi_package}"
 pkgver="${_upstreamver}"
-pkgrel=1
+pkgrel=2
 pkgdesc="Ollama Python library"
 arch=('any')
 url='https://github.com/ollama/ollama-python'
