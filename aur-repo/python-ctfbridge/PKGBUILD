@@ -3,7 +3,7 @@
 pkgname=python-ctfbridge
 _name=${pkgname#python-}
 pkgver=0.8.10
-pkgrel=1
+pkgrel=2
 pkgdesc="A Python library for interacting with multiple CTF platforms"
 provides=(${pkgname})
 conflicts=(${pkgname})
