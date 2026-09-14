@@ -3,7 +3,7 @@
 pkgname=python-pydwf
 _name=${pkgname#python-}
 pkgver=1.1.19
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="A package to control Digilent Waveforms devices"
 arch=('any')
