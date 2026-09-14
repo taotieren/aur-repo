@@ -6,7 +6,7 @@ _pyname=${_pname//-/_}
 pkgname=("python-${_pname}")
 #"python-${_pname}-doc")
 pkgver=3.1.5
-pkgrel=2
+pkgrel=3
 pkgdesc='Python implementation of Protocol Buffers data types with dataclasses support.'
 arch=('any')
 url="https://eigenein.github.io/protobuf"
