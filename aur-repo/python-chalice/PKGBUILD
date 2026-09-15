@@ -4,7 +4,7 @@
 _name=chalice
 pkgname=python-$_name
 pkgver=1.33.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Python Serverless Microframework for AWS.'
 arch=('any')
 url='https://github.com/aws/chalice'
