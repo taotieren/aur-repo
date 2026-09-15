@@ -2,7 +2,7 @@
 
 pkgname=rkdeveloptool-gui
 pkgver=5.3.1
-pkgrel=1
+pkgrel=2
 pkgdesc="RKDevelopTool GUI is a graphical front-end for Rockchip's official rkdeveloptool"
 arch=(any)
 url="https://github.com/gahingwoo/RKDevelopTool-GUI"
