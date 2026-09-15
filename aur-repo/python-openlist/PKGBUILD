@@ -3,7 +3,7 @@
 pkgname=python-openlist
 _name=${pkgname//-/_}
 pkgver=0.0.1
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Python wrapper for openlist."
 arch=('any')
