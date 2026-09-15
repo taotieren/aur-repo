@@ -31,11 +31,10 @@ optdepends=()
 # install=
 options=(!strip !debug)
 source_x86_64=(
-        "iflyime_${pkgver}_amd64.deb::https://srf.xunfei.cn/sp1/com.iflytek.iflyime_${pkgver}_amd64_kylin_sp1.deb")
+        "iflyime_${pkgver}_amd64.deb::https://download.voicecloud.cn/200ime/Linux/SP1/com.iflytek.iflyime_${pkgver}_amd64_kylin_sp1.deb")
 # soucre_aarch64=(
-#         "iflyime_${pkgver}_arm64.deb::https://srf.xunfei.cn/sp1/com.iflytek.iflyime_${pkgver}_arm64_kylin_sp1.deb")
+#         "iflyime_${pkgver}_arm64.deb::https://download.voicecloud.cn/200ime/Linux/SP1/com.iflytek.iflyime_${pkgver}_arm64_kylin_sp1.deb")
 source=(
-        #         "iflyime_${pkgver}_amd64.deb::http://packages.deepin.com/deepin/pool/non-free/i/iflyime/iflyime_${pkgver}_amd64.deb"
         "https://srf.xunfei.cn/linux/help/agreement.html"
 )
 sha256sums=('13256d2fe7ace56e536b550423ecced93ac5882a297bf7c4b09db189dc383a4a')
