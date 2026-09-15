@@ -54,6 +54,7 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    export npm_config_cache="${srcdir}/.npm-cache"
     cd "${srcdir}/${pkgname}"
     pnpm install --no-frozen-lockfile --config.dangerouslyAllowAllBuilds=true
     cd "${srcdir}/${pkgname}/src-tauri"
@@ -62,6 +63,7 @@ prepare() {
 }
 
 build() {
+    export npm_config_cache="${srcdir}/.npm-cache"
     cd "${srcdir}/${pkgname}/"
 
     export RUSTUP_TOOLCHAIN=stable
