@@ -2,7 +2,7 @@
 
 pkgname=ldscript-generator
 pkgver=20.08.00.00
-pkgrel=4
+pkgrel=5
 epoch=
 pkgdesc="This is a python tool based on pydevicetree (GitHub/PyPI) which generates linker scripts for Freedom Metal applications."
 arch=('any')
@@ -30,7 +30,7 @@ install=
 changelog=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('81699bc1cc9cb6727d2b22e97192bf0431bf7018436d57cfedd13a10dc809144')
+sha256sums=('9a9e4492a71ebfa9890e5d03310651095f9e7c3588aff300b2c5df00c0cd0abe')
 #validpgpkeys=()
 
 prepare() {
