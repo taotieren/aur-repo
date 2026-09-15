@@ -1,8 +1,9 @@
-# Maintainer: Mark Wagie <mark dot wagie at proton dot me>
+# Maintainer: 
+# Contributor: Mark Wagie <mark dot wagie at proton dot me>
 pkgname=python-aiofile
 _name=${pkgname#python-}
 pkgver=3.9.0
-pkgrel=5
+pkgrel=6
 pkgdesc="Real asynchronous file operations with asyncio support"
 arch=('any')
 url="https://github.com/mosquito/aiofile"
