@@ -3,7 +3,7 @@
 pkgname=python-kicad-sch-api
 _name=${pkgname#python-}
 pkgver=0.5.4
-pkgrel=2
+pkgrel=3
 pkgdesc="Professional KiCAD schematic manipulation library with exact format preservation"
 provides=(${pkgname})
 conflicts=(${pkgname})
