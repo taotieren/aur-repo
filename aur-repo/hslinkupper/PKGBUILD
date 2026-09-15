@@ -4,7 +4,7 @@ pkgbase=hslinkupper
 pkgname=hslinknexus
 _name=HSLinkNexus
 pkgver=1.2.3
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A simple tool that allows you to config HSLink."
 arch=($CARCH)
@@ -40,7 +40,7 @@ optdepends=()
 checkdepends=()
 source=("${_name}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('2bdfc69d1b6c5b78bbcec89579cc5588eb06c6386464a0c59f806be1a97af547')
+sha256sums=('2e6d3fcd5d906a35e1a7950f17b1c5cd22a76d384b6d23feea271f60db1b026a')
 
 prepare() {
     cd "${srcdir}/${_name}/src-tauri"
