@@ -1,0 +1,15 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers='Niko')
+post_build: aur_post_build
+repo_depends:
+  - python-burner-redis
+  - python-cronsim
+  - python-py-key-value-aio
+  - python-uncalled-for
+update_on:
+  - source: aur
+    aur: python-pydocket
+  - alias: python
