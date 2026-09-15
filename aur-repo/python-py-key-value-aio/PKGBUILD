@@ -4,7 +4,7 @@
 pkgbase=python-py-key-value-aio
 _name=${pkgbase#python-}
 _name=${_name//-/_}
-pkgver=0.4.4
+pkgver=0.4.5
 pkgrel=1
 pkgdesc="Async key-value store with pluggable backends"
 arch=('any')
@@ -89,7 +89,7 @@ makedepends=(
 source=(
   "${_name}::git+${url}.git#tag=$pkgver"
 )
-sha256sums=('40cc644432741e4dcecffc8a6288e829acd8b14453b9e11e2e962b3dca3282d9')
+sha256sums=('17c077c4601c8ff85d98ee78962de89f0357f7ff50b2cb1ba59d46fbca995ced')
 
 prepare() {
   cd "${_name}"
