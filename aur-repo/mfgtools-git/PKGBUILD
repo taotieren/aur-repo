@@ -18,9 +18,9 @@ depends=(
     libstdc++.so
     libssl.so
     libusb
-    libtinyxml2.so
     libz.so
     libzstd.so
+    tinyxml2
 )
 makedepends=(
     cmake
