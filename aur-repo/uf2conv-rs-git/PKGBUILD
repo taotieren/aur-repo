@@ -10,10 +10,7 @@ license=('MIT')
 provides=(${pkgname%-git} ${pkgname%-rs-git})
 conflicts=(${pkgname%-git} ${pkgname%-rs-git})
 replaces=()
-depends=(
-    gcc-libs
-    glibc
-)
+depends=()
 makedepends=(
     git
     rust
