@@ -149,6 +149,33 @@ toml_arrays() {
   ' "$1"
 }
 
+# --------------------------------------------------------- srcdir resolution
+
+# Resolve makepkg's $srcdir for this package, mirroring makepkg's own logic:
+#   BUILDDIR defaults to $startdir (makepkg.conf may override)
+#   BUILDDIR == startdir  ->  $BUILDDIR/src
+#   otherwise             ->  $BUILDDIR/$pkgbase/src
+# lilac typically sets BUILDDIR (e.g. to /build), in which case the checkout is
+# NOT under ./src next to the PKGBUILD -- guessing ./src alone is not enough.
+find_makepkg_srcdir() {
+  local startdir="$1" pkgbase="$2" builddir="${BUILDDIR:-}"
+  if [[ -z $builddir ]]; then
+    builddir="$(
+      . /etc/makepkg.conf >/dev/null 2>&1 || true
+      printf '%s' "${BUILDDIR:-$startdir}"
+    )"
+  fi
+  [[ -n $builddir ]] || builddir="$startdir"
+  local b s
+  b="$(cd "$builddir" 2>/dev/null && pwd -P)" || b="$builddir"
+  s="$(cd "$startdir" 2>/dev/null && pwd -P)" || s="$startdir"
+  if [[ $b == "$s" ]]; then
+    printf '%s/src\n' "$b"
+  else
+    printf '%s/%s/src\n' "$b" "$pkgbase"
+  fi
+}
+
 # -------------------------------------------------------------- rendering
 
 render_pkgname() {
@@ -234,8 +261,10 @@ main() {
     local git_name="${PKGBASE#python-}"
     git_name="${git_name//-/_}"
     local base; base="$(dirname "$pkgbuild")"
+    local srcdir; srcdir="$(find_makepkg_srcdir "$base" "$PKGBASE")"
     local cand
-    for cand in "${base}/src/${git_name}/pyproject.toml" \
+    for cand in "${srcdir}/${git_name}/pyproject.toml" \
+                "${base}/src/${git_name}/pyproject.toml" \
                 "${base}/${git_name}/pyproject.toml" \
                 "${base}/pyproject.toml"; do
       if [[ -f $cand ]]; then pyproject="$cand"; break; fi

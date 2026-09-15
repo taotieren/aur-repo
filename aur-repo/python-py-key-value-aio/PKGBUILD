@@ -88,10 +88,8 @@ makedepends=(
 )
 source=(
   "${_name}::git+${url}.git#tag=$pkgver"
-  gen_meta.sh
 )
-sha256sums=('40cc644432741e4dcecffc8a6288e829acd8b14453b9e11e2e962b3dca3282d9'
-            '27e066ab1b7e0674113d46cf6bb5933fcfd013acc8ef3c70359313730c972980')
+sha256sums=('40cc644432741e4dcecffc8a6288e829acd8b14453b9e11e2e962b3dca3282d9')
 
 prepare() {
   cd "${_name}"
