@@ -35,6 +35,7 @@ sha256sums=('b64fd88871ef9b61f7f6adab9a37063b57f367faebc8f314c060f7add364e562'
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    export npm_config_allow_remote=all
     cd "${srcdir}/${pkgname}/web"
     sed -i '/"@vue\/devtools-kit"/d' package.json
 
@@ -132,8 +133,8 @@ EOF
 
 build() {
     cd "${srcdir}/${pkgname}/"
-
-
+    
+    export npm_config_allow_remote=all
     export CGO_CPPFLAGS="${CPPFLAGS}"
     export CGO_CFLAGS="${CFLAGS}"
     export CGO_CXXFLAGS="${CXXFLAGS}"
