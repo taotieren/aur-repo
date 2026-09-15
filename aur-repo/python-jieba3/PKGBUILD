@@ -3,7 +3,7 @@
 pkgname=python-jieba3
 _name=${pkgname#python-}
 pkgver=1.0.2
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="jieba 3 Chinese Word Segmentation: Building the Best Modern Python 3 Chinese Word Segmentation Component"
 arch=('any')
@@ -28,7 +28,7 @@ optdepends=()
 options=('!strip' '!debug')
 source=("${_name}::git+${url}.git#tag=${pkgver}")
 noextract=()
-sha256sums=('80054b147115ac6a09f50d54d68abcf55f2cb8d435ab71128da40effd0f4e2cb')
+sha256sums=('eac23c0ec601bbaa40b4a2c050ac3589d45c8de45c7c23e6dae688518836a3df')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
