@@ -4,8 +4,11 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
-  run_protected(['./gen_meta.sh'])
-  run_protected(["updpkgsums"])
+  # Fetch/extract the git source first: gen_meta.sh reads
+  # src/py_key_value_aio/pyproject.toml from that checkout.
+  run_protected(["makepkg", "-o", "--nobuild"])
+  # Only regenerates the meta-package blocks; no source fetching of its own.
+  run_protected(["./gen_meta.sh"])
   
 post_build_script: |
   git_pkgbuild_commit()
@@ -13,6 +16,7 @@ post_build_script: |
 repo_depends:
   - python-beartype
 update_on:
-  - source: pypi
-    pypi: py-key-value-aio
+  - source: github
+    github: strawgate/py-key-value
+    use_max_tag: true
   - alias: python

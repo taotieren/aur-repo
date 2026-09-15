@@ -1,34 +1,26 @@
 #!/usr/bin/env bash
 # Generate the backend meta-packages for python-py-key-value-aio.
 #
-# Bash port of gen_meta.py (behaviour is intended to be identical).
-#
 # Upstream declares every storage backend as an optional extra in
-# [project.optional-dependencies] of its pyproject.toml.  This script reads
-# that file from the released sdist, turns each extra into an Arch
-# meta-package (python-py-key-value-aio-<extra>), and rewrites the three
-# generated blocks of PKGBUILD:
+# [project.optional-dependencies] of its pyproject.toml.  This script turns
+# each extra into an Arch meta-package (python-py-key-value-aio-<extra>) and
+# rewrites the three generated blocks of PKGBUILD:
 #
 #   # >>>META-BEGIN:pkgname>>>   ...  # >>>META-END:pkgname>>>
 #   # >>>META-BEGIN:deps>>>      ...  # >>>META-END:deps>>>
 #   # >>>META-BEGIN:packages>>>  ...  # >>>META-END:packages>>>
 #
-# It is meant to run from lilac's pre_build_script *after* the version bump and
-# *before* the real build:
+# SCOPE: this script ONLY does meta-package generation.  Fetching sources is
+# makepkg's/lilac's job -- the source is a git checkout, so by the time this
+# runs the pyproject.toml already exists on disk and is simply read from there.
 #
-#   update_pkgver_and_pkgrel(_G.newver)
-#   run_protected(["updpkgsums"])     # fetches the NEW sdist first
-#   run_cmd(['bash', 'gen_meta.sh'])
-#
-# updpkgsums runs first so the new sdist is already on disk; this script then
-# reuses it and does NO network access.  Downloading remains only as a fallback
-# for the first build of a brand new release.
+# Usage: gen_meta.sh [--pkgbuild FILE] [--pyproject FILE]
+#                    [--exclude EXTRA] [--check]
 #
 # Exit codes: 0 = ok (with or without changes), 1 = error / not up to date.
 
 set -euo pipefail
 
-readonly PYPI_NAME="py_key_value_aio"
 readonly PROG="gen_meta"
 
 # Extras that must never become a meta-package: they are not runtime backends
@@ -41,9 +33,9 @@ die() { log "error: $*"; exit 1; }
 # ------------------------------------------------------------------- mapping
 
 # PyPI distribution name -> Arch package *suffix*.
-# This is the single source of truth: both the core deps (which get their
-# "python-" prefix later via ${_py_deps[@]/#/python-}) and the extra deps go
-# through it, otherwise the two drift apart.
+# Single source of truth: both core deps (which get their "python-" prefix
+# later via ${_py_deps[@]/#/python-}) and extra deps go through it, otherwise
+# the two drift apart.
 pypi_to_arch_suffix() {
   local name="${1,,}"
   case "$name" in
@@ -109,35 +101,6 @@ replace_block() {
     }
   ' "$file" > "$tmp"
   mv "$tmp" "$file"
-}
-
-# ----------------------------------------------------------- upstream source
-
-# Locate the sdist that lilac/makepkg already fetched (next to the PKGBUILD, or
-# in $SRCDEST).  Reusing it avoids a redundant download.
-find_local_sdist() {
-  local version="$1" base="$2" f="${PYPI_NAME}-${version}.tar.gz"
-  if [[ -n ${SRCDEST:-} && -f ${SRCDEST}/${f} ]]; then
-    printf '%s\n' "${SRCDEST}/${f}"
-  elif [[ -f ${base}/${f} ]]; then
-    printf '%s\n' "${base}/${f}"
-  fi
-}
-
-fetch_sdist() {
-  local version="$1" dest="$2" url
-  url="https://files.pythonhosted.org/packages/source/${PYPI_NAME:0:1}/${PYPI_NAME}/${PYPI_NAME}-${version}.tar.gz"
-  log "downloading ${url}"
-  curl -fsSL --retry 2 --max-time 120 -o "$dest" "$url" ||
-    die "failed to download ${url}"
-}
-
-# Print pyproject.toml from an sdist tarball.
-# bsdtar ships with libarchive on Arch; --strip-components removes the
-# versioned top-level directory so the path does not depend on the version.
-pyproject_from_archive() {
-  bsdtar -xOf "$1" --strip-components=1 "*/pyproject.toml" ||
-    die "cannot extract pyproject.toml from $1"
 }
 
 # ------------------------------------------------------------- TOML parsing
@@ -241,23 +204,17 @@ render_packages() {
 
 # -------------------------------------------------------------------- main
 
-usage() {
-  sed -n '2,30p' "$0" | sed 's/^# \{0,1\}//'
-  exit "${1:-0}"
-}
-
 main() {
-  local pkgbuild="PKGBUILD" version="" sdist="" check=0
+  local pkgbuild="PKGBUILD" pyproject="" check=0
   local -a user_excluded=()
 
   while (( $# )); do
     case "$1" in
-      --pkgbuild) pkgbuild="$2"; shift 2 ;;
-      --version)  version="$2"; shift 2 ;;
-      --sdist)    sdist="$2"; shift 2 ;;
-      --exclude)  user_excluded+=("${2,,}"); shift 2 ;;
-      --check)    check=1; shift ;;
-      -h|--help)  usage 0 ;;
+      --pkgbuild)  pkgbuild="$2"; shift 2 ;;
+      --pyproject) pyproject="$2"; shift 2 ;;
+      --exclude)   user_excluded+=("${2,,}"); shift 2 ;;
+      --check)     check=1; shift ;;
+      -h|--help)   sed -n '2,25p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
       *) die "unknown option: $1" ;;
     esac
   done
@@ -265,28 +222,30 @@ main() {
   [[ -f $pkgbuild ]] || die "${pkgbuild} not found"
 
   PKGBASE="$(read_pkgbuild_var "$pkgbuild" pkgbase)"
-  [[ -n $version ]] || version="$(read_pkgbuild_var "$pkgbuild" pkgver)"
+  local version
+  version="$(read_pkgbuild_var "$pkgbuild" pkgver)"
   log "pkgbase = ${PKGBASE}"
   log "version = ${version}"
 
-  # Prefer the sdist lilac/makepkg already downloaded; only hit the network
-  # when there is none (first build of a new release).
-  local pyproject tmpdl=""
-  if [[ -n $sdist ]]; then
-    log "using local sdist: ${sdist}"
-    pyproject="$(pyproject_from_archive "$sdist")"
-  else
-    local local_sdist
-    local_sdist="$(find_local_sdist "$version" "$(dirname "$pkgbuild")")" || true
-    if [[ -n $local_sdist ]]; then
-      log "using local sdist: ${local_sdist}"
-      pyproject="$(pyproject_from_archive "$local_sdist")"
-    else
-      tmpdl="$(mktemp -d)"
-      fetch_sdist "$version" "${tmpdl}/sdist.tar.gz"
-      pyproject="$(pyproject_from_archive "${tmpdl}/sdist.tar.gz")"
-    fi
+  # The source is a git checkout, so makepkg/lilac has already placed
+  # pyproject.toml on disk.  Look for it in the usual place (makepkg clones
+  # into $srcdir/<name>, i.e. ./src/<name> relative to the PKGBUILD).
+  if [[ -z $pyproject ]]; then
+    local git_name="${PKGBASE#python-}"
+    git_name="${git_name//-/_}"
+    local base; base="$(dirname "$pkgbuild")"
+    local cand
+    for cand in "${base}/src/${git_name}/pyproject.toml" \
+                "${base}/${git_name}/pyproject.toml" \
+                "${base}/pyproject.toml"; do
+      if [[ -f $cand ]]; then pyproject="$cand"; break; fi
+    done
   fi
+
+  [[ -n $pyproject && -f $pyproject ]] ||
+    die "pyproject.toml not found; pass --pyproject PATH (expecting the git checkout)"
+
+  log "pyproject = ${pyproject}"
 
   local -a CORE=() EXTRAS=() SKIPPED=()
   local -A EXTRA_DEPS=()
@@ -325,9 +284,7 @@ main() {
         EXTRAS+=("$extra")
         ;;
     esac
-  done < <(printf '%s\n' "$pyproject" | toml_arrays /dev/stdin)
-
-  [[ -n ${tmpdl:-} ]] && rm -rf "$tmpdl"
+  done < <(toml_arrays "$pyproject")
 
   (( ${#SKIPPED[@]} )) && log "skipped extras: $(printf '%s\n' "${SKIPPED[@]}" | sort -u | tr '\n' ' ' | sed 's/ $//')"
   log "core deps   : $( (( ${#CORE[@]} )) && printf '%s\n' "${CORE[@]}" | sort -u | tr '\n' ' ' | sed 's/ $//')"
@@ -351,7 +308,7 @@ main() {
   render_deps      > "${tmpdir}/deps"
   render_packages  > "${tmpdir}/packages"
 
-  cp "$pkgbuild" "${tmpdir}/PKGBUILD"
+  command cp -f "$pkgbuild" "${tmpdir}/PKGBUILD"
   replace_block pkgname  "${tmpdir}/pkgname"  "${tmpdir}/PKGBUILD"
   replace_block deps     "${tmpdir}/deps"     "${tmpdir}/PKGBUILD"
   replace_block packages "${tmpdir}/packages" "${tmpdir}/PKGBUILD"
