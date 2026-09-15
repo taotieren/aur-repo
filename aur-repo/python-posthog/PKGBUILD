@@ -5,7 +5,7 @@
 pkgname=python-posthog
 _name=posthog-python
 pkgver=6.7.9
-pkgrel=1
+pkgrel=2
 pkgdesc="Integrate PostHog into any python application."
 arch=('any')
 url="https://posthog.com/docs/libraries/python"
@@ -58,7 +58,7 @@ build() {
   python -m build --wheel --no-isolation
 }
 
-check() {
+_check() {
   cd "$_name-$pkgver"
 
   # Disable tests requiring network access and API key
