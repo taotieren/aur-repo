@@ -10,10 +10,7 @@ arch=($CARCH)
 url="https://github.com/rust-embedded/svdtools"
 license=('MIT AND Apache-2.0')
 groups=()
-depends=(
-  gcc-libs
-  glibc
-)
+depends=()
 makedepends=(
   git
   rust
