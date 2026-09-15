@@ -54,6 +54,8 @@ pkgver() {
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
+    cd "${srcdir}/${pkgname}"
+    pnpm install --no-frozen-lockfile --config.dangerouslyAllowAllBuilds=true
     cd "${srcdir}/${pkgname}/src-tauri"
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
