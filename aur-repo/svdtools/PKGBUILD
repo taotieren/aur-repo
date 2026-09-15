@@ -37,6 +37,7 @@ export CARGO_TARGET_DIR=target
 prepare() {
   git -C "${srcdir}/${pkgname}" clean -dfx
   cd "${srcdir}/${pkgbase}"
+  cargo update -w
   cargo fetch --locked --target host-tuple
   cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
