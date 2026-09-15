@@ -4,8 +4,7 @@ maintainers:
 build_prefix: aur-repo-x86_64
 pre_build_script: |
   update_pkgver_and_pkgrel(_G.newver)
-  run_protected(["updpkgsums"])
-  run_protected(["./gen_meta.sh"])
+  run_protected(["sh", "-c", "updpkgsums && ./gen_meta.sh"])
   
 post_build_script: |
   git_pkgbuild_commit()

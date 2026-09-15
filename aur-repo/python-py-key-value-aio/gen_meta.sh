@@ -269,6 +269,19 @@ main() {
                 "${base}/pyproject.toml"; do
       if [[ -f $cand ]]; then pyproject="$cand"; break; fi
     done
+
+    # Last resort: search for it. makepkg's srcdir cannot be predicted reliably
+    # here -- lilac runs every step in its own bwrap sandbox (with --tmpfs /tmp)
+    # and may point BUILDDIR anywhere, so a guessed path is not good enough.
+    if [[ -z $pyproject ]]; then
+      local root found
+      for root in "$srcdir" "$base" "${BUILDDIR:-}" /build /tmp; do
+        [[ -n $root && -d $root ]] || continue
+        found="$(find "$root" -maxdepth 6 -type f \
+                   -path "*${git_name}/pyproject.toml" -print -quit 2>/dev/null)"
+        if [[ -n $found ]]; then pyproject="$found"; break; fi
+      done
+    fi
   fi
 
   [[ -n $pyproject && -f $pyproject ]] ||
