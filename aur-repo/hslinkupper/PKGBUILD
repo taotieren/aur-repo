@@ -28,6 +28,7 @@ depends=(
     webkit2gtk-4.1
 )
 makedepends=(
+    git
     hidapi
     npm
     pnpm
@@ -37,18 +38,18 @@ makedepends=(
 )
 optdepends=()
 checkdepends=()
-source=("${_name}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+source=("${_name}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 sha256sums=('2bdfc69d1b6c5b78bbcec89579cc5588eb06c6386464a0c59f806be1a97af547')
 
 prepare() {
-    cd "${srcdir}/${_name}-${pkgver}/src-tauri"
+    cd "${srcdir}/${_name}/src-tauri"
     cargo fetch --locked --target host-tuple
     cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
-    cd "${srcdir}/${_name}-${pkgver}"
+    cd "${srcdir}/${_name}"
 
     export CARGO_HOME="${srcdir}/.cargo"
     {
@@ -72,9 +73,9 @@ build() {
 # }
 
 package() {
-    cd "${srcdir}/${_name}-${pkgver}"
+    cd "${srcdir}/${_name}"
 
-    install -Dvm644 69-hslink.rules -t ${pkgdir}/usr/lib/udev/rules.d/
+    # install -Dvm644 69-hslink.rules -t ${pkgdir}/usr/lib/udev/rules.d/
     install -Dm644 LICENSE -t "${pkgdir}"/usr/share/licenses/${pkgname}/
     install -Dm755 src-tauri/target/release/hslinknexus ${pkgdir}/usr/bin/${pkgname}
     install -Dm644 src-tauri/icons/128x128.png ${pkgdir}/usr/share/icons/hicolor/128x128/apps/${pkgname}.png
