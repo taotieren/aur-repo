@@ -1,7 +1,7 @@
 # Maintainer: William Whittaker <william@mailliw.org>
 
 pkgname=cargo-cntp-bundle-git
-pkgver=86222ce
+pkgver=0.3.0.r9.g4d516f9
 pkgrel=1
 pkgdesc="Bundle tool from the Contemporary project"
 arch=(x86_64 aarch64)
