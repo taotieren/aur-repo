@@ -13,6 +13,7 @@ conflicts=(${pkgname})
 replaces=()
 _qt=qt5
 depends=(
+    cairo
     fftw
     fltk
     hicolor-icon-theme
