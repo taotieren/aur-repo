@@ -3,7 +3,7 @@
 pkgname=python-dist-meta
 _name=${pkgname#python-}
 pkgver=0.9.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Parse and create Python distribution metadata'
 arch=(any)
 url='https://dist-meta.readthedocs.io/'
