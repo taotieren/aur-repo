@@ -14,7 +14,6 @@ depends=(
 	python-colorama
 	python-colorlog
 	python-networkx
-	python-pkg_resources
 	# AUR
 	python-diskcache
 )
