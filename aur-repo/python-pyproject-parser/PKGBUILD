@@ -3,7 +3,7 @@
 pkgname=python-pyproject-parser
 _name=${pkgname#python-}
 pkgver=0.14.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Parser for pyproject.toml"
 provides=(${pkgname})
 conflicts=(${pkgname})
