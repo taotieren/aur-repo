@@ -36,6 +36,8 @@ sha512sums=('c3d5c232904ebe45c5e491390fe6862b59372166c602a7b4daa4b0922c1fe8108c6
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
+    cd "${srcdir}/${_name}"
+    git cherry-pick -n 09fc626d802c2b0fd86101837d8329d2ba740b1d
 }
 
 build() {
