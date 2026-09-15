@@ -2,7 +2,7 @@
 
 pkgname=crm
 pkgver=0.2.2
-pkgrel=3
+pkgrel=4
 pkgdesc="crm (Cargo registry manager)"
 arch=($CARCH)
 url="https://github.com/wtklbm/crm"
@@ -19,7 +19,7 @@ backup=()
 options=('!lto' '!debug')
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('77cae6fd157d8e9dac38b2dbee4dd9c438d24cc2a0e6f8943c7ac1c287301118')
+sha256sums=('32f909f20700e63837c311204e6197125bf5c655fbb4d53361d5cad89ffb0407')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
