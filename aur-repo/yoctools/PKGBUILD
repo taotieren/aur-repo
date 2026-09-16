@@ -24,8 +24,6 @@ depends=(
     python-xlsxwriter
     python-ndg-httpsclient
     python-urllib3
-    #AUR
-    python-configparser
 )
 makedepends=(
     python-build
