@@ -65,7 +65,7 @@ package() {
         -type f \
         -exec install -vDm0755 -t "$pkgdir/usr/bin/" {} +
 
-    # install -vDm0644 debian/*.1 -t ${pkgdir}/usr/share/man/man1/
+    install -vDm0644 debian/*.1 -t ${pkgdir}/usr/share/man/man1/
     install -vDm0644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
     install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     cp -rv LICENSES "${pkgdir}/usr/share/licenses/${pkgname}/"
