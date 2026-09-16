@@ -26,6 +26,10 @@ makedepends=(
 source=(git+${url}.git#tag=v${pkgver})
 sha256sums=('51e0b45d428e5c0cd10f498ad953d191ca98eecea9a737741bd338855f9a02b8')
 
+prepare() {
+    git -C "${srcdir}/${_name}" clean -dfx
+}
+
 build() {
     local dir
     for dir in . fastmcp_remote fastmcp_slim fastmcp_tasks; do
