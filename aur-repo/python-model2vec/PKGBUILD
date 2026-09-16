@@ -1,7 +1,7 @@
 # Maintainer: Magi3r <magier dot mit dot f3erball at gmail dot com>
 pkgname=python-model2vec
 pkgver=0.7.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Fast State-of-the-Art Static Embeddings"
 arch=("any")
 url="https://github.com/MinishLab/model2vec"
