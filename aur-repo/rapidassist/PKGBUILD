@@ -13,10 +13,7 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
-depends=(
-    gcc-libs
-    glibc
-)
+depends=()
 makedepends=(
     git
     cmake
