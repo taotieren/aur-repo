@@ -2,7 +2,7 @@
 
 pkgbase=miassistanttool-git
 pkgname=miassistanttool-git
-pkgver=1.4.2.r1.g8f9b413
+pkgver=1.4.3.r0.gc38021a
 pkgrel=1
 pkgdesc="Cross-platform CLI for Xiaomi Mi Assistant mode: flash, wipe, reboot"
 arch=(any)
