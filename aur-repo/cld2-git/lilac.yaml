@@ -4,6 +4,7 @@ maintainers:
 pre_build_script: |
   aur_pre_build(maintainers=['Beini'])
   run_cmd(['sed', '-i', 's/cmake_minimum_required(VERSION 2.8.12)/cmake_minimum_required(VERSION 3.5)/', 'CMakeLists.txt'])
+  run_protected(["updpkgsums"])
 
 post_build_script: aur_post_build
 update_on:
