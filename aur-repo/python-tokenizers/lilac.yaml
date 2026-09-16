@@ -9,3 +9,4 @@ update_on:
   - source: aur
     aur: python-tokenizers
   - alias: python
+time_limit_hours: 3
