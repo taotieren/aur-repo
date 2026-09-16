@@ -35,9 +35,9 @@ sha256sums=('c4527894abd613f36c87ecba47b6b4ea91fd2b123509fd71d9e49ab41e656d87')
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
-    install -vDm0644 /dev/stdin pyproject.toml <<EOF
+    cat > pyproject.toml <<'EOF'
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=80", "wheel"]
 build-backend = "setuptools.build_meta"
 EOF
 }
