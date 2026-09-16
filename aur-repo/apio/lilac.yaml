@@ -9,9 +9,6 @@ pre_build_script: aur_pre_build(maintainers='Xesxen')
 post_build: aur_post_build
 
 repo_depends:
-  - python-blackiceprog-git
-  - python-icefunprog-git
-  - python-tinyfpgab-git
   - python-vcdvcd
 
 update_on:
