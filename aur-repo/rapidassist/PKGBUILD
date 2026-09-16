@@ -49,6 +49,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DRAPIDASSIST_BUILD_TEST=OFF \
         -DBUILD_SHARED_LIBS=OFF \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-author \
         -B build \
         -G Ninja
