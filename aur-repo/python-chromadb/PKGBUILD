@@ -5,7 +5,7 @@
 _pkgname=chromadb
 pkgname="python-${_pkgname}"
 pkgver=1.5.9
-pkgrel=28
+pkgrel=29
 pkgdesc="the AI-native open-source embedding database"
 arch=("x86_64" "aarch64")
 url="https://github.com/chroma-core/chroma"
