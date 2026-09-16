@@ -36,6 +36,7 @@ sha256sums=('b64fd88871ef9b61f7f6adab9a37063b57f367faebc8f314c060f7add364e562'
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     export npm_config_allow_remote=all
+    pnpm install --no-frozen-lockfile --config.dangerouslyAllowAllBuilds=true
     cd "${srcdir}/${pkgname}/web"
     sed -i '/"@vue\/devtools-kit"/d' package.json
 
