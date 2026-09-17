@@ -15,7 +15,7 @@ license=('MIT')
 depends=('python-omegaconf' 'python-antlr4' 'python-pytest'
         'python' 'python-typing_extensions' 'python-importlib_resources'
         'python-packaging')
-makedepends=('antlr4' 'git' 'python' 'python-build' 'python-installer' 'python-wheel'
+makedepends=('antlr4' 'git' 'python-build' 'python-installer' 'python-wheel'
              'python-setuptools')
 source=("$_pkgname::git+${url}.git#tag=v${pkgver}")
 sha256sums=('229dee04688dd7b89dd327a30448e16589340e17f976318e8e20df6bc8a67f33')
