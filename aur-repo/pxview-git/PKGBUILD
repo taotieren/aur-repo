@@ -6,7 +6,7 @@
 # Origin Contributor: Thomas Krug <t.krug@elektronenpumpe.de>
 
 pkgname=pxview-git
-pkgver=1.6.4.r301.df5dbdd
+pkgver=1.6.4.r306.c82eca7
 pkgrel=1
 epoch=1
 pkgdesc='GUI program for supporting various instruments from PXLogic, including logic analyzers, oscilloscopes, etc.'
