@@ -12,10 +12,11 @@ _pkgname="Black-Magic-Probe-Book"
 _pkgver=${pkgver}
 pkgdesc="Black Magic Debug Probe utilities (compuphase)"
 arch=("x86_64" "i686")
-url="https://github.com/compuphase/Black-Magic-Probe-Book"
+url="https://codeberg.org/compuphase/Black-Magic-Probe-Book"
 license=("Apache-2.0")
 depends=('nuklear' 'glfw' 'libusb' 'libbsd' 'zlib' 'gtk3')
-source=("https://github.com/compuphase/Black-Magic-Probe-Book/archive/refs/tags/v${pkgver}.tar.gz")
+makedepends=(git)
+source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 
 sha256sums=('731d9820fde1fd343399fe79a46425a0d864b91a840a01c22e433d1e1e023118')
@@ -23,7 +24,8 @@ sha256sums=('731d9820fde1fd343399fe79a46425a0d864b91a840a01c22e433d1e1e023118')
 
 prepare()
 {
-  cd "${srcdir}/${_pkgname}-${_pkgver}/source"
+  git -C "${srcdir}/${_pkgname}" clean -dfx
+  cd "${srcdir}/${_pkgname}/source"
   ln -s -f Makefile.linux Makefile
   rm -f makefile.cfg
   touch makefile.cfg
@@ -37,27 +39,27 @@ prepare()
 
 build()
 {
-  cd "${srcdir}/${_pkgname}-${_pkgver}/source"
+  cd "${srcdir}/${_pkgname}/source"
   #make -w --trace
   make
 }
 
 check()
 {
-  cd "${srcdir}/${_pkgname}-${_pkgver}/source"
+  cd "${srcdir}/${_pkgname}/source"
   #make -w --trace -k check
   #make check
 }
 
 package()
 {
-  #cd "${srcdir}/${_pkgname}-${_pkgver}/source"
+  #cd "${srcdir}/${_pkgname}/source"
 
   #
   #make prefix=/usr DESTDIR="${pkgdir}" install
 
   #
-  cd "${srcdir}/${_pkgname}-${_pkgver}/source"
+  cd "${srcdir}/${_pkgname}/source"
   install -d "${pkgdir}/usr/bin/"
   # install utils: bmflash bmdebug bmscan bmprofile bmserial bmtrace calltree elf-postlink tracegen
   install -m755 bmflash bmdebug bmscan bmprofile bmserial bmtrace "${pkgdir}/usr/bin/"
