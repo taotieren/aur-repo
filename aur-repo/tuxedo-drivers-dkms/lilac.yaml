@@ -1,9 +1,9 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['kreny'])
+pre_build_script: aur_pre_build(maintainers='StevenSeifried')
 post_build: aur_post_build
 update_on:
   - source: aur
-    aur: tuxedo-drivers-nocompatcheck-dkms
+    aur: tuxedo-drivers-dkms
   - alias: python
