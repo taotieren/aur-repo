@@ -1,37 +1,36 @@
 # Maintainer: acxz <akashpatel2008 at yahoo dot com>
+# Maintainer: taotieren <admin@taotieren.com>
 # Contributor: Harley Wiltzer <harleyw@hotmail.com>
 # Contributor: Filip Grali?ski <filipg at ceti dot pl>
 # Contributor: Andrei Shadrikov <notvuvko@gmail.com>
 
 pkgname='python-hydra-core'
-pkgver='1.3.2'
-pkgrel=3
+_pkgname=hydra
+pkgver='1.3.5'
+pkgrel=1
 pkgdesc='A framework for elegantly configuring complex applications'
 arch=('any')
-url='https://hydra.cc'
+url='https://github.com/facebookresearch/hydra'
 license=('MIT')
-depends=('python-omegaconf' 'python-antlr4' 'java-environment')
-makedepends=('antlr4' 'java-runtime>=11' 'python' 'python-build' 'python-installer' 'python-wheel'
-             'python-setuptools' 'python-packaging')
-source=("$pkgname-$pkgver::https://github.com/facebookresearch/hydra/archive/refs/tags/v${pkgver}.tar.gz"
-        "antlr4-jar.patch")
-sha256sums=('3f0f14305e9c6ae4b1dbcba344fe09dd0fc79c0a0656470c249f4f7ca46bf471'
-            '9db3a15d9c32cc754d19efbe0065025612ed6cd0d68d948ccebd5dc6544aadc6')
-
-_pkgname=hydra
+depends=('python-omegaconf' 'python-antlr4' 'python-pytest'
+        'python' 'python-typing_extensions' 'python-importlib_resources'
+        'python-packaging')
+makedepends=('antlr4' 'git' 'python' 'python-build' 'python-installer' 'python-wheel'
+             'python-setuptools')
+source=("$_pkgname::git+${url}.git#tag=v${pkgver}")
+sha256sums=('229dee04688dd7b89dd327a30448e16589340e17f976318e8e20df6bc8a67f33')
 
 prepare() {
-    pwd
-	patch -p1 -d "$_pkgname-$pkgver" < antlr4-jar.patch
+  git -C "${srcdir}/${_pkgname}" clean -dfx
 }
 
 build() {
-  cd "${srcdir}/${_pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
   python -m build --wheel --no-isolation
 }
 
 package() {
-  cd "${srcdir}/${_pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
   python -m installer --destdir="$pkgdir" dist/*.whl
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
