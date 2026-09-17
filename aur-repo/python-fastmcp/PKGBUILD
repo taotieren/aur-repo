@@ -9,7 +9,7 @@ pkgname=(
     ${pkgbase}
 )
 _name=${pkgbase#python-}
-pkgver=4.0.4
+pkgver=4.0.5
 pkgrel=1
 pkgdesc="The fast, Pythonic way to build MCP servers and clients."
 arch=('any')
@@ -24,7 +24,7 @@ makedepends=(
     'python-uv-dynamic-versioning'
 )
 source=(git+${url}.git#tag=v${pkgver})
-sha256sums=('51e0b45d428e5c0cd10f498ad953d191ca98eecea9a737741bd338855f9a02b8')
+sha256sums=('56462ad6249dc6640473a358e7f6f4f54b83e8e50489b157f0b33ba40d311a1f')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
