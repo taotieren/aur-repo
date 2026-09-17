@@ -35,6 +35,7 @@ sha256sums=('c4527894abd613f36c87ecba47b6b4ea91fd2b123509fd71d9e49ab41e656d87')
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd "${srcdir}/${_name}"
+    sed -i 's/from pkg_resources import parse_version/from packaging.version import parse as parse_version/' setup.py
     cat > pyproject.toml <<'EOF'
 [build-system]
 requires = ["setuptools>=80", "wheel"]
