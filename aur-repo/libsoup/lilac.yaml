@@ -1,7 +1,13 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['HurricanePootis', 'City-busz'])
+pre_build_script: |
+  aur_pre_build(maintainers=['HurricanePootis', 'City-busz'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=libsoup'])
+
+  run_cmd(['sed', '-i', 's/check/_check/', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
 post_build: aur_post_build
 # repo_depends:
 #   -
