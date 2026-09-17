@@ -3,7 +3,7 @@
 pkgname=python-bflb-crypto-plus
 _name=${pkgname#python-}
 pkgver=1.0
-pkgrel=8
+pkgrel=9
 epoch=
 pkgdesc="PyCryptoPlus is an extension to the Python Crypto module (www.pycrypto.org)."
 arch=('any')
@@ -24,8 +24,7 @@ _pymakedeps=(
     wheel
 )
 makedepends=(
-    "${_pymakedeps[@]/#/python-}"
-)
+    "${_pymakedeps[@]/#/python-}")
 checkdepends=()
 optdepends=()
 provides=()
