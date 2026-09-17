@@ -3,7 +3,7 @@
 
 _pkgname=affine
 pkgname=python-${_pkgname}
-pkgver=3.0.0
+pkgver=3.0.1
 pkgrel=1
 pkgdesc="Python package for matrices describing affine transformation of the plane"
 url='https://github.com/rasterio/affine'
@@ -20,7 +20,7 @@ optdepends=()
 license=('BSD-3-Clause')
 arch=('any')
 source=("${_pkgname}::git+${url}.git#tag=${pkgver}")
-sha256sums=('cb414404a4afa982cdf1dcdfb196c63b60b7cca9507dd45e1dd13fcce28ee558')
+sha256sums=('aa7bfaa0525aa84f2f139ad72f7b3af50500e58fdb8ea8465070ec306c6e5763')
 
 prepare() {
     git -C "${srcdir}/${_pkgname}" clean -dfx
