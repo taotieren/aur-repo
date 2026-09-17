@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=phosphor-dbus-interfaces-git
-pkgver=r1027.5be22bb
+pkgver=r1028.ff8dda4
 pkgrel=1
 pkgdesc="YAML descriptors of standard dbus interfaces (in OpenBMC)"
 url="https://github.com/openbmc/phosphor-dbus-interfaces"
