@@ -25,14 +25,26 @@ pkgver() {
 prepare(){
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}"
-    sed -i 's/from pkg_resources import DistributionNotFound, load_entry_point, working_set//' setup.py
+    sed -i '/^from pkg_resources import /d' setup.py
+    python - <<'PY'
+import re, io
+p = "setup.py"
+s = open(p).read()
+old = '''# Bootstrap
+try:
+    load_entry_point(setup_params["name"], ENTRY_GROUP, ENTRY_NAME)
+except (DistributionNotFound, ImportError):
+    working_set.add_entry(".")'''
+new = '''# Bootstrap disabled for setuptools>=81 / Python 3.14 (pkg_resources removed)
+pass'''
+assert old in s, "bootstrap block not found"
+s = s.replace(old, new)
+open(p, "w").write(s)
+PY
 
-    sed -i '1i import importlib.metadata' setup.py
-    sed -i '1i from packaging.version import parse as parse_version' setup.py
-    
     cat > pyproject.toml <<'EOF'
 [build-system]
-requires = ["setuptools>=80", "wheel"]
+requires = ["setuptools>=80", "wheel", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 EOF
 }
