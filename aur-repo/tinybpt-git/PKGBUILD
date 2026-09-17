@@ -13,8 +13,6 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 depends=(
     bash
-    gcc-libs
-    glibc
     openssl
 )
 makedepends=(
