@@ -1,19 +1,33 @@
+# maintainers:
+#   - github: taotieren
+#     email: admin@taotieren.com
+# pre_build_script: |
+#   aur_pre_build(maintainers=['perigoso'])
+#   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=bmputil-git'])
+  
+#   run_cmd(['sed', '-i',
+#     r's/b2sums=(\x27SKIP\x27)/b2sums=(\x27SKIP\x27)\noptions=(!lto)/',
+#     'PKGBUILD'])
+
+#   run_cmd(['updpkgsums'])
+
+# post_build: aur_post_build
+# # repo_depends:
+# #   -
+# update_on:
+#   - source: aur
+#     aur: bmputil-git
+
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: |
-  aur_pre_build(maintainers=['perigoso'])
-  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=bmputil-git'])
-  
-  run_cmd(['sed', '-i',
-    r's/b2sums=(\x27SKIP\x27)/b2sums=(\x27SKIP\x27)\noptions=(!lto)/',
-    'PKGBUILD'])
 
-  run_cmd(['updpkgsums'])
+pre_build: vcs_update
 
-post_build: aur_post_build
-# repo_depends:
-#   -
+post_build_script: |
+  git_pkgbuild_commit()
+#  update_aur_repo()
 update_on:
-  - source: aur
-    aur: bmputil-git
+  - source: gitea
+    gitea: blackmagic-debug/bmputil
+    host: codeberg.org
