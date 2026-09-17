@@ -6,7 +6,7 @@
 
 pkgname='python-hydra-core'
 _pkgname=hydra
-pkgver='1.3.5'
+pkgver=1.3.6
 pkgrel=1
 pkgdesc='A framework for elegantly configuring complex applications'
 arch=('any')
@@ -18,7 +18,7 @@ depends=('python-omegaconf' 'python-antlr4' 'python-pytest'
 makedepends=('antlr4' 'git' 'python-build' 'python-installer' 'python-wheel'
              'python-setuptools')
 source=("$_pkgname::git+${url}.git#tag=v${pkgver}")
-sha256sums=('229dee04688dd7b89dd327a30448e16589340e17f976318e8e20df6bc8a67f33')
+sha256sums=('1092dec4bbd40dcf4384276f9da16e2f0ca5b93439fff1b4918d08e7bd35d72e')
 
 prepare() {
   git -C "${srcdir}/${_pkgname}" clean -dfx
