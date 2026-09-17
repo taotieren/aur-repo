@@ -12,6 +12,7 @@ post_build_script: |
 update_on:
   - source: github
     github: set-soft/kicost-digikey-api-v3
-    use_max_tag: true
+    use_latest_release: true
+    # use_max_tag: true
     prefix: v
   - alias: python
