@@ -19,7 +19,7 @@ makedepends=(git)
 source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 
-sha256sums=('731d9820fde1fd343399fe79a46425a0d864b91a840a01c22e433d1e1e023118')
+sha256sums=('7e4e898939ff1932f220d4354968c169bdd15c0cc92946b19ac9054284da8314')
 
 
 prepare()
