@@ -17,12 +17,12 @@ depends=(
     gtk3
     libgcc_s.so
     libstdc++.so
-    libsoup3
+    libsoup
     pango
     systemd-libs
     hicolor-icon-theme
     libusb
-    webkit2gtk-4.1
+    webkit2gtk
 )
 makedepends=(
     cargo
