@@ -1,35 +1,42 @@
 # Maintainer: Kyle Manna <kyle[at]kylemanna[d0t]com>
+# Maintainer: taotieren <admin@taotieren.com>
+
 _pkgname=affine
 pkgname=python-${_pkgname}
-pkgver=2.4.0
-pkgrel=9
+pkgver=3.0.0
+pkgrel=1
 pkgdesc="Python package for matrices describing affine transformation of the plane"
 url='https://github.com/rasterio/affine'
-makedepends=('python-build'
+makedepends=('git'
+             'python-build'
              'python-installer'
              'python-wheel'
              'python-flit-core'
             )
-depends=('python')
+depends=('python'
+    'python-attrs'
+)
 optdepends=()
-license=('BSD')
+license=('BSD-3-Clause')
 arch=('any')
-source=("https://pypi.python.org/packages/source/a/${_pkgname}/${_pkgname}-${pkgver}.tar.gz")
-sha256sums=('a24d818d6a836c131976d22f8c27b8d3ca32d0af64c1d8d29deb7bafa4da1eea')
+source=("${_pkgname}::git+${url}.git#tag=${pkgver}")
+sha256sums=('cb414404a4afa982cdf1dcdfb196c63b60b7cca9507dd45e1dd13fcce28ee558')
+
+prepare() {
+    git -C "${srcdir}/${_pkgname}" clean -dfx
+    cd "${srcdir}/${_pkgname}"
+    sed -i 's|<4|<5|' pyproject.toml
+}
 
 build() {
-    cd "$srcdir/${_pkgname}-$pkgver"
+    cd "$srcdir/${_pkgname}"
     python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "$srcdir/${_pkgname}-$pkgver"
+    cd "$srcdir/${_pkgname}"
 
     python -m installer --destdir="$pkgdir" dist/*.whl
 
     install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE.txt
-
-    # https://wiki.archlinux.org/index.php/Python_package_guidelines
-    local site_packages=$(python -c 'import site; print(site.getsitepackages()[0])')
-    rm -rf "${pkgdir}${site_packages}/test"
 }
