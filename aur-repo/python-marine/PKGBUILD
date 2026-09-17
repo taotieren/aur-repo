@@ -3,7 +3,7 @@
 pkgname=python-marine
 _name=${pkgname#python-}
 pkgver=0.0.6
-pkgrel=3
+pkgrel=4
 epoch=
 pkgdesc="Marine: Multi-task learning based on Japanese accent estimatio"
 arch=('any')
@@ -39,7 +39,7 @@ optdepends=()
 options=('!strip' '!debug')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
 noextract=()
-sha256sums=('d5d7990364be80653294db04be7e7410d922aec9bafc375e0e9354cf94a00bee')
+sha256sums=('15191bcad622732114c01f5d41f1ad334b7466a28056fe8ff545f7b4aaabd791')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
