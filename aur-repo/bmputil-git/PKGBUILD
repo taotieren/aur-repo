@@ -2,7 +2,7 @@
 
 _pkgname='bmputil'
 pkgname="${_pkgname}-git"
-pkgver=r409.aa0e53b
+pkgver=r642.4de8a1b
 pkgrel=1
 pkgdesc='A tool for managing and flashing Black Magic Probe firmware'
 arch=('any')
