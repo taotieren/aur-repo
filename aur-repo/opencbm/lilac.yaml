@@ -1,10 +1,25 @@
+# maintainers:
+#   - github: taotieren
+#     email: admin@taotieren.com
+# pre_build_script: aur_pre_build(maintainers='uffe')
+# post_build: aur_post_build
+# repo_depends:
+#   - cc65-git
+# update_on:
+#   - source: aur
+#     aur: opencbm
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers='uffe')
-post_build: aur_post_build
-repo_depends:
-  - cc65-git
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
 update_on:
-  - source: aur
-    aur: opencbm
+  - source: github
+    github: OpenCBM/OpenCBM
+    # use_max_tag: true
+    use_latest_tag: true
+    prefix: v
+    exclude_regex: ".*_*"

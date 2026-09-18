@@ -25,10 +25,7 @@ options=()
 install=
 changelog=
 noextract=()
-_pkgname=OpenCBM
-_pkgver=${pkgver}
-_src_dirname=${_pkgname}-${_pkgver}
-source=("opencbm.src.tgz::https://github.com/OpenCBM/${_pkgname}/archive/v${_pkgver}.tar.gz")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 #        "nibtools.src.tgz::https://github.com/OpenCBM/nibtools/archive/refs/heads/master.tar.gz")
 sha256sums=('5499cd1143b4a246d6d7e93b94efbdf31fda0269d939d227ee5bcc0406b5056a')
 #            "a96022c26bc0dd175ca0428bc101c5d87bd891569953c06123d75244b775a466")
@@ -41,7 +38,8 @@ build_kernel_module=
 
 prepare()
 {
-  cd "${srcdir}/${_src_dirname}"
+  git -C "${srcdir}/${pkgname}" clean -dfx
+  cd "${srcdir}/${pkgname}"
 
   # nibtools
   # not in use - a separate nibtools package exists
@@ -54,11 +52,13 @@ prepare()
   #sed -i '\!#include <asm/uaccess.h>!s!.*!&\n#include <linux/uaccess.h>\n#include <linux/sched/signal.h>!' opencbm/sys/linux/cbm_module.c
   # kernel module: Makefile is needed later
   sed -i '\!-rm -f Makefile!d' opencbm/sys/linux/LINUX/Makefile
+  sed -i 's/false = 0/dfu_false = 0/' xum1541cfg/dfu-programmer-0.5.4/src/dfu-bool.h
+  sed -i 's/true  = 1/dfu_true  = 1/' xum1541cfg/dfu-programmer-0.5.4/src/dfu-bool.h
 }
 
 build()
 {
-  cd "${srcdir}/${_src_dirname}"
+  cd "${srcdir}/${pkgname}"
 
   CC65_HOME="/usr/share/cc65"
   export CC65_HOME
@@ -74,12 +74,12 @@ build()
 
 check()
 {
-  cd "${srcdir}/${_src_dirname}"
+  cd "${srcdir}/${pkgname}"
 }
 
 package()
 {
-  cd "${srcdir}/${_src_dirname}"
+  cd "${srcdir}/${pkgname}"
 
   mkdir -p "${pkgdir}/etc/udev/rules.d"
 
