@@ -54,6 +54,7 @@ build() {
     echo ${pkgver} >revision
     cmake -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_CXX_FLAGS="-I/usr/include/cairo" \
         -Wno-author \
         -B build \
         -G Ninja
