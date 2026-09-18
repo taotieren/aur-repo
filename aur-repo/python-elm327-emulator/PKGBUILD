@@ -3,7 +3,7 @@
 pkgname=python-elm327-emulator
 _name=${pkgname#python-}
 pkgver=4.0.0
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="ELM327 Emulator for testing software interfacing OBDII via ELM327 adapter."
 arch=('any')
@@ -45,6 +45,5 @@ package() {
     cd "${srcdir}/${_name}"
     python -m installer --destdir="${pkgdir}" dist/*.whl
     install -vDm 644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
-    #     install -dm 644 "$pkgdir/usr/share/doc/$pkgname/"
-    #     cp -r documentation/*.md "$pkgdir/usr/share/doc/$pkgname/"
+    install -vdm 644 *.md -t "$pkgdir/usr/share/doc/$pkgname/"
 }
