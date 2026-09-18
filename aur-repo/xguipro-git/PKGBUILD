@@ -155,10 +155,9 @@ package() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_CXX_COMPILER=clang++ \
         -DCMAKE_C_COMPILER=clang \
-        -Wno-deprecated-declarations \
+        -Wno-author \
         -B build-gtk3 \
         -G Ninja
-    #        -Wno-author \
 
     ninja -C build-gtk3
 
@@ -222,7 +221,6 @@ package() {
 #         -DCMAKE_INSTALL_LIBEXECDIR=lib \
 #         -DCMAKE_CXX_COMPILER=clang++ \
 #         -DCMAKE_C_COMPILER=clang \
-#         -Wno-deprecated-declarations \
 #         -B build-gtk4 \
 #         -G Ninja
 #     #         -Wno-author \
