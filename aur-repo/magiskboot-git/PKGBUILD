@@ -2,8 +2,8 @@
 
 pkgbase=magiskboot-git
 pkgname=magiskboot-git
-pkgver=r177.7f03dff
-pkgrel=2
+pkgver=r178.c0d5b70
+pkgrel=1
 pkgdesc="Official magiskboot form Magisk (topjohnwu) source code, use GitHub Actions to build everyday."
 arch=($CARCH)
 url="https://github.com/Uevo001/magiskboot-linux"
