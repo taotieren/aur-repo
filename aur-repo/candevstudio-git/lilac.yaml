@@ -3,7 +3,14 @@ maintainers:
     email: admin@taotieren.com
 build_prefix: aur-repo-x86_64
 pre_build: vcs_update
-pre_build_script: aur_pre_build(maintainers=['fenugrec'])
+pre_build_script: |
+  aur_pre_build(maintainers=['fenugrec'])
+  run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=candevstudio-git'])
+
+  run_cmd(['sed', '-i', 's/../-DCMAKE_POLICY_VERSION_MINIMUM=3.5 ../', 'PKGBUILD'])
+
+  run_cmd(['updpkgsums'])
+  
 post_build: aur_post_build
 repo_depends:
   - qt5-serialbus-git
