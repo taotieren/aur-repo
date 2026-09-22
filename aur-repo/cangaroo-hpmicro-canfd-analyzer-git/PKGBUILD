@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=cangaroo-hpmicro-canfd-analyzer-git
-pkgver=r18.01a523c
+pkgver=r10.196d825
 pkgrel=1
 pkgdesc="Four-channel CANFD analyzer based on hpmicro hpm5361"
 arch=($CARCH)
