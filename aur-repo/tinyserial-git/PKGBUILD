@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=tinyserial-git
-pkgver=1.5.1.r2.ga53304d
+pkgver=1.5.4.r0.g6373fd4
 pkgrel=1
 epoch=
 pkgdesc="A GUI Serial Debug Tool for Linux/Mac OS."
