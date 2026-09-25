@@ -2,8 +2,8 @@
 
 pkgname=python-webauthn
 _name=${pkgname#python-}
-pkgver=3.0.0
-pkgrel=3
+pkgver=3.0.1
+pkgrel=1
 pkgdesc="Pythonic WebAuthn"
 provides=(${pkgname})
 conflicts=(${pkgname})
@@ -25,7 +25,7 @@ makedepends=(
     'python-wheel')
 license=('BSD-3-Clause')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('ee43cb477c7d2f645bbc1b176a2dba0844ff57ae12b9357ac18ae2b1f8c2e6f8')
+sha256sums=('09608c2e35bce10f98d1d4c8d84630354b7dfb3e98292ae56489a197030f3d2c')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
