@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=adguard-tray-git
-pkgver=2.0.0.r1.gc61f51c
+pkgver=2.1.0.r1.ged365bf
 pkgrel=1
 pkgdesc="System tray monitor and controller for adguard-cli (KDE Plasma & Hyprland)"
 arch=('any')
