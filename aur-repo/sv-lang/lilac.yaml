@@ -9,6 +9,7 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-pybind11-stubgen
+  - python-nanobind-backend
 update_on:
   - source: github
     github: MikePopoloski/slang
