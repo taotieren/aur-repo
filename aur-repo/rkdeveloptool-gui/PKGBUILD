@@ -29,11 +29,8 @@ optdepends=(
 backup=()
 install=
 source=(
-    "${pkgname}::git+${url}.git#tag=${pkgver}"
-    "${pkgname}.png"
-)
-sha256sums=('10c511324f294211ad48573af91c474c56ef91682d06478d251560f0340f05b2'
-            '91619e46e6adff808ed8a3061be5226589ed07ddf9ecd8df33e1a99f5ac563c4')
+    "${pkgname}::git+${url}.git#tag=${pkgver}")
+sha256sums=('10c511324f294211ad48573af91c474c56ef91682d06478d251560f0340f05b2')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
