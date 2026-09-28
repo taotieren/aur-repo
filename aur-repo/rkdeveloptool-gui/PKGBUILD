@@ -53,6 +53,7 @@ package() {
     python -m installer --destdir="${pkgdir}" dist/*.whl
     install -vDm644 "LICENSE" -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm644 *.md -t "${pkgdir}/usr/share/doc/${pkgname}/"
-    install -vDm644 packaging/rkdeveloptool-gui.desktop -t "${pkgdir}/usr/share/applications/"
-    install -vDm644 "${srcdir}/${pkgname}.png" "${pkgdir}/usr/share/icons/hicolor/256x256/apps/${pkgname}.png"
+    install -vDm644 packaging/*.desktop -t "${pkgdir}/usr/share/applications/"
+    install -vDm644 packaging/*.appdata.xml -t "${pkgdir}/usr/share/metainfo/"
+    install -vDm644 packaging/icon/*.svg -t "${pkgdir}//usr/share/icons/hicolor/scalable/apps/"
 }
