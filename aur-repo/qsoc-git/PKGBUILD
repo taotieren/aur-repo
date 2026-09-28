@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=qsoc-git
-pkgver=2.5.0.r1.g7e5eaf7
+pkgver=2.5.1.r0.gc8c69e4
 pkgrel=1
 epoch=
 pkgdesc="QSoC - Quick System on Chip Studio"
