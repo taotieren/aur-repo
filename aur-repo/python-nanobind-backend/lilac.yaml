@@ -20,6 +20,5 @@ update_on:
   - source: github
     github: wjakob/nanobind
     use_max_tag: true
-    prefix: backend-v
-    exclude_regex: "^v"
+    pattern: 'backend-v([\d.]+)'
   - alias: python
