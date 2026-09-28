@@ -21,5 +21,5 @@ update_on:
     github: wjakob/nanobind
     use_max_tag: true
     prefix: backend-v
-    exclude_regex: ".v*"
+    exclude_regex: "v*"
   - alias: python
