@@ -27,6 +27,7 @@ makedepends=(
 
     catch2
     pybind11
+    nanobind
     python-scikit-build-core
     python-build
     python-installer
