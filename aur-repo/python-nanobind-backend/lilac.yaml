@@ -19,7 +19,7 @@ post_build_script: |
 update_on:
   - source: github
     github: wjakob/nanobind
-    exclude_regex: ".v*"
     use_max_tag: true
     prefix: backend-v
+    exclude_regex: ".v*"
   - alias: python
