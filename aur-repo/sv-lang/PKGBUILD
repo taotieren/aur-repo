@@ -28,13 +28,13 @@ makedepends=(
     catch2
     pybind11
     nanobind
-    python-nanobind-backend
     python-scikit-build-core
     python-build
     python-installer
     python-wheel
     python-setuptools
     # AUR
+    python-nanobind-backend
     python-pybind11-stubgen
 )
 optdepends=()
