@@ -7,7 +7,7 @@ pkgname=(
     clouddrive-mediaserver-plugin-jellyfin-bin
 )
 pkgver=1.0.5
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="CloudDrive2 companion plugin for Emby and Jellyfin — path-mapping discovery and cloud-aware library updates"
 arch=('x86_64')
