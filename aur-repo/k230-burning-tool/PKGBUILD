@@ -104,7 +104,7 @@ package() {
 
     sed -i 's/^#include "\.\//#include "/g' canaan-burn/include/public/*.h
 
-    install -vDm0644 gui/resources/icon.png ${pkgdir}/usr/share/icons/hicolor/256x256/${pkgname//-/}.png
+    install -vDm0644 gui/resources/icon_256x256.png ${pkgdir}/usr/share/icons/hicolor/256x256/${pkgname//-/}.png
     install -vDm0644 canaan-burn/include/public/*.h -t ${pkgdir}/usr/include/lib${pkgname//-/}/
     install -vDm0644 Licenses/LICENSE* -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -vDm0644 "canaan-burn/LICENCE" -t "${pkgdir}/usr/share/licenses/${pkgname}/canaan-burn/"
