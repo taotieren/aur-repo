@@ -30,6 +30,9 @@ makedepends=()
 optdepends=()
 # install=
 options=(!strip !debug)
+DLAGENTS=(
+  'https::/usr/bin/curl -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -fLC - --retry 3 --retry-delay 3 -o %o %u'
+)
 source_x86_64=(
         "iflyime_${pkgver}_amd64.deb::https://download.voicecloud.cn/200ime/Linux/SP1/com.iflytek.iflyime_${pkgver}_amd64_kylin_sp1.deb")
 # soucre_aarch64=(
