@@ -17,7 +17,7 @@ depends=()
 makedepends=(
     clouddrive
     libarchive
-    emby-server
+    # emby-server
     jellyfin-server
 )
 optdepends=('clouddrive: Unlocking the Unlimited Possibilities of Cloud Storage')
