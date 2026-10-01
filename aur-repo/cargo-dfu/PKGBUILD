@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=cargo-dfu
-pkgver=0.1.3
-pkgrel=8
+pkgver=0.1.4
+pkgrel=1
 pkgdesc="cargo extension for flashing embedded rust programs via dfu based on jacobrosenthals cargo-hf2"
 arch=($CARCH)
 url="https://github.com/dfu-rs/cargo-dfu"
@@ -16,7 +16,7 @@ backup=()
 options=()
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('156b4ae9bd260972186fb9d90e2c838a26835940b09c038ab2899cb90ccdb32f')
+sha256sums=('e7979ec1fa72dc07961c252a5d744699782de47ae7d4d7fbef055a40268937f1')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
