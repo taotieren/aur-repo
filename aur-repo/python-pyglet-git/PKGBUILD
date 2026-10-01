@@ -3,7 +3,7 @@
 pkgname=python-pyglet-git
 _name=${pkgname#python-}
 _name=${_name%-git}
-pkgver=2.1.16.r13.gd36a9c479
+pkgver=2.1.16.r14.g1eb311573
 pkgrel=1
 pkgdesc="A cross-platform windowing and multimedia library for Python"
 arch=('any')
