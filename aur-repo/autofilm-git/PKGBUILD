@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=autofilm-git
-pkgver=2.0.0.r14.g4f8d133
+pkgver=2.0.0.r15.ga77d03a
 pkgrel=1
 pkgdesc="A small project to provide Strm direct-link playback for Emby and Jellyfin servers, recommended for use with MediaWarp."
 arch=($CARCH)
