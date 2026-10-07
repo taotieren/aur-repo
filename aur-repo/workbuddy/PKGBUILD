@@ -2,7 +2,7 @@
 
 pkgname=workbuddy
 pkgver=5.5.6.38337834_5f969292
-pkgrel=136
+pkgrel=137
 pkgdesc="腾讯云代码助手推出的 AI Agent 办公工具"
 arch=('x86_64' 'aarch64')
 url="https://www.workbuddy.cn/app"
@@ -22,7 +22,7 @@ source=(
   WorkBuddy.desktop
   "${_registry}/better-sqlite3/-/better-sqlite3-13.0.3.tgz"
 )
-sha256sums=('233e37e037cd302d196f2c93e1f990a1f5038c512cefd232f94d1464d9f14e95'
+sha256sums=('c093969b3d9b3a1828af23728144185ada452baaf706020aa179d5f4d5dd6b8c'
             '77e0513dc1a469fb3bceec4c7fb5ad3f403109787eda05be047ec17fd56868cb')
 sha256sums_x86_64=('2ef1bca217d29d9c2ba988c82079aa6ea0077e9f1ff882c6ab5dd7998bddf721')
 sha256sums_aarch64=('0d68e8813d4ea969aced3fa68124a6023ad756d73e8cb7be4f195ac82d41bb0f')
