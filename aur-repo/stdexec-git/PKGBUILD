@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=stdexec-git
-pkgver=nvhpc.26.05.r365.gdd6ca14
-pkgrel=2
+pkgver=nvhpc.26.05.r369.gb49ec0b
+pkgrel=1
 pkgdesc="Senders - A Standard Model for Asynchronous Execution in C++"
 url="https://github.com/NVIDIA/stdexec"
 arch=(any)
