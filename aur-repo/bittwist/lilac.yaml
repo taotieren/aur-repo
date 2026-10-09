@@ -9,4 +9,4 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://bittwist.sourceforge.io/ http://plib.sourceforge.net/download.html
-    regex: 'bittwist-linux-([0-9.]+)\.tar\.gz'
+    regex: 'bittwist-linux-([0-9.]+)\.tar.gz'
