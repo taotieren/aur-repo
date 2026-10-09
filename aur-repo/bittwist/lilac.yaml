@@ -7,7 +7,6 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: git
-    git: https://git.code.sf.net/p/bittwist/git
-    branch: master
-    use_commit: true
+  - source: regex
+    url: https://bittwist.sourceforge.io/ http://plib.sourceforge.net/download.html
+    regex: 'bittwist-linux-([0-9.]+)\.tar\.gz'
