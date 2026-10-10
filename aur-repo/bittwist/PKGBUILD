@@ -3,7 +3,7 @@
 
 pkgname=bittwist
 pkgver=4.7
-pkgrel=0
+pkgrel=1
 pkgdesc='Libpcap-based Ethernet packet generator'
 url='http://bittwist.sourceforge.net'
 license=('GPL-2.0-or-later')
