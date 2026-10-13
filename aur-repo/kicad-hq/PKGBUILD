@@ -14,6 +14,7 @@ depends=(
   glib2
   glm
   glu
+  grpc
   libcairo.so
   libcurl.so
   libgcc_s.so
