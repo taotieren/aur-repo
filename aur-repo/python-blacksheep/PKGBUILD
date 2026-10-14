@@ -66,7 +66,6 @@ prepare() {
 build() {
     cd "${srcdir}/${_name}"
 
-    sed -i 's/{self.name)}/{self.name}/g' blacksheep/cookies.pyx
     cython blacksheep/url.pyx
     cython blacksheep/exceptions.pyx
     cython blacksheep/headers.pyx
@@ -81,7 +80,6 @@ build() {
     #     make annotate
     #     make build
     python -m build --wheel --no-isolation
-
 }
 
 package() {
