@@ -16,14 +16,15 @@ depends=(
     glibc
     python
     python-certifi
-    #     python-dateutil
     python-h11
+    python-h2
     python-httptools
     python-itsdangerous
     python-jinja
     python-pydantic
     python-pyjwt
     #AUR
+    python-async-timeout
     python-essentials
     python-essentials-openapi
     python-guardpost
