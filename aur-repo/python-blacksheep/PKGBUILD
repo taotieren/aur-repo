@@ -7,7 +7,6 @@ pkgrel=3
 epoch=
 pkgdesc="Fast web framework for Python asyncio"
 arch=($CARCH)
-# url="https://pypi.org/project/${_name}"
 url="https://github.com/Neoteroi/BlackSheep"
 license=(MIT)
 groups=()
@@ -52,7 +51,6 @@ checkdepends=(
 )
 optdepends=()
 options=()
-# source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 source=("${_name}::git+${url}.git#tag=v${pkgver}")
 noextract=()
 sha256sums=('4a5dee50beb1f68ce66f2915606e3f1be67c52d5154661875a64821f62c0a9a6')
