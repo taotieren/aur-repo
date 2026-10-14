@@ -2,7 +2,7 @@
 
 pkgname=python-pyhsslms
 _name=${pkgname#python-}
-pkgver=1.1.1
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="HSS/LMS Digital Signature library for Python"
 provides=(${pkgname})
@@ -26,7 +26,7 @@ makedepends=(
 optdepends=()
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=$pkgver")
-sha256sums=('e819eff6669ae0af6f8a8809519c4f6fa6385b9845cea5b7eb0a2399c81f44d6')
+sha256sums=('08e85ac688718ac316cbcecaa95c610d8094a299536e14379b78eb091adf446a')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
