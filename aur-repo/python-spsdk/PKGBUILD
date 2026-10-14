@@ -43,9 +43,11 @@ depends=(
   python-ftd2xx
   python-pyftdi
   python-pylibftdi
+  python-pyhsslms
   python-gmssl
   python-libuuu
   python-sly
+  python-spsdk-iped
   python-spsdk-pqc
   python-libusbsio
   #   python-spsdk-mcu-link

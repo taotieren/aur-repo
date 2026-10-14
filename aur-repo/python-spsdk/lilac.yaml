@@ -14,9 +14,11 @@ repo_depends:
   - python-ftd2xx
   - python-pyftdi
   - python-pylibftdi
+  - python-pyhsslms
   - python-gmssl
   # - python-libuuu-git
   - python-sly
+  - python-spsdk-iped
   - python-spsdk-pqc
   # - python-libusbsio
   - python-x690
