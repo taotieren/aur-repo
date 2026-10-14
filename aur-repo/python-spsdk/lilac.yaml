@@ -15,6 +15,7 @@ repo_depends:
   - python-pyftdi
   - python-pylibftdi
   - python-pyhsslms
+  - python-pymboot-rs
   - python-gmssl
   # - python-libuuu-git
   - python-sly
