@@ -13,7 +13,6 @@ depends=(
   ipython
   python
   python-asn1crypto
-  python-astunparse
   python-bitstring
   python-can
   python-click
