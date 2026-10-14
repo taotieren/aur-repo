@@ -65,20 +65,8 @@ prepare() {
 
 build() {
     cd "${srcdir}/${_name}"
-
-    cython blacksheep/url.pyx
-    cython blacksheep/exceptions.pyx
-    cython blacksheep/headers.pyx
-    cython blacksheep/cookies.pyx
-    cython blacksheep/contents.pyx
-    cython blacksheep/messages.pyx
-    cython blacksheep/scribe.pyx
-    cython blacksheep/baseapp.pyx
-    python setup.py build_ext --inplace
-
-    #     make buildext
-    #     make annotate
-    #     make build
+    
+    make compile
     python -m build --wheel --no-isolation
 }
 
