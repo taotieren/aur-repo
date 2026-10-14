@@ -16,6 +16,8 @@ depends=(
     glibc
     python
     python-certifi
+    python-cryptography
+    python-defusedxml
     python-h11
     python-h2
     python-httptools
@@ -23,6 +25,7 @@ depends=(
     python-jinja
     python-pydantic
     python-pyjwt
+    python-websockets
     #AUR
     python-async-timeout
     python-essentials
