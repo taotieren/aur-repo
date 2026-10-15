@@ -2,8 +2,8 @@
 
 pkgname=kicad-hq
 _name=${pkgname%-hq}
-pkgver=10.0.6
-pkgrel=2
+pkgver=10.0.7
+pkgrel=1
 pkgdesc="Electronic schematic and printed circuit board (PCB) design tools"
 arch=($CARCH)
 url="https://gitlab.com/kicad-hq/kicad"
@@ -64,7 +64,7 @@ optdepends=(
 conflicts=(${pkgname} 'kicad' 'kicad-bzr')
 provides=(${pkgname} 'kicad' 'kicad-bzr')
 source=("${pkgname}::git+https://gitlab.com/kicad-hq/kicad.git#tag=${pkgver}")
-sha256sums=('e3ac77feb5ff9f99e4784804ce21f206316c9acb17274bb4f899f516ba7d4fc1')
+sha256sums=('6cbef0d8196595b03d2f180365cb653d4e935e0dae714a582a81df4f30e71aee')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
