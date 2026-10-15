@@ -30,7 +30,7 @@ source=(${pkgname}::git+$url.git
 )
 noextract=()
 sha256sums=('SKIP'
-            'a3f328c21e39ddd1f2be1cea43ac0dec819eaa20a90425d7da901a11531b3aa5'
+            'f66dff1bdf8f96060b8177976f8b7d9254bc89bc4db933d769f7384d28480bc9'
             'aef37c794e79637913ceb23a9a300c51cf4d3264ab48837c82209f4bf6c3cddb')
 
 pkgver() {
