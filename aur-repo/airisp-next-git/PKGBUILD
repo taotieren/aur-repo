@@ -29,6 +29,7 @@ makedepends=(
     hidapi
     libayatana-appindicator
     librsvg
+    node
     rust
     pango
     pnpm
