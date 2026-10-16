@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=scope-monitor
-pkgver=0.6.0
-pkgrel=4
+pkgver=0.6.1
+pkgrel=1
 pkgdesc="A multi-platform serial monitor with user-extensible features"
 arch=($CARCH)
 url="https://github.com/matheuswhite/scope-rs"
@@ -24,7 +24,7 @@ backup=()
 options=(!lto)
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('5819846536f4d3616ac19ea09d89972960f37a50b0d51d6b0fc151012959b493')
+sha256sums=('30eac701b5bd0dfa11219b638f7fcd5ba1ddc835c9abad1b347345c7f8deab87')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
