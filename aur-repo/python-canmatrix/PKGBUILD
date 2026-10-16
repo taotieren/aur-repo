@@ -2,7 +2,7 @@
 
 pkgname=python-canmatrix
 _name=${pkgname#python-}
-pkgver=1.3.1
+pkgver=1.3.2
 pkgrel=1
 epoch=
 pkgdesc="Canmatrix is a python package to read and write several CAN (Controller Area Network) database formats"
@@ -37,7 +37,7 @@ makedepends=(
 options=('!strip' '!debug')
 source=("${_name}::git+${url}.git#tag=${pkgver}")
 noextract=()
-sha256sums=('489ceea825f3ecbb5a020e19efd3b0973866b755f4c0b62513de5ec8bd4653aa')
+sha256sums=('7b5e51dc6b1f46d75881101ec6293787daf2dfe375e583607c68f3957cf48869')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
