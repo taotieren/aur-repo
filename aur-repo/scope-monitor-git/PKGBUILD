@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=scope-monitor-git
-pkgver=0.6.0.r51.ge407f6b
+pkgver=0.6.0.r53.gfc3ca7c
 pkgrel=1
 pkgdesc="A multi-platform serial monitor with user-extensible features"
 arch=($CARCH)
