@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-box-rust-git
-pkgver=2.3.0.rust.1.r4.g7cbcb6c
-pkgrel=4
+pkgver=2.3.0.rust.1.r5.gada52c8
+pkgrel=1
 pkgdesc="Linyaps OCI runtime implemented in Rust A command-compatible Rust implementation of the Linyaps OCI runtime"
 arch=($CARCH)
 url="https://github.com/guanzi008/linyaps-box-rust"
