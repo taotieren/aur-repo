@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=linyaps-rust-git
-pkgver=1.14.0.rust.1.r18.gcd16fdc
+pkgver=1.14.0.rust.1.r19.g96b9762
 pkgrel=1
 pkgdesc="Linyaps package manager implemented in Rust A command-compatible Rust implementation of the Linyaps package manager"
 arch=($CARCH)
