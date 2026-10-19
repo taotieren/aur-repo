@@ -2,7 +2,7 @@
 
 pkgname=perl-encode-hanconvert
 pkgver=0.35
-pkgrel=4
+pkgrel=5
 pkgdesc='Modules and scripts for Traditional and Simplified Chinese mappings'
 _dist=Encode-HanConvert
 arch=($CARCH)
