@@ -2,7 +2,7 @@
 
 pkgbase=openarm-can
 pkgname=(openarm-can python-openarm-can)
-pkgver=1.4.0
+pkgver=1.4.1
 pkgrel=1
 pkgdesc='A C++ library for CAN communication with OpenArm robotic hardware, supporting Damiao motors over CAN/CAN-FD interfaces.'
 arch=($CARCH)
@@ -38,7 +38,7 @@ optdepends=(
   "kh-ucanfd: KunHong UCANFD Linux driver"
 )
 source=("${pkgbase}::git+${url}.git#tag=${pkgver}")
-sha256sums=('c449e99b366f7f616e0748d1e510c279c5ddce6d0055f55962293df13eb2759e')
+sha256sums=('cec8a82360b494074e1843f2b53420e26a49510dab0a764ebfab004d830a21da')
 
 prepare() {
   git -C "${srcdir}/${pkgbase}" clean -dfx
