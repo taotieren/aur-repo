@@ -2,16 +2,19 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 
-pre_build_script: |
-  import re
-  ver = _G.newver
-  m = re.fullmatch(r'(\d)(\d+)([a-z]?)', ver)
-  if m:
-      pkgver = f"{m.group(1)}.{m.group(2)}{m.group(3)}"
-  else:
-      pkgver = ver
-  update_pkgver_and_pkgrel(pkgver)
+# pre_build_script: |
+#   import re
+#   ver = _G.newver
+#   m = re.fullmatch(r'(\d)(\d+)([a-z]?)', ver)
+#   if m:
+#       pkgver = f"{m.group(1)}.{m.group(2)}{m.group(3)}"
+#   else:
+#       pkgver = ver
+#   update_pkgver_and_pkgrel(pkgver)
 
+pre_build_script: |
+  update_pkgver_and_pkgrel(_G.newver)
+  
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
