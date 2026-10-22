@@ -6,7 +6,13 @@ pre_build_script: |
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
+# update_on:
+#   - source: regex
+#     url: https://www.7-zip.org/sdk.html
+#     regex: 'lzma([\d.]+).7z'
 update_on:
-  - source: regex
-    url: https://www.7-zip.org/sdk.html
-    regex: 'lzma([\d.]+).7z'
+  - source: github
+    github: ip7z/7zip
+    # use_max_tag: true
+    use_latest_release: true
+    # prefix: v
