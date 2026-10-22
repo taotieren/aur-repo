@@ -6,10 +6,6 @@ pre_build_script: |
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
-# update_on:
-#   - source: htmlparser
-#     url: "https://www.7-zip.org/sdk.html"
-#     xpath: "/html/body/table/tbody/tr/td[2]/table/tbody/tr[2]/td[4]"
 update_on:
   - source: regex
     url: https://www.7-zip.org/sdk.html
