@@ -71,7 +71,8 @@ package() {
         -type f \
         -exec install -Dm0755 -t "$pkgdir/usr/bin/" {} +
     make DESTDIR="$pkgdir" PREFIX=/usr install
-    install -Dm0644 docs/* -t "${pkgdir}/usr/share/doc/${pkgname}"
+    install -dm0755 ${pkgdir}/usr/share/doc/${pkgname}
+    cp -R docs/* "${pkgdir}/usr/share/doc/${pkgname}/"
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dm0644 /dev/stdin "${pkgdir}/usr/lib/udev/rules.d/60-canboat-actisense.rules" <<EOF
 # Copy this file to /etc/udev/rules.d/
