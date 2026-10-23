@@ -2,7 +2,7 @@
 
 pkgbase=ruri-git
 pkgname=ruri-git
-pkgver=3.9.5.r7.g7f76284
+pkgver=3.9.5.r8.g5b8642d
 pkgrel=1
 pkgdesc="A zipped Linux container runtime that zips (Lightweight User-friendly Linux-container Implementation)"
 arch=($CARCH)
