@@ -3,7 +3,7 @@
 pkgname=python-wifit3
 _name=${pkgname#python-}
 pkgver=0.6.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A standalone USB Wi-Fi auditor"
 provides=(${pkgname})
 conflicts=(${pkgname})
