@@ -1,2 +1,1 @@
-- Fix batch selection context menus like the run script action not showing
-- Fix crashes on Linux due to missing CPU features
+- Implement various fixes to prevent MCP sessions freezing up
