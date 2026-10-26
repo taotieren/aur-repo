@@ -57,5 +57,5 @@ package() {
     install -vDm644 "${_src}/LICENSE.md" "${pkgdir}/usr/share/licenses/$pkgname/LICENSE.md"
     install -vDm644 "${_src}/README.md" "${pkgdir}/usr/share/doc/$pkgname/README.md"
     install -vDm644 "${_src}/PRIVACY.md" "${pkgdir}/usr/share/doc/$pkgname/PRIVACY.md"
-    install -vDm644 "${_src}/CONFIG.example.json" "${pkgdir}/etc/wangyunchuan/config.json"
+    install -vDm640 "${_src}/CONFIG.example.json" "${pkgdir}/etc/wangyunchuan/config.json"
 }
