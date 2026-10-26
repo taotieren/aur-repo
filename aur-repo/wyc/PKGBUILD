@@ -29,7 +29,7 @@ source_aarch64=("${pkgname}-clent-linux-arm64-${pkgver}.tar.gz::https://update.t
 sha256sums=('b43ded86c239ef44c4f9b7dcac115507fda82719c3f9c02d3f6acc568e7a1b0a'
             '6903a173a8cafaaa20690a915c8427f55925d270ed3a7940afd083ebc72ad089'
             '1f64b0ebd17ccbf69024e62622816474800f07049a5a5bc85ede142a0ea77523'
-            '5816ffd39bdf4c5e9bd4e6e37cba7949446c29d565e14b448991947afe9673e6')
+            '709f2603fdfe6901b8016a32a43f62051dcbe28ee2671b4d4e45323956a298d0')
 sha256sums_x86_64=('75ed6c88c05fd7fc637271a9c2fc79eff2241a3c22e9cbf7dff0a9edd453806b')
 sha256sums_aarch64=('8efe0b7cec593666e1b6604cd97738ff95a31b081ad6155871e380f6f73941b4')
 noextract=(

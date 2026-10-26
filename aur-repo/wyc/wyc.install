@@ -23,12 +23,12 @@ _help() {
        sudo systemctl disable --now wangyunchuan
 
 配置文件 /etc/wangyunchuan/config.json 已纳入 backup，升级时保留你的改动。
-状态与日志由 wyc-client 自动维护（位于 StateDirectory /var/lib/wangyunchuan
+状态与日志由 wyc 自动维护（位于 StateDirectory /var/lib/wangyunchuan
 与 RuntimeDirectory /run/wangyunchuan），无需手工管理。
 
 如需使用新版「多隧道 / 账号绑定」能力，可直接调用官方子命令：
-  wyc-client add --token <Token> / list / status / logs <ID> / doctor
-（该模式需先通过 `wyc-client install` 安装其自带常驻服务，与本包的
+  wyc add --token <Token> / list / status / logs <ID> / doctor
+（该模式需先通过 `wyc install` 安装其自带常驻服务，与本包的
  wangyunchuan.service 二选一，请勿同时启用）
 
 优惠码: oi0bhf
