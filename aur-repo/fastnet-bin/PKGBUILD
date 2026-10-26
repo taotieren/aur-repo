@@ -14,7 +14,7 @@ conflicts=(${pkgbase%-bin})
 depends=()
 makedepends=()
 optdepends=()
-source=("https://fw0.koolcenter.com/binary/fastnet/${_name}-binary-raw-${pkgver}.tar.gz")
+source=("https://fw0.koolcenter.com/binary/fastnet/${pkgname%-bin}-binary-raw-${pkgver}.tar.gz")
 sha256sums=('98a4272ea1b086f7ff7ef09e666283f4e37eb6b8c6ede8ba5d4ca87cf5f2b361')
 options=(!debug !strip)
 
