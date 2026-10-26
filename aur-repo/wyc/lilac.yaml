@@ -8,7 +8,7 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: https://wangyunchuan.com/down
-    regex: 'V([\d.]+)'
+    url: https://update.too1.net/api/public/v2/apps/wyc/catalog?channel=stable&locale=zh-CN&source=wyc_official
+    regex: 'wyc-client-linux-x64-([\d.]+).tar.gz'
 # - source: manual
 #   manual: 1
