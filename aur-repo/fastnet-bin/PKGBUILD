@@ -2,7 +2,7 @@
 
 pkgbase=fastnet-bin
 pkgname=fastnet-bin
-_name=${pkgname%-bin}
+_name=FastNet
 pkgver=0.7.6
 pkgrel=2
 pkgdesc="FastNet -- Goal: Make a full-platform speed measurement software! - TUI"
@@ -21,10 +21,10 @@ options=(!debug !strip)
 package() {
     cd "${srcdir}/${_name}-binary-raw-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
-        install -vDm755 ${_name}.x86_64 ${pkgdir}/usr/bin/${_name}
+        install -vDm755 ${_name}.x86_64 ${pkgdir}/usr/bin/${pkgname%-bin}
     elif [ ${CARCH} = "aarch64" ]; then
-        install -vDm755 ${_name}.aarch64 ${pkgdir}/usr/bin/${_name}
+        install -vDm755 ${_name}.aarch64 ${pkgdir}/usr/bin/${pkgname%-bin}
     elif [ ${CARCH} = "armv7h" ]; then
-        install -vDm755 ${_name}.arm ${pkgdir}/usr/bin/${_name}
+        install -vDm755 ${_name}.arm ${pkgdir}/usr/bin/${pkgname%-bin}
     fi
 }
