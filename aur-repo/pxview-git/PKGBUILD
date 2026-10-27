@@ -30,6 +30,7 @@ depends=(
   zlib 
   qt6-base
   qt6-multimedia
+  qt6-serialport
   qt6-websockets
 )
 makedepends=(
