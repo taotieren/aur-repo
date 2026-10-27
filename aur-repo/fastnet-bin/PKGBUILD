@@ -19,7 +19,7 @@ sha256sums=('98a4272ea1b086f7ff7ef09e666283f4e37eb6b8c6ede8ba5d4ca87cf5f2b361')
 options=(!debug !strip)
 
 package() {
-    cd "${srcdir}/${_name}-binary-raw-${pkgver}/"
+    cd "${srcdir}/${pkgname%-bin}-binary-raw-${pkgver}/"
     if [ ${CARCH} = "x86_64" ]; then
         install -vDm755 ${_name}.x86_64 ${pkgdir}/usr/bin/${pkgname%-bin}
     elif [ ${CARCH} = "aarch64" ]; then
