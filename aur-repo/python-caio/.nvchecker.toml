@@ -1,5 +1,0 @@
-[python-caio]
-source = "pypi"
-pypi = "caio"
-#source = "git"
-#git = "https://github.com/mosquito/caio.git"
