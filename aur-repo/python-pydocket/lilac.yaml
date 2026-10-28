@@ -6,7 +6,6 @@ pre_build_script: aur_pre_build(maintainers=['Niko', 'Dominiquini'])
 post_build: aur_post_build
 repo_depends:
   - python-burner-redis
-  - python-cronsim
   - python-py-key-value-aio
   - python-uncalled-for
 update_on:
