@@ -13,12 +13,8 @@ groups=()
 provides=(${pkgname})
 conflicts=(${pkgname})
 _pydeps=(
-    asn1crypto
     importlib-metadata
-    pytest
     # AUR
-    asn1tools
-    pycrate
     t61codec
 )
 depends=(

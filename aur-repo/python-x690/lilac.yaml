@@ -8,7 +8,6 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-t61codec
-  - python-pycrate
 update_on:
   - source: github
     github: exhuma/x690
