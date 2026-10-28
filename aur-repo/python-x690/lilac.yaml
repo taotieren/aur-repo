@@ -8,7 +8,11 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-t61codec
+  - python-pycrate
 update_on:
-  - source: pypi
-    pypi: x690
+  - source: github
+    github: exhuma/x690
+    # use_max_tag: true
+    use_latest_release: true
+    prefix: v
   - alias: python
