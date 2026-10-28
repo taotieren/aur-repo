@@ -10,7 +10,6 @@ repo_depends:
   - python-argparse-addons
   - python-bitstruct
   - python-crccheck
-  - python-diskcache
   - python-textparser
 update_on:
   - source: github
