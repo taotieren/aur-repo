@@ -37,7 +37,7 @@ makedepends=(
     pkgconf
     spdlog
 )
-optdepends=('motrix-next: A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust')
+optdepends=('rayburst: A full-featured download manager rebuilt with Tauri 2, Vue 3, and Rust')
 backup=()
 options=()
 #install=${pkgname}.install

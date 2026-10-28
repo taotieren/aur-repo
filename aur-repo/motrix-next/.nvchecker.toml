@@ -1,5 +1,0 @@
-[motrix-next]
-source = "github"
-github = "AnInsomniacy/motrix-next"
-use_latest_release = true
-prefix = "v"
