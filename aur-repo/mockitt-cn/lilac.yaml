@@ -8,7 +8,7 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: "https://modao.cc/feature/downloads.html"
-    regex: 'modao-([\d.]+)-x86.deb'
+    url: "https://modao.cc/feature/downloads"
+    regex: 'modao-linux-x64-([\d.]+).deb'
 # - source: manual
 #   manual: 1
