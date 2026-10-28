@@ -1,6 +1,7 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: |
   aur_pre_build(maintainers=['AlphaJack', 'medaminezghal', 'Dominiquini'])
   add_depends(['python-packaging', 'python-pydantic-core', 'python-typing_extensions', 'python-dateutil', 'sh', 'python-cryptography', 'python-botocore', 'python-certifi', 'python-backoff'])
