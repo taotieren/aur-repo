@@ -11,3 +11,4 @@ update_on:
     github: Serial-Studio/Serial-Studio
     use_max_tag: true
     prefix: v
+time_limit_hours: 3
