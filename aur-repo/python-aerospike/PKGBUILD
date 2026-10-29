@@ -47,6 +47,7 @@ prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
     cd ${srcdir}/${_name}
     sed -i -E '/versioningit|parver/s/==[0-9][^"]*//' pyproject.toml
+    sed -i '/extra_compile_args.append("-Werror")/d' setup.py
     
     git submodule init
     git config submodule.aerospike-client-c.url "$srcdir/aerospike-client-c"
