@@ -2,7 +2,7 @@
 
 pkgname=libcper-git
 pkgver=r254.f4dd700
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="CPER JSON Representation & Conversion Library"
 arch=($CARCH)
