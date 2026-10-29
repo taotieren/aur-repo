@@ -1,0 +1,56 @@
+# Maintainer: Susurri <susurrus dot silent at gmail dot com>
+# Contributor: Miten <git dot pub at icloud dot com>
+# Contributor: Ryan Gonzalez <rymg19 at gmail dot com>
+# Contributor: Frederic Bezies <fredbezies at gmail dot com>, youngunix <>
+
+pkgname=swift-bin
+pkgver=6.4.1
+pkgrel=3
+pkgdesc="Binary builds of the Swift programming language"
+arch=('x86_64' 'aarch64')
+url="https://www.swift.org/"
+license=('apache')
+depends=('util-linux-libs' 'libxml2-legacy' 'ncurses')
+makedepends=('patchelf')
+optdepends=('python312: required for REPL')
+options=('!strip')
+provides=('swift-language')
+replaces=('swift-language-bin')
+source_x86_64=("https://download.swift.org/swift-$pkgver-release/ubi10/swift-$pkgver-RELEASE/swift-$pkgver-RELEASE-ubi10.tar.gz")
+source_aarch64=("https://download.swift.org/swift-$pkgver-release/ubi10-aarch64/swift-$pkgver-RELEASE/swift-$pkgver-RELEASE-ubi10-aarch64.tar.gz")
+sha256sums_x86_64=('180ca7843cd092f2bcce230ab59c3b025159a41e81696e6543f349405f34d321')
+sha256sums_aarch64=('632c82f08b48bebd7e66e5b43bb30f9c6dce51a3c1ac5c60c01aa08c9645cf5d')
+
+package() {
+  _swift_root="/usr/lib/swift/usr"
+  find_elf_only() {
+    find "${pkgdir}${_swift_root}" \
+      -executable -type f \
+      '(' -path '*/bin/*' -o -name '*.so*' ')' \
+      -not '(' -name '*.py' -o -name 'hwasan_symbolize' ')' \
+      "$@"
+  }
+
+  _archsuffix=""
+  if [[ $CARCH == "aarch64" ]]; then
+    _archsuffix="-aarch64"
+  fi
+  mkdir -p "${pkgdir}${_swift_root}"
+  cp -Ppr "${srcdir}/swift-$pkgver-RELEASE-ubi10${_archsuffix}"/usr/* "${pkgdir}${_swift_root}"
+
+  # Symlink the desired binaries to /usr/bin
+  mkdir -p "${pkgdir}/usr/bin"
+  for bin in sourcekit-lsp swift swiftc; do
+    ln -s "${_swift_root}/bin/$bin" "${pkgdir}/usr/bin/$bin"
+  done
+
+  # Patch the binaries to use the changed ncurses names
+  patchelf=(patchelf)
+  for lib in ncurses panel form; do
+    patchelf+=(--replace-needed "lib${lib}.so.6" "lib${lib}w.so")
+  done
+  find_elf_only -exec "${patchelf[@]}" {} \;
+
+  install -dm755 "${pkgdir}/etc/ld.so.conf.d"
+  echo '${_swift_root}/lib/swift/linux' >> "${pkgdir}/etc/ld.so.conf.d/swift.conf"
+}
