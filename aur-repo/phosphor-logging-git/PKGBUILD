@@ -12,6 +12,7 @@ groups=()
 depends=(
     systemd-libs
     #AUR
+    libcper-git
     sdbusplus-git
     sdeventplus-git
     phosphor-dbus-interfaces-git
