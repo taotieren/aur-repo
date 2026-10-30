@@ -4,9 +4,9 @@ maintainers:
 pre_build_script: aur_pre_build(maintainers=['alerque'])
 post_build: aur_post_build
 repo_depends:
-  - deckcraft
-  - gridcraft
-  - wordcraft
+  - deckcraft-bin
+  - gridcraft-bin
+  - wordcraft-bin
 
 update_on:
   - source: aur
