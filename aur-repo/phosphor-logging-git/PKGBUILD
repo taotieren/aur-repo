@@ -27,6 +27,7 @@ makedepends=(
     nlohmann-json
     python-jsonschema
     meson
+    pkgconf
 )
 checkdepends=()
 optdepends=()
