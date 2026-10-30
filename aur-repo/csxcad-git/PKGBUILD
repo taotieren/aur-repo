@@ -6,7 +6,7 @@
 _pkgname="csxcad"
 pkgbase="$_pkgname-git"
 pkgver=0.7.0.rc2.r0.g0458ee1
-pkgrel=1
+pkgrel=2
 pkgdesc="A C++ library to describe geometrical objects and their properties"
 url="https://github.com/thliebig/CSXCAD"
 license=('LGPL-3.0-or-later')
