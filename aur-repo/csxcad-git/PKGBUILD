@@ -5,8 +5,8 @@
 
 _pkgname="csxcad"
 pkgbase="$_pkgname-git"
-pkgver=0.7.0.rc2.r0.g0458ee1
-pkgrel=0
+pkgver=0.7.0.r8.g626b99f
+pkgrel=1
 pkgdesc="A C++ library to describe geometrical objects and their properties"
 url="https://github.com/thliebig/CSXCAD"
 license=('LGPL-3.0-or-later')
@@ -125,8 +125,8 @@ _package_python-csxcad() {
 
 _pkgtype="${pkgbase#$_pkgname}"
 
-pkgname=(python-csxcad-git csxcad-git)
-[[ "${_build_python::1}" == "t" ]]
+pkgname=("$_pkgname${_pkgtype:-}")
+[[ "${_build_python::1}" == "t" ]] && pkgname+=("python-$_pkgname${_pkgtype:-}")
 
 for _p in "${pkgname[@]}"; do
   _q="${_p%${_pkgtype:-}}"
