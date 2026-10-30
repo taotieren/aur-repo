@@ -20,6 +20,7 @@ depends=(
   gstreamer
   gtk3
   harfbuzz
+  libatomic
   libcap
   libedit
   libepoxy
@@ -39,7 +40,6 @@ depends=(
   libxss
   systemd-libs
   pango
-  pybind11
   python
   python-cairo
   python-configobj
@@ -76,6 +76,7 @@ makedepends=(
   openbsd-netcat
   procps-ng
   psmisc
+  pybind11
   python-pillow
   python-sphinx
   man-db
