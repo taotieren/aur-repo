@@ -10,7 +10,6 @@ pre_build_script: |
 post_build: aur_post_build
 repo_depends:
   - python-backoff
-  - python-google-genai
 update_on:
   - source: aur
     aur: python-posthog
