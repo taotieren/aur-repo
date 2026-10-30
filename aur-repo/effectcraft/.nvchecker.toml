@@ -1,4 +1,0 @@
-[effectcraft]
-source = "git"
-git = "https://github.com/storytold/effectcraft.git"
-prefix = "v"

@@ -1,4 +1,0 @@
-[photocraft]
-source = "git"
-git = "https://github.com/storytold/photocraft.git"
-prefix = "v"

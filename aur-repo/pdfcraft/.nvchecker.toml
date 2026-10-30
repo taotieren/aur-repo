@@ -1,4 +1,0 @@
-[pdfcraft]
-source = "git"
-git = "https://github.com/storytold/pdfcraft.git"
-prefix = "v"

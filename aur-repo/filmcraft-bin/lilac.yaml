@@ -1,11 +1,11 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['alerque'])
+pre_build_script: aur_pre_build(maintainers=['QiE2035'])
 post_build: aur_post_build
 # repo_depends:
 #   -
 update_on:
   - source: aur
-    aur: photocraft
+    aur: filmcraft-bin
 time_limit_hours: 3

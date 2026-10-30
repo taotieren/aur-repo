@@ -1,4 +1,0 @@
-[vectorcraft]
-source = "git"
-git = "https://github.com/storytold/vectorcraft.git"
-prefix = "v"
