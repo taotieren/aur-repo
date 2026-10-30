@@ -1,4 +1,0 @@
-[cadcraft]
-source = "git"
-git = "https://github.com/storytold/cadcraft.git"
-prefix = "v"
