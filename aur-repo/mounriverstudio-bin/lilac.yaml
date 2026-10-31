@@ -7,8 +7,8 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 # repo_depends:
-#   - ncurses5-compat-libs
+#   - 
 update_on:
   - source: regex
     url: http://api.mounriver.com/mountriver/api/version/fetchRecent2?swType=2&osType=LINUX&lang=zh
-    regex: 'softFileName":"MounRiverStudio_Linux_X64_V(\d+)\.tar\.xz'
+    regex: 'softFileName":"MounRiverStudio_Linux_X64_V(\d+)\.deb'
