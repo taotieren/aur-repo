@@ -4,8 +4,8 @@
 pkgbase=mounriverstudio-bin
 pkgname=(${pkgbase})
 pkgdesc="MounRiver Studio Linux 平台全功能版本，内置芯片工程模板，集成工程新建、代码编辑、编译、调试、下载模块以及嵌入式开发辅助工具"
-pkgver=250
-pkgrel=3
+pkgver=300
+pkgrel=1
 arch=('x86_64')
 url='http://www.mounriver.com/'
 license=('LicenseRef-commercial')
