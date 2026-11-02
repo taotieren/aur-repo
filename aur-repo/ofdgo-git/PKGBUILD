@@ -74,6 +74,6 @@ Icon=ofdgo
 Terminal=false
 StartupNotify=true
 Categories=Office;Viewer;
-MimeType=application/ofd;application/pfd;
+MimeType=application/ofd;application/pdf;
 EOF
 }
