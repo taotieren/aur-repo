@@ -11,3 +11,4 @@ update_on:
     github: AI-Shell-Team/aish
     use_max_tag: true
     prefix: v
+    exclude_regex: ".*(?:rc|-).*"
