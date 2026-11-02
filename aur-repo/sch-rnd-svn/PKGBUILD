@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=sch-rnd-svn
-pkgver=r12509
-pkgrel=2
+pkgver=r12510
+pkgrel=1
 pkgdesc="simple, modular, scriptable schematics editor"
 url="http://www.repo.hu/projects/sch-rnd/"
 arch=($CARCH)
