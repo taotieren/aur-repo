@@ -20,7 +20,7 @@ makedepends=(
     go
 )
 backup=()
-options=('!strip' '!debug')
+options=('!debug')
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
