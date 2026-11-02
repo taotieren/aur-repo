@@ -1,11 +1,14 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
-pre_build_script: aur_pre_build(maintainers=['cuvoodoo'])
-post_build: aur_post_build
-repo_depends:
-  - librnd4-svn
-  - fungw-svn
+build_prefix: aur-repo-x86_64
+pre_build: vcs_update
+post_build_script: |
+  git_pkgbuild_commit()
+  update_aur_repo()
+# repo_depends:
+#   - librnd4-svn
 update_on:
-  - source: aur
-    aur: sch-rnd
+  - source: regex
+    url: http://www.repo.hu/projects/sch-rnd/releases/
+    regex: 'sch-rnd-([\d.]+).tar.gz'
