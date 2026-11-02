@@ -3,7 +3,7 @@
 
 pkgname=sch-rnd
 pkgver=1.0.11
-pkgrel=1
+pkgrel=2
 pkgdesc="simple, modular, scriptable schematics editor"
 url="http://www.repo.hu/projects/sch-rnd/"
 arch=($CARCH)
