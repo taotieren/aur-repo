@@ -2,7 +2,7 @@
 
 pkgname=ofdgo-git
 pkgver=r1065.9d20ecd
-pkgrel=3
+pkgrel=4
 pkgdesc="Native cross-platform pure-Go OFD / PDF rendering and viewing tool"
 arch=($CARCH)
 url="https://github.com/xiaoqidun/ofdgo"
