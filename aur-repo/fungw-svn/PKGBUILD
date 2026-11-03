@@ -22,7 +22,7 @@ optdepends=(
     python
     duktape
     mujs
-    'libmawk>=1.0.3'
+    libmawk
 )
 source=("svn://svn.repo.hu/fungw/trunk")
 sha256sums=('SKIP')
