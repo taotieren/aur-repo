@@ -19,5 +19,5 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: regex
-    url: https://jidugs.wlhex.com/js/smart-download.js
-    regex: '%E6%9E%81%E5%BA%A6%E5%85%AC%E5%BC%8F-([\d.]+)\.AppImage'
+    url: https://jidugs.wlhex.com/js/download-config.js
+    regex: 'var version = "([\d.]+)"'
