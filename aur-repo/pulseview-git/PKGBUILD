@@ -8,7 +8,7 @@
 _gitname='pulseview'
 pkgname="${_gitname}-git"
 pkgver=0.3.0.r1173.gaf021987
-pkgrel=1
+pkgrel=2
 pkgdesc="A Qt based logic analyzer GUI for sigrok. (git version)"
 arch=('armv6h' 'armv7h' 'i686' 'x86_64')
 url="http://sigrok.org/wiki/Main_Page"
@@ -40,7 +40,7 @@ build() {
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_CXX_FLAGS=-fext-numeric-literals \
         -DDISABLE_WERROR=TRUE \
-        -Wno-author
+        -Wno-dev
   cmake --build build
 }
 
