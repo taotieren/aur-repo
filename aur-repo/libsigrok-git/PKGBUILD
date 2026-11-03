@@ -78,6 +78,8 @@ prepare() {
 
   # Python 3.14
   sed -e 's&return nullptr;&return -1;&' -i "bindings/python/sigrok/core/classes.i"
+  sed -e 's&PyInt_Check&PyLong_Check&g; s&PyInt_AsLong&PyLong_AsLong&g' \
+    -i "bindings/python/sigrok/core/classes.i"
 }
 
 pkgver() (
