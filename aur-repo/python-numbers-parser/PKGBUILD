@@ -28,7 +28,7 @@ makedepends=(
     'python-setuptools'
     'python-wheel')
 license=('MIT')
-source=("${_name}::git+${url}.git#tag=v$pkgver")
+source=("${_name}::git+${url}.git#tag=$pkgver")
 sha256sums=('54cfed60d58ab85ab2c6cea902aa38b34b6e3c21e3174267ecf73bb9abc07c8e')
 
 prepare() {

@@ -15,5 +15,5 @@ update_on:
   - source: github
     github: masaccio/numbers-parser
     use_max_tag: true
-    prefix: v
+    # prefix: v
   - alias: python
