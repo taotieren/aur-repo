@@ -10,6 +10,7 @@ conflicts=(${pkgname})
 arch=('any')
 url="https://github.com/masaccio/numbers-parser"
 _pydeps=(
+    cryptography
     compact-json
     enum-tools
     sigfig
