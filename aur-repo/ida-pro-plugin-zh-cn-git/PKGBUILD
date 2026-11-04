@@ -2,7 +2,7 @@
 
 pkgname=ida-pro-plugin-zh-cn-git
 pkgver=r4.85769b4
-pkgrel=1
+pkgrel=2
 pkgdesc="IDA Pro 9.x Simplified Chinese Localization Plugin"
 arch=(any)
 url="https://github.com/chendiyao/IDA-Pro-zh-CN"
