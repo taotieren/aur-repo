@@ -2,7 +2,7 @@
 
 pkgname=python-kicost-digikey-api-v4
 _name=${pkgname#python-}
-pkgver=0.1.5
+pkgver=0.1.6
 pkgrel=1
 pkgdesc="KiCost plugin for the Digikey PartSearch API"
 provides=(${pkgname})
@@ -36,7 +36,7 @@ optdepends=(
 )
 license=('GPL-3.0-or-later')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('beed9bd89296c5946809b3043592d1c6107a7613b3c3d41b5dee4f3b43cb5b13')
+sha256sums=('5fde84b9b556ba69eb0de280d8d601682d84e055f0b7156e8375cbd2ff4599eb')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
