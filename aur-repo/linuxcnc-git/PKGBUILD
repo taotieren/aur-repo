@@ -2,7 +2,7 @@
 
 pkgname=linuxcnc-git
 pkgver=2.10.0pre2.r336.gd970a6b43b
-pkgrel=1
+pkgrel=2
 pkgdesc="Controls CNC machines. It can drive milling machines, lathes, 3d printers, laser cutters, plasma cutters, robot arms, hexapods, and more (formerly EMC2)"
 arch=($CARCH)
 license=('GPL-2.0-only')
