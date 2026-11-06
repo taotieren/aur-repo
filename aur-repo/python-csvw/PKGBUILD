@@ -2,7 +2,7 @@
 
 pkgname=python-csvw
 _name=${pkgname#python-}
-pkgver=4.1.1
+pkgver=4.2.0
 pkgrel=1
 epoch=
 pkgdesc="Python library to work with CSVW described tabular data"
@@ -37,7 +37,7 @@ optdepends=()
 options=('!strip' '!debug')
 source=("${_name}-${pkgver}.tar.gz::https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
 noextract=()
-sha256sums=('5714d43d744e4069e2b6d0e58a67829ca1bf8d0578aad92cfc74e87d69e6cb31')
+sha256sums=('f0dcbbd0097e28416042453b1b63b8d8fee6b65d5db8e12ea76f96e441054878')
 
 build() {
     cd "${srcdir}/${_name}-${pkgver}"
