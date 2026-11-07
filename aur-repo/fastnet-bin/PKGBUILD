@@ -3,7 +3,7 @@
 pkgbase=fastnet-bin
 pkgname=fastnet-bin
 _name=FastNet
-pkgver=0.7.8
+pkgver=0.8.0
 pkgrel=1
 pkgdesc="FastNet -- Goal: Make a full-platform speed measurement software! - TUI"
 arch=($CARCH)
@@ -15,7 +15,7 @@ depends=()
 makedepends=()
 optdepends=()
 source=("https://fw0.koolcenter.com/binary/fastnet/${pkgname%-bin}-binary-raw-${pkgver}.tar.gz")
-sha256sums=('e2fe3b3050ee9f5ae84a0f548de7bb9e39655f5ded5fd4d1255369cf62f84735')
+sha256sums=('8322880b4ae9c155247c70bcd5f9870ef3fc8e7b34d34b7a0efa83f4d003f0c8')
 options=(!debug !strip)
 
 package() {
