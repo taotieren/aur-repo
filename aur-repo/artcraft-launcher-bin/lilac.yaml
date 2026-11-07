@@ -1,0 +1,11 @@
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+pre_build_script: aur_pre_build(maintainers=['0cool_f'])
+post_build: aur_post_build
+# repo_depends:
+#   -
+update_on:
+  - source: aur
+    aur: artcraft-launcher-bin
+time_limit_hours: 3
