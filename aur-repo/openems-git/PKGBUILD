@@ -5,7 +5,7 @@
 
 _pkgname="openems"
 pkgbase="$_pkgname-git"
-pkgver=0.37.0.r40.g5fecbb5
+pkgver=0.37.0.r44.g93ddc5e
 pkgrel=1
 pkgdesc="A free and open source EC-FDTD solver"
 url="https://github.com/thliebig/openEMS"
