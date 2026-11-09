@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=libcper-git
-pkgver=r254.f4dd700
-pkgrel=2
+pkgver=r256.b250e92
+pkgrel=1
 epoch=
 pkgdesc="CPER JSON Representation & Conversion Library"
 arch=($CARCH)
