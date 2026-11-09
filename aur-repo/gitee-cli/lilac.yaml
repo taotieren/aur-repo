@@ -9,6 +9,7 @@ post_build_script: |
 # repo_depends:
 #   -
 update_on:
-  - source: regex
-    url: https://gitee.com/oschina/gitee-cli/releases/
-    regex: 'v([\d.]+).tar.gz'
+  - source: github
+    github: oschina/gitee-cli
+    use_max_tag: true
+    prefix: v
