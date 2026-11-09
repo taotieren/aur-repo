@@ -2,7 +2,7 @@
 
 pkgname=nuvoton-hid-isp-git
 pkgver=r2.151134b
-pkgrel=1
+pkgrel=2
 pkgdesc="Nuvoton USB HID ISP Programmer"
 arch=($CARCH)
 url="https://github.com/Jen-Chih-Liu/LINUX_HID_ISP_NUVOTON"
