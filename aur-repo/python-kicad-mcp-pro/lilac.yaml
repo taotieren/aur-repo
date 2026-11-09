@@ -13,7 +13,7 @@ repo_depends:
 update_on:
   - source: github
     github: oaslananka/kicad-mcp-pro
-    use_max_tag: true
-    # use_latest_release: true
+    # use_max_tag: true
+    use_latest_release: true
     prefix: kicad-mcp-gui-v
   - alias: python
