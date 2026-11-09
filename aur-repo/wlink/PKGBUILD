@@ -19,7 +19,7 @@ makedepends=(
     rust
 )
 backup=()
-options=('!strip' '!debug')
+options=('!lto' '!strip' '!debug')
 install=
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('be76e497a8176e624089d4a5ede6af839869e3b309e4988d30b5bf37e6b23270')
