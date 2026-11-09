@@ -11,9 +11,7 @@ provides=(${pkgname})
 conflicts=(${pkgname})
 replaces=()
 depends=(
-    gcc-libs
-    glibc
-    libusb
+    libgcc
     systemd-libs
 )
 makedepends=(
