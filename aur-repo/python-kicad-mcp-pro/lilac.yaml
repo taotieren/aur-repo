@@ -12,8 +12,8 @@ repo_depends:
   - python-kicad-sch-api
 update_on:
   - source: github
-    github: oaslananka/kicad-mcp
+    github: oaslananka/kicad-mcp-pro
     use_max_tag: true
     # use_latest_release: true
-    prefix: v
+    prefix: kicad-mcp-gui-v
   - alias: python
