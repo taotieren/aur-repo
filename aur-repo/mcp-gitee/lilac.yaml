@@ -9,6 +9,7 @@ post_build_script: |
 # repo_depends:
 #   -
 update_on:
-  - source: regex
-    url: https://gitee.com/oschina/mcp-gitee/releases/
-    regex: 'v([\d.]+).tar.gz'
+  - source: github
+    github: oschina/mcp-gitee
+    use_max_tag: true
+    prefix: v

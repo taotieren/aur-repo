@@ -6,7 +6,5 @@ post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
 update_on:
-  - source: git
-    git: https://gitee.com/oschina/mcp-gitee.git
-    branch: master
-    use_commit: true
+  - source: github
+    github: oschina/mcp-gitee
