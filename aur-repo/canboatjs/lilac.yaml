@@ -24,4 +24,4 @@ update_on:
     # use_latest_tag: true
     use_max_tag: true
     prefix: v
-    exclude_regex: "(?i)(alpha|beta|rc|dev|pre|snapshot|nightly)"
+    exclude_regex: "(?i).*(alpha|beta|rc|dev|pre|snapshot|nightly).*"
