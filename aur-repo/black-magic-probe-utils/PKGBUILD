@@ -9,7 +9,6 @@ pkgver=1.5.7087
 pkgrel=3
 epoch=
 _pkgname="Black-Magic-Probe-Book"
-_pkgver=${pkgver}
 pkgdesc="Black Magic Debug Probe utilities (compuphase)"
 arch=("x86_64" "i686")
 url="https://codeberg.org/compuphase/Black-Magic-Probe-Book"
@@ -68,13 +67,13 @@ package()
   install -D -m755 tracegen "${pkgdir}/usr/bin/bmtracegen"
 
   #
-  cd "${srcdir}/${_pkgname}-${_pkgver}"
+  cd "${srcdir}/${_pkgname}"
   install -d "${pkgdir}/usr/share/${pkgname}/examples/"
   install examples/* "${pkgdir}/usr/share/${pkgname}/examples/"
 
   #
   # udev rules: trigger cheap (China) STLink v2 clones to leave bootloader upon insertion and start flashed BlackMagic firmware/app
-  install -D -m644 "${srcdir}/${_pkgname}-${_pkgver}/support/55-blackmagicprobe.rules" "${pkgdir}/usr/share/${pkgname}/etc/udev/rules.d/blackmagicprobe.rules"
+  install -D -m644 "${srcdir}/${_pkgname}/support/55-blackmagicprobe.rules" "${pkgdir}/usr/share/${pkgname}/etc/udev/rules.d/blackmagicprobe.rules"
   ln -s blackmagicprobe.rules "${pkgdir}/usr/share/${pkgname}/etc/udev/rules.d/55-blackmagicprobe.rules"
 }
 
