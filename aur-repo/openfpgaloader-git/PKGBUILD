@@ -11,7 +11,6 @@ url="https://github.com/trabucayre/openFPGALoader"
 license=('Apache-2.0')
 depends=(
   libftdi
-  libftdi-compat
   hidapi libhidapi-libusb.so
   systemd-libs libudev.so
   libusb
