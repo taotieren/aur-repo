@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=rkdeveloptool-gui
-pkgver=5.7.0
+pkgver=5.7.1
 pkgrel=1
 pkgdesc="RKDevelopTool GUI is a graphical front-end for Rockchip's official rkdeveloptool"
 arch=(any)
@@ -30,7 +30,7 @@ backup=()
 install=
 source=(
     "${pkgname}::git+${url}.git#tag=${pkgver}")
-sha256sums=('a3532e4f783278d5644ed8ff1697c2c8cd58e7444fde8b80a12f52984794505f')
+sha256sums=('b04cffcd69b513b04c7cbf9e02aa6ce004feb6cb65f83c87852dc85c587543da')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
