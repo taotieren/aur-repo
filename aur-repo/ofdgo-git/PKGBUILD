@@ -26,9 +26,6 @@ sha256sums=('SKIP')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-
-    #     cd "${srcdir}/${pkgname%-git}"
-    #     git tag --delete nightly
 }
 
 pkgver() {
