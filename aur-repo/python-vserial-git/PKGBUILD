@@ -2,7 +2,7 @@
 
 pkgname=python-vserial-git
 pkgver=r1.a05fa94
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="Professional Linux Virtual Serial Port & Silicon Hardware UART Emulator Suite with Dedicated Protocol Sniffers and PulseView/Sigrok Logic Analyzer Bridge"
 arch=('any')
