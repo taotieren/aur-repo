@@ -21,7 +21,7 @@ post_build_script: |
 update_on:
   - source: github
     github: canboat/canboatjs
-    use_latest_tag: true
-    # use_max_tag: true
+    # use_latest_tag: true
+    use_max_tag: true
     prefix: v
-    exclude_regex: ".*(?:beta|-).*"
+    exclude_regex = "(?i)(alpha|beta|rc|dev|pre|snapshot|nightly)"
