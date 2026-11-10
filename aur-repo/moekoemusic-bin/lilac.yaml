@@ -1,10 +1,11 @@
 maintainers:
   - github: taotieren
     email: admin@taotieren.com
+build_prefix: aur-repo-x86_64
 pre_build_script: aur_pre_build(maintainers=['zxp19821005', 'witt.9099'])
 post_build: aur_post_build
-repo_depends:
-  - electron39-bin
+# repo_depends:
+#   - electron42-bin
 update_on:
   - source: aur
     aur: moekoemusic-bin
