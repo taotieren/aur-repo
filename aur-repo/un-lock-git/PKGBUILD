@@ -13,7 +13,7 @@ conflicts=(${pkgname%-git} ${basename%-git})
 replaces=()
 _pydeps=(
     requests
-    rich
+    pyaes
     # AUR
     migate
 )
