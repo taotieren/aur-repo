@@ -8,7 +8,21 @@ post_build_script: |
   update_aur_repo()
 update_on:
   - source: cmd
-    cmd: 'curl -ksSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "https://www.st.com/content/st_com_cx/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog/_jcr_content/get-software/getsw-table-nli.nocache.html/st-site-cx/components/containers/product/get-software-table-body.html" | grep -oE "data-software-release[^0-9]*[0-9.]+" | head -n1 | grep -oE "[0-9]+\.[0-9.]+"'
+    cmd: |
+      python3 -c 'import urllib.request as u, re, ssl
+      ctx = ssl.create_default_context()
+      ctx.check_hostname = False
+      ctx.verify_mode = ssl.CERT_NONE
+      try:
+          r = u.Request("https://www.st.com/content/st_com_cx/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog/_jcr_content/get-software/getsw-table-nli.nocache.html/st-site-cx/components/containers/product/get-software-table-body.html", headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", "Accept": "text/html", "Accept-Language": "en-US,en;q=0.9"})
+          h = u.urlopen(r, timeout=30, context=ctx).read().decode("utf-8", "ignore")
+      except u.error.HTTPError as e:
+          h = e.read().decode("utf-8", "ignore")
+      except Exception:
+          h = ""
+      m = re.search(r"data-software-release[^0-9]*([\d.]+)", h)
+      if m:
+          print(m.group(1), end="")'
 # - source: manual
 #   manual: 1
 
