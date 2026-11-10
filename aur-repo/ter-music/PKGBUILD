@@ -2,7 +2,7 @@
 
 pkgname=ter-music
 pkgver=2.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="This is a music player that can be used in the terminal~"
 arch=($CARCH)
 url="https://github.com/YXZL985/ter-music"
