@@ -24,6 +24,7 @@ makedepends=(
     ninja
     git
     $_qt-5compat
+    $_qt-declarative
     $_qt-svg
     $_qt-tools
     pkgconf
