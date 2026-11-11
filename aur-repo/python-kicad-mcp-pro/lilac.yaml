@@ -16,4 +16,5 @@ update_on:
     # use_max_tag: true
     use_latest_release: true
     prefix: kicad-mcp-gui-v
+    exclude_regex: "(?i).*(mcp-npm|mcp-server|npm|server).*"
   - alias: python
