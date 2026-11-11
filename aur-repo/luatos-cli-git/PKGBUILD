@@ -2,7 +2,7 @@
 
 pkgbase=luatos-cli-git
 pkgname=(luatos-cli-git luatos-log-ffi-git)
-pkgver=1.11.0.r67.gbcc4a9f
+pkgver=1.11.0.r73.g856ce3e
 pkgrel=1
 pkgdesc="LuatOS command-line toolset (pure Rust)-brushing, logging, project management, firmware resources and builds"
 arch=($CARCH)
