@@ -69,7 +69,7 @@ build() {
 package() {
     cd "${srcdir}/${pkgname}/"
 
-    install -Dvm775 bin/${_name} -t ${pkgdir}/var/lib/${pkgname}/
+    install -Dvm775 build/bin/${_name} -t ${pkgdir}/var/lib/${pkgname}/
     install -Dvm644 build/appicon.png ${pkgdir}/usr/share/icons/hicolor/512x512/apps/${_name}.png
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dvm644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"
