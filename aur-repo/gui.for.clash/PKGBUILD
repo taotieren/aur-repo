@@ -69,7 +69,7 @@ build() {
     export GOPROXY=https://goproxy.cn,direct
 
     wails build \
-        -m -s -trimpath -skipbindings \
+        -s -trimpath -skipbindings \
         -devtools \
         -tags webkit2_41 \
         -o ${_name}
