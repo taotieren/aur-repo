@@ -23,7 +23,7 @@ makedepends=(
     pnpm
     git
     go
-    wails
+    nodejs
 )
 optdepends=(
     'mihomo: Another Clash Kernel by MetaCubeX, formerly known as Clash.Meta'
@@ -68,17 +68,13 @@ build() {
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
 
-    wails build \
-        -s -trimpath -skipbindings \
-        -devtools \
-        -tags webkit2_41 \
-        -o ${_name}
+    go build -tags "webkit2_41,devtools" -o "build/bin/${_name}" .
 }
 
 package() {
     cd "${srcdir}/${pkgname}/"
 
-    install -Dvm775 build/bin/${_name} -t ${pkgdir}/var/lib/${pkgname}/
+    install -Dvm775 bin/${_name} -t ${pkgdir}/var/lib/${pkgname}/
     install -Dvm644 build/appicon.png ${pkgdir}/usr/share/icons/hicolor/512x512/apps/${_name}.png
     install -Dm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
     install -Dvm644 "${srcdir}/${pkgname}.sysusers" "${pkgdir}/usr/lib/sysusers.d/${pkgname}.conf"

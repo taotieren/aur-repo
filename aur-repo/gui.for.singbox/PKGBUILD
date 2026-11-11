@@ -23,7 +23,7 @@ makedepends=(
     pnpm
     git
     go
-    wails
+    nodejs
 )
 optdepends=(
     'sing-box: The universal proxy platform'
@@ -68,11 +68,7 @@ build() {
     export GO111MODULE=on
     export GOPROXY=https://goproxy.cn,direct
 
-    wails build \
-        -s -trimpath -skipbindings \
-        -devtools \
-        -tags webkit2_41 \
-        -o ${_name}
+    go build -tags "webkit2_41,devtools" -o "build/bin/${_name}" .
 }
 
 package() {
