@@ -60,8 +60,12 @@ source=(
     "uvm-core::git+https://github.com/accellera-official/uvm-core.git"
     "z3::git+https://github.com/Z3Prover/z3.git"
     "aws-lc::git+https://github.com/aws/aws-lc.git"
+    "boost-regex::git+https://github.com/MikePopoloski/regex.git"
+    "tomlplusplus::git+https://github.com/marzer/tomlplusplus.git"
 )
 sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -113,6 +117,8 @@ prepare() {
     git config submodule.external/uvm-core.url "$srcdir/uvm-core"
     git config submodule.external/z3.url "$srcdir/z3"
     git config submodule.external/aws-lc.url "$srcdir/aws-lc"
+    git config submodule.external/boost-regex.url "$srcdir/boost-regex"
+    git config submodule.external/tomlplusplus.url "$srcdir/tomlplusplus"
     git -c protocol.file.allow=always submodule update
 }
 
