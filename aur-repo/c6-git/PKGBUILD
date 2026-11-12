@@ -2,7 +2,7 @@
 
 pkgname=c6-git
 pkgver=r359.8ffdb1f
-pkgrel=2
+pkgrel=3
 pkgdesc="c6 — TinyCC with language extensions"
 arch=($CARCH)
 url="https://github.com/c6lang/c6"
