@@ -48,7 +48,7 @@ sha256sums=('ee8c70da852f115f7b0516336def6359a13b285d2abac1f8c1941b1eaf182e49')
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
     cd "${srcdir}/${pkgname}"
-    git cherry-pick -n 99acfac3ada13c22cc02e704e4418fcc234b9ce5
+    # git cherry-pick -n 99acfac3ada13c22cc02e704e4418fcc234b9ce5
     find . -name "*.c" -o -name "*.h" | xargs sed -i 's|#include <ncursesw/ncurses.h>|#include <ncurses.h>|g' 2>/dev/null || true
 }
 
