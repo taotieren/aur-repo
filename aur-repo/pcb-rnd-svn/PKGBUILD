@@ -3,7 +3,7 @@
 # Contributor: Kyle Keen <keenerd@gmail.com?>
 
 pkgname=pcb-rnd-svn
-pkgver=r40618
+pkgver=r40623
 pkgrel=1
 pkgdesc="free/open source, flexible, modular Printed Circuit Board editor"
 url="http://www.repo.hu/projects/pcb-rnd/"
