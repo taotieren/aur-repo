@@ -44,6 +44,13 @@ build() {
     make build
 }
 
+check() {
+    cd "${srcdir}/${pkgname%-git}"
+    export LD_LIBRARY_PATH="${srcdir}/${pkgname%-git}/tcc${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" 
+    # make -j1 test-all LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
+    make test
+}
+
 package() {
     cd "${srcdir}/${pkgname%-git}/tcc"
     make DESTDIR="${pkgdir}" install
