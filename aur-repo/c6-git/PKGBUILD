@@ -37,7 +37,7 @@ build() {
     cd "${srcdir}/${pkgname%-git}"
     cmake -S . \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_TCC_SHARED_LIBTCC=ON \
+        -DC6_TCC_SHARED_LIBTCC=ON \
         -B build 
     cmake --build build --parallel
 }
@@ -51,5 +51,4 @@ package() {
     cd "${srcdir}/${pkgname%-git}"
     DESTDIR="${pkgdir}" cmake --install build
     install -vDm0644 tcc/COPYING -t "${pkgdir}/usr/share/licenses/${pkgname}/"
-    ln -sf /usr/bin/c6 ${pkgdir}/usr/bin/tcc
 }
