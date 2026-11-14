@@ -15,6 +15,7 @@ depends=(
 makedepends=(
     'cmake'
     'git'
+    'rust'
 )
 options=('docs' 'staticlibs' '!lto')
 source=("${pkgname%-git}::git+${url}.git")
