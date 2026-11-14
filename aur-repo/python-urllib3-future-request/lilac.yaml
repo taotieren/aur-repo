@@ -13,7 +13,6 @@ repo_depends:
   - python-filewrap
   - python-http-response
   - python-http-request
-  - python-urllib3-future
 update_on:
   - source: pypi
     pypi: urllib3_future_request
