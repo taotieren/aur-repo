@@ -15,6 +15,9 @@ depends=(
 makedepends=(
     'cmake'
     'git'
+)
+checkdepends=(
+    'go'
     'rust'
 )
 options=('docs' 'staticlibs' '!lto')
