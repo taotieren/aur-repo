@@ -13,8 +13,9 @@ repo_depends:
 update_on:
   - source: github
     github: oaslananka/kicad-mcp-pro
-    # use_max_tag: true
-    use_latest_release: true
+    use_max_tag: true
+    # use_latest_release: true
+    include_regex: '(?i)(-mcp-gui|gui).*'
     exclude_regex: "(?i)(mcp-npm|mcp-server|npm|server).*"
     prefix: kicad-mcp-gui-v
   - alias: python
