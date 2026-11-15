@@ -19,6 +19,7 @@ depends=(
 makedepends=(
     git
     python-flit-core
+    python-uv-build
     python-build
     python-installer
     python-wheel
