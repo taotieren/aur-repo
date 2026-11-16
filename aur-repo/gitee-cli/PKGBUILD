@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=gitee-cli
-pkgver=0.3.3
+pkgver=0.3.4
 pkgrel=1
 pkgdesc="Gitee CLI is a tool which interact with gitee server seamlessly via terminal"
 arch=($CARCH)
@@ -24,7 +24,7 @@ backup=()
 options=('!strip' '!debug')
 #install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('36dfeddded07659bc7437a8d7d96bbfeccaf5cad98d1c66cc05cdaf446599a64')
+sha256sums=('818395d4bbdf4fc8019d480b457d7c3003d74d6af70c690528092936f0e02744')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
