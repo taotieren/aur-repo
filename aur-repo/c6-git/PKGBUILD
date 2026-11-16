@@ -55,5 +55,5 @@ check() {
 package() {
     cd "${srcdir}/${pkgname%-git}"
     DESTDIR="${pkgdir}" cmake --install build
-    install -vDm0644 tcc/COPYING -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm0644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
