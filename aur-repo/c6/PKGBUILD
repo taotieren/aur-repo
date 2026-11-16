@@ -7,8 +7,8 @@ pkgdesc="c6 — TinyCC with language extensions"
 arch=($CARCH)
 url="https://github.com/c6lang/c6"
 license=('LGPL-2.0-or-later')
-provides=(${pkgname} tcc)
-conflicts=(${pkgname} tcc)
+provides=(${pkgname})
+conflicts=(${pkgname})
 depends=(
     'glibc'
 )
