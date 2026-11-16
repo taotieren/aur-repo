@@ -18,6 +18,7 @@ makedepends=(
 )
 checkdepends=(
     'go'
+    'python'
     'rust'
 )
 options=('docs' 'staticlibs' '!lto')
