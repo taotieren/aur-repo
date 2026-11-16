@@ -8,5 +8,5 @@ post_build: aur_post_build
 #   - 
 update_on:
   - source: aur
-    aur: python-remotezip
+    aur: python-remotezip2
   - alias: python
