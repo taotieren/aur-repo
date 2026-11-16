@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=gitee-cli-git
-pkgver=0.3.3.r0.gb9500a1
-pkgrel=3
+pkgver=0.3.4.r1.g855a511
+pkgrel=1
 pkgdesc="Gitee CLI is a tool which interact with gitee server seamlessly via terminal"
 arch=($CARCH)
 url="https://github.com/oschina/gitee-cli"
