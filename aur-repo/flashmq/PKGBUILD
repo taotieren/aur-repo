@@ -38,7 +38,9 @@ build() {
     sed --in-place 's#DESTINATION "/lib#DESTINATION "/usr/lib#' CMakeLists.txt
     cmake -B build \
         -DCMAKE_BUILD_TYPE=Release \
-        -G Ninja
+        -G Ninja \
+        -Wno-author
+
     ninja -C build
 
     cd man
