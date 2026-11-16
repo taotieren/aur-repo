@@ -2,8 +2,8 @@
 
 pkgbase=xlmodel-bin
 pkgname=(xlmodel-bin)
-pkgver=2025.10
-pkgrel=2
+pkgver=2026.10
+pkgrel=1
 pkgdesc="Nuclei Near Cycle Model "
 arch=("x86_64")
 makedepends=()
@@ -26,7 +26,7 @@ install=${pkgname}.install
 source=(
 	"https://download.nucleisys.com/upload/files/toolchain/xlmodel/xlmodel-linux64-${pkgver}.tar.gz"
 	"${pkgname}.install")
-sha256sums=('6116d4ec381694d5e221c034133fab9c4b955188987520ae9086398f2f9e2e62'
+sha256sums=('ec1a75944f1a59ee9ecae8a3ae8c7353e55f9402fe60617311af558c94b420a9'
             '3600d561847139d844754676cdb1870243fcda126f9d9d98e65b78ef237bcca6')
 
 package() {
