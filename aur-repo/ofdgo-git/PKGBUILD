@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=ofdgo-git
-pkgver=r1081.f1b9267
+pkgver=r1082.3649a7b
 pkgrel=1
 pkgdesc="Native cross-platform pure-Go OFD / PDF rendering and viewing tool"
 arch=($CARCH)
