@@ -9,6 +9,7 @@ repo_depends:
   - python-asn1
   - python-lzfse
   - python-pylzss
+  - python-remotezip
 update_on:
   - source: aur
     aur: python-pyimg4
