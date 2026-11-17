@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=python-pyiosbackup
-pkgver=0.2.4
+pkgver=0.2.3
 pkgrel=1
 epoch=
 pkgdesc="A python parser for iOS backups"
@@ -38,9 +38,9 @@ backup=()
 options=()
 # install=
 changelog=
-source=("${pkgname}::git+${url}.git")
+source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('SKIP')
+sha256sums=('f079242394b687cef4fa67b052111b6701d075590adbba2a8303d635f737aa83')
 #validpgpkeys=()
 
 prepare(){
