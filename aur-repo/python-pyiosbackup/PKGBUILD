@@ -2,7 +2,7 @@
 
 pkgname=python-pyiosbackup
 pkgver=0.2.4
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="A python parser for iOS backups"
 arch=('any')
