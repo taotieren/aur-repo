@@ -3,7 +3,7 @@
 pkgbase=ttf-yunzhuanduren
 pkgname=(ttf-yunzhuanduren)
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="云篆度人经开源字体：4616 个云篆字形"
 url="https://github.com/Lawrence-of-AnKing/yunzhuan-duren"
 provides=(${pkgname})
