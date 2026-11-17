@@ -2,7 +2,7 @@
 
 pkgname=python-ansilogs
 pkgver=1.2.0
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="Colored, single-line log output for command-line tools: a dependency-free coloredlogs.install() replacement"
 arch=('any')
