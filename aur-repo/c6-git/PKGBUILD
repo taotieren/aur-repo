@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=c6-git
-pkgver=0.6.2+r117+g83ea1ca
+pkgver=0.6.2+r123+g1e82b69
 pkgrel=1
 pkgdesc="A c6 compiler that is self-booting, independent of TCC, and supports multiple backends (native x86-64 / C99 / LLVM IR)"
 arch=($CARCH)
