@@ -32,6 +32,7 @@ makedepends=(
 )
 checkdepends=()
 optdepends=()
+options=('!debug')
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 

@@ -55,6 +55,7 @@ optdepends=(
   "linglong-tools: A command line helper for linglong."
   "ll-killer-go: 玲珑杀手 Go: 玲珑应用快速构建系统"
 )
+options=('!debug')
 install=${pkgname}.install
 source=(
   "${pkgname}::git+${url}.git"
