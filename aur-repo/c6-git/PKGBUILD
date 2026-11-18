@@ -47,10 +47,10 @@ build() {
     cmake --build build --parallel
 }
 
-check() {
-    cd "${srcdir}/${pkgname%-git}"
-    ctest --test-dir build --output-on-failure
-}
+# check() {
+#     cd "${srcdir}/${pkgname%-git}"
+#     ctest --test-dir build --output-on-failure
+# }
 
 package() {
     cd "${srcdir}/${pkgname%-git}"

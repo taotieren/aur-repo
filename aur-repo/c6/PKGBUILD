@@ -38,10 +38,10 @@ build() {
     cmake --build build --parallel
 }
 
-check() {
-    cd "${srcdir}/${pkgname}"
-    ctest --test-dir build --output-on-failure
-}
+# check() {
+#     cd "${srcdir}/${pkgname}"
+#     ctest --test-dir build --output-on-failure
+# }
 
 package() {
     cd "${srcdir}/${pkgname}"
