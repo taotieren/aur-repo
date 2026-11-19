@@ -4,7 +4,7 @@
 _pkgname=bonsai
 pkgname="python-$_pkgname"
 pkgver=1.5.5
-pkgrel=0
+pkgrel=1
 pkgdesc="Python 3 module for accessing LDAP directory servers."
 arch=('x86_64' 'i686' 'armv7h' 'aarch64')
 url='https://github.com/noirello/bonsai'
@@ -14,7 +14,7 @@ makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python
 checkdepends=('python-pytest' 'python-pytest-cov' 'python-pytest-timeout')
 optdepends=()
 source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('34c16d1f6dad4b146d0434626c7c6c56f2c337faf8583b8f636f6918ed65e5e2')
+sha256sums=('5247805c48560ec11b02b1990e1c95a838508bb796d57645a74a3516669a97b8')
 
 prepare() {
     git -C "${_pkgname}" clean -dfx
