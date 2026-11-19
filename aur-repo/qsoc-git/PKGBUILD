@@ -16,6 +16,9 @@ depends=(
     libstdc++
     hicolor-icon-theme
     $_qt-base
+    $_qt-declarative
+    $_qt-svg
+    zlib
 )
 makedepends=(
     cmake
@@ -24,8 +27,6 @@ makedepends=(
     ninja
     git
     $_qt-5compat
-    $_qt-declarative
-    $_qt-svg
     $_qt-tools
     pkgconf
     sqlite
@@ -38,7 +39,7 @@ provides=(${pkgname%-git})
 conflicts=(${pkgname%-git})
 replaces=()
 backup=()
-options=('!makeflags')
+options=('!makeflags' '!debug')
 install=
 changelog=
 source=(
