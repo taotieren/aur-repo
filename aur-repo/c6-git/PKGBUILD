@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=c6-git
-pkgver=0.6.4+r472+g28c90f0
+pkgver=0.6.4+r485+gbeb4289
 pkgrel=1
 pkgdesc="Self-hosting C compiler (c6c) with defer, modules, generics, async/await and managed refs; .c6 enables extensions"
 arch=($CARCH)
