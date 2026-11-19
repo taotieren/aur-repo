@@ -2,7 +2,7 @@
 
 pkgname=python-pyimg4
 _pkgname=PyIMG4
-pkgver=0.8.8
+pkgver=0.8.9
 pkgrel=1
 pkgdesc="A Python library/CLI tool for parsing Apple's Image4 format"
 arch=('any')
@@ -17,7 +17,7 @@ makedepends=(
 )
 checkdepends=('python-pytest' 'python-remotezip')
 source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('2ff01b4a8fa1e8bce08107dc8b824a9b75b5c1383bd205303ad6e6c0b24e7b80')
+sha256sums=('41665cc9b7d1fa1cd747f16fb0271fb7a3cdf34ebc6177255216dda423ee7c48')
 
 prepare() {
   git -C "${srcdir}/${_pkgname}" clean -dfx
