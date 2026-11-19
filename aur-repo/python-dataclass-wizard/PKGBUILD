@@ -3,7 +3,7 @@
 _pkgname=dataclass-wizard
 pkgname=python-${_pkgname}
 pkgver=1.0.0
-pkgrel=0
+pkgrel=1
 pkgdesc="This library provides a set of simple, yet elegant wizarding tools for interacting with the Python dataclasses module."
 arch=('any')
 url="https://github.com/rnag/dataclass-wizard"
