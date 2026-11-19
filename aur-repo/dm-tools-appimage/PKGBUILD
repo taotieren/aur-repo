@@ -39,6 +39,7 @@ _install_path="/opt/appimages"
 prepare() {
     git -C "${srcdir}/motor-debugging-tool" clean -dfx
     cd ${srcdir}/motor-debugging-tool/Linux/x86_64
+    bsdtar -xf ${_name}.tar.gz
     chmod +x ${_name}
     "./${_name}" --appimage-extract >/dev/null
     sed -i -e 's|Exec=serial-port-assistant|Exec=/usr/bin/dm-tools|g' \
