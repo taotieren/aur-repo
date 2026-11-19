@@ -30,7 +30,7 @@ provides=('stm32cubeprogrammer')
 options=('!strip' '!debug')
 
 source=(
-  "SetupSTM32CubeProgrammer_linux_64-${pkgver}.zip::https://www.st.com/cloudfront/publish/stm32cubeprg-lin-v${pkgver//./-}/${pkgver}/en/SetupSTM32CubeProgrammer_linux_64.zip"
+  "SetupSTM32CubeProgrammer_${pkgver}_linux-x86_64.zip::https://www.st.com/cloudfront/publish/stm32cubeprg-lin-v${pkgver//./-}/${pkgver}/en/SetupSTM32CubeProgrammer_${pkgver}_linux-x86_64.zip"
   'SLA0048_STM32CubeProg.pdf'
 )
 
