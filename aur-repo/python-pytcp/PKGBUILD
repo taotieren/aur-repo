@@ -7,7 +7,7 @@ pkgname=(
     python-pmd-net-proto
     python-pmd-pytcp
 )
-pkgver=3.0.8
+pkgver=3.0.9
 pkgrel=1
 epoch=
 pkgdesc="The TCP/IP stack written in Python"
@@ -40,7 +40,7 @@ options=()
 changelog=
 source=("${pkgbase}::git+${url}.git#tag=v${pkgver}")
 noextract=()
-sha256sums=('b6960f3f8d327575782ea84f22aaee02168be4b658c67ecebfa577d948866ca5')
+sha256sums=('c107aa7e8d066ade5d2459567253c6196af27da2dafcbb3ca105212106a394e0')
 #validpgpkeys=()
 
 prepare(){
