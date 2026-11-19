@@ -3,7 +3,7 @@
 pkgname=cannelloni
 pkgver=2.1.2
 pkgrel=2
-pkgdesc="cannelloni is written in C++11 and uses UDP, TCP or SCTP to transfer CAN frames between two machines."
+pkgdesc="a SocketCAN over Ethernet tunnel"
 arch=($CARCH)
 url="https://github.com/mguentner/cannelloni"
 license=('GPL-2.0-only')
