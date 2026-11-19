@@ -49,5 +49,5 @@ build() {
 
 package() {
     DESTDIR="${pkgdir}" ninja -C "${srcdir}"/${pkgname}/build install
-    install -vDm644 "${srcdir}"/${pkgname}-${pkgver}/gpl-2.0.txt -t "${pkgdir}/usr/share/licenses/${pkgname}/"
+    install -vDm644 "${srcdir}"/${pkgname}/gpl-2.0.txt -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 }
