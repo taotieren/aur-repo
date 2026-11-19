@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=rusbmux
-pkgver=0.3.0
+pkgver=0.4.0
 pkgrel=1
 pkgdesc="A usbmuxd replacement in pure Rust"
 arch=($CARCH)
@@ -22,7 +22,7 @@ backup=()
 options=('!lto' '!debug')
 install=${pkgname}.install
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('050d276bf7fc9e045ba231315ae29d1fb9cc39954ad56e823cf5b7639c1e29a4')
+sha256sums=('932580273184fb999c0e477623d8356a1aa6dcf7ebe7573e0e858789c932d8b3')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
