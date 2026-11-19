@@ -28,7 +28,7 @@ optdepends=(
 )
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('c704707f7dd9f1ed64e9195097809f8882c03b1fa0a79864b8e3bf286521e3d7')
-options=()
+options=(!debug)
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
