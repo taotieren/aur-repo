@@ -1,8 +1,8 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=cannelloni
-pkgver=2.1.2
-pkgrel=2
+pkgver=2.1.3
+pkgrel=1
 pkgdesc="a SocketCAN over Ethernet tunnel"
 arch=($CARCH)
 url="https://github.com/mguentner/cannelloni"
@@ -27,7 +27,7 @@ optdepends=(
     'can-utils: Linux-CAN / SocketCAN user space applications'
 )
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('c704707f7dd9f1ed64e9195097809f8882c03b1fa0a79864b8e3bf286521e3d7')
+sha256sums=('56a23ccabebf4a8953c5ba0c87381249c02e46ea860a457d0b638d8ae3f7058c')
 options=(!debug)
 
 prepare() {
