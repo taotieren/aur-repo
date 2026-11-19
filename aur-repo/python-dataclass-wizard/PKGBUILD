@@ -1,0 +1,31 @@
+# Maintainer: Guy Boldon <gb@guyboldon.com>
+
+_pkgname=dataclass-wizard
+pkgname=python-${_pkgname}
+pkgver=1.0.0
+pkgrel=0
+pkgdesc="This library provides a set of simple, yet elegant wizarding tools for interacting with the Python dataclasses module."
+arch=('any')
+url="https://github.com/rnag/dataclass-wizard"
+license=('Apache-2.0')
+depends=('python' 'python-tzdata' 'python-typing_extensions')
+makedepends=('git' 'python-build' 'python-installer' 'python-wheel' 'python-setuptools')
+provides=("$pkgname")
+conflicts=("$pkgname")
+source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
+sha256sums=('7450429ab6110760e0dc93b54db92c56f947ea80b61aca3f498ff67bb443effc')
+
+prepare() {
+  git -C "${_pkgname}" clean -dfx
+}
+
+build() {
+  cd "${_pkgname}"
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd "${_pkgname}"
+  python -m installer --destdir="$pkgdir" dist/*.whl
+  install -Dm 644 "LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
