@@ -9,12 +9,10 @@ pkgdesc="Python 3 module for accessing LDAP directory servers."
 arch=('x86_64' 'i686' 'armv7h' 'aarch64')
 url='https://github.com/noirello/bonsai'
 license=('MIT')
-depends=('libldap>=2' 'libsasl>=2' 'python>=3.8' 'krb5')
+depends=('libldap>=2' 'python>=3.8' 'krb5' 'python-gevent' 'python-trio' 'python-tornado' 'python-typing_extensions')
 makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
 checkdepends=('python-pytest' 'python-pytest-cov' 'python-pytest-timeout')
-optdepends=('python-gevent: enable bonsai.gevent'
-            'python-tornado: enable bonsai.tornado'
-            'python-trio: enable bonsai.trio')
+optdepends=()
 source=("${_pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('34c16d1f6dad4b146d0434626c7c6c56f2c337faf8583b8f636f6918ed65e5e2')
 
