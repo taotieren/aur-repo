@@ -12,7 +12,6 @@ url="https://github.com/WCHSoftGroup/ch343ser_linux"
 license=('GPL-2.0-or-later')
 depends=(
     libch343ser
-    libch9344ser
 )
 makedepends=('git')
 source=("${pkgbase}::git+${url}.git")
@@ -34,7 +33,7 @@ prepare() {
 
 build() {
     cd "$srcdir/${pkgbase}/demo/param_config"
-    gcc ch34x_demo_param_config.c -lch34xcfg -lch343 -lch9344 -o ch34xsercfg
+    gcc ch34x_demo_param_config.c -lch343 -o ch34xsercfg
 }
 
 package() {
