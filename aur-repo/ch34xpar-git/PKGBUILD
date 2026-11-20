@@ -3,7 +3,7 @@
 pkgbase=ch34xpar-git
 pkgname=(ch34xpar-git ch34xpar-dkms-git libch34xpar-git)
 pkgver=r15.2ccc018
-pkgrel=1
+pkgrel=2
 pkgdesc="This driver and application support the USB bus interface chips from WCH (Qinheng Microelectronics): CH341, CH346, CH347, CH339, CH9341, CH9346, as well as the WCH USB-to-serial series chips."
 arch=($CARCH)
 url="https://github.com/WCHSoftGroup/ch341par_linux"
