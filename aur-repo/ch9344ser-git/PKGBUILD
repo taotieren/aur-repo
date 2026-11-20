@@ -7,8 +7,6 @@ pkgrel=2
 pkgdesc="This driver supports USB to quad serial ports chip ch9344 and USB to octal serial ports chip ch348."
 arch=('any')
 arch=($CARCH)
-provides=(${pkgname%-git})
-conflicts=(${pkgname%-git})
 url="https://github.com/WCHSoftGroup/ch9344ser_linux"
 license=('GPL-2.0-or-later')
 depends=(dkms)
@@ -42,11 +40,14 @@ package_ch9344ser-git() {
     provides=(${pkgname%-git})
     conflicts=(${pkgname%-git})
     depends=(
-        ch9344ser-dkms-git
+        ch9344ser-dkms
     )
 }
 
 package_ch9344ser-dkms-git() {
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
+    
     cd "$srcdir/${pkgbase}/driver"
     rm -rf Makefile
     install -Dm755 /dev/stdin Makefile <<EOF
