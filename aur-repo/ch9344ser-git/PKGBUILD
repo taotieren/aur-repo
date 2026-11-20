@@ -1,9 +1,9 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgbase=ch9344ser-git
-pkgname=(ch9344ser-dkms-git)
+pkgname=(ch9344ser-git ch9344ser-dkms-git)
 pkgver=r61.dc1b70a
-pkgrel=1
+pkgrel=2
 pkgdesc="This driver supports USB to quad serial ports chip ch9344 and USB to octal serial ports chip ch348."
 arch=('any')
 arch=($CARCH)
@@ -19,7 +19,8 @@ makedepends=(
 optdepends=(
     'linux-headers: build the module against Arch kernel'
     'linux-ck-headers: build the module against Linux-ck kernel'
-    'linux-lts-headers: build the module against LTS Arch kernel')
+    'linux-lts-headers: build the module against LTS Arch kernel'
+)
 source=("${pkgbase}::git+${url}.git")
 sha512sums=('SKIP')
 options=(!strip !debug)
@@ -37,7 +38,15 @@ prepare() {
     git -C "${srcdir}/${pkgbase}" clean -dfx
 }
 
-package() {
+package_ch9344ser-git() {
+    provides=(${pkgname%-git})
+    conflicts=(${pkgname%-git})
+    depends=(
+        ch9344ser-dkms-git
+    )
+}
+
+package_ch9344ser-dkms-git() {
     cd "$srcdir/${pkgbase}/driver"
     rm -rf Makefile
     install -Dm755 /dev/stdin Makefile <<EOF
@@ -50,9 +59,6 @@ SRC_DIR=\$(shell pwd)
 
 default:
 	\$(MAKE) -C \$(KDIR) M=\$(SRC_DIR) modules
-
-clean:
-	\$(MAKE) -C \$(KDIR) M=\$(SRC_DIR) clean
 
 install:
 	\$(MAKE) -C \$(KDIR) M=\$(SRC_DIR) modules_install
@@ -93,11 +99,10 @@ PACKAGE_NAME="ch9344ser"
 PACKAGE_VERSION="#MODULE_VERSION#"
 AUTOINSTALL="yes"
 
-MAKE[0]="make"
-CLEAN="make clean"
+MAKE[0]="make KVER=\$kernelver"
 
 BUILT_MODULE_NAME[0]="ch9344"
-DEST_MODULE_LOCATION[0]="/kernel/drivers/usb/serial"
+DEST_MODULE_LOCATION[0]="/updates"
 EOF
     # autoload
     install -Dm644 /dev/stdin "${pkgdir}/etc/modules-load.d/ch9344.conf" <<EOF
