@@ -2,8 +2,9 @@
 
 pkgbase=dm-tools-appimage
 pkgname=(dm-tools-appimage)
-pkgver=2.1.9.4
-pkgrel=3
+_tagname=2.2.2.2-hotfix
+pkgver=${_tagname//-/+}
+pkgrel=1
 pkgdesc="DM-USB2FDCAN (Damiao 达妙) host computer software supports DM-USB2FDCAN series CAN cards"
 arch=('x86_64')
 url="https://github.com/dmBots/motor-debugging-tool"
@@ -28,7 +29,7 @@ optdepends=(
 backup=()
 options=(!debug !strip !lto)
 install=
-_name=DMTool-v${pkgver}-${CARCH}.AppImage
+_name=DMTool-v${_tagname}-${CARCH}.AppImage
 source=(
     "motor-debugging-tool::git+${url}.git"
 )
