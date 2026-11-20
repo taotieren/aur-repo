@@ -126,8 +126,8 @@ EOF
 
 package_libch343ser-git() {
     pkgdesc+=" (dynamic lib)"
-    provides=("${pkgname%-git}" libch9344ser)
-    conflicts=("${pkgname%-git}" libch9344ser)
+    provides=("${pkgname%-git}")
+    conflicts=("${pkgname%-git}")
     depends=(glibc)
     arch=($CARCH)
 
