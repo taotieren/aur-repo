@@ -126,8 +126,8 @@ EOF
 
 package_libch343ser-git() {
     pkgdesc+=" (dynamic lib)"
-    provides=("${pkgname%-git}")
-    conflicts=("${pkgname%-git}")
+    provides=("${pkgname%-git}" libch9344ser)
+    conflicts=("${pkgname%-git}" libch9344ser)
     depends=(glibc)
     arch=($CARCH)
 
@@ -139,5 +139,5 @@ package_libch343ser-git() {
 
     cd "$srcdir/${pkgbase}/lib"
     install -vDm755 "${_libdir}/dynamic/"*.so -t "${pkgdir}/usr/lib/"
-    install -vDm644 "${_libdir}/dynamic/"ch34*.h -t "${pkgdir}/usr/include/"
+    install -vDm644 "${_libdir}/dynamic/"*.h -t "${pkgdir}/usr/include/"
 }
