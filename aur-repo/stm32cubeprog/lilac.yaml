@@ -34,10 +34,10 @@ pre_build_script: |
   aur_pre_build(maintainers=['taotieren', 'akumaexs', 'CloverGit'])
   run_cmd(['curl', '-L', '-o', 'PKGBUILD', 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=stm32cubeprog'])
 
-  edit_file PKGBUILD \
-  '/^pkgname=/a pkgbase=stm32cubeprog'
+  run_cmd(['sed', '-i', '/^pkgname=/i pkgbase=stm32cubeprog', 'PKGBUILD'])
 
   run_cmd(['updpkgsums'])
+
 post_build: aur_post_build
 # repo_depends:
 #   -
