@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=candle-git
-pkgver=11.2.r27.ged6ec3f
+pkgver=11.11.r0.g982e3dd
 pkgrel=1
 pkgdesc="GRBL controller application with G-Code visualizer written in Qt"
 arch=($CARCH)
