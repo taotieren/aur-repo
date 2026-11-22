@@ -5,7 +5,7 @@
 # Contributor: GPereira <goncalo_pereira@outlook.pt>
 
 pkgname=stm32cubeprog
-pkgver=2.23.0
+pkgver=2.24.0
 pkgrel=1
 pkgdesc='An all-in-one multi-OS software tool for programming STM32 products.'
 arch=('x86_64')
@@ -36,7 +36,7 @@ source=(
   "${_installer}::https://sw-center.st.com/packs/cubeprog_test/Updater/Linux/${_installer}"
   'STM32CubeProgrammer_Wayland')
 
-sha256sums=('4454b62a5be537b513a3bdd7be16445e8b623df23d93a4a559261468d54cd0d4'
+sha256sums=('273975212fcf80f71a31ed091559f9289b589d5eb3cbbd090b6068abe80f317c'
             'b6b231ef58cac7a46f3eacd5ee6a6969cba3cf57532265d12489f3c9bbaedc25')
 
 prepare() {
