@@ -6,7 +6,7 @@
 
 pkgname=stm32cubeprog
 pkgver=2.24.0
-pkgrel=1
+pkgrel=2
 pkgdesc='An all-in-one multi-OS software tool for programming STM32 products.'
 arch=('x86_64')
 url='https://www.st.com/en/development-tools/stm32cubeprog.html'
@@ -37,7 +37,7 @@ source=(
   'STM32CubeProgrammer_Wayland')
 
 sha256sums=('273975212fcf80f71a31ed091559f9289b589d5eb3cbbd090b6068abe80f317c'
-            'b6b231ef58cac7a46f3eacd5ee6a6969cba3cf57532265d12489f3c9bbaedc25')
+  'b6b231ef58cac7a46f3eacd5ee6a6969cba3cf57532265d12489f3c9bbaedc25')
 
 prepare() {
   cd "${srcdir}"
