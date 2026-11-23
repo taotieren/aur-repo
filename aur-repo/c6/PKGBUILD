@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=c6
-pkgver=0.6.4
+pkgver=0.6.5
 pkgrel=1
 pkgdesc="Self-hosting C compiler (c6c) with defer, modules, generics, async/await and managed refs; .c6 enables extensions"
 arch=($CARCH)
@@ -23,7 +23,7 @@ checkdepends=(
 )
 options=('docs' 'staticlibs' '!lto')
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
-sha256sums=('9e8319c8c9c972d2442846a95939adebf3ef927ce2d1e1f1852bf8392c2cd384')
+sha256sums=('c1d35dcdbead38e4c12c67514152a85e0deccf52060480627b069572e6f05fd7')
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
