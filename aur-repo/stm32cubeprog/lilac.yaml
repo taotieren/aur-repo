@@ -1,47 +1,47 @@
-maintainers:
-  - github: taotieren
-    email: admin@taotieren.com
-pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-post_build_script: |
-  git_pkgbuild_commit()
-  update_aur_repo()
-update_on:
-  - source: cmd
-    cmd: |
-      python3 << 'PYEOF'
-      import urllib.request as u
-
-      base = "https://sw-center.st.com/packs/cubeprog_test/Updater/Linux/STM32CubeProgrammer{}_linux64.zip"
-
-      def exists(v):
-          try:
-              return u.urlopen(u.Request(base.format(v), method="HEAD"), timeout=10).status == 200
-          except Exception:
-              return False
-
-      minor = 16
-      while exists(f"2.{minor}.0"):
-          minor += 1
-      minor -= 1
-
-      patch = 0
-      while exists(f"2.{minor}.{patch + 1}"):
-          patch += 1
-
-      print(f"2.{minor}.{patch}", end="")
-      PYEOF
-# - source: manual
-#   manual: 1
-
 # maintainers:
 #   - github: taotieren
 #     email: admin@taotieren.com
-# # build_prefix: aur-repo-x86_64
-# pre_build_script: aur_pre_build(maintainers=['taotieren', 'akumaexs', 'CloverGit'])
-# post_build: aur_post_build
-# # repo_depends:
-# #   -
+# pre_build_script: |
+#   update_pkgver_and_pkgrel(_G.newver)
+# post_build_script: |
+#   git_pkgbuild_commit()
+#   update_aur_repo()
 # update_on:
-#   - source: aur
-#     aur: stm32cubeprog
+#   - source: cmd
+#     cmd: |
+#       python3 << 'PYEOF'
+#       import urllib.request as u
+
+#       base = "https://sw-center.st.com/packs/cubeprog_test/Updater/Linux/STM32CubeProgrammer{}_linux64.zip"
+
+#       def exists(v):
+#           try:
+#               return u.urlopen(u.Request(base.format(v), method="HEAD"), timeout=10).status == 200
+#           except Exception:
+#               return False
+
+#       minor = 16
+#       while exists(f"2.{minor}.0"):
+#           minor += 1
+#       minor -= 1
+
+#       patch = 0
+#       while exists(f"2.{minor}.{patch + 1}"):
+#           patch += 1
+
+#       print(f"2.{minor}.{patch}", end="")
+#       PYEOF
+# - source: manual
+#   manual: 1
+
+maintainers:
+  - github: taotieren
+    email: admin@taotieren.com
+# build_prefix: aur-repo-x86_64
+pre_build_script: aur_pre_build(maintainers=['taotieren', 'akumaexs', 'CloverGit'])
+post_build: aur_post_build
+# repo_depends:
+#   -
+update_on:
+  - source: aur
+    aur: stm32cubeprog
