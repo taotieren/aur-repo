@@ -3,7 +3,7 @@
 pkgname=python-k3ut
 _name=${pkgname#python-}
 pkgver=0.1.23
-pkgrel=1
+pkgrel=2
 pkgdesc="Unittest utilities with debug logging and test helpers"
 provides=(${pkgname})
 conflicts=(${pkgname})

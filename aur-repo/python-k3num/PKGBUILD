@@ -3,7 +3,7 @@
 pkgname=python-k3num
 _name=${pkgname#python-}
 pkgver=0.1.14
-pkgrel=1
+pkgrel=2
 pkgdesc="Human-readable number formatting and hex string utilities"
 provides=(${pkgname})
 conflicts=(${pkgname})
