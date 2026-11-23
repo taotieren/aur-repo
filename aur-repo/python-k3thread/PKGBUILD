@@ -2,7 +2,7 @@
 
 pkgname=python-k3thread
 _name=${pkgname#python-}
-pkgver=0.1.10
+pkgver=0.1.11
 pkgrel=1
 pkgdesc="Thread utilities for daemon threads and exception sending"
 provides=(${pkgname})
@@ -26,7 +26,7 @@ checkdepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('dbf7a07017c4188c707f3d6a3039efd25573afa29dfefe9b3d0965a8430c501c')
+sha256sums=('018a2989b80f9ae2052bf16c696e8cb4a4d57400daf2ce1b4a7106594c361a9b')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
