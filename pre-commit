@@ -56,11 +56,34 @@ def readutf8(st):
     return st.read().decode('utf-8')
 
 
+def git_origin_branch():
+    """Resolve the branch to diff against when detecting changed packages.
+
+    The repo used to default to `master`, so this hook hardcoded
+    `origin/master`. Repos tracking `main` (or any branch without an
+    `origin/master` ref) then made `git diff-tree origin/master..<tree>` fail
+    with "ambiguous argument". Prefer the current branch's upstream, then
+    origin/HEAD, then the common defaults. Fall back to HEAD, which diffs only
+    the staged tree and always resolves.
+    """
+    global ORIGIN_BRANCH
+    for candidate in ('@{upstream}', 'origin/HEAD', 'origin/main',
+                      'origin/master', 'HEAD'):
+        with Popen(['git', 'rev-parse', '--abbrev-ref', '--verify', '--quiet',
+                    candidate], stdout=PIPE, stderr=PIPE) as p:
+            ref = readutf8(p.stdout).strip()
+        # wait() happens on leaving the `with` block, so check returncode here
+        if p.returncode == 0 and ref:
+            ORIGIN_BRANCH = ref
+            return
+
+
 def git_write_tree_index():
     global GIT_BRANCH
     cmd = ['git', 'write-tree']
     with Popen(cmd, stdout=PIPE) as p:
         GIT_BRANCH = readutf8(p.stdout).rstrip()
+    git_origin_branch()
 
 
 def git_diff_tree():
