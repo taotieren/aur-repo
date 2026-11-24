@@ -3,7 +3,7 @@
 pkgbase=rkbin-git
 pkgname=rkbin-git
 pkgver=r2390.3e288fe
-pkgrel=2
+pkgrel=0
 epoch=
 pkgdesc="Rockchip Firmware and Tool Binarys"
 arch=('x86_64')
@@ -11,10 +11,11 @@ url="https://github.com/rockchip-linux/rkbin"
 license=('Commercial')
 groups=()
 depends=(
-    'bash'
-    'gcc-libs'
-    'glibc'
-    'libusb')
+    'sh'
+    'libstdc++'
+    'libusb'
+    'python'
+)
 makedepends=('git')
 checkdepends=()
 optdepends=()
@@ -25,12 +26,12 @@ backup=()
 options=()
 install=
 changelog=
-source=("${pkgname}::git+${url}.git")
+source=("${pkgname%-git}::git+${url}.git")
 noextract=()
 sha256sums=('SKIP')
 
 pkgver() {
-    cd "${srcdir}/${pkgname}"
+    cd "${srcdir}/${pkgname%-git}"
     (
         set -o pipefail
         git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
@@ -39,20 +40,19 @@ pkgver() {
 }
 
 prepare() {
-    git -C "${srcdir}/${pkgname}" clean -dfx
+    git -C "${srcdir}/${pkgname%-git}" clean -dfx
 }
 
 package() {
-
     install -dm0755 "${pkgdir}/opt/rockchip/"
 
-    cp -r ${srcdir}/${pkgname} "${pkgdir}/opt/rockchip/"
-    rm -rf ${pkgdir}/opt/rockchip/${pkgname}/.*
+    cp -r ${srcdir}/${pkgname%-git} "${pkgdir}/opt/rockchip/"
+    rm -rf ${pkgdir}/opt/rockchip/${pkgname%-git}/.*
 
-    install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname}.csh" <<EOF
-setenv PATH "${PATH}:/opt/rockchip/${pkgname}/tools/"
+    install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-git}.csh" <<EOF
+setenv PATH "${PATH}:/opt/rockchip/${pkgname%-git}/tools/"
 EOF
-    install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname}.sh" <<EOF
+    install -Dm0644 /dev/stdin "${pkgdir}/etc/profile.d/${pkgname%-git}.sh" <<EOF
 #!/bin/sh
 # rkbin
 
