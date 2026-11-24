@@ -3,7 +3,7 @@
 pkgbase=rkbin-git
 pkgname=rkbin-git
 pkgver=r2390.3e288fe
-pkgrel=1
+pkgrel=0
 epoch=
 pkgdesc="Rockchip Firmware and Tool Binarys"
 arch=('x86_64')
@@ -23,7 +23,7 @@ provides=(rkbin)
 conflicts=(rkbin)
 replaces=(rkbin)
 backup=()
-options=()
+options=(!debug !lto !strip)
 install=
 changelog=
 source=("${pkgname%-git}::git+${url}.git")
