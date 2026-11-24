@@ -2,7 +2,7 @@
 
 pkgname=python-k3etcd
 _name=${pkgname#python-}
-pkgver=0.2.2
+pkgver=0.2.3
 pkgrel=1
 pkgdesc="Python client for the etcd v2 API, for etcd server 2.3.x to 3.5.x"
 provides=(${pkgname})
@@ -30,7 +30,7 @@ checkdepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('216d83820bae3ed3649e32bf00fe300f6e857c9f2b5a85787d0ba31455668faf')
+sha256sums=('97db5afbdef935a4a4127ffb822e4b3ce8f7fe6dd2e00427aafb83b63d0c9dab')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
