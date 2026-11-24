@@ -23,6 +23,7 @@ makedepends=(
 checkdepends=(
     python-pytest
     python-k3ut
+    python-pip
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
