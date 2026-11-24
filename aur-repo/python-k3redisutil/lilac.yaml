@@ -9,10 +9,10 @@ post_build_script: |
   update_aur_repo()
 repo_depends:
   - python-k3ut
-  - k3awssign
-  - k3confloader
-  - k3http
-  - k3utfjson
+  - python-k3awssign
+  - python-k3confloader
+  - python-k3http
+  - python-k3utfjson
   - python-k3utdocker
   - python-k3thread
 
