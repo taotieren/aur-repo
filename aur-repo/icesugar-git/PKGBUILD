@@ -14,7 +14,7 @@ pkgname=(
     icesugar-pro-demo-git
     icesugar-pro-doc-git
 )
-pkgver=1.1a.r38.gf457faf
+pkgver=1.1a.r39.gfc4e463
 pkgrel=1
 epoch=
 pkgdesc="iCESugar FPGA Board (base on iCE40UP5k) "
