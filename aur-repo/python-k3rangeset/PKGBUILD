@@ -2,7 +2,7 @@
 
 pkgname=python-k3rangeset
 _name=${pkgname#python-}
-pkgver=0.1.7
+pkgver=0.1.8
 pkgrel=1
 pkgdesc="Segmented range represented as sorted interleaving intervals"
 provides=(${pkgname})
@@ -26,7 +26,7 @@ checkdepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('4cca893ca94d4c217bef4a59c614bc7cf7285ab35f7650825345011e700e9735')
+sha256sums=('8d4ff73fd20491e3e8470f241140d9442331640109739e6944367ec726bd30e6')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
