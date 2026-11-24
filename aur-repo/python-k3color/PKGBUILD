@@ -2,7 +2,7 @@
 
 pkgname=python-k3color
 _name=${pkgname#python-}
-pkgver=0.1.8
+pkgver=0.1.9
 pkgrel=1
 pkgdesc="Create colored text on terminal"
 provides=(${pkgname})
@@ -26,7 +26,7 @@ checkdepends=(
 )
 license=('MIT')
 source=("${_name}::git+${url}.git#tag=v$pkgver")
-sha256sums=('0c6d2f0e66ea337cf2a73bf5da07cc6cfcde11432b5ba5dfceeeb6fc58ed5526')
+sha256sums=('e41bcf280ead37b6495a54ed9e7df86382f6139b0cb49d8091d38719051f208c')
 
 prepare() {
     git -C "${srcdir}/${_name}" clean -dfx
