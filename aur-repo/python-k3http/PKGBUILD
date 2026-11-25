@@ -41,14 +41,6 @@ build() {
 check() {
 	cd "${srcdir}/${_name}"
 
-	# k3http.__getattr__ uses importlib.metadata.version("k3http"); doctest
-	# enumerates it, so the built distribution metadata must be visible.
-	# Install the wheel into a temp DESTDIR and put its site-packages on
-	# PYTHONPATH after the source tree (source code still takes precedence).
-	python -m installer --destdir="${srcdir}/check-install" dist/*.whl
-	local _site
-	_site=$(find "${srcdir}/check-install" -type d -name site-packages | head -1)
-
 	export PYTHONPATH="${srcdir}${_site:+:${_site}}${PYTHONPATH:+:${PYTHONPATH}}"
 	pytest -x
 }
