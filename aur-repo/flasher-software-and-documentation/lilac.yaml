@@ -4,13 +4,24 @@ maintainers:
 
 pre_build_script: |
   import re
+
+  # nvchecker 抓到的是发布包版本（去点形态）：996a / 986。
+  # pkgver 直接用它，保持与 AUR 现有 986a 同格式，vercmp(996a, 986a) 正常升级；
+  # _tagname 存带点形态供人读（996a -> 9.96a）。
   ver = _G.newver
   m = re.fullmatch(r'(\d)(\d+)([a-z]?)', ver)
-  if m:
-      pkgver = f"{m.group(1)}.{m.group(2)}{m.group(3)}"
-  else:
-      pkgver = ver
-  update_pkgver_and_pkgrel(pkgver)
+  tagname = f"{m.group(1)}.{m.group(2)}{m.group(3)}" if m else ver
+
+  # 改 _tagname 即可：pkgver=${_tagname//./} 与 source URL 会自动派生为 ver。
+  # 逐行 print 是 edit_file 的要求（fileinput inplace），否则会丢行。
+  for line in edit_file('PKGBUILD'):
+      if line.startswith('_tagname='):
+          line = f'_tagname={tagname}'
+      elif line.startswith('pkgrel='):
+          line = 'pkgrel=1'
+      print(line)
+
+  run_protected(['updpkgsums'])
 
 post_build_script: |
   git_pkgbuild_commit()

@@ -1,9 +1,9 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=flasher-software-and-documentation
-pkgver=9.96a
+_tagname=9.96a
+pkgver=${_tagname//./}
 pkgrel=1
-_tagver=${pkgver//./}
 pkgdesc="Segger Flasher Software and Documentation Pack for Linux"
 arch=('x86_64' 'aarch64')
 license=('custom')
@@ -12,12 +12,12 @@ depends=(
     libgcc
     libstdc++
 )
-source_x86_64=("Flasher_Linux_${_tagver}_x86_64.tgz::https://www.segger.com/downloads/flasher/Flasher_Linux_V${_tagver}_x86_64.tgz")
-source_aarch64=("Flasher_Linux_${_tagver}_arm64.tgz::https://www.segger.com/downloads/flasher/Flasher_Linux_V${_tagver}_arm64.tgz")
+source_x86_64=("Flasher_Linux_${pkgver}_x86_64.tgz::https://www.segger.com/downloads/flasher/Flasher_Linux_V${pkgver}_x86_64.tgz")
+source_aarch64=("Flasher_Linux_${pkgver}_arm64.tgz::https://www.segger.com/downloads/flasher/Flasher_Linux_V${pkgver}_arm64.tgz")
 source=("Flasher.svg")
 sha256sums=('debad3e258c6fca6b7c58dbe711eee366eeef0e0f021eee4810281e93afa758b')
-sha256sums_x86_64=('c6b137f8a86aaf71a07d92400408cf961e8df96020d9240e8dce2b7d49369637')
-sha256sums_aarch64=('50e69a37064df4324b33c7f94e655644b9745a5c36975985b72de0742f3bf881')
+sha256sums_x86_64=('c1d631fbac414fe0b07cb2b3e61c327df5e6c720454375b972998035e74ff960')
+sha256sums_aarch64=('f96b706f36d264e4279c4b476df0d1e28b9cdaee90bb801a8d2938e2d0c61ab3')
 install=$pkgname.install
 url="https://www.segger.com/program-embedded-systems/"
 conflicts=("${pkgname}" "j-link-software-and-documentation")
@@ -30,10 +30,10 @@ options=(!strip)
 prepare() {
     # Change src path name
     if [ ${CARCH} = "x86_64" ]; then
-        mv Flasher_Linux_V${_tagver}_x86_64 Flasher
+        mv Flasher_Linux_V${pkgver}_x86_64 Flasher
     fi
     if [ ${CARCH} = "aarch64" ]; then
-       mv Flasher_Linux_V${_tagver}_arm64 Flasher
+       mv Flasher_Linux_V${pkgver}_arm64 Flasher
     fi
 }
 
