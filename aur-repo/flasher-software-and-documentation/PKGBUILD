@@ -3,7 +3,7 @@
 pkgname=flasher-software-and-documentation
 _tagname=9.96a
 pkgver=${_tagname//./}
-pkgrel=2
+pkgrel=3
 pkgdesc="Segger Flasher Software and Documentation Pack for Linux"
 arch=('x86_64' 'aarch64')
 license=('custom')
