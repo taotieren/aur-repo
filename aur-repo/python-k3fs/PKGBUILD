@@ -45,6 +45,7 @@ build() {
 check() {
 	cd "${srcdir}/${_name}"
 
+    export PYTHONPATH="${srcdir}${PYTHONPATH:+:${PYTHONPATH}}"
 	pytest -x
 }
 

@@ -50,10 +50,7 @@ check() {
 	cd "${srcdir}/${_name}"
 	
     export PYTHONPATH="${srcdir}${PYTHONPATH:+:${PYTHONPATH}}"
-
-    pytest -x \
-        --deselect=test/test_blkio.py::TestBlkio::test_blkio_weight \
-        --deselect=test/test_cpu.py::TestCpu::test_cpu_share
+    pytest -x
 }
 
 package() {
