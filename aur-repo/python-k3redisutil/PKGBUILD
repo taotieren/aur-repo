@@ -49,13 +49,7 @@ check() {
 	cd "${srcdir}/${_name}"
 
     export PYTHONPATH="${srcdir}${PYTHONPATH:+:${PYTHONPATH}}"
-	# These classes start real Redis containers via k3utdocker/Docker,
-	# which needs a running daemon at /var/run/docker.sock (absent in the
-	# build chroot). Other tests use fakes/local HTTP servers.
-	pytest -x \
-		--deselect=test/test_k3redisutil.py::TestRedis::test_set_get \
-		--deselect=test/test_k3redisutil.py::TestRedis::test_list_channel \
-		--deselect=test/test_k3redisutil.py::TestRedisRecreate::test_recreate_client
+	pytest -x 
 }
 
 package() {
