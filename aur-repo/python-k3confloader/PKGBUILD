@@ -3,7 +3,7 @@
 pkgname=python-k3confloader
 _name=${pkgname#python-}
 pkgver=0.1.9
-pkgrel=2
+pkgrel=3
 pkgdesc="Load configuration for pykit3 modules"
 provides=(${pkgname})
 conflicts=(${pkgname})
