@@ -2,19 +2,16 @@ maintainers:
   - github: taotieren
     email: admin@taotieren.com
 
-# pre_build_script: |
-#   import re
-#   ver = _G.newver
-#   m = re.fullmatch(r'(\d)(\d+)([a-z]?)', ver)
-#   if m:
-#       pkgver = f"{m.group(1)}.{m.group(2)}{m.group(3)}"
-#   else:
-#       pkgver = ver
-#   update_pkgver_and_pkgrel(pkgver)
-
 pre_build_script: |
-  update_pkgver_and_pkgrel(_G.newver)
-  
+  import re
+  ver = _G.newver
+  m = re.fullmatch(r'(\d)(\d+)([a-z]?)', ver)
+  if m:
+      pkgver = f"{m.group(1)}.{m.group(2)}{m.group(3)}"
+  else:
+      pkgver = ver
+  update_pkgver_and_pkgrel(pkgver)
+
 post_build_script: |
   git_pkgbuild_commit()
   update_aur_repo()
@@ -22,6 +19,8 @@ post_build_script: |
 update_on:
   - source: regex
     url: https://www.segger.com/downloads/flasher/
+    # 保留尾部 [a-z]：nvchecker 按 parse_version 取最大，996 > 996a，
+    # 放宽为 [a-z]? 会抓到 V996 而丢掉更新的 V996a。上游目前稳定带字母后缀。
     regex: 'Flasher_Linux_V(\d+[a-z])_x86_64\.tgz'
     user_agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
     # lilac_throttle: 7d
