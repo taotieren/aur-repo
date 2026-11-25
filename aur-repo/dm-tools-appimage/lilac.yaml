@@ -15,5 +15,7 @@ post_build_script: |
 # repo_depends:
 #   -
 update_on:
-  - source: cmd
-    cmd: "curl -sL 'https://api.github.com/repos/dmBots/motor-debugging-tool/contents/Linux/x86_64' | grep -oE 'DMTool-v[0-9.]+(-[a-zA-Z0-9.]+)?-x86_64' | head -1 | sed -e 's/^DMTool-v//' -e 's/-x86_64$//'"
+  - source: regex
+    url: https://github.com/dmBots/motor-debugging-tool/tree/master/Linux/x86_64
+    regex: 'DMTool-v([0-9.]+(?:-[a-zA-Z0-9.]+)?)-x86_64'
+    user_agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
