@@ -1,7 +1,7 @@
 # Maintainer: taotieren <admin@taotieren.com>
 
 pkgname=mothx-git
-pkgver=1.3.108.pre.5.r6.g6109036
+pkgver=1.3.108.pre.5.r7.g7a88672
 pkgrel=1
 pkgdesc="🚀 One Binary to Rule Them All — Your AI Coding Assistant in the Terminal"
 arch=($CARCH)
