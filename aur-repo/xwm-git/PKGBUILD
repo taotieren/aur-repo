@@ -65,7 +65,6 @@ build() {
 
     cmake -D CMAKE_BUILD_TYPE=None \
         -D CMAKE_INSTALL_PREFIX=/usr \
-        -D CMAKE_INSTALL_SYSCONFDIR=/etc \
         -B build \
         -G Ninja
 
