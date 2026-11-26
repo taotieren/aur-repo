@@ -28,6 +28,12 @@ makedepends=(
     'python-setuptools'
     'python-wheel'
 )
+checkdepends=(
+    python-pytest
+    python-pytest-xdist
+    python-syrupy
+    python-dotenv
+)
 optdepends=()
 license=('MIT')
 source=("${_name}::git+${url}.git")
@@ -49,6 +55,13 @@ prepare() {
 build() {
     cd "${srcdir}/${_name}/python"
     python -m build --wheel --no-isolation
+}
+
+check() {
+	cd "${srcdir}/${_name}/python"
+
+	export PYTHONPATH="${srcdir}/${_name}/python/src:${srcdir}/${_name}/python${PYTHONPATH:+:${PYTHONPATH}}"
+	pytest -x
 }
 
 package() {
