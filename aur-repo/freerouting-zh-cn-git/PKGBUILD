@@ -79,7 +79,7 @@ Comment=${pkgdesc}
 Exec=${pkgname%-zh-cn-git}
 Type=Application
 StartupNotify=true
-Categories=Utility;Engineering;
+Categories=Utility;Engineering;Science;Electronics;
 Terminal=false
 Icon=${pkgname%-zh-cn-git}.png
 EOF
