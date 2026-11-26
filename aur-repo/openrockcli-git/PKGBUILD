@@ -2,7 +2,7 @@
 
 pkgname=openrockcli-git
 pkgver=1+r0+g039ed3a
-pkgrel=1
+pkgrel=2
 epoch=
 pkgdesc="A command-line and lightweight TUI firmware flashing tool for Rockchip SoCs"
 arch=($CARCH)
