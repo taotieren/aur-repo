@@ -49,6 +49,7 @@ checkdepends=(
     gtest
 )
 optdepends=()
+options=('!strip' '!debug')
 source=("${pkgname}::git+${url}.git#tag=v${pkgver}")
 sha256sums=('f05e8effd84d7e3fd6a215baf27790ded56896bfa25243e938e22dd4bb926209')
 
