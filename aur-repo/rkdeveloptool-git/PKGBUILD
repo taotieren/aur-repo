@@ -5,7 +5,7 @@
 pkgname=rkdeveloptool-git
 _pkgname=${pkgname%-git}
 pkgver=1.32.r83.304f073
-pkgrel=4
+pkgrel=5
 epoch=1
 pkgdesc='The firmware upgrade tool for Rockchip SoC, consider to be a opensource version of upgrade_tool'
 arch=($CARCH)
@@ -40,7 +40,7 @@ prepare() {
 	cd "$srcdir/$_pkgname"
 
 	patch -p1 -i ${srcdir}/0001-add-RK3588-to-udev-rules.patch
-	sed -i 's|MODE="0666", GROUP="users"|TAG+="uaccess", ATTR{power/autosuspend}="-1"|g' 99-rk-rockusb.rules
+	sed -i 's|MODE="0666", GROUP="users"|TAG+="uaccess", TEST=="power/autosuspend", ATTR{power/autosuspend}="-1"|g' 99-rk-rockusb.rules
 }
 
 build() {
