@@ -12,6 +12,7 @@ license=('LicenseRef-wxWindows')
 provides=(${pkgname})
 conflicts=(${pkgname})
 depends=(
+    at-spi2-core
     sh
     cairo
     gdk-pixbuf2
@@ -27,6 +28,7 @@ depends=(
     libxkbcommon
     pango
     pcre2
+    wayland
     zlib
 )
 makedepends=(
