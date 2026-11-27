@@ -40,7 +40,7 @@ prepare() {
 	cd "$srcdir/$_pkgname"
 
 	patch -p1 -i ${srcdir}/0001-add-RK3588-to-udev-rules.patch
-	sed -i 's|MODE="0666", GROUP="users"|TAG+="uaccess"|g' 99-rk-rockusb.rules
+	sed -i 's|MODE="0666", GROUP="users"|TAG+="uaccess", ATTR{power/autosuspend}="-1"|g' 99-rk-rockusb.rules
 }
 
 build() {
