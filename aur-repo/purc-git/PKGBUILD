@@ -2,8 +2,8 @@
 
 pkgbase=purc-git
 pkgname=purc-git
-pkgver=0.9.26.r25.g0173c79c7
-pkgrel=2
+pkgver=1.0.0.r4.gff4cd4336
+pkgrel=1
 pkgdesc="The prime HVML interpreter for C/C++ Language."
 arch=($CARCH)
 url="https://github.com/HVML/PurC"
