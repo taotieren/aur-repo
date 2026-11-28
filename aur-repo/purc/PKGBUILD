@@ -90,8 +90,6 @@ options=()
 
 prepare() {
     git -C "${srcdir}/${pkgname}" clean -dfx
-    cd "${srcdir}/${pkgname}"
-    git cherry-pick -n fa68f301c10651b9032e6b51b809680af6e8e32d
 }
 
 build() {
