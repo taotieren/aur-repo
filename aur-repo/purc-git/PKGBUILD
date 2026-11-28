@@ -8,9 +8,12 @@ pkgdesc="The prime HVML interpreter for C/C++ Language."
 arch=($CARCH)
 url="https://github.com/HVML/PurC"
 license=('LGPL-3.0-only')
-groups=(hvml-git
-    hybridos2-git)
-provides=(${pkgbase%-git}
+groups=(
+    hvml-git
+    hybridos2-git
+)
+provides=(
+    ${pkgbase%-git}
     csseng
     domruler
     purc-fetcher
@@ -20,14 +23,20 @@ provides=(${pkgbase%-git}
     libpurc-dvobj-MATH.so
     libpurc-fetcher.so
     libdomruler.so
-    libpurc.so)
+    libpurc.so
+)
 conflicts=(${pkgbase%-git})
-replaces=(domruler
-    purc-fetcher)
+replaces=(
+    domruler
+    purc-fetcher
+)
 depends=(
     glib2
+    libgcc
     libgcrypt
+    libpng
     libsoup3
+    libstdc++
     libxml2
     ncurses
     sqlite
@@ -63,13 +72,17 @@ makedepends=(
     systemd
     pkgconf
     xorgproto)
-checkdepends=(check
+checkdepends=(
+    check
     gtest
-    valgrind)
-optdepends=('python-numpy: Scientific tools for Python'
+    valgrind
+)
+optdepends=(
+    'python-numpy: Scientific tools for Python'
     'webkit2gtk-hvml: Web content engine for GTK (HVML)'
     'webkit2gtk: Web content engine for GTK'
-    'xguipro: xGUI (the X Graphics User Interface) Pro is a modern, cross-platform, and advanced HVML renderer which is based on tailored WebKit.')
+    'xguipro: xGUI (the X Graphics User Interface) Pro is a modern, cross-platform, and advanced HVML renderer which is based on tailored WebKit.'
+)
 source=("${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 options=()
