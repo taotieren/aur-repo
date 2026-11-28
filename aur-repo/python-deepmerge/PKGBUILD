@@ -4,7 +4,7 @@
 pkgname=python-deepmerge
 _name=${pkgname#python-}
 pkgver=4.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="A deep merging tool for Python core data structures"
 arch=(any)
 url="https://github.com/toumorokoshi/deepmerge"
