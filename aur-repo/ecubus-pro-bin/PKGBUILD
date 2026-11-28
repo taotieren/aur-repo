@@ -3,7 +3,7 @@
 pkgname=ecubus-pro-bin
 _tagname=0.8.69
 pkgver=${_tagname//-/_}
-pkgrel=1
+pkgrel=2
 pkgdesc="A powerful automotive ECU development tool Easy of use, Cross platform, Multi dongle, Powerful script ability, CLI support"
 arch=(x86_64)
 url="https://github.com/ecubus/EcuBus-Pro"
@@ -20,11 +20,59 @@ depends=(
     libstdc++.so
     hicolor-icon-theme
     java-runtime
+    nspr
     systemd-libs
     python
+    python-argparse-addons
+    python-attrs
+    python-beautifulsoup4
+    python-bincopy
+    python-can
+    python-canopen
+    python-charset-normalizer
+    python-click
+    python-colorama
+    python-cryptography
+    python-defusedxml
+    python-deprecation
+    python-docutils
+    python-et-xmlfile
+    python-filelock
+    python-html5lib
+    python-humanfriendly
+    python-ldfparser
+    python-lxml
+    python-jinja
+    python-keyring
+    python-importlib-metadata
+    python-markdown-it-py
+    python-markdownify
+    python-markupsafe
+    python-mdurl
+    python-msgpack
+    python-openpyxl
+    python-packaging
+    python-pip
+    python-pyelftools
+    python-pygments
+    python-prompt_toolkit
+    python-soupsieve
+    python-rich
+    python-typing_extensions
+    python-pyopenssl
+    python-pyserial
+    python-pysocks
+    python-pyusb
+    python-wrapt
+    python-xlrd
+    python-xlwt
+    python-yaml
     # AUR
+    python-canalystii
     python-canmatrix
     python-doipclient
+    python-gs-usb
+    python-ics
     python-odxtools
     python-udsoncan
 )
